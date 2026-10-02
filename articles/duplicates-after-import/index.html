@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot import created duplicate contacts? Why it happens and how to fix it - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot only matches imported rows to existing records by a unique identifier. How to spot an import that created duplicates, clean them up, and stop it next time.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/duplicates-after-import/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/duplicates-after-import/">
+<meta property="og:title" content="HubSpot import created duplicate contacts? Why it happens and how to fix it">
+<meta property="og:description" content="HubSpot only matches imported rows to existing records by a unique identifier. How to spot an import that created duplicates, clean them up, and stop it next time.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/duplicates-after-import/og.png">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-02">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot import created duplicate contacts? Why it happens and how to fix it",
+      "description": "HubSpot only matches imported rows to existing records by a unique identifier. How to spot an import that created duplicates, clean them up, and stop it next time.",
+      "datePublished": "2026-10-02",
+      "dateModified": "2026-10-02",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/duplicates-after-import/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/duplicates-after-import/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find and fix duplicates created by a HubSpot import",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check the import result", "text": "Go to Data integration, find the import under File imports, and compare New records with Updated records."},
+        {"@type": "HowToStep", "name": "Isolate the imported records", "text": "Open the import, click Actions, and choose Add imported contacts to segment."},
+        {"@type": "HowToStep", "name": "Merge the duplicates", "text": "On the Contacts page, open the more-actions menu and select Manage duplicates, then review and merge each pair."},
+        {"@type": "HowToStep", "name": "Fix the file for next time", "text": "Include Email for contacts, Company domain name for companies, or Record ID, and map it to the HubSpot property marked with a key icon."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot import created duplicate contacts? Why it happens and how to fix it", "item": "https://hubspot.samcbarth.com/articles/duplicates-after-import/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="duplicates-after-import">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Imports">Imports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Imports</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot import created duplicate contacts? Why it happens and how to fix it</h1>
+      <p class="dek">You imported a list of people who were already in HubSpot, and now half of them exist twice. HubSpot did exactly what the file told it to. Here is how to confirm it, clean it up, and set up the next import so it updates instead of duplicating.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier (merge tool needs Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Import access; Data quality tools to merge</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-02">October 2, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot only matches an imported row to an existing record by a unique identifier: <strong>Email</strong> for contacts, <strong>Company domain name</strong> for companies, <strong>Record ID</strong> for any object, or a custom property set to require unique values. If that column is missing, empty, or mapped to the wrong property, every row becomes a new record. Check New versus Updated records on the import, isolate the import's records in a segment, merge, and map the identifier properly next time.</p>
+        </div>
+
+        <h2>1. Confirm the import created the duplicates</h2>
+        <p>Before merging anything, check what the import actually did. Go to <a class="hs-link" data-hs="/import/{portalId}" href="https://app.hubspot.com/l/import"><span class="ui">Data integration</span></a> (imports moved here from the old Imports page). The <span class="ui">Import a file</span> card starts new imports, and your past imports are listed underneath.</p>
+        <figure class="shot"><a href="data-integration.webp"><img src="data-integration.webp" alt="HubSpot Data integration page with the Import a file card highlighted" width="800" height="553" loading="lazy"></a><figcaption>Imports now live under Data integration.</figcaption></figure>
+        <p>Scroll to <span class="ui">Monitor your imports &amp; syncs</span> and look at the <span class="ui">File imports</span> tab. The two columns that matter are <span class="ui">New records</span> and <span class="ui">Updated records</span>. If you imported 500 people you already had and the import shows 500 new and 0 updated, that is your duplicate batch.</p>
+        <figure class="shot"><a href="imports-list.webp"><img src="imports-list.webp" alt="File imports list with the New records and Updated records columns highlighted" width="800" height="553" loading="lazy"></a><figcaption>New records versus Updated records tells you whether the import matched anything.</figcaption></figure>
+        <p>Click the import's name for the summary. It shows import rows, new records, updated records, and new associations side by side, plus an <span class="ui">Errors</span> tab.</p>
+        <figure class="shot"><a href="import-summary.webp"><img src="import-summary.webp" alt="Import summary card showing import rows, new records, updated records, and new associations" width="800" height="553" loading="lazy"></a><figcaption>The import summary. The uploader's name is blurred.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Check errors early</span><p>HubSpot stops showing error details for imports older than one year. The count stays, but the reasons are gone, so review a bad import while the details are still there.</p></div>
+
+        <h2>2. Why HubSpot created new records instead of updating</h2>
+        <p>HubSpot does not compare names. It matches an imported row to an existing record only through a unique identifier:</p>
+        <ul>
+          <li><strong>Email</strong> for contacts. If a contact with that email exists, the import updates it. Only mapped properties change, and nothing gets deleted.</li>
+          <li><strong>Company domain name</strong> for companies, using both primary and secondary domains.</li>
+          <li><strong>Record ID</strong> for any object. If you map Record ID, it overrides every other identifier in the file.</li>
+          <li><strong>A custom property that requires unique values</strong>, which you set on the property's Rules tab. You can have up to ten per object.</li>
+        </ul>
+        <figure class="shot"><a href="record-id-property.webp"><img src="record-id-property.webp" alt="Contact properties settings filtered to the Record ID property" width="800" height="553" loading="lazy"></a><figcaption>Record ID is a default property on every object. Export it to update existing records by import.</figcaption></figure>
+        <p>So duplicates usually come from one of these:</p>
+        <ul>
+          <li><strong>No identifier column.</strong> Without Email (contacts) or Company domain name (companies), every row of the file becomes a new record.</li>
+          <li><strong>The column is there but mapped to the wrong property.</strong> If your "Email Address" column was mapped to a custom text property instead of HubSpot's Email property, HubSpot has nothing to match on. On the mapping screen, the correct identifier property shows a key icon.</li>
+          <li><strong>A Record ID column with blanks.</strong> Rows with an empty Record ID create new records, even if the email matches.</li>
+          <li><strong>Companies created by the API or a sync app.</strong> Those are not deduplicated by domain at all, so an import can match the wrong one or none.</li>
+        </ul>
+        <p>One more behavior that looks like a bug: if two contacts already share the same email, the import does not pick one. It errors on that row and skips it.</p>
+
+        <h2>3. Isolate the records that import created</h2>
+        <p>Do not go hunting through the whole database. On the import summary, click <span class="ui">Actions</span> and choose <span class="ui">Add imported contacts to segment</span>. Now you have a list of exactly the records this import touched, which you can review, export, or work through one by one.</p>
+        <figure class="shot"><a href="import-actions.webp"><img src="import-actions.webp" alt="Import summary Actions menu with Add imported contacts to segment highlighted" width="800" height="553" loading="lazy"></a><figcaption>Turn the import into a segment so you only clean what it created.</figcaption></figure>
+
+        <h2>4. Merge the duplicates</h2>
+        <p>HubSpot's duplicate manager pairs up likely duplicates for you. On the <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a> page, open the more-actions menu (the three dots at the top right, which replaced the old <span class="ui">Actions</span> button) and select <span class="ui">Manage duplicates</span>.</p>
+        <figure class="shot"><a href="contacts-more-menu.webp"><img src="contacts-more-menu.webp" alt="Contacts page more-actions menu with Manage duplicates highlighted" width="800" height="553" loading="lazy"></a><figcaption>Three-dot menu (1), then Manage duplicates (2). Contact details are blurred.</figcaption></figure>
+        <p>The duplicates tool lists suggested pairs and lets you merge or reject each one. It also shows duplicate alerts and any custom rules.</p>
+        <figure class="shot"><a href="duplicates-tool.webp"><img src="duplicates-tool.webp" alt="Data Quality duplicates tool with Duplicate alerts and Custom rules cards" width="800" height="340" loading="lazy"></a><figcaption>The duplicates tool under Data Quality.</figcaption></figure>
+        <ul>
+          <li>Reviewing pairs one at a time needs a Professional or Enterprise subscription and shows up to 10,000 pairs.</li>
+          <li>Bulk merging and custom duplicate rules need Data Hub Professional or Enterprise.</li>
+          <li>By default HubSpot compares first name, last name, email, IP country, phone number, zip code, and company name for contacts.</li>
+          <li>You need Data quality tools access plus edit access to all contacts (or Super Admin) to use it.</li>
+        </ul>
+        <div class="callout warn"><span class="callout-title">Merges are permanent</span><p>A merged record cannot be split back apart. Spot-check a few pairs before you merge in bulk, especially when two people share a generic inbox like info@ or sales@.</p></div>
+
+        <h2>5. Set up the next import so it updates</h2>
+        <ul>
+          <li><strong>Contacts:</strong> include an Email column and map it to HubSpot's Email property, the one with the key icon.</li>
+          <li><strong>Companies:</strong> include Company domain name in the plain domain format (example.com, no https or www).</li>
+          <li><strong>Updating anything else</strong> (deals, tickets, custom objects): export the records first with their Record ID, edit the export, and import it back with Record ID mapped.</li>
+          <li><strong>No email or domain?</strong> Export existing records with Record ID, match them to your file with VLOOKUP, and split the file into one import of matched rows (with Record ID) and one of genuinely new rows.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/deduplication-of-records">HubSpot Knowledge Base: Deduplicate records in HubSpot (last updated September 25, 2026)</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/understand-the-import-tool">HubSpot Knowledge Base: Understand the import tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/import-objects">HubSpot Knowledge Base: Import records for multiple objects</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/manage-duplicate-records">HubSpot Knowledge Base: Review and manage duplicate records</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/troubleshoot-import-errors">HubSpot Knowledge Base: Review and troubleshoot import errors</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

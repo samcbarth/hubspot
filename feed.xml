@@ -18,5 +18,37 @@
     <category>Data Hub</category>
     <category>Workflows</category>
   </item>
+  <item>
+    <title>HubSpot import created duplicate contacts? Why it happens and how to fix it</title>
+    <link>https://hubspot.samcbarth.com/articles/duplicates-after-import/</link>
+    <guid>https://hubspot.samcbarth.com/articles/duplicates-after-import/</guid>
+    <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot only matches imported rows by a unique identifier. Spot an import that duplicated records, clean it up, and stop it next time.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Imports</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Your coded HubSpot template is missing from the template picker? Look under Other</title>
+    <link>https://hubspot.samcbarth.com/articles/coded-template-missing-from-picker/</link>
+    <guid>https://hubspot.samcbarth.com/articles/coded-template-missing-from-picker/</guid>
+    <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The page template picker opens on your active theme. Templates that are not part of a theme only appear under Other.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Design Manager</category>
+  </item>
+  <item>
+    <title>How to find your HubSpot portal ID (Hub ID)</title>
+    <link>https://hubspot.samcbarth.com/articles/find-hubspot-portal-id/</link>
+    <guid>https://hubspot.samcbarth.com/articles/find-hubspot-portal-id/</guid>
+    <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Your portal ID, also called Hub ID or account ID, is in the account menu and in every HubSpot URL.</description>
+    <category>Smart CRM</category>
+    <category>Settings</category>
+  </item>
 </channel>
 </rss>
