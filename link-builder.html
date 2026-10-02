@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-base="./">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="./assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="./feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot Link Builder - Open any HubSpot screen in your portal</title>
+<meta name="description" content="Type your HubSpot portal ID and get direct links to workflows, properties, imports, reports, settings, and more in your own account. Runs in your browser, nothing is saved.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/link-builder.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HubSpot Link Builder">
+<meta property="og:description" content="Direct links to any HubSpot screen in your own portal. Nothing is saved.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/assets/img/og-home.png">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="./">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="./">Articles</a>
+      <a href="./link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="./request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="./about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <div class="page">
+      <span class="eyebrow">Tool</span>
+      <h1>HubSpot link builder</h1>
+      <p class="lead">Add your portal ID to get direct links into your own HubSpot account. Handy for documentation, Slack messages, and training guides where "go to Settings, then..." wastes everyone's time.</p>
+
+      <div class="portal-box">
+        <label for="lb-portal">Your portal ID</label>
+        <p>The 3 to 12 digit number in any HubSpot URL, for example app.hubspot.com/contacts/<strong>12345678</strong>/... You can also paste a whole HubSpot URL. Everything runs in this tab. Nothing is saved or sent.</p>
+        <div class="portal-row">
+          <input id="lb-portal" inputmode="numeric" autocomplete="off" placeholder="e.g. 12345678 or a HubSpot URL">
+          <select id="lb-region" aria-label="Data center"><option value="na1">US data center</option><option value="eu1">EU data center</option></select>
+        </div>
+        <div class="portal-status" id="lb-status" aria-live="polite">No ID yet, so links use HubSpot's "your default portal" format.</div>
+      </div>
+
+      <div class="portal-box">
+        <label for="lb-custom">Convert any HubSpot URL</label>
+        <p>Paste a link from your portal to get a version anyone can open in their own portal, or swap in the portal ID above.</p>
+        <div class="portal-row"><input id="lb-custom" autocomplete="off" placeholder="https://app.hubspot.com/workflows/12345678/..."></div>
+        <div class="portal-status" id="lb-custom-out" aria-live="polite"></div>
+      </div>
+
+      <div id="lb-list" class="lb-grid"></div>
+    </div>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./">All articles</a>
+      <a href="./link-builder.html">Link builder</a>
+      <a href="./request-a-fix.html">Request a fix</a>
+      <a href="./about.html">About</a>
+      <a href="./feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="assets/hubspot-links.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var L = window.FieldNotesLinks;
+  var input = document.getElementById('lb-portal');
+  var region = document.getElementById('lb-region');
+  var status = document.getElementById('lb-status');
+  var list = document.getElementById('lb-list');
+  var custom = document.getElementById('lb-custom');
+  var customOut = document.getElementById('lb-custom-out');
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function portal() { var id = L.cleanPortal(input.value); return L.PORTAL_RE.test(id) ? id : ''; }
+  function urlFor(path) { var id = portal(); return id ? L.specificUrl(path, id, region.value) : L.genericUrl(path); }
+
+  function render() {
+    var id = portal();
+    if (!input.value) { status.className = 'portal-status'; status.textContent = 'No ID yet, so links use HubSpot\'s "your default portal" format.'; }
+    else if (id) { status.className = 'portal-status ok'; status.textContent = 'Links below open portal ' + id + '.'; }
+    else { status.className = 'portal-status bad'; status.textContent = 'That does not look like a portal ID.'; }
+    list.innerHTML = window.HS_LINKS.map(function (g) {
+      return '<div class="lb-group"><h3>' + esc(g.group) + '</h3>' + g.items.map(function (it) {
+        var u = urlFor(it.path);
+        return '<div class="lb-row"><div><strong>' + esc(it.label) + '</strong><span>' + esc(u) + '</span></div>' +
+          '<button class="btn btn-ghost" type="button" data-copy="' + esc(u) + '">Copy</button>' +
+          '<a class="btn btn-primary" href="' + esc(u) + '" target="_blank" rel="noopener">Open</a></div>';
+      }).join('') + '</div>';
+    }).join('');
+    convert();
+  }
+
+  function convert() {
+    var v = custom.value.trim();
+    if (!v) { customOut.textContent = ''; return; }
+    var m = v.match(/^https?:\/\/app(-eu1)?\.hubspot\.com\/([a-z0-9-]+)\/(\d{3,12})(.*)$/i);
+    if (!m) { customOut.className = 'portal-status bad'; customOut.textContent = 'Paste a full app.hubspot.com URL that contains a portal ID.'; return; }
+    var path = '/' + m[2] + '/{portalId}' + m[4];
+    var id = portal();
+    var out = id ? L.specificUrl(path, id, region.value) : L.genericUrl(path);
+    customOut.className = 'portal-status ok';
+    customOut.innerHTML = (id ? 'For portal ' + id + ': ' : 'Works for anyone: ') + '<a href="' + esc(out) + '" target="_blank" rel="noopener">' + esc(out) + '</a> <button class="btn btn-ghost" type="button" data-copy="' + esc(out) + '">Copy</button>';
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-copy]');
+    if (!b || !navigator.clipboard) return;
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () {
+      b.textContent = 'Copied';
+      setTimeout(function () { b.textContent = 'Copy'; }, 1400);
+    });
+  });
+  input.addEventListener('input', render);
+  region.addEventListener('change', render);
+  custom.addEventListener('input', convert);
+  render();
+})();
+</script>
+</body>
+</html>

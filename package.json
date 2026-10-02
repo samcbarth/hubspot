@@ -1,0 +1,10 @@
+{
+  "name": "hubspot-field-notes",
+  "private": true,
+  "description": "HubSpot Field Notes static site (GitHub Pages).",
+  "scripts": {
+    "build": "node tools/build.js",
+    "og": "python tools/og.py",
+    "serve": "python -m http.server 8811"
+  }
+}

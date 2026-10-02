@@ -1,0 +1,8 @@
+# HubSpot Field Notes
+
+> Step-by-step HubSpot fixes, how-tos, and gotchas by Sam Barth, a HubSpot-certified practitioner. Each article lists the subscription tier and permissions required and the date the steps were last verified in a live HubSpot portal. Independent resource, not an official HubSpot publication.
+
+- Link builder for direct links into any HubSpot portal: https://hubspot.samcbarth.com/link-builder.html
+- Request a fix: https://hubspot.samcbarth.com/request-a-fix.html
+
+
