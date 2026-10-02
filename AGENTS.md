@@ -15,7 +15,7 @@ Public site: https://hubspot.samcbarth.com (GitHub Pages from `main`, root folde
 4. HubSpot app links use `class="hs-link" data-hs="/path/{portalId}/..."` with the generic `https://app.hubspot.com/l/...` href. Verify each one opens the right screen.
 5. Fill "Last verified" with the date the steps were walked through.
 6. `python tools/og.py <slug>` then `node tools/build.js`.
-7. Show Sam the draft. Only after his OK: set `draft: false`, rebuild, commit, push `main`, verify the live URL.
+7. Show Sam the draft. Only after Sam's OK: set `draft: false`, rebuild, commit, push `main`, verify the live URL.
 
 ## Structure
 - `articles.js` is the index (home cards, search, filters, related, sitemap, feed, llms.txt).
