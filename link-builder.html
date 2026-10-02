@@ -121,7 +121,7 @@
   function convert() {
     var v = custom.value.trim();
     if (!v) { customOut.textContent = ''; return; }
-    var m = v.match(/^https?:\/\/app(-eu1)?\.hubspot\.com\/([a-z0-9-]+)\/(\d{3,12})(.*)$/i);
+    var m = v.match(/^https?:\/\/app(-[a-z0-9]+)?\.hubspot\.com\/([a-z0-9-]+)\/(\d{3,12})(.*)$/i);
     if (!m) { customOut.className = 'portal-status bad'; customOut.textContent = 'Paste a full app.hubspot.com URL that contains a portal ID.'; return; }
     var path = '/' + m[2] + '/{portalId}' + m[4];
     var id = portal();

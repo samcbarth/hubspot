@@ -204,7 +204,7 @@
   var PORTAL_RE = /^\d{3,12}$/;
   function cleanPortal(v) {
     v = String(v || '').trim();
-    var m = v.match(/app(?:-eu1)?\.hubspot\.com\/[a-z-]+\/(\d{3,12})/i); // accept a pasted HubSpot URL
+    var m = v.match(/app(?:-[a-z0-9]+)?\.hubspot\.com\/[a-z-]+\/(\d{3,12})/i); // accept a pasted HubSpot URL
     if (m) return m[1];
     return v.replace(/\D/g, '');
   }
@@ -248,7 +248,7 @@
   var vote = $('[data-vote]');
   if (vote && slug) {
     var voted = store('hfn-vote-' + slug);
-    vote.innerHTML = '<p>Did this fix it?</p><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><span class="thanks" aria-live="polite"></span>';
+    vote.innerHTML = '<p>Was this helpful?</p><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><span class="thanks" aria-live="polite"></span>';
     var thanks = $('.thanks', vote);
     var lock = function (v) {
       $$('button', vote).forEach(function (b) { b.disabled = true; });
