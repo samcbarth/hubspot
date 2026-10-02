@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Contact won't re-enroll in a HubSpot workflow? Check these 6 things - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot enrolls a record in a workflow once by default. Here is why a contact is not re-enrolling, how to turn re-enrollment on, and the triggers that can never re-enroll.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/">
+<meta property="og:title" content="Contact won't re-enroll in a HubSpot workflow? Check these 6 things">
+<meta property="og:description" content="HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/og.png">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-02">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Contact won't re-enroll in a HubSpot workflow? Check these 6 things",
+      "description": "HubSpot enrolls a record in a workflow once by default. Here is why a contact is not re-enrolling, how to turn re-enrollment on, and the triggers that can never re-enroll.",
+      "datePublished": "2026-10-02",
+      "dateModified": "2026-10-02",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot workflows"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Turn on re-enrollment in a HubSpot contact-based workflow",
+      "totalTime": "PT10M",
+      "step": [
+        { "@type": "HowToStep", "name": "Open the workflow", "text": "Go to Automation > Workflows and click the name of the contact-based workflow." },
+        { "@type": "HowToStep", "name": "Open the enrollment trigger", "text": "Click the Trigger enrollment for contacts card at the top of the workflow. Its footer shows Re-enroll off or Re-enroll on." },
+        { "@type": "HowToStep", "name": "Open the Settings tab", "text": "In the Triggers panel, click the Settings tab." },
+        { "@type": "HowToStep", "name": "Allow re-enrollment", "text": "Under Re-enroll, toggle on Allow contacts to re-enroll after completing the workflow." },
+        { "@type": "HowToStep", "name": "Pick the re-enrollment triggers", "text": "Select each trigger that should re-enroll contacts, then save the workflow." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact won't re-enroll in a HubSpot workflow?", "item": "https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="workflow-wont-re-enroll">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Workflows</span><span class="badge">All hubs</span></div>
+      <h1>Contact won't re-enroll in a HubSpot workflow? Check these 6 things</h1>
+      <p class="dek">The contact met your trigger again, and nothing happened. Usually that is HubSpot working as designed: workflows enroll a record once unless you tell them otherwise, and some triggers can never re-enroll at all.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise, any hub</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-02">October 2, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot enrolls each record in a workflow only the first time it meets the trigger. To get a second run, turn on re-enrollment <strong>and</strong> tick the specific trigger that should re-enroll. Even then, the record has to go from not matching to matching again, it cannot still be in the workflow, and activity triggers, calculated properties, and multi-value "is any of" filters never re-enroll.</p>
+        </div>
+
+        <h2>1. Re-enrollment is off</h2>
+        <p>This is the default for every new workflow. A contact that completed the workflow last month will not go through it again, no matter how many times it meets the trigger. Here is where the switch lives in a contact-based workflow.</p>
+        <ol class="steps">
+          <li>
+            <p>Go to <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Automation &gt; Workflows</span></a> and click the name of the workflow.</p>
+            <figure class="shot"><a href="workflows-list.webp"><img src="workflows-list.webp" alt="HubSpot Automation Workflows list with one contact-based workflow name highlighted" width="800" height="552" loading="lazy"></a><figcaption>Open the workflow from the Workflows tab.</figcaption></figure>
+          </li>
+          <li>
+            <p>Look at the footer of the <span class="ui">Trigger enrollment for contacts</span> card at the top of the workflow. It says <span class="ui">Re-enroll off</span> or <span class="ui">Re-enroll on</span>, which answers the question in one glance. Click the card to open it.</p>
+            <figure class="shot"><a href="enrollment-trigger-box.webp"><img src="enrollment-trigger-box.webp" alt="Workflow editor with the Trigger enrollment for contacts card highlighted and its Re-enroll off footer marked with an arrow" width="800" height="553" loading="lazy"></a><figcaption>The trigger card footer shows the re-enrollment status.</figcaption></figure>
+          </li>
+          <li>
+            <p>In the <span class="ui">Triggers</span> panel, click the <span class="ui">Settings</span> tab. Under <span class="ui">Re-enroll</span>, toggle on <span class="ui">Allow contacts to re-enroll after completing the workflow</span>.</p>
+            <figure class="shot"><a href="re-enrollment-tab.webp"><img src="re-enrollment-tab.webp" alt="Triggers panel Settings tab with the Re-enroll switch highlighted" width="800" height="552" loading="lazy"></a><figcaption>Settings tab (3), then the Re-enroll switch (4).</figcaption></figure>
+            <div class="callout"><span class="callout-title">Not where the docs say</span><p>HubSpot's knowledge base still calls this the "Re-enrollment tab." In the workflow editor as of October 2, 2026, the switch sits under the trigger panel's Settings tab.</p></div>
+          </li>
+          <li>
+            <p>With the switch on, select each trigger that should re-enroll contacts, then save.</p>
+          </li>
+        </ol>
+        <div class="callout"><span class="callout-title">Company, deal, and ticket workflows</span><p>Same place. Click the enrollment trigger card, open the <span class="ui">Settings</span> tab, and toggle on <span class="ui">Re-enroll</span>.</p></div>
+
+        <h2>2. The switch is on, but that trigger is not ticked</h2>
+        <p>Turning on re-enrollment does nothing by itself. HubSpot only re-enrolls on the triggers you select underneath the switch. If your workflow has three enrollment conditions and you only ticked one, the other two will enroll a contact the first time and never again. Open the trigger's Settings tab and select every trigger you actually want.</p>
+
+        <h2>3. The contact never stopped matching</h2>
+        <p>Re-enrollment fires when a record goes from <em>not matching</em> a trigger to <em>matching</em> it. Staying in a matching state is not a new event.</p>
+        <p>HubSpot's own example is list membership. If the trigger is "is a member of list" and the contact stays in that list, it finishes the workflow once and stops. It only re-enrolls after it leaves the list and joins it again.</p>
+        <p>The same applies to property values. If the trigger is <code>Lead status is any of Open</code> and the contact's lead status is still Open, setting it to Open again changes nothing.</p>
+        <div class="callout ok"><span class="callout-title">Fix: reset the trigger at the end</span><p>If the contact should run through again the next time something happens, make the last action of the workflow clear or change the trigger property. Then the next real update is a genuine change from not matching to matching, and re-enrollment fires.</p></div>
+        <p>Also worth knowing: a trigger using <span class="ui">is known</span> re-enrolls when the property gets its first value <strong>and</strong> every time the value changes, as long as the contact still meets the original enrollment triggers. That is useful on purpose and noisy by accident.</p>
+
+        <h2>4. The contact is still in the workflow</h2>
+        <p>A record cannot re-enroll while it is enrolled. If your workflow has a long delay, a contact sitting in it will ignore every trigger until it finishes or is unenrolled. Check the contact's enrollment history in the workflow. If it is still active, either wait it out, unenroll it, or rethink whether a 30-day delay belongs in a workflow that should restart.</p>
+
+        <h2>5. The trigger can't be used for re-enrollment at all</h2>
+        <p>Some enrollment conditions work for first enrollment but are blocked from re-enrollment. HubSpot flags them when you set up re-enrollment. For contact-based workflows, the common ones are:</p>
+        <ul>
+          <li><strong>Activities and activity properties</strong>, in every workflow type.</li>
+          <li><strong>Calculation properties</strong>, including built-in ones like <em>Recent conversion</em> and <em>Number of unique forms submitted</em>.</li>
+          <li><strong>Privacy consent events.</strong></li>
+          <li><strong>"Is any of" with more than one value.</strong> A single filter like <code>Lead source is any of Webinar or Trade show</code> cannot re-enroll. Split it into two triggers joined with OR, one value each, and both can.</li>
+          <li><strong>Last modified date is known</strong>, and since September 10, 2024, the <em>Now in workflow</em> property.</li>
+        </ul>
+        <p>For company, deal, and ticket workflows, only properties of that same object can re-enroll. Lists and activities cannot.</p>
+
+        <h2>6. You turned it on after the fact</h2>
+        <p>Re-enrollment is not retroactive. Contacts that already completed the workflow only come back when they meet a ticked trigger again after you flip the switch. If you need to push a backlog through now, enroll them manually. With re-enrollment on, a manual enrollment does not need to meet any trigger.</p>
+
+        <h2>Two edge cases that look like bugs</h2>
+        <ul>
+          <li><strong>Date and number refinements are ignored for re-enrollment.</strong> If the trigger is "filled out the demo form between January 1 and February 1", re-enrollment fires on any later submission of that form, outside the date range too.</li>
+          <li><strong>Time-window filters have a cooldown.</strong> With a re-enrollment trigger like "updated in the last 5 days", a record that enrolled will not re-enroll on another update inside that same 5-day window. After the window passes, the next update re-enrolls it.</li>
+        </ul>
+        <div class="callout warn"><span class="callout-title">Before you flip the switch</span><p>A re-enrolled contact starts the workflow from the top and gets every action again, including emails. Read through the workflow and ask whether a contact should really receive all of it twice.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/add-re-enrollment-triggers-to-a-workflow">HubSpot Knowledge Base: Add re-enrollment triggers to a workflow</a> (last updated August 3, 2026)</li>
+          <li><a href="https://knowledge.hubspot.com/workflows/manage-workflow-enrollment-settings">HubSpot Knowledge Base: Manage workflow enrollment settings</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/manually-enroll-objects-into-workflows">HubSpot Knowledge Base: Manually enroll records in workflows</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

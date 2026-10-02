@@ -11,6 +11,22 @@
  * draft:      true keeps it out of every list, sitemap, feed, and llms.txt
  */
 var ARTICLES = [
+  {
+    slug: 'workflow-wont-re-enroll',
+    title: "Contact won't re-enroll in a HubSpot workflow? Check these 6 things",
+    excerpt: 'HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll.',
+    type: 'guide',
+    problem: 'Fix it',
+    hubs: ['Marketing Hub', 'Sales Hub', 'Service Hub', 'Data Hub'],
+    features: ['Workflows'],
+    tier: 'Professional or Enterprise',
+    permissions: 'Super Admin or Workflows',
+    verified: '2026-10-02',
+    published: '2026-10-02',
+    minutes: 10,
+    difficulty: 'Intermediate',
+    keywords: ['re-enroll', 'reenroll', 're-enrollment', 'enrollment trigger', 'workflow not triggering', 'automation']
+  }
 ];
 
 if (typeof module !== 'undefined') module.exports = ARTICLES;

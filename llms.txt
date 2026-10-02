@@ -5,4 +5,18 @@
 - Link builder for direct links into any HubSpot portal: https://hubspot.samcbarth.com/link-builder.html
 - Request a fix: https://hubspot.samcbarth.com/request-a-fix.html
 
+## Data Hub
 
+- [Contact won't re-enroll in a HubSpot workflow? Check these 6 things](https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/): HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll. (Requires Professional or Enterprise; verified 2026-10-02)
+
+## Marketing Hub
+
+- [Contact won't re-enroll in a HubSpot workflow? Check these 6 things](https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/): HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll. (Requires Professional or Enterprise; verified 2026-10-02)
+
+## Sales Hub
+
+- [Contact won't re-enroll in a HubSpot workflow? Check these 6 things](https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/): HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll. (Requires Professional or Enterprise; verified 2026-10-02)
+
+## Service Hub
+
+- [Contact won't re-enroll in a HubSpot workflow? Check these 6 things](https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/): HubSpot enrolls a record once by default. Why re-enrollment fails, how to turn it on, and the triggers that can never re-enroll. (Requires Professional or Enterprise; verified 2026-10-02)

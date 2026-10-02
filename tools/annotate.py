@@ -10,6 +10,7 @@ Annotations live in shots/<slug>/annotations.json:
     "out": "workflow-list.webp",          # optional, default: same name .webp
     "crop": [0, 60, 1600, 900],           # optional [x0, y0, x1, y1]
     "blur": [[1200, 10, 1500, 50]],       # rectangles to pixelate (emails, names, portal IDs)
+    "erase": [[300, 90, 620, 154]],       # rectangles painted over with the color just below them (banners, popups)
     "boxes": [[40, 200, 380, 250]],       # orange highlight rectangles
     "arrows": [[600, 400, 420, 240]],     # [x_from, y_from, x_to, y_to]
     "badges": [[30, 190, "1"]],           # numbered step circles
@@ -65,6 +66,10 @@ def process(slug, name, spec):
     src = ROOT / "shots" / slug / name
     img = Image.open(src).convert("RGB")
     scale = max(1, round(img.width / 1400))  # keep strokes visible on hi-dpi captures
+    for box in spec.get("erase", []):
+        x0, y0, x1, y1 = [int(v) for v in box]
+        color = img.getpixel(((x0 + x1) // 2, min(y1 + 4, img.height - 1)))
+        ImageDraw.Draw(img).rectangle((x0, y0, x1, y1), fill=color)
     for box in spec.get("blur", []):
         pixelate(img, box)
     draw = ImageDraw.Draw(img)

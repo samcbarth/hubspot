@@ -2,7 +2,8 @@
  * HubSpot destinations for the link builder. `path` is the in-app URL with
  * {portalId} where the account number goes. The generic version (no ID) is
  * https://app.hubspot.com/l + path without "/{portalId}", which HubSpot routes
- * to the reader's default portal.
+ * to the reader's default portal (or a portal picker if they have several).
+ * Every path was opened in a live portal on 2026-10-02.
  */
 window.HS_LINKS = [
   { group: 'CRM records', items: [
@@ -10,8 +11,8 @@ window.HS_LINKS = [
     { label: 'Companies', path: '/contacts/{portalId}/objects/0-2/views/all/list' },
     { label: 'Deals', path: '/contacts/{portalId}/objects/0-3/views/all/list' },
     { label: 'Tickets', path: '/contacts/{portalId}/objects/0-5/views/all/list' },
-    { label: 'Lists (segments)', path: '/contacts/{portalId}/objectLists/views/all' },
-    { label: 'Imports', path: '/import/{portalId}' },
+    { label: 'Segments (lists)', path: '/contacts/{portalId}/objectLists/views/all' },
+    { label: 'Imports (Data integration)', path: '/import/{portalId}' },
     { label: 'Data quality', path: '/data-quality/{portalId}' }
   ]},
   { group: 'Automation', items: [
@@ -27,14 +28,14 @@ window.HS_LINKS = [
     { label: 'Ads', path: '/ads/{portalId}' }
   ]},
   { group: 'Content', items: [
-    { label: 'Landing pages', path: '/pages/{portalId}/manage/landing/domain/all/listing/all' },
-    { label: 'Website pages', path: '/pages/{portalId}/manage/site/domain/all/listing/all' },
+    { label: 'Landing pages', path: '/website/{portalId}/pages/landing' },
+    { label: 'Website pages', path: '/website/{portalId}/pages/site' },
     { label: 'Design Manager', path: '/design-manager/{portalId}' },
     { label: 'Files', path: '/files/{portalId}' }
   ]},
   { group: 'Sales and service', items: [
     { label: 'Meetings scheduler', path: '/meetings/{portalId}' },
-    { label: 'Email templates', path: '/templates/{portalId}' },
+    { label: 'Message templates', path: '/templates/{portalId}' },
     { label: 'Snippets', path: '/snippets/{portalId}' },
     { label: 'Inbox', path: '/live-messages/{portalId}' },
     { label: 'Knowledge base', path: '/knowledge/{portalId}' }
