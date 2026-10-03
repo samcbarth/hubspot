@@ -747,6 +747,54 @@ var ARTICLES = [
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["add reports", "dashboard", "ready-made reports", "permission to edit dashboard"]
+  },
+  {
+    slug: "email-tracking-consent-review",
+    title: "HubSpot says 'Before you send: review your email tracking settings'. What it means and what to do",
+    excerpt: "The HubSpot warning about email open and click tracking consent: where it appears, the Tracking settings it links to, and how to turn tracking off account-wide or for one email.",
+    type: "tip",
+    problem: "Gotcha",
+    hubs: ["Marketing Hub"],
+    features: ["Email", "Consent"],
+    tier: "All tiers with marketing email",
+    permissions: "Account access to email settings",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 6,
+    difficulty: "Beginner",
+    keywords: ["email tracking", "open tracking", "click tracking", "gdpr", "consent"]
+  },
+  {
+    slug: "double-opt-in-marketing-email",
+    title: "Double opt-in for HubSpot marketing email: what it does and what it limits",
+    excerpt: "How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub"],
+    features: ["Email", "Consent"],
+    tier: "Basic double opt-in on Starter and free tools; per-form control and custom confirmation email need Professional or Enterprise",
+    permissions: "Account access to email settings",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 10,
+    difficulty: "Intermediate",
+    keywords: ["double opt-in", "confirmation email", "email consent", "doi"]
+  },
+  {
+    slug: "email-subscription-types",
+    title: "HubSpot email subscription types: marketing, one-to-one, customer service, and your own",
+    excerpt: "How HubSpot subscription types work: the default types, the subscription preferences page contacts see, how to create or archive types, and what happens to the one-to-one type.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub", "Smart CRM"],
+    features: ["Email", "Subscriptions"],
+    tier: "Marketing Hub Starter and up; Content Hub Professional and Enterprise",
+    permissions: "Account access to email settings",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 8,
+    difficulty: "Beginner",
+    keywords: ["subscription types", "preferences page", "unsubscribe", "one to one"]
   }
 ];
 

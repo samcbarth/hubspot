@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Double opt-in for HubSpot marketing email: what it does and what it limits - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/">
+<meta property="og:title" content="Double opt-in for HubSpot marketing email: what it does and what it limits">
+<meta property="og:description" content="How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Double opt-in for HubSpot marketing email: what it does and what it limits",
+      "description": "How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set up double opt-in for HubSpot marketing email",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open email settings", "text": "Go to Settings, Marketing, Email."},
+        {"@type": "HowToStep", "name": "Open Double opt-in", "text": "Click the Double opt-in tab."},
+        {"@type": "HowToStep", "name": "Set it up", "text": "Click Set up double opt-in and follow the steps."},
+        {"@type": "HowToStep", "name": "Test a form", "text": "Submit a test form and check that the confirmation email arrives and works."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Double opt-in for HubSpot marketing email: what it does and what it limits", "item": "https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="double-opt-in-marketing-email">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Double opt-in for HubSpot marketing email: what it does and what it limits</h1>
+      <p class="dek">Double opt-in adds a confirmation step before you can email a new contact. It protects your sender reputation, and it changes who you can send to.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Basic double opt-in on Starter and free tools; per-form control and custom confirmation email need Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Account access to email settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>With double opt-in on, contacts created through forms get a confirmation email, and you cannot email them until they click the link. Existing contacts you already sent marketing emails to count as confirmed. Basic double opt-in applies to every form and page and uses a default confirmation email. Advanced features, such as turning it on for only some forms and customizing the email, need Marketing Hub Professional or Enterprise. It applies to marketing email only, not SMS or WhatsApp.</p>
+        </div>
+
+        <h2>1. Where it lives</h2>
+        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/marketing/email/doi" href="https://app.hubspot.com/l/settings/marketing/email/doi"><span class="ui">email settings</span></a>, and click the <span class="ui">Double opt-in</span> tab. HubSpot's summary: double opt-in makes contacts explicitly confirm their subscription before they start receiving messages. The tab lists the benefits it claims, including better engagement and sender reputation, fewer spam complaints, and support for data privacy compliance, and has a <span class="ui">Set up double opt-in</span> button.</p>
+        <figure class="shot"><a href="doi.webp"><img src="doi.webp" alt="Email settings Double opt-in tab with the explanation and the Set up double opt-in button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Double opt-in tab and its setup button.</figcaption></figure>
+
+        <h2>2. How it works</h2>
+        <ol>
+          <li>A contact signs up on a form.</li>
+          <li>They receive a confirmation email.</li>
+          <li>After they click the link, they are added to your subscriber list and can receive marketing email.</li>
+        </ol>
+        <p>HubSpot says contacts created through HubSpot forms, non-HubSpot forms, lead ad forms, or the Forms API get the follow-up email, and you cannot email them until they confirm.</p>
+
+        <h2>3. Who counts as confirmed</h2>
+        <ul>
+          <li>Existing contacts you previously sent marketing email to in HubSpot.</li>
+          <li>Existing contacts sent a double opt-in email who click the link.</li>
+          <li>New contacts who convert on an applicable form and click the link.</li>
+        </ul>
+
+        <h2>4. Limits to know</h2>
+        <ul>
+          <li><strong>Marketing email only.</strong> It cannot manage WhatsApp or SMS subscriptions.</li>
+          <li><strong>Tied to the email address.</strong> If a contact's primary email changes, the old confirmation does not carry over.</li>
+          <li><strong>Workflows.</strong> A workflow that sends to an unconfirmed contact retries for up to one day, then stops.</li>
+          <li><strong>Basic vs advanced.</strong> Starter and free tools get basic double opt-in for all forms and pages with a default confirmation email, though the sender, language, and subject line can be customized.</li>
+        </ul>
+        <div class="callout"><span class="callout-title">Pair it with a good form</span><p>A clear consent checkbox and a confirmation email that looks like you reduces drop-off. See <a href="../form-consent-checkbox/">add a consent checkbox to a form</a>.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/marketing-email/set-up-double-opt-in-for-emails">HubSpot Knowledge Base: Set up double opt-in for emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-double-opt-in-confirmation-status">HubSpot Knowledge Base: Understand double opt-in confirmation status</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-opt-in-consent-for-email">HubSpot Knowledge Base: Understand opt-in consent for email</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
