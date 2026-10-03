@@ -173,6 +173,48 @@
     <category>Performance</category>
   </item>
   <item>
+    <title>HubSpot&#39;s default lifecycle stages, lead statuses, and deal stages (with internal names)</title>
+    <link>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Properties</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage</title>
+    <link>https://hubspot.samcbarth.com/articles/lifecycle-date-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lifecycle-date-properties/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot automatically creates date entered and time in stage properties for every lifecycle stage. Check them before you build custom date fields for a journey or funnel.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Properties</category>
+    <category>Lifecycle stages</category>
+  </item>
+  <item>
+    <title>How to tell if a website uses HubSpot: check for the tracking code</title>
+    <link>https://hubspot.samcbarth.com/articles/detect-hubspot-tracking-code/</link>
+    <guid>https://hubspot.samcbarth.com/articles/detect-hubspot-tracking-code/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s tracking code is a script from js.hs-scripts.com with the account&#39;s Hub ID. How to check one site by hand, validate your own, and scan a list of domains.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>How to close out stale HubSpot deals safely: check activity first, then use a reason</title>
+    <link>https://hubspot.samcbarth.com/articles/close-stale-deals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/close-stale-deals/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

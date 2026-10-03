@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot automatically creates date entered and time in stage properties for every lifecycle stage. Check them before you build custom date fields for a journey or funnel.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/lifecycle-date-properties/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/lifecycle-date-properties/">
+<meta property="og:title" content="Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage">
+<meta property="og:description" content="HubSpot automatically creates date entered and time in stage properties for every lifecycle stage. Check them before you build custom date fields for a journey or funnel.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/lifecycle-date-properties/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage",
+      "description": "HubSpot automatically creates date entered and time in stage properties for every lifecycle stage. Check them before you build custom date fields for a journey or funnel.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/lifecycle-date-properties/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/lifecycle-date-properties/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find HubSpot's built-in lifecycle timestamp properties",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open contact properties", "text": "Go to Settings, Properties, and choose Contact properties."},
+        {"@type": "HowToStep", "name": "Search for date entered", "text": "Search date entered and note one property per lifecycle stage."},
+        {"@type": "HowToStep", "name": "Search for time in", "text": "Search time in to find the matching duration properties."},
+        {"@type": "HowToStep", "name": "Use them in reports and filters", "text": "Use these properties in lists, workflows, and reports instead of custom fields."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage", "item": "https://hubspot.samcbarth.com/articles/lifecycle-date-properties/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="lifecycle-date-properties">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Properties">Properties</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage</h1>
+      <p class="dek">Before you build seven custom date properties to track how long people spend in each stage, look at what HubSpot already stamps for you.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers for the properties; reports and workflows depend on your tier</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Any user can view; reports need report access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot automatically creates a <strong>Date entered</strong> property and a <strong>Latest time in</strong> property for each lifecycle stage, plus <strong>Date entered current stage</strong>. They fill themselves as records move. If you are designing a customer journey model and about to add custom date fields for each stage, check these first. In a portal where I was mapping a journey model, they replaced seven custom date fields.</p>
+        </div>
+
+        <h2>1. Search for "date entered"</h2>
+        <p>Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search <em>date entered</em>. You will see <span class="ui">Date entered current stage</span> (a calculation) and one date and time property per stage, named like Date entered "Lead (Lifecycle Stage Pipeline)".</p>
+        <figure class="shot"><a href="date-entered.webp"><img src="date-entered.webp" alt="Contact properties filtered to date entered showing the current stage property and per-stage date properties highlighted" width="800" height="613" loading="lazy"></a><figcaption>One date property per lifecycle stage, plus Date entered current stage.</figcaption></figure>
+
+        <h2>2. Search for "time in"</h2>
+        <p>The matching duration properties are named Latest time in "Lead (Lifecycle Stage Pipeline)" and so on. They are number properties, so you can filter and report on how long records spent in each stage.</p>
+        <figure class="shot"><a href="time-in-stage.webp"><img src="time-in-stage.webp" alt="Contact properties filtered to time in showing latest time in properties for each lifecycle stage highlighted" width="800" height="613" loading="lazy"></a><figcaption>Latest time in each lifecycle stage, one number property per stage.</figcaption></figure>
+
+        <h2>3. Where this saves work</h2>
+        <ul>
+          <li><strong>Journey and funnel models.</strong> If your model has stages that line up with lifecycle stages, you do not need custom date fields for them. The timestamps already exist.</li>
+          <li><strong>Segments.</strong> Filter on Date entered for a stage to list everyone who became a Lead last month.</li>
+          <li><strong>Reports.</strong> Time in stage works as a number in custom reports.</li>
+        </ul>
+        <div class="callout warn"><span class="callout-title">Catches</span><p>These properties follow the lifecycle stage property. If your team does not keep lifecycle stage current, the timestamps will not move either. See <a href="../sql-count-zero/">why SQL reports show zero</a>.</p></div>
+        <p>Also note that company records have their own lifecycle stage and their own set of properties. Check the company property list separately.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/create-and-edit-properties">HubSpot Knowledge Base: Create and edit properties</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

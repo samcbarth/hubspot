@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>How to close out stale HubSpot deals safely: check activity first, then use a reason - HubSpot Field Notes</title>
+<meta name="description" content="A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/close-stale-deals/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/close-stale-deals/">
+<meta property="og:title" content="How to close out stale HubSpot deals safely: check activity first, then use a reason">
+<meta property="og:description" content="A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/close-stale-deals/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "How to close out stale HubSpot deals safely: check activity first, then use a reason",
+      "description": "A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/close-stale-deals/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/close-stale-deals/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Close stale deals in HubSpot",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find stale deals", "text": "On the Deals board, filter by Last activity date and look at cards tagged Stale or Overdue."},
+        {"@type": "HowToStep", "name": "Check each deal", "text": "Open the deal and check last activity and whether a next activity is scheduled."},
+        {"@type": "HowToStep", "name": "Move to Closed Lost", "text": "Move the deal to Closed Lost and set a Closed lost reason."},
+        {"@type": "HowToStep", "name": "Record the decision", "text": "Add a note or use a consistent reason such as stale so you can report on it later."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How to close out stale HubSpot deals safely: check activity first, then use a reason", "item": "https://hubspot.samcbarth.com/articles/close-stale-deals/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="close-stale-deals">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Deals">Deals</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>How to close out stale HubSpot deals safely: check activity first, then use a reason</h1>
+      <p class="dek">Old open deals inflate your pipeline and distort forecasts. Cleaning them up takes ten minutes if you do it in the right order.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers (bulk edit and reports vary)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit access to deals</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Find old open deals with the <span class="ui">Last activity date</span> filter on the Deals board, open each one and check its last activity and next scheduled activity, then move it to Closed Lost with a Closed lost reason. For one pipeline of mine, six deals had no activity for years, two had none ever logged, and none had a next step, so all six were closed lost with a stale reason. Check before you close. A quiet deal is not always a dead one.</p>
+        </div>
+
+        <h2>1. Find them on the board</h2>
+        <p>Open <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-3/views/all/board" href="https://app.hubspot.com/l/contacts/objects/0-3/views/all/board"><span class="ui">Deals</span></a> in board view and pick the pipeline. The quick filters above the board include <span class="ui">Create date</span>, <span class="ui">Last activity date</span> and <span class="ui">Close date</span>. Set Last activity date to a long window and the old deals surface. Cards can also carry tags such as Overdue and Stale, which are a prompt to look and not a rule to act on.</p>
+        <figure class="shot"><a href="board.webp"><img src="board.webp" alt="Deals board with the quick filters above the columns and Overdue and Stale tags on cards highlighted" width="800" height="613" loading="lazy"></a><figcaption>Filters (1) and the Overdue and Stale tags on cards (2). Deal and contact names are blurred.</figcaption></figure>
+
+        <h2>2. Check each deal before closing it</h2>
+        <p>For each candidate, open the record and check three things: the last activity date, whether any activity is scheduled next, and who owns it. In my cleanup of one pipeline the six deals had last activity between late 2021 and early 2022, two had no activity logged at all, and none had a next activity. That is the evidence I wanted before closing.</p>
+
+        <h2>3. Move to Closed Lost with a reason</h2>
+        <p>Move the deal to <span class="ui">Closed Lost</span>. HubSpot has a <span class="ui">Closed lost reason</span> property, and a Deal loss reasons report that counts closed-lost deals by that reason, so a consistent value is worth the extra click. I used a plain "stale" reason so the cleanup is easy to find later.</p>
+        <ul>
+          <li>For many cards at once, hold Ctrl (Windows) or Cmd (Mac) and click cards on the board, then click Edit at the top.</li>
+          <li>Do not delete. Closing keeps the deal and its history in the portal.</li>
+        </ul>
+
+        <h2>4. Follow up if it makes sense</h2>
+        <p>Closed-lost does not have to be the end. Once the deals are closed, you can build a list of those contacts and send one re-engagement email. That is a separate decision, so make it on purpose.</p>
+        <div class="callout warn"><span class="callout-title">Owners may want a say</span><p>If the deals belong to someone else, tell them before you close, or ask them to confirm the list. Changing a rep's pipeline without telling them causes avoidable arguments.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/manage-records-in-board-view">HubSpot Knowledge Base: Manage records in board view</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/bulk-edit-records">HubSpot Knowledge Base: Bulk edit records</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
