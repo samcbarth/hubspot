@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Exclude your own visits from HubSpot analytics (and the catch with form tests) - HubSpot Field Notes</title>
+<meta name="description" content="How to keep your own traffic out of HubSpot analytics with an IP filter and referrer filter, what bot filtering does, and what happens to your own test form submissions.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/exclude-own-traffic/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/exclude-own-traffic/">
+<meta property="og:title" content="Exclude your own visits from HubSpot analytics (and the catch with form tests)">
+<meta property="og:description" content="How to keep your own traffic out of HubSpot analytics with an IP filter and referrer filter, what bot filtering does, and what happens to your own test form submissions.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/exclude-own-traffic/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Exclude your own visits from HubSpot analytics (and the catch with form tests)",
+      "description": "How to keep your own traffic out of HubSpot analytics with an IP filter and referrer filter, what bot filtering does, and what happens to your own test form submissions.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/exclude-own-traffic/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/exclude-own-traffic/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Exclude your own traffic from HubSpot analytics",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the settings", "text": "Go to Settings, Tracking & Analytics, Tracking Code."},
+        {"@type": "HowToStep", "name": "Open Advanced Tracking", "text": "Click the Advanced Tracking tab and scroll to Exclude Traffic."},
+        {"@type": "HowToStep", "name": "Add your IP addresses", "text": "Enter your IPv4 and IPv6 addresses in IP Addresses to Exclude."},
+        {"@type": "HowToStep", "name": "Save", "text": "Save the setting and check that new visits from your network stop appearing."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Exclude your own visits from HubSpot analytics (and the catch with form tests)", "item": "https://hubspot.samcbarth.com/articles/exclude-own-traffic/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="exclude-own-traffic">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Tracking+code">Tracking code</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Exclude your own visits from HubSpot analytics (and the catch with form tests)</h1>
+      <p class="dek">Your own page views and test submissions are polluting the numbers. The setting is easy to find and has no API, so it has to be done in the UI.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Account access to Tracking & Analytics settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open <span class="ui">Settings</span>, <span class="ui">Tracking & Analytics</span>, <span class="ui">Tracking Code</span>, then the <span class="ui">Advanced Tracking</span> tab. At the bottom, add your IPv4 and IPv6 addresses to <span class="ui">IP Addresses to Exclude</span>. HubSpot then stops recording visits, page views, submissions, and events from them. It does not remove traffic already recorded, and there is no API for the setting, so do it in the UI.</p>
+        </div>
+
+        <h2>1. Open Advanced Tracking</h2>
+        <p>Go to <a class="hs-link" data-hs="/settings/{portalId}/analytics-and-tracking" href="https://app.hubspot.com/l/settings/analytics-and-tracking"><span class="ui">Tracking & Analytics settings</span></a> and click the <span class="ui">Advanced Tracking</span> tab. Scroll past the additional domains and the cookie settings. Two filters near the end are worth knowing even if you never touch them.</p>
+        <figure class="shot"><a href="bot-filtering.webp"><img src="bot-filtering.webp" alt="Advanced Tracking settings with the Bot filtering toggle turned on highlighted" width="800" height="600" loading="lazy"></a><figcaption>Bot filtering and SMS bot filtering are on in this account. They are separate from excluding your own traffic.</figcaption></figure>
+
+        <h2>2. Add your IP addresses</h2>
+        <p>At the bottom of the tab is <span class="ui">Exclude Traffic</span>. HubSpot shows your current IP address above the box. Paste your addresses into <span class="ui">IP Addresses to Exclude</span>, separated by commas. HubSpot accepts both IPv4 and IPv6, and a dash for a range. The filter below it takes referrer domains or IPs to leave out of referral traffic. My addresses are blurred below.</p>
+        <figure class="shot"><a href="exclude-ip.webp"><img src="exclude-ip.webp" alt="Exclude Traffic section with the IP Addresses to Exclude box and the From these referrers box highlighted" width="800" height="600" loading="lazy"></a><figcaption>IP Addresses to Exclude (1) and referrers (2). The address values are blurred.</figcaption></figure>
+        <p>Add both IPv4 and IPv6, since a connection can use either.</p>
+
+        <h2>3. What this does and does not do</h2>
+        <ul>
+          <li>After you add an IP, HubSpot records no visits, page views, submissions, or events from it.</li>
+          <li>It only stops future traffic. Visits already recorded stay in your reports.</li>
+          <li>Home and mobile IPs change. A filter set once can quietly stop working, so recheck it when your numbers look off.</li>
+          <li>The visits from excluded IPs are still shown in the website visits tool.</li>
+        </ul>
+        <div class="callout warn"><span class="callout-title">Test submissions get flagged</span><p>HubSpot marks form submissions from an excluded IP with the spam type <em>Excluded source</em>. If you test your own form from an excluded network, it will not arrive as a normal submission. Test from another network, or temporarily remove the filter.</p></div>
+
+        <h2>4. Why this has to be done in the UI</h2>
+        <p>I tried to make this change through the CLI, the MCP connector, and the API. HubSpot has no endpoint for the analytics IP filter, so it is only settable on this page.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/reports/exclude-traffic-from-your-site-analytics">HubSpot Knowledge Base: Exclude traffic from your site analytics</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

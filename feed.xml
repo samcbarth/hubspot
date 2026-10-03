@@ -215,6 +215,60 @@
     <category>Deals</category>
   </item>
   <item>
+    <title>Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions</title>
+    <link>https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/</link>
+    <guid>https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When a sync connector keys on an external ID and two HubSpot companies carry it, data splits across both. How to triage the groups, merge the safe ones, and leave genuine ID collisions alone.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Duplicates</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Call tracking is creating duplicate HubSpot contacts? Fix the source before you merge</title>
+    <link>https://hubspot.samcbarth.com/articles/callrail-duplicate-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/callrail-duplicate-contacts/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Placeholder emails from a call tracking tool stop texts and calls matching real HubSpot contacts and create duplicates. How to analyze the duplicates by phone, what is safe to merge, and how to stop it.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Duplicates</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Seven HubSpot theme upload errors I hit, and how to sweep for the whole class</title>
+    <link>https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.</description>
+    <category>Content Hub</category>
+    <category>Design Manager</category>
+    <category>Themes</category>
+  </item>
+  <item>
+    <title>Exclude your own visits from HubSpot analytics (and the catch with form tests)</title>
+    <link>https://hubspot.samcbarth.com/articles/exclude-own-traffic/</link>
+    <guid>https://hubspot.samcbarth.com/articles/exclude-own-traffic/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to keep your own traffic out of HubSpot analytics with an IP filter and referrer filter, what bot filtering does, and what happens to your own test form submissions.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Tracking code</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn&#39;t</title>
+    <link>https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot logs Teams calls and syncs Teams meeting recordings, but not Teams Phone recordings. What Microsoft Graph offers, the 2026 transcript setting, HubSpot&#39;s transcripts API, and a Make versus Data Hub comparison.</description>
+    <category>Sales Hub</category>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Calling</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

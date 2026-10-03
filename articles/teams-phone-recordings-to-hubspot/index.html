@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn't - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot logs Teams calls and syncs Teams meeting recordings, but not Teams Phone recordings. What Microsoft Graph offers, the 2026 transcript setting, HubSpot's transcripts API, and a Make versus Data Hub comparison.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/">
+<meta property="og:title" content="Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn't">
+<meta property="og:description" content="HubSpot logs Teams calls and syncs Teams meeting recordings, but not Teams Phone recordings. What Microsoft Graph offers, the 2026 transcript setting, HubSpot's transcripts API, and a Make versus Data Hub comparison.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn't",
+      "description": "HubSpot logs Teams calls and syncs Teams meeting recordings, but not Teams Phone recordings. What Microsoft Graph offers, the 2026 transcript setting, HubSpot's transcripts API, and a Make versus Data Hub comparison.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Decide how to get Teams Phone recordings into HubSpot",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check what is native", "text": "Confirm what HubSpot's Teams integration logs and syncs today."},
+        {"@type": "HowToStep", "name": "Test Graph", "text": "Check whether your calls produce recording or transcript entries in Microsoft Graph after the admin setting is on."},
+        {"@type": "HowToStep", "name": "Pick a pipeline", "text": "Build a Make or custom pipeline if they do, or consider a compliance recorder if they do not."},
+        {"@type": "HowToStep", "name": "Post the transcript", "text": "Post transcripts to HubSpot's third-party transcripts API with an OAuth app."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn't", "item": "https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="teams-phone-recordings-to-hubspot">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Sales Hub</span><span class="badge">Data Hub</span><span class="badge">Developer</span></div>
+      <h1>Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn't</h1>
+      <p class="dek">A client wants every Teams Phone call recorded and transcribed on the HubSpot record. The native pieces cover less than it sounds like.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>See the HubSpot Teams app page for requirements; the custom pipeline needs a public app</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>HubSpot Super Admin; Microsoft 365 admin</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot logs Teams calls as metadata and syncs recordings and transcripts for <strong>Teams meetings</strong>, but not for <strong>Teams Phone</strong> calls. Getting phone recordings needs a custom pipeline: Microsoft Graph to fetch the artifacts, then HubSpot's third-party transcripts API to attach them. Make can run that. Data Hub cannot, because it has no connector for call artifacts. The weak point is plain PSTN calls, which Graph may not expose. Test that first. I researched this and have not built it.</p>
+        </div>
+
+        <h2>1. What HubSpot does natively</h2>
+        <ul>
+          <li><strong>Teams Phone call logging.</strong> HubSpot's Teams app logs inbound and outbound calls to the contact, company, and deals, with a delay. It does not mention recordings or transcripts, so assume none.</li>
+          <li><strong>Teams meeting recordings and transcripts.</strong> Synced natively. This is meetings, not phone calls.</li>
+          <li><strong>Teams Phone recordings and transcripts.</strong> Not supported natively. There is an open HubSpot community idea asking for it.</li>
+        </ul>
+
+        <h2>2. The Microsoft side</h2>
+        <ul>
+          <li>Microsoft Graph exposes call recordings and transcripts with change notifications. You need application permissions and an application access policy on the tenant.</li>
+          <li>Since 31 July 2026 Graph transcript access is off by default. An admin has to turn on the transcript API setting under Teams meeting settings, or without it you get a 403 error.</li>
+          <li><strong>Real phone (PSTN) calls are the weak point.</strong> A Tech Community thread ends with no supported way to fetch PSTN recordings with application permissions, and one endpoint I found is beta and experimental. I did not test it.</li>
+          <li>A meeting-type or ad hoc call with transcription turned on may be retrievable. A plain PSTN call may not be.</li>
+        </ul>
+
+        <h2>3. The HubSpot side</h2>
+        <p>The Calls object has fields including a recording URL and body, and the CRM API can create or update calls. For transcripts, HubSpot has a third-party transcripts API that takes an engagement ID and an array of utterances with speaker, text, and start and end times in milliseconds. It is OAuth only, so a private app token will not work, and it needs the calling transcripts read and write scopes.</p>
+
+        <h2>4. Make or Data Hub</h2>
+        <p><strong>Data Hub does not fit.</strong> It syncs and transforms data that HubSpot already holds and has no Graph connector for call artifacts. <strong>Make works</strong> with these pieces: an Azure app registration calling Graph, a trigger (a webhook with a subscription-renewal scenario, or polling as a simpler fallback), a match from the caller to a HubSpot contact by phone number, a call engagement with the recording link, and an OAuth connection for the transcripts call. Store the recording as a link to the SharePoint or OneDrive file, because HubSpot will not host the media.</p>
+
+        <h2>5. Suggested path</h2>
+        <ol>
+          <li>Turn on the admin setting, then test whether your Teams Phone calls produce recording or transcript entries in Graph. That decides everything.</li>
+          <li>If they do, build the Make pipeline above.</li>
+          <li>If they do not, the options are a compliance recorder or a Teams-native calling app. All of them are heavier.</li>
+          <li>Ask first which kind of "Teams Phone recordings" the client means. Calls recorded in Teams land in OneDrive or SharePoint, and whether Graph can reach them depends on the call type.</li>
+        </ol>
+        <p>This is research, not a finished build. There are no screenshots because nothing was built in a portal.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/log-microsoft-teams-calls-to-hubspot-records">HubSpot Knowledge Base: Log Microsoft Teams calls to HubSpot records</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/sync-microsoft-teams-meeting-recordings-and-transcripts-to-hubspot">HubSpot Knowledge Base: Sync Teams meeting recordings and transcripts to HubSpot</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/extensions/calling-extensions/third-party-transcripts">HubSpot developer docs: Third-party transcripts</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/answers/questions/5965856/graph-api-access-to-transcripts-stopped-working-af">Microsoft Q&A: Graph transcript access change</a></li>
+          <li><a href="https://techcommunity.microsoft.com/discussions/microsoftteams/access-teams-phone-call-recordings-via-api/4202274">Microsoft Tech Community: Teams Phone recordings via API</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

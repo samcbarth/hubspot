@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Seven HubSpot theme upload errors I hit, and how to sweep for the whole class - HubSpot Field Notes</title>
+<meta name="description" content="Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/">
+<meta property="og:title" content="Seven HubSpot theme upload errors I hit, and how to sweep for the whole class">
+<meta property="og:description" content="Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Seven HubSpot theme upload errors I hit, and how to sweep for the whole class",
+      "description": "Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Fix HubSpot theme upload validation errors",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Read the error literally", "text": "Note the exact field or template named in the message."},
+        {"@type": "HowToStep", "name": "Fix the named item", "text": "Apply the fix for that error from the list."},
+        {"@type": "HowToStep", "name": "Sweep for the class", "text": "Search the whole theme for the same kind of mistake before uploading again."},
+        {"@type": "HowToStep", "name": "Upload again", "text": "Upload with the CLI and read the next error."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Seven HubSpot theme upload errors I hit, and how to sweep for the whole class", "item": "https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="theme-upload-validation-errors">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Design+Manager">Design Manager</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Content Hub</span><span class="badge">Developer</span></div>
+      <h1>Seven HubSpot theme upload errors I hit, and how to sweep for the whole class</h1>
+      <p class="dek">The validator reports one class of error per upload, so you meet the rules by breaking them. Here are the ones that cost me uploads, so they cost you none.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any account with CMS or Content Hub access</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Developer access and CLI access to the account</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot will not validate a theme until every rule passes, and it reports one class of error at a time. The errors I hit: a reserved field name (<code>label</code>, <code>body</code>), email template types needing a <code>_page</code> suffix, field IDs that must be unique across the whole theme, text fields not supported in the theme's field file, and <code>mobile</code> being the only valid breakpoint name. When an error names a reserved word, sweep the theme for every reserved word at once.</p>
+        </div>
+
+        <h2>1. The setup</h2>
+        <p>I built a theme from scratch: fifteen templates, eleven drag and drop modules, and theme settings wired so one color change in the Design Manager repaints the site. It took six uploads to pass validation. The code was not bad. The validator reports a class of error at a time, so every upload surfaced the next one. Here they are in the order I hit them.</p>
+
+        <h2>2. The seven errors</h2>
+        <ol>
+          <li><strong>Field name cannot be <code>label</code>.</strong> It is a reserved word. I renamed it across five modules.</li>
+          <li><strong><code>email_backup_unsubscribe</code> is not a valid template type.</strong> All three email system template types want a <code>_page</code> suffix.</li>
+          <li><strong>Duplicate field id <code>enabled</code>.</strong> Theme field IDs are globally unique. They are not scoped to their group.</li>
+          <li><strong>Text fields are not supported in the theme's <code>fields.json</code>.</strong> My footer copy had to become its own module.</li>
+          <li><strong>Invalid breakpoint <code>tablet</code>.</strong> <code>mobile</code> was the only breakpoint name it accepted.</li>
+          <li><strong>Duplicate field id, again, inside one module.</strong> Nested child fields count too.</li>
+          <li><strong>Field name cannot be <code>body</code>.</strong> Another reserved name.</li>
+        </ol>
+
+        <h2>3. Sweep the class, not the symptom</h2>
+        <p>Number seven is the lesson. When it turned out to be another reserved field name, I stopped fixing the one it named and searched the whole theme for every reserved word at once. The next upload went clean. Six rounds of treating symptoms, one round of treating the class.</p>
+        <div class="code"><pre><code>hs cms upload src my-theme
+# on a reserved-name error, search every field name before uploading again
+grep -rn '"name": "\(label\|body\)"' my-theme</code></pre></div>
+        <ul>
+          <li>Keep a list of the errors in the theme's README so the next developer inherits them.</li>
+          <li>Check IDs for uniqueness across the theme, not just within a module.</li>
+          <li>HubSpot requires the system templates, such as 404, 500, password prompt, search results, and subscription pages. Plan for them from the start.</li>
+        </ul>
+        <p>I could not screenshot this because it happens in the terminal during upload. The error text above is quoted from my own upload output.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/themes">HubSpot developer docs: Themes</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/templates/overview">HubSpot developer docs: Templates overview</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

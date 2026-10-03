@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions - HubSpot Field Notes</title>
+<meta name="description" content="When a sync connector keys on an external ID and two HubSpot companies carry it, data splits across both. How to triage the groups, merge the safe ones, and leave genuine ID collisions alone.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/">
+<meta property="og:title" content="Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions">
+<meta property="og:description" content="When a sync connector keys on an external ID and two HubSpot companies carry it, data splits across both. How to triage the groups, merge the safe ones, and leave genuine ID collisions alone.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions",
+      "description": "When a sync connector keys on an external ID and two HubSpot companies carry it, data splits across both. How to triage the groups, merge the safe ones, and leave genuine ID collisions alone.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Clean up companies that share one connector ID",
+      "totalTime": "PT30M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the shared IDs", "text": "Export companies with the connector ID property and group by that value."},
+        {"@type": "HowToStep", "name": "Sort groups into buckets", "text": "Separate identical-name groups from groups with conflicting data and from different organizations."},
+        {"@type": "HowToStep", "name": "Merge the safe bucket", "text": "Keep the record with the real activity and merge the empty twin into it."},
+        {"@type": "HowToStep", "name": "Ask about the rest", "text": "Send the conflicting groups to someone who knows the accounts, and leave true collisions alone."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions", "item": "https://hubspot.samcbarth.com/articles/duplicate-companies-from-connector-ids/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="duplicate-companies-from-connector-ids">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Duplicates">Duplicates</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Smart CRM</span><span class="badge">Data Hub</span></div>
+      <h1>Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions</h1>
+      <p class="dek">A connector updates the record that matches an ID. If two records match, it has no rule for picking one, and half the account's history ends up on the wrong twin.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier (bulk merge tooling varies; API merge needs a private app)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or merge access to companies</dd></div>
+        <div class="fact"><dt>Time</dt><dd>30 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>A connector decides which HubSpot record to update from an external ID. When two companies carry the same ID, it has two targets and no rule, so contacts, deals, and activity split across twins. Group companies by the ID, then sort the groups: <strong>identical name and no conflicting data</strong> is safe to merge, <strong>same name but different data</strong> needs a human decision, and <strong>same ID on genuinely different organizations</strong> must not be merged at all. Merge keeps the record that holds the activity.</p>
+        </div>
+
+        <h2>1. What goes wrong</h2>
+        <p>I worked on an IT services client whose CRM synced company IDs from their service management system into a HubSpot property. About 160 of those IDs were on two or more company records in a portal of roughly 32,000 companies. The sync uses the ID to decide which record to update. With two matches it has no tie-break, so contacts, deals, and activity were splitting across the twins. Whoever opened the wrong record saw half the account. Many of the empty twins were old spreadsheet imports with no contacts, deals, or website.</p>
+
+        <h2>2. Group first, merge later</h2>
+        <p>Export companies with the connector ID property, then group by that value and keep any group with more than one record. Sort every group into one of three buckets before you touch anything:</p>
+        <ul>
+          <li><strong>Bucket A, safe:</strong> identical company name, same ID, no conflicting information. In my case about 100 groups. Keep the record that holds the real activity and merge the empty twin into it.</li>
+          <li><strong>Bucket B, needs a decision:</strong> same name and ID but two different websites on file. Merging is probably right, but someone has to say which website is correct. In about 30 of 47 cases the answer was obvious from the activity. The rest needed an account owner, because the active record sometimes had what looked like the wrong website.</li>
+          <li><strong>Bucket C, leave alone:</strong> the same ID on genuinely different organizations. Nine groups were separate chapters of a charity, separate hospital sites, and three unrelated banks. Merging would combine different organizations.</li>
+        </ul>
+        <div class="callout warn"><span class="callout-title">Look for the real cause of bucket C</span><p>Those are not duplicates. The ID is not unique in the source system, or the source tracks a parent while HubSpot tracks locations. Fix that decision, or the sync will keep feeding bad matches.</p></div>
+
+        <h2>3. Merge the safe bucket</h2>
+        <p>Open a company, choose <span class="ui">Actions</span>, then <span class="ui">Merge</span>, or call the merge endpoint if you have many. HubSpot combines the associations from both records on a merge, so deals and contacts carry over. In my case a company kept its 145 deals and another kept 233 after merging. The old record URLs also redirected to the merged record, so saved links kept working.</p>
+        <div class="code"><pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/merge
+{ "primaryObjectId": "ID_TO_KEEP", "objectIdToMerge": "ID_TO_FOLD_IN" }</code></pre></div>
+        <ul>
+          <li>Merges are permanent. Merge only the bucket you are sure about, and write every pair you merged to a file first.</li>
+          <li>Take the primary from the record with activity, not the oldest or newest by default.</li>
+          <li>Check the company count before and after. Mine dropped by about 100.</li>
+        </ul>
+
+        <h2>4. Send the rest back as a short table</h2>
+        <p>For bucket B, a table the client can answer in a few minutes works: company, website on the active record, other website on file. Mark the pairs that look like different businesses so nobody merges them by reflex. A hint here: two organizations that were separate before a merger or rebrand may legitimately have two records.</p>
+        <p>This article has no HubSpot screenshots because the portal belongs to a client. The merge screen itself is shown in <a href="../api-scripts-create-duplicates/">the duplicates article</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/merge-records">HubSpot Knowledge Base: Merge records</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/manage-duplicate-records">HubSpot Knowledge Base: Review and manage duplicate records</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api/crm/companies">HubSpot developer docs: Companies API</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
