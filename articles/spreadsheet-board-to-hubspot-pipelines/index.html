@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines - HubSpot Field Notes</title>
+<meta name="description" content="How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/">
+<meta property="og:title" content="Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines">
+<meta property="og:description" content="How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines",
+      "description": "How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Move a task board export into HubSpot pipelines",
+      "totalTime": "PT40M",
+      "step": [
+        {"@type": "HowToStep", "name": "Export the board", "text": "Export the board to a spreadsheet and list every column."},
+        {"@type": "HowToStep", "name": "Map the fields", "text": "Map each board field to a HubSpot object and property."},
+        {"@type": "HowToStep", "name": "Create what is missing", "text": "Create pipelines and custom properties first."},
+        {"@type": "HowToStep", "name": "Dry run", "text": "Run a dry run that writes nothing and reports counts."},
+        {"@type": "HowToStep", "name": "Load and verify", "text": "Load in pieces, with approval for each, and verify the counts."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines", "item": "https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="spreadsheet-board-to-hubspot-pipelines">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pipelines">Pipelines</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines</h1>
+      <p class="dek">A team lives in a card board and wants it in HubSpot. The move is mostly a mapping exercise, and a dry run saves you from writing 58 deals into the wrong place.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>The number of pipelines depends on your subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or access to create pipelines and properties</dd></div>
+        <div class="fact"><dt>Time</dt><dd>40 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Export the board, then decide where every column lands: boards to <strong>pipelines</strong>, cards to <strong>deals</strong>, organizations to <strong>companies</strong>, people to <strong>contacts</strong>, and the card text to <strong>notes</strong>. Create anything missing, such as a custom property for organization type, run a dry run that reports counts without writing, load one piece at a time, and verify the deal count in each pipeline. For a marketing consultancy's board I mapped 5 pipelines, 58 open cards, 54 companies, 12 contacts, and 36 notes.</p>
+        </div>
+
+        <h2>1. Map before you move anything</h2>
+        <p>A marketing consultancy managed its work on a card board and wanted it in HubSpot. The export was a single spreadsheet, so the first job was a mapping table. This is the shape I used:</p>
+        <ul>
+          <li><strong>Boards</strong> become pipelines (five in this case).</li>
+          <li><strong>Cards</strong> become deals, with owner, priority, close date, and associations carried over.</li>
+          <li><strong>Organizations</strong> become companies, with a custom property for organization type.</li>
+          <li><strong>People</strong> become contacts.</li>
+          <li><strong>Card text</strong> becomes a note on the deal, so nothing typed in the card is lost.</li>
+        </ul>
+        <p>Open the Deals page and use the pipeline picker to see the pipelines you already have. Each pipeline's stages will be the columns of its board.</p>
+        <figure class="shot"><a href="pipeline-picker.webp"><img src="pipeline-picker.webp" alt="Deals pipeline picker listing existing pipelines with the list highlighted" width="800" height="613" loading="lazy"></a><figcaption>The pipeline picker lists every pipeline in the account.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Check your pipeline limit first</span><p>The number of pipelines you can create depends on your subscription. Look at the limit before you design five of them.</p></div>
+
+        <h2>2. Create the pipelines and the missing property</h2>
+        <p>Create the pipelines with stages that match the board, plus any custom property such as Organization Type. Check that none of them already exist, so you do not duplicate setup. The result should look like the board view, one column per stage.</p>
+        <figure class="shot"><a href="board.webp"><img src="board.webp" alt="Deals board for a pipeline showing stage columns with the column headers highlighted" width="800" height="613" loading="lazy"></a><figcaption>A pipeline in board view, one column per stage. Deal names are blurred.</figcaption></figure>
+
+        <h2>3. Dry run, then load in pieces</h2>
+        <p>My dry run wrote nothing and only reported what it would create: 5 pipelines, 58 open cards as deals, 54 companies, 12 contacts. Then I loaded one piece at a time, with approval for each, in this order:</p>
+        <ol>
+          <li>Pipelines and the Organization Type property.</li>
+          <li>Companies, then contacts.</li>
+          <li>Deals with owners, priority, close dates, and associations.</li>
+          <li>Notes with the card text.</li>
+        </ol>
+        <p>The loads went through a private app and the API, but an import file works for each step if you have the Record IDs for associations.</p>
+
+        <h2>4. Verify</h2>
+        <ul>
+          <li>Open each pipeline and compare its deal count with the dry run.</li>
+          <li>Spot check owners, close dates, and associations on a few deals.</li>
+          <li>Check that notes carry the card text.</li>
+        </ul>
+        <p>I loaded this into the client's own portal, so I have no screenshots of that portal. The screenshots above are from a demo portal.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/import-records-for-a-single-object">HubSpot Knowledge Base: Import records for a single object</a></li>
+          <li><a href="https://developers.hubspot.com/docs/guides/crm/using-object-apis">HubSpot developer docs: Using object APIs</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

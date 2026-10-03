@@ -269,6 +269,38 @@
     <category>Calling</category>
   </item>
   <item>
+    <title>HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Links</category>
+  </item>
+  <item>
+    <title>Deal missing from HubSpot revenue attribution? A deal needs four things</title>
+    <link>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</link>
+    <guid>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s revenue attribution reports only include closed won deals with an associated contact, known amount, create date and close date, and recorded interactions. A checklist for why a deal is missing.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Attribution</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines</title>
+    <link>https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/</link>
+    <guid>https://hubspot.samcbarth.com/articles/spreadsheet-board-to-hubspot-pipelines/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Pipelines</category>
+    <category>Imports</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Deal missing from HubSpot revenue attribution? A deal needs four things - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's revenue attribution reports only include closed won deals with an associated contact, known amount, create date and close date, and recorded interactions. A checklist for why a deal is missing.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/">
+<meta property="og:title" content="Deal missing from HubSpot revenue attribution? A deal needs four things">
+<meta property="og:description" content="HubSpot's revenue attribution reports only include closed won deals with an associated contact, known amount, create date and close date, and recorded interactions. A checklist for why a deal is missing.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Deal missing from HubSpot revenue attribution? A deal needs four things",
+      "description": "HubSpot's revenue attribution reports only include closed won deals with an associated contact, known amount, create date and close date, and recorded interactions. A checklist for why a deal is missing.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find out why a deal is missing from revenue attribution",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check the stage", "text": "Confirm the deal is in a closed won stage."},
+        {"@type": "HowToStep", "name": "Check the contact", "text": "Confirm at least one contact is associated to the deal."},
+        {"@type": "HowToStep", "name": "Check the properties", "text": "Confirm Amount, Create date, and Close date all have known values."},
+        {"@type": "HowToStep", "name": "Check interactions", "text": "Confirm the associated contact has recorded interactions that can be credited."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Deal missing from HubSpot revenue attribution? A deal needs four things", "item": "https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="revenue-attribution-deal-requirements">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Attribution">Attribution</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>Deal missing from HubSpot revenue attribution? A deal needs four things</h1>
+      <p class="dek">The deal is closed won and the campaign report still says $0. Before you blame the attribution model, check the deal record against HubSpot's four requirements.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Revenue attribution reports need Marketing Hub Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Report access; edit access to deals to fix records</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's attribution documentation lists four conditions: the deal is in a <strong>closed won</strong> stage, it has <strong>at least one associated contact</strong>, it has known values for <strong>Amount, Create date, and Close date</strong>, and the associated contact has <strong>recorded interactions</strong> to credit. Miss one and the deal contributes nothing. A zero-dollar deal can meet every condition and still add $0 of revenue.</p>
+        </div>
+
+        <h2>1. Where you see the problem</h2>
+        <p>The usual symptom is a campaign or attribution report whose revenue is lower than you expect. In Marketing Studio, the <span class="ui">Analyze</span> tab shows revenue and the attribution model. In Marketing Hub Enterprise you can choose the model, and the screenshot shows the demo campaign on the Linear model with $0.00 and no influenced contacts.</p>
+        <figure class="shot"><a href="analyze.webp"><img src="analyze.webp" alt="Marketing Studio Analyze tab showing the Attribution model selector and the Linear revenue tile at $0.00 highlighted" width="800" height="613" loading="lazy"></a><figcaption>Attribution model (1) and the revenue tile (2) for an empty demo campaign.</figcaption></figure>
+        <p>Find campaigns from <a class="hs-link" data-hs="/campaigns/{portalId}" href="https://app.hubspot.com/l/campaigns"><span class="ui">Campaigns</span></a>. Then open the deal that should be counted and walk through the four checks.</p>
+
+        <h2>2. The four checks</h2>
+        <ol>
+          <li><strong>Closed won stage.</strong> The deal has to be in a closed won stage, and the pipeline has to have one configured.</li>
+          <li><strong>An associated contact.</strong> At least one contact must be associated to the deal. Without it, there are no interactions to credit.</li>
+          <li><strong>Known property values.</strong> Amount, Create date, and Close date must all have values.</li>
+          <li><strong>Tracked interactions.</strong> The contact needs interactions HubSpot recorded. For calls or meetings to count, they must be linked to both the contact and the deal.</li>
+        </ol>
+
+        <h2>3. Deals people forget about</h2>
+        <ul>
+          <li><strong>Deals with no contact.</strong> Created by hand for a company only. Add the contact and the deal can count.</li>
+          <li><strong>Deals with a blank close date.</strong></li>
+          <li><strong>Zero-dollar deals.</strong> I created a zero-dollar closed won deal for a client's points reallocation. It can be valid and still adds $0 to revenue, so do not read $0 as a bug.</li>
+          <li><strong>Interactions that are not linked.</strong> A call logged on the company only does not help the contact.</li>
+        </ul>
+        <div class="callout"><span class="callout-title">Fix it on the record</span><p>These are all fields on the deal and the contact, so the fix is to correct the record, not the report. After you fix it, wait for the report to refresh before judging.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/reports/understand-attribution-reporting">HubSpot Knowledge Base: Understand attribution reporting</a></li>
+          <li><a href="https://knowledge.hubspot.com/campaigns/analyze-campaign-performance">HubSpot Knowledge Base: Analyze campaign performance</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

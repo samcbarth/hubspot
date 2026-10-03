@@ -475,6 +475,54 @@ var ARTICLES = [
     minutes: 15,
     difficulty: "Advanced",
     keywords: ["microsoft teams", "teams phone", "call transcripts", "recordings", "microsoft graph"]
+  },
+  {
+    slug: "hubspot-object-type-ids",
+    title: "HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API",
+    excerpt: "The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.",
+    type: "tip",
+    problem: "Hidden trick",
+    hubs: ["Smart CRM"],
+    features: ["API", "Links"],
+    tier: "All tiers",
+    permissions: "Any user",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 5,
+    difficulty: "Intermediate",
+    keywords: ["object type id", "0-47", "0-48", "objecttypeid", "meeting link", "blank page"]
+  },
+  {
+    slug: "revenue-attribution-deal-requirements",
+    title: "Deal missing from HubSpot revenue attribution? A deal needs four things",
+    excerpt: "HubSpot's revenue attribution reports only include closed won deals with an associated contact, known amount, create date and close date, and recorded interactions. A checklist for why a deal is missing.",
+    type: "guide",
+    problem: "Fix it",
+    hubs: ["Marketing Hub", "Sales Hub"],
+    features: ["Attribution", "Campaigns"],
+    tier: "Revenue attribution reports need Marketing Hub Enterprise",
+    permissions: "Report access; edit access to deals to fix records",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 8,
+    difficulty: "Intermediate",
+    keywords: ["revenue attribution", "campaign revenue", "closed won", "deal missing"]
+  },
+  {
+    slug: "spreadsheet-board-to-hubspot-pipelines",
+    title: "Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines",
+    excerpt: "How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Sales Hub", "Smart CRM"],
+    features: ["Pipelines", "Imports"],
+    tier: "The number of pipelines depends on your subscription",
+    permissions: "Super Admin or access to create pipelines and properties",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 40,
+    difficulty: "Advanced",
+    keywords: ["planner", "trello", "board import", "pipelines", "migrate"]
   }
 ];
 

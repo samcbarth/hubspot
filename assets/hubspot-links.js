@@ -11,6 +11,8 @@ window.HS_LINKS = [
     { label: 'Companies', path: '/contacts/{portalId}/objects/0-2/views/all/list' },
     { label: 'Deals', path: '/contacts/{portalId}/objects/0-3/views/all/list' },
     { label: 'Tickets', path: '/contacts/{portalId}/objects/0-5/views/all/list' },
+    { label: 'Calls', path: '/contacts/{portalId}/objects/0-48/views/all/list' },
+    { label: 'Meetings', path: '/contacts/{portalId}/objects/0-47/views/all/list' },
     { label: 'Segments (lists)', path: '/contacts/{portalId}/objectLists/views/all' },
     { label: 'Imports (Data integration)', path: '/import/{portalId}' },
     { label: 'Data quality', path: '/data-quality/{portalId}' }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API - HubSpot Field Notes</title>
+<meta name="description" content="The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/">
+<meta property="og:title" content="HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API">
+<meta property="og:description" content="The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API",
+      "description": "The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Use HubSpot object type IDs correctly",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Look up the ID", "text": "Find the object in the object type ID table."},
+        {"@type": "HowToStep", "name": "Build the index link", "text": "Use the ID in the contacts URL pattern, for example /contacts/PORTAL/objects/0-47/views/all/list."},
+        {"@type": "HowToStep", "name": "Use the same ID in the API", "text": "Use the same ID as objectTypeId in CRM API paths."},
+        {"@type": "HowToStep", "name": "Check the page", "text": "Open the link and confirm the object name in the page header."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API", "item": "https://hubspot.samcbarth.com/articles/hubspot-object-type-ids/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubspot-object-type-ids">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Smart CRM</span><span class="badge">Developer</span></div>
+      <h1>HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API</h1>
+      <p class="dek">Every HubSpot URL and API path names an object by number. Get the number wrong and you land on a blank page, which is how I once sent a meeting link that opened as an empty call.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Any user</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot names every object by an ID in URLs and in the API: contacts <code>0-1</code>, companies <code>0-2</code>, deals <code>0-3</code>, tickets <code>0-5</code>, meetings <code>0-47</code>, calls <code>0-48</code>, notes <code>0-46</code>, tasks <code>0-27</code>, emails <code>0-49</code>. Swap the ID in an index URL to open that object's list. Mix them up and you get the wrong page: a meeting link built with the call ID opened a blank call.</p>
+        </div>
+
+        <h2>1. The IDs you will actually use</h2>
+        <p>These are from HubSpot's developer documentation. Custom objects use <code>2-</code> followed by a number.</p>
+        <ul>
+          <li>Contacts <code>0-1</code>, Companies <code>0-2</code>, Deals <code>0-3</code>, Tickets <code>0-5</code></li>
+          <li>Products <code>0-7</code>, Line items <code>0-8</code>, Quotes <code>0-14</code></li>
+          <li>Tasks <code>0-27</code>, Notes <code>0-46</code>, Meetings <code>0-47</code>, Calls <code>0-48</code>, Emails <code>0-49</code></li>
+          <li>Communications <code>0-18</code>, Leads <code>0-136</code>, Users <code>0-115</code></li>
+        </ul>
+
+        <h2>2. Open any object's index page</h2>
+        <p>The pattern for an object's list is the contacts URL with the ID swapped in. Replace <code>PORTAL</code> with your portal ID, or use the <a href="../../link-builder.html">link builder</a>:</p>
+        <div class="code"><pre><code>https://app.hubspot.com/contacts/PORTAL/objects/0-48/views/all/list   calls
+https://app.hubspot.com/contacts/PORTAL/objects/0-47/views/all/list   meetings</code></pre></div>
+        <p>With the calls ID the page is titled Calls and has recorded-call and transcript filters.</p>
+        <figure class="shot"><a href="calls-index.webp"><img src="calls-index.webp" alt="Calls index page opened from the 0-48 object URL with the Calls heading and tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The 0-48 URL opens Calls. This demo portal has no calls logged.</figcaption></figure>
+        <p>With the meetings ID the same pattern opens Meetings.</p>
+        <figure class="shot"><a href="meetings-index.webp"><img src="meetings-index.webp" alt="Meetings index page opened from the 0-47 object URL with the Meetings heading highlighted" width="800" height="600" loading="lazy"></a><figcaption>The 0-47 URL opens Meetings.</figcaption></figure>
+
+        <h2>3. The mistake that cost me a link</h2>
+        <p>I once built a review link for a meeting recording using the call ID. HubSpot redirected to a review page for object type <code>0-48</code>, which is calls, and the page loaded as a blank call because the record was a meeting (<code>0-47</code>). Fixing the ID in the URL got the right page.</p>
+        <p>The second lesson: not every object has a standalone record page. A direct record link I built for the meeting returned a 404. The record existed, but I had to reach it from an associated contact or from the meetings index instead. If a link 404s, check the object ID first, then try the index page.</p>
+
+        <h2>4. The same IDs work in the API</h2>
+        <p>The generic object endpoints take the ID as <code>objectTypeId</code>, so one script can handle several objects.</p>
+        <div class="code"><pre><code>GET /crm/v3/objects/0-47?limit=10      meetings
+GET /crm/v3/objects/0-48?limit=10      calls</code></pre></div>
+        <p>Use names such as <code>contacts</code> where a path accepts them, and numeric IDs where it does not.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/guides/crm/using-object-apis">HubSpot developer docs: Using object APIs (object type IDs table)</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
