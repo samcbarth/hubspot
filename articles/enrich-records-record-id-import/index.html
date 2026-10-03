@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID - HubSpot Field Notes</title>
+<meta name="description" content="When company names in a spreadsheet match more than one HubSpot company, export Record IDs, match your data to them, and import with Record ID as the identifier.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/">
+<meta property="og:title" content="Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID">
+<meta property="og:description" content="When company names in a spreadsheet match more than one HubSpot company, export Record IDs, match your data to them, and import with Record ID as the identifier.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID",
+      "description": "When company names in a spreadsheet match more than one HubSpot company, export Record IDs, match your data to them, and import with Record ID as the identifier.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Update existing companies by importing with Record ID",
+      "totalTime": "PT25M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create the property", "text": "Create the company property the data will land in, such as a multiple checkboxes property."},
+        {"@type": "HowToStep", "name": "Export with Record ID", "text": "Export your companies with Record ID and the name and domain columns."},
+        {"@type": "HowToStep", "name": "Match your sheet", "text": "Match your spreadsheet to the export and add the Record ID to each row that matches uniquely."},
+        {"@type": "HowToStep", "name": "Import", "text": "Import the matched rows with Record ID mapped to the Record ID property."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID", "item": "https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="enrich-records-record-id-import">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Imports">Imports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Data Hub</span></div>
+      <h1>Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID</h1>
+      <p class="dek">You have a spreadsheet of industry codes or segments for existing companies and no clean domain to match on. Matching by name is how you update the wrong company.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier (property creation needs property settings access)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Import access and Edit property settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>25 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Name alone matches several companies. For a manufacturing client with a 700 row industry code spreadsheet, I exported company Record IDs, matched each row to exactly one company, kept the ambiguous rows out, and imported about 590 matched rows keyed on <strong>Record ID</strong>. Record ID overrides every other identifier in an import, so it updates exactly the record you meant.</p>
+        </div>
+
+        <h2>1. Create the property first</h2>
+        <p>I started from a spreadsheet of industry classification codes and a plain-language application for each company. Before importing, create the company property that will hold it. Here I used a multiple checkboxes property so one company can belong to several segments. Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-2" href="https://app.hubspot.com/l/property-settings/properties?type=0-2"><span class="ui">Company properties</span></a> and click <span class="ui">Create property</span>.</p>
+        <figure class="shot"><a href="field-type.webp"><img src="field-type.webp" alt="Property editor on the Field type step with Multiple checkboxes highlighted" width="800" height="600" loading="lazy"></a><figcaption>Field type: Multiple checkboxes. This is a demo property.</figcaption></figure>
+        <p>Option labels and internal names matter because imports match on them. When the source terms are in another language, I stored the source term in each option's description and used the English label in the option itself.</p>
+        <figure class="shot"><a href="options.webp"><img src="options.webp" alt="Checkbox options list with labels and internal names highlighted" width="800" height="600" loading="lazy"></a><figcaption>Labels and internal names for the five demo options.</figcaption></figure>
+
+        <h2>2. Why the match must be by Record ID</h2>
+        <p>The names in the file hit more than one company in the portal, and the file had no domains. HubSpot's import identifies a company by domain, or by Record ID, and Record ID supersedes everything else in the file. A row with no Record ID creates a new company, so keep unmatched rows out of this import.</p>
+        <figure class="shot"><a href="record-id-property.webp"><img src="record-id-property.webp" alt="Properties page filtered to Record ID with the property highlighted" width="800" height="553" loading="lazy"></a><figcaption>Record ID is a default property on every object.</figcaption></figure>
+
+        <h2>3. Export, match, import</h2>
+        <ol>
+          <li>Export the companies you want to enrich, including <span class="ui">Record ID</span>, name, and domain.</li>
+          <li>In the spreadsheet, match your rows to the export. Keep only rows that match exactly one company, and park the rest for a human.</li>
+          <li>Start the import from <a class="hs-link" data-hs="/import/{portalId}" href="https://app.hubspot.com/l/import"><span class="ui">Data integration</span></a>, choose <span class="ui">Import a file</span>, and map the Record ID column to the Record ID property.</li>
+        </ol>
+        <figure class="shot"><a href="data-integration.webp"><img src="data-integration.webp" alt="Data integration page with the Import a file card highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Import a file card. In this login the button is disabled because the user lacks import access.</figcaption></figure>
+        <div class="callout"><span class="callout-title">Import in batches and verify</span><p>After the import, search for companies where the new property is known and compare the count to your matched rows. In the manufacturing project the counts matched at about 590 with zero failed batches.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/import-and-export/import-records-for-a-single-object">HubSpot Knowledge Base: Import records for a single object</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/understand-the-import-tool">HubSpot Knowledge Base: Understand the import tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/create-and-edit-properties">HubSpot Knowledge Base: Create and edit properties</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

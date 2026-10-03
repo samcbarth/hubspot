@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot workflows have a built-in tool that tests a specific record against the nine enrollment checks and tells you why it did or did not enroll.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/">
+<meta property="og:title" content="Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool">
+<meta property="og:description" content="HubSpot workflows have a built-in tool that tests a specific record against the nine enrollment checks and tells you why it did or did not enroll.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool",
+      "description": "HubSpot workflows have a built-in tool that tests a specific record against the nine enrollment checks and tells you why it did or did not enroll.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Troubleshoot why a record did not enroll in a workflow",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the tool", "text": "In the workflow editor click Performance history, then Troubleshoot enrollment."},
+        {"@type": "HowToStep", "name": "Pick the record", "text": "Choose the record you expected to enroll."},
+        {"@type": "HowToStep", "name": "Pick the date", "text": "Select a possible enrollment date from the event timeline."},
+        {"@type": "HowToStep", "name": "Run the test", "text": "Click Test on the event and read the summary and enrollment checks."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool", "item": "https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="troubleshoot-enrollment">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool</h1>
+      <p class="dek">Skip the guessing. Pick the record, pick the date it should have enrolled, and HubSpot lists every check it passed or failed.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Access to view the workflow</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the workflow, click <span class="ui">Performance history</span>, then <span class="ui">Troubleshoot enrollment</span>. Choose the record, choose the moment it should have enrolled, and run the test. HubSpot shows a summary (such as Would enroll) and a list of checks, each marked passed or failed. If a check failed, that is your answer.</p>
+        </div>
+
+        <h2>1. Open the tool from the workflow editor</h2>
+        <p>Open the workflow from <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a>. In the top right, click <span class="ui">Performance history</span> (1) and choose <span class="ui">Troubleshoot enrollment</span> (2). The same menu has Enrollment history, Action logs, and Troubleshoot actions.</p>
+        <figure class="shot"><a href="perf-menu.webp"><img src="perf-menu.webp" alt="Performance history menu open with Troubleshoot enrollment highlighted" width="800" height="552" loading="lazy"></a><figcaption>Performance history (1), then Troubleshoot enrollment (2).</figcaption></figure>
+
+        <h2>2. Pick the record and the date range</h2>
+        <p>The side panel asks which record you think should have enrolled. Pick it, then set a date and time range. HubSpot lists every moment that record matched any part of the trigger.</p>
+        <figure class="shot"><a href="picker.webp"><img src="picker.webp" alt="Troubleshoot enrollment panel with the record picker and date range highlighted" width="800" height="553" loading="lazy"></a><figcaption>Record picker and date range. The contact name is blurred.</figcaption></figure>
+        <figure class="shot"><a href="timeline.webp"><img src="timeline.webp" alt="Possible enrollment dates timeline with two events highlighted" width="800" height="600" loading="lazy"></a><figcaption>The timeline lists enrollments, unenrollments, and the property changes that matched the trigger. The contact name is blurred.</figcaption></figure>
+
+        <h2>3. Choose an event and run the test</h2>
+        <p>Each event on the timeline can be tested. Here the event is a property change: Lead status was changed to Open Deal. Click <span class="ui">Test</span> on it.</p>
+        <figure class="shot"><a href="events.webp"><img src="events.webp" alt="Timeline event Property changed with a Test button highlighted" width="800" height="600" loading="lazy"></a><figcaption>Test the event that should have caused the enrollment.</figcaption></figure>
+
+        <h2>4. Read the summary</h2>
+        <p>The summary badge tells you the outcome. <span class="ui">Would enroll</span> means the record passed every check and the simulation says it should have enrolled. The panel also links to the <span class="ui">Workflow revision at the time</span>, which matters when someone edited the workflow after the event.</p>
+        <figure class="shot"><a href="test-summary.webp"><img src="test-summary.webp" alt="Summary showing Would enroll badge and the Workflow revision at the time link highlighted" width="800" height="600" loading="lazy"></a><figcaption>Summary and the revision link. The contact name is blurred.</figcaption></figure>
+
+        <h2>5. Read the checks</h2>
+        <p>Below the summary, HubSpot lists the enrollment checks, expandable one by one. In the version I tested there are nine:</p>
+        <ul>
+          <li>Record met the enrollment criteria</li>
+          <li>Workflow was turned on</li>
+          <li>No enrollment schedule</li>
+          <li>No conflicting merge settings</li>
+          <li>No conflicting previous enrollments</li>
+          <li>Record isn't currently enrolled</li>
+          <li>No goal criteria</li>
+          <li>Record won't unenroll if it no longer meets criteria</li>
+          <li>No unenrollment lists</li>
+        </ul>
+        <figure class="shot"><a href="checks.webp"><img src="checks.webp" alt="Passed enrollment checks expanded with three checks highlighted" width="800" height="600" loading="lazy"></a><figcaption>Expanded checks. A failed check is flagged in the Issues section above this list.</figcaption></figure>
+        <p>If the failing check is previous enrollment, read <a href="../workflow-wont-re-enroll/">why a contact won't re-enroll</a>.</p>
+        <div class="callout"><span class="callout-title">Data limits</span><p>HubSpot keeps 6 months of enrollment history, and the test can be inaccurate when related data is no longer available. Test soon after the miss.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/understand-your-workflow-details-page">HubSpot Knowledge Base: Understand your workflow details page</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/review-a-records-workflow-paths-and-actions">HubSpot Knowledge Base: Review a record's workflow paths and actions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs - HubSpot Field Notes</title>
+<meta name="description" content="A HubSpot campaign full of assets can show hundreds of influenced contacts and zero sessions. Sessions only count when visits arrive through the campaign's tracking URL.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/campaign-zero-sessions/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/campaign-zero-sessions/">
+<meta property="og:title" content="HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs">
+<meta property="og:description" content="A HubSpot campaign full of assets can show hundreds of influenced contacts and zero sessions. Sessions only count when visits arrive through the campaign's tracking URL.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/campaign-zero-sessions/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs",
+      "description": "A HubSpot campaign full of assets can show hundreds of influenced contacts and zero sessions. Sessions only count when visits arrive through the campaign's tracking URL.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/campaign-zero-sessions/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/campaign-zero-sessions/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Make a HubSpot campaign record sessions",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the campaign", "text": "Go to Campaigns and open the campaign."},
+        {"@type": "HowToStep", "name": "Check the Tracking URLs tab", "text": "On the right panel open Tracking URLs and see whether any exist."},
+        {"@type": "HowToStep", "name": "Create tracking URLs", "text": "Create tracking URLs that use the campaign's UTM campaign value, one per place you will share a link."},
+        {"@type": "HowToStep", "name": "Use them", "text": "Share those URLs in email, social, or ads and re-check Analyze."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs", "item": "https://hubspot.samcbarth.com/articles/campaign-zero-sessions/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="campaign-zero-sessions">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Campaigns">Campaigns</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs</h1>
+      <p class="dek">The assets are attached and the contacts are influenced, so why does the campaign show no traffic? Because nothing is sending traffic through it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Campaigns access and Tracking URLs access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Attaching assets to a campaign makes it a content library. Contacts who interact with those assets are counted as influenced, but <strong>sessions</strong> only appear when visits come in through a link carrying the campaign's UTM. If nobody uses a tracking URL, sessions stay at zero. For one campaign of mine, about 490 contacts were influenced and sessions were 0. After I built tracking URLs, the first session appeared.</p>
+        </div>
+
+        <h2>1. Find the campaign</h2>
+        <p>Open <a class="hs-link" data-hs="/campaigns/{portalId}" href="https://app.hubspot.com/l/campaigns"><span class="ui">Campaigns</span></a>. HubSpot's newer Marketing Studio lists them under Overview. This demo portal has one campaign.</p>
+        <figure class="shot"><a href="studio.webp"><img src="studio.webp" alt="Marketing Studio overview with the Campaigns list showing 1 campaign highlighted" width="800" height="613" loading="lazy"></a><figcaption>Marketing Studio. The Campaigns table is lower on the page.</figcaption></figure>
+
+        <h2>2. Read the analytics honestly</h2>
+        <p>On the <span class="ui">Analyze</span> tab, pick a campaign and read the topline metrics. In my real case the campaign showed hundreds of influenced contacts and no sessions. That combination is not a bug. Influence comes from contacts interacting with attached assets, such as forms and emails. Sessions come from visits.</p>
+        <figure class="shot"><a href="analyze.webp"><img src="analyze.webp" alt="Marketing Studio Analyze tab for a demo campaign with Contacts Influenced of 0 highlighted" width="800" height="613" loading="lazy"></a><figcaption>Analyze tab. The demo campaign is empty, so the number is 0.</figcaption></figure>
+
+        <h2>3. Check the Tracking URLs tab</h2>
+        <p>Open the campaign and use the <span class="ui">Tracking URLs</span> tab in the right panel. HubSpot's own wording when none exist: Tracking URLs and UTM activity will appear here.</p>
+        <figure class="shot"><a href="tracking.webp"><img src="tracking.webp" alt="Campaign details panel on the Tracking URLs tab saying No tracking URLs" width="800" height="613" loading="lazy"></a><figcaption>A campaign with no tracking URLs. Nothing can register a session.</figcaption></figure>
+
+        <h2>4. Create tracking URLs and use them</h2>
+        <ul>
+          <li>Create one tracking URL per link you will share: the email, the LinkedIn post, the ad.</li>
+          <li>Choose this campaign as the UTM campaign so visits land under it.</li>
+          <li>Set source and medium so channels stay separate in reports.</li>
+          <li>Link to the highest performing asset in the campaign.</li>
+        </ul>
+        <p>For my own campaign, the auto-generated campaign UTM had never been used. I built four ready-to-use links for the top assets. Once the first visit came through, sessions moved from 0 to 1, which confirmed the tagging worked.</p>
+        <div class="callout warn"><span class="callout-title">Auditing tracking URLs</span><p>The saved tracking URL list is not exposed through the CRM API I used, so to audit existing URLs, read them in the UI.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/settings/how-do-i-create-a-tracking-url">HubSpot Knowledge Base: Create tracking URLs</a></li>
+          <li><a href="https://knowledge.hubspot.com/campaigns/create-campaigns">HubSpot Knowledge Base: Create campaigns</a></li>
+          <li><a href="https://knowledge.hubspot.com/campaigns/analyze-campaign-performance">HubSpot Knowledge Base: Analyze campaign performance</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

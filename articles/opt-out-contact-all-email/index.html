@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>How to opt a HubSpot contact out of all email (and why the API can't do it) - HubSpot Field Notes</title>
+<meta name="description" content="Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and why scripts and the API cannot set it.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/">
+<meta property="og:title" content="How to opt a HubSpot contact out of all email (and why the API can't do it)">
+<meta property="og:description" content="Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and why scripts and the API cannot set it.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "How to opt a HubSpot contact out of all email (and why the API can't do it)",
+      "description": "Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and why scripts and the API cannot set it.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Opt a contact out of all email in HubSpot",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the contact", "text": "Go to Contacts and click the contact name."},
+        {"@type": "HowToStep", "name": "Open Actions", "text": "In the upper right of the left sidebar, click Actions."},
+        {"@type": "HowToStep", "name": "Opt out", "text": "Choose Opt out of email and confirm."},
+        {"@type": "HowToStep", "name": "Check the status", "text": "In the Communication subscriptions card, click View subscriptions and review the status."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How to opt a HubSpot contact out of all email (and why the API can't do it)", "item": "https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="opt-out-contact-all-email">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Contacts">Contacts</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>How to opt a HubSpot contact out of all email (and why the API can't do it)</h1>
+      <p class="dek">Someone asked to be removed and you need it done properly. There is one button for it, and a few things it does not cover.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing access permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the contact, click <span class="ui">Actions</span>, choose <span class="ui">Opt out of email</span>, and confirm. HubSpot then stops future marketing email and one-to-one email to that address. You need marketing access permissions. This is a UI action: the opted-out property is read-only through the API, so a script cannot set it for you.</p>
+        </div>
+
+        <h2>1. Opt the contact out</h2>
+        <p>In <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a>, open the person's record. In the upper right of the left sidebar, click <span class="ui">Actions</span> and choose <span class="ui">Opt out of email</span>. Confirm with <span class="ui">Yes, opt them out</span>. The contact's details are blurred in this screenshot.</p>
+        <figure class="shot"><a href="record-actions.webp"><img src="record-actions.webp" alt="Contact record with the Actions menu open and Opt out of email highlighted" width="800" height="600" loading="lazy"></a><figcaption>Actions, then Opt out of email.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Permission needed</span><p>You need marketing access permissions to do this. Without it the option will not work for you.</p></div>
+
+        <h2>2. Check the status on the record</h2>
+        <p>Scroll the left sidebar to the <span class="ui">Communication subscriptions</span> card. It summarizes the contact's preferences and links to <span class="ui">View subscriptions</span>.</p>
+        <figure class="shot"><a href="subscriptions-card.webp"><img src="subscriptions-card.webp" alt="Communication subscriptions card with View subscriptions highlighted" width="800" height="600" loading="lazy"></a><figcaption>Communication subscriptions card on the contact record.</figcaption></figure>
+        <p>View subscriptions opens a panel listing the subscription types, for example Marketing Information, Customer Service Communications, and One to One, each with a status. In this demo contact all three read Not Specified because I did not opt anyone out.</p>
+        <figure class="shot"><a href="subscription-status.webp"><img src="subscription-status.webp" alt="Subscription status panel listing three email subscription types with status" width="800" height="600" loading="lazy"></a><figcaption>Subscription status panel. Check it after you opt someone out.</figcaption></figure>
+
+        <h2>3. What opt out does not stop</h2>
+        <ul>
+          <li>HubSpot says opting out blocks future marketing and one-to-one email, but transactional email can still be delivered.</li>
+          <li>It does not stop other channels, such as a sales rep phoning them.</li>
+          <li>It does not remove the contact. Their record and history stay.</li>
+        </ul>
+        <h2>4. Why a script cannot do it</h2>
+        <p>I tried this through the API for a client contact. The opted-out property is read only there, so the write fails. Setting the contact to non-marketing also failed because the private app lacked the marketable-contacts scope. Both are done in the UI, so I handed over the manual steps instead of forcing it.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/how-do-i-unsubscribe-or-opt-out-contacts-from-email">HubSpot Knowledge Base: How do I unsubscribe or opt out contacts from email?</a></li>
+          <li><a href="https://knowledge.hubspot.com/contacts/manage-your-subscription-preferences-and-types">HubSpot Knowledge Base: Manage your subscription preferences and types</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Speed up a HubSpot landing page: measure first, then fix images and page-level code - HubSpot Field Notes</title>
+<meta name="description" content="How to find out why a HubSpot landing page is slow with Lighthouse, then fix the usual causes: heavy images, layout shift, and extra scripts in the page's Head and Footer HTML.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/speed-up-landing-page/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/speed-up-landing-page/">
+<meta property="og:title" content="Speed up a HubSpot landing page: measure first, then fix images and page-level code">
+<meta property="og:description" content="How to find out why a HubSpot landing page is slow with Lighthouse, then fix the usual causes: heavy images, layout shift, and extra scripts in the page's Head and Footer HTML.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/speed-up-landing-page/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Speed up a HubSpot landing page: measure first, then fix images and page-level code",
+      "description": "How to find out why a HubSpot landing page is slow with Lighthouse, then fix the usual causes: heavy images, layout shift, and extra scripts in the page's Head and Footer HTML.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/speed-up-landing-page/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/speed-up-landing-page/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Speed up a HubSpot landing page",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Measure", "text": "Run Lighthouse in Chrome on the live page and note the metrics."},
+        {"@type": "HowToStep", "name": "Fix images", "text": "Compress images, set width and height, and lazy load images below the fold."},
+        {"@type": "HowToStep", "name": "Review page-level code", "text": "Open Settings, Advanced, and check the Head HTML and Footer HTML snippets for scripts you no longer need."},
+        {"@type": "HowToStep", "name": "Measure again", "text": "Re-run Lighthouse and compare."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Speed up a HubSpot landing page: measure first, then fix images and page-level code", "item": "https://hubspot.samcbarth.com/articles/speed-up-landing-page/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="speed-up-landing-page">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pages">Pages</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span></div>
+      <h1>Speed up a HubSpot landing page: measure first, then fix images and page-level code</h1>
+      <p class="dek">Do not guess. Measure the page, then change the two or three things that move the number.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier with landing or website pages</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit pages</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Run <strong>Lighthouse</strong> in Chrome on the published page first. Most gains come from images (compress, set width and height, lazy load below the fold) and from scripts. In HubSpot, page-level scripts live in <span class="ui">Settings</span>, <span class="ui">Advanced</span>, <span class="ui">Head HTML</span> and <span class="ui">Footer HTML</span>. Remove any you no longer use, then measure again.</p>
+        </div>
+
+        <h2>1. Measure before you change anything</h2>
+        <p>Open the published page in Chrome, right-click, choose Inspect, and run the Lighthouse tab. HubSpot's developer blog points to six metrics to watch: First Contentful Paint, Speed Index, Largest Contentful Paint, Time to Interactive, Total Blocking Time, and Cumulative Layout Shift. Write them down. Test the live URL, not the editor. HubSpot's own Analyze tab reports views and bounce rate, not load time, so it will not tell you why a page is slow.</p>
+
+        <h2>2. Images and video first</h2>
+        <p>HubSpot's developer guidance calls images and video the heaviest assets on a page. Compress them before upload, use HubSpot's image resizing so the browser receives a file at the size it displays, lazy load images below the header, and set explicit width and height on every image so the layout does not jump while it loads.</p>
+
+        <h2>3. Check the page-level code</h2>
+        <p>Open the page in the editor, then <span class="ui">Settings</span>, then <span class="ui">Advanced</span>. <span class="ui">Head HTML</span> and <span class="ui">Footer HTML</span> hold code that loads on this page only. Old tracking pixels, chat widgets and test scripts tend to pile up here. This page's boxes are empty, which is the goal.</p>
+        <figure class="shot"><a href="head-html.webp"><img src="head-html.webp" alt="Page settings Advanced tab with the Head HTML and Footer HTML code boxes highlighted" width="800" height="600" loading="lazy"></a><figcaption>Head HTML and Footer HTML for one page. Both are empty here.</figcaption></figure>
+        <ul>
+          <li>Remove snippets for tools you no longer use, one at a time, and re-test.</li>
+          <li>Prefer one tag manager over many pasted scripts if your team already uses one.</li>
+          <li>Keep a note of what each snippet is for before deleting it, so you can restore it.</li>
+        </ul>
+
+        <h2>4. Measure again</h2>
+        <p>Re-run Lighthouse on the live page after each change. Run it a few times, since scores vary between runs. If a change did not move the number, put it back.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/blog/using-google-lighthouse-to-optimize-your-hubspot-websites">HubSpot Developers blog: Using Google Lighthouse to optimize your HubSpot websites</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/analyze-performance-for-all-pages">HubSpot Knowledge Base: Analyze performance for all pages</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

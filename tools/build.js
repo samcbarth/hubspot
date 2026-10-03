@@ -32,7 +32,7 @@ for (const a of ARTICLES) {
   seen.add(a.slug);
   if (!/^[a-z0-9-]+$/.test(a.slug || '')) errors.push(`${a.slug}: slug must be lowercase-dashes`);
   if (!['tip', 'guide'].includes(a.type)) errors.push(`${a.slug}: type must be tip or guide`);
-  if (!['Fix it', 'How to', 'Hidden trick', 'Gotcha'].includes(a.problem)) errors.push(`${a.slug}: bad problem "${a.problem}"`);
+  if (!['Fix it', 'How to', 'Hidden trick', 'Gotcha', 'Developer'].includes(a.problem)) errors.push(`${a.slug}: bad problem "${a.problem}"`);
   for (const d of ['verified', 'published']) if (!/^\d{4}-\d{2}-\d{2}$/.test(a[d] || '')) errors.push(`${a.slug}: ${d} must be YYYY-MM-DD`);
   const page = `articles/${a.slug}/index.html`;
   if (!fs.existsSync(path.join(ROOT, page))) { errors.push(`${a.slug}: missing ${page}`); continue; }

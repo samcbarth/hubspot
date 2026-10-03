@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Which reports can HubSpot build? Report types, limits, and what needs a higher tier - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's custom report types: single object, funnel, custom report builder, attribution, and email reports. What each can and cannot do, and which tier you need.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/">
+<meta property="og:title" content="Which reports can HubSpot build? Report types, limits, and what needs a higher tier">
+<meta property="og:description" content="HubSpot's custom report types: single object, funnel, custom report builder, attribution, and email reports. What each can and cannot do, and which tier you need.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Which reports can HubSpot build? Report types, limits, and what needs a higher tier",
+      "description": "HubSpot's custom report types: single object, funnel, custom report builder, attribution, and email reports. What each can and cannot do, and which tier you need.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Choose the right HubSpot report type",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Start with the question", "text": "Write the question as a sentence and note which objects it involves."},
+        {"@type": "HowToStep", "name": "Try a single object report", "text": "If one object answers it, use a single object report."},
+        {"@type": "HowToStep", "name": "Move to the report builder", "text": "If the question joins objects or activities, use the custom report builder."},
+        {"@type": "HowToStep", "name": "Use funnel or attribution only when needed", "text": "Use funnel reports for stage conversion and attribution reports for source credit."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Which reports can HubSpot build? Report types, limits, and what needs a higher tier", "item": "https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="which-reports-hubspot-can-build">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Reports">Reports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>Which reports can HubSpot build? Report types, limits, and what needs a higher tier</h1>
+      <p class="dek">Before you promise a stakeholder a report, find out which report type can actually answer the question. The wrong type is the usual blocker.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Custom reports need Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Create and own, and Edit reports</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Use a <strong>single object report</strong> when one object (contacts, deals, tickets) answers the question. It cannot join other data, but it updates quickly. Use the <strong>custom report builder</strong> when you need related objects or activities, accepting slower refreshes. <strong>Funnel</strong> reports measure stage conversion, and <strong>attribution</strong> reports are Marketing Hub or Content Hub Enterprise. Custom reports need Professional or Enterprise and create and own permissions.</p>
+        </div>
+
+        <h2>1. Where reports start</h2>
+        <p>Open <a class="hs-link" data-hs="/reports-list/{portalId}" href="https://app.hubspot.com/l/reports-list"><span class="ui">Reports</span></a>. The left menu has your dashboards and reports, plus analytics suites for Sales, Service and Revenue. Prebuilt reports sit here beside the ones you create.</p>
+        <figure class="shot"><a href="reports-list.webp"><img src="reports-list.webp" alt="Reports page listing My dashboards, My reports, and Analytics suites for Sales, Service, and Revenue highlighted" width="800" height="613" loading="lazy"></a><figcaption>Reports and the prebuilt analytics suites.</figcaption></figure>
+
+        <h2>2. The Create menu</h2>
+        <p>The <span class="ui">Create</span> button offers Create dashboard, Create report, and Create report with AI.</p>
+        <figure class="shot"><a href="create-menu.webp"><img src="create-menu.webp" alt="Reports Create menu with Create report and Create report with AI highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Create menu.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">You may be blocked by permissions</span><p>Report creation depends on permissions, not just subscription. With a user who lacks them, the menu item shows a tooltip and does nothing.</p></div>
+        <figure class="shot"><a href="no-access.webp"><img src="no-access.webp" alt="Tooltip saying you don't have access to create reports and to ask an admin to change permissions in Users and Teams" width="800" height="613" loading="lazy"></a><figcaption>The tooltip when the user lacks report creation permission.</figcaption></figure>
+
+        <h2>3. The types, in the order to try them</h2>
+        <ul>
+          <li><strong>Single object report.</strong> One object only, for example contacts by lifecycle stage. Cannot join other data. It queries the live CRM, so it updates quickly.</li>
+          <li><strong>Custom report builder.</strong> A primary data source plus related objects or sources, with extra fields and calculations. More capable, more complex, and it refreshes more slowly, about every two hours.</li>
+          <li><strong>Funnel reports.</strong> Conversion between lifecycle or pipeline stages. Enterprise can also build custom event funnels.</li>
+          <li><strong>Attribution reports.</strong> Contact, deal create, and revenue attribution. These are Marketing Hub or Content Hub Enterprise, and deal create and revenue attribution need Marketing Hub Enterprise.</li>
+          <li><strong>One-to-one email reports.</strong> Opens, clicks, and replies over time.</li>
+        </ul>
+
+        <h2>4. Two limits to check first</h2>
+        <ul>
+          <li>The number of custom reports depends on your subscription, and multiple subscriptions of the same tier do not add their limits together.</li>
+          <li>Creating a report needs create and own plus edit report permissions in Users and Teams.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/reports/create-custom-reports">HubSpot Knowledge Base: Create custom reports</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/understand-attribution-reporting">HubSpot Knowledge Base: Understand attribution reporting</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

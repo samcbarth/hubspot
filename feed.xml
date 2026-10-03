@@ -7,6 +7,172 @@
   <description>HubSpot fixes, how-tos, and hidden tricks with real screenshots, by Sam Barth.</description>
   <language>en-us</language>
   <item>
+    <title>HubSpot says 180,000 contacts never opened your email? Check who was ever sent one</title>
+    <link>https://hubspot.samcbarth.com/articles/never-opened-email-stat/</link>
+    <guid>https://hubspot.samcbarth.com/articles/never-opened-email-stat/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A HubSpot segment of contacts who never opened an email also includes everyone who was never sent one. How to build the honest version before you sunset anyone.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation</title>
+    <link>https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A HubSpot workflow that creates a call task when a lead arrives, checks whether anyone made contact after a day, and escalates by email to the owner if nobody did.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact</title>
+    <link>https://hubspot.samcbarth.com/articles/sql-count-zero/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sql-count-zero/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>If reps work deals and never touch the contact&#39;s lifecycle stage, SQL reports stay at zero. A workflow can set associated contacts to Sales Qualified Lead when a deal reaches the right stage.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Lifecycle stages</category>
+  </item>
+  <item>
+    <title>Why didn&#39;t this record enroll? Use HubSpot&#39;s Troubleshoot enrollment tool</title>
+    <link>https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/troubleshoot-enrollment/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot workflows have a built-in tool that tests a specific record against the nine enrollment checks and tells you why it did or did not enroll.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Enrich HubSpot companies from a spreadsheet when names don&#39;t match: import by Record ID</title>
+    <link>https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/</link>
+    <guid>https://hubspot.samcbarth.com/articles/enrich-records-record-id-import/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When company names in a spreadsheet match more than one HubSpot company, export Record IDs, match your data to them, and import with Record ID as the identifier.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Imports</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Use a customer&#39;s own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+    <category>Companies</category>
+  </item>
+  <item>
+    <title>How to opt a HubSpot contact out of all email (and why the API can&#39;t do it)</title>
+    <link>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and why scripts and the API cannot set it.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Your script created duplicate HubSpot records? Merge them, don&#39;t delete them</title>
+    <link>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why bulk writes through the HubSpot API create duplicate companies and contacts, how to merge instead of delete to keep associations, and how to write the script so it does not happen again.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>&#39;This template doesn&#39;t allow modules to be added&#39; in HubSpot: three causes</title>
+    <link>https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A blank HubSpot page that will not let you add modules usually has a template problem: an empty drag and drop area, a broken extends path, or overlapping columns.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Design Manager</category>
+  </item>
+  <item>
+    <title>Clone a HubSpot landing page for each location: what to change every time</title>
+    <link>https://hubspot.samcbarth.com/articles/clone-landing-page-per-location/</link>
+    <guid>https://hubspot.samcbarth.com/articles/clone-landing-page-per-location/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to clone one good HubSpot landing page for each community or location, and the four settings plus content to change on every clone.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>&#39;You have reached your page limit&#39; in HubSpot: look at your drafts</title>
+    <link>https://hubspot.samcbarth.com/articles/starter-page-limit/</link>
+    <guid>https://hubspot.samcbarth.com/articles/starter-page-limit/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s Starter tier limits how many landing pages you can create. Untitled drafts show up in the same list as live pages, so check them first.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>HubSpot &#39;Offline Sources&#39; is not offline: how to see what created those contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/offline-sources-explained/</link>
+    <guid>https://hubspot.samcbarth.com/articles/offline-sources-explained/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Offline Sources in HubSpot means a record was created outside tracked web traffic, such as an import, the API, a connected app, or by hand. How to break it apart with the drill-down properties.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>HubSpot campaign shows lots of influenced contacts but 0 sessions? You need tracking URLs</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-zero-sessions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-zero-sessions/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A HubSpot campaign full of assets can show hundreds of influenced contacts and zero sessions. Sessions only count when visits arrive through the campaign&#39;s tracking URL.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Which reports can HubSpot build? Report types, limits, and what needs a higher tier</title>
+    <link>https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/</link>
+    <guid>https://hubspot.samcbarth.com/articles/which-reports-hubspot-can-build/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s custom report types: single object, funnel, custom report builder, attribution, and email reports. What each can and cannot do, and which tier you need.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix</title>
+    <link>https://hubspot.samcbarth.com/articles/hubsql-beta-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubsql-beta-api/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s HubSQL beta lets you run SQL against CRM data over an API. What it can do, why it cannot connect to your SQL server, and how to fix a 403 for missing scopes.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Speed up a HubSpot landing page: measure first, then fix images and page-level code</title>
+    <link>https://hubspot.samcbarth.com/articles/speed-up-landing-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/speed-up-landing-page/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to find out why a HubSpot landing page is slow with Lighthouse, then fix the usual causes: heavy images, layout shift, and extra scripts in the page&#39;s Head and Footer HTML.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Performance</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

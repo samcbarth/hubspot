@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot says 180,000 contacts never opened your email? Check who was ever sent one - HubSpot Field Notes</title>
+<meta name="description" content="A HubSpot segment of contacts who never opened an email also includes everyone who was never sent one. How to build the honest version before you sunset anyone.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/never-opened-email-stat/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/never-opened-email-stat/">
+<meta property="og:title" content="HubSpot says 180,000 contacts never opened your email? Check who was ever sent one">
+<meta property="og:description" content="A HubSpot segment of contacts who never opened an email also includes everyone who was never sent one. How to build the honest version before you sunset anyone.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/never-opened-email-stat/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot says 180,000 contacts never opened your email? Check who was ever sent one",
+      "description": "A HubSpot segment of contacts who never opened an email also includes everyone who was never sent one. How to build the honest version before you sunset anyone.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/never-opened-email-stat/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/never-opened-email-stat/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build a segment of contacts who were emailed but never opened",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Add the delivered filter", "text": "Create a segment and add Marketing emails delivered is greater than or equal to 1."},
+        {"@type": "HowToStep", "name": "Add the opened filter", "text": "Add Marketing emails opened is equal to 0 or is unknown."},
+        {"@type": "HowToStep", "name": "Compare to the naive count", "text": "Compare the result against a segment with only the opened filter, which includes contacts who were never sent anything."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot says 180,000 contacts never opened your email? Check who was ever sent one", "item": "https://hubspot.samcbarth.com/articles/never-opened-email-stat/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="never-opened-email-stat">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Segments">Segments</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot says 180,000 contacts never opened your email? Check who was ever sent one</h1>
+      <p class="dek">A big never-opened number looks like an engagement problem. Often it is a filter problem: the count includes people HubSpot never emailed at all.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional for the workflow; segments on paid tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Segments and Workflows access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>A segment filtered only on <span class="ui">Marketing emails opened</span> being 0 or empty catches every contact who never opened an email, including contacts who were never sent one. Add <span class="ui">Marketing emails delivered</span> is at least 1 and the number drops to the people who actually ignored your email. In my demo portal the naive version returned about 180,000 contacts and the honest version returned zero, because none of them had ever been emailed.</p>
+        </div>
+
+        <h2>1. The count that looks wrong</h2>
+        <p>On a recent engagement for a home builder, the plan included an email sunset: stop marketing to contacts who never engage. The first step is counting them, and the first count I built was misleading. I rebuilt both versions in a demo portal so you can see it. Open <a class="hs-link" data-hs="/contacts/{portalId}/objectLists/views/all" href="https://app.hubspot.com/l/contacts/objectLists/views/all"><span class="ui">Segments</span></a>. The three segments below all hold contacts.</p>
+        <figure class="shot"><a href="segments.webp"><img src="segments.webp" alt="Segments list showing three demo segments with their sizes highlighted" width="800" height="600" loading="lazy"></a><figcaption>Never opened (the misleading version) and Never sent a marketing email have the same size. Delivered but never opened is empty.</figcaption></figure>
+        <p>The first segment is "opened = 0 or unknown". The second is "never sent a marketing email". They are the same size because in this portal nobody was ever emailed, so every contact counts as a never-opener. The third, which requires at least one delivered email first, is the real answer: nobody has ignored an email yet.</p>
+
+        <h2>2. Build the honest version</h2>
+        <p>Use two filters together, joined with AND:</p>
+        <ul>
+          <li><span class="ui">Marketing emails delivered</span> is greater than or equal to 1</li>
+          <li><span class="ui">Marketing emails opened</span> is equal to 0, or is unknown</li>
+        </ul>
+        <p>The same two conditions work as a workflow enrollment trigger, which is how I set up the sunset flow. This is the demo version, left turned off.</p>
+        <figure class="shot"><a href="sunset-trigger.webp"><img src="sunset-trigger.webp" alt="Workflow trigger with Marketing emails delivered at least 1 and Marketing emails opened equal to 0 or empty highlighted" width="800" height="600" loading="lazy"></a><figcaption>The sunset workflow trigger. The workflow is off and only exists to take this screenshot.</figcaption></figure>
+        <p>Start from <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> and pick contact-based, then add the filters in the trigger.</p>
+
+        <h2>3. Before you act on the list</h2>
+        <ul>
+          <li><strong>Open tracking is imperfect.</strong> Some mail clients preload images, and some block them, so an open is a signal and not proof of reading. Check clicks too before treating someone as dead.</li>
+          <li><strong>Put a re-engagement email first.</strong> For the home builder, the agreed plan was a 30 day re-engagement window before anyone was switched to non-marketing.</li>
+          <li><strong>Non-marketing is reversible.</strong> It stops billing for the contact and stops marketing email, and you can switch it back.</li>
+        </ul>
+        <div class="callout"><span class="callout-title">Tip</span><p>Whenever a HubSpot number looks suspiciously large, build a second segment with one extra condition and compare. If the two are identical, the extra condition was already implied.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/segments/create-active-or-static-lists">HubSpot Knowledge Base: Create active or static segments</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/learn-a-contact-s-marketing-email-subscription-status">HubSpot Knowledge Base: Learn a contact's marketing email subscription status</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/marketing-contacts">HubSpot Knowledge Base: Marketing contacts</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

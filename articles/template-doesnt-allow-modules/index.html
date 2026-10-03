@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>'This template doesn't allow modules to be added' in HubSpot: three causes - HubSpot Field Notes</title>
+<meta name="description" content="A blank HubSpot page that will not let you add modules usually has a template problem: an empty drag and drop area, a broken extends path, or overlapping columns.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/">
+<meta property="og:title" content="'This template doesn't allow modules to be added' in HubSpot: three causes">
+<meta property="og:description" content="A blank HubSpot page that will not let you add modules usually has a template problem: an empty drag and drop area, a broken extends path, or overlapping columns.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "'This template doesn't allow modules to be added' in HubSpot: three causes",
+      "description": "A blank HubSpot page that will not let you add modules usually has a template problem: an empty drag and drop area, a broken extends path, or overlapping columns.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Fix a HubSpot template that does not allow modules",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check the template has a dnd_area", "text": "Open the template in Design Manager and confirm it contains a dnd_area."},
+        {"@type": "HowToStep", "name": "Check the extends path", "text": "Make sure the extends path points to a file that exists from where the template lives."},
+        {"@type": "HowToStep", "name": "Check column widths", "text": "Make sure dnd_column widths and offsets add up to the row without overlapping."},
+        {"@type": "HowToStep", "name": "Create a fresh page", "text": "Create a new page from the fixed template and test the editor."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "'This template doesn't allow modules to be added' in HubSpot: three causes", "item": "https://hubspot.samcbarth.com/articles/template-doesnt-allow-modules/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="template-doesnt-allow-modules">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pages">Pages</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Content Hub</span><span class="badge">Design Manager</span></div>
+      <h1>'This template doesn't allow modules to be added' in HubSpot: three causes</h1>
+      <p class="dek">The editor opens, the page is blank, and it refuses to let you drop anything in. The page is rarely the problem.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier with website or landing pages</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Manager and page access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>The message means the editor found no drag and drop area it can use. Three causes I have seen: the template has no <code>dnd_area</code>, it extends a layout file by a path that does not resolve, or its <code>dnd_column</code> widths overlap so HubSpot rejects the area. Fix the template, then create a fresh page. A draft page that was created while the template was broken can stay empty even after you fix it.</p>
+        </div>
+
+        <h2>1. Start with a fresh page</h2>
+        <p>A community bank's editor kept throwing this error on the blank start from scratch page. The template was fine and it did contain a <code>dnd_area</code>. Their two new drafts had empty layout data, while an older page built from the same template worked. HubSpot's blank page should show an empty main section with a drop zone. The real fault signal was the editor failing to load its content. Create a new page from <a class="hs-link" data-hs="/website/{portalId}/pages/site" href="https://app.hubspot.com/l/website/pages/site"><span class="ui">Website pages</span></a> or <a class="hs-link" data-hs="/website/{portalId}/pages/landing" href="https://app.hubspot.com/l/website/pages/landing"><span class="ui">Landing pages</span></a> using the Create button and test again.</p>
+        <figure class="shot"><a href="clone-button.webp"><img src="clone-button.webp" alt="Website pages list with the Create button and the Clone button highlighted" width="800" height="600" loading="lazy"></a><figcaption>Create (top right) starts a new page. Clone (on row hover) copies an existing working one.</figcaption></figure>
+        <p>If a clone of a known good page works and a new blank one does not, the template is the problem.</p>
+
+        <h2>2. Cause one: no drag and drop area</h2>
+        <p>The template needs at least one area where modules can live:</p>
+        <div class="code"><pre><code>{% dnd_area "main" %}
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}{% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+{% end_dnd_area %}</code></pre></div>
+
+        <h2>3. Cause two: a broken extends path</h2>
+        <p>Templates that extend a layout by relative path break when copied out of their theme. See <a href="../coded-template-missing-from-picker/">coded template missing from the picker</a>. Point the path at the real file, or use an absolute Design Manager path.</p>
+
+        <h2>4. Cause three: overlapping columns</h2>
+        <p>I hit this one building a custom theme. Two hero columns each took the whole row width, so they overlapped. HubSpot rejected the area and the editor showed only the header and footer. Give each column a width and an offset that add up to twelve:</p>
+        <div class="code"><pre><code>{% dnd_column width=6, offset=0 %} ... {% end_dnd_column %}
+{% dnd_column width=6, offset=6 %} ... {% end_dnd_column %}</code></pre></div>
+        <p>After re-uploading, a new page from the template reported all its modules. Pages created while the template was broken may need recreating.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/templates/html-hubl-templates">HubSpot developer docs: HTML + HubL templates</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/create-and-customize-pages">HubSpot Knowledge Base: Create and customize pages</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

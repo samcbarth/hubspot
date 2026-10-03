@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone - HubSpot Field Notes</title>
+<meta name="description" content="Use a customer's own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/">
+<meta property="og:title" content="Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone">
+<meta property="og:description" content="Use a customer's own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone",
+      "description": "Use a customer's own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Bulk assign company owners from a spreadsheet",
+      "totalTime": "PT20M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the unowned companies", "text": "Filter the Companies list to Company owner is unknown and note the count."},
+        {"@type": "HowToStep", "name": "Match the sheet", "text": "Match each account in your owner file to a company by a unique key and add its Record ID."},
+        {"@type": "HowToStep", "name": "Keep existing owners", "text": "Only include companies that currently have no owner."},
+        {"@type": "HowToStep", "name": "Import", "text": "Import with Record ID mapped and Company owner mapped to the Company owner property."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone", "item": "https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="bulk-assign-owners-from-sheet">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Imports">Imports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone</h1>
+      <p class="dek">The customer has a sheet saying which salesperson owns which account, and thousands of companies show No owner. Here is the safe way to load it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any tier</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Import access; bulk edit access to companies</dd></div>
+        <div class="fact"><dt>Time</dt><dd>20 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Filter the Companies list to companies with no owner, match your owner file to them through a unique key such as a customer number, and import the unowned ones with <strong>Record ID</strong> and <strong>Company owner</strong> mapped. Owner values must be existing HubSpot users, so accounts whose salesperson has no seat stay unowned until you add them. For a manufacturing client I set owners on about 1,300 companies this way without changing any that already had one.</p>
+        </div>
+
+        <h2>1. See how many companies have no owner</h2>
+        <p>In <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-2/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-2/views/all/list"><span class="ui">Companies</span></a>, the <span class="ui">Company owner</span> column shows <em>No owner</em>. In this demo portal every company is in that state, 4,624 of them. In a real portal, filter on Company owner is unknown so the count is only the work you mean to do.</p>
+        <figure class="shot"><a href="no-owner.webp"><img src="no-owner.webp" alt="Companies list with the Company owner column showing No owner and the total count highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Company owner column and the total count of 4,624.</figcaption></figure>
+
+        <h2>2. Match the file to companies</h2>
+        <p>The client's file listed a salesperson on each business partner row. The partner number was stored in a HubSpot property, so I matched on that, not on names. Whatever your key is, it must be unique on both sides. Add the HubSpot Record ID to each matched row.</p>
+        <ul>
+          <li>Drop rows with no salesperson and rows with typos in the owner email.</li>
+          <li>Keep only companies that currently have no owner, so the import never overwrites a human decision.</li>
+          <li>Owners must exist as HubSpot users. In my case four salespeople had no HubSpot seat, which left about 140 companies unowned. Put those names in a text property, or add the users, then run a second pass.</li>
+        </ul>
+
+        <h2>3. Import it</h2>
+        <p>Open <a class="hs-link" data-hs="/import/{portalId}" href="https://app.hubspot.com/l/import"><span class="ui">Data integration</span></a>, choose <span class="ui">Import a file</span>, one file, one object (Companies), and map <span class="ui">Record ID</span> and <span class="ui">Company owner</span>.</p>
+        <figure class="shot"><a href="data-integration.webp"><img src="data-integration.webp" alt="Data integration page with the Import a file card highlighted" width="800" height="553" loading="lazy"></a><figcaption>Start from Import a file.</figcaption></figure>
+
+        <h2>4. Verify the result</h2>
+        <p>Open the import to see rows, new records and updated records. For an update-only job, new records should be zero. If it is not, the file had rows without a Record ID. The uploader name is blurred below.</p>
+        <figure class="shot"><a href="import-summary.webp"><img src="import-summary.webp" alt="Import summary with rows, new records, updated records, and new associations highlighted" width="800" height="553" loading="lazy"></a><figcaption>An import summary. This sample import created new records, which an update-only job should not.</figcaption></figure>
+        <p>Then re-filter Companies by owner is unknown and compare to your expected leftover count.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/import-and-export/import-records-for-a-single-object">HubSpot Knowledge Base: Import records for a single object</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/understand-the-import-tool">HubSpot Knowledge Base: Understand the import tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/add-and-remove-users">HubSpot Knowledge Base: Add and manage users</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

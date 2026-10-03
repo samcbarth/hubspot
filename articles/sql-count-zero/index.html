@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact - HubSpot Field Notes</title>
+<meta name="description" content="If reps work deals and never touch the contact's lifecycle stage, SQL reports stay at zero. A workflow can set associated contacts to Sales Qualified Lead when a deal reaches the right stage.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/sql-count-zero/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/sql-count-zero/">
+<meta property="og:title" content="Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact">
+<meta property="og:description" content="If reps work deals and never touch the contact's lifecycle stage, SQL reports stay at zero. A workflow can set associated contacts to Sales Qualified Lead when a deal reaches the right stage.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/sql-count-zero/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact",
+      "description": "If reps work deals and never touch the contact's lifecycle stage, SQL reports stay at zero. A workflow can set associated contacts to Sales Qualified Lead when a deal reaches the right stage.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/sql-count-zero/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/sql-count-zero/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set associated contacts to SQL when a deal reaches a stage",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a deal-based workflow", "text": "Choose deal-based and enroll deals when Deal stage is any of the qualifying stages."},
+        {"@type": "HowToStep", "name": "Edit the contacts", "text": "Add an Edit record action, choose Lifecycle stage, and target the associated contacts."},
+        {"@type": "HowToStep", "name": "Set the stage", "text": "Set Lifecycle stage to Sales Qualified Lead and leave the workflow off until you review it."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact", "item": "https://hubspot.samcbarth.com/articles/sql-count-zero/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="sql-count-zero">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Sales Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact</h1>
+      <p class="dek">Your team is qualifying leads every week and the SQL report says zero. The report is right. Nobody updated the lifecycle stage.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>SQL reports count contacts that reached the Sales Qualified Lead lifecycle stage. If reps move deals but nobody updates the contact, the count stays at zero. Build a deal-based workflow that sets <span class="ui">Lifecycle stage</span> to Sales Qualified Lead on <strong>all associated contacts</strong> when the deal reaches the stage you consider qualified. Watch one trap: the default lifecycle property only moves forward automatically.</p>
+        </div>
+
+        <h2>1. Why the report says zero</h2>
+        <p>In an audit of one of my own portals, deals were being created and worked while the contacts behind them never changed lifecycle stage. HubSpot's lifecycle stage is a property on the contact. A report of SQLs reads that property. If it is never set to Sales Qualified Lead, the number is zero no matter how healthy the pipeline looks. The fix is to connect the two: the deal stage is the event, the contact lifecycle stage is the result.</p>
+
+        <h2>2. Trigger on the deal stage</h2>
+        <p>In <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> create a deal-based workflow. Enroll deals when <span class="ui">Deal stage</span> is any of the stages that mean "this is qualified" for you. In my demo it is Qualification or Discovery in the enterprise pipeline.</p>
+        <figure class="shot"><a href="deal-trigger.webp"><img src="deal-trigger.webp" alt="Deal workflow trigger with Deal stage is any of Qualification or Discovery highlighted" width="800" height="600" loading="lazy"></a><figcaption>Deal-based trigger on two stages. Demo workflow, turned off.</figcaption></figure>
+
+        <h2>3. Update the associated contacts</h2>
+        <p>Add an <span class="ui">Edit record</span> action, pick <span class="ui">Lifecycle stage</span>, and in the record picker choose <span class="ui">Contacts: All associated</span>. Set the value to Sales Qualified Lead.</p>
+        <figure class="shot"><a href="edit-associated.webp"><img src="edit-associated.webp" alt="Edit record action setting Lifecycle stage on Contacts: All associated highlighted" width="800" height="600" loading="lazy"></a><figcaption>The action targets every contact associated with the deal.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Forward only</span><p>HubSpot's default lifecycle stage property can only be moved forward automatically. To set an earlier value you must clear it first, manually or in a workflow. A contact already at Customer will not be pulled back to SQL by this workflow, which is what you want.</p></div>
+        <ul>
+          <li>Decide which contacts count. "All associated" is simple, but a deal with five contacts makes five SQLs. Use a primary or specific association if that overstates the number.</li>
+          <li>The "Became a sales qualified lead date" property fills automatically when the stage changes, so date based reports start working too.</li>
+          <li>Backfill with an import or a one-time bulk edit if you need history.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/create-workflows">HubSpot Knowledge Base: Create workflows</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

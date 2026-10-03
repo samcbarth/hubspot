@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's HubSQL beta lets you run SQL against CRM data over an API. What it can do, why it cannot connect to your SQL server, and how to fix a 403 for missing scopes.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubsql-beta-api/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubsql-beta-api/">
+<meta property="og:title" content="HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix">
+<meta property="og:description" content="HubSpot's HubSQL beta lets you run SQL against CRM data over an API. What it can do, why it cannot connect to your SQL server, and how to fix a 403 for missing scopes.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubsql-beta-api/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix",
+      "description": "HubSpot's HubSQL beta lets you run SQL against CRM data over an API. What it can do, why it cannot connect to your SQL server, and how to fix a 403 for missing scopes.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubsql-beta-api/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubsql-beta-api/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Fix a 403 MISSING_SCOPES error from the HubSQL beta",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Read the error", "text": "Note the 403 response with MISSING_SCOPES."},
+        {"@type": "HowToStep", "name": "Open your app", "text": "Open the private or legacy app your token belongs to."},
+        {"@type": "HowToStep", "name": "Add the read scopes", "text": "Add the CRM read scopes for the objects you query."},
+        {"@type": "HowToStep", "name": "Re-run the query", "text": "Run the query again and check for HTTP 200."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix", "item": "https://hubspot.samcbarth.com/articles/hubsql-beta-api/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubsql-beta-api">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span><span class="badge">Developer</span></div>
+      <h1>HubSQL beta: what it is, what it is not, and the 403 MISSING_SCOPES fix</h1>
+      <p class="dek">HubSQL sounds like a database you can plug other tools into. It is an API. Here is what that means in practice.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Private beta (invite only at the time of writing)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Private or legacy app with the required read scopes</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSQL is a read-only HTTP API for running SQL-style queries against HubSpot data. It is not a database, so you cannot link another SQL server to it directly. You can feed other systems with a sync script, within beta rate limits. If you get <strong>403 MISSING_SCOPES</strong>, the app behind your token needs more read scopes. That is what happened to me, and after I added them the same query returned 200.</p>
+        </div>
+
+        <h2>1. What HubSQL is</h2>
+        <p>HubSpot describes HubSQL as a data access layer for running standard SQL, with joins, filters, and aggregations, against your CRM data. It entered private beta in September 2026 and access is by invitation. HubSpot had not published full public documentation when I wrote this, so check the docs HubSpot gave your account and treat everything below as my testing on one portal.</p>
+
+        <h2>2. What it is not</h2>
+        <p>When asked whether it could integrate with other SQL servers, my answer was no, not directly. It is an HTTP API that returns query results. It is not a database you can point another server at. To get HubSpot data into another system, write a sync script that runs the query and loads the results, and keep it inside the beta rate limits. In my test it was also read-only.</p>
+
+        <h2>3. The 403 MISSING_SCOPES fix</h2>
+        <p>My first query to a portal that had the beta turned on returned <code>403 MISSING_SCOPES</code>. Beta access was fine. The token's app simply did not have the read scopes the query needed. After I added them to the app, the same deal-by-stage query returned HTTP 200 with about 1,700 deals across 22 stages.</p>
+        <p>HubSpot has moved private apps into the Legacy Apps page, so look for your app there.</p>
+        <figure class="shot"><a href="moved.webp"><img src="moved.webp" alt="Private Apps page saying Your private apps have moved with the Go to Legacy Apps button highlighted" width="800" height="613" loading="lazy"></a><figcaption>Private apps now point you to Legacy Apps.</figcaption></figure>
+        <figure class="shot"><a href="legacy-apps.webp"><img src="legacy-apps.webp" alt="Legacy Apps list with two private apps and the Create legacy app button highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Legacy Apps list. Open the app that owns your token to change its scopes.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Treat the token like a password</span><p>Never paste a token into a chat, a screenshot, or a repo. If one is exposed, rotate it in the app settings.</p></div>
+        <p>You can open <a class="hs-link" data-hs="/private-apps/{portalId}" href="https://app.hubspot.com/l/private-apps"><span class="ui">Private apps</span></a> to get there from your own portal. You need developer access to the account.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.hubjoy.co/hubspot/hubsql">HubJoy: HubSpot HubSQL overview (third party)</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api/scopes">HubSpot developer docs: Scopes</a></li>
+          <li><a href="https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview">HubSpot developer docs: Private apps</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

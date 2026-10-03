@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation - HubSpot Field Notes</title>
+<meta name="description" content="A HubSpot workflow that creates a call task when a lead arrives, checks whether anyone made contact after a day, and escalates by email to the owner if nobody did.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/">
+<meta property="og:title" content="Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation">
+<meta property="og:description" content="A HubSpot workflow that creates a call task when a lead arrives, checks whether anyone made contact after a day, and escalates by email to the owner if nobody did.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation",
+      "description": "A HubSpot workflow that creates a call task when a lead arrives, checks whether anyone made contact after a day, and escalates by email to the owner if nobody did.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build a speed-to-lead SLA workflow",
+      "totalTime": "PT20M",
+      "step": [
+        {"@type": "HowToStep", "name": "Set the trigger", "text": "Enroll contacts whose lifecycle stage is Lead and whose create date is after the day you launch the workflow."},
+        {"@type": "HowToStep", "name": "Mark the lead as new", "text": "Set Lead status to New so reps can filter for uncontacted leads."},
+        {"@type": "HowToStep", "name": "Wait, then branch", "text": "Delay one day and branch on whether Last contacted is known."},
+        {"@type": "HowToStep", "name": "Create the call task", "text": "On the not contacted branch create a high priority call task for the contact owner."},
+        {"@type": "HowToStep", "name": "Escalate", "text": "Delay two more days, branch again, and email the owner if the lead is still uncontacted."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation", "item": "https://hubspot.samcbarth.com/articles/speed-to-lead-sla-workflow/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="speed-to-lead-sla-workflow">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation</h1>
+      <p class="dek">Leads go cold when nobody owns the first call. This workflow creates the task, checks for contact, and escalates when nothing happened.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>20 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Enroll new Leads, set <span class="ui">Lead status</span> to New, wait a day, then branch on <span class="ui">Last contacted</span>. If it is empty, create a high priority call task for the owner. Wait two more days, check again, and send the owner an internal email if the lead is still untouched. I built this for a home builder, where the same SLA applied to walk-in leads entered by the on-site team as well as online ones.</p>
+        </div>
+
+        <h2>1. Enroll only new leads</h2>
+        <p>Open <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a>, create a contact-based workflow, and set the trigger to <span class="ui">Lifecycle stage</span> is any of Lead, plus a <span class="ui">Create date</span> is after filter set to the day you go live. The date filter keeps the workflow from enrolling years of existing leads the moment you turn it on.</p>
+        <figure class="shot"><a href="trigger.webp"><img src="trigger.webp" alt="Workflow trigger with Lifecycle stage is Lead and Create date is after highlighted" width="800" height="655" loading="lazy"></a><figcaption>Trigger: Lifecycle stage is Lead and Create date is after launch day. Re-enroll is off.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Re-enroll stays off</span><p>With re-enrollment off, each contact gets the SLA once. Turn it on only if a lead that returns should restart the clock. See <a href="../workflow-wont-re-enroll/">why records fail to re-enroll</a>.</p></div>
+
+        <h2>2. Wait, check, create the task</h2>
+        <p>The first action sets <span class="ui">Lead status</span> to New. Then add a one day delay and a branch that asks whether <span class="ui">Last contacted</span> is unknown. If it is, the lead has not been touched, so the next action creates a call task, high priority, assigned to the contact owner.</p>
+        <figure class="shot"><a href="flow-top.webp"><img src="flow-top.webp" alt="Workflow canvas showing Delay, Branch, and Create task steps highlighted" width="800" height="655" loading="lazy"></a><figcaption>Delay (1), branch on Last contacted (2), then the call task on the Not contacted yet path (3).</figcaption></figure>
+        <p>Last contacted is the property HubSpot fills when a sales activity is logged on the contact, so a rep who calls and logs it satisfies the check. Confirm that your team logs activity the way you expect before you rely on it.</p>
+
+        <h2>3. Escalate if nothing happens</h2>
+        <p>After the task, wait two more days and branch again. The still-not-contacted path sends an internal email to the owner. The contacted path simply ends.</p>
+        <figure class="shot"><a href="flow-bottom.webp"><img src="flow-bottom.webp" alt="Second delay, second branch, and Send internal email notification steps highlighted" width="800" height="655" loading="lazy"></a><figcaption>Second delay (1), second check (2), and the owner email (3).</figcaption></figure>
+        <ul>
+          <li>Send the escalation to the owner first. Add the manager only when you are sure the lead is not contacted.</li>
+          <li>Pick one SLA for every lead source. The home builder asked whether walk-ins should be exempt and the answer was no, same rules for everyone, so the funnel numbers stay whole.</li>
+          <li>Use a task, not just an email, for the first step so the work shows up in the rep's task queue.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/create-workflows">HubSpot Knowledge Base: Create workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/use-delays">HubSpot Knowledge Base: Use delays in workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows-user-guide-v2/understanding-your-workflow-settings">HubSpot Knowledge Base: Understand your workflow settings</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
