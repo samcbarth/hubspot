@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>The Create task action in a HubSpot workflow: title, type, due date, and reminder - HubSpot Field Notes</title>
+<meta name="description" content="How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-create-task-action/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-create-task-action/">
+<meta property="og:title" content="The Create task action in a HubSpot workflow: title, type, due date, and reminder">
+<meta property="og:description" content="How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-create-task-action/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "The Create task action in a HubSpot workflow: title, type, due date, and reminder",
+      "description": "How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/workflow-create-task-action/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/workflow-create-task-action/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a task from a HubSpot workflow",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Add the action", "text": "Click the plus on the canvas and choose Create task."},
+        {"@type": "HowToStep", "name": "Write the title", "text": "Write a title and insert a personalization token such as First Name."},
+        {"@type": "HowToStep", "name": "Choose the type and due date", "text": "Pick Call, Email, or To-do and set the due date."},
+        {"@type": "HowToStep", "name": "Set a reminder and assignment", "text": "Choose an email reminder if needed and decide who the task is assigned to."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "The Create task action in a HubSpot workflow: title, type, due date, and reminder", "item": "https://hubspot.samcbarth.com/articles/workflow-create-task-action/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="workflow-create-task-action">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Marketing Hub</span><span class="badge">Service Hub</span></div>
+      <h1>The Create task action in a HubSpot workflow: title, type, due date, and reminder</h1>
+      <p class="dek">A workflow task puts the next action in a rep's queue instead of hoping they notice. The settings are short, and the title does a lot of the work.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Add <span class="ui">Create task</span>, then set a <strong>title</strong> (it can include tokens such as the enrolled contact's first name), a <strong>type</strong> (here, Call), a <strong>due date</strong> (immediately when the task is created, or a custom number of days and time after creation), and an <strong>email reminder</strong> (none, or a custom time). In my speed-to-lead example the task title is "Call new lead" plus the contact's first name and the SLA window, so the rep knows why it exists.</p>
+        </div>
+
+        <h2>1. Title, type, due date, reminder</h2>
+        <p>Click a Create task action in a workflow in <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a>. The top of its panel has the settings you will use most.</p>
+        <figure class="shot"><a href="task-top.webp"><img src="task-top.webp" alt="Create task action panel with the title, type, due date, and email reminder sections highlighted" width="800" height="450" loading="lazy"></a><figcaption>Title (1), due date and type (2), and email reminder (3).</figcaption></figure>
+        <ul>
+          <li><strong>Title.</strong> A required field. The title can include a personalization token, shown as a chip, such as the First Name of the enrolled contact. A good title says what to do and for whom. Mine reads "Call new lead" followed by the contact's first name and the SLA, so it is clear in a task list.</li>
+          <li><strong>Type.</strong> Call, Email, or To-do.</li>
+          <li><strong>Due date.</strong> Either <em>Immediately</em>, which sets the date and time to when the task is created, or a <em>Custom date</em> that is a number of days and a time after creation.</li>
+          <li><strong>Email reminder.</strong> None, or a custom reminder set as a number of days and a time after the task is created.</li>
+        </ul>
+
+        <h2>2. Pair it with a check</h2>
+        <p>A task for every enrolled record can bury a rep. In the speed-to-lead workflow the task sits behind a branch, so it is only created when the lead has not been contacted. See <a href="../speed-to-lead-sla-workflow/">build a speed-to-lead workflow</a> and <a href="../workflow-delay-and-branch-actions/">delay and branch actions</a>.</p>
+        <ul>
+          <li>Set the due date to match the promise you made, such as within a day.</li>
+          <li>Make the title specific enough that the rep does not have to open the task to understand it.</li>
+          <li>Check who the task is assigned to, further down the panel.</li>
+        </ul>
+        <p>The rest of the panel, including assignment and the task body, is below what fits on one screen. Open the action in your own workflow to see all of it.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

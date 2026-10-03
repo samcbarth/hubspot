@@ -619,6 +619,54 @@ var ARTICLES = [
     minutes: 6,
     difficulty: "Beginner",
     keywords: ["consent checkbox", "gdpr form", "legitimate interest", "newsletter signup"]
+  },
+  {
+    slug: "workflow-settings-explained",
+    title: "HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows",
+    excerpt: "A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub", "Sales Hub", "Service Hub"],
+    features: ["Workflows"],
+    tier: "Professional or Enterprise (performance notifications are Enterprise)",
+    permissions: "Super Admin or Workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 10,
+    difficulty: "Intermediate",
+    keywords: ["workflow settings", "pause actions", "turn off automatically", "unenroll from other workflows"]
+  },
+  {
+    slug: "workflow-delay-and-branch-actions",
+    title: "Delay and if/then branch actions in HubSpot workflows: what to set",
+    excerpt: "How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub", "Sales Hub", "Service Hub"],
+    features: ["Workflows"],
+    tier: "Professional or Enterprise",
+    permissions: "Super Admin or Workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 8,
+    difficulty: "Beginner",
+    keywords: ["workflow delay", "business days", "if/then branch", "list branch"]
+  },
+  {
+    slug: "workflow-create-task-action",
+    title: "The Create task action in a HubSpot workflow: title, type, due date, and reminder",
+    excerpt: "How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.",
+    type: "tip",
+    problem: "How to",
+    hubs: ["Sales Hub", "Marketing Hub", "Service Hub"],
+    features: ["Workflows", "Tasks"],
+    tier: "Professional or Enterprise",
+    permissions: "Super Admin or Workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 6,
+    difficulty: "Beginner",
+    keywords: ["create task", "workflow task", "call task", "task due date"]
   }
 ];
 

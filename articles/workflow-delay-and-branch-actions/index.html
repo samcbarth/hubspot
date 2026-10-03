@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Delay and if/then branch actions in HubSpot workflows: what to set - HubSpot Field Notes</title>
+<meta name="description" content="How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/">
+<meta property="og:title" content="Delay and if/then branch actions in HubSpot workflows: what to set">
+<meta property="og:description" content="How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Delay and if/then branch actions in HubSpot workflows: what to set",
+      "description": "How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Add a delay and an if/then branch to a HubSpot workflow",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Add a delay", "text": "Click the plus on the canvas and choose Delay."},
+        {"@type": "HowToStep", "name": "Set the amount", "text": "Choose a set amount of time and enter days, hours, and minutes."},
+        {"@type": "HowToStep", "name": "Optionally limit to business days", "text": "Tick Business days only for Monday to Friday."},
+        {"@type": "HowToStep", "name": "Add a branch", "text": "Add a branch based on filter criteria and name each path."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Delay and if/then branch actions in HubSpot workflows: what to set", "item": "https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="workflow-delay-and-branch-actions">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>Delay and if/then branch actions in HubSpot workflows: what to set</h1>
+      <p class="dek">Delays and branches are the two actions that turn a straight line of steps into logic. Both have small settings that change what happens.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>A <strong>Delay</strong> pauses a record. Choose <span class="ui">For a set amount of time</span> and set days, hours, and minutes. A day is a 24 hour period, and you can tick <span class="ui">Business days only (Monday - Friday)</span>. A <strong>branch</strong> sends records down different paths based on filter criteria, such as <span class="ui">Last contacted is unknown</span>, and has a path for records that match none of the criteria. Combine them to wait, then check, then act.</p>
+        </div>
+
+        <h2>1. The Delay action</h2>
+        <p>Click a delay on the canvas of a workflow in <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> and its settings open. The first field chooses the type of delay. The one in this demo is <span class="ui">For a set amount of time</span>, with Days, Hours, and Minutes below it. HubSpot also offers delays until a calendar date, a day of the week, or a time of day.</p>
+        <figure class="shot"><a href="delay.webp"><img src="delay.webp" alt="Delay action panel with the set amount of time fields and the Business days only checkbox highlighted" width="800" height="450" loading="lazy"></a><figcaption>Delay type and amounts (1), and the business days checkbox (2).</figcaption></figure>
+        <ul>
+          <li>The panel reminds you that one day equals a 24 hour period.</li>
+          <li><strong>Business days only (Monday - Friday)</strong> skips the weekend when it counts days. Tick it when a delay is meant to be a work-day wait.</li>
+          <li>A delay holds the record at that step. Contacts waiting there are listed under the <span class="ui">Contacts in action</span> tab.</li>
+        </ul>
+
+        <h2>2. The if/then branch</h2>
+        <p>A branch based on filter criteria evaluates conditions and sends a record down the first path whose conditions it meets. In the demo, a branch named <em>Not contacted yet</em> checks whether <span class="ui">Last contacted</span> is unknown. Everything else goes to the default path, labeled with what to do if none of the criteria are met.</p>
+        <figure class="shot"><a href="branch.webp"><img src="branch.webp" alt="Branch action panel with the branch name and the Last contacted is unknown group highlighted" width="800" height="450" loading="lazy"></a><figcaption>A branch named Not contacted yet with one group of criteria.</figcaption></figure>
+        <ul>
+          <li>Give each branch a clear name, since the name is what you see on the canvas.</li>
+          <li>You can add another branch to test more conditions in order.</li>
+          <li>Put the most specific condition first.</li>
+        </ul>
+
+        <h2>3. Put them together</h2>
+        <p>The pattern "wait, check, then act" is a delay followed by a branch. For a worked example, see <a href="../speed-to-lead-sla-workflow/">the speed-to-lead workflow</a>, which waits a day, branches on whether anyone made contact, and acts on the answer.</p>
+        <div class="callout"><span class="callout-title">Remember the schedule setting</span><p>If a workflow limits actions to certain days and times, HubSpot does not reschedule delays and branches. The action after them is what waits. See <a href="../workflow-settings-explained/">workflow settings explained</a>.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/use-delays">HubSpot Knowledge Base: Use delays in your workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

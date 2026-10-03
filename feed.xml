@@ -363,6 +363,40 @@
     <category>Consent</category>
   </item>
   <item>
+    <title>HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-settings-explained/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-settings-explained/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Delay and if/then branch actions in HubSpot workflows: what to set</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-delay-and-branch-actions/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>The Create task action in a HubSpot workflow: title, type, due date, and reminder</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-create-task-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-create-task-action/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+    <category>Tasks</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows - HubSpot Field Notes</title>
+<meta name="description" content="A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-settings-explained/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-settings-explained/">
+<meta property="og:title" content="HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows">
+<meta property="og:description" content="A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-settings-explained/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows",
+      "description": "A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/workflow-settings-explained/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/workflow-settings-explained/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Configure HubSpot workflow settings",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the editor", "text": "Open the workflow and click Settings in the top menu."},
+        {"@type": "HowToStep", "name": "Set the schedule", "text": "Choose when actions can run, which dates to pause, and whether to turn off automatically."},
+        {"@type": "HowToStep", "name": "Set performance options", "text": "Turn on notifications or conversion metrics where you want them."},
+        {"@type": "HowToStep", "name": "Check connections", "text": "Decide whether enrolling here should unenroll records from other workflows."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows", "item": "https://hubspot.samcbarth.com/articles/workflow-settings-explained/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="workflow-settings-explained">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows</h1>
+      <p class="dek">The workflow Settings panel is a short list of toggles that change how a workflow behaves, and it is easy to skip. Here is what each one does and the catches HubSpot documents.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise (performance notifications are Enterprise)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open a workflow and click <span class="ui">Settings</span>. Three groups: <strong>Schedule when actions can run</strong> (specific days and times, paused dates, an automatic turn-off date), <strong>Analyze performance</strong> (issue and enrollment-rate notifications, conversion metrics for each path), and <strong>Connections</strong> (unenroll records from other workflows). HubSpot notes that delays and if/then branches are not rescheduled by the time window, and that the unenroll setting applies only at the moment of enrollment.</p>
+        </div>
+
+        <h2>1. Open Settings</h2>
+        <p>Open a workflow from <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> and click <span class="ui">Settings</span> in the menu under the workflow name. A panel slides in from the right. I am showing a demo workflow that is turned off. The toggles are all off here, which is the default.</p>
+
+        <h2>2. Schedule when actions can run</h2>
+        <p>Three toggles control timing:</p>
+        <ol>
+          <li><strong>Run actions on specific dates and times only.</strong> Limits actions to days and hours you choose, based on your account time zone. Records that reach an action outside the window wait for the next slot. HubSpot's own caveat: delays and if/then branches are not rescheduled, but the action after them is.</li>
+          <li><strong>Pause actions on specific dates.</strong> Records still enroll, but they pause at the next action after any delay or branch ends. You can repeat a date every year.</li>
+          <li><strong>Schedule this workflow to turn off automatically.</strong> Picks a future date and time. Any runs in progress end early.</li>
+        </ol>
+        <figure class="shot"><a href="s1.webp"><img src="s1.webp" alt="Workflow Settings panel with the three schedule toggles highlighted" width="800" height="450" loading="lazy"></a><figcaption>The three schedule toggles, all off by default.</figcaption></figure>
+        <div class="callout warn"><span class="callout-title">Check your time zone</span><p>Scheduled windows use the account's time zone. HubSpot says it defaults to Eastern if none is set, so confirm yours before you rely on a send window.</p></div>
+
+        <h2>3. Analyze performance</h2>
+        <p>Two notification toggles and one metrics toggle:</p>
+        <ul>
+          <li><strong>Get notified about workflow issues.</strong> Alerts you when the workflow needs review.</li>
+          <li><strong>Get notified if the enrollment rate changes.</strong> Alerts you to unusual swings in how many records enroll.</li>
+          <li><strong>Compare conversion metrics for each path.</strong> Collects how many records reached each step and how many errored.</li>
+        </ul>
+        <p>HubSpot lists the performance notifications as an Enterprise feature, and individual users still need their own notification preferences turned on. The conversion metrics toggle shows a limit. In my demo account it reads up to 20 workflows, with none used.</p>
+        <figure class="shot"><a href="s2.webp"><img src="s2.webp" alt="Settings panel showing the Analyze performance section with notification toggles highlighted" width="800" height="450" loading="lazy"></a><figcaption>Performance notifications.</figcaption></figure>
+        <figure class="shot"><a href="s3.webp"><img src="s3.webp" alt="Settings panel showing Compare conversion metrics and the Connections section highlighted" width="800" height="450" loading="lazy"></a><figcaption>Conversion metrics (1) and the Connections setting (2).</figcaption></figure>
+
+        <h2>4. Connections: unenroll from other workflows</h2>
+        <p>For contact-based workflows, <span class="ui">Unenroll records from other workflows when they enroll in this workflow</span> removes a contact from other workflows at the moment it enrolls here. It is useful when two workflows would send conflicting emails. The catch from HubSpot: it applies only at the time of enrollment. It does not stop the contact being enrolled in the other workflow later.</p>
+        <p>These settings are about behavior. Enrollment rules, goals, and suppression lists are on the trigger card, not here. See <a href="../workflow-wont-re-enroll/">why a contact won't re-enroll</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows-user-guide-v2/understanding-your-workflow-settings">HubSpot Knowledge Base: Understand your workflow settings</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/use-delays">HubSpot Knowledge Base: Use delays in your workflows</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
