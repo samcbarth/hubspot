@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot dashboard settings: who can see it, how often it refreshes, and caching - HubSpot Field Notes</title>
+<meta name="description" content="What each setting in a HubSpot dashboard's settings panel does: owner, access level, default dashboard, automatic refresh, color theme, and the dashboard cache setting.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/">
+<meta property="og:title" content="HubSpot dashboard settings: who can see it, how often it refreshes, and caching">
+<meta property="og:description" content="What each setting in a HubSpot dashboard's settings panel does: owner, access level, default dashboard, automatic refresh, color theme, and the dashboard cache setting.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot dashboard settings: who can see it, how often it refreshes, and caching",
+      "description": "What each setting in a HubSpot dashboard's settings panel does: owner, access level, default dashboard, automatic refresh, color theme, and the dashboard cache setting.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Configure HubSpot dashboard settings",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the dashboard", "text": "Go to Reports, Dashboards and open the dashboard."},
+        {"@type": "HowToStep", "name": "Open settings", "text": "Click the gear icon in the top right."},
+        {"@type": "HowToStep", "name": "Set access", "text": "Choose who can view or edit the dashboard."},
+        {"@type": "HowToStep", "name": "Set refresh and caching", "text": "Check automatic refresh and the cache setting, then save."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot dashboard settings: who can see it, how often it refreshes, and caching", "item": "https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="dashboard-settings-access-refresh-caching">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Dashboards">Dashboards</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot dashboard settings: who can see it, how often it refreshes, and caching</h1>
+      <p class="dek">A dashboard looks done when the reports are on it. The settings panel decides who sees it, how fresh it is, and how fast it loads.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All paid tiers; specific user and team access needs Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Dashboard owner, or Super Admin</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open a dashboard and click the gear icon. The panel has the dashboard name, description, tags, owner, <strong>Who can access this dashboard</strong>, <strong>Default dashboard</strong>, <strong>Automatic refresh</strong>, color theme, and two cache settings. Access options are owner and admins only, everyone can view, everyone can view and edit, and, on Enterprise, specific users and teams. HubSpot also suggests turning on report caching so a dashboard loads saved data on return visits.</p>
+        </div>
+
+        <h2>1. Open the settings panel</h2>
+        <p>Go to <a class="hs-link" data-hs="/reports-dashboard/{portalId}" href="https://app.hubspot.com/l/reports-dashboard"><span class="ui">Dashboards</span></a>, open a dashboard, and click the gear icon in the top right. The owner's email is blurred below. Everything else is as it appears in my demo portal.</p>
+        <figure class="shot"><a href="settings.webp"><img src="settings.webp" alt="Dashboard settings panel with the access, automatic refresh, and cache settings highlighted" width="800" height="600" loading="lazy"></a><figcaption>Access (1), automatic refresh (2), and cache settings (3).</figcaption></figure>
+
+        <h2>2. Who can access it</h2>
+        <p>The access setting has these levels:</p>
+        <ul>
+          <li><strong>Owner and admins only.</strong> Only Super Admins and the owner see it.</li>
+          <li><strong>Everyone can view.</strong> Anyone in the account can see it. This demo dashboard uses this.</li>
+          <li><strong>Everyone can view and edit.</strong> Anyone can change it, so use it carefully.</li>
+          <li><strong>Specific users and teams.</strong> HubSpot says this needs an Enterprise subscription.</li>
+        </ul>
+        <p>Super Admins and users with admin permission for dashboards, reports, and analytics can change any dashboard, whatever its visibility. Other users can change only dashboards they own or can edit.</p>
+
+        <h2>3. Default dashboard</h2>
+        <p>Set <span class="ui">Default dashboard</span> to Yes and that dashboard opens first when you go to Dashboards. HubSpot says it is also the dashboard shown when you log in or click the HubSpot sprocket, so it suits the one you check first.</p>
+
+        <h2>4. Refresh and caching</h2>
+        <p>The panel shows an <span class="ui">Automatic refresh</span> interval, which is every 10 minutes in my demo. HubSpot's data has its own schedule behind that. Dashboard data that relies on analytics updates about every 40 minutes, and you can refresh a report or dashboard manually once every 15 minutes. Reports from the custom report builder refresh about every two hours.</p>
+        <p>Below that are <span class="ui">Dashboard cache setting</span> and <span class="ui">Your cache setting</span>. Mine both read no caching. When I opened the dashboard, HubSpot suggested turning on report caching so the dashboard uses saved data on return visits and does not pull fresh data every time. That trades freshness for speed, so decide per dashboard.</p>
+        <div class="callout"><span class="callout-title">Time zone</span><p>The dashboard footer shows the time zone its data is based on. Check it matches how your team reads dates.</p></div>
+        <p>To put reports on the dashboard, see <a href="../add-reports-to-a-dashboard/">add reports to a dashboard</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/dashboards/customize-your-dashboards">HubSpot Knowledge Base: Customize your dashboard</a></li>
+          <li><a href="https://knowledge.hubspot.com/dashboards/manage-your-dashboards">HubSpot Knowledge Base: Create, clone, delete, and manage dashboards</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/how-often-do-analytics-in-hubspot-update">HubSpot Knowledge Base: Frequency of HubSpot analytics updates</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -715,6 +715,38 @@ var ARTICLES = [
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["unused workflows", "automation issues", "workflow health", "cleanup"]
+  },
+  {
+    slug: "dashboard-settings-access-refresh-caching",
+    title: "HubSpot dashboard settings: who can see it, how often it refreshes, and caching",
+    excerpt: "What each setting in a HubSpot dashboard's settings panel does: owner, access level, default dashboard, automatic refresh, color theme, and the dashboard cache setting.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Smart CRM", "Marketing Hub", "Sales Hub"],
+    features: ["Dashboards"],
+    tier: "All paid tiers; specific user and team access needs Enterprise",
+    permissions: "Dashboard owner, or Super Admin",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 7,
+    difficulty: "Beginner",
+    keywords: ["dashboard settings", "dashboard access", "report caching", "default dashboard", "refresh"]
+  },
+  {
+    slug: "add-reports-to-a-dashboard",
+    title: "Add reports to a HubSpot dashboard: My reports, ready-made reports, and the permission catch",
+    excerpt: "How the Add reports panel works in a HubSpot dashboard: My reports and Ready-made reports tabs, search and filters, drag or Add, and why the panel can say you do not have permission.",
+    type: "tip",
+    problem: "How to",
+    hubs: ["Smart CRM", "Marketing Hub", "Sales Hub"],
+    features: ["Dashboards", "Reports"],
+    tier: "All paid tiers; custom reports need Professional",
+    permissions: "Edit access to the dashboard",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 5,
+    difficulty: "Beginner",
+    keywords: ["add reports", "dashboard", "ready-made reports", "permission to edit dashboard"]
   }
 ];
 
