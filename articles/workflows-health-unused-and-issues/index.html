@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Find unused HubSpot workflows and workflows with issues: the Health tab - HubSpot Field Notes</title>
+<meta name="description" content="Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/">
+<meta property="og:title" content="Find unused HubSpot workflows and workflows with issues: the Health tab">
+<meta property="og:description" content="Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Find unused HubSpot workflows and workflows with issues: the Health tab",
+      "description": "Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find unused workflows and workflows with issues in HubSpot",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Automation", "text": "Go to Automation, Workflows."},
+        {"@type": "HowToStep", "name": "Open the Health tab", "text": "Click Health to see counts of workflows with issues and unused workflows."},
+        {"@type": "HowToStep", "name": "Open the Unused view", "text": "On the Workflows tab, open the Unused view to list them."},
+        {"@type": "HowToStep", "name": "Review the issues", "text": "Click Review automation issues to see what failed."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Find unused HubSpot workflows and workflows with issues: the Health tab", "item": "https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="workflows-health-unused-and-issues">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>Find unused HubSpot workflows and workflows with issues: the Health tab</h1>
+      <p class="dek">Workflows pile up. HubSpot keeps a count of the unused ones and the ones with problems, and it takes one click to see them.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Access to workflows</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open <span class="ui">Automation</span> and click the <span class="ui">Health</span> tab. It shows two reports: <strong>Workflows with issues</strong> and <strong>Unused workflows</strong>, each as of today, 30 days ago, and 180 days ago. The Workflows tab also has an <span class="ui">Unused</span> view, and the <span class="ui">Review automation issues</span> button opens the list of failed actions. In my demo portal 21 of 31 workflows are unused.</p>
+        </div>
+
+        <h2>1. The Workflows tab</h2>
+        <p>Open <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a>. Along the top are <span class="ui">Overview</span>, <span class="ui">Workflows</span>, <span class="ui">Analyze</span>, and <span class="ui">Health</span>, and a <span class="ui">Review automation issues</span> button. The view tabs below include <span class="ui">All workflows</span>, <span class="ui">Deleted</span>, and <span class="ui">Unused</span>, each with a count.</p>
+        <figure class="shot"><a href="index.webp"><img src="index.webp" alt="Workflows page with the top tabs, the Unused view, and the Review automation issues button highlighted" width="800" height="600" loading="lazy"></a><figcaption>Top tabs, the Unused view, and the issues button.</figcaption></figure>
+        <p>The Unused view is a ready-made list of workflows nobody has used, so it is the place to start a cleanup. In this demo portal it holds 21 of 31.</p>
+
+        <h2>2. The Health tab</h2>
+        <p>The Health tab turns that into a trend. Two cards report <span class="ui">Workflows with issues</span> and <span class="ui">Unused workflows</span> as of today, 30 days ago, and 180 days ago, so you can see whether things are getting better or worse.</p>
+        <figure class="shot"><a href="health.webp"><img src="health.webp" alt="Workflows health reports page with the workflows with issues and unused workflows cards highlighted" width="800" height="600" loading="lazy"></a><figcaption>Workflows with issues (left) and unused workflows (right).</figcaption></figure>
+
+        <h2>3. Review automation issues</h2>
+        <p>The button opens a list of issues. It has a Needs review tab and an Already reviewed tab, and for each issue it shows where it occurred, how many automations it affected, the last occurrence, and a priority. An issue leaves the Needs review list once you have reviewed all the automations it affected. The issues in my demo include a failed action and an action that was sunset.</p>
+
+        <h2>4. A short cleanup routine</h2>
+        <ul>
+          <li>Open the Unused view and sort by last updated.</li>
+          <li>Check whether each one is really unused before you delete it. HubSpot also keeps a Deleted view.</li>
+          <li>Work through Needs review and fix the high priority issues first.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/understand-your-workflow-details-page">HubSpot Knowledge Base: Understand your workflow details page</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

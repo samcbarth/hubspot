@@ -667,6 +667,54 @@ var ARTICLES = [
     minutes: 6,
     difficulty: "Beginner",
     keywords: ["create task", "workflow task", "call task", "task due date"]
+  },
+  {
+    slug: "workflow-edit-record-action",
+    title: "The Edit record action in HubSpot workflows: replace, append, clear, and copy values",
+    excerpt: "How the Edit record action works in a HubSpot workflow: choose the record, the property, the change type, and the value, including copying from another property and editing associated records.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub", "Sales Hub", "Service Hub"],
+    features: ["Workflows", "Properties"],
+    tier: "Professional or Enterprise",
+    permissions: "Super Admin or Workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 8,
+    difficulty: "Beginner",
+    keywords: ["edit record", "set property value", "change type", "append", "copy property"]
+  },
+  {
+    slug: "workflow-enrollment-triggers-explained",
+    title: "HubSpot workflow enrollment triggers: event-based vs filter criteria",
+    excerpt: "The two parts of a HubSpot workflow trigger: the event that starts enrollment and the conditions a record must meet. How they combine, what manual enrollment skips, and a common event trigger limitation.",
+    type: "guide",
+    problem: "How to",
+    hubs: ["Marketing Hub", "Sales Hub", "Service Hub"],
+    features: ["Workflows"],
+    tier: "Professional or Enterprise",
+    permissions: "Super Admin or Workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 10,
+    difficulty: "Intermediate",
+    keywords: ["enrollment trigger", "event based", "filter criteria", "manual enrollment"]
+  },
+  {
+    slug: "workflows-health-unused-and-issues",
+    title: "Find unused HubSpot workflows and workflows with issues: the Health tab",
+    excerpt: "Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.",
+    type: "tip",
+    problem: "Hidden trick",
+    hubs: ["Marketing Hub", "Sales Hub", "Service Hub"],
+    features: ["Workflows"],
+    tier: "Professional or Enterprise",
+    permissions: "Access to workflows",
+    verified: "2026-10-03",
+    published: "2026-10-03",
+    minutes: 5,
+    difficulty: "Beginner",
+    keywords: ["unused workflows", "automation issues", "workflow health", "cleanup"]
   }
 ];
 

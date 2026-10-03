@@ -397,6 +397,40 @@
     <category>Tasks</category>
   </item>
   <item>
+    <title>The Edit record action in HubSpot workflows: replace, append, clear, and copy values</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-edit-record-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-edit-record-action/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Edit record action works in a HubSpot workflow: choose the record, the property, the change type, and the value, including copying from another property and editing associated records.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubSpot workflow enrollment triggers: event-based vs filter criteria</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-enrollment-triggers-explained/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-enrollment-triggers-explained/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The two parts of a HubSpot workflow trigger: the event that starts enrollment and the conditions a record must meet. How they combine, what manual enrollment skips, and a common event trigger limitation.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Find unused HubSpot workflows and workflows with issues: the Health tab</title>
+    <link>https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflows-health-unused-and-issues/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>
