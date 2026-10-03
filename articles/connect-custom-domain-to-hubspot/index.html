@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Connect your own domain to HubSpot (and what the brand domain limit means) - HubSpot Field Notes</title>
+<meta name="description" content="How to see your connected HubSpot hosting domains, what a brand domain is, the DNS record each type needs, and how SSL is turned on. Includes the one brand domain limit on a lower tier.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/">
+<meta property="og:title" content="Connect your own domain to HubSpot (and what the brand domain limit means)">
+<meta property="og:description" content="How to see your connected HubSpot hosting domains, what a brand domain is, the DNS record each type needs, and how SSL is turned on. Includes the one brand domain limit on a lower tier.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Connect your own domain to HubSpot (and what the brand domain limit means)",
+      "description": "How to see your connected HubSpot hosting domains, what a brand domain is, the DNS record each type needs, and how SSL is turned on. Includes the one brand domain limit on a lower tier.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Connect a domain to HubSpot",
+      "totalTime": "PT15M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Domains & URLs", "text": "Go to Settings, Content, Domains & URLs."},
+        {"@type": "HowToStep", "name": "Connect the domain", "text": "Click Connect a domain and enter the subdomain, brand domain, and top-level domain."},
+        {"@type": "HowToStep", "name": "Update DNS", "text": "Add the CNAME record for a subdomain, or A records for a root domain, at your DNS provider."},
+        {"@type": "HowToStep", "name": "Wait for SSL", "text": "HubSpot turns on SSL automatically once the domain connects."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Connect your own domain to HubSpot (and what the brand domain limit means)", "item": "https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="connect-custom-domain-to-hubspot">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Domains">Domains</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span></div>
+      <h1>Connect your own domain to HubSpot (and what the brand domain limit means)</h1>
+      <p class="dek">Your pages can live on your own domain instead of a hubspotpagebuilder address. The setting is in one place, and the limit on lower tiers is worth knowing before you plan.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Content Hub; the number of brand domains depends on your tier</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or domain settings access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open <span class="ui">Settings</span>, <span class="ui">Content</span>, <span class="ui">Domains &amp; URLs</span> and choose to connect a domain. A subdomain such as www needs a CNAME record at your DNS provider. A root domain needs A records. HubSpot then provisions SSL automatically, usually within minutes and up to a few hours. On my account the page shows "You've used 1 out of 1 brand domains" and offers an upgrade to Content Hub Enterprise for more.</p>
+        </div>
+
+        <h2>1. Where it lives</h2>
+        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/domains" href="https://app.hubspot.com/l/settings/domains"><span class="ui">Domains & URLs</span></a>. The Domains tab has two parts, Web Hosting and Email Sending. This article is about Web Hosting. At the top is a notice about your brand domain allowance. On my account it reads that I have used 1 out of 1 brand domains, with an upgrade button for Content Hub Enterprise.</p>
+        <figure class="shot"><a href="domains-top.webp"><img src="domains-top.webp" alt="Domains and URLs page with the brand domain limit notice and the SSL activation message highlighted" width="800" height="600" loading="lazy"></a><figcaption>The brand domain notice (top) and the SSL activation message (bottom).</figcaption></figure>
+        <div class="callout"><span class="callout-title">What a brand domain is</span><p>A brand domain is the middle part of the address, for example the name in www.yourname.com. The limit counts those, not each subdomain.</p></div>
+
+        <h2>2. The list of connected domains</h2>
+        <p>Scroll to <span class="ui">Hosting domains</span>. HubSpot always lists its own system domain, which ends in hubspotpagebuilder. Below it are the domains you connected, with their status and the content types each one serves. A green Connected status means the DNS is in place.</p>
+        <figure class="shot"><a href="hosting-domains.webp"><img src="hosting-domains.webp" alt="Hosting domains table showing a system domain and a connected custom domain with content types" width="800" height="600" loading="lazy"></a><figcaption>System domain (top) and a connected custom domain (below) with its content types.</figcaption></figure>
+        <p>Each domain can be the primary domain for different content, such as website pages, blog, landing pages, or marketing email. Check that the right one is primary for each.</p>
+
+        <h2>3. DNS and SSL</h2>
+        <ul>
+          <li><strong>A subdomain</strong> such as www connects with a CNAME record.</li>
+          <li><strong>A root domain</strong> connects with A records.</li>
+          <li><strong>SSL</strong> is turned on automatically after the domain connects, usually in a few minutes and up to four hours. The green message in the screenshot is HubSpot confirming SSL for my www address is complete.</li>
+        </ul>
+        <p>If your DNS provider is not the one holding your registration, make the change where the DNS records are actually managed.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/connect-a-domain-to-hubspot">HubSpot Knowledge Base: Connect a domain to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/connect-additional-brand-domains">HubSpot Knowledge Base: Connect additional brand domains</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot">HubSpot Knowledge Base: SSL and domain security in HubSpot</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

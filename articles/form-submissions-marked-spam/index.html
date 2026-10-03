@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot form submissions marked as spam? Check for an unregistered site domain - HubSpot Field Notes</title>
+<meta name="description" content="Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/">
+<meta property="og:title" content="HubSpot form submissions marked as spam? Check for an unregistered site domain">
+<meta property="og:description" content="Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot form submissions marked as spam? Check for an unregistered site domain",
+      "description": "Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Stop HubSpot flagging form submissions from your own site as spam",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the Forms page", "text": "Go to Forms and read any warning banner at the top."},
+        {"@type": "HowToStep", "name": "Review the domains", "text": "Click Review site domains to see which domain is not recognized."},
+        {"@type": "HowToStep", "name": "Register the domain", "text": "Add the domain in Tracking & Analytics, Tracking Code, Advanced Tracking, Additional site domains."},
+        {"@type": "HowToStep", "name": "Release the submissions", "text": "Open the spam count for the form and release the real submissions."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot form submissions marked as spam? Check for an unregistered site domain", "item": "https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="form-submissions-marked-spam">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Forms">Forms</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot form submissions marked as spam? Check for an unregistered site domain</h1>
+      <p class="dek">A form on your website works, people submit it, and the submissions never show up as contacts. HubSpot may be quietly filing them as spam.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit forms; account access to Tracking & Analytics settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>When a form is embedded on a site HubSpot does not recognize, the submissions are flagged with the spam type <strong>Unregistered site domain</strong>. HubSpot warns you at the top of the Forms page with a banner that names the domain. Add the domain under <span class="ui">Tracking & Analytics</span>, <span class="ui">Advanced Tracking</span>, <span class="ui">Additional site domains</span>, then release any real submissions from the form's spam list with <span class="ui">Release to submissions</span>.</p>
+        </div>
+
+        <h2>1. Look for the banner</h2>
+        <p>Open <a class="hs-link" data-hs="/forms/{portalId}" href="https://app.hubspot.com/l/forms"><span class="ui">Forms</span></a>. If a site you have not registered is sending submissions, HubSpot puts a warning above the list. The one in my own account said that one domain was sending submissions that were not recognized in my analytics, and that without a fix the submissions would be marked as spam.</p>
+        <figure class="shot"><a href="banner.webp"><img src="banner.webp" alt="Forms page with the Unknown Domains Sending Submissions to Your Forms warning highlighted" width="800" height="600" loading="lazy"></a><figcaption>The warning above the Forms list.</figcaption></figure>
+
+        <h2>2. See which domain it is</h2>
+        <p>Click <span class="ui">Review site domains</span>. The dialog lists each site that is sending submissions HubSpot does not recognize. The domain here is blurred. Cancel closes it without changing anything, or <span class="ui">Go to report settings</span> takes you to the fix.</p>
+        <figure class="shot"><a href="review-dialog.webp"><img src="review-dialog.webp" alt="Review site domains dialog listing one unrecognized domain and the spam warning" width="800" height="600" loading="lazy"></a><figcaption>The Review site domains dialog. The domain is blurred.</figcaption></figure>
+
+        <h2>3. Register the domain</h2>
+        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/analytics-and-tracking" href="https://app.hubspot.com/l/settings/analytics-and-tracking"><span class="ui">Tracking & Analytics settings</span></a>, click the <span class="ui">Advanced Tracking</span> tab, and add the domain under <span class="ui">Additional site domains</span>. HubSpot counts the domains listed there as part of your site. My own list holds my HubSpot-hosted domains and my custom domain.</p>
+        <figure class="shot"><a href="additional-domains.webp"><img src="additional-domains.webp" alt="Advanced Tracking tab with the Additional site domains list highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Additional site domains list.</figcaption></figure>
+        <p>Subdomains are a separate case. Check each hostname that hosts a form.</p>
+
+        <h2>4. Release what was already flagged</h2>
+        <p>Registering the domain fixes new submissions. Anything already caught stays in the spam list until you release it. HubSpot's steps: on the Forms page, click the number in the <span class="ui">Spam Submissions</span> column, review the spam type for each row, select the real ones, and click <span class="ui">Release to submissions</span>.</p>
+        <div class="callout"><span class="callout-title">Other spam types</span><p>Unregistered site domain is one of several. HubSpot also flags a URL or HTML in a name field, a blocklisted email, a malicious script, gibberish text on Professional and Enterprise, a failed reCAPTCHA, and an <em>Excluded source</em>, which happens when the submission comes from an IP you excluded. See <a href="../exclude-own-traffic/">exclude your own traffic</a> for that last one.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/forms/manage-form-spam-submissions">HubSpot Knowledge Base: Manage spam form submissions</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Set up and style a HubSpot form on an external site</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

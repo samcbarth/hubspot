@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Set up a HubSpot meetings link so people can book time with you - HubSpot Field Notes</title>
+<meta name="description" content="Create a HubSpot scheduling page, connect your calendar so availability is accurate, and share the link on your website and in email. What the setup screen looks like and what to configure.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-meetings-link/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-meetings-link/">
+<meta property="og:title" content="Set up a HubSpot meetings link so people can book time with you">
+<meta property="og:description" content="Create a HubSpot scheduling page, connect your calendar so availability is accurate, and share the link on your website and in email. What the setup screen looks like and what to configure.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-meetings-link/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Set up a HubSpot meetings link so people can book time with you",
+      "description": "Create a HubSpot scheduling page, connect your calendar so availability is accurate, and share the link on your website and in email. What the setup screen looks like and what to configure.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubspot-meetings-link/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubspot-meetings-link/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a HubSpot meetings link",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Connect your calendar", "text": "Connect Google or Microsoft 365 so availability is accurate."},
+        {"@type": "HowToStep", "name": "Create a scheduling page", "text": "In Meetings, create a scheduling page and choose one-on-one."},
+        {"@type": "HowToStep", "name": "Set details and availability", "text": "Set the event title, location, duration, time zone, and availability."},
+        {"@type": "HowToStep", "name": "Share the link", "text": "Copy the share link and use it on your site and in email."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Set up a HubSpot meetings link so people can book time with you", "item": "https://hubspot.samcbarth.com/articles/hubspot-meetings-link/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubspot-meetings-link">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Meetings">Meetings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Set up a HubSpot meetings link so people can book time with you</h1>
+      <p class="dek">A booking link replaces the back and forth about times. HubSpot's version reads your calendar so people only see times you have free.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>See HubSpot's meetings tool documentation for what your tier includes</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Meetings access and a connected calendar</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Connect your calendar first, so contacts see current availability. In the meetings tool, create a scheduling page, pick one-on-one, set the event title, location, duration, and time zone, and copy the share link. Anyone who opens it sees your free times based on the connected calendar, and a Gmail or Microsoft 365 calendar syncs booked meetings. The first time you open the meetings tool in a new user account, HubSpot shows a short intro with a <span class="ui">Get Started</span> button.</p>
+        </div>
+
+        <h2>1. Open the meetings tool</h2>
+        <p>Go to <a class="hs-link" data-hs="/meetings/{portalId}" href="https://app.hubspot.com/l/meetings"><span class="ui">Meetings</span></a>. If you have not set up a link, HubSpot shows an introduction: allow contacts to schedule by connecting your calendar and sharing your link, customize the meeting with availability, duration, and preferences, and a guided setup if you need help. Click <span class="ui">Get Started</span>.</p>
+        <figure class="shot"><a href="intro.webp"><img src="intro.webp" alt="HubSpot meetings tool introduction page with the Get Started button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The meetings introduction. Get Started begins setup.</figcaption></figure>
+
+        <h2>2. Connect your calendar before anything else</h2>
+        <p>HubSpot's documentation recommends connecting the calendar before you create a scheduling page. Available times come from the owner's connected calendar, so skipping this gives contacts times you may not have free. A Gmail or Microsoft 365 calendar syncs both ways, so a booking lands on your calendar.</p>
+
+        <h2>3. Create the scheduling page</h2>
+        <ul>
+          <li>Choose a <strong>one-on-one</strong> page for yourself.</li>
+          <li>Set the <strong>event title</strong>, the name that shows on the calendar event, such as "Meeting with Sam".</li>
+          <li>Set the <strong>location</strong>: a call-in link or a physical address.</li>
+          <li>Set your <strong>time zone</strong>, <strong>meeting duration</strong>, and <strong>availability</strong>.</li>
+        </ul>
+
+        <h2>4. Share it</h2>
+        <p>Click <span class="ui">Copy share link</span>. Use the link in your email signature, on your website, and in outreach. This site's Book a call button points to one. You can also embed the scheduling widget directly in a page. See the embed article in the sources.</p>
+        <div class="callout"><span class="callout-title">Test it yourself</span><p>Open your link in a private window and look at the times it offers. If they look wrong, the problem is your calendar connection or time zone, not the page.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/create-and-edit-scheduling-pages">HubSpot Knowledge Base: Create scheduling pages with the meetings tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/use-meetings">HubSpot Knowledge Base: Connect your calendar to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/embed-the-meeting-widget-on-a-page">HubSpot Knowledge Base: Embed the scheduling widget on a page</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

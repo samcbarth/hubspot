@@ -301,6 +301,68 @@
     <category>Imports</category>
   </item>
   <item>
+    <title>HubSpot form submissions marked as spam? Check for an unregistered site domain</title>
+    <link>https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Forms</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>How to embed a HubSpot form on a site that is not hosted in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find a HubSpot form&#39;s embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Connect your own domain to HubSpot (and what the brand domain limit means)</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-custom-domain-to-hubspot/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to see your connected HubSpot hosting domains, what a brand domain is, the DNS record each type needs, and how SSL is turned on. Includes the one brand domain limit on a lower tier.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Active vs static segments in HubSpot: which one to build</title>
+    <link>https://hubspot.samcbarth.com/articles/active-vs-static-segments/</link>
+    <guid>https://hubspot.samcbarth.com/articles/active-vs-static-segments/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Active segments update themselves as records meet or stop meeting your criteria. Static segments are a fixed snapshot. When each is the right choice, with the Type column to check what you have.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Set up a HubSpot meetings link so people can book time with you</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-meetings-link/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-meetings-link/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Create a HubSpot scheduling page, connect your calendar so availability is accurate, and share the link on your website and in email. What the setup screen looks like and what to configure.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Add a consent checkbox to a HubSpot form (newsletter signup example)</title>
+    <link>https://hubspot.samcbarth.com/articles/form-consent-checkbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-consent-checkbox/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How a HubSpot form can ask for consent: a required checkbox for the communication type plus a processing notice. The three consent options and the setup used on a real newsletter form.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Forms</category>
+    <category>Consent</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

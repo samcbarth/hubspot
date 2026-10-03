@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>How to embed a HubSpot form on a site that is not hosted in HubSpot - HubSpot Field Notes</title>
+<meta name="description" content="Where to find a HubSpot form's embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/">
+<meta property="og:title" content="How to embed a HubSpot form on a site that is not hosted in HubSpot">
+<meta property="og:description" content="Where to find a HubSpot form's embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "How to embed a HubSpot form on a site that is not hosted in HubSpot",
+      "description": "Where to find a HubSpot form's embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Embed a HubSpot form on an external website",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the form", "text": "Go to Forms and open the form in the editor."},
+        {"@type": "HowToStep", "name": "Open Share", "text": "Click Share in the editor and choose the Embed code tab."},
+        {"@type": "HowToStep", "name": "Paste the code", "text": "Copy the code and paste it into the HTML of your page where the form should appear."},
+        {"@type": "HowToStep", "name": "Register the domain", "text": "Add your site's domain in Tracking & Analytics and install the tracking code if you want analytics."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How to embed a HubSpot form on a site that is not hosted in HubSpot", "item": "https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="embed-hubspot-form-external-site">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Forms">Forms</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>How to embed a HubSpot form on a site that is not hosted in HubSpot</h1>
+      <p class="dek">This site is not hosted on HubSpot, and its newsletter and request forms are HubSpot forms. The embed takes a few minutes if you know where to look.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers for the standard embed; developer code needs Professional</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit forms</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the form in the editor, click <span class="ui">Share</span>, and copy the <span class="ui">Embed code</span>. It is a script from <code>js.hsforms.net</code> plus a call that creates the form with your portal and form IDs. Paste it into your page's HTML. Then register the site's domain, or the submissions will be flagged as spam, and install the HubSpot tracking code if you want the form's analytics to work. If you do not want to embed anything, the <span class="ui">Share link</span> tab gives a standalone form page.</p>
+        </div>
+
+        <h2>1. Build the form first</h2>
+        <p>The newsletter form on this site was built in <a class="hs-link" data-hs="/forms/{portalId}" href="https://app.hubspot.com/l/forms"><span class="ui">Forms</span></a> like any other. It has an email field, a first name field, a consent checkbox, and a submit button. Everything on the page is editable in the HubSpot editor, not on your site.</p>
+        <figure class="shot"><a href="form-editor.webp"><img src="form-editor.webp" alt="HubSpot form editor showing an email field, a first name field, a consent checkbox, and the Share button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The form editor with the Share button (top right) highlighted.</figcaption></figure>
+
+        <h2>2. Open Share, then Embed code</h2>
+        <p>Click <span class="ui">Share</span>. The dialog opens with two tabs. <span class="ui">Embed code</span> has the snippet to paste into your site. It loads a HubSpot script and calls a function that renders the form with your portal ID and form ID.</p>
+        <figure class="shot"><a href="embed-code.webp"><img src="embed-code.webp" alt="Share your form dialog on the Embed code tab with the code block highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Embed code tab.</figcaption></figure>
+        <div class="code"><pre><code>&lt;script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  hbspt.forms.create({
+    portalId: "YOUR_PORTAL_ID",
+    formId: "YOUR_FORM_ID"
+  });
+&lt;/script&gt;</code></pre></div>
+        <p>Use the exact code from your own dialog, because it also carries your region setting. Paste it where the form should appear.</p>
+
+        <h2>3. Or use the share link</h2>
+        <p>The <span class="ui">Share link</span> tab gives a standalone page that needs no code. HubSpot hosts the form on its own address and you can link to it from anywhere. The link is blurred below.</p>
+        <figure class="shot"><a href="share-link.webp"><img src="share-link.webp" alt="Share your form dialog on the Share link tab with the tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Share link tab. The link is blurred.</figcaption></figure>
+
+        <h2>4. Two things that make it work</h2>
+        <ul>
+          <li><strong>Register the domain.</strong> Submissions from a domain HubSpot does not recognize are marked as spam. See <a href="../form-submissions-marked-spam/">form submissions marked as spam</a>.</li>
+          <li><strong>Install the tracking code.</strong> HubSpot's documentation says the tracking code is needed on the external page to track analytics for an embedded form.</li>
+        </ul>
+        <p>Styling is controlled in the editor under <span class="ui">Style &amp; preview</span>. Advanced CSS control through developer code needs Marketing Hub or Content Hub Professional.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Set up and style a HubSpot form on an external site</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/manage-form-spam-submissions">HubSpot Knowledge Base: Manage spam form submissions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
