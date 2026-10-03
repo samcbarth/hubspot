@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot dropdown options: labels vs internal names, and why imports and integrations care - HubSpot Field Notes</title>
+<meta name="description" content="Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/">
+<meta property="og:title" content="HubSpot dropdown options: labels vs internal names, and why imports and integrations care">
+<meta property="og:description" content="Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot dropdown options: labels vs internal names, and why imports and integrations care",
+      "description": "Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find the internal names of a HubSpot dropdown property",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the property", "text": "Go to Settings, Properties, and click the property."},
+        {"@type": "HowToStep", "name": "Open Field type", "text": "Click Field type in the left menu."},
+        {"@type": "HowToStep", "name": "Read the options table", "text": "Compare the Label and Internal name columns."},
+        {"@type": "HowToStep", "name": "Copy them", "text": "Use Copy option labels and internal names to paste them into a mapping sheet."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot dropdown options: labels vs internal names, and why imports and integrations care", "item": "https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="dropdown-option-labels-vs-internal-names">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Properties">Properties</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot dropdown options: labels vs internal names, and why imports and integrations care</h1>
+      <p class="dek">What users see and what the API sends are two different strings. Most mapping problems come from mixing them up.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>View access to property settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the property, click <strong>Field type</strong>, and scroll to the options table. Each option has a <strong>Label</strong> (what users see, such as Open Deal) and an <strong>Internal name</strong> (such as OPEN_DEAL). HubSpot says the internal name is what APIs and integrations use. For imports, values must match either the label or the internal value. The table also shows whether each option appears in forms and how many records have it, and <strong>Copy option labels and internal names</strong> copies the full list.</p>
+        </div>
+
+        <h2>1. The field type section</h2>
+        <p>Open a dropdown or radio property from <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Properties</span></a> and click <span class="ui">Field type</span>. I am using Lead Status, a radio select property.</p>
+        <figure class="shot"><a href="fieldtype.webp"><img src="fieldtype.webp" alt="Field type section showing the field type, the default value, and the option style" width="800" height="600" loading="lazy"></a><figcaption>Field type (1), default value (2), and option style (3).</figcaption></figure>
+        <ul>
+          <li><strong>Default value.</strong> HubSpot says this fills automatically whenever a new record is created. Leave it empty unless every new record really should start with that value.</li>
+          <li><strong>Option style.</strong> Default, with a dot, or as a badge. This is display only.</li>
+        </ul>
+
+        <h2>2. The options table</h2>
+        <p>Scroll down to the options. There are tabs for Active options (8 here) and Archived options.</p>
+        <figure class="shot"><a href="options.webp"><img src="options.webp" alt="Lead Status options table with the Label, Internal name, In Forms, and With value columns and the copy link highlighted" width="800" height="600" loading="lazy"></a><figcaption>Labels (1), internal names (2), In Forms and With value (3), and the copy link (4).</figcaption></figure>
+        <ol>
+          <li><strong>Label.</strong> What users see: New, Open, In Progress, Open Deal.</li>
+          <li><strong>Internal name.</strong> NEW, OPEN, IN_PROGRESS, OPEN_DEAL. HubSpot says the internal name is generated from the label and is the name used by APIs and integrations.</li>
+          <li><strong>In Forms and With value.</strong> Whether the option shows in forms (contact properties only), and how many records have it. Open Deal is on 6 records in my demo, Unqualified on none.</li>
+          <li><strong>Copy option labels and internal names</strong> copies the pairs for a mapping sheet.</li>
+        </ol>
+
+        <h2>3. Where the difference bites</h2>
+        <ul>
+          <li><strong>Imports.</strong> HubSpot says values in your file must match either the label or the internal value of an option. For multiple checkboxes, separate values with a semicolon and no spaces.</li>
+          <li><strong>Integrations and scripts.</strong> Send the internal name. If you rename a label later, the internal name does not have to change, so a mapping built on labels can break while one built on internal names keeps working.</li>
+          <li><strong>Limits.</strong> HubSpot caps an enumeration property at 5,000 options or 512,000 bytes, and 3,000 characters per option.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/properties/understand-the-property-editor">HubSpot Knowledge Base: Understand the property editor</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/set-up-your-import-file">HubSpot Knowledge Base: Format import files</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/property-field-types-in-hubspot">HubSpot Knowledge Base: Understand property field types in HubSpot</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -485,6 +485,217 @@
     <category>Subscriptions</category>
   </item>
   <item>
+    <title>The HubSpot Properties page: find, filter, and audit your properties</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-properties-page-tour/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-properties-page-tour/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A tour of the Properties settings page in HubSpot: choosing an object, the Properties, Conditional logic, Groups, and Archived tabs, the filters, search, and exporting a list of properties.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Conditional property logic in HubSpot: show or require a field based on another</title>
+    <link>https://hubspot.samcbarth.com/articles/conditional-property-logic/</link>
+    <guid>https://hubspot.samcbarth.com/articles/conditional-property-logic/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot conditional property logic works: where to create it, which property types can drive it, where it is enforced, and the gap that workflows and other tools leave open.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Check where a HubSpot property is used before you change or delete it</title>
+    <link>https://hubspot.samcbarth.com/articles/check-property-usage-before-deleting/</link>
+    <guid>https://hubspot.samcbarth.com/articles/check-property-usage-before-deleting/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Use the property editor&#39;s Usage section to see a property&#39;s fill rate and every view, form, workflow, and card that uses it, before you rename, change, or archive it.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubSpot dropdown options: labels vs internal names, and why imports and integrations care</title>
+    <link>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>HubSpot saved views: quick filters, advanced filters, view types, and sharing</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-saved-views-and-filters/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-saved-views-and-filters/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How saved views work on HubSpot index pages such as Contacts: view tabs, quick and advanced filters, the View settings panel with table, board, calendar, Gantt and report views, and sharing.</description>
+    <category>Smart CRM</category>
+    <category>Views</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Find the records from a HubSpot import, and what else the import page can do</title>
+    <link>https://hubspot.samcbarth.com/articles/find-records-from-an-import/</link>
+    <guid>https://hubspot.samcbarth.com/articles/find-records-from-an-import/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.</description>
+    <category>Smart CRM</category>
+    <category>Import</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>HubSpot deal settings: default deal amount, default close date, and the create form</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot pipeline rules: stop deals skipping stages or moving backwards</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Pipeline Rules tab in HubSpot deal pipeline settings: limit creation to certain stages, restrict skipping and moving backwards, control editing access, and approvals, plus who can bypass them.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot deal stage probability: what the percentage does and where to change it</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-stage-probability/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-stage-probability/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Every HubSpot deal stage has a probability. Where to see and change it in pipeline settings, HubSpot&#39;s default stages and percentages, and how it drives the weighted amount on the board.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)</title>
+    <link>https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/</link>
+    <guid>https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find the internal IDs for HubSpot deal pipelines and stages, which imports, workflows, integrations, and the API need, plus the pipeline count and limit shown in settings.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Pipelines</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>HubSpot deal tags: color-coded labels for Overdue, Stale, and anything you can filter</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot deal tags (object tags) work: where to set them per pipeline, the conditions behind them, the tags in my demo pipeline, tier differences, and where else the tag property can be used.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Why HubSpot changes a deal&#39;s close date when you mark it won or lost</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-close-date-changes-when-won/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-close-date-changes-when-won/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot sets a deal&#39;s close date to today when the deal moves to a closed stage. Where that templated automation lives, the second rule for reopened deals, and when to turn either off.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot snippets: reusable text you insert with a # shortcut</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-snippets-shortcuts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-snippets-shortcuts/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot snippets work: where to create them, the # shortcut, where you can use them, the 2,500 character limit, personalization tokens, and the account limits by tier.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Snippets</category>
+  </item>
+  <item>
+    <title>HubSpot sales email templates: create, share, personalize, and track them</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-email-templates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-email-templates/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot message templates for one-to-one email work: the templates list, sharing and folders, personalization tokens, previewing with a contact, the limits by tier, and reporting with the Template ID property.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Templates</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>HubSpot attribution interaction types: which touches count, and which are off by default</title>
+    <link>https://hubspot.samcbarth.com/articles/attribution-interaction-types/</link>
+    <guid>https://hubspot.samcbarth.com/articles/attribution-interaction-types/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The attribution settings page in HubSpot: which interaction types are included in revenue and deal create attribution reports, which are off by default, and the reprocessing that follows a change.</description>
+    <category>Marketing Hub</category>
+    <category>Attribution</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>HubSpot account defaults: time zone and fiscal year, and what they change</title>
+    <link>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</link>
+    <guid>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Account Defaults page in HubSpot: account name, time zone, and fiscal year, what each one affects across scheduling, workflows, and reports, and the user time zone that is separate.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Multiple currencies in HubSpot: company currency, exchange rates, and how deals convert</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-multiple-currencies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-multiple-currencies/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles more than one currency: the company currency, adding currencies, automatic exchange rate updates, and how the Amount in company currency is calculated for open and closed deals.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Currency</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot notification settings: pop-up, browser, bell, email, mobile, and Slack</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-notification-preferences/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-notification-preferences/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot user notifications work: the six channels, setting channel defaults, turning topics on or off, the daily email notification cap, and notification profiles admins can push to users.</description>
+    <category>Smart CRM</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Your HubSpot email setup: connect your inbox, add an alias, and set a signature</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-inbox-alias-signature/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-inbox-alias-signature/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The personal Email preferences tab in HubSpot: connecting a work inbox, adding an email alias, and managing email signatures, with what each one is for.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>User settings</category>
+  </item>
+  <item>
+    <title>Why a HubSpot contact&#39;s owner changed when you emailed them</title>
+    <link>https://hubspot.samcbarth.com/articles/contact-owner-changed-automatically/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contact-owner-changed-automatically/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot can assign an unowned contact to whoever emails them from the CRM, and give contacts their company&#39;s owner. Where those two settings live and when to turn them off.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Ownership</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>HubSpot association labels: describe how records are related</title>
+    <link>https://hubspot.samcbarth.com/articles/association-labels/</link>
+    <guid>https://hubspot.samcbarth.com/articles/association-labels/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How association labels work in HubSpot: where to see them in the Data Model Builder, single vs paired labels, the 50 label limit per object pair, cardinality, and where labels can be used.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Associations</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

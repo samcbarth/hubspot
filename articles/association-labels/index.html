@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot association labels: describe how records are related - HubSpot Field Notes</title>
+<meta name="description" content="How association labels work in HubSpot: where to see them in the Data Model Builder, single vs paired labels, the 50 label limit per object pair, cardinality, and where labels can be used.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/association-labels/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/association-labels/">
+<meta property="og:title" content="HubSpot association labels: describe how records are related">
+<meta property="og:description" content="How association labels work in HubSpot: where to see them in the Data Model Builder, single vs paired labels, the 50 label limit per object pair, cardinality, and where labels can be used.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/association-labels/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot association labels: describe how records are related",
+      "description": "How association labels work in HubSpot: where to see them in the Data Model Builder, single vs paired labels, the 50 label limit per object pair, cardinality, and where labels can be used.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/association-labels/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/association-labels/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Manage association labels in HubSpot",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the data model", "text": "Go to Data Management, Data Model, or Settings, Objects, Manage associations."},
+        {"@type": "HowToStep", "name": "Pick the object", "text": "Choose the object, such as Contacts."},
+        {"@type": "HowToStep", "name": "Open associated objects and labels", "text": "Click the Associated objects and labels tab."},
+        {"@type": "HowToStep", "name": "Create or edit a label", "text": "Create a single or paired label and set its limit."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot association labels: describe how records are related", "item": "https://hubspot.samcbarth.com/articles/association-labels/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="association-labels">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Associations">Associations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot association labels: describe how records are related</h1>
+      <p class="dek">A contact associated to a deal tells you they are related. A label tells you whether they are the buyer, the champion, or the billing contact.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin to create labels</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Association labels describe a relationship, for example a contact labeled Billing Contact on a company. See them in the <strong>Data Model Builder</strong>, on the <strong>Associated objects and labels</strong> tab, which lists each associated object with its cardinality and labels. HubSpot allows up to 50 labels per object pair. A label is single (Colleague) or paired (Manager and Employee), and a pair counts as one. Labels can be used on records and in segments, workflows, custom reports, imports, and the API. They need Professional or Enterprise, and creating them needs Super Admin.</p>
+        </div>
+
+        <h2>1. The associations tab</h2>
+        <p>From <a class="hs-link" data-hs="/object-type-settings/{portalId}/object/0-1" href="https://app.hubspot.com/l/object-type-settings/object/0-1"><span class="ui">Contacts settings</span></a>, click <span class="ui">Manage Contact associations</span>. It opens the Data Model Builder on the <span class="ui">Associated objects and labels</span> tab. I have blurred a test label in my demo.</p>
+        <figure class="shot"><a href="labels.webp"><img src="labels.webp" alt="Data Model Builder showing associated objects, their cardinality, and the labels on the contact to company association" width="800" height="512" loading="lazy"></a><figcaption>The tab (1), cardinality (2), and the contact to company labels (3).</figcaption></figure>
+        <ul>
+          <li><strong>Cardinality.</strong> Each associated object shows a limit, such as 1-to-many. The Limits filter narrows to 1-to-1, 1-to-many, or custom.</li>
+          <li><strong>Labels.</strong> Contact to company in my demo has Contact with Primary Company, Primary (1-to-1), and Billing Contact (1-to-many).</li>
+        </ul>
+
+        <h2>2. Single and paired labels</h2>
+        <ul>
+          <li><strong>Single:</strong> the same word describes both sides, such as Colleague or Partner.</li>
+          <li><strong>Paired:</strong> each side has its own word, such as Manager and Employee, or Headquarters and Regional Office. A pair counts as one label toward the 50 per object pair.</li>
+          <li>Each label can allow many associations or a custom number, which is how a label like Primary stays at one.</li>
+        </ul>
+
+        <h2>3. Where labels pay off</h2>
+        <p>HubSpot lists records, segments, workflows, custom reports, imports, and the API. A segment of contacts labeled Billing Contact on customer companies is a better invoice list than a guessed job title. When you build them, keep the list short and agreed, because labels nobody uses add noise to every association.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/create-and-use-association-labels">HubSpot Knowledge Base: Create and use association labels</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

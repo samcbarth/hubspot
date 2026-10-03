@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have) - HubSpot Field Notes</title>
+<meta name="description" content="Where to find the internal IDs for HubSpot deal pipelines and stages, which imports, workflows, integrations, and the API need, plus the pipeline count and limit shown in settings.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/">
+<meta property="og:title" content="Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)">
+<meta property="og:description" content="Where to find the internal IDs for HubSpot deal pipelines and stages, which imports, workflows, integrations, and the API need, plus the pipeline count and limit shown in settings.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)",
+      "description": "Where to find the internal IDs for HubSpot deal pipelines and stages, which imports, workflows, integrations, and the API need, plus the pipeline count and limit shown in settings.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find HubSpot pipeline and stage IDs",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open pipelines", "text": "Go to Settings, Objects, Deals, Pipelines."},
+        {"@type": "HowToStep", "name": "Open the pipeline", "text": "Click the pipeline. Its ID is the number at the end of the URL."},
+        {"@type": "HowToStep", "name": "Scroll the stage table", "text": "Scroll the Configure table right to the Stage ID column."},
+        {"@type": "HowToStep", "name": "Copy the IDs", "text": "Use the copy icon next to each stage ID."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)", "item": "https://hubspot.samcbarth.com/articles/find-pipeline-and-stage-ids/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="find-pipeline-and-stage-ids">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pipelines">Pipelines</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)</h1>
+      <p class="dek">Integrations and API calls want stage IDs, not stage names. HubSpot shows them in pipeline settings.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers; custom pipeline limits depend on subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Access to pipeline settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open a pipeline in <span class="ui">Settings</span>, <span class="ui">Objects</span>, <span class="ui">Deals</span>, <span class="ui">Pipelines</span>. The pipeline's ID is the number at the end of the page URL, and the stage table has a <strong>Stage ID</strong> column with a copy icon. HubSpot says these internal names are what integrations and APIs use. The Pipelines page also shows how many pipelines you have and how many remain. My demo has 7 with 343 remaining, which matches HubSpot's 350 limit for Enterprise.</p>
+        </div>
+
+        <h2>1. The pipeline list and limit</h2>
+        <p>Open <a class="hs-link" data-hs="/pipelines-settings/{portalId}/object/0-3" href="https://app.hubspot.com/l/pipelines-settings/object/0-3"><span class="ui">deal pipeline settings</span></a>.</p>
+        <figure class="shot"><a href="pipelines.webp"><img src="pipelines.webp" alt="Deal pipelines list with the pipeline count and remaining pipelines highlighted" width="800" height="600" loading="lazy"></a><figcaption>Pipeline count and remaining (1), and the pipeline list (2).</figcaption></figure>
+        <p>The count reads <em>7 deal pipelines | 343 remaining pipelines</em>. HubSpot's custom pipeline limits on seat-based plans are 15 on Starter, 100 on Professional, and 350 on Enterprise. Free tools get no custom pipelines.</p>
+
+        <h2>2. The pipeline ID</h2>
+        <p>Click a pipeline. Its ID is the last number in the address bar. Mine is <code>/pipelines-settings/242678301/object/0-3/2222902003</code>, so the pipeline ID is <code>2222902003</code>. HubSpot also shows it as the pipeline's internal name through a code icon.</p>
+
+        <h2>3. The stage IDs</h2>
+        <p>On the Configure tab, scroll the stage table to the right. Its columns are Stage name, Stage description, Probability, Used in, Conditional logic rules, Pipeline rules, Enable stage calculated properties, Stage ID, and Delete.</p>
+        <figure class="shot"><a href="stage-ids.webp"><img src="stage-ids.webp" alt="Stage table scrolled right to the Stage ID column with copy icon" width="800" height="600" loading="lazy"></a><figcaption>The Stage ID column, with a copy icon on hover.</figcaption></figure>
+        <ul>
+          <li>Use the stage ID, not the label, in API calls and integration mappings. Labels can be renamed. IDs do not change when you rename.</li>
+          <li>For other IDs you may need, see <a href="../hubspot-object-type-ids/">HubSpot object type IDs</a> and <a href="../find-hubspot-portal-id/">find your portal ID</a>.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/crm-pipelines-v3/guide">HubSpot Developers: Pipelines API</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

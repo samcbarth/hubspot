@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Find the records from a HubSpot import, and what else the import page can do - HubSpot Field Notes</title>
+<meta name="description" content="Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/find-records-from-an-import/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/find-records-from-an-import/">
+<meta property="og:title" content="Find the records from a HubSpot import, and what else the import page can do">
+<meta property="og:description" content="Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/find-records-from-an-import/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Find the records from a HubSpot import, and what else the import page can do",
+      "description": "Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/find-records-from-an-import/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/find-records-from-an-import/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find the records from a past HubSpot import",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Data Integration", "text": "Go to Data Management, Data Integration."},
+        {"@type": "HowToStep", "name": "Find the import", "text": "On the File imports tab, click the import's name."},
+        {"@type": "HowToStep", "name": "Open Actions", "text": "On the Summary card, click Actions."},
+        {"@type": "HowToStep", "name": "Choose what to do", "text": "View the records, add them to a segment, or download the file."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Find the records from a HubSpot import, and what else the import page can do", "item": "https://hubspot.samcbarth.com/articles/find-records-from-an-import/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="find-records-from-an-import">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Import">Import</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Smart CRM</span></div>
+      <h1>Find the records from a HubSpot import, and what else the import page can do</h1>
+      <p class="dek">An import finished and now you need exactly those records. HubSpot remembers which ones they were.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Import access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Go to <span class="ui">Data Management</span>, <span class="ui">Data Integration</span> and open the import on the <strong>File imports</strong> tab. The Summary card shows import rows, new records, updated records, and new associations. Its <strong>Actions</strong> menu lets you view the imported records as a segment, add them to a segment, or download the file. HubSpot says original files and use-as-template are available for imports completed in the last six months.</p>
+        </div>
+
+        <h2>1. Import history</h2>
+        <p>Open <a class="hs-link" data-hs="/data-integration-home/{portalId}" href="https://app.hubspot.com/l/data-integration-home"><span class="ui">Data Integration</span></a> and scroll to <span class="ui">Monitor your imports &amp; syncs</span>. The File imports tab lists every import with its state and counts. Filters let you narrow by import source, the user who created it, and date.</p>
+        <figure class="shot"><a href="history.webp"><img src="history.webp" alt="Data Integration page showing the File imports tab and the list of past imports" width="800" height="600" loading="lazy"></a><figcaption>The import filters (1) and the list of imports (2).</figcaption></figure>
+
+        <h2>2. The import details page</h2>
+        <p>Click an import's name. This one created 179,631 new contacts and updated 1.</p>
+        <figure class="shot"><a href="summary.webp"><img src="summary.webp" alt="Import details page with the Summary card and the Errors tab highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Summary card (1) and the Errors tab (2).</figcaption></figure>
+        <ul>
+          <li><strong>Summary.</strong> Import rows, new records, updated records, and new associations.</li>
+          <li><strong>Errors tab.</strong> Lists any rows that failed. HubSpot shows a checkmark when there are none. This one has 0.</li>
+          <li><strong>Clean up your import</strong> appears on the right to fix formatting issues in the imported contacts.</li>
+        </ul>
+
+        <h2>3. The Actions menu</h2>
+        <figure class="shot"><a href="actions.webp"><img src="actions.webp" alt="Import Actions menu showing View contacts segment, Add imported contacts to segment, and Download Contacts file" width="800" height="600" loading="lazy"></a><figcaption>The Actions menu on the Summary card.</figcaption></figure>
+        <ul>
+          <li><strong>View contacts segment</strong> opens the records from this import.</li>
+          <li><strong>Add imported contacts to segment</strong> adds them to a new or existing segment, so a follow-up workflow or email can target exactly this batch.</li>
+          <li><strong>Download Contacts file</strong> gets the original file back. HubSpot says this works for imports completed in the last six months.</li>
+        </ul>
+        <p>HubSpot also offers using a past import as a template for a new one, for imports completed in the last six months. For using an import to update existing records, see <a href="../enrich-records-record-id-import/">enrich records with a Record ID import</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/import-and-export/view-and-analyze-previous-imports">HubSpot Knowledge Base: View and analyze past imports</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/set-up-your-import-file">HubSpot Knowledge Base: Format import files</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
