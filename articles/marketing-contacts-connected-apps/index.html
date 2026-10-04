@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Contacts from connected apps are non-marketing by default: the setting that changes it - HubSpot Field Notes</title>
+<meta name="description" content="The Marketing Contacts integration setting in HubSpot: why contacts synced by apps are non-marketing, how to set an app to sync marketing contacts, and the billing impact.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/">
+<meta property="og:title" content="Contacts from connected apps are non-marketing by default: the setting that changes it">
+<meta property="og:description" content="The Marketing Contacts integration setting in HubSpot: why contacts synced by apps are non-marketing, how to set an app to sync marketing contacts, and the billing impact.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Contacts from connected apps are non-marketing by default: the setting that changes it",
+      "description": "The Marketing Contacts integration setting in HubSpot: why contacts synced by apps are non-marketing, how to set an app to sync marketing contacts, and the billing impact.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Sync contacts from an app as marketing contacts in HubSpot",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the setting", "text": "Go to Settings, Integrations, Marketing Contacts."},
+        {"@type": "HowToStep", "name": "Find the app", "text": "Find the app in Your connected apps."},
+        {"@type": "HowToStep", "name": "Toggle it on", "text": "Turn on syncing contacts as marketing contacts."},
+        {"@type": "HowToStep", "name": "Watch your tier", "text": "Check your marketing contact tier limit."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contacts from connected apps are non-marketing by default: the setting that changes it", "item": "https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="marketing-contacts-connected-apps">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Marketing+contacts">Marketing contacts</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Marketing Hub</span></div>
+      <h1>Contacts from connected apps are non-marketing by default: the setting that changes it</h1>
+      <p class="dek">Leads from an integration cannot get your newsletter. That is by design, and one toggle per app changes it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Starter and up</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing contacts access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Only marketing contacts can receive marketing email and be targeted with ads. HubSpot says apps that sync contacts set them as non-marketing by default. In <span class="ui">Settings</span>, <span class="ui">Integrations</span>, <span class="ui">Marketing Contacts</span>, turn on the toggle for each app that should create marketing contacts. All new marketing contacts count toward your billable tier. Every app in my demo is off.</p>
+        </div>
+
+        <h2>1. The setting</h2>
+        <p>Open <a class="hs-link" data-hs="/integrations-settings/{portalId}/marketable-contacts-settings" href="https://app.hubspot.com/l/integrations-settings/marketable-contacts-settings"><span class="ui">Marketing Contacts settings</span></a>.</p>
+        <figure class="shot"><a href="apps.webp"><img src="apps.webp" alt="Marketing contacts settings with the explanation and the per-app toggles highlighted" width="800" height="553" loading="lazy"></a><figcaption>The explanation (1) and the per-app toggles (2).</figcaption></figure>
+        <p>The page lists every connected app that syncs contacts, with a toggle labeled <em>Turn on to sync contacts as marketing contacts</em>.</p>
+
+        <h2>2. Before you turn one on</h2>
+        <ul>
+          <li>Every new marketing contact counts toward your billable contact tier.</li>
+          <li>It applies to apps connected through OAuth or the App Marketplace.</li>
+          <li>It affects new contacts from that app. Existing contacts keep their status.</li>
+        </ul>
+        <p>For one contact you want to stop emailing, see <a href="../opt-out-contact-all-email/">opt a contact out of all email</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/manage-marketing-contacts-settings-for-your-integrations">HubSpot Knowledge Base: Manage the marketing contacts settings for your integrations</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

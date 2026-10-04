@@ -696,6 +696,307 @@
     <category>Associations</category>
   </item>
   <item>
+    <title>Why HubSpot creates companies from contact emails, and how to exclude a domain</title>
+    <link>https://hubspot.samcbarth.com/articles/company-auto-association-by-domain/</link>
+    <guid>https://hubspot.samcbarth.com/articles/company-auto-association-by-domain/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The HubSpot setting that creates and associates companies based on a contact&#39;s email domain, when it does not apply, and how to opt a domain out of automatic association.</description>
+    <category>Smart CRM</category>
+    <category>Companies</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Customize HubSpot lifecycle stages: add, rename, and what contacts and companies share</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-lifecycle-stages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-lifecycle-stages/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where lifecycle stages are customized in HubSpot, what contacts and companies share, the warning for integrations, and what blocks deleting a stage.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Lifecycle stages</category>
+  </item>
+  <item>
+    <title>HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won</title>
+    <link>https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Automate tab for lifecycle stages in HubSpot: sync lifecycle stages from the primary company, set a stage when a deal is created, and set a stage when a deal is won.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Lifecycle stages</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot data enrichment settings: why fields fill themselves in</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-data-enrichment-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-data-enrichment-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Data Enrichment settings in HubSpot: automatic enrichment of new records, continuous enrichment, overwriting incorrect values, recently engaged contacts, and opting out of company name enrichment.</description>
+    <category>Smart CRM</category>
+    <category>Data enrichment</category>
+  </item>
+  <item>
+    <title>HubSpot data privacy settings (GDPR): what turning them on changes</title>
+    <link>https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the Data privacy settings toggle in HubSpot does: legal basis tracking, unsubscribe links on sales email, tracking limits for contacts without a legal basis, and who can turn it on.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Privacy</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>HubSpot can delete inactive contacts automatically: the setting and the criteria</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-inactive-contacts-automatically/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-inactive-contacts-automatically/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Delete inactive contacts automatically setting in HubSpot Privacy &amp; Consent: how inactivity is defined, when deletion runs, the 90-day restore window, and the enrichment deletion setting next to it.</description>
+    <category>Smart CRM</category>
+    <category>Privacy</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>HubSpot cookie consent banners: default banners, domains, and where to start</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-cookie-consent-banner/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-cookie-consent-banner/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Cookies tab in HubSpot Privacy &amp; Consent: default consent banners that apply to every site with your tracking code, domain-specific banners, and adding an external domain.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Privacy</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>HubSpot approvals: require sign-off before pages, blog posts, emails, or social posts go out</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-content-approvals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-content-approvals/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Approvals settings page in HubSpot: which content types can require approval, who can skip approvals, how approval permission is granted, and the tiers required.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Approvals</category>
+  </item>
+  <item>
+    <title>HubSpot AI settings: turn generative AI on or off and choose what data it can use</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-ai-access-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-ai-access-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The AI Access settings in HubSpot: the account-wide generative AI toggle, CRM data, customer conversation data, and files data access, and Breeze Assistant access.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Custom meeting outcomes and call and meeting types in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-outcomes-and-call-types/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-outcomes-and-call-types/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Meetings settings that let you track custom meeting outcomes, call and meeting types, and default meeting reminders, with HubSpot&#39;s limits.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Calls</category>
+  </item>
+  <item>
+    <title>HubSpot email log and track settings for the whole account</title>
+    <link>https://hubspot.samcbarth.com/articles/email-log-and-track-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-log-and-track-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The account-level Email Log &amp; Track settings in HubSpot: logging attachments, default log and track settings for the Sales extension, and allowing users to track opens and clicks.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Why some contact emails do not log to HubSpot: log replies only vs log all emails</title>
+    <link>https://hubspot.samcbarth.com/articles/log-replies-only-vs-log-all-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/log-replies-only-vs-log-all-emails/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s contact email logging rules: Log replies only vs Log all emails, what each logs, the requirements for a reply to log, and the unsubscribe link setting below them.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>The HubSpot never log list: stop emails and meetings with certain domains logging</title>
+    <link>https://hubspot.samcbarth.com/articles/never-log-list/</link>
+    <guid>https://hubspot.samcbarth.com/articles/never-log-list/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Log emails to HubSpot with the BCC and forwarding addresses</title>
+    <link>https://hubspot.samcbarth.com/articles/bcc-and-forwarding-address-logging/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bcc-and-forwarding-address-logging/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find your HubSpot BCC and forwarding addresses, how each logs email to the CRM, what gets associated, and the limits compared with a connected inbox.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Contacts from connected apps are non-marketing by default: the setting that changes it</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-contacts-connected-apps/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Marketing Contacts integration setting in HubSpot: why contacts synced by apps are non-marketing, how to set an app to sync marketing contacts, and the billing impact.</description>
+    <category>Marketing Hub</category>
+    <category>Marketing contacts</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Find disconnected or expired HubSpot integrations: the Connected Apps page</title>
+    <link>https://hubspot.samcbarth.com/articles/connected-apps-needs-attention/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connected-apps-needs-attention/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Connected Apps page in HubSpot: the Needs attention section for disconnected and expired apps, the My Apps list, connection insights, and app notifications.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot URL redirects: standard, flexible, and bulk import</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-url-redirects/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-url-redirects/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where URL redirects live in HubSpot, standard vs flexible pattern redirects, bulk importing redirects from a CSV, system redirects, and what cannot be redirected.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>HubSpot ticket pipelines: statuses, open vs closed, and ticket tags</title>
+    <link>https://hubspot.samcbarth.com/articles/ticket-pipeline-statuses/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ticket-pipeline-statuses/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where ticket pipelines are configured in HubSpot, the statuses in a default support pipeline, why each status is marked open or closed, and the ticket status automation behind replies.</description>
+    <category>Service Hub</category>
+    <category>Tickets</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>HubSpot tasks page shows no tasks? Check the Assigned to filter</title>
+    <link>https://hubspot.samcbarth.com/articles/tasks-page-shows-nothing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tasks-page-shows-nothing/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why the HubSpot tasks index page can show no tasks: the default Assignee filter, the standard task views, quick filters, and syncing tasks to your calendar.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>The HubSpot product library: create or import products for deals and quotes</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-products-library/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-products-library/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The HubSpot Products index page: creating or importing products, product status, pricing models, and how products become line items on deals and quotes.</description>
+    <category>Sales Hub</category>
+    <category>Products</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot marketing email footer addresses: where they are set and why they are required</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-footer-address/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-footer-address/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where the business address in HubSpot marketing email footers comes from, how to add or edit a footer address, and the tier needed for multiple office locations.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>HubSpot personalization token defaults: stop &#39;Hi ,&#39; in your emails</title>
+    <link>https://hubspot.samcbarth.com/articles/personalization-token-defaults/</link>
+    <guid>https://hubspot.samcbarth.com/articles/personalization-token-defaults/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to set global default values for HubSpot personalization tokens used in marketing emails, how fallbacks per email work, and what happens with no default.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Personalization</category>
+  </item>
+  <item>
+    <title>HubSpot email send frequency cap: limit how many marketing emails a contact gets</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-send-frequency-cap/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-send-frequency-cap/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Send Frequency setting in HubSpot email settings: what the frequency cap includes and excludes, how to exempt an important email, and the Enterprise requirement.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Join a HubSpot beta from the Product Updates page</title>
+    <link>https://hubspot.samcbarth.com/articles/join-hubspot-beta-product-updates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/join-hubspot-beta-product-updates/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the HubSpot Product Updates page works: New to you, Your Betas, Live, In beta, In development, and Sunset, and how to join a public beta or request a private one.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Block phone numbers in HubSpot calling</title>
+    <link>https://hubspot.samcbarth.com/articles/calling-blocked-numbers-list/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calling-blocked-numbers-list/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Blocked Numbers List in HubSpot calling settings: what it blocks, how long changes take, and what it does not cover.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>The HubSpot sitemap: what is included automatically and what is not</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-sitemap-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-sitemap-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to view and edit the sitemap for a HubSpot-hosted domain, which content HubSpot adds automatically, why landing pages are not included, and how to add a page.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+    <category>SEO</category>
+  </item>
+  <item>
+    <title>HubSpot inbox channels and the fallback email address</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-channels-and-fallback-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-channels-and-fallback-email/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Inboxes settings page in HubSpot: connected channels such as chat and forms, a form channel that creates tickets, and the HubSpot fallback email address.</description>
+    <category>Service Hub</category>
+    <category>Sales Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>HubSpot inbox allow and deny list: control what gets marked as spam</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-allow-and-deny-list/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-allow-and-deny-list/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Allow &amp; Deny List in HubSpot inbox and help desk settings: always allow or always mark as spam by email or domain, the automatic spam categories, and the rules that cannot be overridden.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Campaigns settings page in HubSpot: choosing revenue or associated deal value for campaign ROI, ad spend currency conversion, and auto-generated unique identifiers in campaign UTMs.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>HubSpot help desk availability: who can be assigned tickets and how many</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-availability-management/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-availability-management/</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Availability Management page in HubSpot: each user&#39;s status (Available, Away, Pending), ticket capacity, how working hours set status, and who can change it.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Inbox</category>
+  </item>
+  <item>
     <title>Contact won&#39;t re-enroll in a HubSpot workflow? Check these 6 things</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</guid>

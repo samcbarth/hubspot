@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers - HubSpot Field Notes</title>
+<meta name="description" content="The Campaigns settings page in HubSpot: choosing revenue or associated deal value for campaign ROI, ad spend currency conversion, and auto-generated unique identifiers in campaign UTMs.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/">
+<meta property="og:title" content="HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers">
+<meta property="og:description" content="The Campaigns settings page in HubSpot: choosing revenue or associated deal value for campaign ROI, ad spend currency conversion, and auto-generated unique identifiers in campaign UTMs.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers",
+      "description": "The Campaigns settings page in HubSpot: choosing revenue or associated deal value for campaign ROI, ad spend currency conversion, and auto-generated unique identifiers in campaign UTMs.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Configure HubSpot campaign ROI and UTM settings",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open campaign settings", "text": "Go to Settings, Marketing, Campaigns."},
+        {"@type": "HowToStep", "name": "Choose the ROI basis", "text": "On the ROI tab, choose Revenue or Associated deal value."},
+        {"@type": "HowToStep", "name": "Check currency", "text": "Set up currencies if ads spend in another currency."},
+        {"@type": "HowToStep", "name": "Check UTMs", "text": "On the UTM tab, check the unique identifier setting."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers", "item": "https://hubspot.samcbarth.com/articles/campaign-roi-and-utm-settings/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="campaign-roi-and-utm-settings">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Campaigns">Campaigns</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers</h1>
+      <p class="dek">Two campaign settings decide what ROI number your report shows and whether renaming a campaign breaks its tracking.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Account settings access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>In <span class="ui">Settings</span>, <span class="ui">Marketing</span>, <span class="ui">Campaigns</span>, the <strong>ROI</strong> tab chooses how campaign ROI is calculated: <strong>Revenue</strong> (total revenue from closed-won deals) or <strong>Associated deal value</strong> (total deal amount for closed-won deals with revenue). My demo uses Revenue. The <strong>UTM</strong> tab has <strong>Auto-generate unique identifiers for campaign UTMs</strong>, on in my demo, which adds an ID to the UTM value so tracking survives a campaign rename.</p>
+        </div>
+
+        <h2>1. ROI</h2>
+        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/marketing/campaigns" href="https://app.hubspot.com/l/settings/marketing/campaigns"><span class="ui">Campaigns settings</span></a>.</p>
+        <figure class="shot"><a href="roi.webp"><img src="roi.webp" alt="Campaigns settings ROI tab with the ROI options and the ad currency section highlighted" width="800" height="553" loading="lazy"></a><figcaption>Tabs (1), ROI basis (2), and ad spend currency (3).</figcaption></figure>
+        <ul>
+          <li><strong>Revenue:</strong> total revenue from closed-won deals. HubSpot lists this option for Marketing Hub Professional.</li>
+          <li><strong>Associated deal value:</strong> the total deal amount for closed-won deals with revenue.</li>
+          <li>Ad spend in another currency is converted to your default currency, or the campaign's currency. See <a href="../hubspot-multiple-currencies/">multiple currencies</a>.</li>
+        </ul>
+
+        <h2>2. UTM identifiers</h2>
+        <figure class="shot"><a href="utm.webp"><img src="utm.webp" alt="Campaigns settings UTM tab with the auto-generate unique identifiers toggle on" width="800" height="553" loading="lazy"></a><figcaption>Auto-generate unique identifiers for campaign UTMs.</figcaption></figure>
+        <p>The page says campaign UTMs always include the campaign name, and with this on a unique identifier is added so a renamed campaign does not break tracking. Leave it on unless you have a reporting reason not to. For why a campaign shows no sessions, see <a href="../campaign-zero-sessions/">campaign shows zero sessions</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/campaigns/analyze-your-campaign-roi">HubSpot Knowledge Base: Analyze your campaign ROI</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/add-and-edit-your-account-currencies">HubSpot Knowledge Base: Add and edit account currencies</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

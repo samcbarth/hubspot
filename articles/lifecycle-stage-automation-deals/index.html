@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won - HubSpot Field Notes</title>
+<meta name="description" content="The Automate tab for lifecycle stages in HubSpot: sync lifecycle stages from the primary company, set a stage when a deal is created, and set a stage when a deal is won.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/">
+<meta property="og:title" content="HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won">
+<meta property="og:description" content="The Automate tab for lifecycle stages in HubSpot: sync lifecycle stages from the primary company, set a stage when a deal is created, and set a stage when a deal is won.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/og.png">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won",
+      "description": "The Automate tab for lifecycle stages in HubSpot: sync lifecycle stages from the primary company, set a stage when a deal is created, and set a stage when a deal is won.",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set lifecycle stages automatically from deals in HubSpot",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open lifecycle settings", "text": "Go to Settings, Objects, Contacts, Lifecycle Stage."},
+        {"@type": "HowToStep", "name": "Open Automate", "text": "Click the Automate tab."},
+        {"@type": "HowToStep", "name": "Pick the stages", "text": "Set the stage for deal created and deal won."},
+        {"@type": "HowToStep", "name": "Decide on sync", "text": "Turn Sync lifecycle stages on or off."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won", "item": "https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="lifecycle-stage-automation-deals">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Lifecycle+stages">Lifecycle stages</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Smart CRM</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot lifecycle stage automation: Opportunity when a deal is created, Customer when it is won</h1>
+      <p class="dek">Contacts become Opportunity and Customer on their own because of three settings most people never open.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit property settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>On the lifecycle stage <strong>Automate</strong> tab there are three rules. <strong>Set lifecycle stage when a deal is created</strong> (Opportunity in my demo) and <strong>Set lifecycle stage when a deal is won</strong> (Customer) update associated contacts and companies. <strong>Sync lifecycle stages</strong> updates a contact when its primary company's stage changes, and is unticked in my demo. The page says these rules only move a stage forward, and contacts and companies share them.</p>
+        </div>
+
+        <h2>1. The three rules</h2>
+        <p>Open <a class="hs-link" data-hs="/pipelines-settings/{portalId}/object/0-1/contacts-lifecycle-pipeline/automation" href="https://app.hubspot.com/l/pipelines-settings/object/0-1/contacts-lifecycle-pipeline/automation"><span class="ui">lifecycle stage automation</span></a>.</p>
+        <figure class="shot"><a href="automate.webp"><img src="automate.webp" alt="Lifecycle stage Automate tab with the shared settings note, Sync lifecycle stages, and the deal created and deal won rules highlighted" width="800" height="553" loading="lazy"></a><figcaption>Shared note (1), sync (2), deal created (3), and deal won (4).</figcaption></figure>
+        <ol>
+          <li><strong>Shared and forward only.</strong> Changing these on contacts changes them on companies, and they only set a stage forward.</li>
+          <li><strong>Sync lifecycle stages.</strong> Updates a contact when its primary company's stage changes. The note says it does not apply when a company moves backwards.</li>
+          <li><strong>Deal created.</strong> Sets associated contacts and companies to the chosen stage when a deal is created or newly associated. Opportunity here.</li>
+          <li><strong>Deal won.</strong> Sets them to the chosen stage when a deal is won. Customer here.</li>
+        </ol>
+
+        <h2>2. What HubSpot says about edge cases</h2>
+        <ul>
+          <li>A contact already at Customer does not drop to Opportunity when a new deal is created. A contact at Lead does move to Opportunity.</li>
+          <li>The deal created rule applies when the first associated deal is created.</li>
+          <li>With the deal won rule off, HubSpot says the <em>Close date</em> and <em>Days to close</em> properties on associated contacts and companies are not updated automatically.</li>
+        </ul>
+        <p>If SQL counts look wrong because contacts jump straight to Opportunity, see <a href="../sql-count-zero/">why the SQL count is zero</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/manage-how-lifecycle-stages-sync-between-objects">HubSpot Knowledge Base: Automatically set and sync record lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use contact and company lifecycle stages</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
