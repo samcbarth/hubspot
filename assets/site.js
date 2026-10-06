@@ -5,7 +5,7 @@
   var CONFIG = {
     hubspotPortal: '20693956',
     hubspotRegion: 'na1',
-    ga4: '', // Add a G-XXXXXXX id here to turn on Google Analytics 4.
+    ga4: 'G-D523BX43Q2', // Add a G-XXXXXXX id here to turn on Google Analytics 4.
     forms: {
       newsletter: '66972f44-0848-401e-99db-e238d9837fb7',
       fix: '68745fcd-08d8-4544-8009-b7ca3c45129b'
