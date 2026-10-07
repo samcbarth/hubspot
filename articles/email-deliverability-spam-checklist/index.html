@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot marketing emails going to spam: a deliverability checklist - HubSpot Field Notes</title>
+<meta name="description" content="The checks HubSpot's KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/">
+<meta property="og:title" content="HubSpot marketing emails going to spam: a deliverability checklist">
+<meta property="og:description" content="The checks HubSpot's KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot marketing emails going to spam: a deliverability checklist",
+      "description": "The checks HubSpot's KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Work through deliverability checks",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Connect the sending domain", "text": "Make sure the From domain is connected and authenticated."},
+        {"@type": "HowToStep", "name": "Check health", "text": "Open Marketing Email, Health and review bounces and spam reports."},
+        {"@type": "HowToStep", "name": "Clean the list", "text": "Stop sending to unengaged and bounced contacts."},
+        {"@type": "HowToStep", "name": "Avoid bought lists", "text": "Remove sources that may contain spam traps."},
+        {"@type": "HowToStep", "name": "Watch open rates", "text": "Low engagement over time pushes emails toward spam."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot marketing emails going to spam: a deliverability checklist", "item": "https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="email-deliverability-spam-checklist">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot marketing emails going to spam: a deliverability checklist</h1>
+      <p class="dek">Inbox providers judge engagement and reputation. Most fixes are about who you send to, not what the email says.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers that send marketing email</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing email access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Start with the basics HubSpot lists: connect and authenticate your <strong>email sending domain</strong>, then look at engagement. Mailbox providers move low-engagement email to spam, which lowers opens further. Clean out unengaged and bounced contacts, never send to bought or scraped lists (they can contain spam traps), and watch the <span class="ui">Health</span> tab for hard bounces and spam reports. Professional and Enterprise add time-zone sending and A/B testing.</p>
+        </div>
+
+        <h2>1. The Health tab</h2>
+        <p>My demo portal has sent too little for a score, but the tab shows the measures that matter: opens, click-throughs, hard bounces, unsubscribes and spam reports.</p>
+        <figure class="shot"><a href="health.webp"><img src="health.webp" alt="Marketing Email Health tab with a score gauge showing not enough data and metrics for opens, click-throughs, hard bounces, unsubscribes and spam reports" width="800" height="270" loading="lazy"></a><figcaption>The Health tab (1), score (2), and bounce and spam metrics (3).</figcaption></figure>
+
+        <h2>2. The checklist</h2>
+        <ul>
+          <li>Sending domain connected with SPF and DKIM. See <a href="../connect-email-sending-domain-spf/">connecting a sending domain</a>.</li>
+          <li>Bounced contacts excluded. See <a href="../bounced-contacts-still-marketing/">bounced contacts still marketing</a>.</li>
+          <li>Unengaged contacts suppressed or sent a re-engagement email first.</li>
+          <li>No purchased or scraped lists. HubSpot quarantines segments that hit spam traps.</li>
+          <li>Send frequency kept reasonable. See <a href="../marketing-email-send-frequency-cap/">frequency caps</a>.</li>
+        </ul>
+
+        <h2>3. If it keeps happening</h2>
+        <p>HubSpot says sustained low open rates are a sign emails are going to spam and that a reputation repair plan may be needed. Repeated bounces and spam reports can lead to a sending suspension.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/marketing-email/overview-of-email-deliverability">HubSpot Knowledge Base: Overview of email deliverability</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/how-to-clean-up-your-contact-lists-to-improve-deliverability">HubSpot Knowledge Base: Clean up contacts to improve email deliverability</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-spam-traps-and-email-blocklists">HubSpot Knowledge Base: Understand spam traps and email blocklists</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

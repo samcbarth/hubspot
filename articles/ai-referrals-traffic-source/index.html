@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's AI Referrals traffic source, which domains count, what the drill-down properties store, and where to look for it.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/">
+<meta property="og:title" content="AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants">
+<meta property="og:description" content="HubSpot's AI Referrals traffic source, which domains count, what the drill-down properties store, and where to look for it.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants",
+      "description": "HubSpot's AI Referrals traffic source, which domains count, what the drill-down properties store, and where to look for it.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "View AI referral traffic",
+      "totalTime": "PT3M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Sources", "text": "Reports, Web traffic analysis, Sources."},
+        {"@type": "HowToStep", "name": "Find AI Referrals", "text": "Look for the AI Referrals row in the sources table."},
+        {"@type": "HowToStep", "name": "Drill in", "text": "Click the Sessions number to see each AI platform, then again for campaigns."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants", "item": "https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="ai-referrals-traffic-source">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Analytics">Analytics</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants</h1>
+      <p class="dek">Visits from AI assistants now have their own source in HubSpot instead of being mixed into referrals.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers with the tracking code</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Reports access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's traffic sources include <strong>AI Referrals</strong> for visits from AI assistants and chatbots such as ChatGPT, Claude and Perplexity. Only AI-specific domains count, for example gemini.google.com rather than google.com. On contacts, Traffic Source Drill-Down 1 stores the platform domain (such as chatgpt.com) and Drill-Down 2 stores the utm_campaign value if there is one.</p>
+        </div>
+
+        <h2>1. Where it shows</h2>
+        <p>AI Referrals appears as its own row in the Sources report when there is traffic for it. My demo portal had only direct traffic in the period shown.</p>
+        <figure class="shot"><a href="sources.webp"><img src="sources.webp" alt="Traffic by source report in the marketing analytics suite with Break down by Source" width="800" height="533" loading="lazy"></a><figcaption>The Sources report (1) and its Source breakdown (2).</figcaption></figure>
+
+        <h2>2. What counts</h2>
+        <ul>
+          <li>Referrals from AI assistant domains like chatgpt.com, claude.ai and gemini.google.com.</li>
+          <li>Not general search domains. A click from Google search results is still organic search.</li>
+        </ul>
+
+        <h2>3. Use it in lists and reports</h2>
+        <p>Filter contacts where Original or Latest Traffic Source is AI Referrals, and break down by Drill-Down 1 to compare platforms. For tracking where your brand appears in AI answers, see <a href="../aeo-prompts-and-outreach-recommendations/">AEO prompts and recommendations</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/reports/understand-hubspots-traffic-sources-in-the-traffic-analytics-tool">HubSpot Knowledge Base: Understand HubSpot's traffic sources</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/understand-traffic-source-properties">HubSpot Knowledge Base: Understand Original and Latest traffic source properties</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

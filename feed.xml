@@ -776,6 +776,267 @@
     <category>User settings</category>
   </item>
   <item>
+    <title>New pipeline stages no longer get Date entered and Time in stage properties by default</title>
+    <link>https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/</link>
+    <guid>https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot now leaves stage calculated properties off for new pipelines and stages. How to check which stages have them and turn them on before you need the report.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Second sale to the same person? Add a deal, not a second contact</title>
+    <link>https://hubspot.samcbarth.com/articles/second-deal-same-contact/</link>
+    <guid>https://hubspot.samcbarth.com/articles/second-deal-same-contact/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot blocks a second contact with the same email, and how to give an existing contact a new deal from the Deals card instead.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>Locked out of HubSpot by two-factor authentication: how the reset works</title>
+    <link>https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/</link>
+    <guid>https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What to do when you lose your 2FA device, how HubSpot&#39;s admin recovery and photo ID verification work, and how to set up 2FA so it does not happen again.</description>
+    <category>Smart CRM</category>
+    <category>User settings</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>HubSpot Credits: where to see usage and how to cap it</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-credits-usage-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-credits-usage-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows your monthly credit allocation and usage by feature, and how to set an account spend limit and per-feature limits.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Nurture agent uses credits for every personalized email: set limits first</title>
+    <link>https://hubspot.samcbarth.com/articles/nurture-agent-credits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/nurture-agent-credits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s nurture agent changes in automated emails, which subscriptions it needs, and the four ways to control its credit use.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Move a deal to the next stage automatically when a property changes</title>
+    <link>https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/</link>
+    <guid>https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Use a deal-based workflow with an Edit record action to set Deal stage from another property, and where the pipeline&#39;s Automate tab fits in.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>Require approval before deals move forward in a pipeline</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-approval-process/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-approval-process/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s deal approval process works, what blocks it from starting, and what happens if you turn it off.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>One product, several prices: tiered pricing in the HubSpot product library</title>
+    <link>https://hubspot.samcbarth.com/articles/tiered-product-pricing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tiered-product-pricing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s tiered pricing methods (volume-based, graduated and stair-step) live, what subscription and seat they need, and what you see without them.</description>
+    <category>Sales Hub</category>
+    <category>Commerce Hub</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>Sync Facebook and Instagram lead ad forms into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s lead ad syncing works for Meta instant forms, why the forms do not appear in the forms tool, and the usual reasons leads do not arrive.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Resync Salesforce records after the integration stops syncing</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-sync-errors-resync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-sync-errors-resync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows Salesforce sync errors, the 100-at-a-time resync limit, resyncing a single record, and what to do about integration suspensions.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>What &quot;Other campaigns&quot; means in HubSpot traffic sources</title>
+    <link>https://hubspot.samcbarth.com/articles/other-campaigns-traffic-source/</link>
+    <guid>https://hubspot.samcbarth.com/articles/other-campaigns-traffic-source/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why sessions land in the Other campaigns source, how HubSpot decides it from UTM parameters, and how to see which campaign drove a spike.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants</title>
+    <link>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s AI Referrals traffic source, which domains count, what the drill-down properties store, and where to look for it.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Agent Hub context: what HubSpot&#39;s AI knows about your business, and how to correct it</title>
+    <link>https://hubspot.samcbarth.com/articles/agent-hub-context/</link>
+    <guid>https://hubspot.samcbarth.com/articles/agent-hub-context/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot keeps the business context its AI tools use, the difference between context and knowledge vaults, and how to add or fix it.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Work through thousands of duplicates with HubSpot&#39;s Manage Duplicates tool</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the Manage Duplicates tool shows, its 10,000-pair display limit, custom duplicate rules, alerts, and the 250-merge limit per record.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Duplicates</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Make a custom property require unique values, and use it as an ID</title>
+    <link>https://hubspot.samcbarth.com/articles/unique-value-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unique-value-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Require unique values rule works, the 10-property limit shown in settings, and how unique properties work in imports and the API.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>Imports</category>
+  </item>
+  <item>
+    <title>Emails landing on the wrong deal? How HubSpot picks which deals an activity joins</title>
+    <link>https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/</link>
+    <guid>https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s automatic activity association rules for contacts with several open deals, where to change them, and how to log to the right deal.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Activities</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Lifecycle stage, lead status and deal stage: three properties, three questions</title>
+    <link>https://hubspot.samcbarth.com/articles/lifecycle-vs-lead-status-vs-deal-stage/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lifecycle-vs-lead-status-vs-deal-stage/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What each of HubSpot&#39;s three status properties tracks, which records they live on, and how they move, so a team can agree which one to report on.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Lifecycle stages</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot marketing emails going to spam: a deliverability checklist</title>
+    <link>https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The checks HubSpot&#39;s KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Cut HubSpot form spam: blocked domains, gibberish detection and IP exclusions</title>
+    <link>https://hubspot.samcbarth.com/articles/block-form-spam/</link>
+    <guid>https://hubspot.samcbarth.com/articles/block-form-spam/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Account-level HubSpot form settings that reduce spam submissions: blocked email domains, gibberish detection, and excluded IP handling.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Require fields before a deal enters a stage with conditional stage properties</title>
+    <link>https://hubspot.samcbarth.com/articles/conditional-stage-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/conditional-stage-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s conditional stage logic shows or requires properties when someone moves a record into a stage, and how it differs from pipeline rules.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Pipelines</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Agentic workflows in Agent Hub: what they are and what they cost</title>
+    <link>https://hubspot.samcbarth.com/articles/agentic-workflows-agent-hub/</link>
+    <guid>https://hubspot.samcbarth.com/articles/agentic-workflows-agent-hub/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s Agent Hub workflow builder, the agent and AI actions it adds, the credits those actions use, and the Run agent action limit.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Connect a Reddit Ads account to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to connect Reddit Ads in HubSpot&#39;s ads settings, what you get once it is connected, and how to manage the connected user.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Turn on phone number validation so new numbers arrive in one format</title>
+    <link>https://hubspot.samcbarth.com/articles/phone-number-validation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/phone-number-validation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s phone number property validation, the E.164 rules it enforces, the default country code option, and the workflow action for old data.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Validate text properties with regex rules in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/regex-property-validation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/regex-property-validation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s basic and custom property validation rules, writing a regular expression or generating one with AI, and example patterns from the KB.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Custom objects: when to build one, and when a property is enough</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-objects-when-to-build/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-objects-when-to-build/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s guidance on when a custom object is the right model, the Enterprise requirement, and how to see your current data model first.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>Associations</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Move a deal to the next stage automatically when a property changes - HubSpot Field Notes</title>
+<meta name="description" content="Use a deal-based workflow with an Edit record action to set Deal stage from another property, and where the pipeline's Automate tab fits in.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/">
+<meta property="og:title" content="Move a deal to the next stage automatically when a property changes">
+<meta property="og:description" content="Use a deal-based workflow with an Edit record action to set Deal stage from another property, and where the pipeline's Automate tab fits in.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Move a deal to the next stage automatically when a property changes",
+      "description": "Use a deal-based workflow with an Edit record action to set Deal stage from another property, and where the pipeline's Automate tab fits in.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Move deal stage from a workflow",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a deal workflow", "text": "Automation, Workflows, create a deal-based workflow."},
+        {"@type": "HowToStep", "name": "Set the trigger", "text": "Use a property condition, such as Contract signed date is known, and the current pipeline."},
+        {"@type": "HowToStep", "name": "Add Edit record", "text": "Add the Edit record action and set Deal stage to the next stage."},
+        {"@type": "HowToStep", "name": "Test and turn on", "text": "Test on one deal, then turn the workflow on."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Move a deal to the next stage automatically when a property changes", "item": "https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="move-deal-stage-automatically">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Move a deal to the next stage automatically when a property changes</h1>
+      <p class="dek">Reps forget to drag deals. If a property already tells you the deal has progressed, a workflow can move the stage.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Workflows need a Professional or Enterprise subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Workflows access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Build a <strong>deal-based workflow</strong>. Trigger it on the property that proves progress (for example a signed date being known), filter to the right pipeline, and add an <span class="ui">Edit record</span> action that sets <strong>Deal stage</strong>. The pipeline's own <span class="ui">Automate</span> tab works the other way round: it triggers actions when a deal reaches a stage. Deal probability updates with the stage unless someone has edited probability by hand.</p>
+        </div>
+
+        <h2>1. The pipeline Automate tab</h2>
+        <p>Open the pipeline in Settings, Objects, Deals, Pipelines and click Automate. My demo portal shows templated close date automations and a section to create workflows from scratch, one per stage, triggered when a deal reaches that stage.</p>
+        <figure class="shot"><a href="automate.webp"><img src="automate.webp" alt="Pipeline Automate tab with templated deal close date automations and a Create workflows from scratch section" width="781" height="426" loading="lazy"></a><figcaption>The Automate tab (1), templated automations (2), and stage-triggered workflows (3).</figcaption></figure>
+
+        <h2>2. The property-driven workflow</h2>
+        <ul>
+          <li><strong>Trigger:</strong> the property that marks progress, plus Pipeline is the pipeline you mean. Without the pipeline filter, deals in other pipelines can get a stage from the wrong pipeline.</li>
+          <li><strong>Action:</strong> Edit record, Deal stage, the target stage. See <a href="../workflow-edit-record-action/">the Edit record action</a>.</li>
+          <li><strong>Guard:</strong> add a branch or filter so deals already past that stage are not moved back.</li>
+        </ul>
+
+        <h2>3. Interactions to check</h2>
+        <ul>
+          <li>Pipeline rules: HubSpot says pipeline automations can bypass all rules except approvals. See <a href="../deal-pipeline-rules/">deal pipeline rules</a>.</li>
+          <li>Close date: moving to a closed stage sets the close date to today unless that automation is off.</li>
+          <li>Probability: it follows the stage unless a user has edited it by hand.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

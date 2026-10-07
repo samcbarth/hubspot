@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Emails landing on the wrong deal? How HubSpot picks which deals an activity joins - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's automatic activity association rules for contacts with several open deals, where to change them, and how to log to the right deal.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/">
+<meta property="og:title" content="Emails landing on the wrong deal? How HubSpot picks which deals an activity joins">
+<meta property="og:description" content="HubSpot's automatic activity association rules for contacts with several open deals, where to change them, and how to log to the right deal.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Emails landing on the wrong deal? How HubSpot picks which deals an activity joins",
+      "description": "HubSpot's automatic activity association rules for contacts with several open deals, where to change them, and how to log to the right deal.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Check activity association settings",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open settings", "text": "Settings, Objects, Activities, Associations."},
+        {"@type": "HowToStep", "name": "Pick object and type", "text": "Select Contacts and Emails."},
+        {"@type": "HowToStep", "name": "Read Associated Deals", "text": "See how many recently associated open deals get the activity."},
+        {"@type": "HowToStep", "name": "Log from the deal", "text": "When it matters, log or associate the email from the deal record."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Emails landing on the wrong deal? How HubSpot picks which deals an activity joins", "item": "https://hubspot.samcbarth.com/articles/emails-on-the-right-deal/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="emails-on-the-right-deal">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Activities">Activities</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span><span class="badge">Sales Hub</span></div>
+      <h1>Emails landing on the wrong deal? How HubSpot picks which deals an activity joins</h1>
+      <p class="dek">When a contact has several deals, a logged email does not go to all of them, and not always to the one you meant.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit property settings or Super Admin to change association settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB says an activity logged on a contact is associated with the contact's primary company and its <strong>five most recent associated open deals</strong>. Closed deals do not get it. These defaults can be changed in <span class="ui">Settings &gt; Objects &gt; Activities &gt; Associations</span> per object and activity type. My demo portal is set to log contact emails to only the one most recently associated deal. When the deal matters, log from the deal record or edit the email's associations.</p>
+        </div>
+
+        <h2>1. The setting</h2>
+        <p>For Contacts and Emails, my demo portal logs to the primary company and to 1 most recently associated deal. The panel notes activities are logged only to open deals.</p>
+        <figure class="shot"><a href="associations.webp"><img src="associations.webp" alt="Activities Associations tab with Contacts and Emails selected and Log activity dropdowns for associated objects" width="781" height="426" loading="lazy"></a><figcaption>The Associations tab (1), object and activity type (2), and the log rules (3).</figcaption></figure>
+
+        <h2>2. Why it goes wrong</h2>
+        <ul>
+          <li>The newest associated deal is not always the active conversation.</li>
+          <li>A deal closed won or lost no longer receives activity, even if the email is about it.</li>
+          <li>Sequence emails follow the same rule: primary company plus the five most recent open deals.</li>
+        </ul>
+
+        <h2>3. Fixes</h2>
+        <p>Log or send from the deal record when the email is about that deal. Edit associations on an email from its timeline card. If you change the setting, it only affects new activity. Related: <a href="../email-log-and-track-settings/">email log and track settings</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/associate-activities-with-records">HubSpot Knowledge Base: Associate activities with records</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/configure-automatic-activity-associations">HubSpot Knowledge Base: Set up automatic associations for records and activities</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

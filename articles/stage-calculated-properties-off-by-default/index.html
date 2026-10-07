@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>New pipeline stages no longer get Date entered and Time in stage properties by default - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot now leaves stage calculated properties off for new pipelines and stages. How to check which stages have them and turn them on before you need the report.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/">
+<meta property="og:title" content="New pipeline stages no longer get Date entered and Time in stage properties by default">
+<meta property="og:description" content="HubSpot now leaves stage calculated properties off for new pipelines and stages. How to check which stages have them and turn them on before you need the report.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "New pipeline stages no longer get Date entered and Time in stage properties by default",
+      "description": "HubSpot now leaves stage calculated properties off for new pipelines and stages. How to check which stages have them and turn them on before you need the report.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Turn on stage calculated properties for a pipeline",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open pipelines", "text": "Go to Settings, Objects, Deals, Pipelines."},
+        {"@type": "HowToStep", "name": "Check the count", "text": "Read the Stage calculated properties count above the pipeline list."},
+        {"@type": "HowToStep", "name": "Open the pipeline", "text": "Click the pipeline name to see its stages."},
+        {"@type": "HowToStep", "name": "Toggle per stage", "text": "Switch on Enable stage calculated properties for each stage you report on."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "New pipeline stages no longer get Date entered and Time in stage properties by default", "item": "https://hubspot.samcbarth.com/articles/stage-calculated-properties-off-by-default/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="stage-calculated-properties-off-by-default">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pipelines">Pipelines</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span><span class="badge">Sales Hub</span></div>
+      <h1>New pipeline stages no longer get Date entered and Time in stage properties by default</h1>
+      <p class="dek">If you add a pipeline or stage and later build a time-in-stage report, the data may never have been recorded.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Stage calculated properties need a Professional or Enterprise subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit property settings or Super Admin</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB says stage calculated properties (Date entered, Date exited, Latest time in, Cumulative time in) are <strong>turned off by default for new pipelines and pipeline stages</strong>. Each stage now has an Enable stage calculated properties switch in the pipeline's Configure tab. If it was off while deals moved, there is no Date entered value to report on, so switch it on for any stage you plan to measure before deals start moving through it.</p>
+        </div>
+
+        <h2>1. The account count</h2>
+        <p>The deal Pipelines page in my demo portal shows how many stage calculated properties are on across all pipelines: 128 of 4,500.</p>
+        <figure class="shot"><a href="overview.webp"><img src="overview.webp" alt="Deal pipelines settings showing Stage calculated properties 128 of 4,500 enabled and a Stage calculated properties column" width="800" height="553" loading="lazy"></a><figcaption>The account-wide count (1) and the per-pipeline column (2).</figcaption></figure>
+
+        <h2>2. The per-stage switch</h2>
+        <p>Open a pipeline. The Configure tab lists each stage with an <span class="ui">Enable stage calculated properties</span> switch. This pipeline has 12 enabled.</p>
+        <figure class="shot"><a href="stages.webp"><img src="stages.webp" alt="Onboarding pipeline Configure tab with 12 enabled and switches in the Enable stage calculated properties column" width="800" height="380" loading="lazy"></a><figcaption>The pipeline's enabled count (1) and the switch for each stage (2).</figcaption></figure>
+
+        <h2>3. What you lose when it is off</h2>
+        <ul>
+          <li><strong>Date entered</strong> and <strong>Date exited</strong> for the stage.</li>
+          <li><strong>Latest time in</strong> and <strong>Cumulative time in</strong>, which HubSpot calculates from those dates.</li>
+        </ul>
+        <p>HubSpot describes the change as a way to stop thousands of unused properties being created. The cost is that reports and workflows built on those properties have nothing to read for stages that were left off. The developer changelog flags the same change for integrations that expect these properties on every stage. To find stage IDs for these property names, see <a href="../find-pipeline-and-stage-ids/">finding pipeline and stage IDs</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/properties/stage-calculated-properties">HubSpot Knowledge Base: Use stage calculated properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+          <li><a href="https://developers.hubspot.com/changelog/may-2026-rollup">HubSpot developer docs: May 2026 rollup</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
