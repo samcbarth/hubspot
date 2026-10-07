@@ -422,6 +422,250 @@
     <category>Records</category>
   </item>
   <item>
+    <title>The HubSpot sales workspace: one place for a rep&#39;s tasks, leads, deals and schedule</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-workspace/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-workspace/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What each tab of HubSpot&#39;s sales workspace shows, how reps work through tasks and sequence steps from it, and what the Schedule tab is.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>HubSpot documents: share files with contacts and see who opened them</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-documents/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-documents/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s documents tool tracks views of shared PDFs and decks, the require-email option, downloads, and the difference from the files tool.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s forecast tool: categories, submissions, and forecast types</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-forecast-tool/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-forecast-tool/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the HubSpot forecast tool works: deal stage versus forecast category views, the default categories, submitting forecasts, and creating forecast types with other date and amount properties.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>HubSpot calling numbers: HubSpot-provided, ported, or your own registered number</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-calling-numbers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-calling-numbers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The three ways to put a phone number behind HubSpot calling, where account-wide call setup lives, minutes, and porting a number in.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Legacy CTAs in HubSpot: what still works and when to use the new CTA tool</title>
+    <link>https://hubspot.samcbarth.com/articles/legacy-ctas-vs-new-ctas/</link>
+    <guid>https://hubspot.samcbarth.com/articles/legacy-ctas-vs-new-ctas/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s legacy CTAs live now, the notice about migration, what legacy CTAs cannot do, and when to use new CTAs or button modules instead.</description>
+    <category>Marketing Hub</category>
+    <category>Website</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Find and organize reports in HubSpot: the reports list, favorites, and analytics suites</title>
+    <link>https://hubspot.samcbarth.com/articles/reports-list-and-analytics-suites/</link>
+    <guid>https://hubspot.samcbarth.com/articles/reports-list-and-analytics-suites/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s reports list is organized, using views, favorites and tags, changing report owners and access, and where the analytics suites live.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>The HubSpot data model builder: see every object, its records and associations</title>
+    <link>https://hubspot.samcbarth.com/articles/data-model-builder/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-model-builder/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s data model builder shows, the table and graph views, object type IDs, and creating or activating associations.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Associations</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubDB: store structured content once and show it on pages</title>
+    <link>https://hubspot.samcbarth.com/articles/hubdb-tables/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubdb-tables/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubDB tables are for, the subscriptions that use them for dynamic pages and programmable emails, adding rows and importing CSVs, and the dynamic page limit.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Website</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>The HubSpot leads object: what a lead record is and how lead stages move</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-leads-object/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-leads-object/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s leads object differs from lifecycle stage, the default lead pipeline, creating leads from contacts, and pipeline automation.</description>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>HubSpot payment links: sell a product without a quote</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-links/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-links/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot payment links are, the HubSpot payments versus Stripe choice, testing in a sandbox, and attaching a payment link to a form.</description>
+    <category>Commerce Hub</category>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Connect WhatsApp to HubSpot: business accounts, limits, and what syncs</title>
+    <link>https://hubspot.samcbarth.com/articles/whatsapp-in-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/whatsapp-in-hubspot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you need to connect WhatsApp to HubSpot, the business account and verification requirements, what syncs, coexistence, and template limits.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>Translate custom CRM labels in HubSpot for teams that work in other languages</title>
+    <link>https://hubspot.samcbarth.com/articles/crm-data-translations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/crm-data-translations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s custom data translations work: what can be translated, the export and import flow, turning a language on, and who sees translations.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>HubSpot Service Keys: the replacement for private app tokens</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-service-keys/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-service-keys/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot Service Keys are, where to create them, the permission and scope rules, what they cannot do, and how they relate to legacy private apps.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Give each team its own HubSpot record layout with team views</title>
+    <link>https://hubspot.samcbarth.com/articles/record-layout-team-views/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-layout-team-views/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create team views for record layouts in HubSpot, who sees them, the default view, and the subscription needed.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Tidy up HubSpot segments: the Unused tab, folders, and restoring deleted ones</title>
+    <link>https://hubspot.samcbarth.com/articles/unused-segments-and-folders/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unused-segments-and-folders/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to find unused segments in HubSpot, check where a segment is used before deleting, organize segments in folders, and restore recently deleted segments.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Target accounts in HubSpot: pick the companies sales and marketing both work</title>
+    <link>https://hubspot.samcbarth.com/articles/target-accounts-abm/</link>
+    <guid>https://hubspot.samcbarth.com/articles/target-accounts-abm/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s target accounts home does, how to choose target accounts, the ideal customer profile tier property, and syncing target accounts to LinkedIn audiences.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Companies</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Meeting rotations in HubSpot: share inbound meetings fairly across reps</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-rotations-round-robin/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-rotations-round-robin/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot meeting rotations work with round robin scheduling pages, pausing a rep, prioritizing the contact owner, and what happens with deactivated users.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Connect your calendar to HubSpot and see HubSpot tasks in it</title>
+    <link>https://hubspot.samcbarth.com/articles/sync-tasks-to-calendar/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sync-tasks-to-calendar/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What connecting Google or Outlook calendar to HubSpot does, the primary calendar rule, the one-provider limit, and the extra step to show HubSpot tasks in your calendar.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s tracking URL builder: tag links so traffic lands in the right source</title>
+    <link>https://hubspot.samcbarth.com/articles/tracking-url-builder/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tracking-url-builder/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Manage and analyze HubSpot website pages from the pages list</title>
+    <link>https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/</link>
+    <guid>https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the website and landing pages lists are organized, saved views and filters, the Analyze tab reports, and swapping in a custom dashboard.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Send pop-up and non-HubSpot form contacts to another email tool</title>
+    <link>https://hubspot.samcbarth.com/articles/email-sync-to-email-provider/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-sync-to-email-provider/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s email service provider sync does for pop-up forms and non-HubSpot forms, the Mailchimp example, and its one-way limits.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Password protect a HubSpot page, and what it does not protect</title>
+    <link>https://hubspot.samcbarth.com/articles/password-protect-a-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/password-protect-a-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to password protect a HubSpot website or landing page, the subscription it needs, search engine behavior, and the stronger private content option.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>HubSpot marketing email templates: drag and drop, custom, and saved</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-templates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-templates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where marketing email templates live, the drag and drop versus custom split, saving your own templates, uploading an external design with AI, and the subscription for each.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Templates</category>
+  </item>
+  <item>
+    <title>Compare marketing email results on the HubSpot Analyze tab</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-analyze-tab/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-analyze-tab/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the marketing email Analyze tab shows, the filters and date comparison, exporting charts, and comparing individual emails.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Reports</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

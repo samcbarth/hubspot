@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Manage and analyze HubSpot website pages from the pages list - HubSpot Field Notes</title>
+<meta name="description" content="How the website and landing pages lists are organized, saved views and filters, the Analyze tab reports, and swapping in a custom dashboard.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/">
+<meta property="og:title" content="Manage and analyze HubSpot website pages from the pages list">
+<meta property="og:description" content="How the website and landing pages lists are organized, saved views and filters, the Analyze tab reports, and swapping in a custom dashboard.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Manage and analyze HubSpot website pages from the pages list",
+      "description": "How the website and landing pages lists are organized, saved views and filters, the Analyze tab reports, and swapping in a custom dashboard.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Use the pages list and Analyze tab",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Website Pages", "text": "Go to Content, Website Pages."},
+        {"@type": "HowToStep", "name": "Use views", "text": "Switch between All pages, drafts, scheduled and recently published views."},
+        {"@type": "HowToStep", "name": "Filter", "text": "Filter by publish status and domain."},
+        {"@type": "HowToStep", "name": "Analyze", "text": "Open the Analyze tab for page performance reports."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Manage and analyze HubSpot website pages from the pages list", "item": "https://hubspot.samcbarth.com/articles/website-pages-manage-and-analyze/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="website-pages-manage-and-analyze">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pages">Pages</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>Manage and analyze HubSpot website pages from the pages list</h1>
+      <p class="dek">The pages list has two jobs: finding pages, and seeing how they perform. Both live on the same screen.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Analyze tab needs Marketing Hub or Content Hub Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Website pages access; Reports access for the Analyze tab</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Content, Website Pages (and Landing Pages) has a <strong>Manage</strong> tab with saved views for all pages, drafts, scheduled, recently published and updated by me, plus status and domain filters. The <strong>Analyze</strong> tab shows performance reports such as views and bounce rate, and needs Marketing Hub or Content Hub Professional or Enterprise. You can replace the default Analyze tab with one of your own dashboards.</p>
+        </div>
+
+        <h2>1. Manage</h2>
+        <figure class="shot"><a href="pages.webp"><img src="pages.webp" alt="Website pages list with Manage and Analyze tabs, saved views, publish status and domain filters" width="800" height="553" loading="lazy"></a><figcaption>Manage and Analyze tabs (1) and saved views (2).</figcaption></figure>
+
+        <h2>2. Views worth adding</h2>
+        <ul>
+          <li>Drafts older than a few months, to review before Account Cleanup archives them.</li>
+          <li>Pages per domain, if you run more than one.</li>
+          <li>Pages updated by me, for your own work.</li>
+        </ul>
+
+        <h2>3. Analyze</h2>
+        <p>Default reports cover page views, bounce rate, CTA (legacy) actions, and sessions, new contacts and customers over time. Swap in a custom dashboard if your team tracks different metrics. Speed problems are covered in <a href="../speed-up-landing-page/">speeding up a landing page</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/analyze-performance-for-all-pages">HubSpot Knowledge Base: Analyze performance for all pages</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/customize-the-analyze-tab">HubSpot Knowledge Base: Customize the analyze tab</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot's tracking URL builder: tag links so traffic lands in the right source - HubSpot Field Notes</title>
+<meta name="description" content="How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/tracking-url-builder/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/tracking-url-builder/">
+<meta property="og:title" content="HubSpot's tracking URL builder: tag links so traffic lands in the right source">
+<meta property="og:description" content="How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/tracking-url-builder/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot's tracking URL builder: tag links so traffic lands in the right source",
+      "description": "How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/tracking-url-builder/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/tracking-url-builder/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a tracking URL",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the builder", "text": "Go to Settings, Tracking & Analytics, Tracking URLs."},
+        {"@type": "HowToStep", "name": "Create tracking URL", "text": "Enter the page URL, campaign, source and medium."},
+        {"@type": "HowToStep", "name": "Copy it", "text": "Use Actions, Copy tracking URL or Copy short URL."},
+        {"@type": "HowToStep", "name": "Check traffic", "text": "Review sessions in traffic analytics under UTM parameters."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot's tracking URL builder: tag links so traffic lands in the right source", "item": "https://hubspot.samcbarth.com/articles/tracking-url-builder/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="tracking-url-builder">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Campaigns">Campaigns</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot's tracking URL builder: tag links so traffic lands in the right source</h1>
+      <p class="dek">A tracking URL is your page link plus UTM parameters. HubSpot's builder saves them so the team reuses the same values.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing reports access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Settings, Tracking &amp; Analytics, <strong>Tracking URLs</strong> builds and stores links with UTM parameters for campaign, source, medium, term and content. Copy the full or short URL from Actions, or build one from a campaign so it uses the campaign's UTM value. If a tracked link shows no sessions, check the report's time frame, that the destination page has the tracking code, and that the URL is formatted correctly.</p>
+        </div>
+
+        <h2>1. The builder</h2>
+        <figure class="shot"><a href="builder.webp"><img src="builder.webp" alt="Tracking URL Builder empty state with Create tracking URL buttons" width="800" height="553" loading="lazy"></a><figcaption>Create tracking URL (1).</figcaption></figure>
+
+        <h2>2. Fields</h2>
+        <ul>
+          <li><strong>Campaign</strong> and <strong>Source</strong> decide where the visit is bucketed.</li>
+          <li><strong>Medium</strong> is optional, typically the specific ad, post or email.</li>
+          <li><strong>Term</strong> is optional, for paid keywords.</li>
+        </ul>
+        <p>Social posts published through HubSpot already get tracking, and you cannot use custom tracking URLs there. Connected ad accounts can add UTMs automatically. See <a href="../connect-ad-accounts/">connecting ad accounts</a>.</p>
+
+        <h2>3. No sessions?</h2>
+        <p>Widen the date range, confirm the tracking code is on the destination page, and check the URL. Campaigns with contacts but no sessions are covered in <a href="../campaign-zero-sessions/">campaign shows zero sessions</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/settings/how-do-i-create-a-tracking-url">HubSpot Knowledge Base: Create tracking URLs</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/traffic-analytics-faq">HubSpot Knowledge Base: Web traffic analytics FAQ</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

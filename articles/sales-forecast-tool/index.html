@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot's forecast tool: categories, submissions, and forecast types - HubSpot Field Notes</title>
+<meta name="description" content="How the HubSpot forecast tool works: deal stage versus forecast category views, the default categories, submitting forecasts, and creating forecast types with other date and amount properties.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/sales-forecast-tool/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/sales-forecast-tool/">
+<meta property="og:title" content="HubSpot's forecast tool: categories, submissions, and forecast types">
+<meta property="og:description" content="How the HubSpot forecast tool works: deal stage versus forecast category views, the default categories, submitting forecasts, and creating forecast types with other date and amount properties.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/sales-forecast-tool/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot's forecast tool: categories, submissions, and forecast types",
+      "description": "How the HubSpot forecast tool works: deal stage versus forecast category views, the default categories, submitting forecasts, and creating forecast types with other date and amount properties.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/sales-forecast-tool/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/sales-forecast-tool/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set up and use the forecast tool",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Set categories", "text": "In Settings, Objects, Forecast, edit forecast categories and pipeline mappings."},
+        {"@type": "HowToStep", "name": "Set goals", "text": "Create forecastable revenue goals so the Goal and Gap figures fill in."},
+        {"@type": "HowToStep", "name": "Submit", "text": "In Sales, Forecast, click Submit in the Forecast submission column."},
+        {"@type": "HowToStep", "name": "Add forecast types", "text": "Use Actions, Manage forecast types for other date or amount properties."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot's forecast tool: categories, submissions, and forecast types", "item": "https://hubspot.samcbarth.com/articles/sales-forecast-tool/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="sales-forecast-tool">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Deals">Deals</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot's forecast tool: categories, submissions, and forecast types</h1>
+      <p class="dek">The forecast page answers how much will close this period. Its numbers come from your goals, deal amounts, close dates and categories.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Sales Hub; check your subscription for the forecast tool</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Forecast access; Super Admin to manage forecast types</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Sales, <strong>Forecast</strong> shows goal, closed won, gap and forecast submission per team, with a Deal stage or Forecast category view. HubSpot's default categories are Pipeline, Best case, Commit and Most likely, editable through the Forecast category property. The default forecast uses Amount and Close date, and Super Admins can add forecast types using other date and currency amount properties. Goal and Gap only fill in once forecastable goals exist.</p>
+        </div>
+
+        <h2>1. The page</h2>
+        <p>My demo portal shows $0 everywhere for the Onboarding Pipeline this month, because there are no goals or open deals in that pipeline.</p>
+        <figure class="shot"><a href="forecast.webp"><img src="forecast.webp" alt="Forecast page with Deal stage and Forecast category toggle, pipeline and close date filters, and team goal and closed won figures" width="800" height="553" loading="lazy"></a><figcaption>Deal stage or Forecast category (1), and goal, closed won, gap and submission (2).</figcaption></figure>
+
+        <h2>2. Categories</h2>
+        <p>Forecast categories group deals by likelihood to close. Edit them in <span class="ui">Settings &gt; Objects &gt; Forecast</span>, and map stages per pipeline on the Pipelines tab. Reps can override a deal's category on the record.</p>
+
+        <h2>3. Submissions and types</h2>
+        <ul>
+          <li>Click <span class="ui">Submit</span> in the Forecast submission column, choose pipeline and period, and enter an amount.</li>
+          <li><span class="ui">Actions &gt; Edit submission schedule</span> sets when submissions are due.</li>
+          <li><span class="ui">Actions &gt; Manage forecast types</span> adds forecasts on other date and currency properties, for example a renewal date.</li>
+          <li>Submission history shows forecast accuracy over time.</li>
+        </ul>
+        <p>Related: <a href="../sales-goals/">sales goals</a> and <a href="../deal-stage-probability/">deal stage probability</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/forecast/use-the-forecast-tool">HubSpot Knowledge Base: Use the forecast tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/forecast/set-up-the-forecast-tool">HubSpot Knowledge Base: Set up the forecast tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/forecast/create-a-forecast-to-view-multiple-outcomes">HubSpot Knowledge Base: Create a forecast to view multiple outcomes</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
