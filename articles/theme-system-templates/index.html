@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template - HubSpot Field Notes</title>
+<meta name="description" content="Which system templates a HubSpot theme should ship, the templateType values they use, where to assign them, and how to spot a system page set to a template that no longer exists.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/theme-system-templates/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/theme-system-templates/">
+<meta property="og:title" content="HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template">
+<meta property="og:description" content="Which system templates a HubSpot theme should ship, the templateType values they use, where to assign them, and how to spot a system page set to a template that no longer exists.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/theme-system-templates/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template",
+      "description": "Which system templates a HubSpot theme should ship, the templateType values they use, where to assign them, and how to spot a system page set to a template that no longer exists.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/theme-system-templates/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/theme-system-templates/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Assign working system page templates",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open System Pages", "text": "Go to Settings, Content, Pages and click the System Pages tab."},
+        {"@type": "HowToStep", "name": "Check each dropdown", "text": "Look at the 404, 500, password prompt and search results selections for a deleted template warning."},
+        {"@type": "HowToStep", "name": "Pick theme templates", "text": "Select your theme's error, password prompt and search results templates."},
+        {"@type": "HowToStep", "name": "Save and test", "text": "Click Save, then visit a URL that does not exist on your domain."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template", "item": "https://hubspot.samcbarth.com/articles/theme-system-templates/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="theme-system-templates">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Content Hub</span></div>
+      <h1>HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template</h1>
+      <p class="dek">My own portal's 404, 500 and search results pages were set to HubSpot templates that HubSpot now reports as deleted. Nothing flagged it until I opened the setting.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Content Hub; Starter portals use HTML + HubL system templates</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Website settings access; Design Manager access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>A theme should ship system templates for errors (<code>error_page</code>, used for 404 and 500), <code>password_prompt_page</code>, <code>search_results_page</code>, and the email subscription pages (<code>email_subscription_preferences_page</code>, <code>email_backup_unsubscribe_page</code>, <code>email_subscriptions_confirmation_page</code>). Shipping them is half the job. You also assign them in <span class="ui">Settings &gt; Content &gt; Pages &gt; System Pages</span>. In my portal that tab showed the 404 page set to a <code>@hubspot/session</code> template with the message that it had been deleted.</p>
+        </div>
+
+        <h2>1. What I found</h2>
+        <p>While checking my theme, I opened <a class="hs-link" data-hs="/settings/{portalId}/website/pages/all-domains/system-pages" href="https://app.hubspot.com/l/settings/website/pages/all-domains/system-pages"><span class="ui">System Pages</span></a>. The 404 dropdown showed <code>@hubspot/session/templates/system/404.html</code> with the message "This template has been deleted." The 500 and search results pages were set the same way. Nothing else in the portal had warned me.</p>
+        <figure class="shot"><a href="systempages.webp"><img src="systempages.webp" alt="System Pages tab with the 404 error page dropdown set to a deleted @hubspot/session template" width="800" height="553" loading="lazy"></a><figcaption>System Pages (1), the 404 dropdown (2), and the deleted template warning (3).</figcaption></figure>
+
+        <h2>2. The template types</h2>
+        <p>HubSpot's developer docs list these system template types. The value goes in the template's annotation as <code>templateType</code>:</p>
+        <ul>
+          <li><code>error_page</code>: 404 and 500 pages.</li>
+          <li><code>password_prompt_page</code>: shown before a password protected page.</li>
+          <li><code>search_results_page</code>: the built-in site search listing.</li>
+          <li><code>email_subscription_preferences_page</code>: must contain the <code>email_subscriptions</code> tag.</li>
+          <li><code>email_backup_unsubscribe_page</code>: must contain the <code>email_simple_subscription</code> tag.</li>
+          <li><code>email_subscriptions_confirmation_page</code>: where <code>unsubscribe_link_all</code> sends people.</li>
+          <li>Membership pages (login, register, reset) if you use memberships.</li>
+        </ul>
+        <p>The three email types need the <code>_page</code> suffix. I learned that from the upload validator, covered in <a href="../theme-upload-validation-errors/">theme upload validation errors</a>.</p>
+        <figure class="shot"><a href="404code.webp"><img src="404code.webp" alt="404.html in the Design Manager with the templateType error_page annotation highlighted" width="800" height="553" loading="lazy"></a><figcaption>My theme's 404 template. The annotation (1) sets templateType to error_page.</figcaption></figure>
+
+        <h2>3. Assign them</h2>
+        <ol>
+          <li>Go to <span class="ui">Settings &gt; Content &gt; Pages</span> and click <span class="ui">System Pages</span>.</li>
+          <li>Use the dropdowns for 404 error page, 500 error page, Password prompt page and Search results page.</li>
+          <li>Click <span class="ui">Save</span>.</li>
+        </ol>
+        <p>HubSpot's article notes that custom system templates can be selected for any domain connected as a primary domain, and that Content Hub Starter uses HTML + HubL templates for system pages instead of drag and drop.</p>
+
+        <h2>4. Test it</h2>
+        <p>Visit a made-up URL on your domain. If you get HubSpot's generic page instead of yours, the setting did not save or the domain has its own setting. The domain picker at the top of that settings page switches between the default and each domain.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/templates/overview">HubSpot developer docs: Templates overview (template types)</a></li>
+          <li><a href="https://knowledge.hubspot.com/design-manager/use-system-templates-to-customize-error-subscription-and-password-prompt-pages">HubSpot Knowledge Base: Use system page templates</a></li>
+          <li><a href="https://github.com/HubSpot/cms-theme-boilerplate/blob/main/src/templates/system/404.html">GitHub, HubSpot cms-theme-boilerplate 404 template</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

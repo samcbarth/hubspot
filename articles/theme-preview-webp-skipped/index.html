@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>hs cms upload skips .webp files, so theme images vanish without an error - HubSpot Field Notes</title>
+<meta name="description" content="Why WebP images in a HubSpot theme folder never reach the Design Manager, how to spot it, and where WebP files should live instead.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/">
+<meta property="og:title" content="hs cms upload skips .webp files, so theme images vanish without an error">
+<meta property="og:description" content="Why WebP images in a HubSpot theme folder never reach the Design Manager, how to spot it, and where WebP files should live instead.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "hs cms upload skips .webp files, so theme images vanish without an error",
+      "description": "Why WebP images in a HubSpot theme folder never reach the Design Manager, how to spot it, and where WebP files should live instead.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Keep WebP images out of a HubSpot theme upload",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check the theme tree", "text": "After hs cms upload, open the theme in the Design Manager and confirm every image file arrived."},
+        {"@type": "HowToStep", "name": "Keep theme images to JPEG, PNG or SVG", "text": "Use those formats for anything the theme itself references, including the theme preview image."},
+        {"@type": "HowToStep", "name": "Put WebP in the File Manager", "text": "Upload WebP files through Files, then pick them in module image fields."},
+        {"@type": "HowToStep", "name": "Search for stale references", "text": "Search the theme for .webp paths so no template points at a file that never uploaded."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "hs cms upload skips .webp files, so theme images vanish without an error", "item": "https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="theme-preview-webp-skipped">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Content Hub</span></div>
+      <h1>hs cms upload skips .webp files, so theme images vanish without an error</h1>
+      <p class="dek">I converted a theme's logos to WebP to save weight. The upload reported success and the logos were gone.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any portal that can host a coded theme</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Manager access; HubSpot CLI with a personal access key</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>When I uploaded my own theme with <code>hs cms upload</code>, the <code>.webp</code> files were skipped and nothing failed loudly. HubSpot's CLI repository has an open issue saying the Design Manager does not accept WebP, while the Knowledge Base lists WebP as a supported type in the Files tool. So keep theme assets (including the preview image in <code>theme.json</code>) as JPEG, PNG or SVG, and upload WebP images to the File Manager, then reference them from module image fields.</p>
+        </div>
+
+        <h2>1. What happened</h2>
+        <p>I was building a theme for my own site. Before uploading, I resized the client logo files and converted 46 of them to WebP, which took the logo folder from about 1 MB to about 0.4 MB. <code>hs cms upload</code> finished and the theme validated. On the page, every logo was missing. The theme tree in <a class="hs-link" data-hs="/design-manager/{portalId}" href="https://app.hubspot.com/l/design-manager"><span class="ui">the Design Manager</span></a> had the folders but none of the WebP files.</p>
+        <figure class="shot"><a href="tree.webp"><img src="tree.webp" alt="Sam DSH theme folder tree in the Design Manager with css, fonts, images, js, modules and templates folders" width="800" height="553" loading="lazy"></a><figcaption>The uploaded theme tree. Check the images folder (1) after every upload that adds new file types.</figcaption></figure>
+
+        <h2>2. Why</h2>
+        <p>An issue on HubSpot's CLI repository reports that the Design Manager does not accept WebP. HubSpot's supported file types article lists WebP as an image type for the Files tool, which is a different store. The CLI skips what the Design Manager will not take, so the upload looks clean. I confirmed it the plain way: the files were in my local folder and not in the Design Manager.</p>
+
+        <h2>3. Where to put WebP instead</h2>
+        <ul>
+          <li><strong>Theme assets</strong> (icons, background art, the theme preview image): JPEG, PNG or SVG. My <code>theme.json</code> points <code>screenshot_path</code> at a JPEG for this reason.</li>
+          <li><strong>Content images</strong> (logos, photos editors swap): upload to the File Manager and pick them in an image field on the module. That is where my client logos ended up. They are customer data, not theme files, so the logo wall ships empty and editors add logos per page.</li>
+        </ul>
+        <figure class="shot"><a href="themejson.webp"><img src="themejson.webp" alt="theme.json open in the Design Manager with the screenshot_path line pointing at a JPEG" width="800" height="553" loading="lazy"></a><figcaption>theme.json in the Design Manager. The preview image path (1) points at a JPEG.</figcaption></figure>
+
+        <h2>4. A quick check after upload</h2>
+        <pre><code># any WebP still referenced by the theme?
+grep -rn "\.webp" my-theme/templates my-theme/modules my-theme/css</code></pre>
+        <p>For other upload surprises, see <a href="../theme-upload-validation-errors/">theme upload validation errors</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://github.com/HubSpot/hubspot-cli/issues/1569">GitHub, HubSpot/hubspot-cli issue 1569</a></li>
+          <li><a href="https://knowledge.hubspot.com/files/supported-file-types">HubSpot Knowledge Base: Supported file types</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

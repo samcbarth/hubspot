@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions - HubSpot Field Notes</title>
+<meta name="description" content="What HubSpot's AEO tool tracks, how many prompts your plan allows, the recommendation types, and how I triaged a set of outreach recommendations for an agency.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/">
+<meta property="og:title" content="HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions">
+<meta property="og:description" content="What HubSpot's AEO tool tracks, how many prompts your plan allows, the recommendation types, and how I triaged a set of outreach recommendations for an agency.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions",
+      "description": "What HubSpot's AEO tool tracks, how many prompts your plan allows, the recommendation types, and how I triaged a set of outreach recommendations for an agency.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Work through HubSpot AEO recommendations",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Set up the brand", "text": "Open Marketing, AEO and enter the brand and domain to track."},
+        {"@type": "HowToStep", "name": "Review prompts", "text": "Check the generated prompts and add your own up to your plan's limit."},
+        {"@type": "HowToStep", "name": "Open Recommendations", "text": "Filter to Outreach, Owned content, Social amplification or Site audit."},
+        {"@type": "HowToStep", "name": "Triage before acting", "text": "For each outreach target, check how to get in, whether it charges for placement, and whether the audience fits."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions", "item": "https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="aeo-prompts-and-outreach-recommendations">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Website">Website</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions</h1>
+      <p class="dek">The tool listed five sites to get mentioned on. One of them was not outreach at all, and all five were tagged affiliate.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional or Enterprise, or HubSpot AEO; some features use HubSpot Credits</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot AEO tracks prompts, the questions buyers ask answer engines, and shows whether your brand appears and which competitors and sources are cited. HubSpot's KB lists Marketing Hub Professional or Enterprise or HubSpot AEO, with prompt limits by plan. Our agency's portal showed 25 of 25 prompts used on Professional. Recommendations come in Site audit, Owned content, Social amplification and Outreach types. Triage outreach before you email anyone: one of our five was a directory profile we control, and all five listicles were tagged affiliate.</p>
+        </div>
+
+        <h2>1. What it tracks</h2>
+        <p>HubSpot's KB says AEO uses prompts to determine whether your brand appears, and which competitors are mentioned, in answer engine responses. Prompts are generated from your HubSpot data, audience and offerings, and you can add your own. Each prompt gets one buyer journey phase. The dashboard shows total prompts, average visibility, responses and citations. Find it under <span class="ui">Marketing &gt; AEO</span>.</p>
+        <figure class="shot"><a href="setup.webp"><img src="setup.webp" alt="AEO Beta setup screen with brand and domain fields" width="800" height="553" loading="lazy"></a><figcaption>AEO (1) and what it covers (2). In our demo portal it starts with a brand and domain.</figcaption></figure>
+
+        <h2>2. Prompt limits</h2>
+        <p>Limits vary by subscription. Our agency's Marketing Hub Professional portal showed 25 of 25 prompts in use. Choose prompts a buyer would actually type, not only your brand name.</p>
+
+        <h2>3. Recommendation types</h2>
+        <ul>
+          <li><strong>Site audit:</strong> content and technical issues on your pages.</li>
+          <li><strong>Owned content:</strong> create or update pages on your own site.</li>
+          <li><strong>Social amplification:</strong> Reddit threads, LinkedIn or YouTube content based on citation trends.</li>
+          <li><strong>Outreach:</strong> third-party publishers to contact about being included.</li>
+        </ul>
+        <p>Each one can be marked in progress or dismissed, and assigned.</p>
+
+        <h2>4. Triage outreach before sending anything</h2>
+        <p>Our portal listed five outreach targets. What checking each one turned up:</p>
+        <ul>
+          <li><strong>One was not outreach.</strong> It was HubSpot's own partner directory filtered to our state. The fix was our directory profile: locations, services, industries, and profile copy naming the city and state.</li>
+          <li><strong>All five were tagged affiliate.</strong> Listicles that make money from placement may answer with a price. Decide whether you will pay before you email.</li>
+          <li><strong>Check fit.</strong> One list ranked enterprise agencies. We pitched their mid-market list instead.</li>
+          <li><strong>Look for the real way in.</strong> One site had a contribution request page, another only a general marketing inbox.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/seo/review-and-manage-aeo-prompts">HubSpot Knowledge Base: Review and manage AEO prompts</a></li>
+          <li><a href="https://knowledge.hubspot.com/seo/review-and-manage-aeo-recommendations">HubSpot Knowledge Base: Review and manage AEO recommendations</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals - HubSpot Field Notes</title>
+<meta name="description" content="How we turned job postings for HubSpot and CRM roles into a scored company list in HubSpot, and where HubSpot's own Buyer Intent signals fit.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/">
+<meta property="og:title" content="Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals">
+<meta property="og:description" content="How we turned job postings for HubSpot and CRM roles into a scored company list in HubSpot, and where HubSpot's own Buyer Intent signals fit.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals",
+      "description": "How we turned job postings for HubSpot and CRM roles into a scored company list in HubSpot, and where HubSpot's own Buyer Intent signals fit.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Track hiring signals in HubSpot",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a property group", "text": "Add a Hiring Signals group with properties for score, role, source, posting URL and date."},
+        {"@type": "HowToStep", "name": "Feed it", "text": "Pull matching job posts from job boards or alerts and write them to the company by domain."},
+        {"@type": "HowToStep", "name": "Build a list", "text": "Create an active company list for a minimum score posted in the last 90 days."},
+        {"@type": "HowToStep", "name": "Add HubSpot's signals", "text": "Track the same companies in Buyer Intent to see visits, research and news signals."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals", "item": "https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="track-companies-hiring-for-hubspot">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Companies">Companies</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals</h1>
+      <p class="dek">A company posting a HubSpot admin job has the problem, the budget and the urgency. We wanted those companies in the CRM with a score.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Buyer Intent features vary by subscription and use HubSpot Credits; custom properties and lists work on all tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Property create access; list create access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Job posts for HubSpot, CRM or RevOps roles tell you a company has the problem now. We built it in HubSpot as a <strong>Hiring Signals</strong> company property group (seven properties, including a score and posting date), fed it from job board searches, matched and deduplicated companies by domain, and built an active company list for scored companies with a post in the last 90 days. HubSpot's <strong>Buyer Intent</strong> adds its own signals on tracked companies, which show on the activity timeline and can be used in workflows, segments and lead scoring.</p>
+        </div>
+
+        <h2>1. Why job posts</h2>
+        <p>For our agency, a company advertising a HubSpot admin or CRM owner role has a HubSpot problem, budget approved for it, and a gap until the hire starts. Those companies were a better outreach list than generic firmographic matches.</p>
+
+        <h2>2. The HubSpot side</h2>
+        <ul>
+          <li><strong>Properties:</strong> a Hiring Signals company property group with seven properties, including the score, matched role, source, posting URL and posting date.</li>
+          <li><strong>A note:</strong> the source list and scoring model written down in the portal, so the score is explainable.</li>
+          <li><strong>A list:</strong> an active company list filtered on score and a posting date in the last 90 days. The date filter took several attempts through the Lists API before it was accepted.</li>
+        </ul>
+
+        <h2>3. Feeding it</h2>
+        <p>We generated saved searches across job boards for HubSpot ownership, ops roles and competitor CRMs, pulled results from a jobs API and from company applicant tracking pages, and resolved each posting to a company domain. Deduplicating by domain mattered more than anything else, since one company posts the same role on several boards. We also filtered out staffing agencies posting on behalf of clients.</p>
+
+        <h2>4. Where HubSpot's Buyer Intent fits</h2>
+        <p>HubSpot's Buyer Intent tool tracks signals on companies you select: visitor intent, research intent, and news signals. HubSpot's KB covers custom signals, intent credits, and how far back custom signals look. Tracked signals appear as events on record timelines and can be used as workflow triggers, segment filters and lead scoring criteria.</p>
+        <figure class="shot"><a href="signals.webp"><img src="signals.webp" alt="Buyer Intent Signals tab listing tracked companies with signal counts and signal types" width="800" height="553" loading="lazy"></a><figcaption>Buyer Intent, Signals tab (1), with signal counts and types per company (2).</figcaption></figure>
+        <p>Our own job post data stays in our own properties. Buyer Intent adds behavior on top for the same companies.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/data-management/buyer-intent-intent-signals-and-custom-signals-frequently-asked-questions">HubSpot Knowledge Base: Buyer intent, intent signals and custom signals FAQ</a></li>
+          <li><a href="https://knowledge.hubspot.com/data-management/create-custom-signals">HubSpot Knowledge Base: Create custom signals</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

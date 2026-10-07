@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubL: a variable set inside a for loop is gone after the loop ends - HubSpot Field Notes</title>
+<meta name="description" content="Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot's docs, and the CSS fallback I used instead.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/">
+<meta property="og:title" content="HubL: a variable set inside a for loop is gone after the loop ends">
+<meta property="og:description" content="Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot's docs, and the CSS fallback I used instead.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubL: a variable set inside a for loop is gone after the loop ends",
+      "description": "Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot's docs, and the CSS fallback I used instead.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Carry a value out of a HubL for loop",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a dict before the loop", "text": "Set an object such as state = {\"found\": false} outside the loop."},
+        {"@type": "HowToStep", "name": "Update it inside", "text": "Use {% do state.update({\"found\": true}) %} in the loop instead of set."},
+        {"@type": "HowToStep", "name": "Read it after", "text": "Check state.found after endfor."},
+        {"@type": "HowToStep", "name": "Or skip HubL", "text": "If the goal is only to hide empty markup, a CSS :has() rule can do it."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubL: a variable set inside a for loop is gone after the loop ends", "item": "https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubl-set-inside-for-loop">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Content Hub</span></div>
+      <h1>HubL: a variable set inside a for loop is gone after the loop ends</h1>
+      <p class="dek">I wrote a guard that set a flag inside a loop. The flag never changed, so the guard never did anything.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any portal with coded modules or templates</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Manager access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's loop docs say any variables defined within loops are limited to the scope of that loop. So <code>{% set has_logos = true %}</code> inside the loop does not change the <code>has_logos</code> you set before it. The pattern in HubSpot's variables docs is to create a dict outside the loop and change it with <code>{% do obj.update({...}) %}</code>. For my logo wall I skipped HubL and hid the empty list with CSS.</p>
+        </div>
+
+        <h2>1. The code that did nothing</h2>
+        <p>My logo wall module renders a list of client logos. Editors can leave it empty, and an empty list still drew a bordered box. My first fix:</p>
+        <pre><code>{% set has_logos = false %}
+{% for item in module.logos %}
+  {% if item.logo.src %}{% set has_logos = true %}{% endif %}
+{% endfor %}
+{% if has_logos %} ...the list... {% endif %}</code></pre>
+        <p><code>has_logos</code> stayed false after the loop, so the list never rendered at all.</p>
+        <figure class="shot"><a href="module.webp"><img src="module.webp" alt="sb-logo-wall module.html in the Design Manager showing a for loop and a set statement inside it" width="800" height="553" loading="lazy"></a><figcaption>The live module: the loop (1) and a set inside it (2). That set is fine because it is only used inside the loop.</figcaption></figure>
+
+        <h2>2. The rule</h2>
+        <p>HubSpot's loop docs: variables defined within loops are limited to the scope of that loop and cannot be called from outside of it. You can read outer variables inside the loop, but a <code>set</code> inside creates a new one that disappears at <code>endfor</code>.</p>
+
+        <h2>3. The pattern that carries a value out</h2>
+        <p>HubSpot's variables docs show changing a dict defined outside the loop with <code>do</code>:</p>
+        <pre><code>{% set state = {"found": false} %}
+{% for item in module.logos %}
+  {% if item.logo.src %}{% do state.update({"found": true}) %}{% endif %}
+{% endfor %}
+{% if state.found %} ...the list... {% endif %}</code></pre>
+
+        <h2>4. What I shipped instead</h2>
+        <p>The goal was only to hide an empty box, so I removed the HubL guard and added one CSS rule to the theme stylesheet:</p>
+        <pre><code>.logo-wall:not(:has(li)) { display: none; }</code></pre>
+        <p>It also covers an editor adding rows without picking images, because the loop skips those rows and the list ends up with no items.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/loops">HubSpot developer docs: For loops</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/variables-macros-syntax">HubSpot developer docs: HubL variables and macros syntax</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

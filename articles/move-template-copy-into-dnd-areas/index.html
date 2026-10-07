@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it - HubSpot Field Notes</title>
+<meta name="description" content="Why text written directly in a template cannot be edited in the page editor, the two ways I moved a landing page's copy into editable modules, and what to check after.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/">
+<meta property="og:title" content="Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it">
+<meta property="og:description" content="Why text written directly in a template cannot be edited in the page editor, the two ways I moved a landing page's copy into editable modules, and what to check after.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it",
+      "description": "Why text written directly in a template cannot be edited in the page editor, the two ways I moved a landing page's copy into editable modules, and what to check after.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Move hard-coded template copy into editable modules",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the fixed copy", "text": "Search the template for headings and paragraphs written as plain HTML."},
+        {"@type": "HowToStep", "name": "Wrap each block in a module", "text": "Give each block a dnd_area with a rich text module default, or build custom modules with fields."},
+        {"@type": "HowToStep", "name": "Move images too", "text": "Use image modules or image fields so photos can be swapped in the editor."},
+        {"@type": "HowToStep", "name": "Create a fresh page", "text": "Build a new page from the updated template and check every block opens in the editor."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it", "item": "https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="move-template-copy-into-dnd-areas">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Templates">Templates</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Content Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it</h1>
+      <p class="dek">The page looked finished, but changing one sentence needed a developer. All the copy lived in the template file.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Portals with CMS pages; check your hub tier for template and page limits</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Manager access; HubSpot CLI</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Anything written straight into a template file is fixed for every page that uses it. The page editor can only change what lives in modules. For our own landing page I moved the copy twice: first into many small <code>dnd_area</code> blocks, each holding a rich text module with the old copy as its default, then into a theme with eight custom modules (content fields, repeaters and style controls) inside one drag and drop area. The second version is easier to edit and to reuse.</p>
+        </div>
+
+        <h2>1. The problem</h2>
+        <p>Our agency's offer landing page was first built as one coded template with all the copy, images and the form written into the HTML. In the editor there was nothing to click. The copy was baked into the template.</p>
+
+        <h2>2. First pass: a drag and drop area per block</h2>
+        <p>I rebuilt the template so every copy block, the form and the footer text sat in its own drag and drop area with a rich text or form module. Layout and styling stayed in the template:</p>
+        <pre><code>&lt;div class="hero-copy"&gt;
+  {% dnd_area "hero_copy" label="Hero copy" %}
+    {% dnd_section %}
+      {% dnd_module path="@hubspot/rich_text"
+         html="&lt;h1&gt;The headline&lt;/h1&gt;&lt;p&gt;The lead paragraph.&lt;/p&gt;" %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+&lt;/div&gt;</code></pre>
+        <p>Images got the same treatment with <code>@hubspot/linked_image</code> modules, so each photo became swappable. It worked, but the template ended up with about twenty separately named areas, and editors still had to edit HTML-ish rich text to keep classes like the eyebrow style.</p>
+
+        <h2>3. Second pass: custom modules in one area</h2>
+        <p>The version we kept is a small theme with eight custom modules (hero, badge strip, pricing cards, checklist, testimonial, comparison cards, form section, footer) and a template whose body is one <code>dnd_area</code> with each module in its own full width section. Each module has plain fields (eyebrow, heading, body, buttons, image) on the Content tab and style controls on the Styles tab. Editors fill in fields instead of editing markup.</p>
+        <figure class="shot"><a href="fields.webp"><img src="fields.webp" alt="Page editor with a hero module selected, showing Eyebrow, Headline and Intro fields" width="800" height="553" loading="lazy"></a><figcaption>The same idea in my own theme: page copy lives in module fields (1), including rich text (2).</figcaption></figure>
+
+        <h2>4. After the move</h2>
+        <ul>
+          <li>Build a new page from the new template. When we switched, we created a new draft and renamed and moved the old draft to a new slug, rather than reworking the old page.</li>
+          <li>Click every block in the editor. If something does not select, it is still in the template.</li>
+          <li>Decide what should stay fixed. Our first pass kept the logo in the template on purpose.</li>
+        </ul>
+        <p>If editors also need to change fonts per block, see <a href="../module-font-controls-override-theme/">module font controls that win over the theme</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/tags/dnd-areas">HubSpot developer docs: Drag and drop areas HubL tags</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/fields/module-theme-fields">HubSpot developer docs: Module and theme fields</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

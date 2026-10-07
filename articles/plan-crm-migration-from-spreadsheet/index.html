@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean - HubSpot Field Notes</title>
+<meta name="description" content="A step-by-step plan for moving contacts and companies from exported systems into HubSpot: count real people first, choose match keys, stage, run a small canary, and keep a rollback file.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/">
+<meta property="og:title" content="Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean">
+<meta property="og:description" content="A step-by-step plan for moving contacts and companies from exported systems into HubSpot: count real people first, choose match keys, stage, run a small canary, and keep a rollback file.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean",
+      "description": "A step-by-step plan for moving contacts and companies from exported systems into HubSpot: count real people first, choose match keys, stage, run a small canary, and keep a rollback file.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Plan a migration into HubSpot",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Count real records", "text": "Work out how many real people and companies the source holds before mapping anything."},
+        {"@type": "HowToStep", "name": "Pick match keys", "text": "Choose the keys that link source rows to existing HubSpot records, and test how unique they are."},
+        {"@type": "HowToStep", "name": "Decide conflict rules", "text": "Pick which system wins on disagreement and export every conflict for review."},
+        {"@type": "HowToStep", "name": "Load in stages", "text": "Run a small canary batch, check it, then load the rest with a rollback file."},
+        {"@type": "HowToStep", "name": "Keep new records non-marketing", "text": "Create migrated contacts as non-marketing so no campaign sends by accident."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean", "item": "https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="plan-crm-migration-from-spreadsheet">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Imports">Imports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean</h1>
+      <p class="dek">A community bank's banking platform export had 15,820 logins. After cleanup it was 14,251 people. Planning for that gap is most of a migration.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Import access; property create access; Super Admin to set marketing contact status</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Before importing, find out how many real people and companies the source actually holds. A bank's export of 15,820 logins was 14,251 people, because 1,483 email addresses were shared between users. Then choose match keys and test them: the bank's two systems shared no common ID, so matching went email first, then phone plus last name, because one phone number appeared on 311 users. Load a 25-record canary before the full run, keep every loader re-runnable, create new contacts as non-marketing, and export conflicts for a person to review.</p>
+        </div>
+
+        <h2>1. Count real records first</h2>
+        <p>The bank's export had one row per online banking login. Several family members or business staff often shared one email address. Importing logins as contacts would have merged unrelated people on email. The rules we set:</p>
+        <ul>
+          <li>Identical names across logins on one email merge into one contact.</li>
+          <li>Different people on one email: one keeps the contact, the rest get a shared-email field so nothing is lost.</li>
+          <li>Role mailboxes like <code>info@</code> go to the company record instead of becoming an invented person.</li>
+        </ul>
+        <figure class="shot"><a href="integration.webp"><img src="integration.webp" alt="Data integration page with Import a file, Sync from apps and a Monitor your imports section" width="800" height="553" loading="lazy"></a><figcaption>Data integration: one-time file imports (1) and the import history you will check after each stage (2).</figcaption></figure>
+
+        <h2>2. Pick and test match keys</h2>
+        <p>The bank's CRM and its banking platform shared no common key. Email matched most records. For the rest we used phone plus last name, not phone alone, because a single phone number appeared on 311 different users. Measure how unique a key is before trusting it.</p>
+
+        <h2>3. Decide who wins</h2>
+        <p>On conflict, the existing system's value stayed, and all 1,315 disagreements went to a CSV for a person to review. Silent overwrites are what make migrated data untrustworthy.</p>
+
+        <h2>4. Load in stages</h2>
+        <ul>
+          <li><strong>Canary:</strong> push 25 deliberately varied records first, then look at them in HubSpot.</li>
+          <li><strong>Re-runnable loaders:</strong> each step checks what is already in the portal first, so a crash mid-load can resume without duplicates.</li>
+          <li><strong>Rollback file:</strong> record every ID created so a bad batch can be removed.</li>
+          <li><strong>Non-marketing by default:</strong> every new contact was created as non-marketing, and that field was never written on existing contacts.</li>
+        </ul>
+        <p>For one-off spreadsheet loads, HubSpot's importer can do much of this. Advanced imports cover all objects and associations.</p>
+        <figure class="shot"><a href="import.webp"><img src="import.webp" alt="Import start screen with Quick import, Advanced imports and Repeat a past import options" width="800" height="553" loading="lazy"></a><figcaption>Advanced imports (1) handle multiple objects and associations.</figcaption></figure>
+
+        <h2>5. After the load</h2>
+        <p>The last phase built segments from the new data. Build a few check lists too, such as contacts with no company or companies with no owner, and expect them to be empty. Related: <a href="../duplicates-after-import/">duplicates after an import</a> and <a href="../find-records-from-an-import/">finding the records from an import</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/import-and-export/import-objects">HubSpot Knowledge Base: Import records and activities</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/set-up-your-import-file">HubSpot Knowledge Base: Set up your import file</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

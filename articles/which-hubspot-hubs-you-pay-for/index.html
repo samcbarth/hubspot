@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>How to tell which HubSpot hubs and tiers you actually pay for - HubSpot Field Notes</title>
+<meta name="description" content="Where to see your HubSpot subscription, why the API and feature probes do not answer it, and why a portal running trials can show Free on the billing page.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/">
+<meta property="og:title" content="How to tell which HubSpot hubs and tiers you actually pay for">
+<meta property="og:description" content="Where to see your HubSpot subscription, why the API and feature probes do not answer it, and why a portal running trials can show Free on the billing page.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "How to tell which HubSpot hubs and tiers you actually pay for",
+      "description": "Where to see your HubSpot subscription, why the API and feature probes do not answer it, and why a portal running trials can show Free on the billing page.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Check your HubSpot subscription",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Account & Billing", "text": "Click your account name, then Account & Billing, or use the settings link to billing."},
+        {"@type": "HowToStep", "name": "Read the Overview", "text": "Check each product and edition listed under your subscription."},
+        {"@type": "HowToStep", "name": "Check your access", "text": "If a banner says you have restricted access to billing, ask a billing admin."},
+        {"@type": "HowToStep", "name": "Separate trials from paid", "text": "Trials turn features on without changing what you pay for."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How to tell which HubSpot hubs and tiers you actually pay for", "item": "https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="which-hubspot-hubs-you-pay-for">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Account+settings">Account settings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span></div>
+      <h1>How to tell which HubSpot hubs and tiers you actually pay for</h1>
+      <p class="dek">I tried to answer "which hubs do we pay for" from the API. There is no endpoint for it, and the billing page is the real source.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Billing access; users with restricted billing see partial information</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Your subscription lives on the <strong>Account &amp; Billing</strong> page. When I tried to answer this for our agency's portal through the API, there was no subscription endpoint, and feature probes only showed that sequences, workflows, forecasts and so on worked, not which product paid for them. Trials blur it further: our demo portal runs Enterprise trials and its billing page says <strong>Free</strong>. Ask someone with billing access if the page shows a restricted access banner.</p>
+        </div>
+
+        <h2>1. The API does not answer it</h2>
+        <p>Our agency's portal needed a straight answer on which hubs and tiers we pay for. I checked through the API first. There is no subscription endpoint. HubSpot's partner client object carries hub editions for client portals, but our own portal is not one of them. Feature checks showed sequences, workflows, forecasts, goals, projects and campaigns working. None of that says which product pays for them, so the answer had to come from the billing page.</p>
+
+        <h2>2. The billing page, and what can mislead</h2>
+        <p>Our demo portal has Enterprise trials active, and its Account &amp; Billing overview shows the subscription as Free. Trials turn features on without being something you pay for. The page also shows a banner when your user has restricted access to billing, in which case some information is hidden from you.</p>
+        <figure class="shot"><a href="billing.webp"><img src="billing.webp" alt="Account and Billing overview showing the subscription as Free and a restricted billing access banner" width="800" height="553" loading="lazy"></a><figcaption>The subscription shows Free (1) in a portal running trials, and the restricted access banner (2).</figcaption></figure>
+
+        <h2>3. Getting a reliable answer</h2>
+        <ul>
+          <li>Ask a user with full billing access to read the Overview, or to share the latest invoice.</li>
+          <li>Write down each hub and edition, plus seats, and add the date. It changes at renewal.</li>
+          <li>Treat anything on trial as temporary, and note when the trial ends.</li>
+        </ul>
+        <p>Knowing the tier matters for almost every article here, because features like workflows and custom events depend on it.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/account/manage-your-hubspot-subscription">HubSpot Knowledge Base: Manage your HubSpot subscription</a></li>
+          <li><a href="https://knowledge.hubspot.com/billing/where-can-i-find-my-subscription-and-contacts-or-email-send-limit-information-in-hubspot">HubSpot Knowledge Base: Where to find subscription and limit information</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

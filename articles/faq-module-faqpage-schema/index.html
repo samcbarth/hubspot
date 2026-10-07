@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results - HubSpot Field Notes</title>
+<meta name="description" content="What changed with Google's FAQ rich results in 2026, why I build HubSpot FAQ modules with answers in the page HTML, and the risk of FAQ schema drifting from the visible copy.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/">
+<meta property="og:title" content="FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results">
+<meta property="og:description" content="What changed with Google's FAQ rich results in 2026, why I build HubSpot FAQ modules with answers in the page HTML, and the risk of FAQ schema drifting from the visible copy.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results",
+      "description": "What changed with Google's FAQ rich results in 2026, why I build HubSpot FAQ modules with answers in the page HTML, and the risk of FAQ schema drifting from the visible copy.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build an FAQ module that keeps answers in the page",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Use details and summary", "text": "Render each question as a details element so the answer is in the HTML without JavaScript."},
+        {"@type": "HowToStep", "name": "Drive everything from fields", "text": "Use one repeater of question and answer fields as the only source."},
+        {"@type": "HowToStep", "name": "Generate any JSON-LD from the same fields", "text": "If you keep FAQPage markup, build it in the same module from the same loop."},
+        {"@type": "HowToStep", "name": "Recheck after edits", "text": "When answers change, view the page source and confirm the markup matches."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results", "item": "https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="faq-module-faqpage-schema">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results</h1>
+      <p class="dek">Google stopped showing FAQ rich results in May 2026. The FAQ itself still matters, but how you build it matters more than the markup.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Any portal with custom modules</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Manager access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Google's Search Central updates log says the FAQ rich result "will no longer appear in Google Search starting May 7, 2026." Google had already limited FAQ rich results to well-known government and health sites in 2023. What still helps is the FAQ content itself being in the page HTML. My theme's FAQ module renders each question as a native <code>&lt;details&gt;</code> element so answers are in the page text without JavaScript. If you keep FAQPage JSON-LD, generate it from the same module fields, because a hand-written copy drifts.</p>
+        </div>
+
+        <h2>1. What changed</h2>
+        <p>Google's documentation updates page records a deprecation notice on the FAQ rich result docs and says the feature will no longer appear in Google Search starting May 7, 2026. In August 2023 Google had already limited FAQ rich results to well-known, authoritative government and health websites. For most HubSpot sites, FAQPage markup has not produced the expandable search result for some time.</p>
+
+        <h2>2. Build the FAQ so the answers are in the HTML</h2>
+        <p>My theme's FAQ module uses a repeater of question and answer fields and renders native <code>&lt;details&gt;</code> elements. Every answer is in the page source, works without JavaScript, and is readable by anything that reads the page text:</p>
+        <pre><code>{% for q in module.items %}
+  {% if q.question %}
+    &lt;details class="faq-item"{% if loop.first and module.open_first %} open{% endif %}&gt;
+      &lt;summary&gt;{{ q.question }}&lt;/summary&gt;
+      &lt;div class="faq-a"&gt;{{ q.answer }}&lt;/div&gt;
+    &lt;/details&gt;
+  {% endif %}
+{% endfor %}</code></pre>
+        <figure class="shot"><a href="module.webp"><img src="module.webp" alt="sb-faq module.html in the Design Manager with the for loop and details element" width="800" height="553" loading="lazy"></a><figcaption>My FAQ module: one loop over the questions (1) rendering a details element per answer (2).</figcaption></figure>
+
+        <h2>3. If you keep FAQPage JSON-LD, generate it</h2>
+        <p>On our office hours landing page the FAQ JSON-LD was written by hand in the page head. When the session time changed, the visible FAQ was updated and the JSON-LD still had the old time until I fixed it. If you keep the markup, output it from the same module loop so there is one source:</p>
+        <pre><code>&lt;script type="application/ld+json"&gt;
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{% for q in module.items %}
+  {"@type":"Question","name":{{ q.question|tojson }},
+   "acceptedAnswer":{"@type":"Answer","text":{{ q.answer|striptags|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %}]}
+&lt;/script&gt;</code></pre>
+        <p>View the rendered page source after publishing to confirm the JSON-LD matches what visitors see.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.google.com/search/updates">Google Search Central: latest documentation updates</a></li>
+          <li><a href="https://developers.google.com/search/blog/2023/08/howto-faq-changes">Google Search Central blog: changes to HowTo and FAQ rich results (2023)</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/loops">HubSpot developer docs: For loops</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

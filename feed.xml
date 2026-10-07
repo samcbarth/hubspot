@@ -7,6 +7,163 @@
   <description>HubSpot fixes, how-tos, and hidden tricks with real screenshots, by Sam Barth.</description>
   <language>en-us</language>
   <item>
+    <title>hs cms upload skips .webp files, so theme images vanish without an error</title>
+    <link>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</link>
+    <guid>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why WebP images in a HubSpot theme folder never reach the Design Manager, how to spot it, and where WebP files should live instead.</description>
+    <category>Content Hub</category>
+    <category>Themes</category>
+    <category>Design Manager</category>
+  </item>
+  <item>
+    <title>HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template</title>
+    <link>https://hubspot.samcbarth.com/articles/theme-system-templates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/theme-system-templates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which system templates a HubSpot theme should ship, the templateType values they use, where to assign them, and how to spot a system page set to a template that no longer exists.</description>
+    <category>Content Hub</category>
+    <category>Themes</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>HubL: a variable set inside a for loop is gone after the loop ends</title>
+    <link>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot&#39;s docs, and the CSS fallback I used instead.</description>
+    <category>Content Hub</category>
+    <category>Themes</category>
+    <category>Design Manager</category>
+  </item>
+  <item>
+    <title>Build a HubSpot landing page template that is only a header, a footer and one drag and drop area</title>
+    <link>https://hubspot.samcbarth.com/articles/dnd-only-landing-page-template/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dnd-only-landing-page-template/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to make a branded landing page template with no fixed content in the body, so marketers build each page from modules, and the two template bugs that break it.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Templates</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it</title>
+    <link>https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/</link>
+    <guid>https://hubspot.samcbarth.com/articles/move-template-copy-into-dnd-areas/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why text written directly in a template cannot be edited in the page editor, the two ways I moved a landing page&#39;s copy into editable modules, and what to check after.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Templates</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Give each HubSpot module its own font controls that win over the theme stylesheet</title>
+    <link>https://hubspot.samcbarth.com/articles/module-font-controls-override-theme/</link>
+    <guid>https://hubspot.samcbarth.com/articles/module-font-controls-override-theme/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add font fields to custom modules so editors can set the font per text element in the page editor, render them so the theme CSS cannot override them, and scale them down on mobile.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Themes</category>
+    <category>Design Manager</category>
+  </item>
+  <item>
+    <title>FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results</title>
+    <link>https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/</link>
+    <guid>https://hubspot.samcbarth.com/articles/faq-module-faqpage-schema/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What changed with Google&#39;s FAQ rich results in 2026, why I build HubSpot FAQ modules with answers in the page HTML, and the risk of FAQ schema drifting from the visible copy.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Themes</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>A HubSpot record card with a Sync now button when your plan has no serverless functions</title>
+    <link>https://hubspot.samcbarth.com/articles/ui-extension-card-sync-button/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ui-extension-card-sync-button/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How we built a company record card that shows project data from an outside system and refreshes on demand, without serverless functions: sync into properties, a request flag, and a watcher.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Log an SMS to a HubSpot contact&#39;s timeline with the API: the association you cannot skip</title>
+    <link>https://hubspot.samcbarth.com/articles/log-sms-to-contact-timeline-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/log-sms-to-contact-timeline-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create an SMS communication record on a contact with the CRM API, the association type that makes it show on the timeline, and the phone matching trap in automation tools.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Email a HubSpot report or dashboard on a schedule: who can receive it and the 2 hour rule</title>
+    <link>https://hubspot.samcbarth.com/articles/recurring-report-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/recurring-report-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How recurring report and dashboard emails work in HubSpot, why recipients must be HubSpot users, how one-time sends differ, and the timing rule for deleting a schedule.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Reports</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>Plan a CRM migration from spreadsheets and exports: the steps that kept a bank&#39;s load clean</title>
+    <link>https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/</link>
+    <guid>https://hubspot.samcbarth.com/articles/plan-crm-migration-from-spreadsheet/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A step-by-step plan for moving contacts and companies from exported systems into HubSpot: count real people first, choose match keys, stage, run a small canary, and keep a rollback file.</description>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>How to tell which HubSpot hubs and tiers you actually pay for</title>
+    <link>https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/</link>
+    <guid>https://hubspot.samcbarth.com/articles/which-hubspot-hubs-you-pay-for/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to see your HubSpot subscription, why the API and feature probes do not answer it, and why a portal running trials can show Free on the billing page.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>HubSpot AEO: prompts, recommendations, and what to do with outreach suggestions</title>
+    <link>https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s AEO tool tracks, how many prompts your plan allows, the recommendation types, and how I triaged a set of outreach recommendations for an agency.</description>
+    <category>Marketing Hub</category>
+    <category>Website</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot&#39;s intent signals</title>
+    <link>https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/track-companies-hiring-for-hubspot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How we turned job postings for HubSpot and CRM roles into a scored company list in HubSpot, and where HubSpot&#39;s own Buyer Intent signals fit.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Companies</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Theme click tracking in HubSpot: custom events, and why the trackEvent fallback no longer works</title>
+    <link>https://hubspot.samcbarth.com/articles/theme-click-tracking-custom-events/</link>
+    <guid>https://hubspot.samcbarth.com/articles/theme-click-tracking-custom-events/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How a HubSpot theme can send every click to HubSpot custom events, what tier custom events need, and why HubSpot&#39;s docs now say the old trackEvent call does nothing.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Tracking code</category>
+    <category>Themes</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
