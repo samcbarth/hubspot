@@ -2363,6 +2363,310 @@
     <category>API</category>
   </item>
   <item>
+    <title>Debug a workflow custom code action</title>
+    <link>https://hubspot.samcbarth.com/articles/debug-custom-code-actions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/debug-custom-code-actions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where custom code action logs show up, how to pass properties in without an API call, and how to make HubSpot retry after a rate limit error.</description>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Set or copy a date property in a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/set-date-property-in-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/set-date-property-in-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the workflow Edit record action sets date properties to a fixed date or copies another date property, and the related date delays.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Start a workflow when a webhook arrives</title>
+    <link>https://hubspot.samcbarth.com/articles/webhook-trigger-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/webhook-trigger-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s &quot;When a webhook is received&quot; trigger enrolls existing records from third-party webhook data, and its limits.</description>
+    <category>Data Hub</category>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>DMARC, SPF and DKIM for email sent from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/dmarc-for-hubspot-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dmarc-for-hubspot-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What each email authentication record does, why Gmail and Yahoo require them for bulk senders, and how DMARC policy settings work.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Domains</category>
+  </item>
+  <item>
+    <title>Associate records automatically with a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-associate-records-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-associate-records-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Create associations workflow action links existing records by matching property values, and when to use Create record instead.</description>
+    <category>Data Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Data sync field mappings: what syncs, which way</title>
+    <link>https://hubspot.samcbarth.com/articles/data-sync-field-mappings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-sync-field-mappings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot data sync field mappings control direction and matching, the name and owner rules, and when custom mappings need Data Hub.</description>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Data</category>
+  </item>
+  <item>
+    <title>Connect NetSuite to HubSpot: setup and custom fields</title>
+    <link>https://hubspot.samcbarth.com/articles/netsuite-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/netsuite-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s NetSuite integration needs on the NetSuite side, who can connect it, and why custom field mappings need Data Hub.</description>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Sync Microsoft Dynamics 365 with HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/dynamics-365-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dynamics-365-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Dynamics 365 integration syncs, the permissions it needs, and how sales orders and tasks behave.</description>
+    <category>Data Hub</category>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Email your team from a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-internal-email-notification/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-internal-email-notification/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Send internal email notification and Send internal marketing email workflow actions, what they can include, and who can receive them.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Shopify data sync: what comes over and what doesn&#39;t</title>
+    <link>https://hubspot.samcbarth.com/articles/shopify-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/shopify-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Shopify data sync app syncs, the limits on orders, variants and companies, and the tracking code it installs.</description>
+    <category>Data Hub</category>
+    <category>Commerce Hub</category>
+    <category>Integrations</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Store files on a record with a file property</title>
+    <link>https://hubspot.samcbarth.com/articles/file-property-type/</link>
+    <guid>https://hubspot.samcbarth.com/articles/file-property-type/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s File property type works: files per property, size limits on records and forms, and view access.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Deal score: what the number means</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-score/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-score/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s AI deal score predicts the chance of winning open deals, when it updates, and why closed or reopened deals don&#39;t get one.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>ACV, ARR, MRR and TCV on HubSpot deals</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-revenue-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-revenue-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s deal revenue properties are calculated from line items, which tier gets ARR and MRR, and why ACV may look wrong.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>Calculate the time between two dates</title>
+    <link>https://hubspot.samcbarth.com/articles/time-between-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/time-between-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Time between, Time since and Time until calculation properties work, the time_between function, and the millisecond gotcha.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Make HubSpot pages more accessible</title>
+    <link>https://hubspot.samcbarth.com/articles/website-accessibility/</link>
+    <guid>https://hubspot.samcbarth.com/articles/website-accessibility/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Practical accessibility steps for HubSpot websites from HubSpot&#39;s developer guide: alt text, form labels, skip links and keyboard navigation.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Salesforce sync rules: two-way, prefer Salesforce, or don&#39;t sync</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-sync-rules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-sync-rules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Salesforce field mapping update rules decide which system wins, plus the owner and reference field caveats.</description>
+    <category>Sales Hub</category>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Historical lifecycle funnels: journey vs legacy funnel reports</title>
+    <link>https://hubspot.samcbarth.com/articles/historical-lifecycle-funnel/</link>
+    <guid>https://hubspot.samcbarth.com/articles/historical-lifecycle-funnel/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot funnel counts change, how journey funnel reports require stages in order, and what to check when contacts go missing.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Reporting</category>
+    <category>Lifecycle</category>
+  </item>
+  <item>
+    <title>Export report data or email it on a schedule</title>
+    <link>https://hubspot.samcbarth.com/articles/export-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export HubSpot reports as CSV or Excel, which report types can be emailed as files, and what columns come out.</description>
+    <category>Smart CRM</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Copy a property from a contact to its deal</title>
+    <link>https://hubspot.samcbarth.com/articles/copy-property-values-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/copy-property-values-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Edit record workflow action copies values between properties and associated records, with the association and type rules.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Zoom webinars in HubSpot: registrants and attendees</title>
+    <link>https://hubspot.samcbarth.com/articles/zoom-integration-webinars/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zoom-integration-webinars/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Zoom integration syncs for webinars, the registration field limit, and what it doesn&#39;t support.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Events</category>
+  </item>
+  <item>
+    <title>Create a ticket (or deal) from a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/create-ticket-in-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-ticket-in-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Create record workflow action builds tickets, deals and other records, required fields, owners and associations.</description>
+    <category>Service Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Embed a HubSpot form in React or another single-page app</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-form-in-react/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-form-in-react/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Search companies by name with the CRM search API</title>
+    <link>https://hubspot.samcbarth.com/articles/search-companies-by-name-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/search-companies-by-name-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to filter companies by name using the CRM search endpoint, wildcards, the query parameter, and the 10,000 result limit.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Attach a file to a record with the API</title>
+    <link>https://hubspot.samcbarth.com/articles/attach-file-to-record-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/attach-file-to-record-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to attach a file to a HubSpot deal, contact or other record via API: upload to Files, then create an associated note.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Where to find an app&#39;s client ID and client secret</title>
+    <link>https://hubspot.samcbarth.com/articles/oauth-client-id-secret/</link>
+    <guid>https://hubspot.samcbarth.com/articles/oauth-client-id-secret/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows an app&#39;s client ID, client secret and redirect URLs, how to rotate the secret, and install limits.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Apps</category>
+  </item>
+  <item>
+    <title>Google Click ID (GCLID) and other click IDs in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/capture-gclid/</link>
+    <guid>https://hubspot.samcbarth.com/articles/capture-gclid/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot sets the Google ad click ID contact property, the other click ID properties, and how ad auto-tracking adds parameters.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>First page seen and last page seen</title>
+    <link>https://hubspot.samcbarth.com/articles/first-and-last-page-seen/</link>
+    <guid>https://hubspot.samcbarth.com/articles/first-and-last-page-seen/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s First page seen and Last page seen contact properties record, and how they relate to the referrer properties.</description>
+    <category>Marketing Hub</category>
+    <category>Properties</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Redirect after a form submit, including conditional redirects</title>
+    <link>https://hubspot.samcbarth.com/articles/form-redirect-with-url-parameters/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-redirect-with-url-parameters/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot legacy forms redirect to a page, meeting link or external URL after submission, conditional redirects, and the page module override.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Read and change segment memberships with the API</title>
+    <link>https://hubspot.samcbarth.com/articles/contact-segment-memberships/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contact-segment-memberships/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the HubSpot segments (lists) API returns members, adds records, and which processing types allow manual changes.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Export calls, notes, emails and tasks</title>
+    <link>https://hubspot.samcbarth.com/articles/export-activities/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-activities/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why record exports don&#39;t include activities, and the two ways HubSpot suggests getting activity data out: reports and the engagements API.</description>
+    <category>Smart CRM</category>
+    <category>Export</category>
+    <category>Reporting</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
