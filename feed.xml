@@ -3138,6 +3138,213 @@
     <category>Commerce</category>
   </item>
   <item>
+    <title>Serve HubSpot pages from a subfolder with a reverse proxy</title>
+    <link>https://hubspot.samcbarth.com/articles/reverse-proxy-hubspot-cms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/reverse-proxy-hubspot-cms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s developer docs say about running HubSpot CMS behind your own reverse proxy or CDN, the origin CNAME, and the support limits.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Export your website pages and blog posts</title>
+    <link>https://hubspot.samcbarth.com/articles/export-hubspot-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-hubspot-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export HTML for all HubSpot pages and blog posts, who can do it, and the separate data exports for posts and knowledge base articles.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+    <category>Export</category>
+  </item>
+  <item>
+    <title>RSS emails for blogs hosted outside HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/rss-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rss-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot RSS emails send new posts from an external blog feed, what&#39;s included, and the featured image caveat.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Calculation property blank when one input is empty</title>
+    <link>https://hubspot.samcbarth.com/articles/calculation-property-blank-values/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calculation-property-blank-values/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why a HubSpot calculation property returns no value if any number input is empty, and the if/is_known pattern that treats blanks as zero.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Style a HubSpot form: where styles actually apply</title>
+    <link>https://hubspot.samcbarth.com/articles/style-hubspot-forms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/style-hubspot-forms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why form editor themes only apply to embedded and standalone forms, how forms on HubSpot pages are styled, and the legacy raw HTML option.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+    <category>Design</category>
+  </item>
+  <item>
+    <title>Edit your website&#39;s navigation menu</title>
+    <link>https://hubspot.samcbarth.com/articles/navigation-menus/</link>
+    <guid>https://hubspot.samcbarth.com/articles/navigation-menus/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot navigation menus are managed, the permissions for settings versus the global content editor, and how templates pick a menu.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>SSL certificates on HubSpot domains</title>
+    <link>https://hubspot.samcbarth.com/articles/ssl-certificate-provisioning/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ssl-certificate-provisioning/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot provisions SSL when you connect a domain, pre-provisioning for sites already on HTTPS, renewal, and the custom SSL add-on.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Sync LinkedIn Lead Gen Form leads into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-lead-gen-forms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-lead-gen-forms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot syncs leads from LinkedIn Lead Gen Forms, the LinkedIn page role you need, the required email field, and sync timeframes.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Lead capture</category>
+  </item>
+  <item>
+    <title>Connecting a domain to HubSpot when DNS is on Cloudflare</title>
+    <link>https://hubspot.samcbarth.com/articles/cloudflare-with-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cloudflare-with-hubspot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why the Cloudflare proxy must be off (DNS only) for HubSpot to verify records, and where Cloudflare Enterprise&#39;s O2O setup fits.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+  </item>
+  <item>
+    <title>Import a WordPress blog into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/import-blog-posts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-blog-posts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s WordPress connect imports a blog from its homepage URL, the XML fallback, and permissions.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>Show related blog posts by tag</title>
+    <link>https://hubspot.samcbarth.com/articles/related-blog-posts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/related-blog-posts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s related_blog_posts HubL tag lists posts by tag, author or blog, and why it isn&#39;t an editable module.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>HubL</category>
+  </item>
+  <item>
+    <title>Add schema markup (structured data) to HubSpot pages and posts</title>
+    <link>https://hubspot.samcbarth.com/articles/add-schema-markup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/add-schema-markup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Two ways to add JSON-LD structured data in HubSpot: per page in head HTML, or in the template with HubL, then validate it.</description>
+    <category>Content Hub</category>
+    <category>SEO</category>
+    <category>HubL</category>
+  </item>
+  <item>
+    <title>Publish to TikTok from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/tiktok-social-publishing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tiktok-social-publishing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s social tool can do with a connected TikTok account: scheduling, post settings, comments and reports.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Bring Facebook Messenger into the HubSpot inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-messenger-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-messenger-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How connecting Facebook Messenger as an inbox channel adds a chatflow to your Facebook Business Page and routes messages to HubSpot.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Inbox</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>Analyze social post performance</title>
+    <link>https://hubspot.samcbarth.com/articles/social-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s social Analyze tab reports, the one-year window, delays for external and TikTok data, and why boosted posts aren&#39;t included.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Get a form&#39;s submissions through the API</title>
+    <link>https://hubspot.samcbarth.com/articles/get-form-submissions-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/get-form-submissions-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The HubSpot endpoint that returns submissions for one form, and when an export is the simpler option.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Create a note on a contact with the API</title>
+    <link>https://hubspot.samcbarth.com/articles/create-note-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-note-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create a HubSpot note and associate it with a contact in one call, and the timestamp it needs.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Get recently created or updated contacts by API</title>
+    <link>https://hubspot.samcbarth.com/articles/recently-modified-records-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/recently-modified-records-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to pull recently updated HubSpot records with the CRM search API instead of the retired v1 recent-contacts endpoints.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Enroll a contact in a sequence with the API</title>
+    <link>https://hubspot.samcbarth.com/articles/sequences-api-enroll/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequences-api-enroll/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the sequences API enrolls a contact, the user and sender requirements, and the scope it needs.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Use a webhook&#39;s response later in the workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/webhook-response-to-property/</link>
+    <guid>https://hubspot.samcbarth.com/articles/webhook-response-to-property/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the workflow Send a webhook action exposes response fields as action outputs, and how to save one to a property.</description>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Keep a HubSpot OAuth integration from breaking: refresh tokens</title>
+    <link>https://hubspot.samcbarth.com/articles/oauth-refresh-token/</link>
+    <guid>https://hubspot.samcbarth.com/articles/oauth-refresh-token/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot OAuth access tokens expire, how to refresh them, and the caching rules HubSpot&#39;s developer team recommends.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Apps</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
