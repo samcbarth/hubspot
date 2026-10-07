@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot search API stops at 10,000 results: how to page past it - HubSpot Field Notes</title>
+<meta name="description" content="The CRM search API's limits (10,000 results per query, 200 per page, five requests per second, 3,000-character queries, filter group caps) and a pattern for pulling larger sets.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/crm-search-api-limits/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/crm-search-api-limits/">
+<meta property="og:title" content="HubSpot search API stops at 10,000 results: how to page past it">
+<meta property="og:description" content="The CRM search API's limits (10,000 results per query, 200 per page, five requests per second, 3,000-character queries, filter group caps) and a pattern for pulling larger sets.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/crm-search-api-limits/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot search API stops at 10,000 results: how to page past it",
+      "description": "The CRM search API's limits (10,000 results per query, 200 per page, five requests per second, 3,000-character queries, filter group caps) and a pattern for pulling larger sets.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/crm-search-api-limits/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/crm-search-api-limits/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Pull more than 10,000 records with search",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Sort by a stable field", "text": "Sort ascending by create date or record ID."},
+        {"@type": "HowToStep", "name": "Page with after", "text": "Use paging.next.after until results run out or near 10,000."},
+        {"@type": "HowToStep", "name": "Restart the window", "text": "Start a new query filtered from the last value you saw."},
+        {"@type": "HowToStep", "name": "Respect the rate", "text": "Stay under five search requests per second."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot search API stops at 10,000 results: how to page past it", "item": "https://hubspot.samcbarth.com/articles/crm-search-api-limits/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="crm-search-api-limits">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot search API stops at 10,000 results: how to page past it</h1>
+      <p class="dek">Paging past 10,000 results returns a 400. Split the query instead.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>App with CRM read scopes</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's docs list these search limits: <strong>10,000 total results per query</strong> (paging beyond returns 400), 200 records per page, <strong>five requests per second</strong> per account, a 3,000-character query body, and up to five filter groups with six filters each and 18 in total. To read more than 10,000 records, sort by a stable property, page with <code>after</code>, and start a fresh query filtered from the last value.</p>
+        </div>
+
+        <h2>1. A windowed query</h2>
+        <pre><code>POST https://api.hubapi.com/crm/v3/objects/contacts/search
+{
+  &quot;filterGroups&quot;: [
+    { &quot;filters&quot;: [ { &quot;propertyName&quot;: &quot;createdate&quot;, &quot;operator&quot;: &quot;GTE&quot;, &quot;value&quot;: &quot;1767225600000&quot; } ] }
+  ],
+  &quot;sorts&quot;: [ { &quot;propertyName&quot;: &quot;createdate&quot;, &quot;direction&quot;: &quot;ASCENDING&quot; } ],
+  &quot;properties&quot;: [&quot;email&quot;, &quot;createdate&quot;],
+  &quot;limit&quot;: 200,
+  &quot;after&quot;: 0
+}</code></pre>
+        <p>When you approach 10,000 results, take the last createdate you received and run the query again with GTE that value. Deduplicate on record ID, since records sharing that timestamp come back twice.</p>
+
+        <h2>2. Other things that catch people</h2>
+        <ul>
+          <li>New and updated records can take a few moments to appear in search.</li>
+          <li>Archived records never appear.</li>
+          <li>Enumeration filters are case-sensitive. IN and NOT_IN on strings need lowercase values.</li>
+          <li>Only one sort rule per search.</li>
+        </ul>
+
+        <h2>3. Alternatives</h2>
+        <p>For SQL-style queries, see <a href="../hubsql-beta-api/">HubSQL</a>. For reading a whole object, see <a href="../choose-hubspot-api-read-method/">choosing a read method</a>. Rate limits: <a href="../hubspot-api-rate-limits/">HubSpot API rate limits</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/search-the-crm">HubSpot developer docs: Search the CRM</a></li>
+          <li><a href="https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines">HubSpot developer docs: API usage guidelines and limits</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Copying association labels from a company breaks when a contact has two companies - HubSpot Field Notes</title>
+<meta name="description" content="A client project copied assignee labels from the first-created company to contacts and deals. Records with several companies got the wrong labels. How to check and fix it.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/">
+<meta property="og:title" content="Copying association labels from a company breaks when a contact has two companies">
+<meta property="og:description" content="A client project copied assignee labels from the first-created company to contacts and deals. Records with several companies got the wrong labels. How to check and fix it.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Copying association labels from a company breaks when a contact has two companies",
+      "description": "A client project copied assignee labels from the first-created company to contacts and deals. Records with several companies got the wrong labels. How to check and fix it.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find and fix label copies on multi-company records",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the records", "text": "Filter contacts and deals with more than one associated company."},
+        {"@type": "HowToStep", "name": "Check the source company", "text": "Confirm which company the automation copied from."},
+        {"@type": "HowToStep", "name": "Pick the right source", "text": "Use the Primary company label, or a specific label, as the source instead of create order."},
+        {"@type": "HowToStep", "name": "Rebuild with label actions", "text": "Use the Apply, Update or Remove association labels workflow actions to correct labels."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Copying association labels from a company breaks when a contact has two companies", "item": "https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="association-labels-multiple-companies">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Associations">Associations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span><span class="badge">Data Hub</span></div>
+      <h1>Copying association labels from a company breaks when a contact has two companies</h1>
+      <p class="dek">An automation that reads labels from "the" company assumes there is only one. Some contacts and deals had more.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Custom association labels need Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Workflows access and association settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>On a client project, assignee labels were copied from the <strong>first-created associated company</strong> to the related contacts and deals. The client's own review found records with missing labels or labels on the wrong record, and the cause was contacts and deals associated with more than one company. Before copying anything from a company, decide which company is the source (the Primary label is the usual choice), find records with more than one company, and correct them with the association label workflow actions.</p>
+        </div>
+
+        <h2>1. What happened</h2>
+        <p>The client tracked an assignee on companies with association labels and wanted the same label on each related contact and deal. The automation took labels from the first company created. During review, the client found contacts and deals where the label was missing, on the wrong record, or on both. The records with errors were the ones associated with several companies.</p>
+
+        <h2>2. See the labels you are copying</h2>
+        <p>In my demo portal, the data model lists company associations and their labels. Companies to companies has Parent and Child labels; contacts to companies has Primary plus custom labels.</p>
+        <figure class="shot"><a href="labels.webp"><img src="labels.webp" alt="Data Model Builder associated objects and labels for companies, showing Primary and custom labels on the Contacts row" width="800" height="554" loading="lazy"></a><figcaption>Associated objects and labels (1), company to company labels (2), and contact to company labels (3).</figcaption></figure>
+
+        <h2>3. Fix with the label actions</h2>
+        <p>Workflows have actions to create associations and to apply, update or remove labels. HubSpot's KB says the update action can replace an existing label or append a new one.</p>
+        <figure class="shot"><a href="actions.webp"><img src="actions.webp" alt="Workflow action search for association showing Create associations, Apply association labels and Update association labels" width="440" height="630" loading="lazy"></a><figcaption>Create associations (1), Apply association labels (2), and Update association labels (3).</figcaption></figure>
+        <ul>
+          <li>Pick the source company by label, such as Primary, not by create date.</li>
+          <li>Find the contacts and deals that have more than one associated company before running anything, and review those by hand.</li>
+          <li>Through the API, labels have their own type IDs. See <a href="../associations-v4-api-labels/">association labels in the v4 API</a> and <a href="../association-labels/">association labels</a>.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/create-and-use-association-labels">HubSpot Knowledge Base: Create and use association labels</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/manage-crm-record-associations-with-workflows">HubSpot Knowledge Base: Create and manage CRM record associations with workflows</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/associations/associate-records/guide">HubSpot developer docs: Associate records</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Developer test accounts vs standard sandboxes: where to test HubSpot changes - HubSpot Field Notes</title>
+<meta name="description" content="The difference between developer test accounts and standard sandboxes, their limits, and why legacy private apps still exist there.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/">
+<meta property="og:title" content="Developer test accounts vs standard sandboxes: where to test HubSpot changes">
+<meta property="og:description" content="The difference between developer test accounts and standard sandboxes, their limits, and why legacy private apps still exist there.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Developer test accounts vs standard sandboxes: where to test HubSpot changes",
+      "description": "The difference between developer test accounts and standard sandboxes, their limits, and why legacy private apps still exist there.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Choose a test environment",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Integration testing", "text": "Use a developer test account for apps."},
+        {"@type": "HowToStep", "name": "Account changes", "text": "Use a standard sandbox to test workflows, pages and settings against a copy of production structure."},
+        {"@type": "HowToStep", "name": "Create a sandbox", "text": "From the CLI or sandbox settings in an Enterprise account."},
+        {"@type": "HowToStep", "name": "Deploy", "text": "Deploy supported changes from the sandbox to production."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Developer test accounts vs standard sandboxes: where to test HubSpot changes", "item": "https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="developer-test-accounts-and-sandboxes">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>Developer test accounts vs standard sandboxes: where to test HubSpot changes</h1>
+      <p class="dek">Test in an account that cannot email real customers or overwrite real data.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Standard sandboxes need Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin to create sandboxes</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>A <strong>standard sandbox</strong> (Enterprise) copies the structure of your production account so you can test workflows, integrations and pages, then deploy supported changes back. A production account can have one standard and one development sandbox at a time. A <strong>developer test account</strong> is a free test environment for apps; HubSpot says it expires after 90 days without API calls, can send marketing email only to its own users, and enrolls at most 100,000 records per day in workflows.</p>
+        </div>
+
+        <h2>1. Legacy apps in test environments</h2>
+        <p>The Legacy Apps page in my demo portal says legacy private apps can still be created in sandbox and test accounts to match production. In production, HubSpot points to service keys or project apps. The Testing menu sits under Development.</p>
+        <figure class="shot"><a href="legacy.webp"><img src="legacy.webp" alt="Legacy Apps page with a notice that legacy private apps are still available in sandbox and test accounts" width="698" height="696" loading="lazy"></a><figcaption>The notice (1) and the Testing menu (2).</figcaption></figure>
+
+        <h2>2. Which one</h2>
+        <ul>
+          <li><strong>Sandbox:</strong> workflow logic, properties, pipelines, pages, permissions. Some asset types do not copy, and assets that depend on them do not sync either.</li>
+          <li><strong>Test account:</strong> building and installing apps without production data.</li>
+        </ul>
+
+        <h2>3. Related</h2>
+        <p><a href="../hs-project-upload-cli/">Uploading projects to a sandbox</a> and <a href="../private-apps-moved-to-legacy-apps/">private apps moved to Legacy Apps</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/getting-started/account-types">HubSpot developer docs: HubSpot account types</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/deploy-sandbox-changes-to-production">HubSpot Knowledge Base: Create a sandbox and deploy changes to production</a></li>
+          <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/hubspot-cli/commands/account-commands">HubSpot developer docs: Account CLI commands</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

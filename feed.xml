@@ -1037,6 +1037,240 @@
     <category>Associations</category>
   </item>
   <item>
+    <title>Copying association labels from a company breaks when a contact has two companies</title>
+    <link>https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/association-labels-multiple-companies/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A client project copied assignee labels from the first-created company to contacts and deals. Records with several companies got the wrong labels. How to check and fix it.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Associations</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Getting a contact&#39;s traffic source onto the deal: check the default property before building a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/original-traffic-source-on-deals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/original-traffic-source-on-deals/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Deals already have an Original Traffic Source property set from associated contacts. When you still need a copy, use a property sync field or a workflow&#39;s Edit record action.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Properties</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Calculation properties: build a custom equation in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/calculation-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calculation-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create a calculation property with a custom equation, the output types it supports, and where it is available.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Rollup properties: count, sum or find the latest value across associated records</title>
+    <link>https://hubspot.samcbarth.com/articles/rollup-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rollup-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot rollup properties calculate min, max, count, sum, average, earliest and latest values from associated records, and how to set one up.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Format data workflow action: clean values, then write them back</title>
+    <link>https://hubspot.samcbarth.com/articles/format-data-workflow-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/format-data-workflow-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Format data workflow action does, why it does not change a property on its own, and how to use its output with Edit record.</description>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Rotate record to owner: who is eligible, and why a team shows greyed out</title>
+    <link>https://hubspot.samcbarth.com/articles/rotate-record-to-owner/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rotate-record-to-owner/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Rotate record to owner workflow action distributes records, the seat rules for eligible users and teams, and the Salesforce caveat.</description>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Ownership</category>
+  </item>
+  <item>
+    <title>HubSpot API rate limits: the numbers, the headers, and where to see usage</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s burst and daily API limits for privately distributed apps by tier, the 429 response and rate limit headers, and the API Call Usage page.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>HubSpot search API stops at 10,000 results: how to page past it</title>
+    <link>https://hubspot.samcbarth.com/articles/crm-search-api-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/crm-search-api-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The CRM search API&#39;s limits (10,000 results per query, 200 per page, five requests per second, 3,000-character queries, filter group caps) and a pattern for pulling larger sets.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Association labels through the v4 API: find the type ID, then associate</title>
+    <link>https://hubspot.samcbarth.com/articles/associations-v4-api-labels/</link>
+    <guid>https://hubspot.samcbarth.com/articles/associations-v4-api-labels/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to look up association label type IDs and create labeled associations in bulk with HubSpot&#39;s v4 associations API.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Create or update records in one call with HubSpot&#39;s batch upsert</title>
+    <link>https://hubspot.samcbarth.com/articles/batch-upsert-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/batch-upsert-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the batch upsert endpoint uses a unique property (idProperty) to create missing records and update existing ones, so sync scripts stop making duplicates.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>API</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>Start a HubSpot import from code with the imports API</title>
+    <link>https://hubspot.samcbarth.com/articles/imports-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/imports-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the CRM imports API takes a multipart request with an importRequest JSON and the file, and how column mappings work.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>API</category>
+    <category>Imports</category>
+  </item>
+  <item>
+    <title>Owner ID vs user ID: assigning record owners through the API</title>
+    <link>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</link>
+    <guid>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot has separate owner IDs and user IDs, how to look up an owner with the v3 owners API, and how to set hubspot_owner_id on a record.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Ownership</category>
+  </item>
+  <item>
+    <title>HubSpot webhooks: subscriptions, batching and retries</title>
+    <link>https://hubspot.samcbarth.com/articles/webhooks-api-subscriptions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/webhooks-api-subscriptions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How app webhook subscriptions deliver events, the batch size and concurrency limits, signature validation, and retry behavior.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Custom code workflow actions: the basics that save debugging time</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.</description>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Send a webhook from a workflow, and verify it really came from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-send-webhook-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-send-webhook-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Send a webhook workflow action posts record data to your endpoint, the request signature option, and how to validate it.</description>
+    <category>Data Hub</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot CMS serverless functions: what they are for, and the 10-second limit</title>
+    <link>https://hubspot.samcbarth.com/articles/cms-serverless-functions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cms-serverless-functions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How serverless functions run server-side code for HubSpot CMS pages, their execution limits, and where to see their logs.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Deploy a HubSpot developer project with hs project upload</title>
+    <link>https://hubspot.samcbarth.com/articles/hs-project-upload-cli/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hs-project-upload-cli/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The HubSpot CLI commands to create, upload and check builds for a developer project, and where projects show in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Developer test accounts vs standard sandboxes: where to test HubSpot changes</title>
+    <link>https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between developer test accounts and standard sandboxes, their limits, and why legacy private apps still exist there.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Submit a custom form to HubSpot through the forms API, and keep tracking</title>
+    <link>https://hubspot.samcbarth.com/articles/forms-submission-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/forms-submission-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to send submissions to a HubSpot form from your own form handler, why to include the hutk cookie and page context, and how blocked emails are reported.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Identify logged-in visitors in HubSpot chat with the visitor identification API</title>
+    <link>https://hubspot.samcbarth.com/articles/visitor-identification-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/visitor-identification-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to pass an already-authenticated user to the HubSpot chat widget with a server-generated token, so chats land on the right contact.</description>
+    <category>Smart CRM</category>
+    <category>Inbox</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Read a property&#39;s change history through the API</title>
+    <link>https://hubspot.samcbarth.com/articles/property-history-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/property-history-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to use the propertiesWithHistory parameter to get past values, timestamps and sources for a record&#39;s properties.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Programmable emails: pull CRM data into marketing emails with HubL</title>
+    <link>https://hubspot.samcbarth.com/articles/programmable-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/programmable-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What programmable emails can read on Professional versus Enterprise, how to enable a module for them, and the recipient limits tied to CRM functions.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Personalization</category>
+  </item>
+  <item>
+    <title>Search, list, batch read or webhooks: picking how to read HubSpot data</title>
+    <link>https://hubspot.samcbarth.com/articles/choose-hubspot-api-read-method/</link>
+    <guid>https://hubspot.samcbarth.com/articles/choose-hubspot-api-read-method/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When to use the CRM search API, basic list endpoints, batch reads or webhooks, based on their documented limits.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
