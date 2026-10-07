@@ -5306,6 +5306,202 @@
     <category>Ads</category>
   </item>
   <item>
+    <title>Connect WhatsApp to help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/whatsapp-help-desk/</link>
+    <guid>https://hubspot.samcbarth.com/articles/whatsapp-help-desk/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add a WhatsApp Business channel to HubSpot help desk and the inbox conflict.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>WhatsApp</category>
+  </item>
+  <item>
+    <title>Collect consent before texting contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/sms-consent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sms-consent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles SMS opt-in and opt-out keywords and manual opt-ins.</description>
+    <category>Marketing Hub</category>
+    <category>SMS</category>
+  </item>
+  <item>
+    <title>Let AI connectors access Sensitive Data</title>
+    <link>https://hubspot.samcbarth.com/articles/ai-connector-sensitive-data/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ai-connector-sensitive-data/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins control AI connector access to HubSpot Sensitive Data.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+    <category>Sensitive data</category>
+  </item>
+  <item>
+    <title>Let readers register for private blog posts</title>
+    <link>https://hubspot.samcbarth.com/articles/private-blog-self-registration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/private-blog-self-registration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How self-registration works for HubSpot private blog content.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>Memberships</category>
+  </item>
+  <item>
+    <title>Control which marketplace apps users can install</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-access-to-apps/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-access-to-apps/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins approve apps and limit their data access.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Get a daily digest of spam form submissions</title>
+    <link>https://hubspot.samcbarth.com/articles/daily-spam-digest/</link>
+    <guid>https://hubspot.samcbarth.com/articles/daily-spam-digest/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s daily spam submission digest works and who gets it.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Spam</category>
+  </item>
+  <item>
+    <title>Customize meeting confirmation emails</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-confirmation-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-confirmation-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to edit the confirmation email sent from HubSpot scheduling pages.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Send SMS from workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/automated-sms-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/automated-sms-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot workflow SMS actions pick numbers and what&#39;s required.</description>
+    <category>Marketing Hub</category>
+    <category>SMS</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Prospects get the wrong meeting time</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-wrong-confirmation-time/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-wrong-confirmation-time/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why bookings confirm at a different time than chosen.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>How Salesforce leads and contacts sync</title>
+    <link>https://hubspot.samcbarth.com/articles/sync-salesforce-leads/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sync-salesforce-leads/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s rules for syncing to Salesforce leads and contacts.</description>
+    <category>Smart CRM</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Get a weekly data quality digest</title>
+    <link>https://hubspot.samcbarth.com/articles/weekly-data-quality-digest/</link>
+    <guid>https://hubspot.samcbarth.com/articles/weekly-data-quality-digest/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to turn on HubSpot&#39;s data quality digest.</description>
+    <category>Smart CRM</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Limit what syncs to Salesforce</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-inclusion-list/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-inclusion-list/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How inclusion segments control the Salesforce sync.</description>
+    <category>Smart CRM</category>
+    <category>Salesforce</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Manage buyer subscriptions</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-commerce-subscriptions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-commerce-subscriptions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to view and edit HubSpot commerce subscriptions.</description>
+    <category>Sales Hub</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Set the default font for CRM emails</title>
+    <link>https://hubspot.samcbarth.com/articles/crm-email-font/</link>
+    <guid>https://hubspot.samcbarth.com/articles/crm-email-font/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to change HubSpot&#39;s default font for one-to-one and inbox emails.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Add collaborators to a deal</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-collaborators/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-collaborators/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How deal collaborators work versus deal splits.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>What gets copied into a sandbox</title>
+    <link>https://hubspot.samcbarth.com/articles/sandbox-copy-assets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sandbox-copy-assets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which production assets HubSpot copies when creating a sandbox.</description>
+    <category>Smart CRM</category>
+    <category>Sandboxes</category>
+  </item>
+  <item>
+    <title>Add a JavaScript file to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/javascript-file-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/javascript-file-hubspot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create and attach JavaScript files to HubSpot content.</description>
+    <category>Content Hub</category>
+    <category>Design manager</category>
+  </item>
+  <item>
+    <title>Customize help desk views</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-left-sidebar-views/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-left-sidebar-views/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set up left sidebar views in HubSpot help desk.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Send marketing emails in multiple languages</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-emails-multiple-languages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-emails-multiple-languages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles email language, subscription translations and AI translation.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Highlight report tables with conditional formatting</title>
+    <link>https://hubspot.samcbarth.com/articles/conditional-formatting-tables/</link>
+    <guid>https://hubspot.samcbarth.com/articles/conditional-formatting-tables/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot conditional formatting works on table charts.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Live validation on form fields</title>
+    <link>https://hubspot.samcbarth.com/articles/form-live-validation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-live-validation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot form live validation works.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
