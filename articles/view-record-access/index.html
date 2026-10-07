@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>See exactly who can access a HubSpot record - HubSpot Field Notes</title>
+<meta name="description" content="How the View record access panel shows users with access to a record, owners and owner history, and how sharing records grants extra access.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/view-record-access/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/view-record-access/">
+<meta property="og:title" content="See exactly who can access a HubSpot record">
+<meta property="og:description" content="How the View record access panel shows users with access to a record, owners and owner history, and how sharing records grants extra access.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/view-record-access/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "See exactly who can access a HubSpot record",
+      "description": "How the View record access panel shows users with access to a record, owners and owner history, and how sharing records grants extra access.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/view-record-access/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/view-record-access/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Check record access",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the record", "text": "Open the record in question."},
+        {"@type": "HowToStep", "name": "View record access", "text": "Click Actions, View record access."},
+        {"@type": "HowToStep", "name": "Review users", "text": "Check Users with access, filtered by team or access level."},
+        {"@type": "HowToStep", "name": "Check owners and history", "text": "Use the Owners and History tabs."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "See exactly who can access a HubSpot record", "item": "https://hubspot.samcbarth.com/articles/view-record-access/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="view-record-access">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Records">Records</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>See exactly who can access a HubSpot record</h1>
+      <p class="dek">When someone says they cannot see a record, or can see one they should not, the record access panel answers it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Access to the record; Super Admin to change permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p><span class="ui">Actions &gt; View record access</span> shows the record's owner and every user with access, with filters for teams and access level, plus Owners and History tabs for owner changes. In my demo portal a company showed 8 users with access, including an app user for a connected AI tool. Sharing a record with a user or team adds access in line with their object permissions.</p>
+        </div>
+
+        <h2>1. The panel</h2>
+        <figure class="shot"><a href="access.webp"><img src="access.webp" alt="View record access panel with company owner, Users with access, Owners and History tabs, and a user count" width="800" height="553" loading="lazy"></a><figcaption>The owner (1), the tabs (2), and the users with access count (3).</figcaption></figure>
+
+        <h2>2. What it shows</h2>
+        <ul>
+          <li>The default owner at the top. Changing it here changes the owner, so use Cancel if you are only looking.</li>
+          <li>Users with access, with their main and extra teams.</li>
+          <li>Owner history, including custom user properties.</li>
+          <li>Connected apps that act as users can appear in the list.</li>
+        </ul>
+
+        <h2>3. Fixing access</h2>
+        <p>Change object permissions or teams in Users &amp; Teams, or share the single record. See <a href="../permission-sets-and-seats/">permission sets and seats</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/view-record-access">HubSpot Knowledge Base: View and manage user access to a record</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/share-records">HubSpot Knowledge Base: Share records with users and teams</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

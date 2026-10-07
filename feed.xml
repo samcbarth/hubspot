@@ -666,6 +666,116 @@
     <category>Reports</category>
   </item>
   <item>
+    <title>Add your other domains to HubSpot tracking, or their form submissions may land in spam</title>
+    <link>https://hubspot.samcbarth.com/articles/additional-site-domains/</link>
+    <guid>https://hubspot.samcbarth.com/articles/additional-site-domains/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot needs external site domains listed in Advanced Tracking, the form spam rule for unlisted domains, and cross-domain linking.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Tracking code</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Export HubSpot workflows for documentation, and restore deleted ones</title>
+    <link>https://hubspot.samcbarth.com/articles/export-and-restore-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-and-restore-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export a list of HubSpot workflows, save a workflow diagram as an image, and restore a deleted workflow within 90 days.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>HubSpot Smart Transfer: move CRM data and email templates from another app</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-smart-transfer/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-smart-transfer/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot Smart Transfer does, its audit and configure steps, transferring email templates from other marketing tools, and cleaning up empty properties afterward.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Imports</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot import limits: file size, rows per file, and imports per day</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-import-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-import-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The size and row limits for HubSpot imports, the daily caps, how the rolling 24 hour window works, and how to plan large loads around them.</description>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+  </item>
+  <item>
+    <title>Work deals faster in HubSpot&#39;s board view</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-deals-in-board-view/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-deals-in-board-view/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to edit, bulk select and log activities from HubSpot&#39;s deal board, read the stage totals and weighted amounts, and use the data insights card.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>Merge two HubSpot records: which values win and what cannot be undone</title>
+    <link>https://hubspot.samcbarth.com/articles/merge-two-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/merge-two-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How merging contacts or companies works in HubSpot, which record&#39;s property values are kept, the exceptions, the Salesforce sync effect, and why merges cannot be reverted.</description>
+    <category>Smart CRM</category>
+    <category>Duplicates</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>See who changed a HubSpot property, and restore the old value</title>
+    <link>https://hubspot.samcbarth.com/articles/view-property-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/view-property-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to view a record&#39;s property history in HubSpot, read the change source, restore a value, and the 14 day window for restoring workflow changes.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Restore a deleted note, call, meeting or task on a HubSpot record</title>
+    <link>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to restore deleted activities from a record in HubSpot, the 90 day window, bulk restore, and the related restore pages for records and workflows.</description>
+    <category>Smart CRM</category>
+    <category>Activities</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>See exactly who can access a HubSpot record</title>
+    <link>https://hubspot.samcbarth.com/articles/view-record-access/</link>
+    <guid>https://hubspot.samcbarth.com/articles/view-record-access/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the View record access panel shows users with access to a record, owners and owner history, and how sharing records grants extra access.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>User settings</category>
+  </item>
+  <item>
+    <title>Find out when a HubSpot record was associated or unlinked</title>
+    <link>https://hubspot.samcbarth.com/articles/association-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/association-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to use View association history and Review associations on a HubSpot record to see when associations were created, changed or removed, and to bulk remove them.</description>
+    <category>Smart CRM</category>
+    <category>Associations</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Bookmark the HubSpot tools you use most</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-navigation-bookmarks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-navigation-bookmarks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s navigation bookmarks work, the ten bookmark limit, adding, reordering and removing bookmarks, and keeping the sidebar open.</description>
+    <category>Smart CRM</category>
+    <category>User settings</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
