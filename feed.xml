@@ -3345,6 +3345,147 @@
     <category>Apps</category>
   </item>
   <item>
+    <title>Sync Google Contacts with HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/google-contacts-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-contacts-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Google Contacts data sync works, which directions it supports, and how labels filter what syncs.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Office 365 asks for admin approval when connecting to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/office-365-admin-consent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/office-365-admin-consent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why Microsoft 365 tenants block HubSpot&#39;s inbox connection until an admin grants consent, and what the admin does next.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Moving things between HubSpot accounts</title>
+    <link>https://hubspot.samcbarth.com/articles/move-data-between-hubspot-accounts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/move-data-between-hubspot-accounts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot lets you copy between accounts, such as design manager themes and modules, the same-email requirement, and marketplace limits.</description>
+    <category>Content Hub</category>
+    <category>Smart CRM</category>
+    <category>Account</category>
+    <category>Data</category>
+  </item>
+  <item>
+    <title>DocuSign with HubSpot: what it does and doesn&#39;t sync</title>
+    <link>https://hubspot.samcbarth.com/articles/docusign-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/docusign-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s DocuSign integration uses HubSpot properties in envelopes, the per-user connection, and why it isn&#39;t a full data sync.</description>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot notifications and live chat in Slack</title>
+    <link>https://hubspot.samcbarth.com/articles/slack-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/slack-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Slack app delivers notifications, the private channel step, email matching, and replying to live chats from Slack.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>The Salesforce integration user: what it controls</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-integration-user/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-integration-user/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why the connected Salesforce user&#39;s permissions decide what HubSpot can sync, what to check before changing it, and the one-instance rule.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Sync invoices with Xero</title>
+    <link>https://hubspot.samcbarth.com/articles/xero-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/xero-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Xero data sync handles invoices in each direction, the card fee caveat, and when custom mappings need Data Hub.</description>
+    <category>Commerce Hub</category>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Invoices</category>
+  </item>
+  <item>
+    <title>Clone a deal or other record</title>
+    <link>https://hubspot.samcbarth.com/articles/clone-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/clone-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to clone a HubSpot record, who can do it, the Enterprise requirement for custom objects, and how to find cloned records later.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Replace a file and keep the same URL</title>
+    <link>https://hubspot.samcbarth.com/articles/replace-file-keep-url/</link>
+    <guid>https://hubspot.samcbarth.com/articles/replace-file-keep-url/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to replace a file in HubSpot&#39;s files tool so links keep working, and the caching delay before the new version shows.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Register form submitters for a marketing event</title>
+    <link>https://hubspot.samcbarth.com/articles/form-marketing-event-registration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-marketing-event-registration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add contacts to a HubSpot marketing event from a form with the Add participant workflow action, and why events can look missing.</description>
+    <category>Marketing Hub</category>
+    <category>Events</category>
+    <category>Forms</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Credit memos, voids and refunds on HubSpot invoices</title>
+    <link>https://hubspot.samcbarth.com/articles/invoice-credit-notes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/invoice-credit-notes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot credit memos apply to invoices, why invoices with payments can&#39;t be voided, and what blocks deleting an invoice.</description>
+    <category>Commerce Hub</category>
+    <category>Invoices</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Payment receipts and confirmation emails</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-receipts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-receipts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot payment emails go to buyers automatically, why they can&#39;t be turned off, and where checkout settings live.</description>
+    <category>Commerce Hub</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Start a subscription&#39;s billing on a future date</title>
+    <link>https://hubspot.samcbarth.com/articles/subscription-billing-dates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/subscription-billing-dates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set a recurring line item&#39;s billing start date in the future on payment links, quotes and subscriptions, and what happens if the buyer pays late.</description>
+    <category>Commerce Hub</category>
+    <category>Commerce</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Automated sales tax on HubSpot payments</title>
+    <link>https://hubspot.samcbarth.com/articles/automated-sales-tax/</link>
+    <guid>https://hubspot.samcbarth.com/articles/automated-sales-tax/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Who can use HubSpot&#39;s automated sales tax, the US and Canada requirement, local taxes with Stripe, and the unique line item name rule.</description>
+    <category>Commerce Hub</category>
+    <category>Commerce</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
