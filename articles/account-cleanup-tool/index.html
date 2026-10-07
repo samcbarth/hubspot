@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records - HubSpot Field Notes</title>
+<meta name="description" content="What HubSpot's Account Cleanup deletes or archives, the criteria per asset type, the monthly run, the restore windows, and the change from archiving to deleting marketing emails.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/account-cleanup-tool/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/account-cleanup-tool/">
+<meta property="og:title" content="HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records">
+<meta property="og:description" content="What HubSpot's Account Cleanup deletes or archives, the criteria per asset type, the monthly run, the restore windows, and the change from archiving to deleting marketing emails.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/account-cleanup-tool/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records",
+      "description": "What HubSpot's Account Cleanup deletes or archives, the criteria per asset type, the monthly run, the restore windows, and the change from archiving to deleting marketing emails.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/account-cleanup-tool/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/account-cleanup-tool/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set up Account Cleanup",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Account Cleanup", "text": "Go to Settings, Account Cleanup."},
+        {"@type": "HowToStep", "name": "Pick an asset or record type", "text": "Choose standard objects or a content type."},
+        {"@type": "HowToStep", "name": "Set the age criteria", "text": "Choose how old an unused asset must be."},
+        {"@type": "HowToStep", "name": "Turn it on", "text": "Save. Cleanup runs on the first of each month."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records", "item": "https://hubspot.samcbarth.com/articles/account-cleanup-tool/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="account-cleanup-tool">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Data+quality">Data quality</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records</h1>
+      <p class="dek">Account Cleanup runs every month once it is on. Read the criteria before you switch it on.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Available assets depend on your subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Account Cleanup removes unused assets on a schedule. Once on, it runs on the first of each month. Draft blog posts and pages are archived, never deleted. Draft marketing emails not used in workflows, old unused segments, turned-off workflows and unused reports are deleted, with restore windows of 90 days (14 for reports). In my demo portal a banner says marketing email archival has been replaced by deletion, and deletion was set to off until you enable it.</p>
+        </div>
+
+        <h2>1. The page</h2>
+        <p>Go to <span class="ui">Settings &gt; Account Cleanup</span>. The Cleanup &amp; Revert tab lists each asset or record type and whether cleanup is configured.</p>
+        <figure class="shot"><a href="cleanup.webp"><img src="cleanup.webp" alt="Account Cleanup page with a banner about marketing email deletion, Cleanup and Revert tab, and object list" width="800" height="553" loading="lazy"></a><figcaption>The marketing email change (1), Cleanup &amp; Revert (2), and types to set up (3).</figcaption></figure>
+
+        <h2>2. What happens to each type</h2>
+        <ul>
+          <li><strong>Blog posts, landing pages, website pages:</strong> drafts with no scheduled publish date, older than your cutoff, are archived.</li>
+          <li><strong>Marketing emails:</strong> drafts, not scheduled, not referenced in workflows, older than your cutoff, are deleted. Restorable for 90 days.</li>
+          <li><strong>Segments:</strong> older than your cutoff and not referenced in other tools. Deleted, 90 days to restore.</li>
+          <li><strong>Workflows:</strong> turned off and older than your cutoff. Deleted, 90 days to restore.</li>
+          <li><strong>Reports:</strong> not modified within your cutoff and not in dashboards or scheduled emails. Deleted, 14 days to restore.</li>
+          <li><strong>Deals and other records:</strong> last modified before your cutoff. Deleted, 90 days to restore.</li>
+        </ul>
+
+        <h2>3. Before switching it on</h2>
+        <p>Export or back up first, set the cutoff longer than you think, and check that templates you clone from are not drafts that will vanish. For automatic contact deletion, see <a href="../delete-inactive-contacts-automatically/">deleting inactive contacts automatically</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/account-management/remove-unused-assets-from-your-account-with-account-cleanup">HubSpot Knowledge Base: Remove unused assets with account cleanup</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

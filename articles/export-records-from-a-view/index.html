@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Export HubSpot records from a view: what is included and how to get more - HubSpot Field Notes</title>
+<meta name="description" content="How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/export-records-from-a-view/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/export-records-from-a-view/">
+<meta property="og:title" content="Export HubSpot records from a view: what is included and how to get more">
+<meta property="og:description" content="How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/export-records-from-a-view/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Export HubSpot records from a view: what is included and how to get more",
+      "description": "How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Export records from a view",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the view", "text": "Open the saved view, or All records for everything."},
+        {"@type": "HowToStep", "name": "Click Export", "text": "Use Export at the bottom of the table."},
+        {"@type": "HowToStep", "name": "Customize", "text": "Choose properties in view, all properties, or all properties and associations, and the file format."},
+        {"@type": "HowToStep", "name": "Download", "text": "Use the emailed link to download the file."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Export HubSpot records from a view: what is included and how to get more", "item": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="export-records-from-a-view">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Records">Records</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Export HubSpot records from a view: what is included and how to get more</h1>
+      <p class="dek">An export copies the view you are looking at. Set up the view first and the file comes out the way you need it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Export permission for the object</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Exports come from the view you have open. By default the file holds the view's properties and associations, with up to 1,000 associated record IDs per association column. Click <span class="ui">Customize</span> to export all properties, or all properties and associations, and to choose the format and header language. The download link arrives by email. Super Admins can set export notifications for large exports, up to a 275,000 record threshold.</p>
+        </div>
+
+        <h2>1. Export from the view</h2>
+        <p>Open <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a> or another object, pick the view, and click <span class="ui">Export</span> at the bottom.</p>
+        <figure class="shot"><a href="index.webp"><img src="index.webp" alt="Contacts index with view tabs and an Export button at the bottom" width="800" height="553" loading="lazy"></a><figcaption>Export (1) uses the current view (2).</figcaption></figure>
+
+        <h2>2. What is in the file</h2>
+        <ul>
+          <li><strong>Default:</strong> properties and associations in the view, in the view's column order.</li>
+          <li><strong>All properties:</strong> every property, no associations.</li>
+          <li><strong>All properties and associations:</strong> the widest file.</li>
+          <li>Association columns hold up to 1,000 associated record IDs plus the record name by default. Customize can export all associated records.</li>
+        </ul>
+
+        <h2>3. Keep an eye on exports</h2>
+        <p>Settings, Import &amp; Export lists past exports. Super Admins see everyone's. Each Super Admin can set their own notification threshold for large exports. To import a file back, include the Record ID: see <a href="../enrich-records-record-id-import/">updating records by Record ID</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/import-and-export/export-records">HubSpot Knowledge Base: Export your records</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/view-a-log-of-your-users-exports-in-your-account">HubSpot Knowledge Base: Export notifications and log</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

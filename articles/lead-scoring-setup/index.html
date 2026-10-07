@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Set up lead scoring in HubSpot: engagement, fit, and combined scores - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/lead-scoring-setup/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/lead-scoring-setup/">
+<meta property="og:title" content="Set up lead scoring in HubSpot: engagement, fit, and combined scores">
+<meta property="og:description" content="How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/lead-scoring-setup/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Set up lead scoring in HubSpot: engagement, fit, and combined scores",
+      "description": "How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a lead score",
+      "totalTime": "PT6M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Lead Scoring", "text": "Go to Marketing, Lead Scoring and start from scratch or with AI."},
+        {"@type": "HowToStep", "name": "Pick the score type", "text": "Choose engagement, fit, or combined."},
+        {"@type": "HowToStep", "name": "Add criteria", "text": "Set event-based engagement criteria and property-based fit criteria with points."},
+        {"@type": "HowToStep", "name": "Set thresholds", "text": "Define High, Medium and Low ranges, or the A to C and 1 to 3 bands for combined scores."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Set up lead scoring in HubSpot: engagement, fit, and combined scores", "item": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="lead-scoring-setup">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Contacts">Contacts</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>Set up lead scoring in HubSpot: engagement, fit, and combined scores</h1>
+      <p class="dek">A score is only useful if sales trusts it. Start with the score type, then the thresholds, then the places reps will see it.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Contact scores need Marketing Hub; AI-built scores need Marketing Hub Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Lead scoring access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's lead scoring tool builds three kinds of score. <strong>Engagement</strong> scores count actions such as site visits, CTA clicks and email opens. <strong>Fit</strong> scores use property values such as job title or company size. <strong>Combined</strong> scores do both and label records A1 to C3, where the letter is fit and the number is engagement. Contact scores need Marketing Hub. Each score creates properties you can use in views, segments and workflows.</p>
+        </div>
+
+        <h2>1. Where it lives</h2>
+        <p>Go to <span class="ui">Marketing &gt; Lead Scoring</span>. With no scores yet, my demo portal offers <span class="ui">Start from scratch</span> or <span class="ui">Start with AI</span>.</p>
+        <figure class="shot"><a href="start.webp"><img src="start.webp" alt="Lead Scoring start screen with Start from scratch and Start with AI buttons" width="800" height="553" loading="lazy"></a><figcaption>The two ways to start (1) and what the tool is for (2).</figcaption></figure>
+
+        <h2>2. The three score types</h2>
+        <ul>
+          <li><strong>Engagement:</strong> actions and interactions, such as visiting your website, subscribing, clicking a CTA, or opening a marketing email.</li>
+          <li><strong>Fit:</strong> property values, such as job title, company size or annual revenue.</li>
+          <li><strong>Combined:</strong> both. HubSpot stores a total, a fit value and an engagement value.</li>
+        </ul>
+        <p>Score limits run from -100 to 100 up to -10,000 to 10,000, so negative points are allowed. Use them for signals like a competitor email domain.</p>
+
+        <h2>3. Thresholds</h2>
+        <p>Engagement and fit scores get High, Medium and Low labels, for example 70 to 100 as High. Combined scores get A1 through C3: A is high fit, C is low fit, 1 is high engagement, 3 is low. A C1 contact is very engaged but a poor fit.</p>
+
+        <h2>4. Use it</h2>
+        <p>Build a saved view or segment of High or A1 records, and agree with sales what happens when a record crosses the line.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot Knowledge Base: Overview of the lead scoring tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/scoring/build-lead-scores">HubSpot Knowledge Base: Build lead scores</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Add live chat to your website with HubSpot chatflows - HubSpot Field Notes</title>
+<meta name="description" content="How to create a website chatflow in HubSpot, connect it to an inbox or help desk, set the welcome message and display behavior, and the cookie that keeps a minimized chat closed.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/website-chatflows/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/website-chatflows/">
+<meta property="og:title" content="Add live chat to your website with HubSpot chatflows">
+<meta property="og:description" content="How to create a website chatflow in HubSpot, connect it to an inbox or help desk, set the welcome message and display behavior, and the cookie that keeps a minimized chat closed.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/website-chatflows/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Add live chat to your website with HubSpot chatflows",
+      "description": "How to create a website chatflow in HubSpot, connect it to an inbox or help desk, set the welcome message and display behavior, and the cookie that keeps a minimized chat closed.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/website-chatflows/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/website-chatflows/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a website live chat",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Chatflows", "text": "Go to Service, Chatflows and click Create chatflow."},
+        {"@type": "HowToStep", "name": "Choose Website", "text": "Select the website channel and pick the inbox or help desk."},
+        {"@type": "HowToStep", "name": "Write the welcome message", "text": "Set the chat heading, welcome message and assignment."},
+        {"@type": "HowToStep", "name": "Target pages and display", "text": "Choose where it appears and whether the welcome message pops open."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Add live chat to your website with HubSpot chatflows", "item": "https://hubspot.samcbarth.com/articles/website-chatflows/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="website-chatflows">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Inbox">Inbox</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Service Hub</span></div>
+      <h1>Add live chat to your website with HubSpot chatflows</h1>
+      <p class="dek">A chatflow is the widget visitors see plus the rules for who answers. It needs a connected inbox or help desk first.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers; bots and some routing options vary by subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Chatflows access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Chatflows live under <span class="ui">Service &gt; Chatflows</span>, with tabs for Web Chat, Mobile Chat and Facebook Messenger. A website chatflow needs an inbox or help desk with a connected channel. You set the welcome message, assignment, target URLs and display behavior. If a visitor minimizes the chat, HubSpot keeps it minimized across pages and chatflows for 24 hours through a cookie, which can override your pop-open setting.</p>
+        </div>
+
+        <h2>1. Create it</h2>
+        <p>Open <a class="hs-link" data-hs="/chatflows/{portalId}" href="https://app.hubspot.com/l/chatflows"><span class="ui">Chatflows</span></a> and click <span class="ui">Create chatflow</span>.</p>
+        <figure class="shot"><a href="chatflows.webp"><img src="chatflows.webp" alt="Chatflows page with Web Chat, Mobile Chat and Facebook Messenger tabs and Create chatflow button" width="800" height="553" loading="lazy"></a><figcaption>Chat channels (1) and Create chatflow (2).</figcaption></figure>
+
+        <h2>2. Settings that matter</h2>
+        <ul>
+          <li><strong>Workspace:</strong> pick the inbox or help desk. Only ones with a connected channel appear.</li>
+          <li><strong>Welcome message and assignment:</strong> who answers, and what visitors see first.</li>
+          <li><strong>Target:</strong> the URLs where the chat appears. Use separate chatflows for different languages.</li>
+          <li><strong>Display:</strong> whether the welcome message pops open as a prompt on desktop and mobile.</li>
+        </ul>
+
+        <h2>3. The minimize cookie</h2>
+        <p>When a visitor minimizes the chat, the <code>hs-messages-hide-welcome-message</code> cookie keeps it minimized for 24 hours across pages and chatflows. When testing a pop-open setting, use a private window.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/chatflows/create-a-live-chat">HubSpot Knowledge Base: Create a live chat</a></li>
+          <li><a href="https://knowledge.hubspot.com/chatflows/create-a-bot">HubSpot Knowledge Base: Create a rule-based chatbot</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

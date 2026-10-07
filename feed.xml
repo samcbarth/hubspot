@@ -164,6 +164,264 @@
     <category>Themes</category>
   </item>
   <item>
+    <title>Set up lead scoring in HubSpot: engagement, fit, and combined scores</title>
+    <link>https://hubspot.samcbarth.com/articles/lead-scoring-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lead-scoring-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Contacts</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubSpot sequences: when contacts unenroll automatically, and how to change it</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-settings-and-unenrollment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-settings-and-unenrollment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The default reply and meeting unenrollment rules for HubSpot sequences, the edge cases around company replies and meetings booked elsewhere, and how to turn the triggers off.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>HubSpot playbooks: call scripts and notes reps can use on the record</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-playbooks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-playbooks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot playbooks are, who can create and use them, how they show on records, and how to manage versions and sharing.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Activities</category>
+    <category>Templates</category>
+  </item>
+  <item>
+    <title>Set sales goals in HubSpot for users and teams</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-goals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-goals/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot goals work: templates versus custom goals, user and team contributors, the 1,000 custom goal limit, and the rule for users on more than one team.</description>
+    <category>Sales Hub</category>
+    <category>Reports</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>The HubSpot audit log: see who changed what, and what your tier shows</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-audit-log/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-audit-log/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find HubSpot&#39;s centralized audit log, the Events and Analyze tabs, login history, and which categories each subscription tier can see.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>HubSpot Notetaker: recording settings, smart data capture, and what will cost credits</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-notetaker-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-notetaker-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s Notetaker and recording settings live, the capture options, the smart data capture credit cost for custom properties, and the summary limits starting January 2027.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Back up your HubSpot CRM data: manual backups, schedules, and what is in the file</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-backup-and-restore/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-backup-and-restore/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Backup &amp; Restore works: who can run it, how often by tier, what the download contains, how long it stays available, and the sensitive data warning.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Data quality</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout</title>
+    <link>https://hubspot.samcbarth.com/articles/portal-login-security-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/portal-login-security-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s portal login settings live, the 2FA rule for paid accounts, the 24 hour grace period, and the login restrictions you can set.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records</title>
+    <link>https://hubspot.samcbarth.com/articles/account-cleanup-tool/</link>
+    <guid>https://hubspot.samcbarth.com/articles/account-cleanup-tool/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Account Cleanup deletes or archives, the criteria per asset type, the monthly run, the restore windows, and the change from archiving to deleting marketing emails.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Data quality</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Fix formatting issues in HubSpot automatically with Data Quality rules</title>
+    <link>https://hubspot.samcbarth.com/articles/data-quality-formatting-rules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-quality-formatting-rules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Data Quality tool finds formatting issues like name capitalization and email case, how to accept or reject fixes, and how automation rules fix new records.</description>
+    <category>Data Hub</category>
+    <category>Smart CRM</category>
+    <category>Data quality</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubSpot SMS: what you need before you can text contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-sms-add-on/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-sms-add-on/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The requirements for HubSpot marketing SMS: the add-on, a registered US number, contact consent and phone format, and the business types that are not allowed.</description>
+    <category>Marketing Hub</category>
+    <category>Consent</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>HubSpot campaigns in Marketing Studio: create a campaign and attach its assets</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-studio-campaigns/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-studio-campaigns/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot campaigns live now, what a campaign holds, how to add existing assets, and the AI setting Marketing Studio needs.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Connect ad accounts to HubSpot: networks, permissions, and auto-tracking</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-ad-accounts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-ad-accounts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which ad networks HubSpot connects to, the permission you need, what auto-tracking adds to your ad URLs, and where ad settings live.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Connect social accounts to HubSpot and what the social tool tracks</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-social-accounts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-social-accounts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to connect Facebook, Instagram, LinkedIn and X to HubSpot, what HubSpot stores and tracks once connected, and the reporting rules per network.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>HubSpot Markets: define your target market once and reuse it in Buyer Intent</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-markets-beta/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-markets-beta/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot Markets are, the categories that define one, the 20 market limit, and how markets feed Buyer Intent and target accounts.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Companies</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>HubSpot seats versus permissions, and using permission sets to stop editing users one by one</title>
+    <link>https://hubspot.samcbarth.com/articles/permission-sets-and-seats/</link>
+    <guid>https://hubspot.samcbarth.com/articles/permission-sets-and-seats/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between seats and permissions in HubSpot, how to create and assign permission sets, and seat transfers.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+    <category>User settings</category>
+  </item>
+  <item>
+    <title>Add live chat to your website with HubSpot chatflows</title>
+    <link>https://hubspot.samcbarth.com/articles/website-chatflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/website-chatflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create a website chatflow in HubSpot, connect it to an inbox or help desk, set the welcome message and display behavior, and the cookie that keeps a minimized chat closed.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026</title>
+    <link>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</link>
+    <guid>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot private apps went, the dates when creating new legacy private apps is turned off, what still works, and what to use instead.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot task queues: group tasks so reps can work through them in one go</title>
+    <link>https://hubspot.samcbarth.com/articles/task-queues/</link>
+    <guid>https://hubspot.samcbarth.com/articles/task-queues/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create task queues in HubSpot, add tasks to a queue manually or from a workflow, and filter the tasks index by queue.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>HubSpot quotes: statuses, approvals, and who still has legacy quotes</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-quotes-basics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-quotes-basics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to read quote statuses in HubSpot, where to turn on quote approvals, and the September 2025 legacy quote access rules.</description>
+    <category>Sales Hub</category>
+    <category>Commerce Hub</category>
+    <category>Deals</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>Export HubSpot records from a view: what is included and how to get more</title>
+    <link>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Views</category>
+  </item>
+  <item>
+    <title>Capture submissions from non-HubSpot forms on your website</title>
+    <link>https://hubspot.samcbarth.com/articles/non-hubspot-forms-collected/</link>
+    <guid>https://hubspot.samcbarth.com/articles/non-hubspot-forms-collected/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot collects submissions from forms it did not build, what it needs to work, why you may see partial duplicates, and how to convert a collected form into a HubSpot form.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>The HubSpot email Health tab: your sending score and the limits that trigger suspension</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-health-tab/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-health-tab/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s email health score measures, the benchmarks it compares against, and the bounce, spam and unsubscribe rates that can suspend marketing email.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Restrict who can view or edit a HubSpot property</title>
+    <link>https://hubspot.samcbarth.com/articles/restrict-property-access/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restrict-property-access/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How field-level property access works in HubSpot, where to set it, what restricted users see, and the side effects on views, workflows and reports.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>User settings</category>
+  </item>
+  <item>
+    <title>Choose the fields reps see when creating a HubSpot record, and make some required</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-create-record-form/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-create-record-form/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to customize the create panel for contacts, companies, deals and tickets in HubSpot, make properties and associations required, and which tiers allow what.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Properties</category>
+    <category>Records</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

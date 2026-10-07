@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Set sales goals in HubSpot for users and teams - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot goals work: templates versus custom goals, user and team contributors, the 1,000 custom goal limit, and the rule for users on more than one team.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/sales-goals/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/sales-goals/">
+<meta property="og:title" content="Set sales goals in HubSpot for users and teams">
+<meta property="og:description" content="How HubSpot goals work: templates versus custom goals, user and team contributors, the 1,000 custom goal limit, and the rule for users on more than one team.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/sales-goals/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Set sales goals in HubSpot for users and teams",
+      "description": "How HubSpot goals work: templates versus custom goals, user and team contributors, the 1,000 custom goal limit, and the rule for users on more than one team.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/sales-goals/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/sales-goals/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a sales goal",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Goals", "text": "Go to Reporting, Goals and click Create goal."},
+        {"@type": "HowToStep", "name": "Pick a template or custom", "text": "Use a sales template or build a custom goal from a property and aggregation."},
+        {"@type": "HowToStep", "name": "Set contributors", "text": "Choose individual users, team goals only, or teams with individual user targets."},
+        {"@type": "HowToStep", "name": "Set duration and targets", "text": "Pick the period and enter targets per user or team."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Set sales goals in HubSpot for users and teams", "item": "https://hubspot.samcbarth.com/articles/sales-goals/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="sales-goals">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Reports">Reports</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>Set sales goals in HubSpot for users and teams</h1>
+      <p class="dek">Goals are quotas HubSpot tracks for you. The setup choices that matter are contributors and which team a person counts toward.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Varies by goal type; custom goals and sales goal templates depend on your subscription</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Goal permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot goals track progress toward a target for users or teams. Sales goals come from templates. Custom goals can use hundreds of property and aggregation combinations, with a limit of 1,000 custom goals per account. Contributors can be individual users, teams only, or teams with user targets. If someone is on more than one team, their target counts toward only one, and their primary team if they have one.</p>
+        </div>
+
+        <h2>1. Start</h2>
+        <p>Open <span class="ui">Reporting &gt; Goals</span>. My demo portal has none yet, so HubSpot shows a welcome dialog.</p>
+        <figure class="shot"><a href="welcome.webp"><img src="welcome.webp" alt="Welcome to goals dialog with a Create a goal button" width="800" height="553" loading="lazy"></a><figcaption>Create a goal (1).</figcaption></figure>
+
+        <h2>2. Contributors</h2>
+        <ul>
+          <li><strong>Individual users:</strong> user targets, no team rollup.</li>
+          <li><strong>Team goals only:</strong> one target per team.</li>
+          <li><strong>Teams with individual user targets:</strong> both, so you can see each person inside the team.</li>
+        </ul>
+        <p>Custom goals can credit any user property on the record through the <em>Goal owner property</em>, which helps when several people work a deal.</p>
+
+        <h2>3. The rules that catch people</h2>
+        <ul>
+          <li>Up to 1,000 custom goals per account.</li>
+          <li>A user on several teams counts toward one team's target. If they have a primary team, it is that one.</li>
+          <li>Filter the overview by goal template, team or user to check targets before the period starts.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/reports/create-sales-goals">HubSpot Knowledge Base: Create sales goals</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-custom-goals">HubSpot Knowledge Base: Create custom goals</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout - HubSpot Field Notes</title>
+<meta name="description" content="Where HubSpot's portal login settings live, the 2FA rule for paid accounts, the 24 hour grace period, and the login restrictions you can set.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/portal-login-security-settings/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/portal-login-security-settings/">
+<meta property="og:title" content="Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout">
+<meta property="og:description" content="Where HubSpot's portal login settings live, the 2FA rule for paid accounts, the 24 hour grace period, and the login restrictions you can set.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/portal-login-security-settings/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout",
+      "description": "Where HubSpot's portal login settings live, the 2FA rule for paid accounts, the 24 hour grace period, and the login restrictions you can set.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/portal-login-security-settings/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/portal-login-security-settings/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set portal login rules",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Security", "text": "Go to Settings, Security, Login tab."},
+        {"@type": "HowToStep", "name": "Start the wizard", "text": "Click Setup Portal Login Settings."},
+        {"@type": "HowToStep", "name": "Choose login methods and 2FA", "text": "Pick allowed login methods and 2FA methods."},
+        {"@type": "HowToStep", "name": "Add restrictions", "text": "Set IP address rules and session timeout if needed."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout", "item": "https://hubspot.samcbarth.com/articles/portal-login-security-settings/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="portal-login-security-settings">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Account+settings">Account settings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout</h1>
+      <p class="dek">Login security is set once for the whole account. Paid accounts already require 2FA, and the rest is worth five minutes.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>2FA required on Starter, Professional and Enterprise; some restrictions vary by tier</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit account defaults</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Settings, <span class="ui">Security</span>, Login tab is where you set allowed login methods, IP restrictions, session timeout and allowed 2FA methods for every user. HubSpot's KB says 2FA is required for all Starter, Professional and Enterprise accounts and cannot be turned off or waived per user. When the requirement is switched on it takes effect after 24 hours, so users have time to set up a method. Text message 2FA is labeled least secure and is not available on free accounts.</p>
+        </div>
+
+        <h2>1. Where</h2>
+        <p>Go to <span class="ui">Settings &gt; Security</span>. The Login tab starts with a setup wizard; Permissions is the second tab.</p>
+        <figure class="shot"><a href="login.webp"><img src="login.webp" alt="Security settings Login tab with a Setup Portal Login Settings button" width="800" height="553" loading="lazy"></a><figcaption>Login and Permissions tabs (1) and the setup button (2).</figcaption></figure>
+
+        <h2>2. 2FA</h2>
+        <ul>
+          <li>Required for Starter, Professional and Enterprise accounts. It applies account-wide and individual users cannot be excluded.</li>
+          <li>Passkeys and authenticator apps are available on all tiers. Text message is marked least secure.</li>
+          <li>After switching the requirement on there is a 24 hour grace period. Users without a method set it up at their next login.</li>
+        </ul>
+
+        <h2>3. Other rules</h2>
+        <p>The wizard covers which login methods are allowed, IP address restrictions and session timeout. Set these with your IT team, and keep one Super Admin who can still get in if single sign-on breaks.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/account-security/set-up-two-factor-authentication-for-your-hubspot-login">HubSpot Knowledge Base: Set up two-factor authentication</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-security/restrict-which-login-methods-users-can-use-to-access-your-account">HubSpot Knowledge Base: Restrict which login methods users can use</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>The HubSpot audit log: see who changed what, and what your tier shows - HubSpot Field Notes</title>
+<meta name="description" content="Where to find HubSpot's centralized audit log, the Events and Analyze tabs, login history, and which categories each subscription tier can see.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-audit-log/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-audit-log/">
+<meta property="og:title" content="The HubSpot audit log: see who changed what, and what your tier shows">
+<meta property="og:description" content="Where to find HubSpot's centralized audit log, the Events and Analyze tabs, login history, and which categories each subscription tier can see.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-audit-log/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "The HubSpot audit log: see who changed what, and what your tier shows",
+      "description": "Where to find HubSpot's centralized audit log, the Events and Analyze tabs, login history, and which categories each subscription tier can see.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubspot-audit-log/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubspot-audit-log/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Review the audit log",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Audit Log", "text": "Go to Settings, Audit Log."},
+        {"@type": "HowToStep", "name": "Filter", "text": "Use Category, Subcategory, Action, Modified by and Date filters."},
+        {"@type": "HowToStep", "name": "Check logins", "text": "Open Login History or Security Activity for sign-ins."},
+        {"@type": "HowToStep", "name": "Export if needed", "text": "Export the filtered log for a record of the change."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "The HubSpot audit log: see who changed what, and what your tier shows", "item": "https://hubspot.samcbarth.com/articles/hubspot-audit-log/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubspot-audit-log">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Account+settings">Account settings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>The HubSpot audit log: see who changed what, and what your tier shows</h1>
+      <p class="dek">When a workflow is off or a segment disappeared, the audit log is the first place to look. What you can see depends on your tier.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All paid tiers; Enterprise sees more categories</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or audit log access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Settings, <strong>Audit Log</strong> shows user actions in your account. It records actions taken by HubSpot users, filtered by category, action, user and date. Starter and Professional accounts can filter by Login and Security Activity. Enterprise adds categories such as approvals, content and workflows. The Analyze tab summarizes daily logins, deletions, exports and reports.</p>
+        </div>
+
+        <h2>1. The log</h2>
+        <p>Go to <span class="ui">Settings &gt; Audit Log</span>. The Events tab lists changes with category, subcategory, action, who made it and when.</p>
+        <figure class="shot"><a href="log.webp"><img src="log.webp" alt="Audit Log page with All Logs, Login History and Security Activity tabs and a list of recent changes" width="800" height="553" loading="lazy"></a><figcaption>All Logs, Login History and Security Activity (1), and the Analyze tab (2).</figcaption></figure>
+
+        <h2>2. What your tier sees</h2>
+        <ul>
+          <li>Logins (including mobile) and security activity: all tiers.</li>
+          <li>Approvals, communication preference changes and more categories: Enterprise.</li>
+          <li>Content activity export needs Content Hub Starter or above. Retention is 365 days on Starter and Professional and unlimited on Enterprise.</li>
+        </ul>
+        <p>HubSpot says the log only records actions taken by HubSpot users, so changes made by integrations may not appear.</p>
+
+        <h2>3. Analyze</h2>
+        <p>The Analyze tab shows daily totals for logins, deletions, exports and reports, with links into the filtered log. A spike in exports is worth a question.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history">HubSpot Knowledge Base: View and export account activity history</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

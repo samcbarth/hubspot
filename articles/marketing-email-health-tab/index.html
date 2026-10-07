@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>The HubSpot email Health tab: your sending score and the limits that trigger suspension - HubSpot Field Notes</title>
+<meta name="description" content="What HubSpot's email health score measures, the benchmarks it compares against, and the bounce, spam and unsubscribe rates that can suspend marketing email.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/marketing-email-health-tab/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/marketing-email-health-tab/">
+<meta property="og:title" content="The HubSpot email Health tab: your sending score and the limits that trigger suspension">
+<meta property="og:description" content="What HubSpot's email health score measures, the benchmarks it compares against, and the bounce, spam and unsubscribe rates that can suspend marketing email.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/marketing-email-health-tab/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "The HubSpot email Health tab: your sending score and the limits that trigger suspension",
+      "description": "What HubSpot's email health score measures, the benchmarks it compares against, and the bounce, spam and unsubscribe rates that can suspend marketing email.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/marketing-email-health-tab/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/marketing-email-health-tab/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Check your email health",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open Marketing Email", "text": "Go to Marketing, Email."},
+        {"@type": "HowToStep", "name": "Click Health", "text": "Open the Health tab."},
+        {"@type": "HowToStep", "name": "Pick a benchmark", "text": "Select your industry to compare against industry benchmarks."},
+        {"@type": "HowToStep", "name": "Watch the thresholds", "text": "Keep hard bounces, spam reports and unsubscribes under HubSpot's limits."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "The HubSpot email Health tab: your sending score and the limits that trigger suspension", "item": "https://hubspot.samcbarth.com/articles/marketing-email-health-tab/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="marketing-email-health-tab">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>The HubSpot email Health tab: your sending score and the limits that trigger suspension</h1>
+      <p class="dek">The Health tab scores your last 30 days of sending. The suspension thresholds behind it are what you actually need to stay under.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing email access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Marketing Email, <strong>Health</strong> tab, gives a score from one to ten from the last 30 days of opens, click-throughs, hard bounces, unsubscribes and spam reports, compared to a HubSpot or industry benchmark. HubSpot's KB lists the monthly limits that can suspend marketing email: a 5% hard bounce rate, a 0.1% spam report rate (one in 1,000), and a 3% unsubscribe rate. While suspended, workflow emails do not send either.</p>
+        </div>
+
+        <h2>1. Find it</h2>
+        <p>Open <a class="hs-link" data-hs="/email/{portalId}/manage/state/all" href="https://app.hubspot.com/l/email/manage/state/all"><span class="ui">Marketing Email</span></a> and click <span class="ui">Health</span>.</p>
+        <figure class="shot"><a href="manage.webp"><img src="manage.webp" alt="Marketing Email manage page with Manage, Templates, Analyze and Health tabs" width="800" height="553" loading="lazy"></a><figcaption>The Health tab (1).</figcaption></figure>
+        <figure class="shot"><a href="health.webp"><img src="health.webp" alt="Email Health page with a benchmark comparison banner" width="800" height="553" loading="lazy"></a><figcaption>The health page (1) and the benchmark choice (2).</figcaption></figure>
+
+        <h2>2. What the score uses</h2>
+        <p>Opens, click-throughs, hard bounces, unsubscribes and spam reports over the past 30 days, each scored against the benchmark. Select your industry in the banner to switch from HubSpot's general benchmark.</p>
+
+        <h2>3. The limits that matter</h2>
+        <ul>
+          <li>Hard bounce rate: 5% in a month.</li>
+          <li>Spam reports: 0.1%, one per 1,000 emails.</li>
+          <li>Unsubscribes: 3%.</li>
+        </ul>
+        <p>Suspension stops all marketing email, including workflow sends. The Health tab has a How to Fix flow for suspended accounts. Most bounce problems come from old lists. See <a href="../bounced-contacts-still-marketing/">bounced contacts still marketing</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/marketing-email/monitor-your-email-sending-reputation-with-the-email-health-tool">HubSpot Knowledge Base: Monitor email sending reputation with the email health tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/why-is-my-email-suspended">HubSpot Knowledge Base: Resolve email sending suspensions</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
