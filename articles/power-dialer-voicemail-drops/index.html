@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Power dialer and voicemail drops: call a list and leave recorded messages - HubSpot Field Notes</title>
+<meta name="description" content="How to add contacts to HubSpot's power dialer from a list, and how pre-recorded voicemail drops work, including their phone number requirement.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/">
+<meta property="og:title" content="Power dialer and voicemail drops: call a list and leave recorded messages">
+<meta property="og:description" content="How to add contacts to HubSpot's power dialer from a list, and how pre-recorded voicemail drops work, including their phone number requirement.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Power dialer and voicemail drops: call a list and leave recorded messages",
+      "description": "How to add contacts to HubSpot's power dialer from a list, and how pre-recorded voicemail drops work, including their phone number requirement.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Power dialer and voicemail drops",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Select contacts", "text": "Tick contacts in a view."},
+        {"@type": "HowToStep", "name": "Add to dialer", "text": "More, Add to Power Dialer."},
+        {"@type": "HowToStep", "name": "Record a drop", "text": "Record the message and choose Voicemail drop as the message type."},
+        {"@type": "HowToStep", "name": "Drop it", "text": "When a call reaches voicemail, drop the recording and move on."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Power dialer and voicemail drops: call a list and leave recorded messages", "item": "https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="power-dialer-voicemail-drops">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Calling">Calling</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>Power dialer and voicemail drops: call a list and leave recorded messages</h1>
+      <p class="dek">For call blocks, the power dialer queues contacts and voicemail drops save repeating the same message.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Voicemail drops need Sales Hub Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Calling access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Select contacts, then <span class="ui">More &gt; Add to Power Dialer</span>. HubSpot's KB says <strong>voicemail drops</strong> let reps record a message once and drop it on outbound calls; they need <strong>Sales Hub Enterprise</strong>, work only with <strong>HubSpot-provided phone numbers</strong>, and do not support text-to-speech.</p>
+        </div>
+
+        <h2>1. Add contacts</h2>
+        <p>With one contact selected in my demo portal, the More menu shows Add to Power Dialer. I closed it without adding anyone.</p>
+        <figure class="shot"><a href="more.webp"><img src="more.webp" alt="Contacts view More menu with Add to Power Dialer among bulk actions" width="800" height="824" loading="lazy"></a><figcaption>Add to Power Dialer (1).</figcaption></figure>
+        <h2>2. Numbers</h2>
+        <p>Voicemail drops need a HubSpot number. See <a href="../hubspot-calling-numbers/">calling numbers</a>.</p>
+        <h2>3. Related</h2>
+        <p><a href="../call-recording-consent/">Call recording consent</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/calling/use-pre-recorded-voicemail-drops-with-the-power-dialer">HubSpot Knowledge Base: Use pre-recorded voicemail drops with the power dialer</a></li>
+          <li><a href="https://knowledge.hubspot.com/calling/use-the-sales-power">HubSpot Knowledge Base: Use the sales power dialer</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1665,6 +1665,132 @@
     <category>Analytics</category>
   </item>
   <item>
+    <title>Make Closed lost reason useful: check its field type, then require it</title>
+    <link>https://hubspot.samcbarth.com/articles/closed-lost-reasons/</link>
+    <guid>https://hubspot.samcbarth.com/articles/closed-lost-reasons/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s Closed lost reason deal property, why a free-text version is hard to report on, and how to require it when deals close lost.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Coaching playlists: collect your best call recordings for training</title>
+    <link>https://hubspot.samcbarth.com/articles/coaching-playlists/</link>
+    <guid>https://hubspot.samcbarth.com/articles/coaching-playlists/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot coaching playlists hold full or clipped call recordings, how sharing and following work, and the subscription needed.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>The sales activity feed: opens, clicks and revisits in one list</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-activity-feed/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-activity-feed/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s activity feed shows, its one-year history, why only tracked emails appear, and how it connects to the Chrome extension.</description>
+    <category>Sales Hub</category>
+    <category>Notifications</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s calendar view: meetings in one place after you connect a calendar</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-calendar-view/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-calendar-view/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s dedicated calendar view does, what it needs, and how it fits with the Meetings Scheduler and sales workspace.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>HubSpot MCP: built-in AI connectors vs your own MCP connector</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When to use HubSpot&#39;s built-in connectors for Claude, ChatGPT, Copilot and Gemini, when to build on the remote MCP server, and what the MCP Connectors page sets up.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Developer Migrations: find app API calls HubSpot is retiring</title>
+    <link>https://hubspot.samcbarth.com/articles/developer-migrations-beta/</link>
+    <guid>https://hubspot.samcbarth.com/articles/developer-migrations-beta/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Migrations page (beta) shows for scopes and API versions, how it lists affected endpoints per app, and how apps move to the current platform version.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Property Insights: find properties with issues and watch for unusual updates</title>
+    <link>https://hubspot.samcbarth.com/articles/property-insights-data-quality/</link>
+    <guid>https://hubspot.samcbarth.com/articles/property-insights-data-quality/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the Data Quality Property Insights tab shows, how property anomaly monitoring works, and how fill rates help you archive unused properties.</description>
+    <category>Data Hub</category>
+    <category>Smart CRM</category>
+    <category>Data quality</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Multi-account management: connect several HubSpot accounts into one organization</title>
+    <link>https://hubspot.samcbarth.com/articles/multi-account-management/</link>
+    <guid>https://hubspot.samcbarth.com/articles/multi-account-management/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot multi-account management needs (an Enterprise main account and Super Admin in each), where to set it up, and why the create button can be greyed out.</description>
+    <category>Smart CRM</category>
+    <category>Account settings</category>
+  </item>
+  <item>
+    <title>Get notified when a contact comes back to your website</title>
+    <link>https://hubspot.samcbarth.com/articles/lead-revisit-notifications/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lead-revisit-notifications/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot lead revisit and website visit notifications work, the channels they can arrive on, and where to manage them.</description>
+    <category>Sales Hub</category>
+    <category>Notifications</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>Agent Inbox: review what your HubSpot agents produced</title>
+    <link>https://hubspot.samcbarth.com/articles/agent-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/agent-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s Agent Inbox collects agent runs and their output, how to filter runs, and how to export results.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Breeze Assistant: what to ask HubSpot&#39;s built-in AI</title>
+    <link>https://hubspot.samcbarth.com/articles/breeze-assistant/</link>
+    <guid>https://hubspot.samcbarth.com/articles/breeze-assistant/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Breeze Assistant can do on desktop and mobile (summaries, content, meeting prep), projects, and the quick actions in its panel.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Deal progression: AI next steps on deal records</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-progression/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-progression/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s deal progression card does with calls, meetings and emails, what seat it needs, and where it shows in Agent Hub.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Power dialer and voicemail drops: call a list and leave recorded messages</title>
+    <link>https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/</link>
+    <guid>https://hubspot.samcbarth.com/articles/power-dialer-voicemail-drops/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add contacts to HubSpot&#39;s power dialer from a list, and how pre-recorded voicemail drops work, including their phone number requirement.</description>
+    <category>Sales Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Make Closed lost reason useful: check its field type, then require it - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's Closed lost reason deal property, why a free-text version is hard to report on, and how to require it when deals close lost.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/closed-lost-reasons/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/closed-lost-reasons/">
+<meta property="og:title" content="Make Closed lost reason useful: check its field type, then require it">
+<meta property="og:description" content="HubSpot's Closed lost reason deal property, why a free-text version is hard to report on, and how to require it when deals close lost.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/closed-lost-reasons/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Make Closed lost reason useful: check its field type, then require it",
+      "description": "HubSpot's Closed lost reason deal property, why a free-text version is hard to report on, and how to require it when deals close lost.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/closed-lost-reasons/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/closed-lost-reasons/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Make Closed lost reason useful",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the property", "text": "Settings, Properties, Deal properties, search closed lost."},
+        {"@type": "HowToStep", "name": "Check the field type", "text": "A dropdown reports better than free text."},
+        {"@type": "HowToStep", "name": "Require it", "text": "Add a conditional stage rule on the Closed lost stage."},
+        {"@type": "HowToStep", "name": "Report", "text": "Build a deal report grouped by the reason."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Make Closed lost reason useful: check its field type, then require it", "item": "https://hubspot.samcbarth.com/articles/closed-lost-reasons/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="closed-lost-reasons">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Deals">Deals</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Sales Hub</span></div>
+      <h1>Make Closed lost reason useful: check its field type, then require it</h1>
+      <p class="dek">Lost-deal reporting only works if the reason is filled in and comes from a fixed list.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Required stage properties need Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit property settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p><strong>Closed lost reason</strong> is a default deal property (with a matching Closed won reason). In my demo portal it is a multi-line text field, which is hard to group in reports. HubSpot's KB links to customizing its options, and validation rules can apply to it. To make reps fill it in, add a conditional stage rule on the closed lost stage. Note that a rejected deal approval can only move to closed lost.</p>
+        </div>
+
+        <h2>1. The property</h2>
+        <p>Deal properties in my demo portal, searched for closed lost.</p>
+        <figure class="shot"><a href="properties.webp"><img src="properties.webp" alt="Deal properties filtered to closed lost showing Closed Lost Reason as multi-line text" width="495" height="780" loading="lazy"></a><figcaption>The search (1) and Closed Lost Reason (2).</figcaption></figure>
+        <h2>2. Make it reportable</h2>
+        <ul>
+          <li>Use a short fixed list of reasons, plus Other with a notes field.</li>
+          <li>Require it on the closed lost stage. See <a href="../conditional-stage-properties/">conditional stage properties</a>.</li>
+        </ul>
+        <h2>3. Related</h2>
+        <p><a href="../close-stale-deals/">Closing stale deals</a> and <a href="../deal-approval-process/">deal approvals</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/pipeline-approvals">HubSpot Knowledge Base: Require approvals for deals</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
