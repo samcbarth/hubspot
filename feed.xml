@@ -5502,6 +5502,203 @@
     <category>Forms</category>
   </item>
   <item>
+    <title>Show different subscription types to different contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/subscription-visibility-rules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/subscription-visibility-rules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot subscription visibility rules filter the preferences page.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Connect LinkedIn Sales Navigator through CRM Sync</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-crm-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-crm-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How LinkedIn CRM Sync connects Sales Navigator and Business Manager to HubSpot.</description>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+    <category>LinkedIn</category>
+  </item>
+  <item>
+    <title>Add line items to deals with a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/add-line-items-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/add-line-items-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Add line item to deal action works and its limits.</description>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Line items</category>
+  </item>
+  <item>
+    <title>Why HubSpot shortens links in social posts</title>
+    <link>https://hubspot.samcbarth.com/articles/social-link-shortening/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-link-shortening/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How automatic link shortening works in HubSpot social and its effect on X posts.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Segment contacts by ad interactions</title>
+    <link>https://hubspot.samcbarth.com/articles/ads-interaction-segments/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ads-interaction-segments/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to build HubSpot segments from Facebook, Google and LinkedIn ad interactions.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Contact says they didn&#39;t get your email</title>
+    <link>https://hubspot.samcbarth.com/articles/contacts-didnt-receive-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contacts-didnt-receive-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to check whether a HubSpot marketing email was delivered and why it may not show.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Deliverability</category>
+  </item>
+  <item>
+    <title>Use the projects object</title>
+    <link>https://hubspot.samcbarth.com/articles/projects-object/</link>
+    <guid>https://hubspot.samcbarth.com/articles/projects-object/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to turn on and use HubSpot&#39;s projects object.</description>
+    <category>Smart CRM</category>
+    <category>Projects</category>
+  </item>
+  <item>
+    <title>Bulk upload images from an existing page</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-upload-images/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-upload-images/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot scrapes images from a page into the files tool.</description>
+    <category>Content Hub</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Respect Global Privacy Control signals</title>
+    <link>https://hubspot.samcbarth.com/articles/global-privacy-control/</link>
+    <guid>https://hubspot.samcbarth.com/articles/global-privacy-control/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to turn on GPC support in HubSpot consent banners.</description>
+    <category>Marketing Hub</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Run contact actions from deal or ticket workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/contact-actions-other-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contact-actions-other-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot lets other workflow types use contact-based actions, and the one-contact limit.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>HubSpot can deactivate inactive users automatically</title>
+    <link>https://hubspot.samcbarth.com/articles/auto-deactivate-inactive-users/</link>
+    <guid>https://hubspot.samcbarth.com/articles/auto-deactivate-inactive-users/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the monthly inactive-user deactivation setting works and how to turn it off.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>HubSpot form not working in WordPress</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-form-in-wordpress/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-form-in-wordpress/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Fixes HubSpot gives for legacy forms embedded in WordPress pages.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Content editor won&#39;t save, or a page 404s</title>
+    <link>https://hubspot.samcbarth.com/articles/template-changes-not-applying/</link>
+    <guid>https://hubspot.samcbarth.com/articles/template-changes-not-applying/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s common causes for unsaved changes, 404s and loading issues on content.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Check custom event usage and errors</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-event-health/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-event-health/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s event health tool shows for custom events.</description>
+    <category>Marketing Hub</category>
+    <category>Custom events</category>
+  </item>
+  <item>
+    <title>Tracking URL sessions missing from the sources report</title>
+    <link>https://hubspot.samcbarth.com/articles/tracking-url-sessions-sources/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tracking-url-sessions-sources/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checklist when tracking URL visits don&#39;t show in traffic analytics.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Use your own LLM in a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-llm-workflow-actions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-llm-workflow-actions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Use a custom LLM workflow action connects supported model providers.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Add custom modules to quote templates</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-custom-modules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-custom-modules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What custom modules can do on HubSpot quote templates and the API limit.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+  </item>
+  <item>
+    <title>Not getting HubSpot notification emails</title>
+    <link>https://hubspot.samcbarth.com/articles/not-receiving-system-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/not-receiving-system-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checklist when system and notification emails stop arriving.</description>
+    <category>Smart CRM</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Add formula fields to custom reports</title>
+    <link>https://hubspot.samcbarth.com/articles/formula-fields-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/formula-fields-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How row-level formula fields work in HubSpot&#39;s custom report builder.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Update exchange rates automatically</title>
+    <link>https://hubspot.samcbarth.com/articles/exchange-rate-updates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/exchange-rate-updates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How automatic currency exchange rate updates work in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Currencies</category>
+  </item>
+  <item>
+    <title>Connect HubSpot to Zapier</title>
+    <link>https://hubspot.samcbarth.com/articles/zapier-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zapier-hubspot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Zapier integration connects apps with triggers and actions.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
