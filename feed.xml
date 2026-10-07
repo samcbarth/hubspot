@@ -1271,6 +1271,217 @@
     <category>API</category>
   </item>
   <item>
+    <title>A/B test a HubSpot marketing email: how the test split and winner work</title>
+    <link>https://hubspot.samcbarth.com/articles/email-ab-test/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-ab-test/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s marketing email A/B test sends two versions to a share of recipients and the winning version to everyone else.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Smart content: show different email or page content to different people</title>
+    <link>https://hubspot.samcbarth.com/articles/smart-content-rules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/smart-content-rules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot smart content rules swap modules and subject lines by country, device, referral source, ad source and contact data, and how to preview them.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Email</category>
+    <category>Pages</category>
+    <category>Personalization</category>
+  </item>
+  <item>
+    <title>Why fewer people got your email: HubSpot&#39;s Don&#39;t send to unengaged contacts setting</title>
+    <link>https://hubspot.samcbarth.com/articles/unengaged-contacts-graymail/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unengaged-contacts-graymail/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s graymail suppression excludes contacts who have not opened recent marketing emails, and the cases where it surprises people.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Hard bounce vs soft bounce in HubSpot, and what happens next</title>
+    <link>https://hubspot.samcbarth.com/articles/hard-vs-soft-bounces/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hard-vs-soft-bounces/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot means by hard and soft bounces, where to see the reason on a contact, and why a contact can be blocked from another account&#39;s bounce.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Send a test marketing email and preview it as a real contact</title>
+    <link>https://hubspot.samcbarth.com/articles/send-test-email-preview/</link>
+    <guid>https://hubspot.samcbarth.com/articles/send-test-email-preview/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to preview a HubSpot marketing email as a specific contact, check email clients, and send a test, plus what the test email&#39;s sender looks like.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Manage HubSpot blog authors and tags</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-authors-and-tags/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-authors-and-tags/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot keeps blog authors and tags, how to add them to posts, and how tags shape your blog&#39;s listing pages.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Blog subscription emails: why the subscribe form is missing, and how frequency works</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-subscription-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-subscription-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot blog subscription emails send new posts at each subscriber&#39;s chosen frequency, why the subscription form can be hidden, and how to change a subscriber&#39;s frequency.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Email</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Where did pop-up forms go? Pop-ups, slide-ins and banners are now CTAs</title>
+    <link>https://hubspot.samcbarth.com/articles/pop-up-forms-are-ctas/</link>
+    <guid>https://hubspot.samcbarth.com/articles/pop-up-forms-are-ctas/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s CTA tool handles pop-up boxes, slide-ins and sticky banners, how to trigger them from a button, and why one might not show.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Conditional logic in HubSpot forms: show questions, skip steps, redirect</title>
+    <link>https://hubspot.samcbarth.com/articles/form-conditional-logic/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-conditional-logic/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What conditional logic does in HubSpot&#39;s form editor, the subscription it needs, and how it replaced dependent fields from the legacy editor.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Break a long HubSpot form into steps</title>
+    <link>https://hubspot.samcbarth.com/articles/multi-step-forms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/multi-step-forms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add steps to a HubSpot form, how required fields behave between steps, and the progress bar option.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Send a follow-up email after a form submission, from the form editor</title>
+    <link>https://hubspot.samcbarth.com/articles/form-follow-up-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-follow-up-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s form editor creates a simple workflow to email everyone who submits a form, and when to use a full workflow instead.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Adaptive page tests: test up to five landing page versions</title>
+    <link>https://hubspot.samcbarth.com/articles/adaptive-page-tests/</link>
+    <guid>https://hubspot.samcbarth.com/articles/adaptive-page-tests/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot adaptive tests send more traffic to the better-converting page variation, the form requirement, and what publishing does to all variations.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Global modules: edit once, update every page that uses it</title>
+    <link>https://hubspot.samcbarth.com/articles/global-modules/</link>
+    <guid>https://hubspot.samcbarth.com/articles/global-modules/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot global modules are, how editing them affects every page, how to make a one-off local copy, and their smart content support.</description>
+    <category>Content Hub</category>
+    <category>Design Manager</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Create multi-language versions of HubSpot pages</title>
+    <link>https://hubspot.samcbarth.com/articles/multi-language-pages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/multi-language-pages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot language variations work for pages, how to change the primary language page, and how global content gets its own language variations.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Marketing events: track webinars and their attendees in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-events-object/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-events-object/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s marketing events object stores, where to find it, and how integrations create events and register attendees through the API.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Connect a WordPress site to HubSpot with the official plugin</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-wordpress-plugin/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-wordpress-plugin/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot recommends its WordPress plugin over pasting the tracking code, what it connects, and the separate WordPress blog import.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>Connect Google Search Console to HubSpot&#39;s SEO tool</title>
+    <link>https://hubspot.samcbarth.com/articles/google-search-console-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-search-console-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the Google Search Console integration adds to HubSpot SEO, how HubSpot-hosted sites are verified, and when domain properties need manual verification.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>SEO</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Scan a site for SEO recommendations in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/seo-recommendations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/seo-recommendations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to run HubSpot&#39;s SEO scan on a URL, how recommendations are ranked, and what the word count check covers.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>SEO</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Set up your brand kit: logos, favicon, colors, fonts and theme</title>
+    <link>https://hubspot.samcbarth.com/articles/brand-kit-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/brand-kit-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s brand kit lives, what it controls, and how it ties into themes and AI brand voice.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Website</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Build ad audiences and lookalikes from HubSpot segments</title>
+    <link>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot creates contact segment audiences for ad networks and Meta lookalike audiences, and the requirement that the source audience has synced first.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Schedule social posts in HubSpot, with approval if you need it</title>
+    <link>https://hubspot.samcbarth.com/articles/schedule-and-approve-social-posts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/schedule-and-approve-social-posts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to draft, review and schedule social posts in HubSpot, use saved publishing times, and route posts through approval.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Integrations</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

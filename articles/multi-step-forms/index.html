@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Break a long HubSpot form into steps - HubSpot Field Notes</title>
+<meta name="description" content="How to add steps to a HubSpot form, how required fields behave between steps, and the progress bar option.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/multi-step-forms/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/multi-step-forms/">
+<meta property="og:title" content="Break a long HubSpot form into steps">
+<meta property="og:description" content="How to add steps to a HubSpot form, how required fields behave between steps, and the progress bar option.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/multi-step-forms/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Break a long HubSpot form into steps",
+      "description": "How to add steps to a HubSpot form, how required fields behave between steps, and the progress bar option.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/multi-step-forms/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/multi-step-forms/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Break a long HubSpot form into steps",
+      "totalTime": "PT3M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the form", "text": "Open the form in the editor."},
+        {"@type": "HowToStep", "name": "Add a step", "text": "Click the + icon beside the form to add a step left or right."},
+        {"@type": "HowToStep", "name": "Move fields", "text": "Drag fields onto the new step."},
+        {"@type": "HowToStep", "name": "Add a progress bar", "text": "Use the step icon at the top right of a step."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Break a long HubSpot form into steps", "item": "https://hubspot.samcbarth.com/articles/multi-step-forms/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="multi-step-forms">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Forms">Forms</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Content Hub</span></div>
+      <h1>Break a long HubSpot form into steps</h1>
+      <p class="dek">Long forms lose people. Steps make them shorter per screen.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Progress bar needs Marketing Hub Starter or higher</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Forms access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>In the form editor, click the <strong>+</strong> beside the form to add a step, then drag fields onto it. HubSpot's KB says required fields must be completed before a visitor can continue to the next step, and a progress bar across steps is available with Marketing Hub Starter, Professional or Enterprise. Steps can also be shown or hidden with conditional logic.</p>
+        </div>
+
+        <h2>1. Add a step</h2>
+        <p>In my demo portal, the step rail runs down the left of the form preview, with a + to add a step.</p>
+        <figure class="shot"><a href="logic.webp"><img src="logic.webp" alt="Form editor with the step rail and add step plus button beside the form preview" width="800" height="824" loading="lazy"></a><figcaption>Add a step (1).</figcaption></figure>
+        <h2>2. What goes on step one</h2>
+        <ul>
+          <li>Put email first, so a partial completion still identifies the visitor.</li>
+          <li>Keep each step short.</li>
+        </ul>
+        <h2>3. Related</h2>
+        <p><a href="../form-conditional-logic/">Conditional logic</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/forms/create-and-edit-forms">HubSpot Knowledge Base: Create and customize forms</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/increase-form-conversion-rates">HubSpot Knowledge Base: Increase form conversion rates</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
