@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Recurring client meetings not logging in HubSpot: what to check, in order - HubSpot Field Notes</title>
+<meta name="description" content="Why standing client meetings may never reach the contact record, what HubSpot's calendar sync does with recurring events, and what we found when we checked one user's series.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/">
+<meta property="og:title" content="Recurring client meetings not logging in HubSpot: what to check, in order">
+<meta property="og:description" content="Why standing client meetings may never reach the contact record, what HubSpot's calendar sync does with recurring events, and what we found when we checked one user's series.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Recurring client meetings not logging in HubSpot: what to check, in order",
+      "description": "Why standing client meetings may never reach the contact record, what HubSpot's calendar sync does with recurring events, and what we found when we checked one user's series.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Troubleshoot recurring meetings that do not log",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Check the calendar connection", "text": "Confirm the user's calendar is connected and sync is on in Settings, General, Calendar."},
+        {"@type": "HowToStep", "name": "Check the attendees", "text": "Make sure each guest exists as a contact with the same email."},
+        {"@type": "HowToStep", "name": "Check who owns the series", "text": "Find who created the recurring event, since the series follows its organizer."},
+        {"@type": "HowToStep", "name": "Recreate one series", "text": "Recreate a single series from the connected calendar and confirm it logs before doing the rest."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Recurring client meetings not logging in HubSpot: what to check, in order", "item": "https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="recurring-meetings-not-logging">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Meetings">Meetings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Recurring client meetings not logging in HubSpot: what to check, in order</h1>
+      <p class="dek">Our first theory was that old recurring series never sync. One user's calendar proved that wrong, and the real cause was who owned the series.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Each user connects their own calendar</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's calendar sync only logs a meeting on contacts that already exist and whose email matches the guest's, and for recurring meetings it syncs the next five upcoming events, up to a year ahead. In an agency audit, every missing client meeting belonged to an older recurring series, which looked like a pattern until one user's sync picked up her older series too. For another user the series had been created by a colleague and later split, and it only logged while that colleague attended. The plan was to reconnect her calendar and recreate the series from her own calendar, testing one before the rest.</p>
+        </div>
+
+        <h2>1. What HubSpot's calendar sync does</h2>
+        <ul>
+          <li>A meeting from your connected calendar only logs on contacts that already exist in HubSpot. It does not create contacts.</li>
+          <li>The guest must use the same email that is in the contact's Email property.</li>
+          <li>For recurring meetings, HubSpot syncs the next five upcoming events in the series, up to a year in advance.</li>
+          <li>Never log lists apply to meetings from calendar sync. When several HubSpot users are on a meeting, the meeting owner's personal never log list decides.</li>
+        </ul>
+        <p>Each user connects their own calendar under <a class="hs-link" data-hs="/settings/{portalId}/user-preferences/calendar" href="https://app.hubspot.com/l/settings/user-preferences/calendar"><span class="ui">Settings, General, Calendar</span></a>. My demo login is disconnected, which is what you see before the first connection.</p>
+        <figure class="shot"><a href="calendar.webp"><img src="calendar.webp" alt="Calendar preferences showing Your calendar is disconnected and the Log outgoing meetings automatically line" width="800" height="553" loading="lazy"></a><figcaption>Disconnected state (1), the logging line (2), and Connect your calendar (3).</figcaption></figure>
+
+        <h2>2. What we checked in the audit</h2>
+        <ol>
+          <li><strong>Missing contacts.</strong> Nearly every client attendee already existed as a contact, so that was not it.</li>
+          <li><strong>Old recurring series.</strong> All the missing meetings for two users belonged to series created months or years earlier, while recent one-off meetings had logged. That looked like the answer.</li>
+          <li><strong>The counterexample.</strong> A third user's sync then picked up her older series, so "old series never sync" was not a rule.</li>
+          <li><strong>Who owns the series.</strong> One user's client series had been created by a colleague and split mid-month. It only logged while that colleague attended.</li>
+        </ol>
+
+        <h2>3. The fix we chose</h2>
+        <p>Reconnect the user's calendar and recreate her client series from her own calendar, so a synced user owns them. Test one series against an upcoming meeting before recreating the rest. I did not see the result of that test before writing this, so treat it as the plan, not a confirmed fix.</p>
+        <p>Related: <a href="../orphan-meeting-recordings-no-company/">recordings that land with no company</a> and <a href="../never-log-list/">the never log list</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/use-hubspots-integration-with-google-calendar-or-outlook-calendar">HubSpot Knowledge Base: Use HubSpot's calendar sync with Google Calendar or Outlook Calendar</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/add-emails-and-domains-to-the-never-log-list">HubSpot Knowledge Base: Exclude recipients from CRM email and meeting logging</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

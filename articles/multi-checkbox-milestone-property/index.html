@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Track milestones that do not happen in order with a multiple checkboxes property - HubSpot Field Notes</title>
+<meta name="description" content="Lifecycle stage is one value. When companies hit milestones out of order, a multiple checkboxes property records every one, as long as each check has evidence.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/">
+<meta property="og:title" content="Track milestones that do not happen in order with a multiple checkboxes property">
+<meta property="og:description" content="Lifecycle stage is one value. When companies hit milestones out of order, a multiple checkboxes property records every one, as long as each check has evidence.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Track milestones that do not happen in order with a multiple checkboxes property",
+      "description": "Lifecycle stage is one value. When companies hit milestones out of order, a multiple checkboxes property records every one, as long as each check has evidence.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Create a milestone checkbox property",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create the property", "text": "Go to Settings, Properties, create a property, and choose Multiple checkboxes."},
+        {"@type": "HowToStep", "name": "Add options", "text": "Add one option per milestone, with stable internal names."},
+        {"@type": "HowToStep", "name": "Backfill from evidence", "text": "Check a milestone only when native data proves it."},
+        {"@type": "HowToStep", "name": "Import carefully", "text": "Use the append format when importing so existing checks are kept."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Track milestones that do not happen in order with a multiple checkboxes property", "item": "https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="multi-checkbox-milestone-property">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Properties">Properties</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Track milestones that do not happen in order with a multiple checkboxes property</h1>
+      <p class="dek">An agency's journey model had 25 stages, and only part of it was linear. One dropdown could not show a company that was renewing and expanding at the same time.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Property create access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Lifecycle stage holds one value, so it cannot show a company that is both renewing and expanding. In an agency's portal I created a <span class="ui">Multiple checkboxes</span> company property with one option per milestone and backfilled it from evidence only: no box was checked just because a later stage had been reached. Every check traced back to native HubSpot data. When importing values, HubSpot's semicolon rules decide whether you append to or replace existing checks.</p>
+        </div>
+
+        <h2>1. Why a checkbox, not another dropdown</h2>
+        <p>The agency's customer journey had 25 stages. It was linear through the early phases, then later phases ran at the same time and some overlapped. A dropdown records only the latest stage. A multiple checkboxes property records every milestone reached.</p>
+
+        <h2>2. Create it</h2>
+        <p>Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-2" href="https://app.hubspot.com/l/property-settings/properties?type=0-2"><span class="ui">properties</span></a>, create a property, and pick <span class="ui">Multiple checkboxes</span>. In my demo:</p>
+        <figure class="shot"><a href="fieldtype.webp"><img src="fieldtype.webp" alt="Create new property with label Journey milestones and the field type list showing Multiple checkboxes selected" width="800" height="553" loading="lazy"></a><figcaption>The label and generated internal name (1) and the Multiple checkboxes field type (2).</figcaption></figure>
+        <p>Give each option an internal name you will not need to change. Internal names cannot be edited after creation.</p>
+
+        <h2>3. Backfill from evidence only</h2>
+        <p>The rule we used: check a milestone only when native data proves it. Reaching a later stage did not check the earlier boxes automatically. That keeps the property honest for reporting, because each check can be traced to a deal, invoice, meeting, or date property.</p>
+
+        <h2>4. Importing values</h2>
+        <p>HubSpot's import rules for multiple checkboxes: values are separated by semicolons, the options must already exist, and a leading semicolon (<code>;option1;option2</code>) appends to existing values while no leading semicolon (<code>option1;option2</code>) replaces them.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/properties/property-field-types-in-hubspot">HubSpot Knowledge Base: Understand property field types in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/add-or-replace-multiple-checkbox-property-values">HubSpot Knowledge Base: Append or replace multiple checkbox property values</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

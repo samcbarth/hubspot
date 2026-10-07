@@ -7,6 +7,273 @@
   <description>HubSpot fixes, how-tos, and hidden tricks with real screenshots, by Sam Barth.</description>
   <language>en-us</language>
   <item>
+    <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
+    <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
+    <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why the Send Microsoft Teams notification workflow action shows no teams, what the admin-level install changes, and how to send to users while you wait.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app</title>
+    <link>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Admin consent for the HubSpot app in Microsoft Teams is not the last step. Each HubSpot user is mapped to a Teams user, and some had to accept permissions themselves.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</link>
+    <guid>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Teams Phone calls log to HubSpot records, the exact phone match rule, the 15 to 60 minute delay, and the Windows setting that makes HubSpot phone numbers open Teams.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Meeting recordings in HubSpot named with a Meet code and attached to no one</title>
+    <link>https://hubspot.samcbarth.com/articles/orphan-meeting-recordings-no-company/</link>
+    <guid>https://hubspot.samcbarth.com/articles/orphan-meeting-recordings-no-company/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why a recorded Google Meet call can land in HubSpot as a meeting titled with the Meet code and no contact or company, how to attach it, and how to stop it.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Meetings</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Recurring client meetings not logging in HubSpot: what to check, in order</title>
+    <link>https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/</link>
+    <guid>https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why standing client meetings may never reach the contact record, what HubSpot&#39;s calendar sync does with recurring events, and what we found when we checked one user&#39;s series.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Meetings</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Check every HubSpot user&#39;s email and calendar connection before blaming the integration</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-user-connection-audit/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-user-connection-audit/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A per-user check of email, calendar, and sync status that explains most missing meetings, calls, and emails in HubSpot, with where each setting lives.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>User settings</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Linking to a HubSpot meeting: use 0-47, and skip the record URL</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-meeting-record-links/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-meeting-record-links/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Meetings are object 0-47, calls are 0-48, and meetings do not open on the usual record URL. Here is the link pattern my demo portal uses.</description>
+    <category>Smart CRM</category>
+    <category>Meetings</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Connector duplicates after a company rename: sync on an ID that never changes</title>
+    <link>https://hubspot.samcbarth.com/articles/connector-id-duplicates-after-rename/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connector-id-duplicates-after-rename/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When a sync matches companies on an ID built from the company name, a rename can create a second company. How to choose a stable key in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Integrations</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>Sync contacts from another system as non-marketing, then let a workflow decide</title>
+    <link>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When a sync brings every contact into HubSpot, bring them in as non-marketing and use the Set marketing contact status workflow action with rules you control.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date</title>
+    <link>https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to tell from HubSpot alone whether a billing integration is still creating invoices, using the Invoice source, Record source, and Create date columns.</description>
+    <category>Commerce Hub</category>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Bounced contacts still counted as marketing contacts: find them and switch them off</title>
+    <link>https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Find and delete test records before they skew every HubSpot count</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-test-records-skewing-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-test-records-skewing-reports/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to find test companies, contacts, and deals, why searching for &quot;test&quot; is not enough on its own, and how long you can restore them.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Same phone number, different formats: why HubSpot does not flag those duplicates</title>
+    <link>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot deduplicates contacts by email and companies by domain. Phone numbers in different formats hide duplicates until you normalize them.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Duplicates</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Label agencies and end businesses on company records so prospect lists stay clean</title>
+    <link>https://hubspot.samcbarth.com/articles/label-agencies-vs-businesses/</link>
+    <guid>https://hubspot.samcbarth.com/articles/label-agencies-vs-businesses/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s default company Type property has Prospect, Partner, Reseller, Vendor, and Other. How to use or extend it to separate agencies from businesses.</description>
+    <category>Smart CRM</category>
+    <category>Companies</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Move customers and past clients out of a prospecting list</title>
+    <link>https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/</link>
+    <guid>https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to pull clients, former clients, and open opportunities out of an outreach list into their own static segment, and keep them out of future sends.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Audit company lifecycle stages against invoices and won deals</title>
+    <link>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Company lifecycle stages drift. How to check them against paid invoices and closed won deals, and why moving a stage backwards takes a manual step.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Lifecycle stages</category>
+    <category>Companies</category>
+  </item>
+  <item>
+    <title>Track milestones that do not happen in order with a multiple checkboxes property</title>
+    <link>https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/</link>
+    <guid>https://hubspot.samcbarth.com/articles/multi-checkbox-milestone-property/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Lifecycle stage is one value. When companies hit milestones out of order, a multiple checkboxes property records every one, as long as each check has evidence.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Companies</category>
+  </item>
+  <item>
+    <title>Find every contact who viewed a specific page: use a segment, not the page URL properties</title>
+    <link>https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>First page seen and Last page seen only hold two pages. A segment with the Page view filter finds every contact who viewed a URL, with frequency and timeframe.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>Build a send-safe list in HubSpot: no bounces, no unsubscribes, no customers, nobody emailed this week</title>
+    <link>https://hubspot.samcbarth.com/articles/send-list-exclusions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/send-list-exclusions/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A segment that removes bounced, unsubscribed, customer, and recently contacted contacts before a one-to-one email push, and the never-contacted gap to watch.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Segments</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Connect your email sending domain in HubSpot without breaking SPF</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-email-sending-domain-spf/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-email-sending-domain-spf/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to connect a sending domain, which DNS records HubSpot asks for, and the SPF rule that trips people up: one record, with HubSpot added to it.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Event reminders that do not need rebuilding: a date property and a delay until that date</title>
+    <link>https://hubspot.samcbarth.com/articles/date-property-event-reminders/</link>
+    <guid>https://hubspot.samcbarth.com/articles/date-property-event-reminders/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When registration stores the event as a dropdown of dates, every new event means new workflow branches. A date property lets one workflow handle every date.</description>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>A property named after a date keeps that date in its internal name for good</title>
+    <link>https://hubspot.samcbarth.com/articles/date-property-internal-name/</link>
+    <guid>https://hubspot.samcbarth.com/articles/date-property-internal-name/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot builds a property&#39;s internal name from its first label and never lets you change it. Name date properties for their role, not a specific day.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>You cannot put a HubSpot form inside a marketing email. Link to it.</title>
+    <link>https://hubspot.samcbarth.com/articles/no-forms-in-marketing-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/no-forms-in-marketing-email/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot forms cannot be embedded in emails. What to use instead, and why a form can capture more than a meeting link.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Load a parts list into HubSpot products from a spreadsheet</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-create-products-from-spreadsheet/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-create-products-from-spreadsheet/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Turning a customer&#39;s parts spreadsheet into HubSpot products: import or API, what to clean first, and the uniqueness rule products do not have.</description>
+    <category>Sales Hub</category>
+    <category>Commerce Hub</category>
+    <category>Imports</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Parent and child companies in HubSpot: one parent per child</title>
+    <link>https://hubspot.samcbarth.com/articles/parent-and-child-companies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/parent-and-child-companies/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set a parent or child company with association labels, the one parent rule, and doing it in bulk with an import.</description>
+    <category>Smart CRM</category>
+    <category>Companies</category>
+    <category>Associations</category>
+  </item>
+  <item>
     <title>HubSpot says 180,000 contacts never opened your email? Check who was ever sent one</title>
     <link>https://hubspot.samcbarth.com/articles/never-opened-email-stat/</link>
     <guid>https://hubspot.samcbarth.com/articles/never-opened-email-stat/</guid>

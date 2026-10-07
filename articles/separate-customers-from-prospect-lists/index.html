@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Move customers and past clients out of a prospecting list - HubSpot Field Notes</title>
+<meta name="description" content="How to pull clients, former clients, and open opportunities out of an outreach list into their own static segment, and keep them out of future sends.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/">
+<meta property="og:title" content="Move customers and past clients out of a prospecting list">
+<meta property="og:description" content="How to pull clients, former clients, and open opportunities out of an outreach list into their own static segment, and keep them out of future sends.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Move customers and past clients out of a prospecting list",
+      "description": "How to pull clients, former clients, and open opportunities out of an outreach list into their own static segment, and keep them out of future sends.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Separate customers from a prospecting list",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Review the list", "text": "Open the list and sort or filter by lifecycle stage and deals."},
+        {"@type": "HowToStep", "name": "Select", "text": "Select the clients, former clients, and open opportunities."},
+        {"@type": "HowToStep", "name": "Add to a static segment", "text": "Choose More, Add to static segment, and use a segment named for them."},
+        {"@type": "HowToStep", "name": "Exclude it", "text": "Exclude that segment from prospecting sends."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Move customers and past clients out of a prospecting list", "item": "https://hubspot.samcbarth.com/articles/separate-customers-from-prospect-lists/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="separate-customers-from-prospect-lists">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Segments">Segments</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span></div>
+      <h1>Move customers and past clients out of a prospecting list</h1>
+      <p class="dek">My replied-contacts list was supposed to be prospects. It also held active clients, former clients, and people already in a deal.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Segment edit access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>In my own portal, a list of contacts who had replied to outreach also held active customers, former customers, and open opportunities. I moved those into their own static segment and kept agency employees and recruiters in the prospect pool. Select the records, open <span class="ui">More</span>, and choose <span class="ui">Add to static segment</span>. HubSpot allows up to 100 records at a time this way. Then exclude that segment from prospecting sends, or exclude customer lifecycle stages in an active segment.</p>
+        </div>
+
+        <h2>1. What was in the list</h2>
+        <p>The list was everyone who had replied to my prospecting emails, sorted by last reply. Reading through it, some were active clients, some were former clients, some had open deals, and some had nothing to do with the outreach. The rule I settled on:</p>
+        <ul>
+          <li><strong>Move out:</strong> clients, former clients, open opportunities.</li>
+          <li><strong>Keep:</strong> agency employees, who can pass HubSpot work along, and recruiters, who refer it.</li>
+        </ul>
+
+        <h2>2. Add them to a static segment</h2>
+        <p>Select the records in a view, open <span class="ui">More</span>, and choose <span class="ui">Add to static segment</span>. HubSpot's bulk edit article says you can add up to 100 at a time this way. The same menu exists on companies, shown here in my demo.</p>
+        <figure class="shot"><a href="bulk.webp"><img src="bulk.webp" alt="Bulk More menu with Add to static segment highlighted" width="800" height="553" loading="lazy"></a><figcaption>Add to static segment (1).</figcaption></figure>
+
+        <h2>3. Keep them out next time</h2>
+        <p>Exclude that segment in the next send, or build the prospect list as an active segment that leaves out customer lifecycle stages. A worked example is in <a href="../send-list-exclusions/">building a send-safe list</a>. Labeling agencies separately is in <a href="../label-agencies-vs-businesses/">agencies vs businesses</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/bulk-edit-records">HubSpot Knowledge Base: Bulk edit records</a></li>
+          <li><a href="https://knowledge.hubspot.com/segments/determine-filter-criteria">HubSpot Knowledge Base: Determine filter criteria</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

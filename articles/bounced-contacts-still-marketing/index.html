@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Bounced contacts still counted as marketing contacts: find them and switch them off - HubSpot Field Notes</title>
+<meta name="description" content="Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/">
+<meta property="og:title" content="Bounced contacts still counted as marketing contacts: find them and switch them off">
+<meta property="og:description" content="Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Bounced contacts still counted as marketing contacts: find them and switch them off",
+      "description": "Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set bounced contacts as non-marketing",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Filter", "text": "In Contacts, filter on Email hard bounce reason is known."},
+        {"@type": "HowToStep", "name": "Select", "text": "Select the contacts in the view."},
+        {"@type": "HowToStep", "name": "Set non-marketing", "text": "Choose More, Set as non-marketing contacts, or use Clean up contacts in Marketing Contacts."},
+        {"@type": "HowToStep", "name": "Automate", "text": "Add a workflow with Set marketing contact status for future bounces."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Bounced contacts still counted as marketing contacts: find them and switch them off", "item": "https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="bounced-contacts-still-marketing">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Contacts">Contacts</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Bounced contacts still counted as marketing contacts: find them and switch them off</h1>
+      <p class="dek">The first item on an IT services client's cleanup list was hundreds of bounced contacts still set as marketing contacts.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing contacts apply to Marketing Hub</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit access to contacts; marketing contact permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Filter contacts on <span class="ui">Email hard bounce reason</span> or <span class="ui">Marketing emails bounced</span>, then set them as non-marketing from the view's More menu. HubSpot's Clean up contacts tool under Account &amp; Billing, Marketing Contacts lists unsubscribed and bounced groups by default, so it is the fastest path when you have Marketing Hub. On an IT services client, suppressing the bounced contacts that were still marketable was the first cleanup item, because it protects deliverability for every send. Non-marketing changes take effect on the next update date.</p>
+        </div>
+
+        <h2>1. Find them</h2>
+        <p>In <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a>, open Advanced filters and search the properties for "bounce".</p>
+        <figure class="shot"><a href="filters.webp"><img src="filters.webp" alt="Contact filter property search for bounce showing Email hard bounce reason and Marketing emails bounced" width="800" height="553" loading="lazy"></a><figcaption>Email hard bounce reason (1) and Marketing emails bounced (2).</figcaption></figure>
+        <p>Combine one of those with Marketing contact status is Marketing contact to get the group you are paying for.</p>
+
+        <h2>2. Switch them off</h2>
+        <ul>
+          <li><strong>From the view:</strong> select the contacts, then More, Set as non-marketing contacts.</li>
+          <li><strong>Clean up contacts:</strong> Account &amp; Billing, Marketing Contacts, Clean up contacts. HubSpot shows unsubscribed and bounced groups by default. My demo has no Marketing Hub contact tier, so that page only offers Marketing Hub there.</li>
+          <li><strong>Workflow:</strong> enroll contacts when a bounce reason becomes known and use the action below.</li>
+        </ul>
+        <figure class="shot"><a href="action.webp"><img src="action.webp" alt="Set marketing contact status action with Set as non-marketing contact option" width="800" height="553" loading="lazy"></a><figcaption>The action's options (1). The note above them explains when the change applies.</figcaption></figure>
+
+        <h2>3. Why it was first on the list</h2>
+        <p>On the client's portal, the bounced group was large and still marketable, so every campaign kept trying addresses that would never deliver. Setting them non-marketing fixed the send lists and the contact count together. Deleting test records was second, covered in <a href="../delete-test-records-skewing-reports/">delete test records</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/set-contacts-as-non-marketing">HubSpot Knowledge Base: Set contacts as non-marketing</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/bulk-edit-records">HubSpot Knowledge Base: Bulk edit records</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/marketing-contacts">HubSpot Knowledge Base: Understand marketing contacts</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

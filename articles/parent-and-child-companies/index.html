@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Parent and child companies in HubSpot: one parent per child - HubSpot Field Notes</title>
+<meta name="description" content="How to set a parent or child company with association labels, the one parent rule, and doing it in bulk with an import.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/parent-and-child-companies/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/parent-and-child-companies/">
+<meta property="og:title" content="Parent and child companies in HubSpot: one parent per child">
+<meta property="og:description" content="How to set a parent or child company with association labels, the one parent rule, and doing it in bulk with an import.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/parent-and-child-companies/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Parent and child companies in HubSpot: one parent per child",
+      "description": "How to set a parent or child company with association labels, the one parent rule, and doing it in bulk with an import.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/parent-and-child-companies/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/parent-and-child-companies/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set a parent and child company in HubSpot",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open the parent", "text": "Open the parent company record."},
+        {"@type": "HowToStep", "name": "Add a company", "text": "On the Companies card, click Add and select the other company."},
+        {"@type": "HowToStep", "name": "Pick the label", "text": "Choose Child Company to make the selected company the child."},
+        {"@type": "HowToStep", "name": "Bulk", "text": "For many, import with the parent's domain or Record ID and the Parent Company label."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Parent and child companies in HubSpot: one parent per child", "item": "https://hubspot.samcbarth.com/articles/parent-and-child-companies/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="parent-and-child-companies">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Companies">Companies</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Parent and child companies in HubSpot: one parent per child</h1>
+      <p class="dek">An industrial client buys through several brands owned by one group. Each brand needed its own company record under the parent.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit access to companies</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the parent company, click <span class="ui">Add</span> on the Companies card, pick the other company, and choose the <span class="ui">Child Company</span> label. The labels come as a pair: Child Company is paired with Parent Company. HubSpot says a parent can have many children but a child can only have one parent. For bulk, import the children with the parent's domain or Record ID mapped as an association with the Parent Company label. For an industrial client I set a newly added brand as the child of its parent group.</p>
+        </div>
+
+        <h2>1. The case</h2>
+        <p>An industrial client's parent group owns several brands, and each brand buys separately. When a new brand came in, I created its company with the right domain and owner and set it as a child of the parent, so the brand's deals stay on the brand and the group view still shows everything.</p>
+
+        <h2>2. Set it on the record</h2>
+        <p>Open the parent in <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-2/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-2/views/all/list"><span class="ui">Companies</span></a>, click <span class="ui">Add</span> on the Companies card, select the company, then add an association label. In my demo, The Walt Disney Company is the parent and Marvel Entertainment the child.</p>
+        <figure class="shot"><a href="labels.webp"><img src="labels.webp" alt="Add existing company panel with paired labels Child Company and Parent Company" width="800" height="553" loading="lazy"></a><figcaption>Child Company (1) and Parent Company (2), each paired with the other.</figcaption></figure>
+        <figure class="shot"><a href="card.webp"><img src="card.webp" alt="Companies card on the parent showing Marvel Entertainment with the Child Company label" width="800" height="553" loading="lazy"></a><figcaption>The child (1) with its label (2) on the parent's Companies card.</figcaption></figure>
+
+        <h2>3. Rules</h2>
+        <ul>
+          <li>A parent can have many children. A child can have only one parent.</li>
+          <li>The label is relative to the record you start from: on the parent, choose Child Company for the company you add.</li>
+          <li>For bulk, import child companies with a column for the parent's Company domain name or Record ID, mapped as an association with the Parent Company label.</li>
+        </ul>
+        <p>More on labels in general: <a href="../association-labels/">association labels</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/records/add-a-parent-or-child-company">HubSpot Knowledge Base: Add a parent or child company to an existing company record</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date - HubSpot Field Notes</title>
+<meta name="description" content="How to tell from HubSpot alone whether a billing integration is still creating invoices, using the Invoice source, Record source, and Create date columns.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/">
+<meta property="og:title" content="Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date">
+<meta property="og:description" content="How to tell from HubSpot alone whether a billing integration is still creating invoices, using the Invoice source, Record source, and Create date columns.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date",
+      "description": "How to tell from HubSpot alone whether a billing integration is still creating invoices, using the Invoice source, Record source, and Create date columns.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Check whether a billing integration is still syncing invoices",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Open invoices", "text": "Go to the Invoices index."},
+        {"@type": "HowToStep", "name": "Add columns", "text": "Add Record source and Create Date, and sort by Create Date."},
+        {"@type": "HowToStep", "name": "Read the pattern", "text": "Look at when integration-created invoices stop."},
+        {"@type": "HowToStep", "name": "Check the app", "text": "Open Connected Apps and check the billing integration's status."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date", "item": "https://hubspot.samcbarth.com/articles/billing-invoices-stopped-syncing/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="billing-invoices-stopped-syncing">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Fix it</span><span class="badge">Commerce Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date</h1>
+      <p class="dek">A client paid an invoice and it never appeared on the deal. The invoices in HubSpot told the story: the last one was created almost two years earlier.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers with the invoices object</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>View access to invoices; Connected Apps access to check the integration</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Open the Invoices index, add the <span class="ui">Record source</span> and <span class="ui">Create Date</span> columns, and sort by date. In an agency portal, every invoice in HubSpot had a record source of Integration and was created within two weeks in November 2024, with nothing after that. Recent invoices from the billing tool were not there at all. That pattern means the integration stopped, or only ever ran once. It is not a problem with the one deal. HubSpot sets Record source automatically and it cannot be edited.</p>
+        </div>
+
+        <h2>1. The question</h2>
+        <p>A client paid an invoice raised in the agency's billing tool, and someone asked why it was not in HubSpot. The deal had no invoice associated.</p>
+
+        <h2>2. Read the Invoices index</h2>
+        <p>Open the <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-53/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-53/views/all/list"><span class="ui">Invoices index</span></a>, add <span class="ui">Record source</span> and <span class="ui">Create Date</span>, and sort newest first. In my demo every invoice shows HubSpot as the invoice source and HubSpot Processing as the record source, created weekly.</p>
+        <figure class="shot"><a href="invoices.webp"><img src="invoices.webp" alt="Invoices index with Invoice source, Record source, and Create Date columns sorted by date" width="800" height="553" loading="lazy"></a><figcaption>Invoice source (1), Record source (2), and Create Date (3).</figcaption></figure>
+        <p>In the agency portal the same view showed every invoice created by an integration over about two weeks in November 2024, numbered in the billing tool's series, and nothing since. The billing tool had invoices up to the current month.</p>
+
+        <h2>3. What it means</h2>
+        <p>The integration pushed one batch and then stopped. It may have been disconnected, uninstalled, or set up as a one-time backfill. Check <a class="hs-link" data-hs="/integrations-settings/{portalId}/installed" href="https://app.hubspot.com/l/integrations-settings/installed"><span class="ui">Connected Apps</span></a> to see whether it is still listed and connected, and see <a href="../connected-apps-needs-attention/">connected apps that need attention</a>.</p>
+
+        <h2>4. Options</h2>
+        <ul>
+          <li>Repair or reconnect the integration.</li>
+          <li>Create the invoice in HubSpot and associate it with the deal.</li>
+          <li>Treat the billing tool as the source of truth and record payment on the deal instead.</li>
+        </ul>
+        <p>I laid out a backfill table for review before writing anything, since a backfill creates many records at once.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/properties/view-and-use-the-record-source-property">HubSpot Knowledge Base: View and use record source properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-change-sources">HubSpot Knowledge Base: HubSpot's change sources</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

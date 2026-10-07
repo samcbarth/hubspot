@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Find every contact who viewed a specific page: use a segment, not the page URL properties - HubSpot Field Notes</title>
+<meta name="description" content="First page seen and Last page seen only hold two pages. A segment with the Page view filter finds every contact who viewed a URL, with frequency and timeframe.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/">
+<meta property="og:title" content="Find every contact who viewed a specific page: use a segment, not the page URL properties">
+<meta property="og:description" content="First page seen and Last page seen only hold two pages. A segment with the Page view filter finds every contact who viewed a URL, with frequency and timeframe.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Find every contact who viewed a specific page: use a segment, not the page URL properties",
+      "description": "First page seen and Last page seen only hold two pages. A segment with the Page view filter finds every contact who viewed a URL, with frequency and timeframe.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Find contacts who viewed a page",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a segment", "text": "Go to Segments, create a contact segment manually."},
+        {"@type": "HowToStep", "name": "Add the event filter", "text": "Add filter, Events, Page views, Page View."},
+        {"@type": "HowToStep", "name": "Pick the operator", "text": "Choose Contact has viewed at least one URL equal to and enter the URL."},
+        {"@type": "HowToStep", "name": "Set frequency and timeframe", "text": "Leave any number of times and anytime, or narrow them."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Find every contact who viewed a specific page: use a segment, not the page URL properties", "item": "https://hubspot.samcbarth.com/articles/contacts-who-viewed-a-page/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="contacts-who-viewed-a-page">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Segments">Segments</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Find every contact who viewed a specific page: use a segment, not the page URL properties</h1>
+      <p class="dek">I was asked for everyone who viewed one page at least once. Filtering the first and last page seen found a handful. That was the wrong tool.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers with the tracking code installed</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Segment create access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Index filters only offer <span class="ui">First page seen</span> and <span class="ui">Last page seen</span>, and per-page view history is not a contact property. So a filter on those finds only contacts whose first or latest visit happened to be that page. When I was asked for everyone who viewed a page at least once, that approach found a handful. A segment's <span class="ui">Page view</span> event filter, "Contact has viewed at least one URL equal to", checks every page view on the timeline, with frequency and timeframe options. HubSpot's limit is 2,048 characters for the URL, and wildcards only work with the regular expression option.</p>
+        </div>
+
+        <h2>1. The wrong tool</h2>
+        <p>In the Contacts index, the page-related filters are page view counts and two URL properties. In my demo:</p>
+        <figure class="shot"><a href="index-filters.webp"><img src="index-filters.webp" alt="Contact filter search for page showing Average page views, First page seen, Last page seen, Number of page views" width="800" height="553" loading="lazy"></a><figcaption>First page seen and Last page seen (1) only hold one URL each.</figcaption></figure>
+        <p>When I used those to find contacts who had viewed a landing page, some matches were on the page itself and some came through campaign email clicks, and all of them were someone's first or last page. Anyone who viewed it in the middle of their history was missed.</p>
+
+        <h2>2. The right tool</h2>
+        <p>Create a contact segment in <a class="hs-link" data-hs="/contacts/{portalId}/objectLists/views/all" href="https://app.hubspot.com/l/contacts/objectLists/views/all"><span class="ui">Segments</span></a>, add a filter, open <span class="ui">Events</span>, and pick <span class="ui">Page views</span>, then Page View.</p>
+        <figure class="shot"><a href="pageview.webp"><img src="pageview.webp" alt="Segment Page View filter with Contact has viewed at least one URL equal to, URL field, Frequency, and Timeframe" width="800" height="553" loading="lazy"></a><figcaption>The operator (1), the URL (2), frequency (3), and timeframe (4).</figcaption></figure>
+        <figure class="shot"><a href="operators.webp"><img src="operators.webp" alt="Page view operator list including viewed, not viewed, containing, and regular expression options" width="800" height="553" loading="lazy"></a><figcaption>Operator options, including containing and regular expression (1).</figcaption></figure>
+
+        <h2>3. HubSpot's notes</h2>
+        <ul>
+          <li>Equal to needs the exact URL, up to 2,048 characters. Choose Standard or UTM only.</li>
+          <li>Wildcards only work with the regular expression operator.</li>
+          <li>HubSpot's own example uses "is greater than or equal to 2 times" for repeat visits to a high intent page.</li>
+        </ul>
+        <p>Page views only exist for visitors the tracking code identified. See <a href="../detect-hubspot-tracking-code/">detecting the tracking code</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/segments/determine-filter-criteria">HubSpot Knowledge Base: Determine filter criteria</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

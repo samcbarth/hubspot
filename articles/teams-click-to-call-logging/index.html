@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot - HubSpot Field Notes</title>
+<meta name="description" content="How Teams Phone calls log to HubSpot records, the exact phone match rule, the 15 to 60 minute delay, and the Windows setting that makes HubSpot phone numbers open Teams.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/">
+<meta property="og:title" content="Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot">
+<meta property="og:description" content="How Teams Phone calls log to HubSpot records, the exact phone match rule, the 15 to 60 minute delay, and the Windows setting that makes HubSpot phone numbers open Teams.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot",
+      "description": "How Teams Phone calls log to HubSpot records, the exact phone match rule, the 15 to 60 minute delay, and the Windows setting that makes HubSpot phone numbers open Teams.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Log Microsoft Teams calls in HubSpot and set up click to call",
+      "totalTime": "PT7M",
+      "step": [
+        {"@type": "HowToStep", "name": "Turn on logging", "text": "In Connected Apps, Microsoft Teams, Settings, Teams Phone, select For outbound calls and For inbound calls."},
+        {"@type": "HowToStep", "name": "Map users", "text": "Make sure every caller's HubSpot user is mapped to their Teams user."},
+        {"@type": "HowToStep", "name": "Fix phone formats", "text": "Store contact numbers with country and area code so they match exactly."},
+        {"@type": "HowToStep", "name": "Set TEL to Teams", "text": "On each Windows computer, set the default app for TEL links to Microsoft Teams."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot", "item": "https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="teams-click-to-call-logging">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Calling">Calling</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot</h1>
+      <p class="dek">There is no Teams dialer inside HubSpot. Calls log through the Teams app, and click to call is a setting on the computer.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers with the Microsoft Teams app; Teams Phone licensing is on the Microsoft side</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or App Marketplace access to connect the app; each user mapped to Teams</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Turn on <span class="ui">Teams Phone</span> logging in the Microsoft Teams app settings and calls log to the contact, its primary company, and associated deals. HubSpot's rules: users must be mapped to Teams, the contact must already exist, and the Teams number must match the contact's phone or mobile exactly, including country and area code. Calls take about 15 minutes on average, and up to 60, to appear. Click to call is set outside HubSpot: point the computer's TEL link handler at Microsoft Teams, then use the external link icon next to a phone number on the record.</p>
+        </div>
+
+        <h2>1. Where Teams calling fits</h2>
+        <p>An IT services client runs their phones on Microsoft Teams and wanted reps to click a number in HubSpot and have the call logged. HubSpot's own calling settings point you to a HubSpot number, a ported number, or a third-party integration. In my demo, the personal calling page also warns that registered numbers you add yourself "face increased risk of blocked calls and spam labeling from local carriers."</p>
+        <figure class="shot"><a href="calling.webp"><img src="calling.webp" alt="Calling preferences page with the third-party integration link and HubSpot numbers section highlighted" width="800" height="553" loading="lazy"></a><figcaption>Personal calling settings: HubSpot numbers (1) and the third-party integration link (2).</figcaption></figure>
+
+        <h2>2. Turn on logging in the Teams app</h2>
+        <p>After the app is connected, go to <a class="hs-link" data-hs="/integrations-settings/{portalId}/installed" href="https://app.hubspot.com/l/integrations-settings/installed"><span class="ui">Connected Apps</span></a>, click Microsoft Teams, then Settings and <span class="ui">Teams Phone</span>. Select <span class="ui">For outbound calls</span> and <span class="ui">For inbound calls</span>. HubSpot's rules for a call to log:</p>
+        <ul>
+          <li>The caller's HubSpot user is mapped to their Teams user.</li>
+          <li>The contact already exists in HubSpot.</li>
+          <li>The Teams number matches the contact's Phone number or Mobile phone number exactly, including country code and area code.</li>
+          <li>Calls do not log to a contact whose email matches a HubSpot user.</li>
+          <li>It takes about 15 minutes on average, and up to 60, for a call to appear.</li>
+        </ul>
+        <figure class="shot"><a href="listing.webp"><img src="listing.webp" alt="Microsoft Teams app in the HubSpot Marketplace with the Install button highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Microsoft Teams app (1). Calling settings live in its Settings tab after install.</figcaption></figure>
+
+        <h2>3. Click to call is a computer setting</h2>
+        <p>HubSpot says click to call and inbound routing are configured outside HubSpot. On Windows, set the default app for <strong>TEL</strong> links to Microsoft Teams. Then the external link icon next to a contact's phone number starts a Teams call. For inbound calls, Teams can open the contact record using a HubSpot redirect URL set in the Teams calls settings.</p>
+
+        <h2>4. What this does not give you</h2>
+        <p>HubSpot's article on logging Teams calls does not mention recordings or transcripts. If you need those, read <a href="../teams-phone-recordings-to-hubspot/">getting Teams Phone recordings into HubSpot</a>. On this client's rollout, each rep's Teams verification was tracked as a HubSpot task so nobody was missed.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/log-microsoft-teams-calls-to-hubspot-records">HubSpot Knowledge Base: Log Microsoft Teams calls to HubSpot records</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/connect-hubspot-and-microsoft-teams">HubSpot Knowledge Base: Connect HubSpot and Microsoft Teams</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

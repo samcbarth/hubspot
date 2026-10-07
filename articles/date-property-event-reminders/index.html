@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Event reminders that do not need rebuilding: a date property and a delay until that date - HubSpot Field Notes</title>
+<meta name="description" content="When registration stores the event as a dropdown of dates, every new event means new workflow branches. A date property lets one workflow handle every date.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/date-property-event-reminders/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/date-property-event-reminders/">
+<meta property="og:title" content="Event reminders that do not need rebuilding: a date property and a delay until that date">
+<meta property="og:description" content="When registration stores the event as a dropdown of dates, every new event means new workflow branches. A date property lets one workflow handle every date.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/date-property-event-reminders/og.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Event reminders that do not need rebuilding: a date property and a delay until that date",
+      "description": "When registration stores the event as a dropdown of dates, every new event means new workflow branches. A date property lets one workflow handle every date.",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/date-property-event-reminders/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/date-property-event-reminders/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build event reminders on a date property",
+      "totalTime": "PT5M",
+      "step": [
+        {"@type": "HowToStep", "name": "Store the date", "text": "Create a date picker property for the event date and set it from the registration."},
+        {"@type": "HowToStep", "name": "Add a delay", "text": "In the workflow, add Delay, Until a date property."},
+        {"@type": "HowToStep", "name": "Pick the offset", "text": "Choose Before date and a time of day for each reminder."},
+        {"@type": "HowToStep", "name": "Handle late registrants", "text": "Add the branch HubSpot offers for contacts who reach the delay after the date."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Event reminders that do not need rebuilding: a date property and a delay until that date", "item": "https://hubspot.samcbarth.com/articles/date-property-event-reminders/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="date-property-event-reminders">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Event reminders that do not need rebuilding: a date property and a delay until that date</h1>
+      <p class="dek">A healthcare practice ran the same workshop every few weeks. Their form used a dropdown of dates, so each new date meant edits in several places.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Workflows need Marketing Hub Professional or Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Workflows access; property create access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Store the event date in a date picker property and use the workflow delay <span class="ui">Until a date property</span>, set to <span class="ui">Before date</span> for each reminder. One workflow then works for every session, because each contact waits for their own date. A healthcare practice's registration form used a dropdown of dates, which meant updating the form, the options, and the workflow branches for every new workshop. Moving to a date property was the recommendation. HubSpot's delay screen also offers a branch for contacts who reach the delay after the date has passed.</p>
+        </div>
+
+        <h2>1. The problem with a dropdown of dates</h2>
+        <p>The practice's form asked which workshop date the person wanted, as a dropdown. Each new date meant adding an option, updating the confirmation and reminder emails, and adding branches. Old options piled up, and past workshops left old workflows behind.</p>
+
+        <h2>2. Store a date, not a choice</h2>
+        <p>Create a <strong>date picker</strong> property such as Next workshop date and set it from the registration. </p>
+
+        <h2>3. Delay until that date</h2>
+        <p>In <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">a workflow</span></a>, add a Delay and choose the type.</p>
+        <figure class="shot"><a href="delay-types.webp"><img src="delay-types.webp" alt="Delay type list with Until a calendar date, Until a date property, Until an event occurs, For a set amount of time" width="800" height="553" loading="lazy"></a><figcaption>Until a date property (1).</figcaption></figure>
+        <figure class="shot"><a href="delay.webp"><img src="delay.webp" alt="Delay until a date property with On date, Before date, After date, time of day, and the pro tip about contacts reaching the delay late" width="800" height="553" loading="lazy"></a><figcaption>Pick the property (1), Before date for reminders (2), the send time (3), and the late-arrival tip (4).</figcaption></figure>
+        <p>Use one delay per reminder, such as three days before and one day before. Contacts who register after a reminder date can be routed with the branch HubSpot suggests.</p>
+
+        <h2>4. Name it for the role, not the date</h2>
+        <p>Name the property for what it holds, not for a specific date. Why that matters is in <a href="../date-property-internal-name/">a property named after a date</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/property-field-types-in-hubspot">HubSpot Knowledge Base: Understand property field types in HubSpot</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
