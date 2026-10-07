@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Add Google Meet, Zoom or Teams links to booked meetings - HubSpot Field Notes</title>
+<meta name="description" content="Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/">
+<meta property="og:title" content="Add Google Meet, Zoom or Teams links to booked meetings">
+<meta property="og:description" content="Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Add Google Meet, Zoom or Teams links to booked meetings",
+      "description": "Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Add Google Meet, Zoom or Teams links to booked meetings",
+      "totalTime": "PT3M",
+      "step": [
+        {"@type": "HowToStep", "name": "Connect the app", "text": "Google Meet, Zoom, Teams or UberConference."},
+        {"@type": "HowToStep", "name": "Edit the scheduling page", "text": "Turn on Add videoconference link."},
+        {"@type": "HowToStep", "name": "Each user", "text": "Google Meet is installed per user."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Add Google Meet, Zoom or Teams links to booked meetings", "item": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="video-conferencing-meetings">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Meetings">Meetings</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>Add Google Meet, Zoom or Teams links to booked meetings</h1>
+      <p class="dek">Connect the app, then turn on the video link on the scheduling page.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All meetings tool tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>App Marketplace access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: with the Microsoft Teams, Zoom, UberConference or Google Meet integration, a scheduling page can <strong>add a videoconference link</strong>. Google Meet is a <strong>user-level app</strong>, so each user installs it, and they need App Marketplace permissions.</p>
+        </div>
+
+        <h2>1. Meetings settings</h2>
+        <p>Meetings settings in my demo portal.</p>
+        <figure class="shot"><a href="meetings.webp"><img src="meetings.webp" alt="Meetings settings with Meeting Configurations, Meeting Rotations and Notetaker Bot tabs" width="800" height="553" loading="lazy"></a><figcaption>Meeting Rotations (1) and account-wide meeting settings (2).</figcaption></figure>
+        <h2>2. Recordings</h2>
+        <p>See <a href="../hubspot-meeting-record-links/">meeting recordings</a>.</p>
+        <h2>3. Related</h2>
+        <p><a href="../hubspot-meetings-link/">Meetings links</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/adding-your-google-meet-links-to-your-calendar-events/25081">HubSpot Community question: Adding your Google Meet links to your Calendar Events</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/create-and-edit-scheduling-pages">HubSpot Knowledge Base: Create scheduling pages with the meetings tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/use-hubspots-integration-with-google-meet">HubSpot Knowledge Base: Use Google Meet with HubSpot meetings</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

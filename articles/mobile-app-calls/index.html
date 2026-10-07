@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Calling and logging calls from the HubSpot mobile app - HubSpot Field Notes</title>
+<meta name="description" content="How calls work in the HubSpot mobile app, carrier versus HubSpot Calling, logging calls made outside the app on Android, and consent.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/mobile-app-calls/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/mobile-app-calls/">
+<meta property="og:title" content="Calling and logging calls from the HubSpot mobile app">
+<meta property="og:description" content="How calls work in the HubSpot mobile app, carrier versus HubSpot Calling, logging calls made outside the app on Android, and consent.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/mobile-app-calls/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Calling and logging calls from the HubSpot mobile app",
+      "description": "How calls work in the HubSpot mobile app, carrier versus HubSpot Calling, logging calls made outside the app on Android, and consent.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/mobile-app-calls/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/mobile-app-calls/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Calling and logging calls from the HubSpot mobile app",
+      "totalTime": "PT3M",
+      "step": [
+        {"@type": "HowToStep", "name": "Pick the method", "text": "Carrier or HubSpot Calling."},
+        {"@type": "HowToStep", "name": "Call from a record", "text": "Tap the phone number."},
+        {"@type": "HowToStep", "name": "Android outside calls", "text": "Turn on logging in app settings."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calling and logging calls from the HubSpot mobile app", "item": "https://hubspot.samcbarth.com/articles/mobile-app-calls/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="mobile-app-calls">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Calling">Calling</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>Calling and logging calls from the HubSpot mobile app</h1>
+      <p class="dek">Two options: your carrier, or HubSpot Calling.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>HubSpot Calling needs a Sales or Service seat</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Calling access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: the mobile app can call through your <strong>mobile carrier</strong> or <strong>HubSpot Calling</strong>, which needs a Sales or Service seat for supported countries. On <strong>Android</strong>, you can turn on logging calls made outside the app. Where two-party consent applies, the app plays an alert before recording.</p>
+        </div>
+
+        <h2>1. Calling setup</h2>
+        <p>Calling numbers are set up on desktop. My demo portal's setup:</p>
+        <figure class="shot"><a href="setup.webp"><img src="setup.webp" alt="Call Setup page with HubSpot numbers section" width="800" height="553" loading="lazy"></a><figcaption>Numbers used (1) and the get or port options (2).</figcaption></figure>
+        <h2>2. Consent</h2>
+        <p>See <a href="../call-recording-consent/">call recording consent</a>.</p>
+        <h2>3. Related</h2>
+        <p><a href="../hubspot-calling-numbers/">Calling numbers</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/logging-calls-initiated-in-mobile-app/3384">HubSpot Community question: Logging Calls Initiated in Mobile App</a></li>
+          <li><a href="https://knowledge.hubspot.com/calling/make-calls-from-the-hubspot-mobile-app">HubSpot Knowledge Base: Make calls from the HubSpot mobile app</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

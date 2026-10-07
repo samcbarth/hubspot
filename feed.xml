@@ -2667,6 +2667,250 @@
     <category>Reporting</category>
   </item>
   <item>
+    <title>Cancel a HubSpot subscription or delete the account</title>
+    <link>https://hubspot.samcbarth.com/articles/cancel-or-delete-hubspot-account/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cancel-or-delete-hubspot-account/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between canceling a paid HubSpot subscription and deleting the account, who can do each, and when deletion is allowed.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+  </item>
+  <item>
+    <title>Change the email address you log in with</title>
+    <link>https://hubspot.samcbarth.com/articles/change-login-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-login-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to change your HubSpot login email, why admins can&#39;t do it for you, and the SCIM and Google sign-in exceptions.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Change how dates and numbers display for you</title>
+    <link>https://hubspot.samcbarth.com/articles/personal-date-number-format/</link>
+    <guid>https://hubspot.samcbarth.com/articles/personal-date-number-format/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where your personal language and date, time and number format live in HubSpot, and why emails and workflows still use the account default.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+  </item>
+  <item>
+    <title>Edit or add options to the Industry property</title>
+    <link>https://hubspot.samcbarth.com/articles/industry-property-options/</link>
+    <guid>https://hubspot.samcbarth.com/articles/industry-property-options/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can and can&#39;t change on HubSpot&#39;s default company Industry property, and how to add your own options.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Companies</category>
+  </item>
+  <item>
+    <title>Make a task repeat</title>
+    <link>https://hubspot.samcbarth.com/articles/recurring-tasks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/recurring-tasks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create recurring tasks in HubSpot, what each repeat copies, and the seat you need.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>Make someone a Super Admin</title>
+    <link>https://hubspot.samcbarth.com/articles/change-super-admin/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-super-admin/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Who can grant Super Admin in HubSpot, how it differs from giving all permissions, and what happens when you remove it.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+    <category>Permissions</category>
+  </item>
+  <item>
+    <title>A new user never got the HubSpot invite</title>
+    <link>https://hubspot.samcbarth.com/articles/user-invite-not-received/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-invite-not-received/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to resend a HubSpot user invite, what to do when the first invite bounced, and the password reset workaround.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>See all activity by a user</title>
+    <link>https://hubspot.samcbarth.com/articles/user-activity-report/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-activity-report/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot sales analytics reports show completed calls, meetings, tasks, emails and notes by user, and how dates are counted.</description>
+    <category>Sales Hub</category>
+    <category>Reporting</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Set your default dashboard</title>
+    <link>https://hubspot.samcbarth.com/articles/set-default-dashboard/</link>
+    <guid>https://hubspot.samcbarth.com/articles/set-default-dashboard/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to make a HubSpot dashboard your default, and the access settings that decide who else sees it.</description>
+    <category>Smart CRM</category>
+    <category>Reporting</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>Calling and logging calls from the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-app-calls/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-app-calls/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How calls work in the HubSpot mobile app, carrier versus HubSpot Calling, logging calls made outside the app on Android, and consent.</description>
+    <category>Sales Hub</category>
+    <category>Calling</category>
+    <category>Mobile</category>
+  </item>
+  <item>
+    <title>Your calls show as &quot;Spam Likely&quot;</title>
+    <link>https://hubspot.samcbarth.com/articles/calls-marked-spam/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calls-marked-spam/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot suggests when outbound calls are blocked or labeled as spam: registering numbers, permission-based calling and a fallback number.</description>
+    <category>Sales Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Scan business cards into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-business-card-scanner/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-business-card-scanner/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the HubSpot mobile app imports contacts from business cards and QR codes, and which devices support it.</description>
+    <category>Smart CRM</category>
+    <category>Mobile</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>Which HubSpot add-in for Outlook</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-add-in-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-add-in-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between the HubSpot Sales Office 365 add-in and the Outlook desktop add-in, who can use each, and why not both.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>How HubSpot&#39;s calendar sync works with Google or Outlook</title>
+    <link>https://hubspot.samcbarth.com/articles/calendar-sync-google-outlook/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calendar-sync-google-outlook/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Google Calendar and Outlook Calendar sync does, the primary-calendar rule, and what doesn&#39;t sync back.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Connect a shared mailbox like sales@ or support@</title>
+    <link>https://hubspot.samcbarth.com/articles/connect-team-email-shared-mailbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connect-team-email-shared-mailbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How a team email channel brings a shared address into HubSpot&#39;s inbox, and why the same address can&#39;t also be a personal connected inbox.</description>
+    <category>Service Hub</category>
+    <category>Sales Hub</category>
+    <category>Inbox</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Images and formatting in your HubSpot email signature</title>
+    <link>https://hubspot.samcbarth.com/articles/email-signature-images/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-signature-images/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add an image or HTML to your HubSpot email signature, the font caveat, and who can have more than one signature.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Analyze sequence performance</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s sequence reports live, individual versus all sequences, template performance, and the Enterprise-only deal rate.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Who a sequence email comes from</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-sender/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-sender/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why manual sequence enrollment always sends from your own connected inbox, how to send on behalf of another user, and the one-sequence rule.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Enroll contacts in a sequence with a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/enroll-in-sequence-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/enroll-in-sequence-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Enroll in a sequence workflow action works, which tier has it, the daily send limit and the one-sequence rule.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Add Google Meet, Zoom or Teams links to booked meetings</title>
+    <link>https://hubspot.samcbarth.com/articles/video-conferencing-meetings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/video-conferencing-meetings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>HubSpot branding on scheduling pages</title>
+    <link>https://hubspot.samcbarth.com/articles/meetings-branding/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meetings-branding/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why free and Core seat scheduling pages show HubSpot branding, and how Sales or Service seats customize the logo, colors and company details.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Branding</category>
+  </item>
+  <item>
+    <title>Limit a scheduling page to specific dates</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-availability-custom-dates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-availability-custom-dates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot scheduling pages use a rolling window or a custom date range for events, the 10-week limit, and time zone display.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Embed a meeting scheduler on your website</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-meetings-scheduler/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-meetings-scheduler/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to embed a HubSpot scheduling page on HubSpot pages or external sites, the subscription it needs, and the rich text editor caveat.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Meetings</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Which calendars HubSpot checks for meeting availability</title>
+    <link>https://hubspot.samcbarth.com/articles/meetings-multiple-calendars/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meetings-multiple-calendars/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s meetings tool reads availability from connected calendars, team page behavior, and what happens when a calendar disconnects.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Create a deal when a meeting is booked</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-booked-create-deal-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-booked-create-deal-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to build a workflow that creates a deal when a demo meeting is booked and assigns it to the meeting owner.</description>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Meetings</category>
+    <category>Deals</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
