@@ -2056,6 +2056,313 @@
     <category>Activities</category>
   </item>
   <item>
+    <title>Add Google Tag Manager to HubSpot pages</title>
+    <link>https://hubspot.samcbarth.com/articles/add-google-tag-manager/</link>
+    <guid>https://hubspot.samcbarth.com/articles/add-google-tag-manager/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s Google Tag Manager integration lives, what it covers, and when to add the container code by hand instead.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Tracking code</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Bot opens and clicks in marketing email stats, and Apple Mail Privacy Protection</title>
+    <link>https://hubspot.samcbarth.com/articles/bot-email-opens-clicks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bot-email-opens-clicks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s bot filtering removes security scanners and privacy filters from marketing email metrics, and how to check whether it was on for a send.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Phone number fields in forms: country codes and allowed characters</title>
+    <link>https://hubspot.samcbarth.com/articles/phone-country-code-form-field/</link>
+    <guid>https://hubspot.samcbarth.com/articles/phone-country-code-form-field/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s phone number form field handles country codes and which characters it accepts, plus the length rule.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>File upload fields in HubSpot forms: size limit and where files go</title>
+    <link>https://hubspot.samcbarth.com/articles/form-file-upload-field/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-file-upload-field/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Capture UTM values with hidden form fields</title>
+    <link>https://hubspot.samcbarth.com/articles/utm-parameters-hidden-form-fields/</link>
+    <guid>https://hubspot.samcbarth.com/articles/utm-parameters-hidden-form-fields/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot hidden form fields store values from URL parameters such as utm_campaign, and the settings that can overwrite them.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>When a form submission creates a new contact, and when it updates an old one</title>
+    <link>https://hubspot.samcbarth.com/articles/form-always-create-contact-new-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-always-create-contact-new-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The form setting that creates a contact for unknown email addresses, its legacy-editor equivalent, and why cookies can attach a new email to an existing contact.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Turn CAPTCHA on or off for a HubSpot form</title>
+    <link>https://hubspot.samcbarth.com/articles/form-captcha-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-captcha-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot forms use invisible reCAPTCHA v3, where the CAPTCHA switch is, adjusting spam sensitivity, and the spam digest beta.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Who gets notified when a form is submitted</title>
+    <link>https://hubspot.samcbarth.com/articles/form-submission-notifications/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-submission-notifications/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot form submission notifications work: the default recipient, notifying the contact owner, adding users, and the daily spam digest.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Find when a contact submitted a form: conversion date properties</title>
+    <link>https://hubspot.samcbarth.com/articles/first-and-recent-conversion-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/first-and-recent-conversion-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s First conversion, Recent conversion and their date properties on contacts and companies, and how to use them.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Properties</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Segment contacts by how many marketing emails they opened or clicked</title>
+    <link>https://hubspot.samcbarth.com/articles/segment-by-email-engagement/</link>
+    <guid>https://hubspot.samcbarth.com/articles/segment-by-email-engagement/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s Marketing emails opened, clicked and bounced properties, how they count, and how to build engagement segments.</description>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Subdomain or new domain? Connecting and replacing HubSpot domains</title>
+    <link>https://hubspot.samcbarth.com/articles/replace-brand-domain/</link>
+    <guid>https://hubspot.samcbarth.com/articles/replace-brand-domain/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot hosting domains, brand domains and subdomains relate, and what replacing a brand domain involves.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Domains</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Change a page&#39;s URL, domain or language slug</title>
+    <link>https://hubspot.samcbarth.com/articles/change-content-urls/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-content-urls/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to change a HubSpot page&#39;s URL and domain, how blog and knowledge base roots are set, and what to do about the old URL.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Domains</category>
+  </item>
+  <item>
+    <title>Export form submissions to a spreadsheet</title>
+    <link>https://hubspot.samcbarth.com/articles/export-form-submissions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-form-submissions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export all submissions from a HubSpot form, or from a specific page, and what the export file includes.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>&quot;Please enter a different email address&quot;: blocked domains in forms</title>
+    <link>https://hubspot.samcbarth.com/articles/blocked-email-domains-list/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blocked-email-domains-list/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why a HubSpot form rejects some email addresses, the free email provider list, disposable domains blocked by default, and account-wide blocking.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>A/B test a landing page, including its form</title>
+    <link>https://hubspot.samcbarth.com/articles/ab-test-landing-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ab-test-landing-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot page A/B tests split traffic between two versions at one URL, how you pick the winner, and testing form length.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Where replies to marketing emails go, and how to log them</title>
+    <link>https://hubspot.samcbarth.com/articles/replies-to-marketing-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/replies-to-marketing-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot custom reply-to addresses route marketing email replies, and why the inbox must be connected for replies to log.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Export a marketing email as HTML or PDF</title>
+    <link>https://hubspot.samcbarth.com/articles/export-marketing-email-html/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-marketing-email-html/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export HubSpot marketing email designs as HTML or PDF from the editor or performance page, including A/B versions.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Put personalization tokens in email links and buttons</title>
+    <link>https://hubspot.samcbarth.com/articles/personalized-links-in-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/personalized-links-in-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot lets image and button links in marketing emails use personalization tokens to send each contact to a different URL.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Personalization</category>
+  </item>
+  <item>
+    <title>Send a marketing email from each contact&#39;s owner</title>
+    <link>https://hubspot.samcbarth.com/articles/send-email-from-contact-owner/</link>
+    <guid>https://hubspot.samcbarth.com/articles/send-email-from-contact-owner/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot personalization tokens set a marketing email&#39;s From name, address and signature to the contact owner, and how tests behave.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Personalization</category>
+  </item>
+  <item>
+    <title>Unsubscribe links in one-to-one and sequence emails</title>
+    <link>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot adds unsubscribe links to one-to-one and sequence emails, how they map to subscription types, and who controls the defaults.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>Transactional emails in HubSpot: the add-on and when to use it</title>
+    <link>https://hubspot.samcbarth.com/articles/transactional-email-add-on/</link>
+    <guid>https://hubspot.samcbarth.com/articles/transactional-email-add-on/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Why your custom font doesn&#39;t show in Gmail or Outlook</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-fonts-in-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-fonts-in-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which email clients support custom fonts in HubSpot marketing emails, how fallback fonts work, and where fonts are set.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Set your website favicon in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/favicon-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/favicon-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s favicon setting is, what content it applies to, and how it ties to the brand kit.</description>
+    <category>Content Hub</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Keep a HubSpot page out of Google: noindex vs robots.txt</title>
+    <link>https://hubspot.samcbarth.com/articles/noindex-and-robots-txt/</link>
+    <guid>https://hubspot.samcbarth.com/articles/noindex-and-robots-txt/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When to use a noindex meta tag versus robots.txt in HubSpot, why not to combine them, and the sitemap settings that go with them.</description>
+    <category>Content Hub</category>
+    <category>SEO</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Click rate vs click-through rate in HubSpot email reports</title>
+    <link>https://hubspot.samcbarth.com/articles/click-rate-vs-click-through-rate/</link>
+    <guid>https://hubspot.samcbarth.com/articles/click-rate-vs-click-through-rate/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between HubSpot&#39;s click rate and click-through rate, and how open rate is counted.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Revenue on HubSpot campaigns: what the numbers mean</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-revenue-metrics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-revenue-metrics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot campaigns report contacts with revenue and attributed revenue, which tiers see which metric, and what campaigns can&#39;t do.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Post several images at once to Instagram from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/instagram-carousel-posts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/instagram-carousel-posts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s social tool publishes Instagram carousel posts of up to 10 media files, and the post types it supports.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Install the Meta pixel, Google tag or LinkedIn Insight Tag through HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/install-ad-pixels/</link>
+    <guid>https://hubspot.samcbarth.com/articles/install-ad-pixels/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot installs ad network pixels on pages with the tracking code, the account connection it needs, and who can install them.</description>
+    <category>Marketing Hub</category>
+    <category>Tracking code</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Google Consent Mode with HubSpot&#39;s cookie banner</title>
+    <link>https://hubspot.samcbarth.com/articles/google-consent-mode/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-consent-mode/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When HubSpot handles Google Consent Mode for you, when you must implement it yourself, and the EEA/UK opt-in banner requirement.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Privacy</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>Find contacts subscribed to a specific email type</title>
+    <link>https://hubspot.samcbarth.com/articles/filter-by-subscription-type/</link>
+    <guid>https://hubspot.samcbarth.com/articles/filter-by-subscription-type/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to filter HubSpot contacts by subscription status for one or more subscription types, and the opt-out import caveat.</description>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>Permanently delete contacts for GDPR, including by API</title>
+    <link>https://hubspot.samcbarth.com/articles/gdpr-delete-contacts-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/gdpr-delete-contacts-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s GDPR delete differs from a normal delete, and the API endpoint for permanently deleting a contact by ID or email.</description>
+    <category>Smart CRM</category>
+    <category>Privacy</category>
+    <category>API</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

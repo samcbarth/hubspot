@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Segment contacts by how many marketing emails they opened or clicked - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot's Marketing emails opened, clicked and bounced properties, how they count, and how to build engagement segments.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/segment-by-email-engagement/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/segment-by-email-engagement/">
+<meta property="og:title" content="Segment contacts by how many marketing emails they opened or clicked">
+<meta property="og:description" content="HubSpot's Marketing emails opened, clicked and bounced properties, how they count, and how to build engagement segments.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/segment-by-email-engagement/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Segment contacts by how many marketing emails they opened or clicked",
+      "description": "HubSpot's Marketing emails opened, clicked and bounced properties, how they count, and how to build engagement segments.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/segment-by-email-engagement/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/segment-by-email-engagement/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Segment contacts by how many marketing emails they opened or clicked",
+      "totalTime": "PT3M",
+      "step": [
+        {"@type": "HowToStep", "name": "Create a segment", "text": "Contacts-based, active."},
+        {"@type": "HowToStep", "name": "Add a filter", "text": "Marketing emails opened, greater than a number."},
+        {"@type": "HowToStep", "name": "Pair with time", "text": "Add Last marketing email open date for recency."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Segment contacts by how many marketing emails they opened or clicked", "item": "https://hubspot.samcbarth.com/articles/segment-by-email-engagement/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="segment-by-email-engagement">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Segments">Segments</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Segment contacts by how many marketing emails they opened or clicked</h1>
+      <p class="dek">These counters make engaged and disengaged segments easy.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing contact properties need Marketing Hub Starter and up</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Segment access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: <strong>Marketing emails opened</strong> counts emails opened, increasing <strong>at most once per email</strong>; <strong>Marketing emails clicked</strong> counts emails with link clicks, also once per email. Use them as segment filters, with date properties for recency.</p>
+        </div>
+
+        <h2>1. The properties</h2>
+        <p>Searching contact properties for marketing emails in my demo portal.</p>
+        <figure class="shot"><a href="search.webp"><img src="search.webp" alt="Contact properties filtered to marketing emails showing opened, bounced and clicked counters" width="800" height="600" loading="lazy"></a><figcaption>Engagement counters (1).</figcaption></figure>
+        <h2>2. Bots</h2>
+        <p>Bot opens are filtered from reports when bot filtering is on. See <a href="../bot-email-opens-clicks/">bot opens</a>.</p>
+        <h2>3. Related</h2>
+        <p><a href="../unengaged-contacts-graymail/">Unengaged contacts</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/creating-a-list-based-on-number-of-emails-opened/109560">HubSpot Community question: Creating a list based on number of emails opened</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-contact-properties">HubSpot Knowledge Base: HubSpot's default contact properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/segments/determine-filter-criteria">HubSpot Knowledge Base: Determine filter criteria</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
