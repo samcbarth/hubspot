@@ -5898,6 +5898,191 @@
     <category>Integrations</category>
   </item>
   <item>
+    <title>Quote reverted to draft or the PDF failed</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-pdf-errors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-pdf-errors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s troubleshooting for quote PDF generation errors, including the e-signature template case.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+  </item>
+  <item>
+    <title>Reassign and collaborate on inbox conversations</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-collaboration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-collaboration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How teams hand off conversations in HubSpot&#39;s conversations inbox.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Preview marketing emails in specific email clients</title>
+    <link>https://hubspot.samcbarth.com/articles/email-client-previews/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-client-previews/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s client previews work and their limits.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>More direct traffic than expected</title>
+    <link>https://hubspot.samcbarth.com/articles/direct-traffic-high/</link>
+    <guid>https://hubspot.samcbarth.com/articles/direct-traffic-high/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot may classify more sessions as direct traffic.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>What you lose when you downgrade</title>
+    <link>https://hubspot.samcbarth.com/articles/downgrade-subscription/</link>
+    <guid>https://hubspot.samcbarth.com/articles/downgrade-subscription/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s notes on downgrading paid subscriptions.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+  </item>
+  <item>
+    <title>Set global colors and fonts for legacy forms</title>
+    <link>https://hubspot.samcbarth.com/articles/global-form-styles/</link>
+    <guid>https://hubspot.samcbarth.com/articles/global-form-styles/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s global form styling works for legacy forms.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Ads tool and traffic analytics show different numbers</title>
+    <link>https://hubspot.samcbarth.com/articles/ads-vs-traffic-analytics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ads-vs-traffic-analytics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot&#39;s ads tool and analytics count contacts differently.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Customize the inbox right sidebar</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-right-sidebar/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-right-sidebar/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins configure ticket cards in the conversations inbox sidebar.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Predict email engagement for a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/segment-predicted-recipients/</link>
+    <guid>https://hubspot.samcbarth.com/articles/segment-predicted-recipients/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot predicts a segment&#39;s marketing email performance.</description>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Set up transactional SMS</title>
+    <link>https://hubspot.samcbarth.com/articles/transactional-sms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/transactional-sms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot transactional SMS works.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>SMS</category>
+  </item>
+  <item>
+    <title>Set daily send limits for connected inboxes</title>
+    <link>https://hubspot.samcbarth.com/articles/connected-email-daily-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connected-email-daily-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How custom limits interact with providers.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Form prefilled with someone else&#39;s details</title>
+    <link>https://hubspot.samcbarth.com/articles/form-fields-prepopulated-wrong/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-fields-prepopulated-wrong/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot forms prefill with another person&#39;s data.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Use price books for different pricing</title>
+    <link>https://hubspot.samcbarth.com/articles/price-books/</link>
+    <guid>https://hubspot.samcbarth.com/articles/price-books/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot price books work.</description>
+    <category>Sales Hub</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>Sync deals with Salesforce opportunities</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-deal-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-deal-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the updated deal sync works.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Create invoices in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/create-invoices/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-invoices/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot invoices can be created.</description>
+    <category>Sales Hub</category>
+    <category>Invoices</category>
+  </item>
+  <item>
+    <title>Dedicated IPs per brand</title>
+    <link>https://hubspot.samcbarth.com/articles/dedicated-ip-per-brand/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dedicated-ip-per-brand/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How dedicated IPs work with Brands.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Brands</category>
+  </item>
+  <item>
+    <title>Track goals on a campaign</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-goals-tracker/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-goals-tracker/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s campaign goals tracker works and its date limits.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Connect Microsoft 365 GCC High inboxes</title>
+    <link>https://hubspot.samcbarth.com/articles/office-365-gcc-high/</link>
+    <guid>https://hubspot.samcbarth.com/articles/office-365-gcc-high/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot supports for GCC High inboxes and the compliance caveat.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Let only certain teams publish to a domain</title>
+    <link>https://hubspot.samcbarth.com/articles/domain-publishing-permissions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/domain-publishing-permissions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot domain publishing permissions by team work.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Permissions</category>
+  </item>
+  <item>
+    <title>Split a segment into random groups</title>
+    <link>https://hubspot.samcbarth.com/articles/random-split-segment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/random-split-segment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s segment split creates static test groups.</description>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
