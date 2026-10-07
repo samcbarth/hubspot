@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Turn off automatic image resizing - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot resizes images on hosted content and the parameter that stops it.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/automatic-image-resizing/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/automatic-image-resizing/">
+<meta property="og:title" content="Turn off automatic image resizing">
+<meta property="og:description" content="How HubSpot resizes images on hosted content and the parameter that stops it.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/automatic-image-resizing/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Turn off automatic image resizing",
+      "description": "How HubSpot resizes images on hosted content and the parameter that stops it.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/automatic-image-resizing/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/automatic-image-resizing/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Turn off automatic image resizing",
+      "totalTime": "PT2M",
+      "step": [
+        {"@type": "HowToStep", "name": "Find the image", "text": "HTML source."},
+        {"@type": "HowToStep", "name": "Add the parameter", "text": "?noresize."},
+        {"@type": "HowToStep", "name": "Republish", "text": "Check the result."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Turn off automatic image resizing", "item": "https://hubspot.samcbarth.com/articles/automatic-image-resizing/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="automatic-image-resizing">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Files">Files</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Content Hub</span></div>
+      <h1>Turn off automatic image resizing</h1>
+      <p class="dek">Add ?noresize to the image URL.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Content edit access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: images on HubSpot-hosted content are <strong>resized by default</strong> to fit the screen, which can cut load time and help PageSpeed. Images with height and width attributes in &lt;img&gt; tags are resized. Add <code>?noresize</code> to the image URL to turn it off for that image.</p>
+        </div>
+
+        <h2>1. In HubSpot</h2>
+        <p>The relevant screen in my demo portal.</p>
+        <figure class="shot"><a href="details.webp"><img src="details.webp" alt="File details panel with the file URL and Replace button" width="314" height="600" loading="lazy"></a><figcaption>Replace (1) and the file URL (2).</figcaption></figure>
+        <h2>2. Worth knowing</h2>
+        <p>Only turn it off for images that look wrong; resizing helps speed.</p>
+        <h2>3. Related</h2>
+        <p><a href="../speed-up-landing-page/">Page speed</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/adding-files-and-images-to-quotes/11190">HubSpot Community question: Adding Files and Images to Quotes</a></li>
+          <li><a href="https://knowledge.hubspot.com/files/automatic-image-resizing-on-hubspot-content">HubSpot Knowledge Base: Automatic image resizing on HubSpot content</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -4564,6 +4564,261 @@
     <category>Email</category>
   </item>
   <item>
+    <title>Delete your own HubSpot user account</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-your-own-user/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-your-own-user/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between removing a user from an account and deleting the user login, and what deletion takes with it.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Auto-post new blog posts to social</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-auto-post-social/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-auto-post-social/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot blog auto-publishing to social accounts works, the timing, and the shared-account rule.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Get AI summaries of a report</title>
+    <link>https://hubspot.samcbarth.com/articles/report-ai-insights/</link>
+    <guid>https://hubspot.samcbarth.com/articles/report-ai-insights/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s AI-assisted report insights appear and which reports support them.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Embed HubSpot content in WordPress</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-hubspot-content-wordpress/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-hubspot-content-wordpress/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot content embeds work for HubSpot and WordPress pages.</description>
+    <category>Content Hub</category>
+    <category>Content embeds</category>
+  </item>
+  <item>
+    <title>Add products to an automated marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/product-module-marketing-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/product-module-marketing-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the products module works in HubSpot email, recommendations, and where it&#39;s available.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>Filter the segments list</title>
+    <link>https://hubspot.samcbarth.com/articles/filter-segments-index/</link>
+    <guid>https://hubspot.samcbarth.com/articles/filter-segments-index/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to filter and save views of HubSpot segments, with AND and OR logic.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Turn off automatic image resizing</title>
+    <link>https://hubspot.samcbarth.com/articles/automatic-image-resizing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/automatic-image-resizing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot resizes images on hosted content and the parameter that stops it.</description>
+    <category>Content Hub</category>
+    <category>Files</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Prepare HubSpot for a company rebrand</title>
+    <link>https://hubspot.samcbarth.com/articles/company-rebrand-assets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/company-rebrand-assets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot says to update during a rebrand: domains, brand identity and website settings.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Branding</category>
+    <category>Domains</category>
+  </item>
+  <item>
+    <title>Test a workflow before turning it on</title>
+    <link>https://hubspot.samcbarth.com/articles/test-workflow-before-on/</link>
+    <guid>https://hubspot.samcbarth.com/articles/test-workflow-before-on/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s workflow test checks and what it can&#39;t tell you.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Use data from other records in workflow actions</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-data-variables/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-data-variables/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the workflow data panel inserts values from associated records and events.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Complete sequence tasks</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-tasks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-tasks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How tasks in HubSpot sequences are created and completed, and why bulk completion isn&#39;t available.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>Filter a record&#39;s activity timeline</title>
+    <link>https://hubspot.samcbarth.com/articles/filter-record-timeline/</link>
+    <guid>https://hubspot.samcbarth.com/articles/filter-record-timeline/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to filter activities on HubSpot records and the 30-day limit on newer free accounts.</description>
+    <category>Smart CRM</category>
+    <category>Activities</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Meeting availability doesn&#39;t match your calendar</title>
+    <link>https://hubspot.samcbarth.com/articles/meetings-availability-mismatch/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meetings-availability-mismatch/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checklist when scheduling pages show fewer slots than expected.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Comment on HubSpot assets with your team</title>
+    <link>https://hubspot.samcbarth.com/articles/comments-on-assets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/comments-on-assets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to leave and manage comments on HubSpot assets and conversations.</description>
+    <category>Smart CRM</category>
+    <category>Collaboration</category>
+  </item>
+  <item>
+    <title>Show customer spend trends on records</title>
+    <link>https://hubspot.samcbarth.com/articles/record-trend-insights/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-trend-insights/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Customer spend trends card works on HubSpot contacts and companies.</description>
+    <category>Sales Hub</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Edit a blog listing template</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-template-design-manager/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-template-design-manager/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot blog listing pages need the design manager and how to edit them.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>Design manager</category>
+  </item>
+  <item>
+    <title>Track who&#39;s enrolled in sequences</title>
+    <link>https://hubspot.samcbarth.com/articles/monitor-sequence-enrollments/</link>
+    <guid>https://hubspot.samcbarth.com/articles/monitor-sequence-enrollments/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to monitor HubSpot sequence enrollments and when sequence edits apply.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Enroll contacts in sequences from your phone</title>
+    <link>https://hubspot.samcbarth.com/articles/sequences-mobile-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequences-mobile-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can do with HubSpot sequences in the mobile app.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+    <category>Mobile app</category>
+  </item>
+  <item>
+    <title>Run the data model health check</title>
+    <link>https://hubspot.samcbarth.com/articles/data-model-health-check/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-model-health-check/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s data model health check scans and how often to run it.</description>
+    <category>Smart CRM</category>
+    <category>Data model</category>
+  </item>
+  <item>
+    <title>Make contacts inherit the company owner</title>
+    <link>https://hubspot.samcbarth.com/articles/sync-owner-contact-company/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sync-owner-contact-company/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s setting that assigns the company owner to contacts by default.</description>
+    <category>Smart CRM</category>
+    <category>Owners</category>
+  </item>
+  <item>
+    <title>Set default views for everyone</title>
+    <link>https://hubspot.samcbarth.com/articles/default-index-view/</link>
+    <guid>https://hubspot.samcbarth.com/articles/default-index-view/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How admins set default index page views for new users.</description>
+    <category>Smart CRM</category>
+    <category>Views</category>
+  </item>
+  <item>
+    <title>Edit a marketing email&#39;s plain text version</title>
+    <link>https://hubspot.samcbarth.com/articles/plain-text-email-version/</link>
+    <guid>https://hubspot.samcbarth.com/articles/plain-text-email-version/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot plain text emails work, link display, and click tracking.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Change your default From address for one-to-one emails</title>
+    <link>https://hubspot.samcbarth.com/articles/default-send-from-address/</link>
+    <guid>https://hubspot.samcbarth.com/articles/default-send-from-address/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set the default From address with several connected inboxes.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Send and reply from the conversations inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/reply-emails-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/reply-emails-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to compose and reply in HubSpot&#39;s inbox and the Office 365 junk folder gotcha.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Embed external content on a dashboard</title>
+    <link>https://hubspot.samcbarth.com/articles/dashboard-external-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dashboard-external-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add Google Slides and other content to HubSpot dashboards and limits.</description>
+    <category>Smart CRM</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>Pick the right report chart type</title>
+    <link>https://hubspot.samcbarth.com/articles/report-chart-styles/</link>
+    <guid>https://hubspot.samcbarth.com/articles/report-chart-styles/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s report chart styles and what each suits.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Create custom analytics views</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-analytics-views/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-analytics-views/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot analytics views filter traffic and the session rule.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
