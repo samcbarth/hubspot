@@ -5098,6 +5098,214 @@
     <category>Email</category>
   </item>
   <item>
+    <title>Show the health score card on records</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-success-health-score/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-success-health-score/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add HubSpot&#39;s customer success Health Score card to records and who can see it.</description>
+    <category>Service Hub</category>
+    <category>Customer success</category>
+  </item>
+  <item>
+    <title>Sync Salesforce custom objects with HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-custom-object-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-custom-object-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Salesforce integration syncs custom objects, field mapping rules and known gaps.</description>
+    <category>Smart CRM</category>
+    <category>Salesforce</category>
+    <category>Custom objects</category>
+  </item>
+  <item>
+    <title>Report on custom events</title>
+    <link>https://hubspot.samcbarth.com/articles/analyze-custom-behavioral-events/</link>
+    <guid>https://hubspot.samcbarth.com/articles/analyze-custom-behavioral-events/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to analyze HubSpot custom event data and the one-event-per-report limit.</description>
+    <category>Marketing Hub</category>
+    <category>Custom events</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Restore a deleted marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/restore-deleted-marketing-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restore-deleted-marketing-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How long HubSpot keeps deleted marketing emails and who can restore them.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>What the sequences sender score measures</title>
+    <link>https://hubspot.samcbarth.com/articles/sequences-sender-score/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequences-sender-score/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot calculates the sequences sender score and where to see it.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Check Web Vitals on the site speed dashboard</title>
+    <link>https://hubspot.samcbarth.com/articles/site-speed-dashboard/</link>
+    <guid>https://hubspot.samcbarth.com/articles/site-speed-dashboard/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s site speed dashboard covers and how to open it.</description>
+    <category>Content Hub</category>
+    <category>SEO</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Connect Google Drive to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/google-drive-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-drive-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Google Drive integration works per user and its file access rules.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Translate a legacy form</title>
+    <link>https://hubspot.samcbarth.com/articles/forms-multiple-languages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/forms-multiple-languages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How translations work for HubSpot legacy forms.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Copy data to associated records with sync properties</title>
+    <link>https://hubspot.samcbarth.com/articles/create-sync-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-sync-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How sync properties copy values one way and when they can replace a workflow.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Create recurring subscriptions for buyers</title>
+    <link>https://hubspot.samcbarth.com/articles/create-commerce-subscriptions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-commerce-subscriptions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot commerce subscriptions automate recurring payments or invoices.</description>
+    <category>Sales Hub</category>
+    <category>Payments</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Add a calling channel to the inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/calling-channel-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calling-channel-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How a calling channel works in HubSpot&#39;s conversations inbox.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Your marketing email send was stopped</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-send-stopped/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-send-stopped/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot stops sends and how to resend to engaged contacts.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Deliverability</category>
+  </item>
+  <item>
+    <title>Add site search to a HubSpot site</title>
+    <link>https://hubspot.samcbarth.com/articles/site-search-results-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/site-search-results-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set up HubSpot&#39;s search results page template.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Design manager</category>
+  </item>
+  <item>
+    <title>Copy assets between HubSpot accounts</title>
+    <link>https://hubspot.samcbarth.com/articles/copy-assets-another-account/</link>
+    <guid>https://hubspot.samcbarth.com/articles/copy-assets-another-account/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How multi-account management copies assets and who can do it.</description>
+    <category>Smart CRM</category>
+    <category>Account management</category>
+  </item>
+  <item>
+    <title>Use a record created earlier in the same workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/records-created-earlier-in-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/records-created-earlier-in-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How later workflow actions use records created by earlier ones.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Analyze cookie banner interactions</title>
+    <link>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot logs cookie consent banner interactions.</description>
+    <category>Marketing Hub</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Build a single-object report</title>
+    <link>https://hubspot.samcbarth.com/articles/single-object-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/single-object-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Limits of HubSpot single-object custom reports.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>IMAP requirements for connecting an inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-technical-requirements/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-technical-requirements/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot needs from your mail server for IMAP connections.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Use the automation overview</title>
+    <link>https://hubspot.samcbarth.com/articles/automation-overview/</link>
+    <guid>https://hubspot.samcbarth.com/articles/automation-overview/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s automation overview shows.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Email links lead to an error page</title>
+    <link>https://hubspot.samcbarth.com/articles/email-links-error-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-links-error-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Common causes of broken links in HubSpot emails.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Use a dataset in workflows, segments or reports</title>
+    <link>https://hubspot.samcbarth.com/articles/dataset-in-workflow-list-report/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dataset-in-workflow-list-report/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot datasets feed automation.</description>
+    <category>Smart CRM</category>
+    <category>Datasets</category>
+  </item>
+  <item>
+    <title>HubSpot ads numbers don&#39;t match the ad network</title>
+    <link>https://hubspot.samcbarth.com/articles/ads-data-mismatch/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ads-data-mismatch/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot attribution differs from network conversions.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
