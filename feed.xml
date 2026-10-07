@@ -1791,6 +1791,271 @@
     <category>Calling</category>
   </item>
   <item>
+    <title>There is no &quot;today&quot; property: use Time since and Time until instead</title>
+    <link>https://hubspot.samcbarth.com/articles/today-date-property/</link>
+    <guid>https://hubspot.samcbarth.com/articles/today-date-property/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot has no live today&#39;s date property, and how Time since, Time until and relative date properties give you a value that moves with today.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Import error: &quot;Incorrect number of columns&quot;</title>
+    <link>https://hubspot.samcbarth.com/articles/import-error-incorrect-number-of-columns/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-error-incorrect-number-of-columns/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What usually causes HubSpot&#39;s Incorrect number of columns import error, and how to fix the file or mapping.</description>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+  </item>
+  <item>
+    <title>Stop HubSpot from creating contacts from every logged email</title>
+    <link>https://hubspot.samcbarth.com/articles/stop-creating-contacts-from-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/stop-creating-contacts-from-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How logged emails create contacts, how to log to existing contacts only, and the account-level log and track defaults for the sales extension.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Import contacts and their companies in one file</title>
+    <link>https://hubspot.samcbarth.com/articles/import-contacts-and-companies-together/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-contacts-and-companies-together/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to import contacts and companies together so they associate, the unique identifiers that prevent duplicates, and how multiple associations per row work.</description>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Export companies with their associated contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/export-companies-with-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-companies-with-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot exports include associated records, the 1,000-association default, and the options for all properties and all associations.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Where to store a contact&#39;s LinkedIn profile</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-url-property/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-url-property/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s default LinkedIn URL contact property, its field type, and how to show it on records and forms.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Make a property a clickable link with the URL field type</title>
+    <link>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</link>
+    <guid>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s URL field type for properties that should be clickable links, and how it compares to text fields.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Restore deleted contacts, companies and deals within 90 days</title>
+    <link>https://hubspot.samcbarth.com/articles/restore-deleted-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restore-deleted-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s restore records tool is, the 90-day window, filters by user and workflow, and why some contacts cannot be restored.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Delete contacts in bulk, and the permission it needs</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-delete-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-delete-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to delete many contacts at once from a view, the bulk delete permission, and what you can and can&#39;t get back.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>User settings</category>
+  </item>
+  <item>
+    <title>Build a contact list from company criteria</title>
+    <link>https://hubspot.samcbarth.com/articles/contacts-from-companies-segment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contacts-from-companies-segment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to filter contacts by their associated company&#39;s properties, and how primary company and association labels change which companies count.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Track renewals as deals without breaking recurring revenue reports</title>
+    <link>https://hubspot.samcbarth.com/articles/renewal-deals-pipeline/</link>
+    <guid>https://hubspot.samcbarth.com/articles/renewal-deals-pipeline/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s recurring revenue properties treat renewals, the inactive date and reason fields, and why a renewal deal does not double count.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Several companies with the same domain: how HubSpot decides</title>
+    <link>https://hubspot.samcbarth.com/articles/multiple-companies-same-domain/</link>
+    <guid>https://hubspot.samcbarth.com/articles/multiple-companies-same-domain/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot deduplicates companies by domain in manual creation, imports and the API, and what happens to contact association when domains repeat.</description>
+    <category>Smart CRM</category>
+    <category>Duplicates</category>
+    <category>Companies</category>
+  </item>
+  <item>
+    <title>Link contacts to each other: same-object associations</title>
+    <link>https://hubspot.samcbarth.com/articles/contact-to-contact-associations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contact-to-contact-associations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot associates records of the same object (contact to contact, company to company), how to label those relationships, and how workflows manage them.</description>
+    <category>Smart CRM</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Set a default deal name with tokens</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-name-from-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-name-from-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s default deal name fills when reps create deals from records, which tokens and static text it accepts, and where it does not apply.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Two people sharing one email address</title>
+    <link>https://hubspot.samcbarth.com/articles/two-contacts-same-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/two-contacts-same-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot can&#39;t store two contacts with the same email, how additional email addresses work, and the limits on filters and Salesforce.</description>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>See a contact&#39;s time zone before you call</title>
+    <link>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</link>
+    <guid>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s Time zone and IP time zone contact properties, how each is set, and the daylight saving catch.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Properties</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Enroll many contacts in a sequence at once</title>
+    <link>https://hubspot.samcbarth.com/articles/enroll-list-in-sequence/</link>
+    <guid>https://hubspot.samcbarth.com/articles/enroll-list-in-sequence/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How bulk sequence enrollment works, the 50-contact limit per enrollment, the sending pace, and the permissions needed.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Out-of-office replies and sequences: when contacts stay enrolled</title>
+    <link>https://hubspot.samcbarth.com/articles/sequences-out-of-office-replies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequences-out-of-office-replies/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which automated replies HubSpot sequences ignore, the known case that still unenrolls contacts, and what unenrolling does and doesn&#39;t undo.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Dropdown, radio or multiple checkboxes: picking an option field</title>
+    <link>https://hubspot.samcbarth.com/articles/dropdown-vs-multiple-checkboxes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dropdown-vs-multiple-checkboxes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between HubSpot&#39;s enumeration field types, which allow one value versus several, and how they look in forms.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Turn the &quot;create a follow-up task&quot; prompt back on</title>
+    <link>https://hubspot.samcbarth.com/articles/follow-up-task-prompt/</link>
+    <guid>https://hubspot.samcbarth.com/articles/follow-up-task-prompt/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s follow-up task prompts are controlled, the task defaults that go with them, and how they differ from task reminders.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>Filter segments and reports by association label</title>
+    <link>https://hubspot.samcbarth.com/articles/filter-by-association-labels/</link>
+    <guid>https://hubspot.samcbarth.com/articles/filter-by-association-labels/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot lets you use association labels as filters, the subscription needed for segments, and how labels work in custom reports.</description>
+    <category>Smart CRM</category>
+    <category>Associations</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Choose what shows on deal board cards</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-deal-board-cards/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-deal-board-cards/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to customize deal cards in board view, the 15-item limit, and account versus personal settings.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>Stop reps deleting notes and activities</title>
+    <link>https://hubspot.samcbarth.com/articles/prevent-deleting-activities/</link>
+    <guid>https://hubspot.samcbarth.com/articles/prevent-deleting-activities/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot permission lets users delete activities on records, what View-only users can still do, and how to recover deletions.</description>
+    <category>Smart CRM</category>
+    <category>User settings</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Remove associations in bulk</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-remove-associations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-remove-associations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot workflows can remove only labeled associations, and the API endpoints for removing unlabeled ones in bulk.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Associations</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Copy line items to another deal: how cloning works</title>
+    <link>https://hubspot.samcbarth.com/articles/copy-line-items/</link>
+    <guid>https://hubspot.samcbarth.com/articles/copy-line-items/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot clones line items between deals, quotes and invoices, why there is no ongoing sync, and the options for reusing a deal&#39;s products.</description>
+    <category>Sales Hub</category>
+    <category>Commerce Hub</category>
+    <category>Products</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Use OR in HubSpot filters with filter groups</title>
+    <link>https://hubspot.samcbarth.com/articles/and-or-filter-groups/</link>
+    <guid>https://hubspot.samcbarth.com/articles/and-or-filter-groups/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How AND and OR work in HubSpot view filters, and an example: contacts with no upcoming activity.</description>
+    <category>Smart CRM</category>
+    <category>Views</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Import past emails, calls and notes onto records</title>
+    <link>https://hubspot.samcbarth.com/articles/import-email-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-email-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to import activities into HubSpot and associate them with contacts and companies, and why to include an activity date.</description>
+    <category>Smart CRM</category>
+    <category>Imports</category>
+    <category>Activities</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
