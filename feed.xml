@@ -3682,6 +3682,192 @@
     <category>Data</category>
   </item>
   <item>
+    <title>Find every ticket you were @mentioned on</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-mentions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-mentions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How mentions in help desk notes work, the My Mentions view, and how notes sync to Slack, Teams and Google Chat.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Chat availability: working hours and Away status</title>
+    <link>https://hubspot.samcbarth.com/articles/chat-availability/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chat-availability/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot sets inbox and help desk users to Available or Away from working hours, out-of-office and manual status, and how that affects routing.</description>
+    <category>Service Hub</category>
+    <category>Chat</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Set out-of-office for help desk users</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-out-of-office/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-out-of-office/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How out-of-office periods set HubSpot users to Away, stop automatic assignment, and who can set them.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Ask follow-up questions in a survey based on the answer</title>
+    <link>https://hubspot.samcbarth.com/articles/survey-dependent-fields/</link>
+    <guid>https://hubspot.samcbarth.com/articles/survey-dependent-fields/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How dependent fields in HubSpot custom feedback surveys show extra questions based on a response.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Customer support (CES) surveys after a ticket closes</title>
+    <link>https://hubspot.samcbarth.com/articles/support-survey-conditional/</link>
+    <guid>https://hubspot.samcbarth.com/articles/support-survey-conditional/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot customer support surveys send after tickets close, the once-per-ticket rule, delays, and why there are no reminders.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Use survey responses in segments, workflows and reports</title>
+    <link>https://hubspot.samcbarth.com/articles/survey-response-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/survey-response-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot survey response properties store each response separately, and where you can use them.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Survey FAQs: subscription type, expiry and marketing status</title>
+    <link>https://hubspot.samcbarth.com/articles/survey-faqs-reenroll/</link>
+    <guid>https://hubspot.samcbarth.com/articles/survey-faqs-reenroll/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Answers from HubSpot&#39;s customer feedback FAQ: the survey email subscription type, how long email surveys stay open, and marketing contact status.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Assign conversation owners with a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/assign-conversation-owner-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/assign-conversation-owner-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Assign conversation owner workflow action changes a conversation&#39;s inbox and owner automatically.</description>
+    <category>Service Hub</category>
+    <category>Workflows</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Hand a bot conversation to a person, or to the bot when nobody&#39;s around</title>
+    <link>https://hubspot.samcbarth.com/articles/bot-to-live-chat/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bot-to-live-chat/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot rule-based chatbots hand off with Send to team member, the availability check, and the customer agent option.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+    <category>Bots</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s customer agent: what it answers and when it hands off</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-agent-ai/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-agent-ai/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s AI customer agent answers from your content, performs actions, hands off to people, and what reply recommendations cost.</description>
+    <category>Service Hub</category>
+    <category>AI</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>Email chat transcripts to visitors automatically</title>
+    <link>https://hubspot.samcbarth.com/articles/chat-transcripts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chat-transcripts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk sends a contact the full chat transcript after the ticket closes, and the timing.</description>
+    <category>Service Hub</category>
+    <category>Chat</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Manage help desk tickets in Slack</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-slack/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-slack/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk syncs tickets to Slack channels, filters which tickets go where, and syncs internal comments.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Snooze a ticket until later</title>
+    <link>https://hubspot.samcbarth.com/articles/snooze-tickets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/snooze-tickets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How snoozing works in HubSpot help desk, who sees snoozed tickets, and why they still count toward capacity.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Macros in help desk: saved replies plus ticket actions</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-macros/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-macros/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk macros combine a reusable reply with ticket updates, the limits by tier, and who can create them.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Two chatflows on the same page: set the priority</title>
+    <link>https://hubspot.samcbarth.com/articles/chatflow-priority/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatflow-priority/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot chatflow priority decides which chatflow shows when targeting overlaps, and how to test it.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>WhatsApp message templates in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/whatsapp-templates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/whatsapp-templates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How WhatsApp templates are created, approved and synced into HubSpot, personalization variables, and Meta&#39;s US marketing pause.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>WhatsApp</category>
+  </item>
+  <item>
+    <title>Text-message support with an SMS channel in help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/sms-support/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sms-support/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How an SMS channel in HubSpot help desk receives customer texts, why you can&#39;t start conversations from it, and the plain-text limit.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>SMS</category>
+  </item>
+  <item>
+    <title>Set which email address a team replies from in help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-default-team-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-default-team-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set a default From address per team in HubSpot help desk, the requirements, and what it doesn&#39;t cover.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Chat with logged-in visitors</title>
+    <link>https://hubspot.samcbarth.com/articles/chat-with-logged-in-visitors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chat-with-logged-in-visitors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot identifies logged-in visitors in chat, targeting a chatflow only to them, and the tiers involved.</description>
+    <category>Service Hub</category>
+    <category>Content Hub</category>
+    <category>Chat</category>
+    <category>Developer</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
