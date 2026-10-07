@@ -2911,6 +2911,233 @@
     <category>Deals</category>
   </item>
   <item>
+    <title>Resend a marketing email to people who didn&#39;t engage</title>
+    <link>https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/</link>
+    <guid>https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to build a segment of contacts who were sent an email but didn&#39;t click or open, and why HubSpot skips unengaged contacts by default.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Add a PDF to a marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/attach-pdf-to-marketing-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/attach-pdf-to-marketing-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why marketing emails link to files rather than attaching them, and how to link a PDF from HubSpot&#39;s files tool.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Save an existing marketing email as a template</title>
+    <link>https://hubspot.samcbarth.com/articles/save-email-as-template/</link>
+    <guid>https://hubspot.samcbarth.com/articles/save-email-as-template/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to turn a drag-and-drop marketing email into a reusable template from the File menu, and who can manage templates.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Why there&#39;s no generic &quot;manage preferences&quot; link</title>
+    <link>https://hubspot.samcbarth.com/articles/subscription-preferences-link-token/</link>
+    <guid>https://hubspot.samcbarth.com/articles/subscription-preferences-link-token/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot subscription preferences pages are personal to each recipient, where contacts find their link, and the HubL tag for coded templates.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>Keep specific contacts out of an active segment</title>
+    <link>https://hubspot.samcbarth.com/articles/exclude-from-active-segment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/exclude-from-active-segment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to exclude records from an active segment with filters or another segment, plus converting an active segment to static.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Delete contacts with a workflow, and get them back</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-record-workflow-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-record-workflow-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Delete contact workflow action works, the 90-day restore window, filtering restores by workflow, and avoiding a delete loop.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+    <category>Data</category>
+  </item>
+  <item>
+    <title>One contact, several email addresses</title>
+    <link>https://hubspot.samcbarth.com/articles/additional-email-addresses/</link>
+    <guid>https://hubspot.samcbarth.com/articles/additional-email-addresses/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot stores additional email addresses on a contact, why the primary email matters, and how to add extras by import.</description>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Trigger a workflow before or after a date property</title>
+    <link>https://hubspot.samcbarth.com/articles/date-based-workflow-trigger/</link>
+    <guid>https://hubspot.samcbarth.com/articles/date-based-workflow-trigger/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s &#39;Based on a schedule&#39; trigger enrolls records on, before or after a date property such as close date or birthday.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Put imported contacts into a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/import-to-static-segment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-to-static-segment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add contacts from an import to a new or existing static segment, or create an active segment from import membership.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Import</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Remove a group of contacts from a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/unenroll-records-from-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unenroll-records-from-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How suppression segments, goals and unenrollment triggers take contacts out of HubSpot workflows, and what happens afterwards.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Change a property&#39;s field type without losing data</title>
+    <link>https://hubspot.samcbarth.com/articles/change-property-field-type/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-property-field-type/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot lets you change on an existing property, why changing the field type can invalidate values, and what to do first.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Two records merged by mistake: what you can do</title>
+    <link>https://hubspot.samcbarth.com/articles/unmerge-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unmerge-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot merges can&#39;t be undone, how to find what was merged, and the export that shows pre-merge values.</description>
+    <category>Smart CRM</category>
+    <category>Data</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Install the HubSpot tracking code on Wix</title>
+    <link>https://hubspot.samcbarth.com/articles/install-tracking-code-wix/</link>
+    <guid>https://hubspot.samcbarth.com/articles/install-tracking-code-wix/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s steps for adding the tracking code to a Wix site with Custom Code, where to place it, and live chat on Wix.</description>
+    <category>Marketing Hub</category>
+    <category>Tracking code</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Send form and lifecycle conversions to Google Ads</title>
+    <link>https://hubspot.samcbarth.com/articles/ad-conversion-events/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ad-conversion-events/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot ad conversion events sync form submissions and lifecycle stage changes to Google Ads, the event limits by tier, and the MCC caveat.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Add forms, emails and other assets to a campaign</title>
+    <link>https://hubspot.samcbarth.com/articles/add-assets-to-campaign/</link>
+    <guid>https://hubspot.samcbarth.com/articles/add-assets-to-campaign/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to associate existing assets with a HubSpot campaign in Marketing Studio, and the per-asset permissions it needs.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Customer journey reports</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-journey-analytics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-journey-analytics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s customer journey reports show, the Enterprise requirement, Pathfinder for defining stages, and how funnels count stages.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Reporting</category>
+  </item>
+  <item>
+    <title>Why HubSpot and Google Analytics numbers don&#39;t match</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-vs-google-analytics-numbers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-vs-google-analytics-numbers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s guidance on comparing its analytics with Google Analytics: compare trends, align IP filters, and cross-domain caveats.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>HubSpot campaigns vs Salesforce campaigns</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-campaign-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-campaign-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot campaigns don&#39;t sync to Salesforce, how to add contacts to Salesforce campaigns from forms and workflows, and what syncs back.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Customize the invoices you send buyers</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-invoice-template/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-invoice-template/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot invoice presets set a custom title and up to four custom properties, and who can edit them.</description>
+    <category>Commerce Hub</category>
+    <category>Invoices</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Take payment when someone books a meeting</title>
+    <link>https://hubspot.samcbarth.com/articles/paid-meetings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/paid-meetings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Collect payments switch adds a payment link to a HubSpot scheduling page, and what has to be set up first.</description>
+    <category>Sales Hub</category>
+    <category>Commerce Hub</category>
+    <category>Meetings</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Start a workflow when a payment succeeds or fails</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-workflow-trigger/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-workflow-trigger/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How payment-based workflows use the Payments object, Status and Source properties, with HubSpot&#39;s welcome-email and failed-payment examples.</description>
+    <category>Commerce Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Discount codes on payment links</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-link-discounts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-link-discounts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot discount codes work at payment link checkout, where they can&#39;t be used, and who can create them.</description>
+    <category>Commerce Hub</category>
+    <category>Commerce</category>
+  </item>
+  <item>
+    <title>Let buyers choose a quantity on a payment link</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-link-quantity/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-link-quantity/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot payment links let customers edit line item quantity with minimum and maximum limits, and the one-time-use setting.</description>
+    <category>Commerce Hub</category>
+    <category>Commerce</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
