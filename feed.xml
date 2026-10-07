@@ -3486,6 +3486,202 @@
     <category>Commerce</category>
   </item>
   <item>
+    <title>Turn incoming emails into tickets automatically</title>
+    <link>https://hubspot.samcbarth.com/articles/create-tickets-from-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-tickets-from-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk creates tickets from every incoming email, how inbox channels differ, and the April 2024 account change.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Help desk vs the conversations inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/tickets-vs-conversations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tickets-vs-conversations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s conversations inbox and help desk differ on tickets, and what moving a channel from the inbox to help desk does.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Open the chat widget from a link or button</title>
+    <link>https://hubspot.samcbarth.com/articles/open-chat-from-link/</link>
+    <guid>https://hubspot.samcbarth.com/articles/open-chat-from-link/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s chat widget SDK opens the widget from your own button, loads it open, targets a chatflow, or embeds it inline.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+    <category>Developer</category>
+  </item>
+  <item>
+    <title>Ticket volume and response time reports</title>
+    <link>https://hubspot.samcbarth.com/articles/ticket-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ticket-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s service analytics suite reports on tickets, including response time and reply counts, and how to share a customized report.</description>
+    <category>Service Hub</category>
+    <category>Reporting</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Change the chat widget&#39;s color, avatar and position</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-chat-widget/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-chat-widget/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot chat widget appearance is set for inbox and help desk chat channels, and what you can change.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>Why you can&#39;t delete a pipeline</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-pipeline/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-pipeline/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What blocks deleting a HubSpot ticket or deal pipeline, and how pipeline limits are shared across objects.</description>
+    <category>Smart CRM</category>
+    <category>Service Hub</category>
+    <category>Pipelines</category>
+  </item>
+  <item>
+    <title>Time in ticket status properties are empty</title>
+    <link>https://hubspot.samcbarth.com/articles/time-in-ticket-status/</link>
+    <guid>https://hubspot.samcbarth.com/articles/time-in-ticket-status/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot&#39;s time-in-status properties may be blank: stage calculated properties are off by default for new pipelines and stages.</description>
+    <category>Service Hub</category>
+    <category>Tickets</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Let customers check their tickets in the customer portal</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-portal/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-portal/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s customer portal shows customers their tickets, the visibility options, and where portal tickets are sent.</description>
+    <category>Service Hub</category>
+    <category>Tickets</category>
+    <category>Portal</category>
+  </item>
+  <item>
+    <title>Control which chatflow shows on which page</title>
+    <link>https://hubspot.samcbarth.com/articles/chatflow-targeting/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatflow-targeting/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot targeting rules decide where a chatflow appears using URLs, query parameters and visitor information.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>When a customer replies to a closed ticket</title>
+    <link>https://hubspot.samcbarth.com/articles/closed-ticket-replies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/closed-ticket-replies/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk&#39;s reopening settings decide whether a reply reopens the ticket or creates a new linked one.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Assign help desk tickets automatically</title>
+    <link>https://hubspot.samcbarth.com/articles/ticket-routing-assignment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ticket-routing-assignment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk routing rules assign tickets, the Service seat requirement, capacity limits and skill-based routing.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Get notified about new or assigned tickets</title>
+    <link>https://hubspot.samcbarth.com/articles/ticket-notifications/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ticket-notifications/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot user notifications work for tickets and other activity, the daily email cap, and what can&#39;t be customized.</description>
+    <category>Service Hub</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>SLAs and working hours in help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/sla-working-hours/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sla-working-hours/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot help desk SLA goals work, the four SLA properties, the SLA-hours properties for reporting, and the Enterprise-only conditions.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>SLA</category>
+  </item>
+  <item>
+    <title>Customer satisfaction (CSAT) surveys</title>
+    <link>https://hubspot.samcbarth.com/articles/csat-surveys/</link>
+    <guid>https://hubspot.samcbarth.com/articles/csat-surveys/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot CSAT surveys are delivered by email, chat or web page, where their automation lives, and what they don&#39;t support.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Customer loyalty (NPS) surveys</title>
+    <link>https://hubspot.samcbarth.com/articles/nps-surveys/</link>
+    <guid>https://hubspot.samcbarth.com/articles/nps-surveys/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot NPS surveys are sent by email or web page, why recipients don&#39;t need to be marketing contacts, and where the automation lives.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Style your HubSpot knowledge base</title>
+    <link>https://hubspot.samcbarth.com/articles/knowledge-base-styling/</link>
+    <guid>https://hubspot.samcbarth.com/articles/knowledge-base-styling/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the knowledge base theme editor sets colors, typography and navigation, and the seat and permissions it needs.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Knowledge base visibility and search engine settings</title>
+    <link>https://hubspot.samcbarth.com/articles/noindex-knowledge-base/</link>
+    <guid>https://hubspot.samcbarth.com/articles/noindex-knowledge-base/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Public, private, SSO and access group options for a HubSpot knowledge base, and what the search results noindex setting does and doesn&#39;t cover.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+    <category>SEO</category>
+  </item>
+  <item>
+    <title>Ticket categories and sub-categories</title>
+    <link>https://hubspot.samcbarth.com/articles/ticket-categories/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ticket-categories/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s default ticket Category property works, its Enterprise requirement, and using property options for sub-categories.</description>
+    <category>Service Hub</category>
+    <category>Tickets</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>LinkedIn Sales Navigator in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-sales-navigator-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-sales-navigator-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s LinkedIn Sales Navigator integration requires on both sides, the per-user connection, and the record card setup.</description>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+    <category>Prospecting</category>
+  </item>
+  <item>
+    <title>Undo a bulk edit, import or workflow mistake</title>
+    <link>https://hubspot.samcbarth.com/articles/restore-crm-changes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restore-crm-changes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Restore CRM changes tool rolls records back up to 14 days, the filters for manual changes, and restoring a single workflow&#39;s changes.</description>
+    <category>Smart CRM</category>
+    <category>Data</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
