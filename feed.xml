@@ -4819,6 +4819,285 @@
     <category>Analytics</category>
   </item>
   <item>
+    <title>Reuse workflow steps with Go to action</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-go-to-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-go-to-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Go to action connects workflow branches instead of duplicating steps.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Export ad campaign data from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/export-ads-data/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-ads-data/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s ads export includes and the ad-level data it leaves out.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
+    <title>Turn a saved view into a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/convert-view-to-segment/</link>
+    <guid>https://hubspot.samcbarth.com/articles/convert-view-to-segment/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to convert a HubSpot index page view into a segment and when it fails.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+    <category>Views</category>
+  </item>
+  <item>
+    <title>Non-HubSpot form contacts not reaching Mailchimp</title>
+    <link>https://hubspot.samcbarth.com/articles/non-hubspot-forms-mailchimp/</link>
+    <guid>https://hubspot.samcbarth.com/articles/non-hubspot-forms-mailchimp/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why contacts from non-HubSpot forms don&#39;t sync to Mailchimp and the merge tag fix.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Connect HubSpot to ChatGPT</title>
+    <link>https://hubspot.samcbarth.com/articles/chatgpt-connector/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatgpt-connector/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s ChatGPT connector handles permissions, writes and account limits.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Filter a whole dashboard</title>
+    <link>https://hubspot.samcbarth.com/articles/dashboard-filters/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dashboard-filters/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot dashboard filters apply, data source rules, and quick filters.</description>
+    <category>Smart CRM</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>Analyze workflow performance</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-performance-analyze/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-performance-analyze/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows workflow enrollment data and automation opportunities.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Edit or delete tasks</title>
+    <link>https://hubspot.samcbarth.com/articles/edit-delete-tasks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/edit-delete-tasks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot tasks can be edited or deleted.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>Caller ID in the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-caller-id/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-caller-id/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot mobile Caller ID identifies callers and the Android log screen.</description>
+    <category>Sales Hub</category>
+    <category>Mobile app</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Add an RSS feed to a page template</title>
+    <link>https://hubspot.samcbarth.com/articles/rss-feed-on-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rss-feed-on-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to use HubSpot&#39;s RSS Listing module on page and post templates.</description>
+    <category>Content Hub</category>
+    <category>Design manager</category>
+  </item>
+  <item>
+    <title>Connect Adobe Acrobat Sign</title>
+    <link>https://hubspot.samcbarth.com/articles/adobe-acrobat-sign/</link>
+    <guid>https://hubspot.samcbarth.com/articles/adobe-acrobat-sign/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the Adobe Acrobat Sign integration does in HubSpot and doesn&#39;t sync.</description>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Outlook desktop add-in settings</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-add-in-customize/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-add-in-customize/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The Outlook desktop add-in&#39;s status and settings.</description>
+    <category>Sales Hub</category>
+    <category>Outlook add-in</category>
+  </item>
+  <item>
+    <title>Cancel a scheduled or sending marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/cancel-scheduled-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cancel-scheduled-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to cancel a marketing email and why you then need to clone it.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Check marketing emails in dark mode</title>
+    <link>https://hubspot.samcbarth.com/articles/dark-mode-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dark-mode-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to preview HubSpot emails in dark mode.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>What Likelihood to close means</title>
+    <link>https://hubspot.samcbarth.com/articles/predictive-likelihood-to-close/</link>
+    <guid>https://hubspot.samcbarth.com/articles/predictive-likelihood-to-close/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s predictive scoring sets Likelihood to close and Contact priority.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Lead scoring</category>
+  </item>
+  <item>
+    <title>Follow a record for updates</title>
+    <link>https://hubspot.samcbarth.com/articles/follow-a-record/</link>
+    <guid>https://hubspot.samcbarth.com/articles/follow-a-record/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How following records works in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Personalization tokens in templates and snippets</title>
+    <link>https://hubspot.samcbarth.com/articles/tokens-in-templates-snippets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tokens-in-templates-snippets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How tokens behave in HubSpot sales templates.</description>
+    <category>Sales Hub</category>
+    <category>Templates</category>
+    <category>Snippets</category>
+  </item>
+  <item>
+    <title>WhatsApp subscription statuses</title>
+    <link>https://hubspot.samcbarth.com/articles/whatsapp-subscription-status/</link>
+    <guid>https://hubspot.samcbarth.com/articles/whatsapp-subscription-status/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot tracks WhatsApp Marketing and Transactional subscriptions.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>WhatsApp</category>
+  </item>
+  <item>
+    <title>Sync Salesforce cases with HubSpot tickets</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-cases-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-cases-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the sync works and when records move.</description>
+    <category>Service Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Provision HubSpot users with SCIM</title>
+    <link>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</link>
+    <guid>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How SCIM user provisioning works with Google and other identity providers, and the seat setup it needs.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+    <category>Account security</category>
+  </item>
+  <item>
+    <title>Block an IP address from starting live chats</title>
+    <link>https://hubspot.samcbarth.com/articles/block-chat-ip/</link>
+    <guid>https://hubspot.samcbarth.com/articles/block-chat-ip/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot IP blocking for live chat works, what happens to the conversation, and the 14-day expiry.</description>
+    <category>Service Hub</category>
+    <category>Chat</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Restore a previous version of a page or email</title>
+    <link>https://hubspot.samcbarth.com/articles/restore-page-version/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restore-page-version/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot content can be restored from version history and how to keep the current version.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Version history</category>
+  </item>
+  <item>
+    <title>Embed HubSpot-hosted videos on another site</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-hubspot-video-external/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-hubspot-video-external/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you need to embed HubSpot videos on external pages and emails.</description>
+    <category>Content Hub</category>
+    <category>Video</category>
+  </item>
+  <item>
+    <title>How HubSpot improves call transcripts</title>
+    <link>https://hubspot.samcbarth.com/articles/call-transcripts-quality/</link>
+    <guid>https://hubspot.samcbarth.com/articles/call-transcripts-quality/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot uses account data to improve transcription and what that means for privacy.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+    <category>Conversation intelligence</category>
+  </item>
+  <item>
+    <title>Use custom workflow tokens in automated emails</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-workflow-tokens-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-workflow-tokens-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Enterprise custom tokens pass workflow data into automated emails.</description>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Find your IMAP and SMTP server details</title>
+    <link>https://hubspot.samcbarth.com/articles/imap-smtp-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/imap-smtp-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find mail server names when connecting an inbox to HubSpot by IMAP.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>A/B test legacy CTAs</title>
+    <link>https://hubspot.samcbarth.com/articles/cta-ab-test/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cta-ab-test/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How A/B testing works for HubSpot legacy CTAs and how the winner is chosen.</description>
+    <category>Marketing Hub</category>
+    <category>CTAs</category>
+  </item>
+  <item>
+    <title>Replace a user across all workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/find-replace-user-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/find-replace-user-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins bulk-replace user references in HubSpot workflows.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Create a web version of a marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/email-web-version/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-web-version/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot email web versions work, token limits and the Starter expiry.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
