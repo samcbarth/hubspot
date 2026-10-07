@@ -5699,6 +5699,205 @@
     <category>Integrations</category>
   </item>
   <item>
+    <title>Link a Slack channel to a company or deal</title>
+    <link>https://hubspot.samcbarth.com/articles/slack-channel-record/</link>
+    <guid>https://hubspot.samcbarth.com/articles/slack-channel-record/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How associating a Slack channel with a HubSpot record works and what it notifies.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Slack</category>
+  </item>
+  <item>
+    <title>Plan with the marketing calendar</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-calendar/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-calendar/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s marketing calendar shows and how to filter it.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Build a custom marketing email report</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-marketing-email-report/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-marketing-email-report/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s custom report builder handles marketing email events.</description>
+    <category>Marketing Hub</category>
+    <category>Reports</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Save a buyer&#39;s payment method for later</title>
+    <link>https://hubspot.samcbarth.com/articles/store-payment-method/</link>
+    <guid>https://hubspot.samcbarth.com/articles/store-payment-method/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot stores payment methods at checkout for future charges.</description>
+    <category>Sales Hub</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Make short clips from a long video in social</title>
+    <link>https://hubspot.samcbarth.com/articles/social-video-clips/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-video-clips/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s social tool creates and edits video clips.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Dynamic sequences: tasks only for engaged contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/dynamic-sequences/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dynamic-sequences/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot dynamic sequences combine automated emails with tasks for contacts who engage.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Sync HubSpot tickets with Jira</title>
+    <link>https://hubspot.samcbarth.com/articles/jira-data-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/jira-data-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Jira data sync maps tickets to issues and notes to comments.</description>
+    <category>Service Hub</category>
+    <category>Integrations</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>See and revert changes to a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/view-workflow-changes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/view-workflow-changes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How workflow revision history works and what can&#39;t be reverted.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Sync Shopify product variants</title>
+    <link>https://hubspot.samcbarth.com/articles/shopify-product-variants/</link>
+    <guid>https://hubspot.samcbarth.com/articles/shopify-product-variants/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Shopify variants sync to HubSpot as products.</description>
+    <category>Sales Hub</category>
+    <category>Integrations</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>Connect a Salesforce sandbox</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-sandbox-connect/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-sandbox-connect/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to point HubSpot&#39;s Salesforce integration at a sandbox.</description>
+    <category>Smart CRM</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Send only to engaged contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/optimize-email-engagement/</link>
+    <guid>https://hubspot.samcbarth.com/articles/optimize-email-engagement/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s engagement targeting on marketing emails works.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Deliverability</category>
+  </item>
+  <item>
+    <title>Chat widget not showing on your pages</title>
+    <link>https://hubspot.samcbarth.com/articles/chat-widget-not-appearing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chat-widget-not-appearing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checklist when a chatflow doesn&#39;t appear.</description>
+    <category>Service Hub</category>
+    <category>Chat</category>
+  </item>
+  <item>
+    <title>Send sequence emails as one thread</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-email-thread/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-email-thread/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to make sequence emails reply in the same thread.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Trigger workflows from SMS keywords</title>
+    <link>https://hubspot.samcbarth.com/articles/sms-custom-keywords/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sms-custom-keywords/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How custom SMS keywords trigger HubSpot workflow actions.</description>
+    <category>Marketing Hub</category>
+    <category>SMS</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Recorded meetings stop creating call records</title>
+    <link>https://hubspot.samcbarth.com/articles/recorded-meetings-duplicate-calls/</link>
+    <guid>https://hubspot.samcbarth.com/articles/recorded-meetings-duplicate-calls/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s change to duplicate call records from recorded meetings and what it affects.</description>
+    <category>Sales Hub</category>
+    <category>Calling</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Move primary content to another domain</title>
+    <link>https://hubspot.samcbarth.com/articles/change-primary-domain/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-primary-domain/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to change HubSpot&#39;s primary hosting domain and what happens to redirects.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+  </item>
+  <item>
+    <title>Review a workflow&#39;s enrollment history</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-enrollment-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-enrollment-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to see and export who enrolled in a HubSpot workflow.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Use the HubSpot connector for Claude</title>
+    <link>https://hubspot.samcbarth.com/articles/claude-connector/</link>
+    <guid>https://hubspot.samcbarth.com/articles/claude-connector/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Claude connector does and the approval setting HubSpot recommends.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Limit how many records can be associated</title>
+    <link>https://hubspot.samcbarth.com/articles/association-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/association-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot association limits work.</description>
+    <category>Smart CRM</category>
+    <category>Associations</category>
+  </item>
+  <item>
+    <title>Outlook add-in: &#39;same identity is already installed&#39;</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-same-identity-error/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-same-identity-error/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s fix for this install error.</description>
+    <category>Sales Hub</category>
+    <category>Outlook add-in</category>
+  </item>
+  <item>
+    <title>Snowflake data sync (legacy) is ending</title>
+    <link>https://hubspot.samcbarth.com/articles/snowflake-data-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/snowflake-data-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Status of HubSpot&#39;s legacy Snowflake data sync.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
