@@ -4185,6 +4185,385 @@
     <category>Help desk</category>
   </item>
   <item>
+    <title>Customize a quote template&#39;s look</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-template-customize/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-template-customize/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Who can create HubSpot quote templates, how template styles override branding, and the seat rules.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+  </item>
+  <item>
+    <title>What the HubSpot tracking code collects</title>
+    <link>https://hubspot.samcbarth.com/articles/tracking-code-data-collected/</link>
+    <guid>https://hubspot.samcbarth.com/articles/tracking-code-data-collected/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What data HubSpot&#39;s tracking code gathers, how consent affects it, and the setting that stops HubSpot using it for product improvement.</description>
+    <category>Marketing Hub</category>
+    <category>Tracking code</category>
+  </item>
+  <item>
+    <title>Take inbound calls through a calling app in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/receive-inbound-calls/</link>
+    <guid>https://hubspot.samcbarth.com/articles/receive-inbound-calls/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How inbound calling works with third-party calling apps in HubSpot and why the calling window must stay open.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>See the records behind a dashboard number</title>
+    <link>https://hubspot.samcbarth.com/articles/drill-down-dashboard-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/drill-down-dashboard-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to drill into a HubSpot dashboard report and group the drill-down by a property.</description>
+    <category>Smart CRM</category>
+    <category>Dashboards</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Reject many potential duplicates at once</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-reject-duplicates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-reject-duplicates/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to clear false-positive duplicate pairs in bulk and narrow future suggestions in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>Change a global module on just one template</title>
+    <link>https://hubspot.samcbarth.com/articles/global-module-one-template/</link>
+    <guid>https://hubspot.samcbarth.com/articles/global-module-one-template/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to make a local copy of a HubSpot global module so one template can differ.</description>
+    <category>Content Hub</category>
+    <category>Design manager</category>
+    <category>Templates</category>
+  </item>
+  <item>
+    <title>Sync Outlook contacts with HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-contacts-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-contacts-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Outlook Contacts data sync works, sync directions and its fixed mappings.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>Add anchor links to a long page</title>
+    <link>https://hubspot.samcbarth.com/articles/anchor-links-pages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/anchor-links-pages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to insert anchor links in HubSpot pages, naming rules and where they don&#39;t work well.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Tag marketing emails with custom properties</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-custom-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-custom-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How custom email properties work in HubSpot for filtering and organizing marketing emails.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Share a direct link to a file in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/file-direct-download-link/</link>
+    <guid>https://hubspot.samcbarth.com/articles/file-direct-download-link/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to get a direct link to a file in the files tool and why it may open rather than download.</description>
+    <category>Content Hub</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Upload files from the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-app-file-upload/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-app-file-upload/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can upload to HubSpot files from a phone, folder support and default visibility.</description>
+    <category>Smart CRM</category>
+    <category>Files</category>
+    <category>Mobile app</category>
+  </item>
+  <item>
+    <title>Choose which columns a segment shows</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-index-columns/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-index-columns/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot segment columns work per user versus for everyone, and freezing columns.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Find and fix workflow errors</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows workflow errors, which ones retry on their own, and a common association fix.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Export tasks to a spreadsheet</title>
+    <link>https://hubspot.samcbarth.com/articles/export-tasks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-tasks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to export HubSpot tasks from a view, what the file includes, and the associated-records option.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>See where you&#39;re logged in and sign out of devices</title>
+    <link>https://hubspot.samcbarth.com/articles/user-login-sessions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-login-sessions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot session management works, what it shows, and its limits.</description>
+    <category>Smart CRM</category>
+    <category>Account security</category>
+  </item>
+  <item>
+    <title>Prep for meetings on the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/meetings-mobile-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meetings-mobile-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the mobile meeting details page shows and the conditions a meeting must meet.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Mobile app</category>
+  </item>
+  <item>
+    <title>Re-enroll a contact in a sequence</title>
+    <link>https://hubspot.samcbarth.com/articles/reenroll-sequence/</link>
+    <guid>https://hubspot.samcbarth.com/articles/reenroll-sequence/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to re-enroll a contact who was unenrolled from a HubSpot sequence and what&#39;s required.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Which quote properties HubSpot has</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-properties-custom/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-properties-custom/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s default quote properties, which are read-only, and where they can be used.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Which property types a workflow can copy between</title>
+    <link>https://hubspot.samcbarth.com/articles/copy-property-compatible-types/</link>
+    <guid>https://hubspot.samcbarth.com/articles/copy-property-compatible-types/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Field-type compatibility rules for copying values with HubSpot&#39;s Edit record action.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Approve quotes before they go out</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-approvals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-approvals/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Who can approve HubSpot quotes and where approvals happen.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+  </item>
+  <item>
+    <title>Connect Zoho to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/zoho-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zoho-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which Zoho apps connect to HubSpot, who can connect them, and the Zoho CRM field you need.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Log activities that happened outside HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/manually-log-activities/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manually-log-activities/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to manually log calls, emails, meetings and messages on HubSpot records, and limits.</description>
+    <category>Smart CRM</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Show purchased products on contacts and companies</title>
+    <link>https://hubspot.samcbarth.com/articles/purchased-products-on-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/purchased-products-on-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Product history card works on HubSpot records and its limits.</description>
+    <category>Sales Hub</category>
+    <category>Products</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Download an example import file</title>
+    <link>https://hubspot.samcbarth.com/articles/example-import-file/</link>
+    <guid>https://hubspot.samcbarth.com/articles/example-import-file/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot generates a sample import file with the right columns.</description>
+    <category>Smart CRM</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>Where&#39;s my HubSpot API key?</title>
+    <link>https://hubspot.samcbarth.com/articles/private-app-api-key/</link>
+    <guid>https://hubspot.samcbarth.com/articles/private-app-api-key/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What replaced HubSpot API keys and where the developer API key still lives.</description>
+    <category>Developer</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Outlook crashes after installing HubSpot Sales</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-crashing-sales-add-in/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-crashing-sales-add-in/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s troubleshooting route when Outlook desktop crashes with the HubSpot Sales add-in.</description>
+    <category>Sales Hub</category>
+    <category>Outlook add-in</category>
+  </item>
+  <item>
+    <title>Use line items on deals</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-line-items/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-line-items/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How line items work on HubSpot deals, the 200-item display limit, and import behavior.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Line items</category>
+  </item>
+  <item>
+    <title>Import knowledge base articles</title>
+    <link>https://hubspot.samcbarth.com/articles/import-knowledge-base-articles/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-knowledge-base-articles/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to import articles from Zendesk, Freshdesk, Help Scout, Intercom or CSV into HubSpot.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Trigger a workflow when an event happens</title>
+    <link>https://hubspot.samcbarth.com/articles/event-enrollment-triggers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/event-enrollment-triggers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot event-based enrollment triggers work and their timing limits.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Connect a third-party calling provider</title>
+    <link>https://hubspot.samcbarth.com/articles/third-party-calling-provider/</link>
+    <guid>https://hubspot.samcbarth.com/articles/third-party-calling-provider/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How calling apps open inside HubSpot and their limits.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Add reports to CRM records</title>
+    <link>https://hubspot.samcbarth.com/articles/cross-object-reports-on-records/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cross-object-reports-on-records/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to show custom and cross-object report cards on HubSpot record pages.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Preview a record without leaving the page</title>
+    <link>https://hubspot.samcbarth.com/articles/record-preview-panel/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-preview-panel/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How record preview works in HubSpot index pages and associations.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Save and schedule one-to-one email drafts</title>
+    <link>https://hubspot.samcbarth.com/articles/one-to-one-email-drafts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/one-to-one-email-drafts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How drafts and scheduled one-to-one emails work in HubSpot.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Organize segments into folders</title>
+    <link>https://hubspot.samcbarth.com/articles/list-folders/</link>
+    <guid>https://hubspot.samcbarth.com/articles/list-folders/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot segment folders work and when to use views instead.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Prefill form fields from the URL</title>
+    <link>https://hubspot.samcbarth.com/articles/prepopulate-form-fields-query-string/</link>
+    <guid>https://hubspot.samcbarth.com/articles/prepopulate-form-fields-query-string/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to auto-populate HubSpot form fields using query strings and limits.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Move Stripe subscriptions into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/stripe-subscriptions-migrate/</link>
+    <guid>https://hubspot.samcbarth.com/articles/stripe-subscriptions-migrate/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Stripe subscription migration works and which subscriptions can&#39;t move.</description>
+    <category>Sales Hub</category>
+    <category>Payments</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Why meetings don&#39;t appear on a contact&#39;s Google Calendar</title>
+    <link>https://hubspot.samcbarth.com/articles/google-calendar-auto-meetings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-calendar-auto-meetings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Google Calendar&#39;s sender setting and how contacts approve your invites.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Turn on and moderate blog comments</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-comments-moderation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-comments-moderation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to enable, moderate and capture contacts from HubSpot blog comments.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Use dashboards in the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/dashboards-mobile-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dashboards-mobile-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What dashboards and reports work in the HubSpot mobile app and what doesn&#39;t.</description>
+    <category>Smart CRM</category>
+    <category>Dashboards</category>
+    <category>Mobile app</category>
+  </item>
+  <item>
+    <title>Send automated marketing emails from workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/automated-emails-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/automated-emails-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How automated emails work in workflows, token limits, and who gets them.</description>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Email</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

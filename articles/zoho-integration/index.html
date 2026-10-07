@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Connect Zoho to HubSpot - HubSpot Field Notes</title>
+<meta name="description" content="Which Zoho apps connect to HubSpot, who can connect them, and the Zoho CRM field you need.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/zoho-integration/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/zoho-integration/">
+<meta property="og:title" content="Connect Zoho to HubSpot">
+<meta property="og:description" content="Which Zoho apps connect to HubSpot, who can connect them, and the Zoho CRM field you need.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/zoho-integration/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Connect Zoho to HubSpot",
+      "description": "Which Zoho apps connect to HubSpot, who can connect them, and the Zoho CRM field you need.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/zoho-integration/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/zoho-integration/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Connect Zoho to HubSpot",
+      "totalTime": "PT2M",
+      "step": [
+        {"@type": "HowToStep", "name": "Prep Zoho CRM", "text": "Add Modified By."},
+        {"@type": "HowToStep", "name": "Search the marketplace", "text": "Find the Zoho app."},
+        {"@type": "HowToStep", "name": "Pick domain", "text": "Then log in to Zoho."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Connect Zoho to HubSpot", "item": "https://hubspot.samcbarth.com/articles/zoho-integration/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="zoho-integration">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Connect Zoho to HubSpot</h1>
+      <p class="dek">Zoho CRM needs the Modified By field on synced objects.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Check app requirements</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or App Marketplace permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: Super Admin or App Marketplace permissions are required. For <strong>Zoho CRM</strong>, add the <strong>Modified By</strong> field to the Zoho objects you want to sync. You choose your Zoho domain during connect and finish in a Zoho window.</p>
+        </div>
+
+        <h2>1. In HubSpot</h2>
+        <p>The relevant screen in my demo portal.</p>
+        <figure class="shot"><a href="connected.webp"><img src="connected.webp" alt="Connected Apps page with the tabs, the Needs attention section, and the My Apps table highlighted" width="800" height="553" loading="lazy"></a><figcaption>Tabs (1), Needs attention (2), and My Apps (3).</figcaption></figure>
+        <h2>2. Worth knowing</h2>
+        <p>Several Zoho products have separate integrations; pick the one matching the product.</p>
+        <h2>3. Related</h2>
+        <p><a href="../connected-apps-needs-attention/">Connected apps</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/cant-connect-zoho-mail-to-hubspot/8090">HubSpot Community question: Can't connect zoho mail to hubspot</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/connect-hubspot-and-zoho">HubSpot Knowledge Base: Connect HubSpot and Zoho</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
