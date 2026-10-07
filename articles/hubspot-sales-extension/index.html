@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot Sales extension for Gmail and Outlook: install, log and track - HubSpot Field Notes</title>
+<meta name="description" content="What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/">
+<meta property="og:title" content="HubSpot Sales extension for Gmail and Outlook: install, log and track">
+<meta property="og:description" content="What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot Sales extension for Gmail and Outlook: install, log and track",
+      "description": "What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "HubSpot Sales extension for Gmail and Outlook",
+      "totalTime": "PT4M",
+      "step": [
+        {"@type": "HowToStep", "name": "Install", "text": "Add the HubSpot Sales Chrome extension or the Outlook add-in."},
+        {"@type": "HowToStep", "name": "Sign in", "text": "Connect it to your HubSpot user."},
+        {"@type": "HowToStep", "name": "Set defaults", "text": "Choose your log and track defaults in the extension settings."},
+        {"@type": "HowToStep", "name": "Admin default", "text": "Optionally apply a default log setting for all extension users."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot Sales extension for Gmail and Outlook: install, log and track", "item": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubspot-sales-extension">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot Sales extension for Gmail and Outlook: install, log and track</h1>
+      <p class="dek">Reps who live in Gmail or Outlook can log and track emails without opening HubSpot.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Any user; admins set account defaults</dd></div>
+        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Install the <strong>HubSpot Sales Chrome extension</strong> for Gmail or the <strong>Outlook add-in</strong> to log and track emails from your inbox. Admins can turn on <span class="ui">Apply Default Log setting for all users - Sales Extension Only</span> in Settings, Objects, Activities, Email Log &amp; Track. HubSpot's KB notes tracking and logging do not work with customized Gmail layouts, and attachments over 50 MB do not log.</p>
+        </div>
+
+        <h2>1. Account settings</h2>
+        <p>In my demo portal, Email Log &amp; Track has the attachment setting and the extension-wide default.</p>
+        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2).</figcaption></figure>
+        <h2>2. Per-user control</h2>
+        <ul>
+          <li>Users can turn tracking and logging off for a message, contacts or domains.</li>
+          <li>Use a never-log list for internal domains. See <a href="../never-log-list/">the never log list</a>.</li>
+        </ul>
+        <h2>3. Related</h2>
+        <p><a href="../sales-email-open-notifications/">Open notifications</a> and <a href="../email-log-and-track-settings/">log and track settings</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/connected-email/how-to-install-hubspot-sales">HubSpot Knowledge Base: Install HubSpot Sales for Gmail, Office 365 and Outlook desktop</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/track-and-log-emails-with-the-hubspot-sales-chrome-extension">HubSpot Knowledge Base: Track and log emails with the HubSpot Sales Chrome extension</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

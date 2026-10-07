@@ -1482,6 +1482,189 @@
     <category>Integrations</category>
   </item>
   <item>
+    <title>HubSpot Sales extension for Gmail and Outlook: install, log and track</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-sales-extension/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-sales-extension/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.</description>
+    <category>Sales Hub</category>
+    <category>Smart CRM</category>
+    <category>Email</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Too many email open notifications? Forwarding, copies and self-opens</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-email-open-notifications/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-email-open-notifications/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why HubSpot Sales open notifications can fire more than expected, how self-opens are handled, and how to test click tracking properly.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Call recording in HubSpot is on by default: consent and exemptions</title>
+    <link>https://hubspot.samcbarth.com/articles/call-recording-consent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/call-recording-consent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s account-wide call recording and transcription settings live, inbound and outbound exemptions, and whose job consent is.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Meeting reminder emails: up to three, and who receives them</title>
+    <link>https://hubspot.samcbarth.com/articles/meeting-reminder-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/meeting-reminder-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot meeting reminder emails work on scheduling pages and proposed times, the three-reminder limit, the account default, and time zones.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Group scheduling pages: book time when everyone is free</title>
+    <link>https://hubspot.samcbarth.com/articles/group-meetings-scheduling-page/</link>
+    <guid>https://hubspot.samcbarth.com/articles/group-meetings-scheduling-page/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot group scheduling pages find times when all selected team members are available, the seat requirement, and owner-based availability rules.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Split deal credit between users</title>
+    <link>https://hubspot.samcbarth.com/articles/deal-splits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/deal-splits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot deal splits share a deal amount between users for forecasting, where to turn them on, and how collaborators differ.</description>
+    <category>Sales Hub</category>
+    <category>Deals</category>
+    <category>Ownership</category>
+  </item>
+  <item>
+    <title>Resubscribe a contact who opted out of marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/resubscribe-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/resubscribe-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot allows when resubscribing contacts, the resubscription email, and why self opt-outs cannot be reversed by a workflow.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Consent</category>
+  </item>
+  <item>
+    <title>Ask why people unsubscribe with HubSpot&#39;s unsubscribe feedback survey</title>
+    <link>https://hubspot.samcbarth.com/articles/unsubscribe-survey/</link>
+    <guid>https://hubspot.samcbarth.com/articles/unsubscribe-survey/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s unsubscribe feedback survey works, when it appears, and where to read the reasons.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Import an opt-out list so old unsubscribes stay unsubscribed</title>
+    <link>https://hubspot.samcbarth.com/articles/import-opted-out-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-opted-out-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to import contacts as opted out of marketing email, and why deleting and re-importing them as opted out can keep them out of your marketing contact count.</description>
+    <category>Marketing Hub</category>
+    <category>Imports</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Email sending probation and suspension: what triggers them and how to recover</title>
+    <link>https://hubspot.samcbarth.com/articles/email-sending-probation-suspension/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-sending-probation-suspension/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot email sending probation and suspension mean, the banner you will see, and the contact cleanup HubSpot expects before you can send again.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Smart properties: let Data Agent research and fill a property</title>
+    <link>https://hubspot.samcbarth.com/articles/smart-properties-data-agent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/smart-properties-data-agent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot smart properties are, which objects support them, the credit cost, and how to run them in bulk with a workflow.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Properties</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Prospecting agent: what it does and where to start</title>
+    <link>https://hubspot.samcbarth.com/articles/prospecting-agent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/prospecting-agent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s prospecting agent does with plays and selling profiles, how it researches and drafts outreach, and the credit cost per lead.</description>
+    <category>Sales Hub</category>
+    <category>AI</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Sync Stripe data into HubSpot: what syncs and which way</title>
+    <link>https://hubspot.samcbarth.com/articles/stripe-data-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/stripe-data-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which Stripe objects HubSpot&#39;s Stripe sync brings in (customers, invoices, products, subscriptions), the sync direction for each, and how it differs from Stripe payment processing.</description>
+    <category>Smart CRM</category>
+    <category>Commerce Hub</category>
+    <category>Integrations</category>
+    <category>Products</category>
+  </item>
+  <item>
+    <title>QuickBooks Online and HubSpot invoices: what syncs and what is blocked</title>
+    <link>https://hubspot.samcbarth.com/articles/quickbooks-online-invoices/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quickbooks-online-invoices/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the QuickBooks Online data sync handles HubSpot invoices, the filter check, sync failures, and why invoice-level taxes and fees are blocked.</description>
+    <category>Smart CRM</category>
+    <category>Commerce Hub</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Send HubSpot data to Google Sheets from a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Google Sheets workflow actions create or update rows, how to map columns, and how to send formatted values.</description>
+    <category>Smart CRM</category>
+    <category>Data Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Custom report builder vs single-object reports: which to use</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-report-builder/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-report-builder/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s custom report builder adds over single-object reports, the permissions it needs, and how often custom reports refresh.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Private content with memberships: access groups and their limits</title>
+    <link>https://hubspot.samcbarth.com/articles/memberships-access-groups/</link>
+    <guid>https://hubspot.samcbarth.com/articles/memberships-access-groups/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot memberships restrict pages and blog posts to access groups, the subscriptions required, and the two-group limit on Professional.</description>
+    <category>Content Hub</category>
+    <category>Service Hub</category>
+    <category>Pages</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Custom events: track product and app activity in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-events-api/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-events-api/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot&#39;s Event Management lives, the event types it shows, how to send custom event occurrences by API, and the legacy events cut-off.</description>
+    <category>Marketing Hub</category>
+    <category>Data Hub</category>
+    <category>API</category>
+    <category>Analytics</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
