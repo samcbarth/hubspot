@@ -7105,6 +7105,151 @@
     <category>Workflows</category>
   </item>
   <item>
+    <title>Arrange form fields side by side</title>
+    <link>https://hubspot.samcbarth.com/articles/form-field-layout/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-field-layout/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How field layout works in HubSpot&#39;s updated form editor.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Make calls from the HubSpot browser</title>
+    <link>https://hubspot.samcbarth.com/articles/browser-calling/</link>
+    <guid>https://hubspot.samcbarth.com/articles/browser-calling/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you need before calling from HubSpot in the browser.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Default marketing status for new contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-status-new-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-status-new-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which tools create marketing or non-marketing contacts by default.</description>
+    <category>Marketing Hub</category>
+    <category>Marketing contacts</category>
+  </item>
+  <item>
+    <title>Which browsers HubSpot supports</title>
+    <link>https://hubspot.samcbarth.com/articles/supported-browsers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/supported-browsers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s supported browsers for using its tools.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+  </item>
+  <item>
+    <title>&#39;There was an issue sending an email to this contact&#39;</title>
+    <link>https://hubspot.samcbarth.com/articles/email-error-sending-contact/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-error-sending-contact/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Not sent email errors mean on a contact record.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Clone a page, post or email</title>
+    <link>https://hubspot.samcbarth.com/articles/clone-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/clone-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How cloning works in HubSpot content tools, with or without AI.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Blog</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>View the cart object for e-commerce data</title>
+    <link>https://hubspot.samcbarth.com/articles/cart-object/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cart-object/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s cart object stores and what you can do with it.</description>
+    <category>Revenue Hub</category>
+    <category>Smart CRM</category>
+    <category>E-commerce</category>
+  </item>
+  <item>
+    <title>Customize index page quick filters</title>
+    <link>https://hubspot.samcbarth.com/articles/customize-quick-filters/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customize-quick-filters/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot quick filters work and who sees saved ones.</description>
+    <category>Smart CRM</category>
+    <category>Views</category>
+  </item>
+  <item>
+    <title>Compare and restore earlier segment versions</title>
+    <link>https://hubspot.samcbarth.com/articles/list-filter-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/list-filter-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s segment audit log tracks filter changes.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Export social post data</title>
+    <link>https://hubspot.samcbarth.com/articles/export-social-posts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-social-posts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s social post export includes and leaves out.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Report on chat and email conversations</title>
+    <link>https://hubspot.samcbarth.com/articles/chat-email-conversation-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chat-email-conversation-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s default chat and email overview dashboards.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Manage app cards from connected apps</title>
+    <link>https://hubspot.samcbarth.com/articles/app-cards-manage/</link>
+    <guid>https://hubspot.samcbarth.com/articles/app-cards-manage/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins place cards from marketplace apps on records.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Schedule a one-to-one email to send later</title>
+    <link>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Send Later works for CRM emails.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>&#39;This email couldn&#39;t be sent using your connected inbox&#39;</title>
+    <link>https://hubspot.samcbarth.com/articles/connected-inbox-send-error/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connected-inbox-send-error/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s fix for send-as permission errors with Exchange inboxes.</description>
+    <category>Sales Hub</category>
+    <category>Connected inbox</category>
+  </item>
+  <item>
+    <title>Manage forms from the forms index</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-forms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-forms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can do with HubSpot forms from the index page.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
