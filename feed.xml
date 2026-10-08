@@ -6484,6 +6484,221 @@
     <category>Subscriptions</category>
   </item>
   <item>
+    <title>Build custom reports on social posts</title>
+    <link>https://hubspot.samcbarth.com/articles/social-custom-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-custom-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s custom report builder handles social post data.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Control when your chat widget appears</title>
+    <link>https://hubspot.samcbarth.com/articles/chatflow-availability/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatflow-availability/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot chatflow availability settings work, including for bots.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chatflows</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s email deliverability basics</title>
+    <link>https://hubspot.samcbarth.com/articles/email-deliverability-practices/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-deliverability-practices/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s KB recommends to keep marketing emails out of spam.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Create and work with custom object records</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-objects-use/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-objects-use/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot custom object records are created, associated and automated.</description>
+    <category>Smart CRM</category>
+    <category>Custom objects</category>
+  </item>
+  <item>
+    <title>Email sending domain won&#39;t verify</title>
+    <link>https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when DNS records for an email sending domain don&#39;t verify.</description>
+    <category>Marketing Hub</category>
+    <category>Domains</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Answer inbox conversations from the mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-app-conversations/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-app-conversations/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s mobile app can do with the conversations inbox.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Mobile</category>
+  </item>
+  <item>
+    <title>Facebook event codes on HubSpot pages</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-event-codes/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-event-codes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot places automatically and when you install the pixel yourself.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>Send an email after a form submission</title>
+    <link>https://hubspot.samcbarth.com/articles/form-email-response/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-email-response/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s form automation sends follow-up emails, by tier.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Summarize an email thread in the iOS app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-email-summary/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-email-summary/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s iOS app summarizes email threads with AI.</description>
+    <category>Sales Hub</category>
+    <category>Mobile</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Edit, turn off or delete a lead score</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-lead-scores/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-lead-scores/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot lead scores are managed after they&#39;re live.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Lead scoring</category>
+  </item>
+  <item>
+    <title>Use the updated report viewer and dashboards</title>
+    <link>https://hubspot.samcbarth.com/articles/report-viewer-updated/</link>
+    <guid>https://hubspot.samcbarth.com/articles/report-viewer-updated/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s updated report viewer offers, including on Starter.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+    <category>Dashboards</category>
+  </item>
+  <item>
+    <title>Add simple workflows to marketing emails</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-automation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-automation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How simple workflows inside marketing emails automate follow-up.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Associate records with campaigns from CRM cards</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-association-cards/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-association-cards/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Campaigns CRM card adds records to a campaign.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Reply to Instagram DMs in the social tool</title>
+    <link>https://hubspot.samcbarth.com/articles/social-direct-messages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-direct-messages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s social tool shows for Instagram direct messages.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Track Google Ads with tracking URLs</title>
+    <link>https://hubspot.samcbarth.com/articles/google-ads-tracking-no-ads-tool/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-ads-tracking-no-ads-tool/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot tracking URLs measure ad traffic without the ads tool.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>Customize the board view for pipelines</title>
+    <link>https://hubspot.samcbarth.com/articles/board-view-redesigned/</link>
+    <guid>https://hubspot.samcbarth.com/articles/board-view-redesigned/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot board settings and card contents are configured.</description>
+    <category>Smart CRM</category>
+    <category>Sales Hub</category>
+    <category>Pipelines</category>
+    <category>Views</category>
+  </item>
+  <item>
+    <title>See who entered or left a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/segment-membership-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/segment-membership-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s segment membership history log works.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Externally embedded HubSpot form not working</title>
+    <link>https://hubspot.samcbarth.com/articles/embedded-form-not-working/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embedded-form-not-working/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when a form embedded on another site fails.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Set default payment link settings</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-link-defaults/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-link-defaults/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins set defaults for new HubSpot payment links.</description>
+    <category>Revenue Hub</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Office 365 add-in won&#39;t install or connect</title>
+    <link>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s compatibility checks for the Sales Office 365 add-in.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>Add a custom SSL certificate</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-ssl-certificate/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-ssl-certificate/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When and how HubSpot accepts a custom SSL certificate.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Use HubSpot Notetaker in Zoom meetings</title>
+    <link>https://hubspot.samcbarth.com/articles/notetaker-zoom/</link>
+    <guid>https://hubspot.samcbarth.com/articles/notetaker-zoom/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Notetaker joins Zoom meetings and what Zoom needs.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Meetings</category>
+    <category>AI</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
