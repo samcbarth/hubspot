@@ -6909,6 +6909,202 @@
     <category>Reports</category>
   </item>
   <item>
+    <title>Publish knowledge base articles in multiple languages</title>
+    <link>https://hubspot.samcbarth.com/articles/kb-multiple-languages/</link>
+    <guid>https://hubspot.samcbarth.com/articles/kb-multiple-languages/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot language variations and groups work in the knowledge base.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Connect Shopify with the data sync app</title>
+    <link>https://hubspot.samcbarth.com/articles/shopify-data-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/shopify-data-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Shopify (Data Sync) app syncs and how it matches records.</description>
+    <category>Smart CRM</category>
+    <category>Revenue Hub</category>
+    <category>Shopify</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>Connect QuickBooks Online with data sync</title>
+    <link>https://hubspot.samcbarth.com/articles/quickbooks-online/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quickbooks-online/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s QuickBooks Online data sync matches products, invoices and payments.</description>
+    <category>Revenue Hub</category>
+    <category>Smart CRM</category>
+    <category>QuickBooks</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>Check NetSuite sync status on records</title>
+    <link>https://hubspot.samcbarth.com/articles/netsuite-sync-card/</link>
+    <guid>https://hubspot.samcbarth.com/articles/netsuite-sync-card/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s NetSuite integration sync card shows sync details.</description>
+    <category>Smart CRM</category>
+    <category>Revenue Hub</category>
+    <category>NetSuite</category>
+  </item>
+  <item>
+    <title>Add contacts to marketing events with workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-events-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-events-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Add participant to marketing event action works.</description>
+    <category>Marketing Hub</category>
+    <category>Marketing events</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Use original and latest traffic source</title>
+    <link>https://hubspot.samcbarth.com/articles/traffic-source-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/traffic-source-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot sets and updates contacts&#39; traffic source properties.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>HubSpot&#39;s payment and subscription properties</title>
+    <link>https://hubspot.samcbarth.com/articles/payments-subscription-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payments-subscription-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What payment and subscription properties exist and where you can use them.</description>
+    <category>Revenue Hub</category>
+    <category>Payments</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Manage meetings from your Outlook calendar</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-calendar-meetings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-calendar-meetings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the HubSpot Office 365 add-in does in the Outlook calendar.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Check Dynamics 365 sync status on records</title>
+    <link>https://hubspot.samcbarth.com/articles/dynamics-365-sync-card/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dynamics-365-sync-card/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Microsoft Dynamics 365 sync card shows sync details.</description>
+    <category>Smart CRM</category>
+    <category>Dynamics 365</category>
+  </item>
+  <item>
+    <title>Install HubSpot for Google Sheets</title>
+    <link>https://hubspot.samcbarth.com/articles/google-sheets-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-sheets-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Google Sheets extension is installed and what it asks for.</description>
+    <category>Smart CRM</category>
+    <category>Google Sheets</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Manage tickets in the legacy inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-tickets-manage/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-tickets-manage/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How tickets work in HubSpot&#39;s conversations inbox and who must use help desk.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Tickets</category>
+  </item>
+  <item>
+    <title>Import marketing event participants</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-event-participants-import/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-event-participants-import/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to import attendees into a HubSpot marketing event.</description>
+    <category>Marketing Hub</category>
+    <category>Marketing events</category>
+  </item>
+  <item>
+    <title>Create and answer tickets in help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-ticket-from-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-ticket-from-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s help desk handles tickets across channels.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+  </item>
+  <item>
+    <title>Coded emails render differently in Outlook</title>
+    <link>https://hubspot.samcbarth.com/articles/emails-look-different-outlook/</link>
+    <guid>https://hubspot.samcbarth.com/articles/emails-look-different-outlook/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s fixes for spacing and line issues in Outlook.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Developer</category>
+  </item>
+  <item>
+    <title>Delete hard-bounced contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-bounced-unsubscribed/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-bounced-unsubscribed/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot suggests cleaning up hard bounces with active segments.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Route help desk tickets by agent skills</title>
+    <link>https://hubspot.samcbarth.com/articles/help-desk-skills-routing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/help-desk-skills-routing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot skill-based routing works in help desk.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Routing</category>
+  </item>
+  <item>
+    <title>Target LinkedIn ads with HubSpot audiences</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to pick a HubSpot audience in LinkedIn Campaign Manager.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>LinkedIn</category>
+  </item>
+  <item>
+    <title>Track Facebook and Instagram ads in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-ads-tracking/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-ads-tracking/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot tracks Facebook ads and what breaks it.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
+    <title>Daily send limits for one-to-one and sequence emails</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-email-send-limits/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-email-send-limits/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot and provider send limits apply to connected inboxes.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Enroll records in workflows from the record</title>
+    <link>https://hubspot.samcbarth.com/articles/enroll-via-crm-card/</link>
+    <guid>https://hubspot.samcbarth.com/articles/enroll-via-crm-card/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot automation cards enroll records manually.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
