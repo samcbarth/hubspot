@@ -6083,6 +6083,198 @@
     <category>Segments</category>
   </item>
   <item>
+    <title>Create Asana tasks from a HubSpot workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/asana-tasks-workflow/</link>
+    <guid>https://hubspot.samcbarth.com/articles/asana-tasks-workflow/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot workflows create Asana tasks and what&#39;s needed first.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Add a HubSpot chatflow to WordPress</title>
+    <link>https://hubspot.samcbarth.com/articles/chatflow-wordpress/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatflow-wordpress/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to show a HubSpot chatflow on WordPress pages via the plugin.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chat</category>
+    <category>WordPress</category>
+  </item>
+  <item>
+    <title>Manually quarantine contacts from marketing email</title>
+    <link>https://hubspot.samcbarth.com/articles/quarantine-contacts-manually/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quarantine-contacts-manually/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When HubSpot asks you to quarantine contacts and how the status clears.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Deliverability</category>
+  </item>
+  <item>
+    <title>Manage multiple brands in one account</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-brands/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-brands/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot Brands does and who can use it.</description>
+    <category>Marketing Hub</category>
+    <category>Brands</category>
+  </item>
+  <item>
+    <title>Exclude segments or contacts from an email</title>
+    <link>https://hubspot.samcbarth.com/articles/exclude-lists-marketing-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/exclude-lists-marketing-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How exclusions work on HubSpot marketing emails.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Conversation properties in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/conversations-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/conversations-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot stores about conversations and how they differ from CRM properties.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Switch a segment between active and static</title>
+    <link>https://hubspot.samcbarth.com/articles/change-segment-type/</link>
+    <guid>https://hubspot.samcbarth.com/articles/change-segment-type/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What happens when you change a HubSpot segment&#39;s type.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Show your logo in inboxes with BIMI</title>
+    <link>https://hubspot.samcbarth.com/articles/bimi-brand-logo/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bimi-brand-logo/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How BIMI works with HubSpot email.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>View your site&#39;s page hierarchy in the site tree</title>
+    <link>https://hubspot.samcbarth.com/articles/site-tree-hierarchy/</link>
+    <guid>https://hubspot.samcbarth.com/articles/site-tree-hierarchy/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot site trees show page structure and what they leave out.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Add embedded CTAs to marketing emails</title>
+    <link>https://hubspot.samcbarth.com/articles/ctas-in-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ctas-in-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How embedded CTAs work in HubSpot drag and drop emails and on pages.</description>
+    <category>Marketing Hub</category>
+    <category>CTAs</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Add calendar invites to marketing emails</title>
+    <link>https://hubspot.samcbarth.com/articles/calendar-invites-marketing-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calendar-invites-marketing-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which calendar invites HubSpot marketing emails support and the tier needed.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Analyze knowledge base performance</title>
+    <link>https://hubspot.samcbarth.com/articles/knowledge-base-performance/</link>
+    <guid>https://hubspot.samcbarth.com/articles/knowledge-base-performance/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows knowledge base article metrics.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Review calls in the call index</title>
+    <link>https://hubspot.samcbarth.com/articles/call-index/</link>
+    <guid>https://hubspot.samcbarth.com/articles/call-index/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s call index shows, including third-party calling apps.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Audit who had which permissions</title>
+    <link>https://hubspot.samcbarth.com/articles/user-permissions-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-permissions-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins view a user&#39;s permissions history in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Comment on a note, call or email</title>
+    <link>https://hubspot.samcbarth.com/articles/comment-on-activity/</link>
+    <guid>https://hubspot.samcbarth.com/articles/comment-on-activity/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How comments on HubSpot record activities work.</description>
+    <category>Smart CRM</category>
+    <category>Activities</category>
+  </item>
+  <item>
+    <title>Reset your password or a teammate&#39;s</title>
+    <link>https://hubspot.samcbarth.com/articles/reset-user-passwords/</link>
+    <guid>https://hubspot.samcbarth.com/articles/reset-user-passwords/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot password resets work for yourself and for other users.</description>
+    <category>Smart CRM</category>
+    <category>Account security</category>
+  </item>
+  <item>
+    <title>Collect consent for WhatsApp conversations</title>
+    <link>https://hubspot.samcbarth.com/articles/whatsapp-consent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/whatsapp-consent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles WhatsApp opt-in by keyword and manually.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>WhatsApp</category>
+  </item>
+  <item>
+    <title>Automate with campaign-based workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-based-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-based-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot campaign-based workflows use campaign data like budget and revenue.</description>
+    <category>Marketing Hub</category>
+    <category>Workflows</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Limit who can see logged emails</title>
+    <link>https://hubspot.samcbarth.com/articles/limit-logged-email-access/</link>
+    <guid>https://hubspot.samcbarth.com/articles/limit-logged-email-access/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How CRM email permissions control access to logged emails in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Permissions</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Organize knowledge base articles with categories and tags</title>
+    <link>https://hubspot.samcbarth.com/articles/kb-categories-tags/</link>
+    <guid>https://hubspot.samcbarth.com/articles/kb-categories-tags/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How categories, subcategories and tags work in HubSpot knowledge bases.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
