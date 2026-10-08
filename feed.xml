@@ -6275,6 +6275,215 @@
     <category>Knowledge base</category>
   </item>
   <item>
+    <title>Set a featured image for blog listings and social shares</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-featured-image/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-featured-image/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot featured images work on blog listing pages and social previews.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Edit a property value on a record or index page</title>
+    <link>https://hubspot.samcbarth.com/articles/update-property-value-record/</link>
+    <guid>https://hubspot.samcbarth.com/articles/update-property-value-record/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot lets you edit a single record&#39;s property values, and what stays read-only.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Auto-format phone numbers and text properties</title>
+    <link>https://hubspot.samcbarth.com/articles/phone-number-auto-format/</link>
+    <guid>https://hubspot.samcbarth.com/articles/phone-number-auto-format/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s automatic formatting rules work and where they don&#39;t apply.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Data quality</category>
+  </item>
+  <item>
+    <title>Request access to Users &amp; Teams settings</title>
+    <link>https://hubspot.samcbarth.com/articles/user-multiple-teams/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-multiple-teams/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How users without admin rights ask a Super Admin for Users &amp; Teams access.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+    <category>Teams</category>
+  </item>
+  <item>
+    <title>Delete contacts who marked your emails as spam</title>
+    <link>https://hubspot.samcbarth.com/articles/delete-spam-reporters/</link>
+    <guid>https://hubspot.samcbarth.com/articles/delete-spam-reporters/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot suggests removing spam reporters with a segment and bulk delete.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Understand a campaign&#39;s influenced contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-influenced-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-influenced-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What counts as an influenced contact in HubSpot campaigns and why it can&#39;t be undone.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Instagram account won&#39;t connect to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/instagram-connect-errors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/instagram-connect-errors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when an Instagram account fails to connect to the social tool.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Limit which 2FA methods users can use</title>
+    <link>https://hubspot.samcbarth.com/articles/allowed-2fa-methods/</link>
+    <guid>https://hubspot.samcbarth.com/articles/allowed-2fa-methods/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins set approved two-factor methods in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Use OR filters in HubSpot reports</title>
+    <link>https://hubspot.samcbarth.com/articles/report-filters-or-logic/</link>
+    <guid>https://hubspot.samcbarth.com/articles/report-filters-or-logic/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How AND and OR filter groups work in HubSpot report filters.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>HubSpot Sales Chrome extension not working</title>
+    <link>https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when the Sales Chrome extension doesn&#39;t show in Gmail.</description>
+    <category>Sales Hub</category>
+    <category>Sales extension</category>
+  </item>
+  <item>
+    <title>Use today&#39;s date in HubSpot filters and properties</title>
+    <link>https://hubspot.samcbarth.com/articles/todays-date-crm/</link>
+    <guid>https://hubspot.samcbarth.com/articles/todays-date-crm/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles today&#39;s date and relative time across tools.</description>
+    <category>Smart CRM</category>
+    <category>Properties</category>
+    <category>Filters</category>
+  </item>
+  <item>
+    <title>Change lifecycle stages in bulk</title>
+    <link>https://hubspot.samcbarth.com/articles/bulk-lifecycle-stage-change/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bulk-lifecycle-stage-change/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The three ways HubSpot updates lifecycle stages for many records, and the backwards rule.</description>
+    <category>Smart CRM</category>
+    <category>Lifecycle stages</category>
+  </item>
+  <item>
+    <title>Page shows an error in SEO recommendations</title>
+    <link>https://hubspot.samcbarth.com/articles/page-performance-errors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/page-performance-errors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s crawler errors mean when a page can&#39;t be scanned.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>SEO</category>
+  </item>
+  <item>
+    <title>Use sales tools in the Office 365 add-in</title>
+    <link>https://hubspot.samcbarth.com/articles/office-365-add-in-sales-tools/</link>
+    <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-sales-tools/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Office 365 add-in can insert while you compose in Outlook.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>Connect GoToWebinar to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s GoToWebinar integration syncs webinars and registers contacts.</description>
+    <category>Marketing Hub</category>
+    <category>Integrations</category>
+    <category>Events</category>
+  </item>
+  <item>
+    <title>Build topic clusters in the SEO tool</title>
+    <link>https://hubspot.samcbarth.com/articles/seo-topics-strategy/</link>
+    <guid>https://hubspot.samcbarth.com/articles/seo-topics-strategy/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot SEO topics work and what they don&#39;t do.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>SEO</category>
+  </item>
+  <item>
+    <title>Show different CTA versions with smart content</title>
+    <link>https://hubspot.samcbarth.com/articles/cta-smart-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/cta-smart-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How smart rules work in HubSpot&#39;s current CTA tool.</description>
+    <category>Marketing Hub</category>
+    <category>CTAs</category>
+  </item>
+  <item>
+    <title>Set when workflow actions run</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-settings-timezone/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-settings-timezone/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot workflow timing settings and time zones work.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Turn on sales workspace tabs</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-workspace-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-workspace-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins configure Companies, Leads and Deals tabs in the sales workspace.</description>
+    <category>Sales Hub</category>
+    <category>Sales workspace</category>
+  </item>
+  <item>
+    <title>Outlook desktop add-in asks you to log in every time</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-login-prompt/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-login-prompt/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s fix when the Outlook desktop add-in keeps asking for login.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>HubSpot-provided vs registered phone numbers</title>
+    <link>https://hubspot.samcbarth.com/articles/calling-phone-numbers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calling-phone-numbers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The difference between HubSpot-provided numbers and registered outbound numbers.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Reverse an opt-out of all email</title>
+    <link>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</link>
+    <guid>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When HubSpot lets you remove an opt-out and when it doesn&#39;t.</description>
+    <category>Marketing Hub</category>
+    <category>Smart CRM</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
