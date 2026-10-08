@@ -6699,6 +6699,216 @@
     <category>AI</category>
   </item>
   <item>
+    <title>Sync custom objects with data sync apps</title>
+    <link>https://hubspot.samcbarth.com/articles/data-sync-custom-objects/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-sync-custom-objects/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot data sync handles custom objects and what the filters do.</description>
+    <category>Smart CRM</category>
+    <category>Data sync</category>
+    <category>Custom objects</category>
+  </item>
+  <item>
+    <title>Test a lead or health score before relying on it</title>
+    <link>https://hubspot.samcbarth.com/articles/test-records-scoring/</link>
+    <guid>https://hubspot.samcbarth.com/articles/test-records-scoring/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot lets you test individual records and preview score distribution.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>Lead scoring</category>
+  </item>
+  <item>
+    <title>Set up the customer success workspace</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-success-workspace/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-success-workspace/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How admins configure HubSpot&#39;s customer success workspace and its dashboards.</description>
+    <category>Service Hub</category>
+    <category>Customer success</category>
+  </item>
+  <item>
+    <title>Restorable vs permanent contact deletion</title>
+    <link>https://hubspot.samcbarth.com/articles/restorable-deletions/</link>
+    <guid>https://hubspot.samcbarth.com/articles/restorable-deletions/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot keeps and loses when you delete contacts.</description>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Understand HubSpot payments payouts</title>
+    <link>https://hubspot.samcbarth.com/articles/manage-payouts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/manage-payouts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How payouts work with HubSpot payments, and where Stripe users look instead.</description>
+    <category>Revenue Hub</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Set a resubscription email for each brand</title>
+    <link>https://hubspot.samcbarth.com/articles/business-unit-resubscribe/</link>
+    <guid>https://hubspot.samcbarth.com/articles/business-unit-resubscribe/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot resubscription emails work with the Brands add-on.</description>
+    <category>Marketing Hub</category>
+    <category>Subscriptions</category>
+    <category>Brands</category>
+  </item>
+  <item>
+    <title>Add social links to marketing emails</title>
+    <link>https://hubspot.samcbarth.com/articles/email-social-module/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-social-module/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the social module works in HubSpot&#39;s drag and drop email editor.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Salesforce connector package v3 FAQ</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-connector-v3/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-connector-v3/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Common questions about HubSpot&#39;s Salesforce connector package v3.0.1.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Build a custom survey in the new editor</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-survey-new-editor/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-survey-new-editor/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s new survey editor supports and the one-way switch.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Keep associations in data sync</title>
+    <link>https://hubspot.samcbarth.com/articles/data-sync-association-mapping/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-sync-association-mapping/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot data sync maps record associations, and the apps that need every sync on.</description>
+    <category>Smart CRM</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>Migrate to the new knowledge base editor</title>
+    <link>https://hubspot.samcbarth.com/articles/migrate-knowledge-base/</link>
+    <guid>https://hubspot.samcbarth.com/articles/migrate-knowledge-base/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What happens when you migrate a HubSpot knowledge base.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Change a blog post&#39;s publish date</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-publish-date/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-publish-date/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What happens when you change a HubSpot blog post&#39;s publish date.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Connect SurveyMonkey to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/surveymonkey-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/surveymonkey-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s SurveyMonkey integration sends surveys and uses responses.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>Integrations</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Send and reply to one-to-one emails</title>
+    <link>https://hubspot.samcbarth.com/articles/one-to-one-email-send-reply/</link>
+    <guid>https://hubspot.samcbarth.com/articles/one-to-one-email-send-reply/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Who can send one-to-one emails in HubSpot and from which addresses.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Edit your blog listing page</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-listing-page-edit/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-listing-page-edit/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot blog listing pages are edited and what tier coded templates need.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Use buyer intent to find companies researching you</title>
+    <link>https://hubspot.samcbarth.com/articles/buyer-intent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/buyer-intent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot buyer intent works and what it costs in credits.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Buyer intent</category>
+  </item>
+  <item>
+    <title>Add Zoom to your HubSpot meeting links</title>
+    <link>https://hubspot.samcbarth.com/articles/zoom-meeting-links/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zoom-meeting-links/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot meeting links create Zoom conferences.</description>
+    <category>Sales Hub</category>
+    <category>Meetings</category>
+    <category>Zoom</category>
+  </item>
+  <item>
+    <title>Choose which properties show on records</title>
+    <link>https://hubspot.samcbarth.com/articles/record-sections-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-sections-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to customize the properties in a HubSpot record&#39;s left sidebar.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>How activities and tasks sync with Salesforce</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-activity-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-activity-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot activities sync to Salesforce and when.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Disconnect a Facebook Ads account</title>
+    <link>https://hubspot.samcbarth.com/articles/disconnect-facebook-ads/</link>
+    <guid>https://hubspot.samcbarth.com/articles/disconnect-facebook-ads/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to remove a Facebook Ads account from HubSpot&#39;s ads settings.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
+    <title>Connect a group, alias or shared mailbox to the inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/hosted-email-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hosted-email-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When to use HubSpot&#39;s hosted email for the conversations inbox.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Join data sources in a dataset</title>
+    <link>https://hubspot.samcbarth.com/articles/dataset-data-join/</link>
+    <guid>https://hubspot.samcbarth.com/articles/dataset-data-join/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How data join works in HubSpot datasets.</description>
+    <category>Smart CRM</category>
+    <category>Datasets</category>
+    <category>Reports</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
