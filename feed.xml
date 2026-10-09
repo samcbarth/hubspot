@@ -8029,6 +8029,239 @@
     <category>Security</category>
   </item>
   <item>
+    <title>Export a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/export-segments/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-segments/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot segment exports work and what they leave out.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Export</category>
+  </item>
+  <item>
+    <title>Create and customize knowledge base articles</title>
+    <link>https://hubspot.samcbarth.com/articles/kb-article-create/</link>
+    <guid>https://hubspot.samcbarth.com/articles/kb-article-create/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Requirements and URL options for HubSpot knowledge base articles.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Manage inbox users and availability</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-user-access/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-user-access/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot inbox membership and working hours control routing.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Report on goals</title>
+    <link>https://hubspot.samcbarth.com/articles/goal-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/goal-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot goals show up in reports.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Goals</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Notetaker consent and announcement rules</title>
+    <link>https://hubspot.samcbarth.com/articles/notetaker-best-practices/</link>
+    <guid>https://hubspot.samcbarth.com/articles/notetaker-best-practices/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot Notetaker announces itself and handles consent.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Meetings</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Send a marketing email to more contacts</title>
+    <link>https://hubspot.samcbarth.com/articles/send-to-more-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/send-to-more-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Send to more works after the first send.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Connect a Facebook ad account</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-ads-connect/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-ads-connect/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s requirements for connecting Facebook ads.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
+    <title>Use if/then branches in workflows</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-if-then-branches/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-if-then-branches/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot workflow branches work, including percentage splits.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>HubSpot Sales missing from Outlook</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-add-in-missing/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-add-in-missing/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why Outlook hides the HubSpot Sales add-in and how to bring it back.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>What HubSpot&#39;s social metrics mean</title>
+    <link>https://hubspot.samcbarth.com/articles/social-metrics-differences/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-metrics-differences/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Definitions behind HubSpot&#39;s social analytics numbers.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>When payment links create deals</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-link-deals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-link-deals/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s create-new-deals setting changes deal creation.</description>
+    <category>Revenue Hub</category>
+    <category>Payments</category>
+    <category>Deals</category>
+  </item>
+  <item>
+    <title>Turn on the new Salesforce company sync</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-company-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-company-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What changes with HubSpot&#39;s updated Salesforce company sync.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Create custom segment properties</title>
+    <link>https://hubspot.samcbarth.com/articles/list-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/list-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot segment properties organize your segments.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Contact can&#39;t be enrolled in a sequence</title>
+    <link>https://hubspot.samcbarth.com/articles/sequence-enroll-error/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sequence-enroll-error/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s sequence enrollment errors and what they mean.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
+    <title>Track property changes as events</title>
+    <link>https://hubspot.samcbarth.com/articles/property-change-events/</link>
+    <guid>https://hubspot.samcbarth.com/articles/property-change-events/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot property change events work and their limits.</description>
+    <category>Marketing Hub</category>
+    <category>Events</category>
+  </item>
+  <item>
+    <title>Test records before running enrichment</title>
+    <link>https://hubspot.samcbarth.com/articles/enrichment-test/</link>
+    <guid>https://hubspot.samcbarth.com/articles/enrichment-test/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s enrichment data test estimates coverage.</description>
+    <category>Smart CRM</category>
+    <category>Data enrichment</category>
+  </item>
+  <item>
+    <title>Use Breeze Assistant in Slack</title>
+    <link>https://hubspot.samcbarth.com/articles/breeze-slack/</link>
+    <guid>https://hubspot.samcbarth.com/articles/breeze-slack/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Breeze Assistant responds in Slack.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+    <category>Slack</category>
+  </item>
+  <item>
+    <title>Manage user properties and preferences</title>
+    <link>https://hubspot.samcbarth.com/articles/user-properties-preferences/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-properties-preferences/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What Super Admins can set on HubSpot user records.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Insert a table in a rich text module</title>
+    <link>https://hubspot.samcbarth.com/articles/rich-text-table/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rich-text-table/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot rich text tables work and how to style cells.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Sync lead owner and activities</title>
+    <link>https://hubspot.samcbarth.com/articles/lead-ownership-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lead-ownership-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot syncs lead owners with contact owners and logs activities to leads.</description>
+    <category>Sales Hub</category>
+    <category>Leads</category>
+  </item>
+  <item>
+    <title>Add subscription links in email body</title>
+    <link>https://hubspot.samcbarth.com/articles/subscription-links-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/subscription-links-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot subscription links and the top unsubscribe link work.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>See lead score history and performance</title>
+    <link>https://hubspot.samcbarth.com/articles/lead-score-history/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lead-score-history/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows lead score changes over time.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Lead scoring</category>
+  </item>
+  <item>
+    <title>Turn off one-to-one email tracking</title>
+    <link>https://hubspot.samcbarth.com/articles/email-tracking-off/</link>
+    <guid>https://hubspot.samcbarth.com/articles/email-tracking-off/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What changes when HubSpot email tracking or attachment logging is turned off.</description>
+    <category>Sales Hub</category>
+    <category>Email</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Change dropdown options in a form field</title>
+    <link>https://hubspot.samcbarth.com/articles/form-field-options/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-field-options/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot form options come from properties.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>Properties</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
