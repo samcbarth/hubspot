@@ -7507,6 +7507,266 @@
     <category>Salesforce</category>
   </item>
   <item>
+    <title>Remove a contact from a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/list-add-remove-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/list-add-remove-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Why active and static segments need different approaches.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Ways to collect payments in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/collect-payments-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/collect-payments-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot tools collect online payments and what you need first.</description>
+    <category>Revenue Hub</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Sync Salesforce accounts to HubSpot companies</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-account-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-account-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Salesforce account sync works.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Set up two-factor authentication for your login</title>
+    <link>https://hubspot.samcbarth.com/articles/two-factor-mobile-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/two-factor-mobile-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot 2FA is set up, changed and removed.</description>
+    <category>Smart CRM</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>Reuse groups of workflow actions with action sets</title>
+    <link>https://hubspot.samcbarth.com/articles/workflow-action-sets/</link>
+    <guid>https://hubspot.samcbarth.com/articles/workflow-action-sets/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot workflow action sets work.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>Read campaign attribution reports</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-attribution-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-attribution-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot campaign attribution reports measure contacts, deals and revenue.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Attribution</category>
+  </item>
+  <item>
+    <title>Publish Facebook stories from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-stories/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-stories/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot supports for Facebook stories.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Summarize a record with the Record summary card</title>
+    <link>https://hubspot.samcbarth.com/articles/record-summary-ai/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-summary-ai/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s AI record summary works and what it needs.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+    <category>Records</category>
+  </item>
+  <item>
+    <title>Uninstall the HubSpot Sales extension or add-in</title>
+    <link>https://hubspot.samcbarth.com/articles/uninstall-sales-extension/</link>
+    <guid>https://hubspot.samcbarth.com/articles/uninstall-sales-extension/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What happens when you remove HubSpot Sales from your inbox.</description>
+    <category>Sales Hub</category>
+    <category>Sales extension</category>
+  </item>
+  <item>
+    <title>Why contacts get quarantined</title>
+    <link>https://hubspot.samcbarth.com/articles/quarantined-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quarantined-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot quarantines contacts and how they come back.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Create custom campaign properties</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-properties/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-properties/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot campaign properties work and appear in the campaign form.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+    <category>Properties</category>
+  </item>
+  <item>
+    <title>Standard revenue reports to start with</title>
+    <link>https://hubspot.samcbarth.com/articles/revenue-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/revenue-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s library reports for revenue and what each shows.</description>
+    <category>Sales Hub</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Connect a custom channel to the inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/custom-channels-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/custom-channels-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How custom messaging channels connect to HubSpot&#39;s conversations inbox.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>BCC every marketing email to a compliance address</title>
+    <link>https://hubspot.samcbarth.com/articles/compliance-copy-email/</link>
+    <guid>https://hubspot.samcbarth.com/articles/compliance-copy-email/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot compliance copy email works and its costs.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Compliance</category>
+  </item>
+  <item>
+    <title>Turn on connected inbox automation</title>
+    <link>https://hubspot.samcbarth.com/articles/connected-inbox-automation/</link>
+    <guid>https://hubspot.samcbarth.com/articles/connected-inbox-automation/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot inbox automation reads and when it starts.</description>
+    <category>Sales Hub</category>
+    <category>Connected inbox</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Zoom webinar data didn&#39;t sync</title>
+    <link>https://hubspot.samcbarth.com/articles/zoom-webinar-sync-errors/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zoom-webinar-sync-errors/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s common Zoom webinar sync errors and where to find them.</description>
+    <category>Marketing Hub</category>
+    <category>Zoom</category>
+    <category>Events</category>
+  </item>
+  <item>
+    <title>Connect a calling app channel to help desk</title>
+    <link>https://hubspot.samcbarth.com/articles/calling-app-help-desk/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calling-app-help-desk/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How third-party calling apps connect to HubSpot help desk.</description>
+    <category>Service Hub</category>
+    <category>Help desk</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Add click-to-call and mailto links</title>
+    <link>https://hubspot.samcbarth.com/articles/mailto-links/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mailto-links/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot supports click-to-call and mailto links.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Use intent signals on tracked companies</title>
+    <link>https://hubspot.samcbarth.com/articles/intent-signals/</link>
+    <guid>https://hubspot.samcbarth.com/articles/intent-signals/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot intent signals work and what the property shows.</description>
+    <category>Sales Hub</category>
+    <category>Marketing Hub</category>
+    <category>Buyer intent</category>
+  </item>
+  <item>
+    <title>What each campaign metric counts</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-metrics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-metrics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot campaign metrics like sessions and influenced revenue are calculated.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Use the HubSpot app inside Zoom meetings</title>
+    <link>https://hubspot.samcbarth.com/articles/zoom-meetings-app/</link>
+    <guid>https://hubspot.samcbarth.com/articles/zoom-meetings-app/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the in-meeting HubSpot App for Zoom differs from the integration.</description>
+    <category>Sales Hub</category>
+    <category>Zoom</category>
+    <category>Meetings</category>
+  </item>
+  <item>
+    <title>Search your HubSpot account</title>
+    <link>https://hubspot.samcbarth.com/articles/account-search/</link>
+    <guid>https://hubspot.samcbarth.com/articles/account-search/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s global search and filters work.</description>
+    <category>Smart CRM</category>
+    <category>Navigation</category>
+  </item>
+  <item>
+    <title>Add a blog subscription field to a form</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-subscription-form-field/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-subscription-form-field/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s options for blog subscription fields.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Repeat a past import as a template</title>
+    <link>https://hubspot.samcbarth.com/articles/repeat-import/</link>
+    <guid>https://hubspot.samcbarth.com/articles/repeat-import/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot reuses a completed import&#39;s setup.</description>
+    <category>Smart CRM</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>Export your user list</title>
+    <link>https://hubspot.samcbarth.com/articles/export-users/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-users/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins export HubSpot users.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Reply to marketing SMS in the inbox</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-sms-inbox/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-sms-inbox/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Marketing SMS add-on connects to the conversations inbox.</description>
+    <category>Marketing Hub</category>
+    <category>Service Hub</category>
+    <category>SMS</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Brand your quotes</title>
+    <link>https://hubspot.samcbarth.com/articles/quote-branding/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quote-branding/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot quote branding and template styles interact.</description>
+    <category>Revenue Hub</category>
+    <category>Quotes</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
