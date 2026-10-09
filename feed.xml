@@ -8409,6 +8409,149 @@
     <category>Calling</category>
   </item>
   <item>
+    <title>Send and review marketing emails from the mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-marketing-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-marketing-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the HubSpot mobile app can do with marketing emails.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Mobile</category>
+  </item>
+  <item>
+    <title>Facebook ad account won&#39;t appear when connecting</title>
+    <link>https://hubspot.samcbarth.com/articles/facebook-ads-troubleshooting/</link>
+    <guid>https://hubspot.samcbarth.com/articles/facebook-ads-troubleshooting/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when a Facebook ad account won&#39;t connect.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+  </item>
+  <item>
+    <title>Uninstall the Salesforce integration</title>
+    <link>https://hubspot.samcbarth.com/articles/uninstall-salesforce-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/uninstall-salesforce-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to remove the HubSpot-Salesforce integration and why reinstalling rarely fixes sync.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Work with a lead record</title>
+    <link>https://hubspot.samcbarth.com/articles/lead-record-view/</link>
+    <guid>https://hubspot.samcbarth.com/articles/lead-record-view/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What a HubSpot lead record shows and what deletes it.</description>
+    <category>Sales Hub</category>
+    <category>Leads</category>
+  </item>
+  <item>
+    <title>Configure research intent</title>
+    <link>https://hubspot.samcbarth.com/articles/configure-research-intent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/configure-research-intent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set markets, topics and limits for HubSpot research intent.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Buyer intent</category>
+  </item>
+  <item>
+    <title>Use sales tools in the Outlook desktop add-in</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-desktop-sales-tools/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-desktop-sales-tools/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What the HubSpot Sales Outlook desktop add-in can insert.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>Get a HubSpot-provided phone number</title>
+    <link>https://hubspot.samcbarth.com/articles/validate-hubspot-numbers/</link>
+    <guid>https://hubspot.samcbarth.com/articles/validate-hubspot-numbers/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins acquire HubSpot numbers and their limits.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
+    <title>Set your Chrome extension&#39;s Gmail defaults</title>
+    <link>https://hubspot.samcbarth.com/articles/chrome-extension-defaults/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chrome-extension-defaults/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What each user can set in the HubSpot Sales Chrome extension.</description>
+    <category>Sales Hub</category>
+    <category>Sales extension</category>
+  </item>
+  <item>
+    <title>Import your website and blog into HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/import-website-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/import-website-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s options for bringing content in from another CMS.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Organize and export files</title>
+    <link>https://hubspot.samcbarth.com/articles/file-folders/</link>
+    <guid>https://hubspot.samcbarth.com/articles/file-folders/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s files tool handles folders, search and export.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>See SEO performance with Search Console</title>
+    <link>https://hubspot.samcbarth.com/articles/seo-performance/</link>
+    <guid>https://hubspot.samcbarth.com/articles/seo-performance/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s SEO analytics use Google Search Console.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>SEO</category>
+  </item>
+  <item>
+    <title>Campaign contact lifecycle count and cost</title>
+    <link>https://hubspot.samcbarth.com/articles/campaign-lifecycle-metrics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/campaign-lifecycle-metrics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s campaign lifecycle reports work.</description>
+    <category>Marketing Hub</category>
+    <category>Campaigns</category>
+  </item>
+  <item>
+    <title>Troubleshoot the Outlook desktop add-in</title>
+    <link>https://hubspot.samcbarth.com/articles/outlook-desktop-troubleshoot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/outlook-desktop-troubleshoot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s steps for the Outlook desktop add-in.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>Check blog subscription email performance</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-subscription-performance/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-subscription-performance/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows blog subscription email history.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Blog</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Review scheduled sequence emails and send limits</title>
+    <link>https://hubspot.samcbarth.com/articles/scheduled-sequence-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/scheduled-sequence-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows sequence send limits and queued emails.</description>
+    <category>Sales Hub</category>
+    <category>Sequences</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
