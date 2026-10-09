@@ -7767,6 +7767,268 @@
     <category>Quotes</category>
   </item>
   <item>
+    <title>Create a knowledge base</title>
+    <link>https://hubspot.samcbarth.com/articles/create-knowledge-base/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-knowledge-base/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot needs to create a knowledge base and the limits by tier.</description>
+    <category>Service Hub</category>
+    <category>Knowledge base</category>
+  </item>
+  <item>
+    <title>Work day to day in the customer success workspace</title>
+    <link>https://hubspot.samcbarth.com/articles/customer-success-workspace-use/</link>
+    <guid>https://hubspot.samcbarth.com/articles/customer-success-workspace-use/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How CSMs use the customer success workspace once it&#39;s set up.</description>
+    <category>Service Hub</category>
+    <category>Customer success</category>
+  </item>
+  <item>
+    <title>Create custom events without code</title>
+    <link>https://hubspot.samcbarth.com/articles/codeless-behavioral-events/</link>
+    <guid>https://hubspot.samcbarth.com/articles/codeless-behavioral-events/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s event visualizer creates Clicked element and Visited URL events.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+    <category>Events</category>
+  </item>
+  <item>
+    <title>View segments in the mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-app-lists/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-app-lists/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can do with segments in the HubSpot mobile app.</description>
+    <category>Smart CRM</category>
+    <category>Segments</category>
+    <category>Mobile</category>
+  </item>
+  <item>
+    <title>Show different forms to different visitors</title>
+    <link>https://hubspot.samcbarth.com/articles/smart-forms/</link>
+    <guid>https://hubspot.samcbarth.com/articles/smart-forms/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot smart forms work on pages and templates.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Forms</category>
+    <category>Smart content</category>
+  </item>
+  <item>
+    <title>Send HubSpot data to Airtable from a workflow</title>
+    <link>https://hubspot.samcbarth.com/articles/airtable-workflow-action/</link>
+    <guid>https://hubspot.samcbarth.com/articles/airtable-workflow-action/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Airtable workflow action creates rows.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Create NetSuite sales orders from HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/netsuite-sales-order/</link>
+    <guid>https://hubspot.samcbarth.com/articles/netsuite-sales-order/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the NetSuite sales order workflow action works.</description>
+    <category>Revenue Hub</category>
+    <category>Smart CRM</category>
+    <category>NetSuite</category>
+  </item>
+  <item>
+    <title>Build a funnel report</title>
+    <link>https://hubspot.samcbarth.com/articles/funnel-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/funnel-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot custom funnel reports show stage conversion.</description>
+    <category>Smart CRM</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Use the marketing analytics suite</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-analytics-suite/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-analytics-suite/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What reports HubSpot&#39;s marketing analytics suite offers.</description>
+    <category>Marketing Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Complete tasks back to back</title>
+    <link>https://hubspot.samcbarth.com/articles/complete-tasks/</link>
+    <guid>https://hubspot.samcbarth.com/articles/complete-tasks/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to work through HubSpot tasks in a queue.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+  </item>
+  <item>
+    <title>Add a payment link to a page, email or site</title>
+    <link>https://hubspot.samcbarth.com/articles/payment-link-embed/</link>
+    <guid>https://hubspot.samcbarth.com/articles/payment-link-embed/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Ways to place HubSpot payment links in your content.</description>
+    <category>Revenue Hub</category>
+    <category>Content Hub</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Track Google Ads conversions on HubSpot pages</title>
+    <link>https://hubspot.samcbarth.com/articles/google-ads-conversion-tag/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-ads-conversion-tag/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to add Google&#39;s global site tag to HubSpot pages.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Ads</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>Set up the support portal</title>
+    <link>https://hubspot.samcbarth.com/articles/support-portal-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/support-portal-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s support portal works and who sees which tickets.</description>
+    <category>Service Hub</category>
+    <category>Support portal</category>
+  </item>
+  <item>
+    <title>Auto-translate pages and posts</title>
+    <link>https://hubspot.samcbarth.com/articles/auto-translate-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/auto-translate-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot AI translation creates language variations.</description>
+    <category>Content Hub</category>
+    <category>Multi-language</category>
+    <category>AI</category>
+  </item>
+  <item>
+    <title>Send abandoned cart emails</title>
+    <link>https://hubspot.samcbarth.com/articles/abandoned-cart-emails/</link>
+    <guid>https://hubspot.samcbarth.com/articles/abandoned-cart-emails/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s cart module works in automated emails.</description>
+    <category>Marketing Hub</category>
+    <category>Revenue Hub</category>
+    <category>Email</category>
+    <category>E-commerce</category>
+  </item>
+  <item>
+    <title>Duplicates between Salesforce and HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-duplicate-sync/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-duplicate-sync/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot dedupes Salesforce leads and contacts.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+    <category>Duplicates</category>
+  </item>
+  <item>
+    <title>Unbounce a contact and resend</title>
+    <link>https://hubspot.samcbarth.com/articles/resend-bounced-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/resend-bounced-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot handles previously bounced contacts.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Organize feedback surveys and responses</title>
+    <link>https://hubspot.samcbarth.com/articles/survey-folders/</link>
+    <guid>https://hubspot.samcbarth.com/articles/survey-folders/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s feedback survey views and columns work.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Bulk upload and schedule social posts</title>
+    <link>https://hubspot.samcbarth.com/articles/social-bulk-schedule/</link>
+    <guid>https://hubspot.samcbarth.com/articles/social-bulk-schedule/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s social bulk upload works and its limits.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+  </item>
+  <item>
+    <title>Find and archive unused subscription types</title>
+    <link>https://hubspot.samcbarth.com/articles/subscription-types-review/</link>
+    <guid>https://hubspot.samcbarth.com/articles/subscription-types-review/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to review which assets use each subscription type.</description>
+    <category>Marketing Hub</category>
+    <category>Subscriptions</category>
+  </item>
+  <item>
+    <title>Cookies HubSpot sets on your visitors</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-cookies/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-cookies/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s cookie list covers and what it can&#39;t control.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Privacy</category>
+    <category>Tracking</category>
+  </item>
+  <item>
+    <title>IMAP inbox won&#39;t connect</title>
+    <link>https://hubspot.samcbarth.com/articles/imap-connection-troubleshoot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/imap-connection-troubleshoot/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when an IMAP/SMTP inbox connection fails.</description>
+    <category>Sales Hub</category>
+    <category>Connected inbox</category>
+  </item>
+  <item>
+    <title>Use app objects from connected apps</title>
+    <link>https://hubspot.samcbarth.com/articles/app-objects/</link>
+    <guid>https://hubspot.samcbarth.com/articles/app-objects/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What app objects are and where they appear in HubSpot.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>Objects</category>
+  </item>
+  <item>
+    <title>Connect Google Analytics to HubSpot pages</title>
+    <link>https://hubspot.samcbarth.com/articles/google-analytics-integration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/google-analytics-integration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Two ways to add Google Analytics to HubSpot-hosted content.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Analytics</category>
+  </item>
+  <item>
+    <title>Move your account to another data center</title>
+    <link>https://hubspot.samcbarth.com/articles/data-center-migration/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-center-migration/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot requires to migrate regional data centers.</description>
+    <category>Smart CRM</category>
+    <category>Account</category>
+  </item>
+  <item>
+    <title>Analyze rule-based bot performance</title>
+    <link>https://hubspot.samcbarth.com/articles/bot-performance/</link>
+    <guid>https://hubspot.samcbarth.com/articles/bot-performance/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot shows chatbot completion and action data.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chatflows</category>
+  </item>
+  <item>
+    <title>Log in as another user</title>
+    <link>https://hubspot.samcbarth.com/articles/login-as-user/</link>
+    <guid>https://hubspot.samcbarth.com/articles/login-as-user/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins use HubSpot&#39;s log in as feature and its limits.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+    <category>Security</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
