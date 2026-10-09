@@ -7250,6 +7250,263 @@
     <category>Forms</category>
   </item>
   <item>
+    <title>Use the HubSpot connector in Google Gemini</title>
+    <link>https://hubspot.samcbarth.com/articles/gemini-connector/</link>
+    <guid>https://hubspot.samcbarth.com/articles/gemini-connector/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Gemini connector can and can&#39;t do.</description>
+    <category>Smart CRM</category>
+    <category>AI</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Customize the Office 365 add-in settings</title>
+    <link>https://hubspot.samcbarth.com/articles/office-365-add-in-customize/</link>
+    <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-customize/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot Sales Office 365 add-in settings live and what they control.</description>
+    <category>Sales Hub</category>
+    <category>Outlook</category>
+  </item>
+  <item>
+    <title>Export everything about one contact</title>
+    <link>https://hubspot.samcbarth.com/articles/export-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/export-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot exports a single contact&#39;s data, including for privacy requests.</description>
+    <category>Smart CRM</category>
+    <category>Contacts</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Conversations missing from the inbox view</title>
+    <link>https://hubspot.samcbarth.com/articles/conversations-inbox-basics/</link>
+    <guid>https://hubspot.samcbarth.com/articles/conversations-inbox-basics/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot inbox views and filters decide what you see.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+  </item>
+  <item>
+    <title>Work leads in the HubSpot mobile app</title>
+    <link>https://hubspot.samcbarth.com/articles/mobile-app-leads/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mobile-app-leads/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How sales reps create and manage leads on mobile.</description>
+    <category>Sales Hub</category>
+    <category>Leads</category>
+    <category>Mobile</category>
+  </item>
+  <item>
+    <title>How HubSpot data sync works</title>
+    <link>https://hubspot.samcbarth.com/articles/data-sync-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/data-sync-setup/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>The basics of connecting an app with HubSpot data sync.</description>
+    <category>Smart CRM</category>
+    <category>Data sync</category>
+  </item>
+  <item>
+    <title>Find companies researching your topics</title>
+    <link>https://hubspot.samcbarth.com/articles/research-intent/</link>
+    <guid>https://hubspot.samcbarth.com/articles/research-intent/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot research intent works and how it uses credits.</description>
+    <category>Marketing Hub</category>
+    <category>Sales Hub</category>
+    <category>Buyer intent</category>
+  </item>
+  <item>
+    <title>@mention a teammate on a record</title>
+    <link>https://hubspot.samcbarth.com/articles/mention-user-record/</link>
+    <guid>https://hubspot.samcbarth.com/articles/mention-user-record/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot @mentions work in notes and activities.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Collaboration</category>
+  </item>
+  <item>
+    <title>Attach files to records and activities</title>
+    <link>https://hubspot.samcbarth.com/articles/record-attachments/</link>
+    <guid>https://hubspot.samcbarth.com/articles/record-attachments/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot record attachments work and who can see them.</description>
+    <category>Smart CRM</category>
+    <category>Records</category>
+    <category>Files</category>
+  </item>
+  <item>
+    <title>Tag survey responses to find themes</title>
+    <link>https://hubspot.samcbarth.com/articles/survey-response-tags/</link>
+    <guid>https://hubspot.samcbarth.com/articles/survey-response-tags/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot survey response tags work.</description>
+    <category>Service Hub</category>
+    <category>Surveys</category>
+  </item>
+  <item>
+    <title>Add the Website Grader widget to a site</title>
+    <link>https://hubspot.samcbarth.com/articles/website-grader-widget/</link>
+    <guid>https://hubspot.samcbarth.com/articles/website-grader-widget/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the embeddable Website Grader is installed.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Website</category>
+  </item>
+  <item>
+    <title>Turn off workflows in bulk</title>
+    <link>https://hubspot.samcbarth.com/articles/turn-off-workflows/</link>
+    <guid>https://hubspot.samcbarth.com/articles/turn-off-workflows/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What turning off a HubSpot workflow does to enrolled records.</description>
+    <category>Smart CRM</category>
+    <category>Workflows</category>
+  </item>
+  <item>
+    <title>See marketing events on a contact</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-events-contact-record/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-events-contact-record/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How the Marketing events card shows event history.</description>
+    <category>Marketing Hub</category>
+    <category>Marketing events</category>
+  </item>
+  <item>
+    <title>Arrange sections, rows and columns in the page editor</title>
+    <link>https://hubspot.samcbarth.com/articles/flexible-columns/</link>
+    <guid>https://hubspot.samcbarth.com/articles/flexible-columns/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s drag and drop editor handles layout and reusable sections.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+  </item>
+  <item>
+    <title>Not getting HubSpot browser notifications</title>
+    <link>https://hubspot.samcbarth.com/articles/browser-push-notifications/</link>
+    <guid>https://hubspot.samcbarth.com/articles/browser-push-notifications/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when push notifications don&#39;t appear.</description>
+    <category>Smart CRM</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Change all users&#39; email domain after a rebrand</title>
+    <link>https://hubspot.samcbarth.com/articles/user-email-domain-update/</link>
+    <guid>https://hubspot.samcbarth.com/articles/user-email-domain-update/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins bulk update user email domains.</description>
+    <category>Smart CRM</category>
+    <category>Users</category>
+  </item>
+  <item>
+    <title>Find a form&#39;s GUID</title>
+    <link>https://hubspot.samcbarth.com/articles/form-guid/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-guid/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where to find the form ID HubSpot&#39;s Forms API needs.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>Where to manage Salesforce integration settings</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-integration-settings/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-integration-settings/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s Salesforce integration settings show and control.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
+    <title>Edit content in rich text modules</title>
+    <link>https://hubspot.samcbarth.com/articles/rich-text-module/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rich-text-module/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How rich text modules work across pages, emails and articles.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Quick import contacts from a spreadsheet</title>
+    <link>https://hubspot.samcbarth.com/articles/quick-import-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/quick-import-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When to use HubSpot&#39;s quick contact import.</description>
+    <category>Smart CRM</category>
+    <category>Import</category>
+  </item>
+  <item>
+    <title>Embed HubSpot content on another site</title>
+    <link>https://hubspot.samcbarth.com/articles/embed-code-content/</link>
+    <guid>https://hubspot.samcbarth.com/articles/embed-code-content/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot content embeds work on external pages.</description>
+    <category>Content Hub</category>
+    <category>Pages</category>
+    <category>Embeds</category>
+  </item>
+  <item>
+    <title>Set a domain&#39;s primary language</title>
+    <link>https://hubspot.samcbarth.com/articles/domain-language-setting/</link>
+    <guid>https://hubspot.samcbarth.com/articles/domain-language-setting/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot domain language settings affect URLs and search engines.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Multi-language</category>
+  </item>
+  <item>
+    <title>Create and attach CSS files</title>
+    <link>https://hubspot.samcbarth.com/articles/css-files-design-manager/</link>
+    <guid>https://hubspot.samcbarth.com/articles/css-files-design-manager/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot stylesheets are attached and in what order.</description>
+    <category>Content Hub</category>
+    <category>Design manager</category>
+  </item>
+  <item>
+    <title>Create LinkedIn posts, polls and documents</title>
+    <link>https://hubspot.samcbarth.com/articles/linkedin-post-failed/</link>
+    <guid>https://hubspot.samcbarth.com/articles/linkedin-post-failed/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s social composer supports for LinkedIn.</description>
+    <category>Marketing Hub</category>
+    <category>Social</category>
+    <category>LinkedIn</category>
+  </item>
+  <item>
+    <title>Send emails at each contact&#39;s best time</title>
+    <link>https://hubspot.samcbarth.com/articles/send-time-optimization/</link>
+    <guid>https://hubspot.samcbarth.com/articles/send-time-optimization/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot optimizes marketing email send time.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Where Sensitive Data works in HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/sensitive-data/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sensitive-data/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Which HubSpot tools support Sensitive Data and what to avoid.</description>
+    <category>Smart CRM</category>
+    <category>Security</category>
+    <category>Privacy</category>
+  </item>
+  <item>
+    <title>Map Salesforce record types to HubSpot</title>
+    <link>https://hubspot.samcbarth.com/articles/salesforce-record-type/</link>
+    <guid>https://hubspot.samcbarth.com/articles/salesforce-record-type/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Two ways HubSpot can store Salesforce record types.</description>
+    <category>Sales Hub</category>
+    <category>Salesforce</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>

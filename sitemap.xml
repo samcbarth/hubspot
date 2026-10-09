@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://hubspot.samcbarth.com/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/link-builder.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/request-a-fix.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/about.html</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/link-builder.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/request-a-fix.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/about.html</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/theme-system-templates/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</loc><lastmod>2026-10-07</lastmod></url>
@@ -744,6 +744,33 @@
   <url><loc>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/connected-inbox-send-error/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/manage-forms/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/gemini-connector/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/office-365-add-in-customize/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/export-contacts/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/conversations-inbox-basics/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/mobile-app-leads/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/data-sync-setup/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/research-intent/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/mention-user-record/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/record-attachments/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/survey-response-tags/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/website-grader-widget/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/turn-off-workflows/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/marketing-events-contact-record/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/flexible-columns/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/browser-push-notifications/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/user-email-domain-update/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/form-guid/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/salesforce-integration-settings/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/rich-text-module/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/quick-import-contacts/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/embed-code-content/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/domain-language-setting/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/css-files-design-manager/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/linkedin-post-failed/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/send-time-optimization/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/sensitive-data/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/salesforce-record-type/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</loc><lastmod>2026-10-06</lastmod></url>
