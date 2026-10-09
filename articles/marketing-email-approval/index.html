@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Require approval before marketing emails go out - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot content approvals work for emails and posts.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/marketing-email-approval/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/marketing-email-approval/">
+<meta property="og:title" content="Require approval before marketing emails go out">
+<meta property="og:description" content="How HubSpot content approvals work for emails and posts.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/marketing-email-approval/og.png">
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-07">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Require approval before marketing emails go out",
+      "description": "How HubSpot content approvals work for emails and posts.",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/marketing-email-approval/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/marketing-email-approval/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Require approval before marketing emails go out",
+      "totalTime": "PT2M",
+      "step": [
+        {"@type": "HowToStep", "name": "Set up approvals", "text": "Super Admin."},
+        {"@type": "HowToStep", "name": "Request", "text": "From the editor."},
+        {"@type": "HowToStep", "name": "Approve", "text": "Assigned approvers publish."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Require approval before marketing emails go out", "item": "https://hubspot.samcbarth.com/articles/marketing-email-approval/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="marketing-email-approval">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Require approval before marketing emails go out</h1>
+      <p class="dek">Enterprise only; RSS emails approve once.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Enterprise</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin to set up; Approval permission to approve</dd></div>
+        <div class="fact"><dt>Time</dt><dd>2 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>HubSpot's KB: approvals need <strong>Enterprise</strong> (Marketing Hub for email and social). Only <strong>assigned approvers</strong> can publish pending content. RSS and blog subscription emails need approval <strong>only once</strong>. Requests also work on mobile.</p>
+        </div>
+
+        <h2>1. In HubSpot</h2>
+        <p>The relevant screen in my demo portal.</p>
+        <figure class="shot"><a href="approvals.webp"><img src="approvals.webp" alt="Approvals settings with Web content and Marketing toggles and the Slack or Teams notification banner highlighted" width="800" height="553" loading="lazy"></a><figcaption>Web content (1), Marketing (2), and approval notifications (3).</figcaption></figure>
+        <h2>2. Worth knowing</h2>
+        <p>Name backup approvers to avoid bottlenecks.</p>
+        <h2>3. Related</h2>
+        <p><a href="../hubspot-content-approvals/">Content approvals</a>.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://community.hubspot.com/t/create-approval-request-for-lead-assignment/126971">HubSpot Community question: Create Approval Request for Lead Assignment</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/request-approval-to-send-a-marketing-email">HubSpot Knowledge Base: Request approval to send a marketing email</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

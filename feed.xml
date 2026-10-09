@@ -8262,6 +8262,153 @@
     <category>Properties</category>
   </item>
   <item>
+    <title>Create contacts from inbox conversations</title>
+    <link>https://hubspot.samcbarth.com/articles/inbox-create-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/inbox-create-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>When HubSpot creates contacts from chats and how to add them manually.</description>
+    <category>Service Hub</category>
+    <category>Inbox</category>
+    <category>Contacts</category>
+  </item>
+  <item>
+    <title>Use the revenue analytics suite</title>
+    <link>https://hubspot.samcbarth.com/articles/revenue-analytics-suite/</link>
+    <guid>https://hubspot.samcbarth.com/articles/revenue-analytics-suite/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s revenue analytics reports cover and how to share them.</description>
+    <category>Revenue Hub</category>
+    <category>Reports</category>
+    <category>Payments</category>
+  </item>
+  <item>
+    <title>Require approval before marketing emails go out</title>
+    <link>https://hubspot.samcbarth.com/articles/marketing-email-approval/</link>
+    <guid>https://hubspot.samcbarth.com/articles/marketing-email-approval/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot content approvals work for emails and posts.</description>
+    <category>Marketing Hub</category>
+    <category>Email</category>
+    <category>Approvals</category>
+  </item>
+  <item>
+    <title>Test whether a record matches a segment</title>
+    <link>https://hubspot.samcbarth.com/articles/test-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/test-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s Test matches feature checks segment criteria.</description>
+    <category>Smart CRM</category>
+    <category>Marketing Hub</category>
+    <category>Segments</category>
+  </item>
+  <item>
+    <title>Report on ad campaigns in the custom report builder</title>
+    <link>https://hubspot.samcbarth.com/articles/ad-campaign-custom-reports/</link>
+    <guid>https://hubspot.samcbarth.com/articles/ad-campaign-custom-reports/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot ad data works in custom reports.</description>
+    <category>Marketing Hub</category>
+    <category>Ads</category>
+    <category>Reports</category>
+  </item>
+  <item>
+    <title>Customize cards in the Sales extension sidebar</title>
+    <link>https://hubspot.samcbarth.com/articles/sales-extension-crm-cards/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sales-extension-crm-cards/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How Super Admins choose cards in the HubSpot Sales extension and add-in.</description>
+    <category>Sales Hub</category>
+    <category>Sales extension</category>
+  </item>
+  <item>
+    <title>Insert links in a rich text module</title>
+    <link>https://hubspot.samcbarth.com/articles/rich-text-links/</link>
+    <guid>https://hubspot.samcbarth.com/articles/rich-text-links/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What you can link to in HubSpot rich text and how to set link attributes.</description>
+    <category>Content Hub</category>
+    <category>Marketing Hub</category>
+    <category>Pages</category>
+    <category>Email</category>
+  </item>
+  <item>
+    <title>Change your blog&#39;s template and settings</title>
+    <link>https://hubspot.samcbarth.com/articles/blog-template-options/</link>
+    <guid>https://hubspot.samcbarth.com/articles/blog-template-options/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Where HubSpot blog template and display options live.</description>
+    <category>Content Hub</category>
+    <category>Blog</category>
+  </item>
+  <item>
+    <title>Create contacts from forms without an email</title>
+    <link>https://hubspot.samcbarth.com/articles/form-no-email-contacts/</link>
+    <guid>https://hubspot.samcbarth.com/articles/form-no-email-contacts/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot&#39;s no-email form setting works.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Set your chatflow&#39;s language</title>
+    <link>https://hubspot.samcbarth.com/articles/chatflow-language/</link>
+    <guid>https://hubspot.samcbarth.com/articles/chatflow-language/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot chatflow and bot language settings work.</description>
+    <category>Service Hub</category>
+    <category>Marketing Hub</category>
+    <category>Chatflows</category>
+    <category>Multi-language</category>
+  </item>
+  <item>
+    <title>Download the domain audit log</title>
+    <link>https://hubspot.samcbarth.com/articles/domain-audit-log/</link>
+    <guid>https://hubspot.samcbarth.com/articles/domain-audit-log/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>What HubSpot&#39;s domain audit log records.</description>
+    <category>Content Hub</category>
+    <category>Domains</category>
+    <category>Security</category>
+  </item>
+  <item>
+    <title>SMS quiet hours</title>
+    <link>https://hubspot.samcbarth.com/articles/sms-quiet-hours/</link>
+    <guid>https://hubspot.samcbarth.com/articles/sms-quiet-hours/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot defers SMS during quiet hours.</description>
+    <category>Marketing Hub</category>
+    <category>SMS</category>
+  </item>
+  <item>
+    <title>Task reminders and the daily digest</title>
+    <link>https://hubspot.samcbarth.com/articles/task-reminders-digest/</link>
+    <guid>https://hubspot.samcbarth.com/articles/task-reminders-digest/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot task reminder emails and daily digests work.</description>
+    <category>Sales Hub</category>
+    <category>Tasks</category>
+    <category>Notifications</category>
+  </item>
+  <item>
+    <title>Use progressive fields in legacy forms</title>
+    <link>https://hubspot.samcbarth.com/articles/progressive-fields/</link>
+    <guid>https://hubspot.samcbarth.com/articles/progressive-fields/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How HubSpot progressive fields swap known fields for new questions.</description>
+    <category>Marketing Hub</category>
+    <category>Forms</category>
+  </item>
+  <item>
+    <title>Microphone not working on HubSpot calls</title>
+    <link>https://hubspot.samcbarth.com/articles/calling-microphone/</link>
+    <guid>https://hubspot.samcbarth.com/articles/calling-microphone/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>HubSpot&#39;s checks when your mic fails on calls.</description>
+    <category>Sales Hub</category>
+    <category>Service Hub</category>
+    <category>Calling</category>
+  </item>
+  <item>
     <title>HubSpot Teams workflow action says &quot;There are no active teams&quot;: it means Microsoft Teams</title>
     <link>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-workflow-action-no-active-teams/</guid>
