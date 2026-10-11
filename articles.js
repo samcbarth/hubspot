@@ -8906,7 +8906,7 @@ var ARTICLES = [
   {
     slug: "workflow-error-troubleshooting",
     title: "Find and fix workflow errors",
-    excerpt: "Where HubSpot shows workflow errors, which ones retry on their own, and a common association fix.",
+    excerpt: "Where HubSpot lists automation issues, what a real one looks like, and how to clear it.",
     type: "tip",
     problem: "How to",
     hubs: ["Marketing Hub", "Sales Hub"],
@@ -8914,6 +8914,7 @@ var ARTICLES = [
     tier: "Professional or Enterprise",
     permissions: "Workflows access",
     verified: "2026-10-07",
+    validated: "2026-10-11 15:40 ET",
     published: "2026-10-07",
     minutes: 2,
     difficulty: "Intermediate",

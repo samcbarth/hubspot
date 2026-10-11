@@ -14,15 +14,15 @@
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
 <title>Find and fix workflow errors - HubSpot Field Notes</title>
-<meta name="description" content="Where HubSpot shows workflow errors, which ones retry on their own, and a common association fix.">
+<meta name="description" content="Where HubSpot lists automation issues, what a real one looks like, and how to clear it.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/">
 <meta property="og:title" content="Find and fix workflow errors">
-<meta property="og:description" content="Where HubSpot shows workflow errors, which ones retry on their own, and a common association fix.">
+<meta property="og:description" content="Where HubSpot lists automation issues, what a real one looks like, and how to clear it.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-11">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -31,9 +31,9 @@
     {
       "@type": "TechArticle",
       "headline": "Find and fix workflow errors",
-      "description": "Where HubSpot shows workflow errors, which ones retry on their own, and a common association fix.",
+      "description": "Where HubSpot lists automation issues, what a real one looks like, and how to clear it.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-10-11",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/workflow-error-troubleshooting/og.png",
@@ -46,9 +46,9 @@
       "name": "Find and fix workflow errors",
       "totalTime": "PT2M",
       "step": [
-        {"@type": "HowToStep", "name": "Check the dashboard", "text": "Workflows with errors."},
-        {"@type": "HowToStep", "name": "Open it", "text": "Click Edit automation."},
-        {"@type": "HowToStep", "name": "Fix the cause", "text": "Setup or record data."}
+        {"@type": "HowToStep", "name": "Open the issues", "text": "In the top right of the Workflows tab, click Review automation issues."},
+        {"@type": "HowToStep", "name": "Open the affected workflow", "text": "Select an issue to see the automations it affected, then open the workflow."},
+        {"@type": "HowToStep", "name": "Fix the cause and review", "text": "Fix the action, then mark the issue reviewed."}
       ]
     },
     {
@@ -92,7 +92,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Workflows access</dd></div>
         <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:40:00-04:00">October 11, 2026, 3:40 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,21 +102,25 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: errors come from either the workflow setup or the enrolled records. The workflows dashboard lists workflows with record errors, and <strong>some actions retry automatically</strong>. For actions that need an associated record, add an enrollment criterion requiring that association so records without one never enroll.</p>
+          <p>Click <span class="ui">Review automation issues</span> in the top right of the Workflows tab. HubSpot lists each failing action, the automations it touched, and the last time it happened. Fix the action in the workflow, then mark the issue reviewed so it leaves the table.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
-        <figure class="shot"><a href="workflows-list.webp"><img src="workflows-list.webp" alt="HubSpot Automation Workflows list with one contact-based workflow name highlighted" width="800" height="552" loading="lazy"></a><figcaption>Open the workflow from the Workflows tab.</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Check the record's enrollment history to see which action failed and why.</p>
-        <h2>3. Related</h2>
-        <p><a href="../workflow-wont-re-enroll/">Re-enrollment problems</a>.</p>
+        <h2>1. Find the issues</h2>
+        <p>HubSpot's knowledge base places the link in the top right of the workflows list. The count next to the title shows how many issues need review. Each row names the action, the tool it ran in, and the most recent occurrence.</p>
+        <figure class="shot"><a href="automation-issues.webp"><img src="automation-issues.webp" alt="Review automation issues page with the Needs review table listing two Ask OpenAI action issues" width="543" height="898" loading="lazy"></a><figcaption>The Needs review table. Each row is one action that failed or was retired.</figcaption></figure>
+
+        <h2>2. Read an issue</h2>
+        <p>Select an issue to see the automations it affected. Some issues are action errors, and some are notices that an action was retired. Both can stop a workflow at that step.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Two issues named the same action, one a failure and one a notice that the action was sunset on March 31, 2026, so workflows using it would stop. You may have something like this.</p></div>
+
+        <h2>3. Clear it</h2>
+        <p>For a retired action, replace it. HubSpot's notice points to the <span class="ui">Use a custom LLM</span> action in the AI panel. For a failed action, fix the setting or the data it needs, then check the workflow's enrollment history to confirm new records now run through.</p>
+        <p>Re-enrollment problems are covered in <a href="../workflow-wont-re-enroll/">why a contact won't re-enroll</a>.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/workflow-error-notifications/1531">HubSpot Community question: Workflow Error Notifications</a></li>
           <li><a href="https://knowledge.hubspot.com/workflows/troubleshoot-common-workflow-errors">HubSpot Knowledge Base: Troubleshoot common workflow errors</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/troubleshoot-common-automation-issues">HubSpot Knowledge Base: Troubleshoot automation issues</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
