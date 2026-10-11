@@ -81,7 +81,7 @@
       '<div class="badges"><span class="badge badge-type">' + (a.type === 'tip' ? 'Quick tip' : 'Guide') + '</span>' +
       '<span class="badge badge-problem">' + esc(a.problem) + '</span>' + hubs + '</div>' +
       '<h3>' + esc(a.title) + '</h3><p>' + esc(a.excerpt) + '</p>' +
-      '<div class="card-meta"><span>' + esc(a.minutes) + ' min</span><span>' + esc(a.difficulty) + '</span><span>Verified ' + esc(a.verified) + '</span></div></a>';
+      '<div class="card-meta"><span>' + esc(a.minutes) + ' min</span><span>' + esc(a.difficulty) + '</span><span>' + (a.validated ? 'Validated ' + esc(a.validated) : 'Verified ' + esc(a.verified)) + '</span></div></a>';
   }
 
   /* ---------- Home: search + filters ---------- */

@@ -22,6 +22,7 @@ var ARTICLES = [
     tier: 'Professional or Enterprise',
     permissions: 'Super Admin or Workflows',
     verified: '2026-10-02',
+    validated: '2026-10-11 15:01 ET',
     published: '2026-10-02',
     minutes: 10,
     difficulty: 'Intermediate',

@@ -84,7 +84,7 @@ def main():
         if only and a["slug"] != only:
             continue
         kicker = ("Quick tip" if a["type"] == "tip" else "Guide") + "  /  " + a["problem"]
-        card(a["title"], kicker, f'{a["tier"]}  |  Verified {a["verified"]}', ROOT / "articles" / a["slug"] / "og.png")
+        card(a["title"], kicker, f'{a["tier"]}  |  ' + (f'Validated {a["validated"]}' if a.get("validated") else f'Verified {a["verified"]}'), ROOT / "articles" / a["slug"] / "og.png")
     if not only:
         card("The HubSpot fixes I keep explaining, written down.", "Fixes, how-tos, hidden tricks",
              "hubspot.samcbarth.com", ROOT / "assets" / "img" / "og-home.png")

@@ -94,7 +94,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise, any hub</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-02">October 2, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:01:00-04:00">October 11, 2026, 3:01 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -121,7 +121,7 @@
           <li>
             <p>In the <span class="ui">Triggers</span> panel, click the <span class="ui">Settings</span> tab. Under <span class="ui">Re-enroll</span>, toggle on <span class="ui">Allow contacts to re-enroll after completing the workflow</span>.</p>
             <figure class="shot"><a href="re-enrollment-tab.webp"><img src="re-enrollment-tab.webp" alt="Triggers panel Settings tab with the Re-enroll switch highlighted" width="800" height="552" loading="lazy"></a><figcaption>Settings tab (3), then the Re-enroll switch (4).</figcaption></figure>
-            <div class="callout"><span class="callout-title">Not where the docs say</span><p>HubSpot's knowledge base still calls this the "Re-enrollment tab." In the workflow editor as of October 2, 2026, the switch sits under the trigger panel's Settings tab.</p></div>
+            <div class="callout"><span class="callout-title">Not where the docs say</span><p>HubSpot's knowledge base still calls this the "Re-enrollment tab." In the workflow editor, the switch sits under the trigger panel's Settings tab.</p></div>
           </li>
           <li>
             <p>With the switch on, select each trigger that should re-enroll contacts, then save.</p>
@@ -138,7 +138,8 @@
         <p>Re-enrollment fires when a record goes from <em>not matching</em> a trigger to <em>matching</em> it. Staying in a matching state is not a new event.</p>
         <p>HubSpot's own example is list membership. If the trigger is "is a member of list" and the contact stays in that list, it finishes the workflow once and stops. It only re-enrolls after it leaves the list and joins it again.</p>
         <p>The same applies to property values. If the trigger is <code>Lead status is any of Open</code> and the contact's lead status is still Open, setting it to Open again changes nothing.</p>
-        <figure class="shot"><a href="lead-status-trigger.webp"><img src="lead-status-trigger.webp" alt="Workflow trigger card showing the filter Lead status is any of Open Deal" width="800" height="552" loading="lazy"></a><figcaption>A trigger like this only fires again after Lead status leaves Open Deal and comes back.</figcaption></figure>
+        <figure class="shot"><a href="lead-status-trigger.webp"><img src="lead-status-trigger.webp" alt="Workflow trigger card with a Lead status filter" width="800" height="552" loading="lazy"></a><figcaption>A trigger like this only fires again after the property leaves the trigger value and comes back.</figcaption></figure>
+<div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had a Lead status trigger as the example. You may have something like this, such as a lifecycle or deal stage property that stays on one value.</p></div>
         <div class="callout ok"><span class="callout-title">Fix: reset the trigger at the end</span><p>If the contact should run through again the next time something happens, make the last action of the workflow clear or change the trigger property. Then the next real update is a genuine change from not matching to matching, and re-enrollment fires.</p></div>
         <p>Also worth knowing: a trigger using <span class="ui">is known</span> re-enrolls when the property gets its first value <strong>and</strong> every time the value changes, as long as the contact still meets the original enrollment triggers. That is useful on purpose and noisy by accident.</p>
 
@@ -153,8 +154,9 @@
         <p>If the contact is still active, either wait it out, unenroll it, or rethink whether a 30-day delay belongs in a workflow that should restart.</p>
 
         <h2>5. The trigger can't be used for re-enrollment at all</h2>
-        <p>Some enrollment conditions work for first enrollment but are blocked from re-enrollment. HubSpot flags them in a yellow box when you turn re-enrollment on. Here is a real example: the only trigger is <em>Number of form submissions</em>, a calculated property, so the workflow can only re-enroll contacts by hand while the card still says <span class="ui">Re-enroll on</span>.</p>
+        <p>Some enrollment conditions work for first enrollment but are blocked from re-enrollment. HubSpot flags them in a yellow box when you turn re-enrollment on. For example, a workflow whose only trigger is a calculated property can only re-enroll contacts by hand, while the card still says <span class="ui">Re-enroll on</span>.</p>
         <figure class="shot"><a href="cant-re-enroll-warning.webp"><img src="cant-re-enroll-warning.webp" alt="Re-enroll settings showing contacts only re-enroll manually and a warning that Number of form submissions can't be used for re-enrollment" width="800" height="553" loading="lazy"></a><figcaption>Only manual re-enrollment (1), because the trigger can't be used for re-enrollment (2), while the card footer still says Re-enroll on (3).</figcaption></figure>
+<div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had a Number of form submissions trigger as the only trigger. It is a calculated property, so HubSpot blocks it from re-enrolling. You may have something like this.</p></div>
         <p>For contact-based workflows, the common blocked conditions are:</p>
         <ul>
           <li><strong>Activities and activity properties</strong>, in every workflow type.</li>
@@ -171,7 +173,7 @@
 
         <h2>Two edge cases that look like bugs</h2>
         <ul>
-          <li><strong>Date and number refinements are ignored for re-enrollment.</strong> If the trigger is "filled out the demo form between January 1 and February 1", re-enrollment fires on any later submission of that form, outside the date range too. The same goes for "any number of times" style refinements on a trigger like the one below.</li>
+          <li><strong>Date and number refinements are ignored for re-enrollment.</strong> If the trigger is "filled out a form between January 1 and February 1", re-enrollment fires on any later submission of that form, outside the date range too. The same goes for "any number of times" style refinements on a trigger like the one below.</li>
           <li><strong>Time-window filters have a cooldown.</strong> With a re-enrollment trigger like "updated in the last 5 days", a record that enrolled will not re-enroll on another update inside that same 5-day window. After the window passes, the next update re-enrolls it.</li>
         </ul>
         <figure class="shot"><a href="trigger-refinement.webp"><img src="trigger-refinement.webp" alt="Form submission trigger with the refinement any number of times anytime highlighted" width="800" height="553" loading="lazy"></a><figcaption>Refinements like these (!) are ignored when deciding re-enrollment.</figcaption></figure>

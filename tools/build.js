@@ -34,6 +34,7 @@ for (const a of ARTICLES) {
   if (!['tip', 'guide'].includes(a.type)) errors.push(`${a.slug}: type must be tip or guide`);
   if (!['Fix it', 'How to', 'Hidden trick', 'Gotcha', 'Developer'].includes(a.problem)) errors.push(`${a.slug}: bad problem "${a.problem}"`);
   for (const d of ['verified', 'published']) if (!/^\d{4}-\d{2}-\d{2}$/.test(a[d] || '')) errors.push(`${a.slug}: ${d} must be YYYY-MM-DD`);
+  if (a.validated != null && !/^\d{4}-\d{2}-\d{2} \d{2}:\d{2} ET$/.test(a.validated)) errors.push(`${a.slug}: validated must be "YYYY-MM-DD HH:MM ET"`);
   const page = `articles/${a.slug}/index.html`;
   if (!fs.existsSync(path.join(ROOT, page))) { errors.push(`${a.slug}: missing ${page}`); continue; }
   const html = read(page);
@@ -71,7 +72,7 @@ function cardHTML(a, base) {
     `<div class="badges"><span class="badge badge-type">${a.type === 'tip' ? 'Quick tip' : 'Guide'}</span>` +
     `<span class="badge badge-problem">${esc(a.problem)}</span>${hubs}</div>` +
     `<h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p>` +
-    `<div class="card-meta"><span>${esc(a.minutes)} min</span><span>${esc(a.difficulty)}</span><span>Verified ${esc(a.verified)}</span></div></a>`;
+    `<div class="card-meta"><span>${esc(a.minutes)} min</span><span>${esc(a.difficulty)}</span><span>${a.validated ? `Validated ${esc(a.validated)}` : `Verified ${esc(a.verified)}`}</span></div></a>`;
 }
 
 function replaceBlock(html, name, content, file) {

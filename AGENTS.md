@@ -13,7 +13,7 @@ Public site: https://hubspot.samcbarth.com (GitHub Pages from `main`, root folde
 2. Add the entry to `articles.js` with `draft: true`.
 3. Every section that references something in HubSpot gets its own screenshot of that screen, not just the first how-to section. Capture screenshots in a real portal (20693956, a test account, or another portal with blurring). Raw PNGs go in `shots/<slug>/` (gitignored). Describe crops, blur, boxes, arrows, and step badges in `shots/<slug>/annotations.json`, then run `python tools/annotate.py <slug>`. Blur every email, name, portal ID, and customer record that is not Sam's own.
 4. HubSpot app links use `class="hs-link" data-hs="/path/{portalId}/..."` with the generic `https://app.hubspot.com/l/...` href. Verify each one opens the right screen.
-5. Fill "Last verified" with the date the steps were walked through.
+5. Fill `verified` with the date the steps were walked through. Set `validated` in `articles.js` to `YYYY-MM-DD HH:MM ET` when the article's checks are done (text, KB links, screenshots). The home card and the article's "Validated" row show `validated` when it is set.
 6. `python tools/og.py <slug>` then `node tools/build.js`.
 7. Show Sam the draft. Only after Sam's OK: set `draft: false`, rebuild, commit, push `main`, verify the live URL.
 
