@@ -39,6 +39,7 @@ var ARTICLES = [
     tier: 'Any tier (merging needs Professional)',
     permissions: 'Import access; Data quality tools to merge',
     verified: '2026-10-02',
+    validated: '2026-10-11 15:06 ET',
     published: '2026-10-02',
     minutes: 15,
     difficulty: 'Intermediate',
