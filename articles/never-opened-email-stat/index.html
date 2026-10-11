@@ -92,7 +92,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional for the workflow; segments on paid tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Segments and Workflows access</dd></div>
         <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T14:40:00-04:00">October 11, 2026, 2:40 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -106,9 +106,10 @@
         </div>
 
         <h2>1. The count that looks wrong</h2>
-        <p>On a recent engagement for a home builder, the plan included an email sunset: stop marketing to contacts who never engage. The first step is counting them, and the first count I built was misleading. I rebuilt both versions in a demo portal so you can see it. Open <a class="hs-link" data-hs="/contacts/{portalId}/objectLists/views/all" href="https://app.hubspot.com/l/contacts/objectLists/views/all"><span class="ui">Segments</span></a>. The three segments below all hold contacts.</p>
+        <p>A common plan is an email sunset: stop marketing to contacts who never engage. The first step is counting them, and the first count I built was misleading. I rebuilt both versions in a demo portal so you can see it. Open <a class="hs-link" data-hs="/contacts/{portalId}/objectLists/views/all" href="https://app.hubspot.com/l/contacts/objectLists/views/all"><span class="ui">Segments</span></a>. The three segments below all hold contacts.</p>
         <figure class="shot"><a href="segments.webp"><img src="segments.webp" alt="Segments list showing three demo segments with their sizes highlighted" width="800" height="600" loading="lazy"></a><figcaption>Never opened (the misleading version) and Never sent a marketing email have the same size. Delivered but never opened is empty.</figcaption></figure>
         <p>The first segment is "opened = 0 or unknown". The second is "never sent a marketing email". They are the same size because in this portal nobody was ever emailed, so every contact counts as a never-opener. The third, which requires at least one delivered email first, is the real answer: nobody has ignored an email yet.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. The naive segment held about 180,000 contacts, and the honest one held zero, so the first number looked like a disaster until I checked who had been sent anything. You may have something like this.</p></div>
 
         <h2>2. Build the honest version</h2>
         <p>Use two filters together, joined with AND:</p>
@@ -123,7 +124,7 @@
         <h2>3. Before you act on the list</h2>
         <ul>
           <li><strong>Open tracking is imperfect.</strong> Some mail clients preload images, and some block them, so an open is a signal and not proof of reading. Check clicks too before treating someone as dead.</li>
-          <li><strong>Put a re-engagement email first.</strong> For the home builder, the agreed plan was a 30 day re-engagement window before anyone was switched to non-marketing.</li>
+          <li><strong>Put a re-engagement email first.</strong> Many teams give contacts a re-engagement window, for example 30 days, before anyone is switched to non-marketing.</li>
           <li><strong>Non-marketing is reversible.</strong> It stops billing for the contact and stops marketing email, and you can switch it back.</li>
         </ul>
         <div class="callout"><span class="callout-title">Tip</span><p>Whenever a HubSpot number looks suspiciously large, build a second segment with one extra condition and compare. If the two are identical, the extra condition was already implied.</p></div>

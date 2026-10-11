@@ -91,6 +91,7 @@ var ARTICLES = [
     tier: "Marketing Hub Professional for the workflow; segments on paid tiers",
     permissions: "Segments and Workflows access",
     verified: "2026-10-03",
+    validated: "2026-10-11 14:40 ET",
     published: "2026-10-03",
     minutes: 8,
     difficulty: "Intermediate",
