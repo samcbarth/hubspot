@@ -92,7 +92,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Any tier with website or landing pages</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Website or landing page access</dd></div>
         <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-02">October 2, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:09:00-04:00">October 11, 2026, 3:09 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -109,13 +109,14 @@
         <p>Go to <a class="hs-link" data-hs="/website/{portalId}/pages/site" href="https://app.hubspot.com/l/website/pages/site"><span class="ui">Website pages</span></a> or <a class="hs-link" data-hs="/website/{portalId}/pages/landing" href="https://app.hubspot.com/l/website/pages/landing"><span class="ui">Landing pages</span></a> and click <span class="ui">Create</span>. The <span class="ui">Select a template</span> page opens on your active theme, and the left menu has three places to look.</p>
         <figure class="shot"><a href="picker-default.webp"><img src="picker-default.webp" alt="Select a template page with the active theme, theme templates, and Other highlighted in the left menu" width="800" height="553" loading="lazy"></a><figcaption>Active theme (1), its templates (2), and Other (3).</figcaption></figure>
         <p>Click <span class="ui">Other</span> (3). Any page template that is not part of a theme shows up there. HubSpot's own documentation says it in one line: to use a template that isn't part of a theme, click Other in the left side menu.</p>
-        <figure class="shot"><a href="picker-other.webp"><img src="picker-other.webp" alt="Other selected in the template picker, showing No templates match the selected filters" width="800" height="553" loading="lazy"></a><figcaption>In this portal every template lives in a theme, so Other is empty. Yours will list your coded templates.</figcaption></figure>
+        <figure class="shot"><a href="picker-other.webp"><img src="picker-other.webp" alt="Other selected in the template picker, showing No templates match the selected filters" width="800" height="553" loading="lazy"></a><figcaption>When every template in an account lives in a theme, Other is empty. Templates outside a theme list here.</figcaption></figure>
+<div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal every template lives in a theme, so Other showed no templates. You may have something like this.</p></div>
         <div class="callout"><span class="callout-title">Search will not find it</span><p>The search box at the top of the picker searches the view you are in. From the default theme view, it does not surface templates that sit under Other. Click Other first, then search.</p></div>
 
         <h2>Why your template counts as "Other"</h2>
         <p>Open <a class="hs-link" data-hs="/design-manager/{portalId}" href="https://app.hubspot.com/l/design-manager"><span class="ui">Design Manager</span></a> and look at the folder icons in the left panel. Theme folders have a different icon from plain folders. A template inside a theme folder belongs to that theme. A template at the root, or in a plain folder, belongs to no theme, so the picker puts it under Other.</p>
         <figure class="shot"><a href="design-manager.webp"><img src="design-manager.webp" alt="Design Manager file tree with a theme folder and a plain folder highlighted" width="800" height="553" loading="lazy"></a><figcaption>A theme folder (1) versus a plain folder (2). Editor names are blurred.</figcaption></figure>
-        <p>This is common with agency-built and older sites, where templates were coded before themes existed, or copied out of a theme to make a one-off variation.</p>
+        <p>It also happens when a template was coded before the theme existed, or copied out of a theme to make a one-off variation.</p>
 
         <h2>Not under Other either? Check the annotation</h2>
         <p>Every coded template starts with an annotation comment. For a template to be offered when someone creates a page, it needs to be a page template and be available for new content:</p>
@@ -129,6 +130,7 @@
         <h2>Related gotcha: copying a theme template to the root</h2>
         <p>If you copy a theme template out to the Design Manager root so it shows up under Other, check its first line. Theme templates usually extend a layout with a relative path:</p>
         <div class="code"><pre><code>{% extends "./layouts/base.hubl.html" %}</code></pre></div>
+<div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I copied a theme template to the root, and its drag-and-drop areas disappeared. The layout path was the cause. Your path will differ, but you may have something like this.</p></div>
         <p>At the root, <code>./layouts/</code> points to a folder that does not exist. The template renders without its parent layout, every drag-and-drop area disappears, and the page editor reports that the template doesn't allow modules to be added. Point the extends at the theme's layout with a full path from the Design Manager root instead, for example <code>{% extends "/Your Theme/templates/layouts/base.html" %}</code>.</p>
 
         <h2>Sources</h2>

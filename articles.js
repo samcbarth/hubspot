@@ -57,6 +57,7 @@ var ARTICLES = [
     tier: 'Any tier with pages',
     permissions: 'Website or landing page access',
     verified: '2026-10-02',
+    validated: '2026-10-11 15:09 ET',
     published: '2026-10-02',
     minutes: 3,
     difficulty: 'Beginner',
