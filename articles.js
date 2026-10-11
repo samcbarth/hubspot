@@ -4484,6 +4484,7 @@ var ARTICLES = [
     permissions: "Marketing email access",
     verified: "2026-10-07",
     published: "2026-10-07",
+    validated: "2026-10-11 16:40 ET",
     minutes: 5,
     difficulty: "Intermediate",
     keywords: ["hubspot email suspension", "hubspot sending probation", "marketing email suspended hubspot", "appeal email suspension hubspot"]
@@ -15903,7 +15904,7 @@ var ARTICLES = [
   {
     slug: "chrome-extension-defaults",
     title: "Set your Chrome extension's Gmail defaults",
-    excerpt: "What each user can set in the HubSpot Sales Chrome extension.",
+    excerpt: "Set log and track, default associations, and the never log list in your Gmail inbox, plus the account defaults a Super Admin sets.",
     type: "tip",
     problem: "How to",
     hubs: ["Sales Hub"],
@@ -15912,6 +15913,7 @@ var ARTICLES = [
     permissions: "Connected inbox user",
     verified: "2026-10-07",
     published: "2026-10-07",
+    validated: "2026-10-11 16:45 ET",
     minutes: 2,
     difficulty: "Beginner",
     keywords: ["chrome extension settings gmail", "default log and track gmail", "turn off sales extension inbox", "email associations default"]

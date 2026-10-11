@@ -14,12 +14,12 @@
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
 <title>Set your Chrome extension's Gmail defaults - HubSpot Field Notes</title>
-<meta name="description" content="What each user can set in the HubSpot Sales Chrome extension.">
+<meta name="description" content="Set log and track, default associations, and the never log list in your Gmail inbox, plus the account defaults a Super Admin sets.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/chrome-extension-defaults/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/chrome-extension-defaults/">
 <meta property="og:title" content="Set your Chrome extension's Gmail defaults">
-<meta property="og:description" content="What each user can set in the HubSpot Sales Chrome extension.">
+<meta property="og:description" content="Set log and track, default associations, and the never log list in your Gmail inbox, plus the account defaults a Super Admin sets.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/chrome-extension-defaults/og.png">
 <meta property="article:published_time" content="2026-10-07">
 <meta property="article:modified_time" content="2026-10-07">
@@ -31,7 +31,7 @@
     {
       "@type": "TechArticle",
       "headline": "Set your Chrome extension's Gmail defaults",
-      "description": "What each user can set in the HubSpot Sales Chrome extension.",
+      "description": "Set log and track, default associations, and the never log list in your Gmail inbox, plus the account defaults a Super Admin sets.",
       "datePublished": "2026-10-07",
       "dateModified": "2026-10-07",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
@@ -46,9 +46,9 @@
       "name": "Set your Chrome extension's Gmail defaults",
       "totalTime": "PT2M",
       "step": [
-        {"@type": "HowToStep", "name": "Open settings", "text": "Extension in Gmail."},
-        {"@type": "HowToStep", "name": "Set log and track", "text": "Your inbox."},
-        {"@type": "HowToStep", "name": "Associations", "text": "Your defaults."}
+        {"@type": "HowToStep", "name": "Open Log and track settings", "text": "In Gmail, click the sprocket icon at the top of your inbox and select Log and track settings."},
+        {"@type": "HowToStep", "name": "Set log and track", "text": "Turn on Log email and Track email to apply them to each new email in your inbox."},
+        {"@type": "HowToStep", "name": "Set default associations", "text": "In Default Email Associations, customize Create new contacts and Hide suggested associations."}
       ]
     },
     {
@@ -87,12 +87,12 @@
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
       <h1>Set your Chrome extension's Gmail defaults</h1>
-      <p class="dek">Account defaults are set elsewhere.</p>
+      <p class="dek">Log and track, associations, and the never log list are set in your own Gmail inbox. A Super Admin sets the account-wide defaults.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Connected inbox user</dd></div>
         <div class="fact"><dt>Time</dt><dd>2 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T16:45:00-04:00">October 11, 2026, 4:45 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,21 +102,41 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: per-inbox settings cover <strong>log and track</strong>, <strong>associations</strong>, and turning the extension <strong>off for an inbox</strong>. Super Admins set account-wide defaults. <strong>Hide suggested associations</strong> logs only to configured record types.</p>
+          <p>Each user sets log and track preferences for their own Gmail inbox from the extension's <span class="ui">Log and track settings</span>. A Super Admin can set a default for all extension users, and that account-wide setting overrides the individual one. Use the never log list to stop specific addresses or domains from being logged.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
-        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Ask an admin to set team-wide defaults.</p>
-        <h2>3. Related</h2>
+        <h2>1. Set your log and track defaults</h2>
+        <ol>
+          <li>In Gmail, click the sprocket icon at the top of your inbox and select <span class="ui">Log and track settings</span>.</li>
+          <li>Turn on <span class="ui">Log email</span> to log every email by default.</li>
+          <li>Turn on <span class="ui">Track email</span> to track every email by default.</li>
+        </ol>
+        <p>These apply each time you compose a new email in your inbox.</p>
+
+        <h2>2. Set default associations</h2>
+        <p>In the <span class="ui">Default Email Associations</span> section of the same panel:</p>
+        <ul>
+          <li><span class="ui">Create new contacts</span> creates a contact when you log an email to an address that is not in your CRM yet.</li>
+          <li><span class="ui">Hide suggested associations</span> shows only the record types set in your account's default association settings when you log an email.</li>
+        </ul>
+        <p>To review the account's default association settings, click <span class="ui">Manage Other Default Associations</span>. HubSpot opens the activity settings for you.</p>
+
+        <h2>3. Block addresses and domains</h2>
+        <p>In the <span class="ui">Never log</span> field, enter an email address or domain and click <span class="ui">Add</span>. If your user has Account Access permissions, choose <span class="ui">Block for all users</span> or <span class="ui">Block only for me</span>. Blocked emails do not log to the CRM or appear on the recording timeline. To unblock one, hover over it and click the delete icon.</p>
+
+        <h2>4. Account defaults set by a Super Admin</h2>
+        <p>A Super Admin sets defaults for everyone in the account, in the activity settings under <span class="ui">Objects</span>, on the <span class="ui">Email Log &amp; Track</span> tab. The screenshot shows the two settings that affect the extension. The first lets all users log email attachments. The second applies one default log setting to all extension users, and it overrides each user's own default.</p>
+        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2), set by a Super Admin in account settings.</figcaption></figure>
+
+        <h2>5. Keep the toolbar focused</h2>
+        <p>In the Gmail compose window, click <span class="ui">More</span>, then <span class="ui">Configure</span>. Click <span class="ui">Add Tools</span> to select the tools you use. Drag them into order, or click the delete icon to hide one. Changes save automatically.</p>
+
+        <h2>Related</h2>
         <p><a href="../sales-extension-settings/">Account extension settings</a> and <a href="../chrome-extension-troubleshoot/">troubleshooting</a>.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/email-tracking-options-w-o-chrome/146794">HubSpot Community question: Email Tracking options w/o Chrome</a></li>
-          <li><a href="https://knowledge.hubspot.com/connected-email/customize-your-hubspot-sales-chrome-extension-default-configuration-options">HubSpot Knowledge Base: Customize your HubSpot Sales Chrome extension settings</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/customize-your-hubspot-sales-chrome-extension-default-configuration-options">HubSpot Knowledge Base: Customize HubSpot Sales Chrome extension settings</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

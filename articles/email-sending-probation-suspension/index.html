@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers that send marketing email</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Marketing email access</dd></div>
         <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T16:40:00-04:00">October 11, 2026, 4:40 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,19 +103,37 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: if your account is on <strong>sending probation</strong>, a banner appears at the top of the marketing email tool, and failing to fix the contact issues leads to a full <strong>suspension</strong>. High negative engagement on a send, such as bounces and spam reports, can trigger it. Clean out risky sources before appealing. HubSpot's cleanup guide lists the contact sources it wants removed.</p>
+          <p>Probation is a warning with a review step. When an account is put on probation, a banner appears at the top of the marketing email tool and you review your contacts. Only contacts who gave explicit consent and have engaged with your marketing emails should stay. If the contact issues are not fixed, HubSpot can suspend marketing email sending. A suspension is appealed from the Health tab. On HubSpot's free tools, a suspension cannot be lifted.</p>
         </div>
 
-        <h2>1. Where the warning appears</h2>
-        <p>Banners show at the top of the marketing email tool. My demo portal has none, only the tracking notice.</p>
-        <figure class="shot"><a href="emails.webp"><img src="emails.webp" alt="Marketing Email tool with a banner area at the top" width="738" height="780" loading="lazy"></a><figcaption>The banner area (1).</figcaption></figure>
-        <h2>2. Cleanup</h2>
+        <h2>1. What triggers each one</h2>
+        <p><strong>Probation:</strong> if your account uses HubSpot's free tools, probation starts when an email deliverability metric drops below a threshold, such as a high hard bounce rate. The threshold depends on the sending volume for your industry. The email health dashboard shows where you stand.</p>
+        <p><strong>Suspension:</strong> HubSpot's deliverability protection can suspend marketing email when it detects excessive hard bounces, unsubscribes, spam reports, blocklisting, or abuse complaints, or fraudulent activity such as spam traps. HubSpot's stated monthly limits are a 5% hard bounce rate, a 0.1% spam report rate, and a 3% unsubscribe rate.</p>
+
+        <h2>2. The probation banner</h2>
+        <p>The banner appears at the top of the marketing email tool. Its text names the problem, for example "Your hard bounce rate is poor." Click <span class="ui">Review contacts</span> in the banner to start.</p>
+        <figure class="shot"><a href="emails.webp"><img src="emails.webp" alt="Marketing Email tool showing a tracking notice in a banner at the top, with the Review tracking settings button highlighted" width="738" height="780" loading="lazy"></a><figcaption>The Marketing Email tool in my demo portal. The banner here is the email tracking notice, not a probation banner. My demo has no probation.</figcaption></figure>
+
+        <h2>3. Review contacts to end probation</h2>
+        <ol>
+          <li>In HubSpot, click <span class="ui">More</span>, then go to <span class="ui">Marketing</span> &gt; <span class="ui">Email</span>.</li>
+          <li>In the banner, click <span class="ui">Review contacts</span>. In the right panel, click <span class="ui">Next</span> through the explicit consent and consent information screens.</li>
+          <li>In a separate tab, delete marketing contacts who have not consented to receive marketing emails. HubSpot also recommends removing contacts without a valid email address.</li>
+          <li>Select <span class="ui">I've reviewed my marketing contacts</span>, click <span class="ui">Next</span>, then <span class="ui">Done</span>.</li>
+        </ol>
+        <p>After you remove these contacts, the hard bounce rate should start to improve. Review the email health dashboard regularly.</p>
+
+        <h2>4. If the account is suspended</h2>
+        <p>Open <span class="ui">Marketing</span> &gt; <span class="ui">Email</span> and click the <span class="ui">Health</span> tab. Under <span class="ui">How to Fix</span>, click <span class="ui">Start</span>. HubSpot asks whether you have contacts you have not emailed in over 12 months and which contact sources apply. Then you opt out, quarantine, or delete the contacts in that segment, confirm the steps, and submit the appeal. HubSpot's Deliverability Team reviews the appeal and contacts you.</p>
+        <div class="callout warn"><span class="callout-title">Removing bad contacts alone is not enough</span><p>HubSpot suppresses contacts that have hard bounced, unsubscribed, or marked an email as spam. Removing those contacts does not restore sending. The appeal is the step that does.</p></div>
+
+        <h2>5. Clean up before it happens</h2>
         <ul>
-          <li>Remove contacts from purchased or scraped lists.</li>
-          <li>Suppress long-unengaged contacts. See <a href="../unengaged-contacts-graymail/">unengaged contacts</a>.</li>
+          <li>Keep only contacts who gave explicit consent to marketing email from your business.</li>
+          <li>Suppress contacts who have not engaged for a long time. See <a href="../unengaged-contacts-graymail/">unengaged contacts</a>.</li>
           <li>Exclude hard bounces. See <a href="../hard-vs-soft-bounces/">bounce types</a>.</li>
         </ul>
-        <h2>3. Related</h2>
+        <h2>6. Related</h2>
         <p><a href="../email-deliverability-spam-checklist/">Deliverability checklist</a>.</p>
 
         <h2>Sources</h2>
