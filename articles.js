@@ -1939,6 +1939,7 @@ var ARTICLES = [
     permissions: "Domain settings access; access to your DNS provider",
     verified: "2026-10-06",
     published: "2026-10-06",
+    validated: "2026-10-11 16:35 ET",
     minutes: 6,
     difficulty: "Intermediate",
     keywords: ["email sending domain", "spf record hubspot", "dkim hubspot", "authenticate email domain"]

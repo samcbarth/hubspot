@@ -88,12 +88,12 @@
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Content Hub</span></div>
       <h1>Connect your email sending domain in HubSpot without breaking SPF</h1>
-      <p class="dek">A healthcare practice's emails went out on HubSpot's default domain until we added their DNS records. The SPF record needed merging, not a second copy.</p>
+      <p class="dek">Where to connect a sending domain, which DNS records HubSpot asks for, and how to add HubSpot to an SPF record you already have.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>Starter, Professional, or Enterprise in Marketing, Sales, Service, or Content Hub</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Domain settings access; access to your DNS provider</dd></div>
         <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T16:35:00-04:00">October 11, 2026, 4:35 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Go to <span class="ui">Settings, Content, Domains &amp; URLs, Email Sending</span> and click <span class="ui">Connect sending domain</span>. HubSpot lists MX, two DKIM CNAME records, an SPF TXT record, and a DMARC TXT record. If you already have an SPF record, add HubSpot's include to it instead of creating a new one, and keep the SPF version and <code>-all</code> only once. HubSpot says DNS changes usually take 10 to 70 minutes and up to 48 hours, so wait at least 20 minutes before verifying. For a healthcare practice on GoDaddy, the SPF record was the part we had to fix.</p>
+          <p>Go to <span class="ui">Settings, Content, Domains &amp; URLs, Email Sending</span> and click <span class="ui">Connect sending domain</span>. HubSpot asks for an MX record, two DKIM CNAME records, an SPF TXT record, and a DMARC TXT record. If you already have an SPF record, add HubSpot's include string to it instead of creating a second record, and keep the version and <code>-all</code> flag only once. DNS changes usually take 10 to 70 minutes and can take up to 48 hours, so wait at least 20 minutes before you verify.</p>
         </div>
 
         <h2>1. Where it lives</h2>
@@ -111,16 +111,17 @@
         <figure class="shot"><a href="domains.webp"><img src="domains.webp" alt="Domains and URLs Email Sending tab with Connect sending domain button and two domains not authenticated" width="800" height="553" loading="lazy"></a><figcaption>Email Sending (1), Connect sending domain (2), and the status (3).</figcaption></figure>
 
         <h2>2. The records</h2>
-        <p>HubSpot's article lists MX, DKIM (two CNAME records), SPF (a TXT record), and DMARC (a TXT record). Copy the values from the connect screen into your DNS provider.</p>
+        <p>The connection screen lists the records HubSpot needs. DKIM uses two CNAME records. SPF and DMARC each use a TXT record. Copy each value from the Host and Required data columns and paste it into your DNS provider. If your DNS provider offers a sign-in option, HubSpot can add the records for you. Otherwise choose the manual setup.</p>
 
         <h2>3. SPF: one record only</h2>
-        <p>A domain should have one SPF record. HubSpot says that if you already have one, you add the string after <code>include:</code> to the end of the existing record and make sure the version and the <code>-all</code> flag appear only once. On the healthcare practice's GoDaddy account we edited and merged the SPF record so it authorized HubSpot without a second record.</p>
+        <p>A domain should have one SPF record. If HubSpot prompts you to update SPF and you already have one, add the string from the Required data column after <code>include:</code> to the end of the existing record. Check that the SPF version and the <code>-all</code> flag appear only once.</p>
         <p>For example, a domain that already sends through Google Workspace might end up with:</p>
-        <pre><code>v=spf1 include:_spf.google.com include:[value HubSpot shows you] -all</code></pre>
-        <p>Use the include value from your own connect screen. The bracketed text is a placeholder.</p>
+        <pre><code>v=spf1 include:_spf.google.com include:[value from your connect screen] -all</code></pre>
+        <p>Use the value from your own connect screen. The bracketed text is a placeholder.</p>
 
-        <h2>4. Verify and test</h2>
-        <p>HubSpot says DNS changes usually take 10 to 70 minutes and up to 48 hours, and recommends waiting at least 20 minutes before verifying. We sent test emails from the practice's domain to confirm. Keep a note of what is in DNS and why, because the next tool that asks for an SPF change can break it again.</p>
+        <h2>4. Check status and test</h2>
+        <p>Wait at least 20 minutes, then open Domains &amp; URLs and the Email Sending tab. Each domain shows Not authenticated, Partially authenticated, or Authenticated. Partially authenticated means DKIM is verified and SPF or DMARC still needs to verify. If SPF will not verify, look up the record with MX Toolbox's SPF lookup and confirm it includes <code>include:shared.hubspot.com</code>.</p>
+        <p>Keep a note of what is in DNS and why. The next tool that asks for an SPF change can add a second record or overwrite the one HubSpot needs.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
