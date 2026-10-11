@@ -22,7 +22,7 @@
 <meta property="og:description" content="What HubSpot's site speed dashboard covers and how to open it.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/site-speed-dashboard/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-11">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -33,7 +33,7 @@
       "headline": "Check Web Vitals on the site speed dashboard",
       "description": "What HubSpot's site speed dashboard covers and how to open it.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-10-11",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/site-speed-dashboard/og.png",
@@ -87,12 +87,12 @@
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span></div>
       <h1>Check Web Vitals on the site speed dashboard</h1>
-      <p class="dek">HubSpot-hosted content only.</p>
+      <p class="dek">The site speed dashboard scores a domain or page against Core Web Vitals. Here is how to open it and what each report shows.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>Check your subscription</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Reports access</dd></div>
         <div class="fact"><dt>Time</dt><dd>2 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:55:00-04:00">October 11, 2026, 3:55 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,21 +102,31 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: the dashboard evaluates pages against <strong>Web Vitals</strong> metrics. It only analyzes <strong>HubSpot-hosted content</strong>. Open it at app.hubspot.com/site-speed/ followed by your account ID.</p>
+          <p>The site speed dashboard scores how a domain or page performs for visitors against Core Web Vitals. Open <code>app.hubspot.com/site-speed/</code> followed by your account ID, choose a domain or search for a URL, then select <span class="ui">Analyze</span>.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
-        <figure class="shot"><a href="pages.webp"><img src="pages.webp" alt="Website pages list with Manage and Analyze tabs, saved views, publish status and domain filters" width="800" height="553" loading="lazy"></a><figcaption>Manage and Analyze tabs (1) and saved views (2).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>External sites, such as WordPress, need other tools.</p>
-        <h2>3. Related</h2>
-        <p><a href="../speed-up-landing-page/">Speeding up pages</a> and <a href="../automatic-image-resizing/">image resizing</a>.</p>
+        <h2>1. Open the dashboard</h2>
+        <ol>
+          <li>Click your account name in the top right of HubSpot. Under <span class="ui">Account</span>, your account ID sits below the name.</li>
+          <li>Open <code>app.hubspot.com/site-speed/[account-id]</code>, replacing <code>[account-id]</code> with that number.</li>
+          <li>Select <span class="ui">Select Domain</span> and pick a domain, or select <span class="ui">Search URL</span> to analyze one page.</li>
+          <li>Select <span class="ui">Analyze</span>.</li>
+        </ol>
+        <figure class="shot"><a href="dashboard.webp"><img src="dashboard.webp" alt="Site Speed Dashboard with the domain field, Analyze button and date range" width="543" height="898" loading="lazy"></a><figcaption>The dashboard before you analyze. The domain field and date range are at the top. The domain is blurred.</figcaption></figure>
+
+        <h2>2. Read the reports</h2>
+        <ul>
+          <li><strong>Performance Overall</strong> analyzes the overall performance of the page or domain.</li>
+          <li><strong>Core Web Vitals Trends</strong> tracks the core web vitals over time. HubSpot recommends aiming for good core web vitals on 75% of visits.</li>
+          <li><strong>Sessions by country</strong> groups the core web vitals by the country tied to the visitor's IP address.</li>
+          <li><strong>Page Performance</strong> shows the core web vitals of individual pages.</li>
+        </ul>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. The demo domain returned "There is no data to show" in every panel. You may have something like this.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/how-to-optimize-wordpress-website-site-speed/115071">HubSpot Community question: How to optimize WordPress website site speed</a></li>
           <li><a href="https://knowledge.hubspot.com/seo/use-the-site-speed-dashboard">HubSpot Knowledge Base: Use the site speed dashboard</a></li>
+          <li><a href="https://web.dev/articles/vitals">web.dev: Core Web Vitals</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

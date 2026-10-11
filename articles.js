@@ -10331,7 +10331,7 @@ var ARTICLES = [
   {
     slug: "site-speed-dashboard",
     title: "Check Web Vitals on the site speed dashboard",
-    excerpt: "What HubSpot's site speed dashboard covers and how to open it.",
+    excerpt: "The site speed dashboard scores a domain or page against Core Web Vitals, with the steps to open it.",
     type: "tip",
     problem: "How to",
     hubs: ["Content Hub"],
@@ -10339,6 +10339,7 @@ var ARTICLES = [
     tier: "Check your subscription",
     permissions: "Reports access",
     verified: "2026-10-07",
+    validated: "2026-10-11 15:55 ET",
     published: "2026-10-07",
     minutes: 2,
     difficulty: "Beginner",
@@ -12667,7 +12668,7 @@ var ARTICLES = [
   {
     slug: "email-sending-domain-troubleshoot",
     title: "Email sending domain won't verify",
-    excerpt: "HubSpot's checks when DNS records for an email sending domain don't verify.",
+    excerpt: "Why an email sending domain shows Not authenticated: DNS propagation, the duplicated root domain, and checking with Dig.",
     type: "tip",
     problem: "Fix it",
     hubs: ["Marketing Hub"],
@@ -12676,6 +12677,7 @@ var ARTICLES = [
     permissions: "Domain settings access",
     verified: "2026-10-07",
     published: "2026-10-07",
+    validated: "2026-10-11 16:10 ET",
     minutes: 2,
     difficulty: "Intermediate",
     keywords: ["email sending domain not verifying", "dkim cname hubspot", "dns propagation hubspot", "duplicated root domain dns"]

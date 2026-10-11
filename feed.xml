@@ -5149,7 +5149,7 @@
     <link>https://hubspot.samcbarth.com/articles/site-speed-dashboard/</link>
     <guid>https://hubspot.samcbarth.com/articles/site-speed-dashboard/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s site speed dashboard covers and how to open it.</description>
+    <description>The site speed dashboard scores a domain or page against Core Web Vitals, with the steps to open it.</description>
     <category>Content Hub</category>
     <category>SEO</category>
     <category>Pages</category>
@@ -6526,7 +6526,7 @@
     <link>https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/</link>
     <guid>https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s checks when DNS records for an email sending domain don&#39;t verify.</description>
+    <description>Why an email sending domain shows Not authenticated: DNS propagation, the duplicated root domain, and checking with Dig.</description>
     <category>Marketing Hub</category>
     <category>Domains</category>
     <category>Email</category>

@@ -22,7 +22,7 @@
 <meta property="og:description" content="HubSpot's checks when DNS records for an email sending domain don't verify.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-11">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -33,7 +33,7 @@
       "headline": "Email sending domain won't verify",
       "description": "HubSpot's checks when DNS records for an email sending domain don't verify.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-10-11",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/email-sending-domain-troubleshoot/og.png",
@@ -87,12 +87,12 @@
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span></div>
       <h1>Email sending domain won't verify</h1>
-      <p class="dek">Hostnames without the domain.</p>
+      <p class="dek">Most sending domains that won't verify have a DNS record problem. Check the record, the host name and the propagation time before you change anything else.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Domain settings access</dd></div>
         <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T16:10:00-04:00">October 11, 2026, 4:10 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,21 +102,27 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: DNS changes take time to propagate. Enter <strong>host(name) values without the domain</strong>, since some DNS providers append it and create a duplicated root domain. Check with tools like <strong>Dig</strong>. The DKIM CNAME records follow the DKIM protocol.</p>
+          <p>Most DNS changes show up within five hours, and full propagation can take up to 48 hours. If the domain still won't verify, compare each CNAME record in HubSpot with the record at your DNS host. The usual fix is to enter the host name without the root domain, because some DNS hosts add it again and create a duplicated root domain.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
-        <figure class="shot"><a href="domains.webp"><img src="domains.webp" alt="Domains and URLs Email Sending tab with Connect sending domain button and two domains not authenticated" width="800" height="553" loading="lazy"></a><figcaption>Email Sending (1), Connect sending domain (2), and the status (3).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>A duplicated root domain in the host field is the error to look for first.</p>
-        <h2>3. Related</h2>
-        <p><a href="../connect-email-sending-domain-spf/">Connecting a sending domain</a> and <a href="../dmarc-for-hubspot-email/">DMARC</a>.</p>
+        <h2>1. Find the sending domains</h2>
+        <p>Open <span class="ui">Settings</span>, then <span class="ui">Content</span>, then <span class="ui">Domains &amp; URLs</span>, and select the <span class="ui">Email Sending</span> tab. Each domain shows its status. <span class="ui">Connect sending domain</span> starts a new one.</p>
+        <figure class="shot"><a href="domains.webp"><img src="domains.webp" alt="Domains and URLs Email Sending tab with the Connect sending domain button and domain status rows" width="800" height="553" loading="lazy"></a><figcaption>The Email Sending tab. Domain names are blurred. A domain marked Not authenticated needs its DNS records checked.</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Two sending domains showed Not authenticated at the same time,. You may have something like this.</p></div>
+
+        <h2>2. Compare the records</h2>
+        <p>On the <span class="ui">Verify URLs</span> step, HubSpot shows a banner when it can't connect a record. It groups the problem as a typo, a missing record, or a conflicting record. Open your DNS host and confirm the CNAME records match the host name and values HubSpot gives you. Then select <span class="ui">Refresh</span> or check them again in HubSpot.</p>
+
+        <h2>3. Remove the duplicated root domain</h2>
+        <p>Some DNS hosts add your domain to the end of each record by default. For a DKIM record, that turns <code>hs1-123456._domainkey.example.com</code> into a record ending in <code>example.com.example.com</code>. Enter the host name without the domain, such as <code>hs1-123456._domainkey</code>. Some DNS hosts reject characters such as underscores or hyphens in a CNAME; if yours does, contact its support.</p>
+
+        <h2>4. Check with Dig</h2>
+        <p>Use a DNS lookup tool such as Dig to check the record at the public DNS level. Set the type to CNAME for an email sending domain. The result should match the value HubSpot provides, which for an email sending domain looks like <code>yourdomain-com.hs[#]a.dkim.hubspotemail.net.</code> or the b variant.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/suspendings-sending-emails/12991">HubSpot Community question: Suspendings sending emails</a></li>
-          <li><a href="https://knowledge.hubspot.com/email/troubleshoot-your-email-sending-domain">HubSpot Knowledge Base: Troubleshoot your email sending domain</a></li>
+          <li><a href="https://knowledge.hubspot.com/email/troubleshoot-your-email-sending-domain">HubSpot Knowledge Base: Troubleshoot domain connection</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/manage-email-authentication-in-hubspot">HubSpot Knowledge Base: Manage your email authentication</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
