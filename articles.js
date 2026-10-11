@@ -74,6 +74,7 @@ var ARTICLES = [
     tier: 'All tiers, including free',
     permissions: 'Any user',
     verified: '2026-10-02',
+    validated: '2026-10-11 15:15 ET',
     published: '2026-10-02',
     minutes: 1,
     difficulty: 'Beginner',
