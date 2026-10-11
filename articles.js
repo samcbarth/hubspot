@@ -12396,7 +12396,7 @@ var ARTICLES = [
   {
     slug: "chrome-extension-troubleshoot",
     title: "HubSpot Sales Chrome extension not working",
-    excerpt: "HubSpot's checks when the Sales Chrome extension doesn't show in Gmail.",
+    excerpt: "Update Chrome and the Sales extension first, then check the Chrome profile, release track and logging settings.",
     type: "tip",
     problem: "Fix it",
     hubs: ["Sales Hub"],
@@ -12404,6 +12404,7 @@ var ARTICLES = [
     tier: "All tiers",
     permissions: "Connected inbox user",
     verified: "2026-10-07",
+    validated: "2026-10-11 16:00 ET",
     published: "2026-10-07",
     minutes: 2,
     difficulty: "Beginner",
@@ -12676,8 +12677,8 @@ var ARTICLES = [
     tier: "All tiers",
     permissions: "Domain settings access",
     verified: "2026-10-07",
-    published: "2026-10-07",
     validated: "2026-10-11 16:10 ET",
+    published: "2026-10-07",
     minutes: 2,
     difficulty: "Intermediate",
     keywords: ["email sending domain not verifying", "dkim cname hubspot", "dns propagation hubspot", "duplicated root domain dns"]

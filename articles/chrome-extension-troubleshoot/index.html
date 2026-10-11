@@ -22,7 +22,7 @@
 <meta property="og:description" content="HubSpot's checks when the Sales Chrome extension doesn't show in Gmail.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-10-11">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -33,7 +33,7 @@
       "headline": "HubSpot Sales Chrome extension not working",
       "description": "HubSpot's checks when the Sales Chrome extension doesn't show in Gmail.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-10-11",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/og.png",
@@ -87,12 +87,12 @@
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Fix it</span><span class="badge">Sales Hub</span></div>
       <h1>HubSpot Sales Chrome extension not working</h1>
-      <p class="dek">Check the Chrome profile first.</p>
+      <p class="dek">Update Chrome and the extension first, then check the profile and the logging settings that control what the extension logs.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Connected inbox user</dd></div>
         <div class="fact"><dt>Time</dt><dd>2 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T16:00:00-04:00">October 11, 2026, 4:00 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,21 +102,23 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: a working install shows the <strong>sprocket icon</strong> in the Chrome bar and in Gmail. Extensions are tied to a <strong>Chrome profile</strong>, so installing in one profile won't show it in another. Update to the latest version as a first step.</p>
+          <p>HubSpot's first step is to update Chrome and the HubSpot Sales Chrome extension. If it still fails, confirm you are signed into the Chrome profile where the extension is installed, and that Google's Rapid Release track is not in use, since HubSpot says that track is not compatible with the extension.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
-        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Ask which Chrome profile the user is signed into before anything else.</p>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-sales-extension/">Sales extension</a> and <a href="../sales-extension-settings/">its settings</a>.</p>
+        <h2>1. Update Chrome and the extension</h2>
+        <p>HubSpot's troubleshooting guide starts with updating your Chrome browser and the extension. Do this before anything else.</p>
+
+        <h2>2. Check the profile and the release track</h2>
+        <p>Confirm the user is in the Chrome profile where the extension is installed. If the browser is on Google's Rapid Release track, switch to a supported channel. HubSpot's install guide notes the incompatibility directly.</p>
+
+        <h2>3. Check the logging settings</h2>
+        <p>The extension's logging behavior is set in HubSpot. Go to <span class="ui">Settings</span>, <span class="ui">Objects</span>, then <span class="ui">Activities</span>, and open <span class="ui">Email Log &amp; Track</span>. The attachment setting and the default log setting for Sales Extension users both live here.</p>
+        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="543" height="898" loading="lazy"></a><figcaption>The Email log and track settings. The default log setting applies only to Sales Extension users when turned on.</figcaption></figure>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/chrome-extension-not-working/651">HubSpot Community question: Chrome Extension not working</a></li>
           <li><a href="https://knowledge.hubspot.com/connected-email/troubleshooting-the-hubspot-sales-chrome-extension">HubSpot Knowledge Base: Troubleshoot the HubSpot Sales Chrome extension</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/how-to-install-hubspot-sales">HubSpot Knowledge Base: Install HubSpot Sales for Gmail, Office 365, and Outlook desktop</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

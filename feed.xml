@@ -6365,7 +6365,7 @@
     <link>https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/</link>
     <guid>https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s checks when the Sales Chrome extension doesn&#39;t show in Gmail.</description>
+    <description>Update Chrome and the Sales extension first, then check the Chrome profile, release track and logging settings.</description>
     <category>Sales Hub</category>
     <category>Sales extension</category>
   </item>
