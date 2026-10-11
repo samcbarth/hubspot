@@ -160,6 +160,7 @@ var ARTICLES = [
     permissions: "Import access and Edit property settings",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 17:00 ET",
     minutes: 25,
     difficulty: "Intermediate",
     keywords: ["record id", "import update", "enrich", "naics"],
