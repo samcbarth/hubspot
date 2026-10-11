@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Private beta (invite only at the time of writing)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Private or legacy app with the required read scopes</dd></div>
         <div class="fact"><dt>Time</dt><dd>6 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:05:00-04:00">October 11, 2026, 3:05 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -107,13 +107,14 @@
         </div>
 
         <h2>1. What HubSQL is</h2>
-        <p>HubSpot describes HubSQL as a data access layer for running standard SQL, with joins, filters, and aggregations, against your CRM data. It entered private beta in September 2026 and access is by invitation. HubSpot had not published full public documentation when I wrote this, so check the docs HubSpot gave your account and treat everything below as my testing on one portal.</p>
+        <p>HubSpot describes HubSQL as a data access layer for running standard SQL, with joins, filters, and aggregations, against your CRM data. It is in private beta and access is by invitation. HubSpot had not published full public documentation when I wrote this, so check the docs HubSpot gave your account and treat everything below as my testing on one portal.</p>
 
         <h2>2. What it is not</h2>
         <p>When asked whether it could integrate with other SQL servers, my answer was no, not directly. It is an HTTP API that returns query results. It is not a database you can point another server at. To get HubSpot data into another system, write a sync script that runs the query and loads the results, and keep it inside the beta rate limits. In my test it was also read-only.</p>
 
         <h2>3. The 403 MISSING_SCOPES fix</h2>
         <p>My first query to a portal that had the beta turned on returned <code>403 MISSING_SCOPES</code>. Beta access was fine. The token's app simply did not have the read scopes the query needed. After I added them to the app, the same deal-by-stage query returned HTTP 200 with about 1,700 deals across 22 stages.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. The first query failed with 403 MISSING_SCOPES on a token that already worked for other calls, and the fix was adding read scopes to that token's app. You may have something like this.</p></div>
         <p>HubSpot has moved private apps into the Legacy Apps page, so look for your app there.</p>
         <figure class="shot"><a href="moved.webp"><img src="moved.webp" alt="Private Apps page saying Your private apps have moved with the Go to Legacy Apps button highlighted" width="800" height="613" loading="lazy"></a><figcaption>Private apps now point you to Legacy Apps.</figcaption></figure>
         <figure class="shot"><a href="legacy-apps.webp"><img src="legacy-apps.webp" alt="Legacy Apps list with two private apps and the Create legacy app button highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Legacy Apps list. Open the app that owns your token to change its scopes.</figcaption></figure>
