@@ -49,7 +49,7 @@
         {"@type": "HowToStep", "name": "Set the trigger", "text": "Enroll contacts whose lifecycle stage is Lead and whose create date is after the day you launch the workflow."},
         {"@type": "HowToStep", "name": "Mark the lead as new", "text": "Set Lead status to New so reps can filter for uncontacted leads."},
         {"@type": "HowToStep", "name": "Wait, then branch", "text": "Delay one day and branch on whether Last contacted is known."},
-        {"@type": "HowToStep", "name": "Create the call task", "text": "On the not contacted branch create a high priority call task for the contact owner."},
+        {"@type": "HowToStep", "name": "Create the call task", "text": "On the not contacted branch create a call task with the 24 hour SLA in its title."},
         {"@type": "HowToStep", "name": "Escalate", "text": "Delay two more days, branch again, and email the owner if the lead is still uncontacted."}
       ]
     },
@@ -94,7 +94,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>20 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:10:00-04:00">October 11, 2026, 3:10 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -104,7 +104,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Enroll new Leads, set <span class="ui">Lead status</span> to New, wait a day, then branch on <span class="ui">Last contacted</span>. If it is empty, create a high priority call task for the owner. Wait two more days, check again, and send the owner an internal email if the lead is still untouched. I built this for a home builder, where the same SLA applied to walk-in leads entered by the on-site team as well as online ones.</p>
+          <p>Enroll new Leads, set <span class="ui">Lead status</span> to New, wait a day, then branch on <span class="ui">Last contacted</span>. If it is empty, create a call task. Wait two more days, check again, and send the owner an internal email if the lead is still untouched. The same SLA can also cover leads a team enters by hand, such as walk-ins, not only form fills.</p>
         </div>
 
         <h2>1. Enroll only new leads</h2>
@@ -113,7 +113,9 @@
         <div class="callout warn"><span class="callout-title">Re-enroll stays off</span><p>With re-enrollment off, each contact gets the SLA once. Turn it on only if a lead that returns should restart the clock. See <a href="../workflow-wont-re-enroll/">why records fail to re-enroll</a>.</p></div>
 
         <h2>2. Wait, check, create the task</h2>
-        <p>The first action sets <span class="ui">Lead status</span> to New. Then add a one day delay and a branch that asks whether <span class="ui">Last contacted</span> is unknown. If it is, the lead has not been touched, so the next action creates a call task, high priority, assigned to the contact owner.</p>
+        <p>The first action sets <span class="ui">Lead status</span> to New. Then add a one day delay and a branch that asks whether <span class="ui">Last contacted</span> is unknown. If it is, the lead has not been touched, so the next action creates a call task.</p>
+        <figure class="shot"><a href="branch.webp"><img src="branch.webp" alt="Branch step with Not contacted yet group checking Last contacted is unknown" width="543" height="898" loading="lazy"></a><figcaption>Branch (3): Not contacted yet when Last contacted is unknown. Everything else goes to Contacted.</figcaption></figure>
+        <figure class="shot"><a href="task.webp"><img src="task.webp" alt="Create task step set to Call type with a Call new lead title and due immediately" width="543" height="898" loading="lazy"></a><figcaption>Create task (4): a Call task with a title that names the 24 hour SLA and a note. It is due immediately.</figcaption></figure>
         <figure class="shot"><a href="flow-top.webp"><img src="flow-top.webp" alt="Workflow canvas showing Delay, Branch, and Create task steps highlighted" width="800" height="655" loading="lazy"></a><figcaption>Delay (1), branch on Last contacted (2), then the call task on the Not contacted yet path (3).</figcaption></figure>
         <p>Last contacted is the property HubSpot fills when a sales activity is logged on the contact, so a rep who calls and logs it satisfies the check. Confirm that your team logs activity the way you expect before you rely on it.</p>
 
@@ -122,9 +124,10 @@
         <figure class="shot"><a href="flow-bottom.webp"><img src="flow-bottom.webp" alt="Second delay, second branch, and Send internal email notification steps highlighted" width="800" height="655" loading="lazy"></a><figcaption>Second delay (1), second check (2), and the owner email (3).</figcaption></figure>
         <ul>
           <li>Send the escalation to the owner first. Add the manager only when you are sure the lead is not contacted.</li>
-          <li>Pick one SLA for every lead source. The home builder asked whether walk-ins should be exempt and the answer was no, same rules for everyone, so the funnel numbers stay whole.</li>
+          <li>Pick one SLA for every lead source. Exempting one source makes the funnel numbers hard to compare.</li>
           <li>Use a task, not just an email, for the first step so the work shows up in the rep's task queue.</li>
         </ul>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. The demo workflow in these screenshots runs the same two-step check: one day for the call task, two more days before the owner email. Your timing and owners will differ. You may have something like this.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">
