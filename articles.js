@@ -1345,6 +1345,7 @@ var ARTICLES = [
     tier: "All tiers",
     permissions: "Super Admin for the account-wide list",
     verified: "2026-10-03",
+    validated: "2026-10-11 15:15 ET",
     published: "2026-10-03",
     minutes: 5,
     difficulty: "Beginner",
