@@ -92,7 +92,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T14:45:00-04:00">October 11, 2026, 2:45 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -106,7 +106,8 @@
         </div>
 
         <h2>1. Why the report says zero</h2>
-        <p>In an audit of one of my own portals, deals were being created and worked while the contacts behind them never changed lifecycle stage. HubSpot's lifecycle stage is a property on the contact. A report of SQLs reads that property. If it is never set to Sales Qualified Lead, the number is zero no matter how healthy the pipeline looks. The fix is to connect the two: the deal stage is the event, the contact lifecycle stage is the result.</p>
+        <p>A common cause is that deals move through the pipeline while the contacts behind them never change lifecycle stage. HubSpot's lifecycle stage is a property on the contact. A report of SQLs reads that property. If it is never set to Sales Qualified Lead, the number is zero no matter how healthy the pipeline looks. The fix is to connect the two: the deal stage is the event, the contact lifecycle stage is the result.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Deals were being created and worked while the contacts attached to them stayed at their old lifecycle stage, so the SQL report read zero. You may have something like this.</p></div>
 
         <h2>2. Trigger on the deal stage</h2>
         <p>In <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> create a deal-based workflow. Enroll deals when <span class="ui">Deal stage</span> is any of the stages that mean "this is qualified" for you. In my demo it is Qualification or Discovery in the enterprise pipeline.</p>

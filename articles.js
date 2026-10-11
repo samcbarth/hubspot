@@ -124,6 +124,7 @@ var ARTICLES = [
     tier: "Professional or Enterprise",
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
+    validated: "2026-10-11 14:45 ET",
     published: "2026-10-03",
     minutes: 15,
     difficulty: "Intermediate",
