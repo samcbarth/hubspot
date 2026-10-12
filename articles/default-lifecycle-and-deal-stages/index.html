@@ -13,13 +13,13 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names) - HubSpot Field Notes</title>
-<meta name="description" content="The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.">
+<title>HubSpot's default lifecycle stages, lead statuses, and deal stages - HubSpot Field Notes</title>
+<meta name="description" content="The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, in order, with the lifecycle internal values for imports and workflows.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/">
-<meta property="og:title" content="HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names)">
-<meta property="og:description" content="The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.">
+<meta property="og:title" content="HubSpot's default lifecycle stages, lead statuses, and deal stages">
+<meta property="og:description" content="The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, in order, with the lifecycle internal values for imports and workflows.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/og.png">
 <meta property="article:published_time" content="2026-10-03">
 <meta property="article:modified_time" content="2026-10-03">
@@ -30,8 +30,8 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names)",
-      "description": "The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.",
+      "headline": "HubSpot's default lifecycle stages, lead statuses, and deal stages",
+      "description": "The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, in order, with the lifecycle internal values for imports and workflows.",
       "datePublished": "2026-10-03",
       "dateModified": "2026-10-03",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
@@ -55,7 +55,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names)", "item": "https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot's default lifecycle stages, lead statuses, and deal stages", "item": "https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/" }
       ]
     }
   ]
@@ -86,13 +86,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Properties">Properties</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Sales Hub</span></div>
-      <h1>HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names)</h1>
+      <h1>HubSpot's default lifecycle stages, lead statuses, and deal stages</h1>
       <p class="dek">Someone asks what HubSpot's standard stages are, or you need the exact internal value for an import file. Here they are, checked in a live portal.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>All tiers (editing stages needs Professional for some objects)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Any user can view; Edit property settings to change</dd></div>
         <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:55:00-04:00">October 11, 2026, 5:55 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,7 +102,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Default lifecycle stages: Subscriber, Lead, Marketing Qualified Lead, Sales Qualified Lead, Opportunity, Customer, Evangelist, Other. Default lead statuses: New, Open, In Progress, Open Deal, Unqualified, Attempted to Contact, Connected, Bad Timing. Default Sales Pipeline: Appointment Scheduled, Qualified To Buy, Presentation Scheduled, Decision Maker Bought-In, Contract Sent, Closed Won, Closed Lost. Internal names are below, because imports and APIs need them, not the labels.</p>
+          <p>Default lifecycle stages, in order: Subscriber, Lead, Marketing Qualified Lead, Sales Qualified Lead, Opportunity, Customer, Evangelist, Other. Default lead statuses: New, Open, In Progress, Open Deal, Unqualified, Attempted to Contact, Connected, Bad Timing. Default Sales Pipeline stages: Appointment scheduled, Qualified to buy, Presentation scheduled, Decision maker bought-in, Contract sent, Closed won, Closed lost. Imports and APIs need the internal values, not the labels, so check those in your portal before you write a file.</p>
         </div>
 
         <h2>1. Lifecycle stages</h2>
@@ -119,30 +119,31 @@
         </ol>
         <figure class="shot"><a href="lifecycle.webp"><img src="lifecycle.webp" alt="Lifecycle Stage property options list showing labels and internal names with the internal name column highlighted" width="800" height="613" loading="lazy"></a><figcaption>Lifecycle Stage options and internal names. The With value column counts contacts in each stage.</figcaption></figure>
         <div class="callout"><span class="callout-title">Use the internal name in files</span><p>Workflows, forms, and API calls use the internal value. The label "Sales Qualified Lead" and the value <code>salesqualifiedlead</code> are not the same string in code.</p></div>
+        <p>The default property only moves forward through automatic updates. To set an earlier stage, clear the value first, manually or in a workflow.</p>
 
         <h2>2. Lead status</h2>
-        <p>Lead Status is a separate contact property. In the default setup the options are New (<code>NEW</code>), Open (<code>OPEN</code>), In Progress (<code>IN_PROGRESS</code>), Open Deal (<code>OPEN_DEAL</code>), Unqualified (<code>UNQUALIFIED</code>), Attempted to Contact (<code>ATTEMPTED_TO_CONTACT</code>), Connected (<code>CONNECTED</code>), and Bad Timing (<code>BAD_TIMING</code>). Many portals edit these, so check yours before copying a list.</p>
+        <p>Lead Status is a separate property. It describes the sub-stages within Sales Qualified Lead. The default options are New, Open, In Progress, Open Deal, Unqualified, Attempted to Contact, Connected, and Bad Timing. Many portals edit these, so check yours before you copy a list. Open the property's options to see the internal value for each one.</p>
 
         <h2>3. The default Sales Pipeline</h2>
         <p>On the <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-3/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-3/views/all/list"><span class="ui">Deals</span></a> page, the pipeline picker lists every pipeline in the account. The default one is called Sales Pipeline. <span class="ui">Manage pipelines</span> at the bottom of the list opens the settings page.</p>
         <figure class="shot"><a href="pipeline-picker.webp"><img src="pipeline-picker.webp" alt="Deals board pipeline picker listing pipelines with Manage pipelines highlighted" width="800" height="613" loading="lazy"></a><figcaption>The pipeline picker. Manage pipelines opens pipeline settings.</figcaption></figure>
-        <p>Choosing Sales Pipeline shows its seven stages as columns on the board.</p>
+        <p>Choosing Sales Pipeline shows its stages as columns on the board.</p>
         <figure class="shot"><a href="board.webp"><img src="board.webp" alt="Deals board for the Sales Pipeline showing stage columns with the stage names highlighted" width="800" height="613" loading="lazy"></a><figcaption>Sales Pipeline stage columns. Deal names are blurred.</figcaption></figure>
-        <p>The stages, in order, with their internal IDs and default win probabilities:</p>
+        <p>The default deal stages, in order, with their default probabilities:</p>
         <ul>
-          <li>Appointment Scheduled (<code>appointmentscheduled</code>, 20%)</li>
-          <li>Qualified To Buy (<code>qualifiedtobuy</code>, 40%)</li>
-          <li>Presentation Scheduled (<code>presentationscheduled</code>, 60%)</li>
-          <li>Decision Maker Bought-In (<code>decisionmakerboughtin</code>, 80%)</li>
-          <li>Contract Sent (<code>contractsent</code>, 90%)</li>
-          <li>Closed Won (<code>closedwon</code>, 100%)</li>
-          <li>Closed Lost (<code>closedlost</code>, 0%)</li>
+          <li>Appointment scheduled (20%)</li>
+          <li>Qualified to buy (40%)</li>
+          <li>Presentation scheduled (60%)</li>
+          <li>Decision maker bought-in (80%)</li>
+          <li>Contract sent (90%)</li>
+          <li>Closed won (100%, won)</li>
+          <li>Closed lost (0%, lost)</li>
         </ul>
-        <p>Custom pipelines you create get numeric stage IDs instead, so look them up before you import deals into them.</p>
+        <p>To see a stage's internal ID, open the pipeline in the settings, then hover over the stage and click the internal name icon. Use that value in integrations and imports. Custom pipelines have their own stages, so look up their IDs the same way.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use contact and company lifecycle stages</a></li>
           <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
         </ul>

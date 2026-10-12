@@ -8985,11 +8985,11 @@
     <category>Performance</category>
   </item>
   <item>
-    <title>HubSpot&#39;s default lifecycle stages, lead statuses, and deal stages (with internal names)</title>
+    <title>HubSpot&#39;s default lifecycle stages, lead statuses, and deal stages</title>
     <link>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</link>
     <guid>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.</description>
+    <description>The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, in order, with the lifecycle internal values for imports and workflows.</description>
     <category>Smart CRM</category>
     <category>Sales Hub</category>
     <category>Properties</category>

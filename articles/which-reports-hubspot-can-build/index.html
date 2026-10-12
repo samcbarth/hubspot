@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Custom reports need Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Create and own, and Edit reports</dd></div>
         <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:50:00-04:00">October 11, 2026, 5:50 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Use a <strong>single object report</strong> when one object (contacts, deals, tickets) answers the question. It cannot join other data, but it updates quickly. Use the <strong>custom report builder</strong> when you need related objects or activities, accepting slower refreshes. <strong>Funnel</strong> reports measure stage conversion, and <strong>attribution</strong> reports are Marketing Hub or Content Hub Enterprise. Custom reports need Professional or Enterprise and create and own permissions.</p>
+          <p>Use a <strong>single object report</strong> when one object (contacts, deals, tickets) answers the question. It cannot join other data, but it typically updates faster because it queries the live CRM. Use the <strong>custom report builder</strong> when you need related objects or data sources. Those reports can take longer to configure and refresh about every two hours. <strong>Funnel</strong> reports measure conversion between stages. <strong>Attribution</strong> reports need Marketing Hub or Content Hub Enterprise, and deal create and revenue attribution need Marketing Hub Enterprise. Creating custom reports needs Professional or Enterprise, plus create and own and edit report permissions.</p>
         </div>
 
         <h2>1. Where reports start</h2>
@@ -113,22 +113,22 @@
         <h2>2. The Create menu</h2>
         <p>The <span class="ui">Create</span> button offers Create dashboard, Create report, and Create report with AI.</p>
         <figure class="shot"><a href="create-menu.webp"><img src="create-menu.webp" alt="Reports Create menu with Create report and Create report with AI highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Create menu.</figcaption></figure>
-        <div class="callout warn"><span class="callout-title">You may be blocked by permissions</span><p>Report creation depends on permissions, not just subscription. With a user who lacks them, the menu item shows a tooltip and does nothing.</p></div>
+        <div class="callout warn"><span class="callout-title">Permissions can block creation</span><p>Report creation depends on permissions as well as subscription. For a user without them, the menu item shows a tooltip and does not open the builder. An admin can change this in Users and Teams.</p></div>
         <figure class="shot"><a href="no-access.webp"><img src="no-access.webp" alt="Tooltip saying you don't have access to create reports and to ask an admin to change permissions in Users and Teams" width="800" height="613" loading="lazy"></a><figcaption>The tooltip when the user lacks report creation permission.</figcaption></figure>
 
         <h2>3. The types, in the order to try them</h2>
         <ul>
-          <li><strong>Single object report.</strong> One object only, for example contacts by lifecycle stage. Cannot join other data. It queries the live CRM, so it updates quickly.</li>
-          <li><strong>Custom report builder.</strong> A primary data source plus related objects or sources, with extra fields and calculations. More capable, more complex, and it refreshes more slowly, about every two hours.</li>
-          <li><strong>Funnel reports.</strong> Conversion between lifecycle or pipeline stages. Enterprise can also build custom event funnels.</li>
-          <li><strong>Attribution reports.</strong> Contact, deal create, and revenue attribution. These are Marketing Hub or Content Hub Enterprise, and deal create and revenue attribution need Marketing Hub Enterprise.</li>
-          <li><strong>One-to-one email reports.</strong> Opens, clicks, and replies over time.</li>
+          <li><strong>Single object report.</strong> One object only, for example contacts by lifecycle stage. It cannot join other data sources. It queries the live CRM, so it typically updates faster.</li>
+          <li><strong>Custom report builder.</strong> A primary data source plus related objects or data sources, with extra fields and calculations. More capable and more complex to set up. Custom reports refresh about every two hours.</li>
+          <li><strong>Funnel reports.</strong> Conversion rates between lifecycle or pipeline stages. Enterprise can also build a custom events funnel.</li>
+          <li><strong>Attribution reports.</strong> Contact attribution needs Marketing Hub or Content Hub Enterprise. Deal create and revenue attribution need Marketing Hub Enterprise.</li>
+          <li><strong>One-to-one email reports.</strong> Open, click, and reply rates over time. Professional and Enterprise only.</li>
         </ul>
 
         <h2>4. Two limits to check first</h2>
         <ul>
-          <li>The number of custom reports depends on your subscription, and multiple subscriptions of the same tier do not add their limits together.</li>
-          <li>Creating a report needs create and own plus edit report permissions in Users and Teams.</li>
+          <li>The number of custom reports depends on your subscription. Multiple subscriptions of the same tier do not add their limits together.</li>
+          <li>Creating a custom report needs create and own plus edit report permissions in Users and Teams.</li>
         </ul>
 
         <h2>Sources</h2>

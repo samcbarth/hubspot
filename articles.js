@@ -313,6 +313,7 @@ var ARTICLES = [
     permissions: "Create and own, and Edit reports",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 17:50 ET",
     minutes: 8,
     difficulty: "Beginner",
     keywords: ["custom report", "report builder", "report types", "funnel"],
@@ -353,8 +354,8 @@ var ARTICLES = [
   },
   {
     slug: "default-lifecycle-and-deal-stages",
-    title: "HubSpot's default lifecycle stages, lead statuses, and deal stages (with internal names)",
-    excerpt: "The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, with the internal values you need for imports, workflows, and APIs.",
+    title: "HubSpot's default lifecycle stages, lead statuses, and deal stages",
+    excerpt: "The out-of-the-box HubSpot lifecycle stages, lead statuses, and default Sales Pipeline deal stages, in order, with the lifecycle internal values for imports and workflows.",
     type: "tip",
     problem: "How to",
     hubs: ["Smart CRM", "Sales Hub"],
@@ -363,6 +364,7 @@ var ARTICLES = [
     permissions: "Any user can view; Edit property settings to change",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 17:55 ET",
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["lifecycle stages", "lead status", "deal stages", "internal names", "default pipeline"]
