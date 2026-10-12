@@ -8939,7 +8939,7 @@
     <link>https://hubspot.samcbarth.com/articles/offline-sources-explained/</link>
     <guid>https://hubspot.samcbarth.com/articles/offline-sources-explained/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Offline Sources in HubSpot means a record was created outside tracked web traffic, such as an import, the API, a connected app, or by hand. How to break it apart with the drill-down properties.</description>
+    <description>Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.</description>
     <category>Marketing Hub</category>
     <category>Smart CRM</category>
     <category>Properties</category>

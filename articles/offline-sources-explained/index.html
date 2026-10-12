@@ -14,12 +14,12 @@
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
 <title>HubSpot 'Offline Sources' is not offline: how to see what created those contacts - HubSpot Field Notes</title>
-<meta name="description" content="Offline Sources in HubSpot means a record was created outside tracked web traffic, such as an import, the API, a connected app, or by hand. How to break it apart with the drill-down properties.">
+<meta name="description" content="Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/offline-sources-explained/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/offline-sources-explained/">
 <meta property="og:title" content="HubSpot 'Offline Sources' is not offline: how to see what created those contacts">
-<meta property="og:description" content="Offline Sources in HubSpot means a record was created outside tracked web traffic, such as an import, the API, a connected app, or by hand. How to break it apart with the drill-down properties.">
+<meta property="og:description" content="Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/offline-sources-explained/og.png">
 <meta property="article:published_time" content="2026-10-03">
 <meta property="article:modified_time" content="2026-10-03">
@@ -31,7 +31,7 @@
     {
       "@type": "TechArticle",
       "headline": "HubSpot 'Offline Sources' is not offline: how to see what created those contacts",
-      "description": "Offline Sources in HubSpot means a record was created outside tracked web traffic, such as an import, the API, a connected app, or by hand. How to break it apart with the drill-down properties.",
+      "description": "Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.",
       "datePublished": "2026-10-03",
       "dateModified": "2026-10-03",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers for the properties; reports need Professional</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Any user who can view contacts</dd></div>
         <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:40:00-04:00">October 11, 2026, 5:40 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,33 +103,34 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p><strong>Offline Sources</strong> is HubSpot's original source value for a record that did not arrive through tracked web traffic: an import, the API, a connected app, a sales or CRM entry. The two drill-down properties hold the detail. Drill-Down 1 names the creation channel (for example import, API, or CRM UI) and Drill-Down 2 gives the specific app or method. In my own portal this split showed that old records were mostly imports, while newer ones came from connectors and automatic enrichment.</p>
+          <p><strong>Offline Sources</strong> is one of the traffic source values HubSpot assigns to a record. It is a bucket for records that did not come from a tracked web source. It does not say how the record was created. HubSpot's knowledge base points to the <strong>Record Source</strong> property for that, which covers imports, integrations, the mobile app, and records entered by hand. Use the traffic drill-down properties for web detail, and Record Source for the offline detail.</p>
         </div>
 
         <h2>1. What the property is called</h2>
-        <p>Older articles call it Original source. In the property settings it is labeled <span class="ui">Original Traffic Source</span>, with <span class="ui">Original Traffic Source Drill-Down 1</span> and <span class="ui">Drill-Down 2</span> beside it. Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search "original source" to see all three.</p>
+        <p>The property is <span class="ui">Original Traffic Source</span>, with <span class="ui">Original Traffic Source Drill-Down 1</span> and <span class="ui">Drill-Down 2</span> beside it. A matching <span class="ui">Latest Traffic Source</span> property tracks the most recent web source. Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search "original source" to see them.</p>
         <figure class="shot"><a href="properties.webp"><img src="properties.webp" alt="Contact properties filtered to original source showing Original Traffic Source and its two drill-down properties highlighted" width="800" height="613" loading="lazy"></a><figcaption>The source property and its two drill-downs.</figcaption></figure>
 
         <h2>2. See the values</h2>
-        <p>Open the property to see its dropdown options and how many records hold each. In this demo portal almost every contact, about 180,000 of them, is Offline Sources, because they were loaded by import and sample data and not visits to a website. You can read the internal names here, such as <code>OFFLINE</code>.</p>
+        <p>Open the property to see its dropdown options and how many records hold each. In this demo portal most contacts are Offline Sources. They were created by a mock import, so they have no web visit behind them. The internal name is <code>OFFLINE</code>.</p>
         <figure class="shot"><a href="options.webp"><img src="options.webp" alt="Original Traffic Source dropdown options with Offline Sources and its record count highlighted" width="800" height="613" loading="lazy"></a><figcaption>Offline Sources (internal name OFFLINE) and its record count.</figcaption></figure>
-        <div class="callout"><span class="callout-title">Read only</span><p>HubSpot sets this property automatically when a record is created. It does not change later, and this login cannot edit it. That is the point: it records how the record arrived.</p></div>
+        <div class="callout"><span class="callout-title">Set by HubSpot</span><p>HubSpot sets the Original Traffic Source from the first known web source and does not let you edit the drill-down properties by hand. Changing a record's traffic source clears its drill-down values.</p></div>
         <figure class="shot"><a href="details.webp"><img src="details.webp" alt="Original Traffic Source property details showing label, internal name hs_analytics_source, and Web analytics history group" width="800" height="613" loading="lazy"></a><figcaption>Label, internal name hs_analytics_source, and its group, Web analytics history.</figcaption></figure>
 
-        <h2>3. Break the bucket apart</h2>
-        <p>In <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a>, filter Original Traffic Source to Offline Sources and add the two drill-down columns. Drill-Down 1 is the channel that created the record, with values such as import, API, sales tools, or a connected app. Drill-Down 2 is the specific method or app. Count rows per value and you know whether you have an import problem, an integration problem, or people creating records by hand.</p>
-        <p>I did this for my own portal. Older records were mostly imports. Newer ones were mostly my AI connector and automatic creation from email and meeting activity. The revenue that looked like Offline came from hand-entered records and records created by meeting enrichment, not from list imports.</p>
+        <h2>3. Find out how the record was created</h2>
+        <p>For web traffic, the drill-down properties give the channel and the specific source. Offline Sources has no web detail, so look at the <span class="ui">Record Source</span> property instead. It shows how each record was created, for every object. HubSpot recommends it for this question in place of the Offline Sources value. The steps are in the knowledge base article linked below.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Older records were mostly imports, and newer ones came from a connector and from automatic creation from email and meeting activity. Looking at the drill-downs alone did not show that. You may have something like this.</p></div>
 
         <h2>4. What to do with the answer</h2>
         <ul>
-          <li><strong>Mostly imports:</strong> add your own source property on import so you can tell lists apart.</li>
-          <li><strong>Mostly integrations:</strong> check whether the app can set a source, or add a workflow that stamps one.</li>
-          <li><strong>Hand-entered:</strong> that is real sales-sourced pipeline. Report it as its own channel instead of Offline.</li>
+          <li><strong>Mostly imports:</strong> add your own source property on the import so you can tell lists apart.</li>
+          <li><strong>Mostly integrations:</strong> check whether the app can set a source, or add a workflow that sets one.</li>
+          <li><strong>Entered by hand:</strong> report it under its own name instead of Offline Sources, since it is neither an import nor a web visit.</li>
         </ul>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/properties/understand-traffic-source-properties">HubSpot Knowledge Base: Understand traffic source properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/understand-traffic-source-properties">HubSpot Knowledge Base: Understand Original and Latest traffic source properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/view-and-use-the-record-source-property">HubSpot Knowledge Base: Use the record source property</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/create-and-edit-properties">HubSpot Knowledge Base: Create and edit properties</a></li>
         </ul>
 
