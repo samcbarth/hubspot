@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise (performance notifications are Enterprise)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T19:15:00-04:00">October 11, 2026, 7:15 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -107,12 +107,12 @@
         </div>
 
         <h2>1. Open Settings</h2>
-        <p>Open a workflow from <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> and click <span class="ui">Settings</span> in the menu under the workflow name. A panel slides in from the right. I am showing a demo workflow that is turned off. The toggles are all off here, which is the default.</p>
+        <p>Open a workflow from <a class="hs-link" data-hs="/workflows/{portalId}" href="https://app.hubspot.com/l/workflows"><span class="ui">Workflows</span></a> and click <span class="ui">Settings</span> in the top left. A panel slides in from the right. I am showing a demo workflow that is turned off. The toggles are all off here, which is the default.</p>
 
         <h2>2. Schedule when actions can run</h2>
         <p>Three toggles control timing:</p>
         <ol>
-          <li><strong>Run actions on specific dates and times only.</strong> Limits actions to days and hours you choose, based on your account time zone. Records that reach an action outside the window wait for the next slot. HubSpot's own caveat: delays and if/then branches are not rescheduled, but the action after them is.</li>
+          <li><strong>Run actions on specific dates and times only.</strong> Limits actions to days and hours you choose, based on your account time zone. Records that reach an action outside the window are rescheduled to the earliest available time, within a 15-minute window to spread the load. HubSpot's own caveat: delays and if/then branches are not rescheduled, but the action after them is.</li>
           <li><strong>Pause actions on specific dates.</strong> Records still enroll, but they pause at the next action after any delay or branch ends. You can repeat a date every year.</li>
           <li><strong>Schedule this workflow to turn off automatically.</strong> Picks a future date and time. Any runs in progress end early.</li>
         </ol>
@@ -122,7 +122,7 @@
         <h2>3. Analyze performance</h2>
         <p>Two notification toggles and one metrics toggle:</p>
         <ul>
-          <li><strong>Get notified about workflow issues.</strong> Alerts you when the workflow needs review.</li>
+          <li><strong>Get notified when this workflow needs review.</strong> Alerts you when the workflow needs review.</li>
           <li><strong>Get notified if the enrollment rate changes.</strong> Alerts you to unusual swings in how many records enroll.</li>
           <li><strong>Compare conversion metrics for each path.</strong> Collects how many records reached each step and how many errored.</li>
         </ul>
@@ -131,7 +131,7 @@
         <figure class="shot"><a href="s3.webp"><img src="s3.webp" alt="Settings panel showing Compare conversion metrics and the Connections section highlighted" width="800" height="450" loading="lazy"></a><figcaption>Conversion metrics (1) and the Connections setting (2).</figcaption></figure>
 
         <h2>4. Connections: unenroll from other workflows</h2>
-        <p>For contact-based workflows, <span class="ui">Unenroll records from other workflows when they enroll in this workflow</span> removes a contact from other workflows at the moment it enrolls here. It is useful when two workflows would send conflicting emails. The catch from HubSpot: it applies only at the time of enrollment. It does not stop the contact being enrolled in the other workflow later.</p>
+        <p>For contact-based workflows, <span class="ui">Unenroll contacts from other workflows when enrolled in this workflow</span> removes a contact from other workflows at the moment it enrolls here. It is useful when two workflows would send conflicting emails. The catch from HubSpot: it applies only at the time of enrollment. It does not stop the contact being enrolled in the other workflow later.</p>
         <p>These settings are about behavior. Enrollment rules, goals, and suppression lists are on the trigger card, not here. See <a href="../workflow-wont-re-enroll/">why a contact won't re-enroll</a>.</p>
 
         <h2>Sources</h2>

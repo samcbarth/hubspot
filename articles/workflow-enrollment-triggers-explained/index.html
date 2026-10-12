@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T19:30:00-04:00">October 11, 2026, 7:30 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -111,8 +111,8 @@
         <figure class="shot"><a href="trigger.webp"><img src="trigger.webp" alt="Workflow trigger panel showing the Start when this happens section and the Only enroll contacts that meet these conditions section highlighted" width="800" height="600" loading="lazy"></a><figcaption>What starts enrollment (1) and the conditions a record must meet (2).</figcaption></figure>
 
         <h2>2. Start when this happens</h2>
-        <p>HubSpot describes the two kinds of trigger. When an event occurs, records enroll as the event happens, for example a form submission. When filter criteria are met, records enroll when a condition becomes true, for example a city that equals a value. There are also schedule-based triggers and manual enrollment.</p>
-        <div class="callout warn"><span class="callout-title">Event triggers do not backfill</span><p>HubSpot says the record must exist before the event, and existing records cannot be enrolled for an event that already happened. Only records that meet the event criteria after the workflow is turned on will enroll.</p></div>
+        <p>HubSpot describes the two kinds of trigger. When an event occurs, records enroll as the event happens, for example a form submission. When filter criteria are met, records enroll when a condition becomes true, for example a city that equals a value. There are also webhook triggers (Data Hub Professional or Enterprise), schedule-based triggers, and manual enrollment.</p>
+        <div class="callout warn"><span class="callout-title">Check past events before you rely on them</span><p>Event triggers fire when the event happens. Check the event trigger documentation before you expect past events to enroll existing records. For existing records, a filter trigger with a create date condition is the usual route.</p></div>
 
         <h2>3. Only enroll records that meet these conditions</h2>
         <p>This second layer is where you add filters, grouped with AND and OR. My demo trigger asks for a lifecycle stage of Lead and a create date after a chosen day. A record must pass these as well as the trigger above them.</p>

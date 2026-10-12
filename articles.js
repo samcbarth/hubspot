@@ -635,6 +635,7 @@ var ARTICLES = [
     permissions: "Meetings access and a connected calendar",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:40 ET",
     minutes: 10,
     difficulty: "Beginner",
     keywords: ["meetings link", "scheduling page", "calendly alternative", "booking link"]
@@ -651,6 +652,7 @@ var ARTICLES = [
     permissions: "Edit forms; settings access for privacy options",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:10 ET",
     minutes: 6,
     difficulty: "Beginner",
     keywords: ["consent checkbox", "gdpr form", "legitimate interest", "newsletter signup"]
@@ -667,6 +669,7 @@ var ARTICLES = [
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:15 ET",
     minutes: 10,
     difficulty: "Intermediate",
     keywords: ["workflow settings", "pause actions", "turn off automatically", "unenroll from other workflows"]
@@ -683,6 +686,7 @@ var ARTICLES = [
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:20 ET",
     minutes: 8,
     difficulty: "Beginner",
     keywords: ["workflow delay", "business days", "if/then branch", "list branch"]
@@ -699,6 +703,7 @@ var ARTICLES = [
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:45 ET",
     minutes: 6,
     difficulty: "Beginner",
     keywords: ["create task", "workflow task", "call task", "task due date"]
@@ -715,6 +720,7 @@ var ARTICLES = [
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:25 ET",
     minutes: 8,
     difficulty: "Beginner",
     keywords: ["edit record", "set property value", "change type", "append", "copy property"]
@@ -731,6 +737,7 @@ var ARTICLES = [
     permissions: "Super Admin or Workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:30 ET",
     minutes: 10,
     difficulty: "Intermediate",
     keywords: ["enrollment trigger", "event based", "filter criteria", "manual enrollment"]
@@ -747,6 +754,7 @@ var ARTICLES = [
     permissions: "Access to workflows",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:35 ET",
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["unused workflows", "automation issues", "workflow health", "cleanup"]
@@ -763,6 +771,7 @@ var ARTICLES = [
     permissions: "Dashboard owner, or Super Admin",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 7:50 ET",
     minutes: 7,
     difficulty: "Beginner",
     keywords: ["dashboard settings", "dashboard access", "report caching", "default dashboard", "refresh"]

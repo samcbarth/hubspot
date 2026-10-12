@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Edit forms; settings access for privacy options</dd></div>
         <div class="fact"><dt>Time</dt><dd>6 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T19:10:00-04:00">October 11, 2026, 7:10 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot forms offer three consent patterns: <strong>implicit processing consent with individual checkboxes</strong> for each communication type, <strong>separate consents</strong> where the person must also explicitly consent to data processing, and <strong>legitimate interest</strong>, which shows a notice instead of asking. For a newsletter, the first pattern is common: one required checkbox that names the subscription, plus a short processing notice. That is how this site's newsletter form is set up. Legal basis is your decision, so check what your jurisdiction requires.</p>
+          <p>HubSpot forms offer three consent patterns: <strong>implicit processing consent with individual checkboxes</strong> for each communication type, <strong>separate consents</strong> where the person must also explicitly consent to data processing, and <strong>legitimate interest</strong>, which shows a notice instead of asking. For a newsletter, the first pattern is common: one checkbox that names the subscription, plus a short processing notice. With the implicit option, the form still submits when the box is unticked, and that contact is not subscribed. That is how this site's newsletter form is set up. Legal basis is your decision, so check what your jurisdiction requires.</p>
         </div>
 
         <h2>1. The three options</h2>
@@ -114,17 +114,17 @@
         </ol>
 
         <h2>2. What the newsletter form looks like</h2>
-        <p>The newsletter form on this site asks for an email and first name, then shows a required checkbox for the subscription, a one-line reminder that they can unsubscribe, and a short notice that submitting lets the sender store the email to send updates. It has a single clear submit button.</p>
-        <figure class="shot"><a href="form-editor.webp"><img src="form-editor.webp" alt="Newsletter form in the editor with the consent checkbox and the processing notice highlighted" width="800" height="600" loading="lazy"></a><figcaption>The consent checkbox (required) and the processing notice below it.</figcaption></figure>
+        <p>The newsletter form on this site asks for an email and first name, then shows a checkbox for the subscription, a one-line reminder that they can unsubscribe, and a short notice that submitting lets the sender store the email to send updates. It has a single clear submit button.</p>
+        <figure class="shot"><a href="form-editor.webp"><img src="form-editor.webp" alt="Newsletter form in the editor with the consent checkbox and the processing notice highlighted" width="800" height="600" loading="lazy"></a><figcaption>The consent checkbox and the processing notice below it.</figcaption></figure>
 
         <h2>3. Write good checkbox text</h2>
         <ul>
           <li>Name the exact thing: "Email me new field notes articles" says what will happen.</li>
-          <li>Mark it required when you need the consent to send the email.</li>
+          <li>Do not rely on a required box with the implicit option. A contact who leaves it unticked still submits, just without a subscription. Turn on data privacy settings if you want the checkboxes to be mandatory.</li>
           <li>Keep the unsubscribe reminder next to it.</li>
-          <li>Check the box is unticked by default.</li>
+          <li>Leave it unticked. HubSpot does not let you pre-select the consent checkbox.</li>
         </ul>
-        <div class="callout warn"><span class="callout-title">Not legal advice</span><p>Which legal basis applies depends on where your contacts live and what you send. Decide that with whoever advises you, then configure the form to match. HubSpot can also record the legal basis on the contact.</p></div>
+        <div class="callout warn"><span class="callout-title">Not legal advice</span><p>Which legal basis applies depends on where your contacts live and what you send. Decide that with whoever advises you, then configure the form to match. When a contact submits a form with notice and consent information, HubSpot sets the Legal basis for processing contact's data property to Freely given consent from contact.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">

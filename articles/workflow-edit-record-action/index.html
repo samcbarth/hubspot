@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Workflows</dd></div>
         <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T19:25:00-04:00">October 11, 2026, 7:25 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -126,10 +126,12 @@
         <h2>3. Copy from another property</h2>
         <p>Instead of a fixed value, click <span class="ui">Choose data token</span> to use another property's value, on the same record or an associated one. HubSpot's cautions: the source and target properties must be compatible, and if the source is empty, the target may stay empty.</p>
 
-        <h2>4. Two traps</h2>
+        <h2>4. Traps to check</h2>
         <ul>
           <li><strong>Lifecycle stage only moves forward by default.</strong> To set an earlier value you have to clear it first. See <a href="../sql-count-zero/">the SQL article</a>.</li>
           <li><strong>Associated records can be many.</strong> Editing all associated contacts changes every one of them, so check how many a deal has.</li>
+          <li><strong>Empty source values.</strong> If the source is empty, the target may stay empty or the action may error. Add a branch that checks the value is populated first.</li>
+          <li><strong>Tickets need Service Hub.</strong> Editing ticket records requires a Service Hub Professional or Enterprise subscription.</li>
         </ul>
 
         <h2>Sources</h2>
