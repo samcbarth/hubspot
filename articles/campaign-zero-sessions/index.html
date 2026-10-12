@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Campaigns access and Tracking URLs access</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:45:00-04:00">October 11, 2026, 5:45 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,30 +103,33 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Attaching assets to a campaign makes it a content library. Contacts who interact with those assets are counted as influenced, but <strong>sessions</strong> only appear when visits come in through a link carrying the campaign's UTM. If nobody uses a tracking URL, sessions stay at zero. For one campaign of mine, about 490 contacts were influenced and sessions were 0. After I built tracking URLs, the first session appeared.</p>
+          <p>Influenced contacts and sessions are counted differently. A contact is influenced when they interact with an asset attached to the campaign. A session is a visit, and it is counted only when the visit arrives through a tracking URL with that campaign selected as its UTM campaign. If nobody uses a tracking URL for the campaign, sessions stay at zero. Create a tracking URL for each link you share, select the campaign, and use those links in your content.</p>
         </div>
 
         <h2>1. Find the campaign</h2>
-        <p>Open <a class="hs-link" data-hs="/campaigns/{portalId}" href="https://app.hubspot.com/l/campaigns"><span class="ui">Campaigns</span></a>. HubSpot's newer Marketing Studio lists them under Overview. This demo portal has one campaign.</p>
+        <p>Open <a class="hs-link" data-hs="/campaigns/{portalId}" href="https://app.hubspot.com/l/campaigns"><span class="ui">Campaigns</span></a>. HubSpot's Marketing Studio lists them under Overview. This demo portal has one campaign.</p>
         <figure class="shot"><a href="studio.webp"><img src="studio.webp" alt="Marketing Studio overview with the Campaigns list showing 1 campaign highlighted" width="800" height="613" loading="lazy"></a><figcaption>Marketing Studio. The Campaigns table is lower on the page.</figcaption></figure>
 
-        <h2>2. Read the analytics honestly</h2>
-        <p>On the <span class="ui">Analyze</span> tab, pick a campaign and read the topline metrics. In my real case the campaign showed hundreds of influenced contacts and no sessions. That combination is not a bug. Influence comes from contacts interacting with attached assets, such as forms and emails. Sessions come from visits.</p>
+        <h2>2. Read the analytics</h2>
+        <p>On the <span class="ui">Analyze</span> tab, pick a campaign and read the topline metrics. Influenced contacts and sessions are different numbers. A campaign can show influenced contacts and no sessions, which means its assets were engaged with but no visit came through a tracking link.</p>
         <figure class="shot"><a href="analyze.webp"><img src="analyze.webp" alt="Marketing Studio Analyze tab for a demo campaign with Contacts Influenced of 0 highlighted" width="800" height="613" loading="lazy"></a><figcaption>Analyze tab. The demo campaign is empty, so the number is 0.</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. One campaign showed hundreds of influenced contacts and zero sessions. You may have something like this.</p></div>
 
-        <h2>3. Check the Tracking URLs tab</h2>
-        <p>Open the campaign and use the <span class="ui">Tracking URLs</span> tab in the right panel. HubSpot's own wording when none exist: Tracking URLs and UTM activity will appear here.</p>
-        <figure class="shot"><a href="tracking.webp"><img src="tracking.webp" alt="Campaign details panel on the Tracking URLs tab saying No tracking URLs" width="800" height="613" loading="lazy"></a><figcaption>A campaign with no tracking URLs. Nothing can register a session.</figcaption></figure>
+        <h2>3. Check the campaign's tracking URLs</h2>
+        <p>Open the campaign details and the <span class="ui">Tracking URLs</span> tab. In the demo campaign, no tracking URLs exist, so no visit can register a session for it.</p>
+        <figure class="shot"><a href="tracking.webp"><img src="tracking.webp" alt="Campaign details panel on the Tracking URLs tab saying No tracking URLs" width="800" height="613" loading="lazy"></a><figcaption>A campaign with no tracking URLs yet.</figcaption></figure>
 
-        <h2>4. Create tracking URLs and use them</h2>
-        <ul>
-          <li>Create one tracking URL per link you will share: the email, the LinkedIn post, the ad.</li>
-          <li>Choose this campaign as the UTM campaign so visits land under it.</li>
-          <li>Set source and medium so channels stay separate in reports.</li>
-          <li>Link to the highest performing asset in the campaign.</li>
-        </ul>
-        <p>For my own campaign, the auto-generated campaign UTM had never been used. I built four ready-to-use links for the top assets. Once the first visit came through, sessions moved from 0 to 1, which confirmed the tagging worked.</p>
-        <div class="callout warn"><span class="callout-title">Auditing tracking URLs</span><p>The saved tracking URL list is not exposed through the CRM API I used, so to audit existing URLs, read them in the UI.</p></div>
+        <h2>4. Create a tracking URL</h2>
+        <ol>
+          <li>Click the settings icon, then go to <span class="ui">Tracking &amp; Analytics</span> &gt; <span class="ui">Tracking URLs</span>.</li>
+          <li>Click <span class="ui">Create tracking URL</span>. Enter the URL of a page that has the HubSpot tracking code installed.</li>
+          <li>Pick the <span class="ui">UTM campaign</span>. HubSpot requires a campaign name, and visits are counted under it in the campaigns tool.</li>
+          <li>Pick a <span class="ui">Source</span>, such as Email marketing, Paid search, Organic social, or Paid social. Use Other campaigns with a custom source for anything else.</li>
+          <li>Fill in the optional medium, term, and content fields to name the channel, ad, or post.</li>
+          <li>Click <span class="ui">Create</span>, then use <span class="ui">Actions</span> &gt; <span class="ui">Copy tracking URL</span> to copy it into your content.</li>
+        </ol>
+        <p>Create one tracking URL for each link you will share, such as the email, the post, or the ad. Link to the asset you most want people to read.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal the campaign's automatically generated UTM had never been used. After I created tracking URLs for the top assets and the first visit came through, sessions went from 0 to 1. You may have something like this.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">

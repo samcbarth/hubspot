@@ -294,6 +294,7 @@ var ARTICLES = [
     permissions: "Campaigns access and Tracking URLs access",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 17:45 ET",
     minutes: 10,
     difficulty: "Intermediate",
     keywords: ["campaign sessions", "utm", "tracking url", "influenced contacts"],
