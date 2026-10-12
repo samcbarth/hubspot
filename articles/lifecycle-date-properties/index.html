@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers for the properties; reports and workflows depend on your tier</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Any user can view; reports need report access</dd></div>
         <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:00:00-04:00">October 11, 2026, 6:00 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,29 +103,31 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot automatically creates a <strong>Date entered</strong> property and a <strong>Latest time in</strong> property for each lifecycle stage, plus <strong>Date entered current stage</strong>. They fill themselves as records move. If you are designing a customer journey model and about to add custom date fields for each stage, check these first. In a portal where I was mapping a journey model, they replaced seven custom date fields.</p>
+          <p>HubSpot automatically creates a <strong>Date entered</strong> property and a <strong>Latest time in</strong> property for each lifecycle stage, and a <strong>Cumulative time in</strong> property for re-entries. HubSpot fills them as records move through the stages. Before you add custom date fields for each stage in a journey model, check these first. They need a Professional or Enterprise subscription for the latest and cumulative time properties.</p>
         </div>
 
         <h2>1. Search for "date entered"</h2>
-        <p>Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search <em>date entered</em>. You will see <span class="ui">Date entered current stage</span> (a calculation) and one date and time property per stage, named like Date entered "Lead (Lifecycle Stage Pipeline)".</p>
-        <figure class="shot"><a href="date-entered.webp"><img src="date-entered.webp" alt="Contact properties filtered to date entered showing the current stage property and per-stage date properties highlighted" width="800" height="613" loading="lazy"></a><figcaption>One date property per lifecycle stage, plus Date entered current stage.</figcaption></figure>
+        <p>Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search <em>date entered</em>. You will see one date and time property per lifecycle stage, named like Date entered "Lead (Lifecycle Stage Pipeline)".</p>
+        <figure class="shot"><a href="date-entered.webp"><img src="date-entered.webp" alt="Contact properties filtered to date entered showing the per-stage date properties highlighted" width="800" height="613" loading="lazy"></a><figcaption>One date property per lifecycle stage.</figcaption></figure>
 
         <h2>2. Search for "time in"</h2>
-        <p>The matching duration properties are named Latest time in "Lead (Lifecycle Stage Pipeline)" and so on. They are number properties, so you can filter and report on how long records spent in each stage.</p>
+        <p>The matching duration properties are named Latest time in "Lead (Lifecycle Stage Pipeline)" and so on. They hold the total time in seconds the record spent in each stage, so you can filter and report on it. A record currently in a stage has no value for that stage's Latest time in property until it leaves. Its value updates when it leaves.</p>
         <figure class="shot"><a href="time-in-stage.webp"><img src="time-in-stage.webp" alt="Contact properties filtered to time in showing latest time in properties for each lifecycle stage highlighted" width="800" height="613" loading="lazy"></a><figcaption>Latest time in each lifecycle stage, one number property per stage.</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. A journey model with seven stages seemed to need seven custom date fields. The lifecycle timestamps covered the same stages, so no custom fields were needed. You may have something like this.</p></div>
 
         <h2>3. Where this saves work</h2>
         <ul>
-          <li><strong>Journey and funnel models.</strong> If your model has stages that line up with lifecycle stages, you do not need custom date fields for them. The timestamps already exist.</li>
+          <li><strong>Journey and funnel models.</strong> If your stages line up with lifecycle stages, you may not need custom date fields for them. The timestamps already exist.</li>
           <li><strong>Segments.</strong> Filter on Date entered for a stage to list everyone who became a Lead last month.</li>
           <li><strong>Reports.</strong> Time in stage works as a number in custom reports.</li>
         </ul>
-        <div class="callout warn"><span class="callout-title">Catches</span><p>These properties follow the lifecycle stage property. If your team does not keep lifecycle stage current, the timestamps will not move either. See <a href="../sql-count-zero/">why SQL reports show zero</a>.</p></div>
-        <p>Also note that company records have their own lifecycle stage and their own set of properties. Check the company property list separately.</p>
+        <div class="callout warn"><span class="callout-title">Catches</span><p>These properties follow the lifecycle stage property. If your team does not keep lifecycle stage current, the timestamps will not move either. See <a href="../sql-count-zero/">why SQL reports show zero</a>. Also, workflows do not enroll a record based on Latest time in or Cumulative time while the record is still in that stage. Use Lifecycle stage not updated in last x days instead.</p></div>
+        <p>Company records have their own lifecycle stage and their own set of these properties. Check the company property list separately.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/use-lifecycle-stages">HubSpot Knowledge Base: Use contact and company lifecycle stages</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-contact-properties">HubSpot Knowledge Base: HubSpot's default contact properties</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/create-and-edit-properties">HubSpot Knowledge Base: Create and edit properties</a></li>
         </ul>
 

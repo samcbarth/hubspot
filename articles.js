@@ -379,6 +379,7 @@ var ARTICLES = [
     permissions: "Any user can view; reports need report access",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:00 ET",
     minutes: 6,
     difficulty: "Intermediate",
     keywords: ["date entered", "time in stage", "lifecycle timestamps", "became a"]
