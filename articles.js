@@ -618,6 +618,7 @@ var ARTICLES = [
     permissions: "Segments access",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 19:05 ET",
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["active list", "static list", "segments", "smart list"]
