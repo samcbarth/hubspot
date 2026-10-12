@@ -234,7 +234,7 @@ var ARTICLES = [
   {
     slug: "clone-landing-page-per-location",
     title: "Clone a HubSpot landing page for each location: what to change every time",
-    excerpt: "How to clone one good HubSpot landing page for each community or location, and the four settings plus content to change on every clone.",
+    excerpt: "How to clone one good HubSpot landing page for each location, and the four settings plus content to change on every clone.",
     type: "guide",
     problem: "How to",
     hubs: ["Content Hub"],
@@ -243,6 +243,7 @@ var ARTICLES = [
     permissions: "Create and edit pages",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 17:30 ET",
     minutes: 10,
     difficulty: "Beginner",
     keywords: ["clone page", "landing page", "location pages"],
