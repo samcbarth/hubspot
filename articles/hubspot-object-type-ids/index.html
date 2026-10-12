@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Any user</dd></div>
         <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:20:00-04:00">October 11, 2026, 6:20 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -107,19 +107,20 @@
         </div>
 
         <h2>1. The IDs you will actually use</h2>
-        <p>These are from HubSpot's developer documentation. Custom objects use <code>2-</code> followed by a number.</p>
+        <p>These come from HubSpot's developer documentation. Custom objects use <code>2-</code> followed by a number.</p>
         <ul>
           <li>Contacts <code>0-1</code>, Companies <code>0-2</code>, Deals <code>0-3</code>, Tickets <code>0-5</code></li>
           <li>Products <code>0-7</code>, Line items <code>0-8</code>, Quotes <code>0-14</code></li>
           <li>Tasks <code>0-27</code>, Notes <code>0-46</code>, Meetings <code>0-47</code>, Calls <code>0-48</code>, Emails <code>0-49</code></li>
           <li>Communications <code>0-18</code>, Leads <code>0-136</code>, Users <code>0-115</code></li>
         </ul>
+        <p>Some newer objects, such as appointments, courses, and listings, must be activated in the account before the API can manage their records.</p>
 
         <h2>2. Open any object's index page</h2>
         <p>The pattern for an object's list is the contacts URL with the ID swapped in. Replace <code>PORTAL</code> with your portal ID, or use the <a href="../../link-builder.html">link builder</a>:</p>
         <div class="code"><pre><code>https://app.hubspot.com/contacts/PORTAL/objects/0-48/views/all/list   calls
 https://app.hubspot.com/contacts/PORTAL/objects/0-47/views/all/list   meetings</code></pre></div>
-        <p>With the calls ID the page is titled Calls and has recorded-call and transcript filters.</p>
+        <p>With the calls ID the page is titled Calls. It has Recorded calls and All calls tabs, and a Transcript available filter.</p>
         <figure class="shot"><a href="calls-index.webp"><img src="calls-index.webp" alt="Calls index page opened from the 0-48 object URL with the Calls heading and tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The 0-48 URL opens Calls. This demo portal has no calls logged.</figcaption></figure>
         <p>With the meetings ID the same pattern opens Meetings.</p>
         <figure class="shot"><a href="meetings-index.webp"><img src="meetings-index.webp" alt="Meetings index page opened from the 0-47 object URL with the Meetings heading highlighted" width="800" height="600" loading="lazy"></a><figcaption>The 0-47 URL opens Meetings.</figcaption></figure>
@@ -129,10 +130,10 @@ https://app.hubspot.com/contacts/PORTAL/objects/0-47/views/all/list   meetings</
         <p>The second lesson: not every object has a standalone record page. A direct record link I built for the meeting returned a 404. The record existed, but I had to reach it from an associated contact or from the meetings index instead. If a link 404s, check the object ID first, then try the index page.</p>
 
         <h2>4. The same IDs work in the API</h2>
-        <p>The generic object endpoints take the ID as <code>objectTypeId</code>, so one script can handle several objects.</p>
-        <div class="code"><pre><code>GET /crm/v3/objects/0-47?limit=10      meetings
-GET /crm/v3/objects/0-48?limit=10      calls</code></pre></div>
-        <p>Use names such as <code>contacts</code> where a path accepts them, and numeric IDs where it does not.</p>
+        <p>The object endpoints take the ID in the path, so one script can handle several objects. The version segment in these paths is the API version, such as 2026-09.</p>
+        <div class="code"><pre><code>GET /crm/objects/2026-09/0-47?limit=10      meetings
+GET /crm/objects/2026-09/0-48?limit=10      calls</code></pre></div>
+        <p>Some paths accept a name instead of a number. The search endpoint, for example, takes <code>deals/search</code>. The object paths take the numeric ID.</p>
 
         <h2>Sources</h2>
         <ul class="sources">

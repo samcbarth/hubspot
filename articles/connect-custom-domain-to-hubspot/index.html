@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Content Hub; the number of brand domains depends on your tier</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or domain settings access</dd></div>
         <div class="fact"><dt>Time</dt><dd>15 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:30:00-04:00">October 11, 2026, 6:30 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,16 +103,16 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Open <span class="ui">Settings</span>, <span class="ui">Content</span>, <span class="ui">Domains &amp; URLs</span> and choose to connect a domain. A subdomain such as www needs a CNAME record at your DNS provider. A root domain needs A records. HubSpot then provisions SSL automatically, usually within minutes and up to a few hours. On my account the page shows "You've used 1 out of 1 brand domains" and offers an upgrade to Content Hub Enterprise for more.</p>
+          <p>Open <span class="ui">Settings</span>, <span class="ui">Content</span>, <span class="ui">Domains &amp; URLs</span> and choose to connect a domain. A subdomain such as www needs a CNAME record at your DNS provider. A root domain needs A records. HubSpot then provisions SSL automatically, usually within minutes and up to four hours. On my account the page shows "You've used 1 out of 1 brand domains" and offers an upgrade to Content Hub Enterprise for more.</p>
         </div>
 
         <h2>1. Where it lives</h2>
-        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/domains" href="https://app.hubspot.com/l/settings/domains"><span class="ui">Domains & URLs</span></a>. The Domains tab has two parts, Web Hosting and Email Sending. This article is about Web Hosting. At the top is a notice about your brand domain allowance. On my account it reads that I have used 1 out of 1 brand domains, with an upgrade button for Content Hub Enterprise.</p>
+        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/domains" href="https://app.hubspot.com/l/settings/domains"><span class="ui">Domains & URLs</span></a>. The Web Hosting tab is where this article's work happens. At the top is a notice about your brand domain allowance. On my account it reads that I have used 1 out of 1 brand domains, with an upgrade button for Content Hub Enterprise.</p>
         <figure class="shot"><a href="domains-top.webp"><img src="domains-top.webp" alt="Domains and URLs page with the brand domain limit notice and the SSL activation message highlighted" width="800" height="600" loading="lazy"></a><figcaption>The brand domain notice (top) and the SSL activation message (bottom).</figcaption></figure>
         <div class="callout"><span class="callout-title">What a brand domain is</span><p>A brand domain is the middle part of the address, for example the name in www.yourname.com. The limit counts those, not each subdomain.</p></div>
 
         <h2>2. The list of connected domains</h2>
-        <p>Scroll to <span class="ui">Hosting domains</span>. HubSpot always lists its own system domain, which ends in hubspotpagebuilder. Below it are the domains you connected, with their status and the content types each one serves. A green Connected status means the DNS is in place.</p>
+        <p>Scroll to <span class="ui">Hosting domains</span>. HubSpot lists its own system domain, which ends in hubspotpagebuilder. Below it are the domains you connected, with their status and the content types each one serves. A green Connected status means the DNS is in place.</p>
         <figure class="shot"><a href="hosting-domains.webp"><img src="hosting-domains.webp" alt="Hosting domains table showing a system domain and a connected custom domain with content types" width="800" height="600" loading="lazy"></a><figcaption>System domain (top) and a connected custom domain (below) with its content types.</figcaption></figure>
         <p>Each domain can be the primary domain for different content, such as website pages, blog, landing pages, or marketing email. Check that the right one is primary for each.</p>
 
@@ -120,9 +120,11 @@
         <ul>
           <li><strong>A subdomain</strong> such as www connects with a CNAME record.</li>
           <li><strong>A root domain</strong> connects with A records.</li>
-          <li><strong>SSL</strong> is turned on automatically after the domain connects, usually in a few minutes and up to four hours. The green message in the screenshot is HubSpot confirming SSL for my www address is complete.</li>
+          <li><strong>DNS verification</strong> usually takes 15 to 80 minutes, and can take up to 24 hours. The page shows the time remaining.</li>
+          <li><strong>SSL</strong> is turned on automatically after the domain connects, usually in a few minutes and up to four hours. HubSpot does not issue SSL certificates for domains longer than 64 characters, including the subdomain and top-level domain. The green message in the screenshot is HubSpot confirming SSL for my www address is complete.</li>
         </ul>
         <p>If your DNS provider is not the one holding your registration, make the change where the DNS records are actually managed.</p>
+        <div class="callout warn"><span class="callout-title">One host per name</span><p>A subdomain or root domain can host content in only one place. If the name already serves another website, connecting it to HubSpot breaks those links. Use a separate subdomain for each provider, such as lp for landing pages.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">

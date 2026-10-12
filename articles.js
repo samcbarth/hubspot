@@ -513,6 +513,7 @@ var ARTICLES = [
     permissions: "Any user",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:20 ET",
     minutes: 5,
     difficulty: "Intermediate",
     keywords: ["object type id", "0-47", "0-48", "objecttypeid", "meeting link", "blank page"]
@@ -561,6 +562,7 @@ var ARTICLES = [
     permissions: "Edit forms; account access to Tracking & Analytics settings",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:25 ET",
     minutes: 8,
     difficulty: "Beginner",
     keywords: ["form spam", "unregistered domain", "submissions missing", "release to submissions"]
@@ -593,6 +595,7 @@ var ARTICLES = [
     permissions: "Super Admin or domain settings access",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:30 ET",
     minutes: 15,
     difficulty: "Intermediate",
     keywords: ["custom domain", "cname", "brand domain", "ssl"]

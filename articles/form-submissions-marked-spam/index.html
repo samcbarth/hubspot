@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Edit forms; account access to Tracking & Analytics settings</dd></div>
         <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:25:00-04:00">October 11, 2026, 6:25 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>When a form is embedded on a site HubSpot does not recognize, the submissions are flagged with the spam type <strong>Unregistered site domain</strong>. HubSpot warns you at the top of the Forms page with a banner that names the domain. Add the domain under <span class="ui">Tracking & Analytics</span>, <span class="ui">Advanced Tracking</span>, <span class="ui">Additional site domains</span>, then release any real submissions from the form's spam list with <span class="ui">Release to submissions</span>.</p>
+          <p>When a form is embedded on a site HubSpot does not recognize, the submissions are flagged with the spam type <strong>Unregistered Site Domain</strong>. HubSpot warns you at the top of the Forms page with a banner that names the domain. Add the domain under <span class="ui">Tracking & Analytics</span>, <span class="ui">Advanced Tracking</span>, <span class="ui">Additional site domains</span>, then release any real submissions from the form's spam list with <span class="ui">Release to submissions</span>.</p>
         </div>
 
         <h2>1. Look for the banner</h2>
@@ -117,11 +117,11 @@
         <h2>3. Register the domain</h2>
         <p>Open <a class="hs-link" data-hs="/settings/{portalId}/analytics-and-tracking" href="https://app.hubspot.com/l/settings/analytics-and-tracking"><span class="ui">Tracking & Analytics settings</span></a>, click the <span class="ui">Advanced Tracking</span> tab, and add the domain under <span class="ui">Additional site domains</span>. HubSpot counts the domains listed there as part of your site. My own list holds my HubSpot-hosted domains and my custom domain.</p>
         <figure class="shot"><a href="additional-domains.webp"><img src="additional-domains.webp" alt="Advanced Tracking tab with the Additional site domains list highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Additional site domains list.</figcaption></figure>
-        <p>Subdomains are a separate case. Check each hostname that hosts a form.</p>
+        <p>Subdomains are a separate case. Check each hostname that hosts a form. Add only domains you recognize and trust. A domain you do not recognize should stay out of this list.</p>
 
         <h2>4. Release what was already flagged</h2>
-        <p>Registering the domain fixes new submissions. Anything already caught stays in the spam list until you release it. HubSpot's steps: on the Forms page, click the number in the <span class="ui">Spam Submissions</span> column, review the spam type for each row, select the real ones, and click <span class="ui">Release to submissions</span>.</p>
-        <div class="callout"><span class="callout-title">Other spam types</span><p>Unregistered site domain is one of several. HubSpot also flags a URL or HTML in a name field, a blocklisted email, a malicious script, gibberish text on Professional and Enterprise, a failed reCAPTCHA, and an <em>Excluded source</em>, which happens when the submission comes from an IP you excluded. See <a href="../exclude-own-traffic/">exclude your own traffic</a> for that last one.</p></div>
+        <p>Registering the domain fixes new submissions. Anything already caught stays in the spam list until you release it. Spam submissions that are not released are deleted automatically 90 days after they arrive, so check the list soon. On the Forms page, click the number in the <span class="ui">Spam Submissions</span> column, review the spam type for each row, select the real ones, and click <span class="ui">Release to submissions</span>. A released submission keeps its original date and can create or update contact records and trigger workflows.</p>
+        <div class="callout"><span class="callout-title">Other spam types</span><p>Unregistered Site Domain is one of several. HubSpot also flags a URL or HTML in a name field, a blocklisted email, a malicious script, gibberish text on Marketing Hub or Content Hub Professional and Enterprise, a failed reCAPTCHA, and <em>Excluded source</em>, which happens when the submission comes from an IP or referrer you excluded. See <a href="../exclude-own-traffic/">exclude your own traffic</a> for that last one.</p></div>
 
         <h2>Sources</h2>
         <ul class="sources">
