@@ -398,6 +398,7 @@ var ARTICLES = [
     permissions: "Settings access to see your own tracking code",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:05 ET",
     minutes: 12,
     difficulty: "Intermediate",
     keywords: ["tracking code", "hs-scripts", "hub id", "uses hubspot", "validate"]
@@ -414,6 +415,7 @@ var ARTICLES = [
     permissions: "Edit access to deals",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:10 ET",
     minutes: 10,
     difficulty: "Beginner",
     keywords: ["stale deals", "closed lost", "pipeline cleanup", "last activity"]
@@ -430,6 +432,7 @@ var ARTICLES = [
     permissions: "Super Admin or merge access to companies",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:15 ET",
     minutes: 30,
     difficulty: "Advanced",
     keywords: ["connectwise", "duplicate companies", "merge", "connector id", "sync"]

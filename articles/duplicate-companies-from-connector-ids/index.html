@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Any tier (bulk merge tooling varies; API merge needs a private app)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or merge access to companies</dd></div>
         <div class="fact"><dt>Time</dt><dd>30 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:15:00-04:00">October 11, 2026, 6:15 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,40 +103,41 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>A connector decides which HubSpot record to update from an external ID. When two companies carry the same ID, it has two targets and no rule, so contacts, deals, and activity split across twins. Group companies by the ID, then sort the groups: <strong>identical name and no conflicting data</strong> is safe to merge, <strong>same name but different data</strong> needs a human decision, and <strong>same ID on genuinely different organizations</strong> must not be merged at all. Merge keeps the record that holds the activity.</p>
+          <p>A connector decides which HubSpot record to update from an external ID. When two companies carry the same ID, the connector has two targets and no rule for choosing, so contacts, deals, and activity can split across them. Group companies by the ID, sort the groups into three buckets, merge only the safe bucket, and fix the cause for the rest. Check which record is the primary before you merge, because the primary's property values are kept.</p>
         </div>
 
         <h2>1. What goes wrong</h2>
-        <p>I worked on an IT services client whose CRM synced company IDs from their service management system into a HubSpot property. About 160 of those IDs were on two or more company records in a portal of roughly 32,000 companies. The sync uses the ID to decide which record to update. With two matches it has no tie-break, so contacts, deals, and activity were splitting across the twins. Whoever opened the wrong record saw half the account. Many of the empty twins were old spreadsheet imports with no contacts, deals, or website.</p>
+        <p>A sync that writes to a company property matches on that property. If two company records hold the same value, the sync cannot tell which one is right. Half the history can end up on each record, and whoever opens the wrong one sees only part of the account. Duplicates often come from old imports that have no contacts, deals, or website.</p>
 
         <h2>2. Group first, merge later</h2>
         <p>Export companies with the connector ID property, then group by that value and keep any group with more than one record. Sort every group into one of three buckets before you touch anything:</p>
         <ul>
-          <li><strong>Bucket A, safe:</strong> identical company name, same ID, no conflicting information. In my case about 100 groups. Keep the record that holds the real activity and merge the empty twin into it.</li>
-          <li><strong>Bucket B, needs a decision:</strong> same name and ID but two different websites on file. Merging is probably right, but someone has to say which website is correct. In about 30 of 47 cases the answer was obvious from the activity. The rest needed an account owner, because the active record sometimes had what looked like the wrong website.</li>
-          <li><strong>Bucket C, leave alone:</strong> the same ID on genuinely different organizations. Nine groups were separate chapters of a charity, separate hospital sites, and three unrelated banks. Merging would combine different organizations.</li>
+          <li><strong>Bucket A, safe:</strong> identical company name, same ID, and no conflicting information. Keep the record that holds the real activity and merge the empty twin into it.</li>
+          <li><strong>Bucket B, needs a decision:</strong> same name and ID, but different websites on file. Merging is probably right, but someone who knows the account has to say which website is correct. Activity often answers it. Where it does not, ask the account owner.</li>
+          <li><strong>Bucket C, leave alone:</strong> the same ID on genuinely different organizations, such as separate locations of one business or unrelated companies that share an ID. Merging would combine different organizations.</li>
         </ul>
-        <div class="callout warn"><span class="callout-title">Look for the real cause of bucket C</span><p>Those are not duplicates. The ID is not unique in the source system, or the source tracks a parent while HubSpot tracks locations. Fix that decision, or the sync will keep feeding bad matches.</p></div>
+        <div class="callout warn"><span class="callout-title">Find the cause of bucket C</span><p>Those are not duplicates. The ID may not be unique in the source system, or the source tracks a parent while HubSpot tracks locations. Fix that decision, or the sync will keep matching the wrong records.</p></div>
 
         <h2>3. Merge the safe bucket</h2>
-        <p>Open a company, choose <span class="ui">Actions</span>, then <span class="ui">Merge</span>, or call the merge endpoint if you have many. HubSpot combines the associations from both records on a merge, so deals and contacts carry over. In my case a company kept its 145 deals and another kept 233 after merging. The old record URLs also redirected to the merged record, so saved links kept working.</p>
+        <p>Open a company, choose <span class="ui">Actions</span>, then <span class="ui">Merge</span>, or call the merge endpoint for many pairs at once. HubSpot's knowledge base says the remaining record combines activities and associations from both records, and most property values come from the primary. The secondary company's domain is added to the primary as a secondary domain. The lifecycle stage furthest down the funnel is kept.</p>
         <div class="code"><pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/merge
 { "primaryObjectId": "ID_TO_KEEP", "objectIdToMerge": "ID_TO_FOLD_IN" }</code></pre></div>
         <ul>
-          <li>Merges are permanent. Merge only the bucket you are sure about, and write every pair you merged to a file first.</li>
-          <li>Take the primary from the record with activity, not the oldest or newest by default.</li>
-          <li>Check the company count before and after. Mine dropped by about 100.</li>
+          <li>Merges cannot be undone. Merge only the bucket you are sure about, and write every pair you merge to a file first.</li>
+          <li>Take the primary from the record with the activity you want to keep, not by default from the oldest or newest record.</li>
+          <li>Check the company count before and after, and compare it with the number of pairs you expected to merge.</li>
+          <li>HubSpot limits merges per record. A record that has been merged many times may need a different fix. A company that is in a parent-child loop can fail to merge.</li>
         </ul>
 
         <h2>4. Send the rest back as a short table</h2>
-        <p>For bucket B, a table the client can answer in a few minutes works: company, website on the active record, other website on file. Mark the pairs that look like different businesses so nobody merges them by reflex. A hint here: two organizations that were separate before a merger or rebrand may legitimately have two records.</p>
-        <p>This article has no HubSpot screenshots because the portal belongs to a client. The merge screen itself is shown in <a href="../api-scripts-create-duplicates/">the duplicates article</a>.</p>
+        <p>For bucket B, a table the account owner can answer in a few minutes works: company, website on the active record, other website on file. Mark the pairs that look like different businesses so nobody merges them by reflex. Two organizations that were separate before a merger or rebrand may legitimately keep two records.</p>
+        <p>The merge screen and its steps are in <a href="../api-scripts-create-duplicates/">the duplicates article</a>.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/records/merge-records">HubSpot Knowledge Base: Merge records</a></li>
           <li><a href="https://knowledge.hubspot.com/records/manage-duplicate-records">HubSpot Knowledge Base: Review and manage duplicate records</a></li>
-          <li><a href="https://developers.hubspot.com/docs/api/crm/companies">HubSpot developer docs: Companies API</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/companies/merge-companies">HubSpot developer docs: Merge two companies</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

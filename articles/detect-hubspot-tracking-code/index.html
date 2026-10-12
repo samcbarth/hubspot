@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Settings access to see your own tracking code</dd></div>
         <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:05:00-04:00">October 11, 2026, 6:05 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>A site with HubSpot's tracking code loads a script from <code>js.hs-scripts.com/&lt;Hub ID&gt;.js</code>. View the page source and search for <code>hs-scripts.com</code>. A site that only loads <code>hsforms.net</code> has embedded forms but not necessarily tracking. To scan a list of domains, fetch each homepage and look for those two strings. I used this on about 5,700 company sites: roughly 600 had the tracking code and about 100 more loaded forms only.</p>
+          <p>A site with HubSpot's tracking code loads a script from <code>js.hs-scripts.com</code> named after the account's Hub ID, followed by <code>.js</code>. View the page source and search for that Hub ID. Embedded forms alone are a different signal, so check the tracking code separately. Some sites load tracking through a tag manager, which hides the code from the page source, so a missed search does not prove the site lacks HubSpot.</p>
         </div>
 
         <h2>1. What the code looks like</h2>
@@ -111,17 +111,17 @@
         <figure class="shot"><a href="tracking-code.webp"><img src="tracking-code.webp" alt="Tracking & Analytics settings Tracking code tab showing the embed code and the Validate your tracking code section highlighted" width="800" height="613" loading="lazy"></a><figcaption>The embed code (1) and the Validate your tracking code box (2). The Hub ID is blurred.</figcaption></figure>
 
         <h2>2. Check one site by hand</h2>
-        <p>HubSpot's own steps: open a page on the site, right-click, choose <span class="ui">View page source</span>, then search for the Hub ID followed by <code>.js</code>. You may see the HubSpot Embed Code or the Async HubSpot Analytics Code, and both count as tracking code. To confirm it is loading, open the browser's Network tab, refresh, and look for the Hub ID file with a 200 or 304 status.</p>
+        <p>Open a page on the site, right-click, and choose <span class="ui">View page source</span>. Search for the Hub ID followed by <code>.js</code>. The page may show the HubSpot Embed Code or the Async HubSpot Analytics Code. Either one means the tracking code is installed. To confirm it loads, open the browser's Network tab, refresh, and look for the Hub ID file. A status of 200 or 304 means it loaded.</p>
 
         <h2>3. Validate your own installation</h2>
-        <p>On the same settings page, enter the full URL (with http or https) in <span class="ui">Validate your tracking code</span>. HubSpot tests the page and emails you the result. Some sites cannot be tested this way and can give a false failure, so fall back to the manual check above.</p>
+        <p>On the same settings page, enter the full URL with http or https in <span class="ui">Validate your tracking code</span>. HubSpot tests the page and emails you the result. Some sites cannot be tested this way and can give a false failure, so fall back to the manual check above.</p>
 
         <h2>4. Scan a list of domains</h2>
-        <p>If you want to know which companies in your CRM run HubSpot, fetch each homepage and search the HTML. Two strings matter:</p>
-        <div class="code"><pre><code>hs-scripts.com/        tracking code, followed by the Hub ID
-hsforms.net            HubSpot forms embedded, tracking may be absent</code></pre></div>
+        <p>To see which companies in your CRM run HubSpot, fetch each homepage and search the HTML for these strings:</p>
+        <div class="code"><pre><code>&lt;Hub ID&gt;.js        tracking code loader, from js.hs-scripts.com
+hsforms.net            embedded HubSpot forms; this does not prove tracking</code></pre></div>
         <ul>
-          <li>Record the Hub ID so you can tell which account it is.</li>
+          <li>Record the Hub ID so you can tell which account a site belongs to.</li>
           <li>Keep "forms only" separate from "tracking code". They are different signals.</li>
           <li>Some sites load tracking through a tag manager, which a simple HTML fetch will miss. Treat a miss as unknown, not as proof of no HubSpot.</li>
           <li>Write results to a property you control, such as a yes or no field, and review a sample before writing in bulk.</li>

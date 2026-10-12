@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers (bulk edit and reports vary)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Edit access to deals</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:10:00-04:00">October 11, 2026, 6:10 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,25 +103,26 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Find old open deals with the <span class="ui">Last activity date</span> filter on the Deals board, open each one and check its last activity and next scheduled activity, then move it to Closed Lost with a Closed lost reason. For one pipeline of mine, six deals had no activity for years, two had none ever logged, and none had a next step, so all six were closed lost with a stale reason. Check before you close. A quiet deal is not always a dead one.</p>
+          <p>Find old open deals by filtering the Deals board on <span class="ui">Last activity date</span>. Open each one and check its last activity and whether any next activity is scheduled. Then move it to Closed Lost with a Closed lost reason. A quiet deal is not always a dead one, so check before you close it.</p>
         </div>
 
         <h2>1. Find them on the board</h2>
-        <p>Open <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-3/views/all/board" href="https://app.hubspot.com/l/contacts/objects/0-3/views/all/board"><span class="ui">Deals</span></a> in board view and pick the pipeline. The quick filters above the board include <span class="ui">Create date</span>, <span class="ui">Last activity date</span> and <span class="ui">Close date</span>. Set Last activity date to a long window and the old deals surface. Cards can also carry tags such as Overdue and Stale, which are a prompt to look and not a rule to act on.</p>
+        <p>Open <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-3/views/all/board" href="https://app.hubspot.com/l/contacts/objects/0-3/views/all/board"><span class="ui">Deals</span></a> in board view and pick the pipeline. Filter on Last activity date, with a window long enough to surface the old deals. Cards can also carry Overdue and Stale tags. Those are a prompt to look, not a rule to close.</p>
         <figure class="shot"><a href="board.webp"><img src="board.webp" alt="Deals board with the quick filters above the columns and Overdue and Stale tags on cards highlighted" width="800" height="613" loading="lazy"></a><figcaption>Filters (1) and the Overdue and Stale tags on cards (2). Deal and contact names are blurred.</figcaption></figure>
 
         <h2>2. Check each deal before closing it</h2>
-        <p>For each candidate, open the record and check three things: the last activity date, whether any activity is scheduled next, and who owns it. In my cleanup of one pipeline the six deals had last activity between late 2021 and early 2022, two had no activity logged at all, and none had a next activity. That is the evidence I wanted before closing.</p>
+        <p>For each candidate, open the record and check three things: the last activity date, whether any activity is scheduled next, and who owns it. Those three answers are the evidence to close on.</p>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Six deals in one pipeline had no activity for a long time, two had no activity logged at all, and none had a next step. You may have something like this.</p></div>
 
         <h2>3. Move to Closed Lost with a reason</h2>
-        <p>Move the deal to <span class="ui">Closed Lost</span>. HubSpot has a <span class="ui">Closed lost reason</span> property, and a Deal loss reasons report that counts closed-lost deals by that reason, so a consistent value is worth the extra click. I used a plain "stale" reason so the cleanup is easy to find later.</p>
+        <p>Move the deal to <span class="ui">Closed Lost</span> and fill in the <span class="ui">Closed lost reason</span> property. HubSpot's Deal loss reasons report, in the sales analytics suite, counts closed-lost deals by that reason, per deal owner or team. A consistent reason makes that report useful, so pick one your team will recognize later, such as Stale.</p>
         <ul>
-          <li>For many cards at once, hold Ctrl (Windows) or Cmd (Mac) and click cards on the board, then click Edit at the top.</li>
-          <li>Do not delete. Closing keeps the deal and its history in the portal.</li>
+          <li>For many cards at once, hold Ctrl (Windows) or Cmd (Mac) and click the cards on the board, then click <span class="ui">Edit</span> at the top. Choose the property to update.</li>
+          <li>Close the deal rather than deleting it. Deleting removes the record.</li>
         </ul>
 
         <h2>4. Follow up if it makes sense</h2>
-        <p>Closed-lost does not have to be the end. Once the deals are closed, you can build a list of those contacts and send one re-engagement email. That is a separate decision, so make it on purpose.</p>
+        <p>Closed lost does not have to be the end. Once the deals are closed, you can build a list of those contacts and send one re-engagement email. That is a separate decision, so make it on purpose.</p>
         <div class="callout warn"><span class="callout-title">Owners may want a say</span><p>If the deals belong to someone else, tell them before you close, or ask them to confirm the list. Changing a rep's pipeline without telling them causes avoidable arguments.</p></div>
 
         <h2>Sources</h2>
@@ -129,6 +130,7 @@
           <li><a href="https://knowledge.hubspot.com/records/manage-records-in-board-view">HubSpot Knowledge Base: Manage records in board view</a></li>
           <li><a href="https://knowledge.hubspot.com/records/bulk-edit-records">HubSpot Knowledge Base: Bulk edit records</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-sales-reports-in-the-sales-analytics-suite">HubSpot Knowledge Base: Create sales reports in the sales analytics suite</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
