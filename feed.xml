@@ -8901,7 +8901,7 @@
     <link>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</link>
     <guid>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why bulk writes through the HubSpot API create duplicate companies and contacts, how to merge instead of delete to keep associations, and how to write the script so it does not happen again.</description>
+    <description>Why bulk writes through the HubSpot API create duplicate companies and contacts, why to merge instead of delete, and how to write the script so it does not happen again.</description>
     <category>Smart CRM</category>
     <category>API</category>
     <category>Duplicates</category>

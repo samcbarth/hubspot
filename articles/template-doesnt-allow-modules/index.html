@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Any tier with website or landing pages</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Design Manager and page access</dd></div>
         <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:25:00-04:00">October 11, 2026, 5:25 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,16 +103,15 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>The message means the editor found no drag and drop area it can use. Three causes I have seen: the template has no <code>dnd_area</code>, it extends a layout file by a path that does not resolve, or its <code>dnd_column</code> widths overlap so HubSpot rejects the area. Fix the template, then create a fresh page. A draft page that was created while the template was broken can stay empty even after you fix it.</p>
+          <p>The editor shows this message when it finds no drag and drop area it can use. Check three things: the template has no <code>dnd_area</code>, a layout the template extends does not resolve, or the <code>dnd_column</code> widths do not fit the 12-column grid. Fix the template, then create a new page from it. A page created while the template was broken may need to be recreated.</p>
         </div>
 
         <h2>1. Start with a fresh page</h2>
-        <p>A community bank's editor kept throwing this error on the blank start from scratch page. The template was fine and it did contain a <code>dnd_area</code>. Their two new drafts had empty layout data, while an older page built from the same template worked. HubSpot's blank page should show an empty main section with a drop zone. The real fault signal was the editor failing to load its content. Create a new page from <a class="hs-link" data-hs="/website/{portalId}/pages/site" href="https://app.hubspot.com/l/website/pages/site"><span class="ui">Website pages</span></a> or <a class="hs-link" data-hs="/website/{portalId}/pages/landing" href="https://app.hubspot.com/l/website/pages/landing"><span class="ui">Landing pages</span></a> using the Create button and test again.</p>
-        <figure class="shot"><a href="clone-button.webp"><img src="clone-button.webp" alt="Website pages list with the Create button and the Clone button highlighted" width="800" height="600" loading="lazy"></a><figcaption>Create (top right) starts a new page. Clone (on row hover) copies an existing working one.</figcaption></figure>
-        <p>If a clone of a known good page works and a new blank one does not, the template is the problem.</p>
+        <p>Create a new page from <a class="hs-link" data-hs="/website/{portalId}/pages/site" href="https://app.hubspot.com/l/website/pages/site"><span class="ui">Website pages</span></a> or <a class="hs-link" data-hs="/website/{portalId}/pages/landing" href="https://app.hubspot.com/l/website/pages/landing"><span class="ui">Landing pages</span></a>, and open it in the editor. If a clone of a page that works loads its modules and a new blank page does not, the template is the likely cause.</p>
+        <figure class="shot"><a href="clone-button.webp"><img src="clone-button.webp" alt="Website pages list with the Create button and the Clone button highlighted" width="800" height="600" loading="lazy"></a><figcaption>Create (top right) starts a new page. Clone (on row hover) copies an existing page.</figcaption></figure>
 
         <h2>2. Cause one: no drag and drop area</h2>
-        <p>The template needs at least one area where modules can live:</p>
+        <p>The template needs at least one <code>dnd_area</code>, which is where modules live. A minimal area looks like this:</p>
         <div class="code"><pre><code>{% dnd_area "main" %}
   {% dnd_section %}
     {% dnd_column %}
@@ -120,19 +119,21 @@
     {% end_dnd_column %}
   {% end_dnd_section %}
 {% end_dnd_area %}</code></pre></div>
+        <p>HubSpot's drag and drop reference describes the section, column, and row tags used inside an area.</p>
 
         <h2>3. Cause two: a broken extends path</h2>
-        <p>Templates that extend a layout by relative path break when copied out of their theme. See <a href="../coded-template-missing-from-picker/">coded template missing from the picker</a>. Point the path at the real file, or use an absolute Design Manager path.</p>
+        <p>If the template extends a layout file, the path must point to a real file in Design Manager. A path that resolves to nothing leaves the editor without a layout to render. Check the path against where the file lives, then re-upload the template. For a coded template picker problem, see <a href="../coded-template-missing-from-picker/">coded template missing from the picker</a>.</p>
 
-        <h2>4. Cause three: overlapping columns</h2>
-        <p>I hit this one building a custom theme. Two hero columns each took the whole row width, so they overlapped. HubSpot rejected the area and the editor showed only the header and footer. Give each column a width and an offset that add up to twelve:</p>
+        <h2>4. Cause three: columns that do not fit the grid</h2>
+        <p>A <code>dnd_column</code> takes a width and an offset on a 12-column grid. Two columns that each take the full width of the row overlap. Give each column a width and an offset that fit inside the 12 columns:</p>
         <div class="code"><pre><code>{% dnd_column width=6, offset=0 %} ... {% end_dnd_column %}
 {% dnd_column width=6, offset=6 %} ... {% end_dnd_column %}</code></pre></div>
-        <p>After re-uploading, a new page from the template reported all its modules. Pages created while the template was broken may need recreating.</p>
+        <p>After you re-upload the template, create a new page from it and check that the modules load. Pages built while the template was broken may need to be recreated.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/templates/html-hubl-templates">HubSpot developer docs: HTML + HubL templates</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/tags/dnd-areas">HubSpot developer docs: Drag and Drop Areas HubL tags</a></li>
           <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/create-and-customize-pages">HubSpot Knowledge Base: Create and customize pages</a></li>
         </ul>
 
