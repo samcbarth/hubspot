@@ -8885,11 +8885,11 @@
     <category>Companies</category>
   </item>
   <item>
-    <title>How to opt a HubSpot contact out of all email (and why the API can&#39;t do it)</title>
+    <title>How to opt a HubSpot contact out of all email, and what it does not stop</title>
     <link>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</link>
     <guid>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and why scripts and the API cannot set it.</description>
+    <description>Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and how to opt out a group with a spreadsheet.</description>
     <category>Marketing Hub</category>
     <category>Sales Hub</category>
     <category>Smart CRM</category>

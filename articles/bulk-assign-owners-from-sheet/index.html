@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>Any tier</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Import access; bulk edit access to companies</dd></div>
         <div class="fact"><dt>Time</dt><dd>20 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:05:00-04:00">October 11, 2026, 5:05 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,7 +103,7 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Filter the Companies list to companies with no owner, match your owner file to them through a unique key such as a customer number, and import the unowned ones with <strong>Record ID</strong> and <strong>Company owner</strong> mapped. Owner values must be existing HubSpot users, so accounts whose salesperson has no seat stay unowned until you add them. For a manufacturing client I set owners on about 1,300 companies this way without changing any that already had one.</p>
+          <p>Filter Companies to those with no owner, match your owner file to them through a key that is unique on both sides, and import with <strong>Record ID</strong> and <strong>Company owner</strong> mapped. Choose <span class="ui">Update existing records only</span>, and select <span class="ui">Don't overwrite</span> on the owner column, so the import fills empty owners and changes nothing else. Check that every owner in the file matches a HubSpot user before you import.</p>
         </div>
 
         <h2>1. See how many companies have no owner</h2>
@@ -111,21 +111,21 @@
         <figure class="shot"><a href="no-owner.webp"><img src="no-owner.webp" alt="Companies list with the Company owner column showing No owner and the total count highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Company owner column and the total count of 4,624.</figcaption></figure>
 
         <h2>2. Match the file to companies</h2>
-        <p>The client's file listed a salesperson on each business partner row. The partner number was stored in a HubSpot property, so I matched on that, not on names. Whatever your key is, it must be unique on both sides. Add the HubSpot Record ID to each matched row.</p>
+        <p>Match on a key that is unique on both sides, such as a customer number stored in a HubSpot property. Add the HubSpot Record ID to each matched row.</p>
         <ul>
-          <li>Drop rows with no salesperson and rows with typos in the owner email.</li>
-          <li>Keep only companies that currently have no owner, so the import never overwrites a human decision.</li>
-          <li>Owners must exist as HubSpot users. In my case four salespeople had no HubSpot seat, which left about 140 companies unowned. Put those names in a text property, or add the users, then run a second pass.</li>
+          <li>Drop rows with no owner and rows where the owner is unclear.</li>
+          <li>Keep only companies that have no owner, so the import never replaces an owner someone already chose.</li>
+          <li>Check each owner against your HubSpot users before you import. A name that does not match a user cannot be assigned as the owner.</li>
         </ul>
 
         <h2>3. Import it</h2>
-        <p>Open <a class="hs-link" data-hs="/import/{portalId}" href="https://app.hubspot.com/l/import"><span class="ui">Data integration</span></a>, choose <span class="ui">Import a file</span>, one file, one object (Companies), and map <span class="ui">Record ID</span> and <span class="ui">Company owner</span>.</p>
+        <p>Open <a class="hs-link" data-hs="/import/{portalId}" href="https://app.hubspot.com/l/import"><span class="ui">Data integration</span></a>, choose <span class="ui">Import a file</span>, and pick one file and one object, Companies. Map <span class="ui">Record ID</span> and <span class="ui">Company owner</span>. In the <span class="ui">Choose how to import</span> dropdown, select <span class="ui">Update existing records only</span>. On the Company owner row, select <span class="ui">Don't overwrite</span>.</p>
         <figure class="shot"><a href="data-integration.webp"><img src="data-integration.webp" alt="Data integration page with the Import a file card highlighted" width="800" height="553" loading="lazy"></a><figcaption>Start from Import a file.</figcaption></figure>
 
         <h2>4. Verify the result</h2>
-        <p>Open the import to see rows, new records and updated records. For an update-only job, new records should be zero. If it is not, the file had rows without a Record ID. The uploader name is blurred below.</p>
-        <figure class="shot"><a href="import-summary.webp"><img src="import-summary.webp" alt="Import summary with rows, new records, updated records, and new associations highlighted" width="800" height="553" loading="lazy"></a><figcaption>An import summary. This sample import created new records, which an update-only job should not.</figcaption></figure>
-        <p>Then re-filter Companies by owner is unknown and compare to your expected leftover count.</p>
+        <p>Open the import from the import history. The summary shows rows, new records, and updated records. With <span class="ui">Update existing records only</span>, new records should be zero. If they are not, the file had rows without a Record ID or the wrong import option was chosen. The blurred line under the date is the uploader.</p>
+        <figure class="shot"><a href="import-summary.webp"><img src="import-summary.webp" alt="Import summary with rows, new records, updated records, and new associations highlighted" width="800" height="553" loading="lazy"></a><figcaption>A sample contacts import summary. It created new records, which an update-only import should not.</figcaption></figure>
+        <p>Then filter Companies by Company owner is unknown again and compare the count with the rows you expected to leave unowned.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
