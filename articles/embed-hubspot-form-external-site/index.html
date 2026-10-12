@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>All tiers for the standard embed; developer code needs Professional</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Edit forms</dd></div>
         <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T19:00:00-04:00">October 11, 2026, 7:00 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,15 +103,15 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Open the form in the editor, click <span class="ui">Share</span>, and copy the <span class="ui">Embed code</span>. It is a script from <code>js.hsforms.net</code> plus a call that creates the form with your portal and form IDs. Paste it into your page's HTML. Then register the site's domain, or the submissions will be flagged as spam, and install the HubSpot tracking code if you want the form's analytics to work. If you do not want to embed anything, the <span class="ui">Share link</span> tab gives a standalone form page.</p>
+          <p>Open the form in the editor and copy the embed code from the share options. It is a script from <code>js.hsforms.net</code> plus a call that creates the form with your portal and form IDs. Paste it into your page's HTML. Then register the site's domain, or the submissions will be flagged as spam, and install the HubSpot tracking code if you want the form's analytics to work. If you do not want to embed anything, the share link gives a standalone form page.</p>
         </div>
 
         <h2>1. Build the form first</h2>
         <p>The newsletter form on this site was built in <a class="hs-link" data-hs="/forms/{portalId}" href="https://app.hubspot.com/l/forms"><span class="ui">Forms</span></a> like any other. It has an email field, a first name field, a consent checkbox, and a submit button. Everything on the page is editable in the HubSpot editor, not on your site.</p>
         <figure class="shot"><a href="form-editor.webp"><img src="form-editor.webp" alt="HubSpot form editor showing an email field, a first name field, a consent checkbox, and the Share button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The form editor with the Share button (top right) highlighted.</figcaption></figure>
 
-        <h2>2. Open Share, then Embed code</h2>
-        <p>Click <span class="ui">Share</span>. The dialog opens with two tabs. <span class="ui">Embed code</span> has the snippet to paste into your site. It loads a HubSpot script and calls a function that renders the form with your portal ID and form ID.</p>
+        <h2>2. Get the embed code</h2>
+        <p>Click <span class="ui">Share</span>. The dialog opens with two tabs. <span class="ui">Embed code</span> has the snippet to paste into your site. It loads a HubSpot script and calls a function that renders the form with your portal ID and form ID. In some editor versions the path is different: choose <span class="ui">Review and update</span>, then <span class="ui">Update</span>, then <span class="ui">Get embed code</span>. Look for whichever of those your editor shows.</p>
         <figure class="shot"><a href="embed-code.webp"><img src="embed-code.webp" alt="Share your form dialog on the Embed code tab with the code block highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Embed code tab.</figcaption></figure>
         <div class="code"><pre><code>&lt;script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -120,10 +120,10 @@
     formId: "YOUR_FORM_ID"
   });
 &lt;/script&gt;</code></pre></div>
-        <p>Use the exact code from your own dialog, because it also carries your region setting. Paste it where the form should appear.</p>
+        <p>Use the exact code from your own dialog, because it also carries your region setting. Paste it where the form should appear. Paste it into an HTML module or custom code block, not into a rich text area.</p>
 
         <h2>3. Or use the share link</h2>
-        <p>The <span class="ui">Share link</span> tab gives a standalone page that needs no code. HubSpot hosts the form on its own address and you can link to it from anywhere. The link is blurred below.</p>
+        <p>The <span class="ui">Share link</span> tab gives a standalone page that needs no code. HubSpot hosts the form on its own address and you can link to it from anywhere. The link is blurred below. The address is generated and cannot be customized.</p>
         <figure class="shot"><a href="share-link.webp"><img src="share-link.webp" alt="Share your form dialog on the Share link tab with the tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Share link tab. The link is blurred.</figcaption></figure>
 
         <h2>4. Two things that make it work</h2>
@@ -131,11 +131,11 @@
           <li><strong>Register the domain.</strong> Submissions from a domain HubSpot does not recognize are marked as spam. See <a href="../form-submissions-marked-spam/">form submissions marked as spam</a>.</li>
           <li><strong>Install the tracking code.</strong> HubSpot's documentation says the tracking code is needed on the external page to track analytics for an embedded form.</li>
         </ul>
-        <p>Styling is controlled in the editor under <span class="ui">Style &amp; preview</span>. Advanced CSS control through developer code needs Marketing Hub or Content Hub Professional.</p>
+        <p>Styling is set in the editor, through the styling icon in the left sidebar. The styles cover fields, buttons, paragraph text, headings, background, and the progress bar. Developer code for CSS overrides is a separate option. It needs a Marketing Hub or Content Hub Professional or Enterprise subscription, and changes made outside HubSpot can break the form, so only use it if a developer will maintain it.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Set up and style a HubSpot form on an external site</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Style and embed HubSpot forms on an external site</a></li>
           <li><a href="https://knowledge.hubspot.com/forms/manage-form-spam-submissions">HubSpot Knowledge Base: Manage spam form submissions</a></li>
         </ul>
 

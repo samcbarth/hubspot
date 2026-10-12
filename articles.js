@@ -449,6 +449,7 @@ var ARTICLES = [
     permissions: "Merge access to contacts; settings access in the call tracking tool",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:35 ET",
     minutes: 25,
     difficulty: "Advanced",
     keywords: ["callrail", "duplicate contacts", "placeholder email", "texting", "call tracking"]
@@ -481,6 +482,7 @@ var ARTICLES = [
     permissions: "Account access to Tracking & Analytics settings",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:40 ET",
     minutes: 5,
     difficulty: "Beginner",
     keywords: ["exclude traffic", "internal traffic", "ip filter", "analytics"]
@@ -497,6 +499,7 @@ var ARTICLES = [
     permissions: "HubSpot Super Admin; Microsoft 365 admin",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:45 ET",
     minutes: 15,
     difficulty: "Advanced",
     keywords: ["microsoft teams", "teams phone", "call transcripts", "recordings", "microsoft graph"]
@@ -530,6 +533,7 @@ var ARTICLES = [
     permissions: "Report access; edit access to deals to fix records",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:50 ET",
     minutes: 8,
     difficulty: "Intermediate",
     keywords: ["revenue attribution", "campaign revenue", "closed won", "deal missing"]
@@ -546,6 +550,7 @@ var ARTICLES = [
     permissions: "Super Admin or access to create pipelines and properties",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 18:55 ET",
     minutes: 40,
     difficulty: "Advanced",
     keywords: ["planner", "trello", "board import", "pipelines", "migrate"]
@@ -579,6 +584,7 @@ var ARTICLES = [
     permissions: "Edit forms",
     verified: "2026-10-03",
     published: "2026-10-03",
+    validated: "2026-10-11 19:00 ET",
     minutes: 10,
     difficulty: "Intermediate",
     keywords: ["embed form", "external site", "hbspt.forms.create", "share link"]

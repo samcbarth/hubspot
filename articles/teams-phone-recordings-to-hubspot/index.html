@@ -93,7 +93,7 @@
         <div class="fact"><dt>Subscription</dt><dd>See the HubSpot Teams app page for requirements; the custom pipeline needs a public app</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>HubSpot Super Admin; Microsoft 365 admin</dd></div>
         <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:45:00-04:00">October 11, 2026, 6:45 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,12 +103,12 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot logs Teams calls as metadata and syncs recordings and transcripts for <strong>Teams meetings</strong>, but not for <strong>Teams Phone</strong> calls. Getting phone recordings needs a custom pipeline: Microsoft Graph to fetch the artifacts, then HubSpot's third-party transcripts API to attach them. Make can run that. Data Hub cannot, because it has no connector for call artifacts. The weak point is plain PSTN calls, which Graph may not expose. Test that first. I researched this and have not built it.</p>
+          <p>HubSpot logs Teams Phone calls to the contact, the primary company, and any associated deals. It syncs recordings and transcripts for <strong>Teams meetings</strong>, but not for <strong>Teams Phone</strong> calls. Getting phone recordings needs a custom pipeline: Microsoft Graph to fetch the artifacts, then HubSpot's third-party transcripts API to attach them. Make can run that. I did not find a Data Hub connector for call recordings. The weak point is plain PSTN calls, which Graph may not expose. Test that first. I researched this and have not built it.</p>
         </div>
 
         <h2>1. What HubSpot does natively</h2>
         <ul>
-          <li><strong>Teams Phone call logging.</strong> HubSpot's Teams app logs inbound and outbound calls to the contact, company, and deals, with a delay. It does not mention recordings or transcripts, so assume none.</li>
+          <li><strong>Teams Phone call logging.</strong> Inbound and outbound calls are logged to the contact, primary associated company, and associated deals, after a delay of about 15 minutes and up to 60. The contact's phone or mobile number must exactly match the number used in Teams, including country and area code. The logging help page does not mention recordings or transcripts, so assume none.</li>
           <li><strong>Teams meeting recordings and transcripts.</strong> Synced natively. This is meetings, not phone calls.</li>
           <li><strong>Teams Phone recordings and transcripts.</strong> Not supported natively. There is an open HubSpot community idea asking for it.</li>
         </ul>
@@ -125,7 +125,7 @@
         <p>The Calls object has fields including a recording URL and body, and the CRM API can create or update calls. For transcripts, HubSpot has a third-party transcripts API that takes an engagement ID and an array of utterances with speaker, text, and start and end times in milliseconds. It is OAuth only, so a private app token will not work, and it needs the calling transcripts read and write scopes.</p>
 
         <h2>4. Make or Data Hub</h2>
-        <p><strong>Data Hub does not fit.</strong> It syncs and transforms data that HubSpot already holds and has no Graph connector for call artifacts. <strong>Make works</strong> with these pieces: an Azure app registration calling Graph, a trigger (a webhook with a subscription-renewal scenario, or polling as a simpler fallback), a match from the caller to a HubSpot contact by phone number, a call engagement with the recording link, and an OAuth connection for the transcripts call. Store the recording as a link to the SharePoint or OneDrive file, because HubSpot will not host the media.</p>
+        <p><strong>Make works</strong> with these pieces: an Azure app registration calling Graph, a trigger (a webhook with a subscription-renewal scenario, or polling as a simpler fallback), a match from the caller to a HubSpot contact by phone number, a call engagement with the recording link, and an OAuth connection for the transcripts call. Store the recording as a link to the SharePoint or OneDrive file, because HubSpot will not host the media. Data Hub syncs and transforms data that HubSpot already holds, so it does not cover this step on its own.</p>
 
         <h2>5. Suggested path</h2>
         <ol>

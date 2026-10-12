@@ -90,10 +90,10 @@
       <h1>Call tracking is creating duplicate HubSpot contacts? Fix the source before you merge</h1>
       <p class="dek">The tool creates a contact with a made-up email, so it never matches the real contact with the same phone number. Merging without fixing the source just buys you a month.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Any tier (workflow-based dedupe needs Data Hub Professional)</dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise for the duplicates tool; bulk merge needs Data Hub Professional or Enterprise</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Merge access to contacts; settings access in the call tracking tool</dd></div>
         <div class="fact"><dt>Time</dt><dd>25 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T18:35:00-04:00">October 11, 2026, 6:35 PM ET</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,33 +103,36 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>Call tracking tools often create a contact with an auto-generated email when the caller is not found by email. That contact never matches the real one, so you get duplicates sharing a phone number. In an analysis of 83 duplicate groups for a builder client, only <strong>2 were safe to merge automatically</strong>. The caller names were mostly unusable, so phone alone could not authorize a merge. The durable fix is at the source: stop automatic creation, or dedupe in a workflow.</p>
+          <p>Call tracking tools often create a contact with a placeholder email when the caller does not match an existing email. The new contact never matches the real one, so duplicates share a phone number. Group the duplicates by phone, sort each group into safe and needs-review, and merge only the safe ones. Then fix the source, or the duplicates keep coming back.</p>
         </div>
 
         <h2>1. The symptom</h2>
-        <p>A construction client's team was sending bulk texts through their call tracking tool, and the texts were not matching existing HubSpot contacts. The tool had auto-generated placeholder emails, which created new contacts instead of attaching to the real ones. Past touchpoints were scattered across twins.</p>
+        <p>The tool creates a contact with an auto-generated email address. HubSpot matches contacts on email and a few other properties, so the placeholder does not match the contact that already holds the caller's real email. Phone number is often the only field that links the two records. Past calls, texts, and notes end up split between them.</p>
 
-        <h2>2. Build the list and group by phone</h2>
-        <p>Create a contact list of the records the tool created, sorted by phone number, and group it by phone. I did this with a script, but a list sorted by phone in the UI shows the pairs too. The question for each group is whether phone and name together justify a merge.</p>
+        <h2>2. Group the duplicates by phone</h2>
+        <p>Create a contact list of the records the tool created, sorted by phone number. The list shows the pairs and triples. Then check the duplicates tool. HubSpot's default rule compares first name, last name, email, phone number, zip code, company name, and IP country, so some of these pairs may already be in the review queue.</p>
 
-        <h2>3. Why name data breaks the rule</h2>
-        <p>I classified all 83 groups. Only 2 had an exact name match, the same owner, and no deals. The other 81 had problems:</p>
+        <h2>3. Sort each group</h2>
+        <p>Phone alone cannot authorize a merge, and a name alone cannot either. Put each group into one of three piles:</p>
         <ul>
-          <li><strong>Reversed order.</strong> "Burrell Raynard" instead of "Raynard Burrell", fixable by normalizing.</li>
-          <li><strong>Carrier junk as a name.</strong> "Wireless Caller", "Not Available", and city and state in the name field. The phone is the only evidence.</li>
-          <li><strong>Truncated or misspelled.</strong> Same person, needs fuzzy matching.</li>
-          <li><strong>Genuinely different people on one number.</strong> A household, or a changed name. These must not be merged blind.</li>
+          <li><strong>Same person, messy name.</strong> Reversed order, a truncated name, or a misspelling. Normalize the name, then merge once a person confirms the match.</li>
+          <li><strong>Carrier or placeholder text in the name field.</strong> A generic caller label, or a city and state typed into the name. The phone number is the only real evidence, so confirm before merging.</li>
+          <li><strong>Different people on one number.</strong> A household, a shared office line, or a changed name. Leave these alone.</li>
         </ul>
-        <p>Phone alone cannot authorize a merge, and neither can name alone. Normalizing reversed names and flagging carrier junk reclassifies many of the groups, but the output should be a reviewed list, not an automatic batch.</p>
+        <p>In one account I reviewed, most phone matches had names that needed cleaning before anyone could trust them. Only a small share matched on name and owner, so the rest went to a person for review.</p>
 
-        <h2>4. Fix the source</h2>
+        <h2>4. Merge the safe groups</h2>
+        <p>Use <span class="ui">Review</span> on a single pair to compare the two records and merge, or select several pairs and merge in bulk with a criterion such as Created first or Most recent engagement. Merges cannot be reverted. Write the list of pairs to a file first, note the count, and check the count afterward. Merge history can be exported from the duplicates tool.</p>
+        <p>Managing individual duplicates needs Professional or Enterprise. Bulk merging needs Data Hub Professional or Enterprise.</p>
+
+        <h2>5. Fix the source</h2>
         <ul>
-          <li><strong>Turn off default contact creation in the tool.</strong> The trade-off I flagged: it will then only sync to contacts that already exist with a matching email, so brand new callers get no HubSpot record.</li>
-          <li><strong>Dedupe in a workflow.</strong> Data Hub workflows can run duplicate handling in near real time.</li>
-          <li><strong>A script.</strong> A scheduled script that normalizes names and merges the safe class works, with a human reviewing the rest.</li>
+          <li><strong>Turn off automatic contact creation in the tool, if the client accepts the trade-off.</strong> The tool then syncs only to contacts that already exist with a matching email, so new callers get no HubSpot record.</li>
+          <li><strong>Add a custom duplicate rule.</strong> Data Hub Professional allows up to two custom rules per object and up to nine properties. A rule on phone number plus a normalized name gives a cleaner queue, but a shared number can still produce false matches.</li>
+          <li><strong>Clean names on the way in.</strong> Normalizing name fields reduces the number of groups, but it changes live records, so test on a sample first.</li>
         </ul>
-        <div class="callout"><span class="callout-title">Status</span><p>For this client the analysis was done and the merge was waiting for the client to approve. I never merged anything without that approval.</p></div>
-        <p>There are no HubSpot screenshots in this article because the portal belongs to a client. For the merge screen, see <a href="../api-scripts-create-duplicates/">duplicates created by a script</a>.</p>
+        <div class="callout warn"><span class="callout-title">Get approval first</span><p>Confirm the merge list with the account owner before you merge. HubSpot cannot undo a merge, and the owner knows which numbers belong to more than one person.</p></div>
+        <p>The merge screen and its steps are in <a href="../api-scripts-create-duplicates/">duplicates created by a script</a>.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
