@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector - HubSpot Field Notes</title>
+<meta name="description" content="How to connect Claude to HubSpot through the HubSpot connector, set write tools to need approval, what it can and cannot change, where it shows in the audit log, and how the MCP Connectors page differs.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/">
+<meta property="og:title" content="Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector">
+<meta property="og:description" content="How to connect Claude to HubSpot through the HubSpot connector, set write tools to need approval, what it can and cannot change, where it shows in the audit log, and how the MCP Connectors page differs.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/og.png">
+<meta property="article:published_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-10-15">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector",
+      "description": "How to connect Claude to HubSpot through the HubSpot connector, set write tools to need approval, what it can and cannot change, where it shows in the audit log, and how the MCP Connectors page differs.",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/",
+      "proficiencyLevel": "Beginner",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Connect Claude to HubSpot",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Get approval if needed", "text": "A Super Admin approves the connector, or you need App Marketplace access."},
+        {"@type": "HowToStep", "name": "Connect in Claude", "text": "In Claude, open Customize, Connectors, find HubSpot, and click Connect."},
+        {"@type": "HowToStep", "name": "Choose the account and permissions", "text": "Sign in to the HubSpot account, pick permissions, and click Connect app."},
+        {"@type": "HowToStep", "name": "Turn it on in a chat", "text": "In a chat, click +, then Connectors, and toggle HubSpot on."},
+        {"@type": "HowToStep", "name": "Set write tools to Needs Approval", "text": "In the connector's tool settings, set Write tools to Needs Approval."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector", "item": "https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="use-the-hubspot-mcp-connector-in-claude">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector</h1>
+      <p class="dek">The connector lets Claude read and change HubSpot records from chat. Set approvals before you let it write, and know the limits.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All HubSpot products and plans; paid Claude plan required</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or App Marketplace access to connect; otherwise Super Admin approval</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Beginner</dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-15T15:42:00-04:00">October 15, 2026, 3:42 PM ET</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>In Claude, open the connectors page (HubSpot says <span class="ui">Settings &gt; Connectors &gt; Browse</span>, and in my Claude that now lives under <span class="ui">Customize</span>), choose <strong>HubSpot</strong>, click <span class="ui">Connect</span>, sign in to the HubSpot account, choose permissions and click <span class="ui">Connect app</span>. In a chat, turn HubSpot on from <span class="ui">+ &gt; Connectors</span>. HubSpot recommends setting the connector's <em>Write tools</em> to <em>Needs Approval</em>, so Claude shows proposed changes before anything is created or updated. You need an active HubSpot user, a paid Claude plan, and either Super Admin or App Marketplace access, or a Super Admin must approve the connector first.</p>
+        </div>
+
+        <h2>1. Before you connect</h2>
+        <ul>
+          <li>You need an active HubSpot user account and an active Claude account on a paid plan (Pro, Max, Team or Enterprise).</li>
+          <li>Super Admins and users with App Marketplace access can connect without prior approval. Everyone else needs a Super Admin to approve the connector first. During approval the Super Admin picks the data permissions and who can install it.</li>
+          <li>The connector works on the web, desktop and mobile versions of Claude.</li>
+          <li>Everything it does is subject to HubSpot's API usage limits.</li>
+        </ul>
+        <p>Apps you or your admins have connected live under Connected Apps in HubSpot.</p>
+        <figure class="shot"><a href="connected-apps.webp"><img src="connected-apps.webp" alt="HubSpot Connected Apps page listing installed apps, including one named claude, with the Approved apps tab" width="800" height="450" loading="lazy"></a><figcaption>The claude app in the installed list (1) and the Approved apps tab (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My Connected Apps page lists an app named <code>claude</code>, installed in April 2026 from my own account. That is where I look first to see what is connected and when it last ran.</p></div>
+
+        <h2>2. Connect Claude to HubSpot</h2>
+        <p>HubSpot's steps say to open <span class="ui">Settings &gt; Connectors &gt; Browse</span>, choose <strong>HubSpot</strong> and click <span class="ui">Connect</span>. Claude's menus have changed since that page was written. In my Claude today, <span class="ui">Settings &gt; Connectors</span> only shows a note that connectors have moved to <span class="ui">Customize</span>.</p>
+        <figure class="shot"><a href="claude-settings-moved.webp"><img src="claude-settings-moved.webp" alt="Claude Settings, Connectors page saying connectors have moved to Customize" width="800" height="746" loading="lazy"></a><figcaption>The old Settings page points to Customize (1).</figcaption></figure>
+        <p>Follow that link. The Connectors page has <span class="ui">Yours</span> and <span class="ui">Discover</span> tabs and a search box. Search for <strong>HubSpot</strong>.</p>
+        <figure class="shot"><a href="claude-connectors-hubspot.webp"><img src="claude-connectors-hubspot.webp" alt="Claude Connectors page searching HubSpot, showing the HubSpot connector as Connected" width="800" height="746" loading="lazy"></a><figcaption>The HubSpot connector by HubSpot (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My HubSpot connector already shows as Connected, so I did not run the connect flow again. For a new connection, HubSpot's steps after choosing the connector are listed below.</p></div>
+        <ol>
+          <li>Click <span class="ui">Connect</span> on the HubSpot connector.</li>
+          <li>Choose and sign in to the HubSpot account you want to use.</li>
+          <li>On the connection page, select the permissions to allow and click <span class="ui">Connect app</span>. You are sent back to Claude.</li>
+        </ol>
+        <p>You can only connect one HubSpot account to a Claude account at a time. To switch accounts, disconnect and reconnect. If you were connected before write access and engagement visibility were added, disconnect and reconnect to pick them up.</p>
+
+        <h2>3. Use it in a chat</h2>
+        <ol>
+          <li>In the chat window, click <span class="ui">+</span> in the bottom left, then <span class="ui">Connectors</span>.</li>
+          <li>Toggle <strong>HubSpot</strong> on. I did not capture this step.</li>
+          <li>Type your prompt. Claude uses HubSpot context in its answer.</li>
+          <li>If you ask it to create or update a record, it may show the proposed change and ask you to confirm. Type Yes to confirm or No to cancel.</li>
+        </ol>
+        <p>HubSpot recommends opening the HubSpot connector's tool settings in Claude and setting <span class="ui">Write tools</span> to <span class="ui">Needs Approval</span>. If you choose <span class="ui">Always allow</span>, edits may happen without asking. Open the connector from <span class="ui">Customize &gt; Connectors</span> to find this.</p>
+        <figure class="shot"><a href="claude-connector-detail.webp"><img src="claude-connector-detail.webp" alt="HubSpot connector detail page in Claude with a Disconnect button, prompt suggestions and a Tool permissions section" width="800" height="746" loading="lazy"></a><figcaption>Disconnect (1) and Tool permissions (2).</figcaption></figure>
+        <figure class="shot"><a href="claude-connector-write.webp"><img src="claude-connector-write.webp" alt="Claude tool permissions list with the Write/delete tools group set to Needs approval" width="800" height="746" loading="lazy"></a><figcaption>The Write/delete tools group set to Needs approval (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My connector groups its tools. The read-only group (19 tools) is set to Always allow, and the Write/delete group (12 tools) is set to Needs approval. Each tool also has its own three-way switch, and the write tools include managing CRM objects, landing pages, website pages, blog posts and marketing emails.</p></div>
+        <p>HubSpot also suggests the latest Claude models, Extended Thinking, starting with one record before a bulk change, and always reviewing what Claude proposes.</p>
+        <p>Examples HubSpot lists: ask for active deals sorted by close date, update a deal to Closed Won, create a follow-up task, compare email subject lines by clicks, or draft and publish a blog post with an author, featured image, meta description and slug.</p>
+
+        <h2>4. What it can and cannot change</h2>
+        <ul>
+          <li><strong>Read, create, update, no delete.</strong> For contacts, leads, companies, deals, tickets, custom objects, line items, products and more, the connector can read, create and update. It does not support delete. You can delete anything it added directly in HubSpot.</li>
+          <li><strong>Bulk is small.</strong> Creating or updating in bulk is limited to 10 records at a time.</li>
+          <li><strong>Your rules still apply.</strong> It applies conditional property rules and custom pipeline stage validations, and it respects your HubSpot user permissions. Association label validations are not applied.</li>
+          <li><strong>Sensitive Data.</strong> The connector cannot reach custom Sensitive Data properties. If Sensitive Data is turned on for the account, it cannot access any engagement data.</li>
+          <li><strong>Pages and posts.</strong> It can read, create and update landing pages, website pages, blog posts and marketing emails. For reviewing performance, only published pages and posts have data, and you must name a campaign and date range for individual pages. Blog posts need an author, featured image, meta description, slug and title.</li>
+          <li><strong>Workflows and emails.</strong> If you ask Claude to draft an email campaign or a workflow, HubSpot says it provides drafted content for you to build in HubSpot.</li>
+        </ul>
+
+        <h2>5. See what it did</h2>
+        <p>HubSpot records connector create and update actions in the account's audit log, attributed to both the user and the Claude connector. Super Admins can also see who connected or reconnected the connector and when. See the Approved apps tab to control who can install it.</p>
+        
+
+        <h2>6. Your own MCP connector is a different thing</h2>
+        <p>The HubSpot connector for Claude is built on HubSpot's remote MCP server. If you are building your own agent or tool that needs HubSpot access, open <span class="ui">Development &gt; MCP Connectors</span> and create one. HubSpot says it gives you a client ID and secret, preconfigured scopes and a redirect URL flow. Your client connects to <code>https://mcp.hubspot.com</code> and must support OAuth with PKCE.</p>
+        <figure class="shot"><a href="mcp-connectors-page.webp"><img src="mcp-connectors-page.webp" alt="MCP Connectors page with a Create MCP connector button and an empty state" width="800" height="450" loading="lazy"></a><figcaption>Create MCP connector (1) and what it provides (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My portal has no MCP connectors of its own, so this page is empty. I only need this page if I build a tool that signs users in to HubSpot. For using Claude itself, the built-in connector above is the route.</p></div>
+        <p>After creating the connector you can test it with the MCP Inspector using the Streamable HTTP transport, then run the <code>get_user_details</code> tool to confirm the connection and see what your account allows. More background is in <a href="../hubspot-mcp-connectors/">built-in AI connectors vs your own MCP connector</a> and <a href="../claude-connector/">the short version of the Claude connector</a>.</p>
+
+        <h2>7. Disconnect</h2>
+        <p>In Claude, open <span class="ui">Customize &gt; Connectors</span> (HubSpot says <span class="ui">Settings &gt; Connectors</span>), click <strong>HubSpot</strong>, then <span class="ui">Disconnect</span> in the top right.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/set-up-and-use-the-hubspot-connector-for-claude">HubSpot Knowledge Base: Set up and use the HubSpot connector for Claude</a></li>
+          <li><a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server">HubSpot developer docs: Integrate AI tools with the HubSpot MCP server</a></li>
+          <li><a href="https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server">HubSpot developer docs: Using the HubSpot MCP server</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/manage-access-to-apps">HubSpot Knowledge Base: Manage access to apps</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

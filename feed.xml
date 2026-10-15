@@ -7,6 +7,58 @@
   <description>HubSpot fixes, how-tos, and hidden tricks with real screenshots, by Sam Barth.</description>
   <language>en-us</language>
   <item>
+    <title>Create a HubSpot service key, step by step</title>
+    <link>https://hubspot.samcbarth.com/articles/create-a-hubspot-service-key/</link>
+    <guid>https://hubspot.samcbarth.com/articles/create-a-hubspot-service-key/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to create a HubSpot service key: where it lives, who can make one, how to pick scopes, copy the token, call the API with it, and rotate or delete it later.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector</title>
+    <link>https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/</link>
+    <guid>https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to connect Claude to HubSpot through the HubSpot connector, set write tools to need approval, what it can and cannot change, where it shows in the audit log, and how the MCP Connectors page differs.</description>
+    <category>Smart CRM</category>
+    <category>Integrations</category>
+    <category>API</category>
+  </item>
+  <item>
+    <title>HubSpot Agent CLI: install it, sign in, and run your first safe commands</title>
+    <link>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</link>
+    <guid>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to install the HubSpot Agent CLI, sign in with OAuth or a service key, add the HubSpot skills for your AI agent, and use dry runs and Approved apps to keep it safe.</description>
+    <category>Smart CRM</category>
+    <category>API</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector</title>
+    <link>https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/</link>
+    <guid>https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Two ways to get a landing page from Claude into HubSpot: Claude Design&#39;s Send button, and the HubSpot connector in Claude chat. What lands as a draft, what gets confirmed, and what to check before you publish.</description>
+    <category>Marketing Hub</category>
+    <category>Content Hub</category>
+    <category>Landing pages</category>
+    <category>Integrations</category>
+  </item>
+  <item>
+    <title>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server</title>
+    <link>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</link>
+    <guid>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.</description>
+    <category>Content Hub</category>
+    <category>Themes</category>
+    <category>Templates</category>
+    <category>Modules</category>
+  </item>
+  <item>
     <title>hs cms upload skips .webp files, so theme images vanish without an error</title>
     <link>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</link>
     <guid>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</guid>

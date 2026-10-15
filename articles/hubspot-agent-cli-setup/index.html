@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>HubSpot Agent CLI: install it, sign in, and run your first safe commands - HubSpot Field Notes</title>
+<meta name="description" content="How to install the HubSpot Agent CLI, sign in with OAuth or a service key, add the HubSpot skills for your AI agent, and use dry runs and Approved apps to keep it safe.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/">
+<meta property="og:title" content="HubSpot Agent CLI: install it, sign in, and run your first safe commands">
+<meta property="og:description" content="How to install the HubSpot Agent CLI, sign in with OAuth or a service key, add the HubSpot skills for your AI agent, and use dry runs and Approved apps to keep it safe.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/og.png">
+<meta property="article:published_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-10-15">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HubSpot Agent CLI: install it, sign in, and run your first safe commands",
+      "description": "How to install the HubSpot Agent CLI, sign in with OAuth or a service key, add the HubSpot skills for your AI agent, and use dry runs and Approved apps to keep it safe.",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Install and sign in to the HubSpot Agent CLI",
+      "totalTime": "PT10M",
+      "step": [
+        {"@type": "HowToStep", "name": "Install the CLI", "text": "Run the install script for your shell, or ask your agent to run HubSpot's install prompt."},
+        {"@type": "HowToStep", "name": "Check the version", "text": "Run hubspot --version in a new terminal."},
+        {"@type": "HowToStep", "name": "Sign in", "text": "Run hubspot auth login, review the permissions and click Connect app."},
+        {"@type": "HowToStep", "name": "Add the skills", "text": "Run npx skills add hubspot/agent-cli-skills in the agent workspace."},
+        {"@type": "HowToStep", "name": "Try a dry run", "text": "Add --dry-run to any write command and read the plan before you run it for real."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot Agent CLI: install it, sign in, and run your first safe commands", "item": "https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="hubspot-agent-cli-setup">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot Agent CLI: install it, sign in, and run your first safe commands</h1>
+      <p class="dek">The Agent CLI is a command-line tool made for AI agents like Claude Code. It is separate from the hs developer CLI, and it can change live data.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Beta; available with all products and plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Your HubSpot user permissions; Super Admin approval if App Governance is on</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-15T15:44:00-04:00">October 15, 2026, 3:44 PM ET</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>The HubSpot Agent CLI is a beta command-line tool, run as <code>hubspot</code>, that lets AI agents such as Claude Code, Claude Cowork and Codex read and change CRM data using your HubSpot permissions. Install it with HubSpot's script, sign in with <code>hubspot auth login</code>, add the skills with <code>npx skills add hubspot/agent-cli-skills</code>, and use <code>--dry-run</code> before any write. It is not the <code>hs</code> CLI that builds apps, themes and modules. Write commands can delete live data, so start with reads and test in a sandbox when you can.</p>
+        </div>
+
+        <h2>1. What it is, and what it is not</h2>
+        <p>HubSpot's docs describe the Agent CLI as a command-line tool designed primarily for AI agents. An agent installs it, then uses it to work with your CRM on your behalf. You can also run it yourself in a terminal for scripting. It works with the permissions of the connected HubSpot user, so depending on your access it can create, update or delete records.</p>
+        <p>It is a different tool from <code>hs</code>, the <code>@hubspot/cli</code> developer CLI that builds apps, themes and modules. The Agent CLI is the <code>hubspot</code> command. If you only want one-off questions or drafts from your HubSpot data, HubSpot points to the Claude and ChatGPT connectors, which need no CLI install. See <a href="../use-the-hubspot-mcp-connector-in-claude/">use the HubSpot connector in Claude</a>.</p>
+        <div class="callout warn"><span class="callout-title">Beta, and it can delete</span><p>HubSpot's developer page says commands, flags and behavior may change without notice, and that create, update and delete can modify or permanently delete live data. It strongly recommends <code>--dry-run</code> before changes and testing in a sandbox account when you can.</p></div>
+
+        <h2>2. Install it</h2>
+        <p>The easiest route is to paste HubSpot's prompt into your agent, which installs the CLI, signs in, adds the skills and explores <code>hubspot --help</code>. To do it by hand, the installer runs from HubSpot's API host. Read the script first if you prefer.</p>
+        <pre><code># macOS, Linux, WSL, Bash
+curl -fsSL https://api.hubapi.com/hub/cli/backend/hub-cli/latest/install.sh | sh
+
+# Windows PowerShell
+irm https://api.hubapi.com/hub/cli/backend/hub-cli/latest/install.ps1 | iex</code></pre>
+        <p>The installer adds the CLI to your <code>PATH</code>, so open a new terminal and check it.</p>
+        <figure class="shot"><a href="version-help.webp"><img src="version-help.webp" alt="Terminal showing hubspot --version and the top of hubspot --help listing command groups like objects, pipelines and workflows" width="800" height="524" loading="lazy"></a><figcaption>Terminal output: the version (top) and the command groups (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>This machine already had the CLI installed. <code>hubspot --version</code> printed 0.15.1, and the help lists command groups such as objects, pipelines, properties, workflows, reports and segments.</p></div>
+        <p>Using Claude Cowork on a Team or Enterprise plan? HubSpot says outbound network access is restricted by default, so install and upgrade can fail with a network error until a Claude organization admin allows <code>api.hubapi.com</code> under <span class="ui">Organization settings &gt; Capabilities</span>.</p>
+
+        <h2>3. Sign in</h2>
+        <p>Most people should use OAuth. Run <code>hubspot auth login</code>. A browser window opens, you sign in, review the permissions and click <span class="ui">Connect app</span>. The token matches your user permissions, refreshes itself, and <code>hubspot auth logout</code> clears it. Check the session any time with <code>hubspot whoami</code>.</p>
+        <p>The first screen lists the accounts your login can reach and asks you to choose one. Pick the account, then click <span class="ui">Choose Account</span>.</p>
+        <figure class="shot"><a href="oauth-choose-account.webp"><img src="oauth-choose-account.webp" alt="Connecting HubSpot Agent CLI to HubSpot page with a Choose an account list" width="800" height="650" loading="lazy"></a><figcaption>Choose the account (1).</figcaption></figure>
+        <p>The next screen lists what the CLI can access. One permission is required, and the rest are optional. The <span class="ui">Select</span> switch offers <span class="ui">All</span>, <span class="ui">View-only</span> and <span class="ui">None</span>.</p>
+        <figure class="shot"><a href="oauth-permissions.webp"><img src="oauth-permissions.webp" alt="Permission screen for HubSpot Agent CLI with one required permission, 85 optional permissions, and a View-only select option" width="800" height="746" loading="lazy"></a><figcaption>View-only (1) and the required permission (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>I connected my demo portal and chose <strong>View-only</strong>, which ticked the read permissions and left the create, delete and change permissions unticked. The page showed 85 optional permissions. For a first run, that is the safest choice.</p></div>
+        <figure class="shot"><a href="oauth-connect.webp"><img src="oauth-connect.webp" alt="Bottom of the permission screen showing read permissions ticked, write permissions unticked, and Connect app and Cancel buttons" width="800" height="746" loading="lazy"></a><figcaption>Connect app (1).</figcaption></figure>
+        <p>After <span class="ui">Connect app</span>, the browser lands on a local page at <code>127.0.0.1:3000</code> that says <em>Authentication successful</em>, and the terminal confirms the portal. On my machine the CLI also printed that an update was available and upgraded itself first.</p>
+        <figure class="shot"><a href="whoami-before.webp"><img src="whoami-before.webp" alt="Terminal showing hubspot whoami returning a not authenticated error" width="800" height="125" loading="lazy"></a><figcaption>Terminal output: whoami before signing in (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>Before I signed in, <code>hubspot whoami</code> answered with an error that says to run <code>hubspot auth login</code> or set <code>HUBSPOT_ACCESS_TOKEN</code>. That is the expected state of a fresh install.</p></div>
+        <figure class="shot"><a href="whoami-after.webp"><img src="whoami-after.webp" alt="Terminal showing hubspot whoami returning authType oauth, a user, a portal ID and a list of read scopes" width="800" height="146" loading="lazy"></a><figcaption>Terminal output: whoami after signing in (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>After signing in, <code>whoami</code> showed <code>authType</code> oauth, my user, the demo portal ID, and a list of scopes that were all read scopes, matching the View-only choice.</p></div>
+        <p><strong>Admin mode.</strong> During the beta, some account-level operations do not work with OAuth alone, such as schema changes, deleting records, and some association, activity and destructive commands. For those, HubSpot has you set a <a href="../create-a-hubspot-service-key/">service key</a> as the <code>HUBSPOT_ACCESS_TOKEN</code> environment variable. When it is set, the CLI uses it before cached OAuth credentials, and <code>unset HUBSPOT_ACCESS_TOKEN</code> returns you to OAuth. HubSpot warns that admin mode has broader permissions and no per-user audit trail, so keep it to trusted environments.</p>
+
+        <h2>4. Run commands</h2>
+        <p>Commands follow <code>hubspot &lt;noun&gt; &lt;verb&gt;</code>, and <code>--help</code> works at every level.</p>
+        <pre><code>hubspot --help
+hubspot objects --help
+hubspot objects types
+hubspot objects search --type contacts --filter "email=jane@example.com"
+hubspot objects list --type contacts --properties email,firstname,lastname</code></pre>
+        <figure class="shot"><a href="first-reads.webp"><img src="first-reads.webp" alt="Terminal showing hubspot objects count for contacts and deals, and the first object types" width="800" height="272" loading="lazy"></a><figcaption>Terminal output: counts (1, 2) and object types (3).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>Against my demo portal, <code>objects count --type contacts</code> returned a total of 179,942 and deals returned 25. I used counts so no contact names appear. <code>objects types</code> printed 99 object types.</p></div>
+        <p>Output is JSONL by default, which agents handle well. Use <code>--format json</code> or <code>--format table</code> when a person is reading. HubSpot's list covers objects, pipelines, properties, associations, owners, workflows, views, schemas, activities, reports, segments, conversations, sequences, imports, analytics and more.</p>
+        <p>Not every command works with OAuth alone during the beta. On my View-only login, <code>hubspot pipelines list --type deals</code> was refused with a message that the endpoint does not support user-level OAuth tokens and that I should set <code>HUBSPOT_ACCESS_TOKEN</code> to a service key.</p>
+        <figure class="shot"><a href="oauth-limit.webp"><img src="oauth-limit.webp" alt="Terminal showing hubspot pipelines list failing because the endpoint does not support user-level OAuth tokens" width="800" height="146" loading="lazy"></a><figcaption>Terminal output: the OAuth limit (1).</figcaption></figure>
+
+        <h2>5. Always dry-run writes first</h2>
+        <p>Every write command supports <code>--dry-run</code>, which prints what would happen without changing anything. HubSpot says the output has the same shape as the input for the next command, so you can save a plan, read it, then feed it back in.</p>
+        <figure class="shot"><a href="update-help.webp"><img src="update-help.webp" alt="Terminal showing hubspot objects update --help with the dry-run, digest and confirm options and examples" width="800" height="671" loading="lazy"></a><figcaption>Terminal output: the dry run option (1), digest and confirm for bulk changes (2), and the examples (3).</figcaption></figure>
+        <pre><code>hubspot objects search --type contacts --filter "email~example.com" --format jsonl \
+  | hubspot objects update --type contacts --property tier=gold --dry-run &gt; plan.jsonl
+
+cat plan.jsonl | hubspot objects update --type contacts</code></pre>
+        <figure class="shot"><a href="dry-run.webp"><img src="dry-run.webp" alt="Terminal showing a dry run of an objects update with executed false, records affected 1, and reversible false" width="800" height="188" loading="lazy"></a><figcaption>Terminal output: a dry run changes nothing (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>I ran a dry run that would set a demo contact's lifecycle stage to customer. The result said <code>executed</code> false, 1 record affected, and <code>reversible</code> false. Nothing changed, and the plan warned that the change could not be undone.</p></div>
+        <p>Some destructive commands, such as deletes, also need a safety digest from a prior dry run, and the help for <code>objects update</code> lists <code>--digest</code> and <code>--confirm</code> for bulk changes. <code>hubspot history</code> shows a local audit log of destructive operations.</p>
+
+        <h2>6. Add the skills</h2>
+        <p>In the agent workspace, run <code>npx skills add hubspot/agent-cli-skills</code>. The skills are markdown files that give the agent guidance for HubSpot tasks. HubSpot's repository lists skills such as bulk-operations (the foundation, covering JSONL pipes and dry runs), crm-lookup, crm-data-quality, deal-management, sales-reporting, team-ownership, ticket-resolution and workflow-automation. Read them in the public repository before you let an agent follow them. Run <code>npx skills update</code> to refresh, and <code>hubspot upgrade</code> to update the CLI itself.</p>
+
+        <h2>7. Control who can connect it</h2>
+        <p>HubSpot recommends admins join the App Governance beta. Super Admins then go to <span class="ui">Settings &gt; Integrations &gt; Connected Apps &gt; Approved apps</span>, find <strong>HubSpot Agent CLI</strong>, and approve it, choose who can install it and set optional data permissions. A user without install access sees a request screen after <code>hubspot auth login</code> and can ask a Super Admin to approve. This controls authorizing the OAuth connector, not downloading the binary, and it does not cover admin mode with a service key.</p>
+        <figure class="shot"><a href="approved-apps.webp"><img src="approved-apps.webp" alt="Connected Apps page on the Approved apps tab with an Approve apps button and a table of approved apps with Manage access buttons" width="800" height="450" loading="lazy"></a><figcaption>Approve apps (1), the approved list (2) and Manage access (3).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My Approved apps tab lists 14 apps, each with its access type, how many users installed it, its install permissions and a Manage access button.</p></div>
+
+        <h2>8. Habits HubSpot recommends</h2>
+        <ul>
+          <li>Start with reports, summaries and analysis before anything that modifies data.</li>
+          <li>For scheduled or recurring tasks, start with one narrow use case.</li>
+          <li>Review recommendations and large updates before applying them.</li>
+          <li>Use clear prompts that describe the result you want, and follow your data governance policy.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/use-the-hubspot-agent-cli">HubSpot Knowledge Base: Use the HubSpot Agent CLI</a></li>
+          <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide">HubSpot developer docs: Install and use the HubSpot Agent CLI (BETA)</a></li>
+          <li><a href="https://github.com/HubSpot/agent-cli-skills">HubSpot Agent CLI Skills on GitHub</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/manage-access-to-apps">HubSpot Knowledge Base: Manage access to apps</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

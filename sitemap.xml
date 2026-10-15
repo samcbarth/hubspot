@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hubspot.samcbarth.com/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/link-builder.html</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/request-a-fix.html</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/about.html</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/link-builder.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/request-a-fix.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/about.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/create-a-hubspot-service-key/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/use-the-hubspot-mcp-connector-in-claude/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/theme-preview-webp-skipped/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/theme-system-templates/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</loc><lastmod>2026-10-07</lastmod></url>

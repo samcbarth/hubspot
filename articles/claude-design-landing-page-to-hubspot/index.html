@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector - HubSpot Field Notes</title>
+<meta name="description" content="Two ways to get a landing page from Claude into HubSpot: Claude Design's Send button, and the HubSpot connector in Claude chat. What lands as a draft, what gets confirmed, and what to check before you publish.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/">
+<meta property="og:title" content="Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector">
+<meta property="og:description" content="Two ways to get a landing page from Claude into HubSpot: Claude Design's Send button, and the HubSpot connector in Claude chat. What lands as a draft, what gets confirmed, and what to check before you publish.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/og.png">
+<meta property="article:published_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-10-15">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector",
+      "description": "Two ways to get a landing page from Claude into HubSpot: Claude Design's Send button, and the HubSpot connector in Claude chat. What lands as a draft, what gets confirmed, and what to check before you publish.",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/",
+      "proficiencyLevel": "Intermediate",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Send a landing page from Claude Design to HubSpot",
+      "totalTime": "PT8M",
+      "step": [
+        {"@type": "HowToStep", "name": "Set up the connector", "text": "Connect the HubSpot connector for Claude first."},
+        {"@type": "HowToStep", "name": "Design the page", "text": "In Claude, click Design and create the landing page."},
+        {"@type": "HowToStep", "name": "Send it", "text": "Click Share, then More formats and apps, then Send next to HubSpot."},
+        {"@type": "HowToStep", "name": "Review the draft", "text": "Open the draft in HubSpot, check it, and publish when ready."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector", "item": "https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="claude-design-landing-page-to-hubspot">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Landing+pages">Landing pages</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Content Hub</span></div>
+      <h1>Make a HubSpot landing page with Claude: send it from Claude Design, or build it through the connector</h1>
+      <p class="dek">Claude can design the page and send it to HubSpot as a draft. You still review it in HubSpot and publish it yourself.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>All HubSpot products and plans; Claude Pro, Max, Team or Enterprise required</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>HubSpot connector for Claude set up; landing page access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-15T15:46:00-04:00">October 15, 2026, 3:46 PM ET</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Set up the HubSpot connector for Claude first. Then in Claude, click <span class="ui">Design</span>, build the page, click <span class="ui">Share</span>, choose <span class="ui">More formats and apps</span>, and click <span class="ui">Send</span> next to HubSpot. The page arrives in HubSpot as a draft. Landing pages are the only asset type this route supports. Updates go through the Send button too, not through chat, and sending again after you publish creates a new version instead of overwriting the published page. You can also ask the connector in a Claude chat to create or edit a landing page, and it asks you to confirm before creating from a template or publishing.</p>
+        </div>
+
+        <h2>1. Set up the connector first</h2>
+        <p>HubSpot's requirement for this route is that you have set up the HubSpot connector for Claude, and that you are on a Claude Pro, Max, Team or Enterprise plan. Follow <a href="../use-the-hubspot-mcp-connector-in-claude/">use the HubSpot connector in Claude</a> if you have not done that yet.</p>
+
+        <h2>2. Route A: send a page from Claude Design</h2>
+        <div class="callout warn"><span class="callout-title">Claude Design is moving</span><p>When I opened Claude Design, a banner said it is moving to Artifacts in the Claude app, and that I can keep using this version until December 14. HubSpot's page was written for Claude Design, so check whether the Send step has moved before you rely on these steps after that date.</p></div>
+        <figure class="shot"><a href="claude-design-home.webp"><img src="claude-design-home.webp" alt="Claude Design home page with a banner about moving to Artifacts, a prompt box, and a gallery of templates including an offer landing page" width="800" height="580" loading="lazy"></a><figcaption>The move banner (1) and a landing page template from my design system (2).</figcaption></figure>
+        <ol>
+          <li>In Claude on desktop or claude.ai, click <span class="ui">Design</span> in the bottom left. In my browser, Claude Design lives at claude.ai/design.</li>
+          <li>Create a landing page and make the changes you need.</li>
+          <li>In the top right, click <span class="ui">Share</span>.</li>
+          <li>Select <span class="ui">More formats and apps</span>.</li>
+          <li>Next to <strong>HubSpot</strong>, click <span class="ui">Send</span>. If HubSpot is not listed, choose <span class="ui">Connect more destinations</span> to connect the HubSpot connector.</li>
+          <li>The page is sent to HubSpot as a draft. Review it in HubSpot and publish when ready.</li>
+        </ol>
+        <p>The Share menu in my Claude Design offers access settings, <span class="ui">Publish as artifact</span>, exports to PowerPoint, Google Slides and PDF, and <span class="ui">More formats and apps</span>.</p>
+        <figure class="shot"><a href="share-menu.webp"><img src="share-menu.webp" alt="Claude Design Share menu with access settings, Publish as artifact, export options and More formats and apps" width="800" height="352" loading="lazy"></a><figcaption>More formats and apps (1).</figcaption></figure>
+        <p>Open <span class="ui">More formats and apps</span>. HubSpot appears under <em>Your destinations</em> next to Claude Code, with a button to send it, plus <span class="ui">Connect more destinations</span>.</p>
+        <figure class="shot"><a href="share-more-apps.webp"><img src="share-more-apps.webp" alt="More formats and apps submenu listing Project HTML, PNG, Video, and destinations Claude Code and HubSpot" width="800" height="335" loading="lazy"></a><figcaption>HubSpot as a destination (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>I stopped here and did not press Send. My HubSpot connector is attached to my live portal, and I did not want a test page landing in it. The menu lists HubSpot as a destination because the connector is set up.</p></div>
+        <p>You can keep editing in Claude Design after sending. Click <span class="ui">Send</span> again to update the landing page in HubSpot. HubSpot is explicit about two limits. Landing pages are the only supported asset type. And asking Claude in chat to update the page will not push changes to HubSpot, only the Send button does.</p>
+        <div class="callout warn"><span class="callout-title">Sending again after you publish</span><p>If the page is already published in HubSpot, sending it again from Claude Design creates a new version in HubSpot instead of overwriting the published version. Check which version is live before you publish.</p></div>
+
+        <h2>3. Find the draft in HubSpot</h2>
+        <p>Open <span class="ui">Content &gt; Landing pages</span>. The page you sent shows up with the other landing pages, with its publish status. Open it, check the layout, forms and links on a preview, then publish when you are happy with it.</p>
+        <figure class="shot"><a href="landing-pages-list.webp"><img src="landing-pages-list.webp" alt="HubSpot Landing pages list with Create button and rows showing name, URL and publish status" width="800" height="450" loading="lazy"></a><figcaption>Create (1) and the list with publish status (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>This is my landing pages list. Each row shows the name, URL, publish status and dates. A sent page would appear here with a draft status instead of published, and I would open it from this list to review it.</p></div>
+
+        <h2>4. Route B: build or edit through the connector in chat</h2>
+        <p>The HubSpot connector can also work on landing pages from a normal Claude chat. HubSpot lists landing pages as read, create and update objects for the connector. The developer docs describe the underlying landing page tool as able to create, edit, style, publish, clone and inspect landing pages, including reading module types and templates and writing content, styles and metadata. Writes happen one after another.</p>
+        <ul>
+          <li><strong>It asks first.</strong> The docs say the tool requires user confirmation before creating a page from a template, publishing, or restoring a revision.</li>
+          <li><strong>It uses your templates.</strong> It reads the templates and module types available in your account, so a page can only be as flexible as the template behind it. If a template does not allow modules, see <a href="../template-doesnt-allow-modules/">template doesn't allow modules</a>.</li>
+          <li><strong>Review everything.</strong> Keep <span class="ui">Write tools</span> on <span class="ui">Needs Approval</span> in Claude, as HubSpot recommends.</li>
+        </ul>
+        <figure class="shot"><a href="claude-manage-landing-page.webp"><img src="claude-manage-landing-page.webp" alt="Claude connector tool permissions listing Manage landing page and other write tools set to Needs approval" width="800" height="746" loading="lazy"></a><figcaption>The landing page write tool (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my Claude, <strong>Manage landing page</strong> is one of the write tools, and the write group is set to Needs approval. So Claude has to ask me before it changes a page.</p></div>
+        <p>For performance questions, HubSpot notes that only published pages have data, and you must name the campaign and date range for individual pages.</p>
+
+        <h2>5. Which route to use</h2>
+        <ul>
+          <li><strong>Claude Design:</strong> you want to design a page visually, then hand a draft to HubSpot.</li>
+          <li><strong>Connector in chat:</strong> you want Claude to work with pages and templates that already exist in your account, or to adjust content and metadata.</li>
+        </ul>
+        <p>Whichever route you use, treat the result as a draft. Check the form, the tracking and the meta description in HubSpot before you publish.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/integrations/send-landing-pages-from-claude-design-to-hubspot">HubSpot Knowledge Base: Send landing pages from Claude Design to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/set-up-and-use-the-hubspot-connector-for-claude">HubSpot Knowledge Base: Set up and use the HubSpot connector for Claude</a></li>
+          <li><a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server">HubSpot developer docs: Integrate AI tools with the HubSpot MCP server (manage_landing_page)</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

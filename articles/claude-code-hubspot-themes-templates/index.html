@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../../">
+<head>
+<!--#head-->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Barth">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a59'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff'%3EHFN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../../assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="HubSpot Field Notes" href="../../feed.xml">
+<script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
+<!--/head-->
+<title>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server - HubSpot Field Notes</title>
+<meta name="description" content="How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.">
+<link rel="canonical" href="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/">
+<meta property="og:title" content="Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server">
+<meta property="og:description" content="How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.">
+<meta property="og:image" content="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/og.png">
+<meta property="article:published_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-10-15">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server",
+      "description": "How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
+      "publisher": { "@type": "Person", "name": "Sam Barth" },
+      "image": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/og.png",
+      "mainEntityOfPage": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/",
+      "proficiencyLevel": "Advanced",
+      "about": "HubSpot"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set up Claude Code to build HubSpot themes and templates",
+      "totalTime": "PT12M",
+      "step": [
+        {"@type": "HowToStep", "name": "Update the CLI", "text": "Install or update @hubspot/cli to version 8.2.0 or higher."},
+        {"@type": "HowToStep", "name": "Run hs mcp setup", "text": "Run hs mcp setup and select Claude as the client."},
+        {"@type": "HowToStep", "name": "Restart and verify", "text": "Restart Claude Code and run /mcp to see the HubSpotDev server."},
+        {"@type": "HowToStep", "name": "Scaffold", "text": "Create a theme, template or module with the CLI or through the MCP tools."},
+        {"@type": "HowToStep", "name": "Upload to a draft", "text": "Upload with a draft publish mode and review in Design Manager."}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server", "item": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-slug="claude-code-hubspot-themes-templates">
+<!--#header-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../">
+      <span class="logo-mark" aria-hidden="true">HFN</span>
+      <span class="logo-name">HubSpot Field Notes<span class="logo-role">by Sam Barth</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../">Articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a class="nav-hide-sm" href="../../request-a-fix.html">Request a fix</a>
+      <a class="nav-hide-sm" href="../../about.html">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
+    <header class="article-head">
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Content Hub</span></div>
+      <h1>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server</h1>
+      <p class="dek">Claude Code can write the files, and the hs CLI puts them in Design Manager. Set up the MCP server, scaffold, then upload to a draft first.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Subscription</dt><dd>Developer tooling; check your subscription for custom code in Design Manager</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design Tools access; HubSpot CLI authenticated to the account</dd></div>
+        <div class="fact"><dt>Time</dt><dd>12 min &middot; Advanced</dd></div>
+        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-15T15:48:00-04:00">October 15, 2026, 3:48 PM ET</time></dd></div>
+      </dl>
+      <div data-portal-box></div>
+    </header>
+
+    <div class="article-layout">
+      <aside class="toc" data-toc aria-label="On this page"></aside>
+      <article class="prose">
+        <div class="tldr">
+          <h2>Short answer</h2>
+          <p>Install the HubSpot CLI (version 8.2.0 or higher), run <code>hs mcp setup</code>, pick Claude, restart Claude Code and check <code>/mcp</code> for the <strong>HubSpotDev</strong> server. Its CMS tools create templates, modules and serverless functions, and the CLI scaffolds a full theme with <code>hs cms theme create</code>. Upload with <code>hs cms upload</code> or <code>hs cms watch</code>, use a draft publish mode while you test, and review the result in Design Manager.</p>
+        </div>
+
+        <h2>1. Install the CLI and the Developer MCP server</h2>
+        <p>HubSpot's developer MCP server runs locally and gives your AI assistant tools for app and CMS development. It needs version 8.2.0 or higher of the HubSpot CLI.</p>
+        <pre><code>hs --version
+npm install -g @hubspot/cli
+hs mcp setup</code></pre>
+        <p>When prompted, use the arrow keys and space bar to choose your client, then press Enter. Supported clients include Claude Code, Codex CLI, Cursor, Gemini CLI, VS Code and Windsurf. You will also be asked whether to use standalone mode, which runs <code>npx @hubspot/cli</code> instead of a global install, useful on machines where global npm installs are restricted. Restart the client if it was open.</p>
+        <figure class="shot"><a href="mcp-setup-help.webp"><img src="mcp-setup-help.webp" alt="Terminal showing hs --version and hs mcp setup --help with a client option listing codex, claude, cursor, gemini, vscode and windsurf" width="800" height="335" loading="lazy"></a><figcaption>Terminal output: hs mcp setup can target a client (1).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My CLI is version 8.5.0. Its help for <code>hs mcp setup</code> has a <code>--client</code> option with the choices codex, claude, cursor, gemini, vscode and windsurf, so the setup can be run for Claude directly.</p></div>
+        <p>To check it worked, run <code>/mcp</code> in Claude Code and look for <strong>HubSpotDev</strong>. This server is separate from the remote HubSpot MCP server that the Claude connector uses. The developer server is local and for building. The remote one is for working with CRM data.</p>
+
+        <h2>2. What the CMS tools do</h2>
+        <p>HubSpot's tool reference lists CMS tools that run CLI commands for the agent.</p>
+        <ul>
+          <li><strong>create-cms-template:</strong> creates a template. Types include page, email, partial, global partial, blog listing, blog post, search and section.</li>
+          <li><strong>create-cms-module:</strong> creates a HubL or React module, with content type targeting, a global flag and a new-content availability flag.</li>
+          <li><strong>create-cms-function:</strong> creates a serverless function with an endpoint path and HTTP method.</li>
+          <li><strong>search-docs and fetch-doc:</strong> let the agent read HubSpot's developer docs before it writes code.</li>
+        </ul>
+        <p>HubSpot's example prompt for a website module tells the agent to ask what the module should look and do, what fields you want to control, and where it will be used, then to use brand colors by default and walk you through testing.</p>
+
+        <h2>3. Scaffold a theme</h2>
+        <p>The CLI can scaffold a complete theme. On my machine, <code>hs cms theme create ./site-theme</code> made a folder with <code>css</code>, <code>fields.json</code>, <code>images</code>, <code>js</code>, <code>modules</code>, <code>sections</code>, <code>templates</code> and <code>theme.json</code>.</p>
+        <figure class="shot"><a href="theme-create.webp"><img src="theme-create.webp" alt="Terminal showing hs cms theme create, then the theme folder listing and its templates folder listing" width="800" height="671" loading="lazy"></a><figcaption>Terminal output: the theme folders (1) and its templates (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>The scaffold's <code>theme.json</code> on my machine points to a preview path, a screenshot path and a single <code>mobile</code> responsive breakpoint. The <code>templates</code> folder had home, about, contact, landing-page, pricing, blog and other starting templates.</p></div>
+        <p>The theme folder from this command did not include a <code>CLAUDE.md</code> or <code>AGENTS.md</code>. HubSpot says it automatically includes agent context files, <code>AGENTS.md</code>, <code>CLAUDE.md</code> and <code>HUBSPOT_PROJECTS.md</code>, in projects created through <code>hs project create</code>, <code>hs get-started</code> or the MCP server. For a theme folder, add your own <code>CLAUDE.md</code> with your brand rules and the commands you want the agent to use.</p>
+
+        <h2>4. Add a template</h2>
+        <p>Templates are HTML files with a comment header. A new page template from <code>hs cms template create</code> had <code>templateType: page</code>, a label, and <code>isAvailableForNewContent: true</code>, plus two example modules and the standard header and footer includes.</p>
+        <figure class="shot"><a href="template-create.webp"><img src="template-create.webp" alt="Terminal showing hs cms template create and the generated page template file with its comment header and module tags" width="800" height="608" loading="lazy"></a><figcaption>Terminal output: the comment header (1) and the example modules (2).</figcaption></figure>
+        <p>HubSpot's docs list <code>hs cms template create</code>, while some of their command lists still show the older <code>hs create template</code>. In CLI 8.5.0 on my machine, <code>hs create</code> answered with a hint to use the <code>hs cms ... create</code> form, so use that if your agent follows an older doc. If a coded template does not show up where you expect in the page picker, see <a href="../coded-template-missing-from-picker/">coded template missing from the picker</a>.</p>
+
+        <h2>5. Add a module</h2>
+        <p><code>hs cms module create</code> takes a label and the content types where the module can be used. It asked whether the module should be available for new content, then wrote <code>fields.json</code>, <code>meta.json</code>, <code>module.css</code>, <code>module.html</code> and <code>module.js</code>.</p>
+        <figure class="shot"><a href="module-create.webp"><img src="module-create.webp" alt="Terminal showing hs cms module create, the module files, and meta.json with content_types LANDING_PAGE and SITE_PAGE" width="800" height="734" loading="lazy"></a><figcaption>Terminal output: the module files (1) and the content types (2).</figcaption></figure>
+        <p>Fields are what editors control, so tell Claude which settings a marketer should be able to change. The upload validation errors for fields and themes are covered in <a href="../theme-upload-validation-errors/">theme upload validation errors</a>.</p>
+
+        <h2>6. Preview and upload safely</h2>
+        <p>The CLI has two ways to push files: <code>hs cms upload &lt;src&gt; &lt;dest&gt;</code> for a one-time upload and <code>hs cms watch &lt;src&gt; &lt;dest&gt;</code> to upload changes as you save. Both accept <code>--cms-publish-mode</code> with <code>draft</code> or <code>publish</code>, and <code>hs cms theme preview</code> uploads and watches a theme and starts a local preview server.</p>
+        <figure class="shot"><a href="upload-preview-help.webp"><img src="upload-preview-help.webp" alt="Terminal showing hs cms theme preview --help and hs cms watch --help" width="800" height="650" loading="lazy"></a><figcaption>Terminal output: theme preview options (1) and the watch command (2).</figcaption></figure>
+        <ul>
+          <li>Start with a draft publish mode, and look at the result in Design Manager before anything is published.</li>
+          <li><code>hs cms upload --clean</code> deletes the destination directory and its contents before uploading, and that includes the global content for global partials and modules.</li>
+          <li><code>hs cms watch --remove</code> deletes files in HubSpot that are not found locally.</li>
+          <li>HubSpot's tool notes for project uploads say to run them only when you explicitly ask. Say the same in your prompt for CMS uploads.</li>
+          <li>Use a copy of the theme or a new destination path while you experiment.</li>
+        </ul>
+
+        <h2>7. Check it in Design Manager</h2>
+        <p>Open <span class="ui">Development &gt; Design Manager</span>. Uploaded themes appear in the file tree, and you can open any template or module to inspect it.</p>
+        <figure class="shot"><a href="design-manager.webp"><img src="design-manager.webp" alt="Design Manager showing the file tree with several themes and a Create a new file button" width="800" height="450" loading="lazy"></a><figcaption>The file tree with themes (1) and Create a new file (2).</figcaption></figure>
+        <div class="callout"><span class="callout-title">Example from my portal</span><p>My Design Manager tree lists several themes and a Custom Modules folder, so a new upload path should be different from any of those. I would upload to a fresh folder first, check it, then decide whether it replaces anything.</p></div>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/developer-mcp/setup">HubSpot developer docs: Set up the developer MCP server</a></li>
+          <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/developer-mcp/tools">HubSpot developer docs: Developer MCP server tools</a></li>
+          <li><a href="https://developers.hubspot.com/docs/build-with-ai/agent-context-files">HubSpot developer docs: Using agent context files</a></li>
+          <li><a href="https://developers.hubspot.com/docs/build-with-ai/example-prompts">HubSpot developer docs: Example prompts for building on HubSpot with AI</a></li>
+        </ul>
+
+        <div class="vote" data-vote></div>
+      </article>
+    </div>
+
+    <section class="related" data-related></section>
+
+    <section class="cta-band">
+      <div class="cta-card">
+        <h3>New field notes by email</h3>
+        <p>One email when a new article publishes.</p>
+        <div class="hs-form-slot" data-hs-form="newsletter"></div>
+      </div>
+      <div class="cta-card">
+        <h3>Still stuck?</h3>
+        <p>If this did not fix it, the problem is probably specific to your setup. Book a call and we will look at it together.</p>
+        <a class="btn btn-primary" data-meetings href="https://meetings.hubspot.com/sam-barth/meeting-with-sam">Book a call with Sam</a>
+      </div>
+    </section>
+  </div>
+</main>
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>HubSpot Field Notes</strong> by <a href="https://samcbarth.com">Sam Barth</a>, HubSpot-certified practitioner.</p>
+      <p>An independent resource. Not an official HubSpot resource and does not speak for HubSpot, Inc. HubSpot is a registered trademark of HubSpot, Inc. Screenshots show HubSpot's interface on the date each article was verified.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../">All articles</a>
+      <a href="../../link-builder.html">Link builder</a>
+      <a href="../../request-a-fix.html">Request a fix</a>
+      <a href="../../about.html">About</a>
+      <a href="../../feed.xml">RSS</a>
+      <a href="https://blog.samcbarth.com">Sam's blog</a>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+<script src="../../articles.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
