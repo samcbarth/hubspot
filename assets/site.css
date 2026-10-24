@@ -312,3 +312,38 @@ button, input, select { font: inherit; color: inherit; }
 .footer-links a { color: var(--text-2); text-decoration: none; }
 .footer-links a:hover { color: var(--orange); }
 @media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr; } .footer-links { justify-content: flex-start; } }
+
+/* Booking CTAs */
+.nav .nav-book { color: #fff; padding: .4rem .8rem; font-size: .85rem; white-space: nowrap; }
+.nav .nav-book:hover { color: #fff; }
+@media (max-width: 480px) { .nav { gap: .7rem; } .nav a.nav-hide-xs { display: none; } .nav .nav-book { padding: .35rem .6rem; font-size: .8rem; } }
+.book-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.book-card { border-color: var(--orange-line); }
+.prose .book-nudge { border: 1px solid var(--line); border-left: 3px solid var(--orange); border-radius: 10px; padding: .75rem 1rem; background: var(--orange-soft); color: var(--text); font-size: .98rem; }
+.book-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 19;
+  display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+  padding: .7rem 3rem .7rem 1.25rem; background: var(--bg-2); border-bottom: 1px solid var(--orange-line); box-shadow: var(--shadow);
+  transform: translateY(-110%); visibility: hidden; transition: transform .35s ease, visibility .35s;
+}
+.book-banner.show { transform: translateY(0); visibility: visible; }
+.book-banner p { font-size: .95rem; color: var(--text); }
+.book-banner .btn { padding: .4rem .85rem; font-size: .85rem; }
+.book-x { position: absolute; right: .75rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--muted); font-size: 1.4rem; line-height: 1; cursor: pointer; width: 32px; height: 32px; }
+.book-x:hover { color: var(--text); }
+@media (prefers-reduced-motion: reduce) { .book-banner { transition: none; } }
+.book-modal { position: fixed; inset: 0; z-index: 90; background: rgba(0, 0, 0, .6); display: flex; align-items: center; justify-content: center; padding: 1.25rem; }
+.book-dialog { max-width: 440px; width: 100%; background: var(--bg-2); border: 1px solid var(--orange-line); border-radius: 14px; padding: 1.5rem; box-shadow: var(--shadow); }
+.book-dialog h2 { font-size: 1.35rem; margin-bottom: .5rem; }
+.book-dialog p { color: var(--text-2); margin-bottom: 1.1rem; }
+.role-picker { display: flex; flex-wrap: wrap; gap: .5rem; margin: .6rem 0 1.5rem; }
+.role-picker button { border: 1px solid var(--line-2); background: var(--bg-2); border-radius: 999px; padding: .4rem .95rem; cursor: pointer; font-size: .9rem; }
+.role-picker button:hover { border-color: var(--orange-line); }
+.role-picker button[aria-pressed="true"] { background: var(--orange); border-color: var(--orange); color: #fff; }
+.book-types { display: grid; gap: .8rem; }
+.book-type { border: 1px solid var(--line); border-radius: 14px; padding: 1.15rem; background: var(--bg-2); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; }
+.book-type:first-child { border-color: var(--orange-line); }
+.book-type div { flex: 1 1 280px; }
+.book-type h2 { font-size: 1.15rem; margin: 0 0 .25rem; }
+.book-type p { color: var(--text-2); font-size: .95rem; margin: 0; }
+.role-label { font-weight: 600; font-size: .9rem; }

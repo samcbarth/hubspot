@@ -4,6 +4,7 @@
 
 - Link builder for direct links into any HubSpot portal: https://hubspot.samcbarth.com/link-builder.html
 - Request a fix: https://hubspot.samcbarth.com/request-a-fix.html
+- Book a free 15 or 30 minute call with Sam: https://hubspot.samcbarth.com/book.html
 
 ## Commerce Hub
 

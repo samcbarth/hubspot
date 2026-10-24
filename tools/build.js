@@ -107,6 +107,7 @@ const urls = [
   { loc: `${SITE}/link-builder.html`, lastmod: today },
   { loc: `${SITE}/request-a-fix.html`, lastmod: today },
   { loc: `${SITE}/about.html`, lastmod: today },
+  { loc: `${SITE}/book.html`, lastmod: today },
   ...published.map(a => ({ loc: `${SITE}/articles/${a.slug}/`, lastmod: a.verified })),
 ];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
@@ -142,6 +143,7 @@ write('llms.txt', `# HubSpot Field Notes
 
 - Link builder for direct links into any HubSpot portal: ${SITE}/link-builder.html
 - Request a fix: ${SITE}/request-a-fix.html
+- Book a free 15 or 30 minute call with Sam: ${SITE}/book.html
 
 ${Object.keys(byHub).sort().map(h => `## ${h}\n\n${byHub[h].map(a => `- [${a.title}](${SITE}/articles/${a.slug}/): ${a.excerpt} (Requires ${a.tier}; verified ${a.verified})`).join('\n')}`).join('\n\n')}
 `);

@@ -286,8 +286,170 @@
     }
   }
 
-  /* ---------- HubSpot forms + meetings link ---------- */
-  $$('[data-meetings]').forEach(function (a) { a.href = CONFIG.meetings; });
+  /* ---------- Booking CTAs (one free meetings link, UTM-tagged per placement) ---------- */
+  var page = slug || (location.pathname.split('/').pop().replace(/\.html$/, '') || 'home');
+  var isBookPage = page === 'book';
+  function meetUrl(medium, content) {
+    return CONFIG.meetings + '?utm_source=fieldnotes&utm_campaign=free-call&utm_medium=' +
+      encodeURIComponent(medium) + '&utm_content=' + encodeURIComponent(content || page);
+  }
+  function bookLink(cls, medium, content, label) {
+    return '<a class="' + cls + '" data-book="' + esc(medium) + '|' + esc(content || page) + '" href="' + esc(meetUrl(medium, content)) + '">' + esc(label) + '</a>';
+  }
+  $$('[data-meetings]').forEach(function (a) {
+    var medium = a.getAttribute('data-meetings') || 'inline-link';
+    a.href = meetUrl(medium, page);
+    a.setAttribute('data-book', medium + '|' + page);
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-book]');
+    if (!a) return;
+    var p = a.getAttribute('data-book').split('|');
+    track('book_click', { placement: p[0], content: p[1], page: page });
+  });
+
+  var me0 = slug && ARTICLES.filter(function (a) { return a.slug === slug; })[0];
+  var TOPICS = [
+    { key: 'workflows', f: ['Workflows', 'Approvals'], h: 'Workflow still not behaving?', fix: 'Fix my workflow', plan: 'Plan an automation' },
+    { key: 'email', f: ['Email', 'Forms', 'Campaigns', 'Segments', 'Subscriptions', 'Deliverability', 'Marketing events', 'Ads', 'Social', 'SMS', 'Lead capture', 'CTAs', 'Marketing contacts', 'Consent'], h: 'Email or form still giving you trouble?', fix: 'Fix my email setup', plan: 'Plan a campaign setup' },
+    { key: 'data', f: ['Properties', 'Records', 'Imports', 'Import', 'Associations', 'Duplicates', 'Data quality', 'Contacts', 'Companies', 'Custom objects', 'Lifecycle stages', 'Lifecycle', 'Export', 'Data', 'Data model', 'Objects', 'Views', 'Data enrichment', 'Ownership', 'Owners'], h: 'CRM data still messy?', fix: 'Fix my data problem', plan: 'Plan a data cleanup' },
+    { key: 'sales', f: ['Deals', 'Pipelines', 'Sequences', 'Meetings', 'Calling', 'Calls', 'Tasks', 'Quotes', 'Leads', 'Lead scoring', 'Sales extension', 'Prospecting', 'Sales workspace', 'Products', 'Line items', 'Snippets'], h: 'Sales setup still not working?', fix: 'Fix my sales setup', plan: 'Plan a pipeline build' },
+    { key: 'service', f: ['Help desk', 'Inbox', 'Tickets', 'Chat', 'Chatflows', 'Knowledge base', 'Surveys', 'Connected inbox', 'SLA', 'Customer success', 'Bots', 'Support portal', 'Routing'], h: 'Service setup still stuck?', fix: 'Fix my help desk', plan: 'Plan a service setup' },
+    { key: 'build', f: ['Pages', 'Website', 'Domains', 'Themes', 'Templates', 'Design Manager', 'Design manager', 'API', 'Integrations', 'Salesforce', 'Blog', 'HubL', 'Modules', 'Developer', 'Tracking code', 'Landing pages', 'Data sync', 'Apps', 'Sandboxes', 'Projects', 'Multi-language', 'WordPress', 'Shopify', 'NetSuite', 'QuickBooks', 'Dynamics 365'], h: 'Site or integration still broken?', fix: 'Fix my site or integration', plan: 'Scope a build' }
+  ];
+  var HUB_TOPIC = { 'Developer': 'build', 'Content Hub': 'build', 'Service Hub': 'service', 'Sales Hub': 'sales', 'Marketing Hub': 'email', 'Data Hub': 'data', 'Smart CRM': 'data' };
+  var GENERIC = { key: 'general', h: 'Still stuck?', fix: 'Fix this with Sam', plan: 'Plan something bigger' };
+  function topicFor(a) {
+    if (!a) return GENERIC;
+    var feats = a.features || [];
+    for (var i = 0; i < feats.length; i++) {
+      for (var j = 0; j < TOPICS.length; j++) if (TOPICS[j].f.indexOf(feats[i]) >= 0) return TOPICS[j];
+    }
+    var hubs = a.hubs || [];
+    for (var k = 0; k < hubs.length; k++) {
+      var key = HUB_TOPIC[hubs[k]];
+      if (key) return TOPICS.filter(function (t) { return t.key === key; })[0];
+    }
+    return GENERIC;
+  }
+  var FREE_SUB = 'Free 15 or 30 minute call, in your portal.';
+
+  // Article end card: topic heading, "broken now" + "planning" buttons
+  if (slug) {
+    var endCard = $$('.cta-band .cta-card').filter(function (c) { return $('[data-meetings]', c); })[0];
+    if (endCard) {
+      var t = topicFor(me0);
+      endCard.classList.add('book-card');
+      endCard.innerHTML = '<h3>' + esc(t.h) + '</h3><p>' + FREE_SUB + '</p><div class="book-actions">' +
+        bookLink('btn btn-primary', 'end-card', t.key + '-fix', t.fix) +
+        bookLink('btn btn-ghost', 'end-card', t.key + '-plan', t.plan) + '</div>';
+    }
+  }
+
+  // Mid-article nudge on troubleshooting articles, at the end of the first section
+  if (prose && me0 && (me0.problem === 'Fix it' || me0.problem === 'Gotcha')) {
+    var h2s = $$('h2', prose).filter(function (h) { return !h.closest('.tldr'); });
+    if (h2s.length > 1 && !/^sources$/i.test(h2s[1].textContent.trim())) {
+      var nudge = document.createElement('p');
+      nudge.className = 'book-nudge';
+      nudge.innerHTML = 'Not your exact setup? ' + bookLink('', 'mid-article', topicFor(me0).key, 'Book a free 15 minutes with Sam') + ' and we\'ll look at yours.';
+      prose.insertBefore(nudge, h2s[1]);
+    }
+  }
+
+  // Drop-down banner and exit popup: never both on one page, each at most once per 7 days
+  var WEEK = 7 * 24 * 3600 * 1000;
+  function recent(key) { var v = Number(store(key)); return v && Date.now() - v < WEEK; }
+  function session(key, val) {
+    try { if (val === undefined) return sessionStorage.getItem(key); sessionStorage.setItem(key, val); } catch (e) { return null; }
+  }
+  var promoShown = false;
+
+  if (!isBookPage && !recent('hfn-book-banner') && !session('hfn-book-banner')) {
+    setTimeout(function () {
+      if (promoShown) return;
+      promoShown = true;
+      session('hfn-book-banner', '1');
+      var bar = document.createElement('div');
+      bar.className = 'book-banner';
+      bar.setAttribute('role', 'region');
+      bar.setAttribute('aria-label', 'Book a free call');
+      bar.innerHTML = '<p>Stuck on something in HubSpot? Book a free 15 or 30 minute call with Sam.</p>' +
+        bookLink('btn btn-primary', 'banner', page, 'Book a free call') +
+        '<button class="book-x" type="button" aria-label="Dismiss">&times;</button>';
+      var hdr = $('.site-header');
+      if (hdr) bar.style.top = hdr.offsetHeight + 'px';
+      document.body.appendChild(bar);
+      void bar.offsetHeight; // commit the hidden position so the drop-in transition runs
+      bar.classList.add('show');
+      $('.book-x', bar).addEventListener('click', function () {
+        store('hfn-book-banner', String(Date.now()));
+        bar.classList.remove('show');
+        setTimeout(function () { bar.remove(); }, 400);
+      });
+      track('book_view', { placement: 'banner', page: page });
+    }, 6000);
+  }
+
+  var desktop = window.matchMedia && window.matchMedia('(pointer: fine) and (min-width: 900px)').matches;
+  if (!isBookPage && desktop && !recent('hfn-book-exit')) {
+    var armedAt = Date.now() + 4000;
+    var onLeave = function (e) {
+      if (e.relatedTarget || e.clientY > 0 || Date.now() < armedAt || promoShown) return;
+      document.removeEventListener('mouseout', onLeave);
+      promoShown = true;
+      store('hfn-book-exit', String(Date.now()));
+      var pop = document.createElement('div');
+      pop.className = 'book-modal';
+      pop.innerHTML = '<div class="book-dialog" role="dialog" aria-modal="true" aria-labelledby="book-modal-h">' +
+        '<h2 id="book-modal-h">Before you go</h2>' +
+        '<p>Didn\'t find your answer? Bring your question to a free 15 or 30 minute call and we\'ll answer it in your portal.</p>' +
+        '<div class="book-actions">' + bookLink('btn btn-primary', 'exit-popup', page, 'Book a free call') +
+        '<button class="btn btn-ghost" type="button" data-close>No thanks</button></div></div>';
+      document.body.appendChild(pop);
+      var shut = function () { pop.remove(); document.removeEventListener('keydown', esc1); };
+      var esc1 = function (ev) { if (ev.key === 'Escape') shut(); };
+      pop.addEventListener('click', function (ev) { if (ev.target === pop || ev.target.hasAttribute('data-close')) shut(); });
+      document.addEventListener('keydown', esc1);
+      $('.btn-primary', pop).focus();
+      track('book_view', { placement: 'exit-popup', page: page });
+    };
+    document.addEventListener('mouseout', onLeave);
+  }
+
+  // /book page role picker: reorders the meeting types
+  var picker = $('[data-book-picker]');
+  if (picker) {
+    var ORDER = {
+      admin: ['quick-fix', 'audit', 'ongoing', 'scoping'],
+      marketer: ['quick-fix', 'scoping', 'audit', 'ongoing'],
+      sales: ['audit', 'quick-fix', 'scoping', 'ongoing'],
+      developer: ['scoping', 'quick-fix', 'ongoing', 'audit']
+    };
+    var list = $('[data-book-types]');
+    var role = 'any';
+    var paint = function () {
+      var order = ORDER[role] || ['quick-fix', 'audit', 'scoping', 'ongoing'];
+      order.forEach(function (type) {
+        var card = $('[data-type="' + type + '"]', list);
+        var a = $('a', card);
+        a.href = meetUrl('book-page', role + '-' + type);
+        a.setAttribute('data-book', 'book-page|' + role + '-' + type);
+        list.appendChild(card);
+      });
+      $$('button', picker).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-role') === role)); });
+    };
+    $$('button', picker).forEach(function (b) {
+      b.addEventListener('click', function () {
+        role = role === b.getAttribute('data-role') ? 'any' : b.getAttribute('data-role');
+        paint();
+        track('book_role', { role: role });
+      });
+    });
+    paint();
+  }
+
+  /* ---------- HubSpot forms ---------- */
 
   var formSlots = $$('[data-hs-form]');
   if (formSlots.length) {
