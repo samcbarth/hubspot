@@ -164,16 +164,6 @@
     <category>Segments</category>
   </item>
   <item>
-    <title>HubSpot seats versus permissions, and using permission sets to stop editing users one by one</title>
-    <link>https://hubspot.samcbarth.com/articles/permission-sets-and-seats/</link>
-    <guid>https://hubspot.samcbarth.com/articles/permission-sets-and-seats/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The difference between seats and permissions in HubSpot, how to create and assign permission sets, and seat transfers.</description>
-    <category>Smart CRM</category>
-    <category>Account settings</category>
-    <category>User settings</category>
-  </item>
-  <item>
     <title>HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead</title>
     <link>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</link>
     <guid>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</guid>
@@ -1090,16 +1080,6 @@
     <category>Companies</category>
   </item>
   <item>
-    <title>Make someone a Super Admin</title>
-    <link>https://hubspot.samcbarth.com/articles/change-super-admin/</link>
-    <guid>https://hubspot.samcbarth.com/articles/change-super-admin/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Who can grant Super Admin in HubSpot, how it differs from giving all permissions, and what happens when you remove it.</description>
-    <category>Smart CRM</category>
-    <category>Users</category>
-    <category>Permissions</category>
-  </item>
-  <item>
     <title>Set your default dashboard</title>
     <link>https://hubspot.samcbarth.com/articles/set-default-dashboard/</link>
     <guid>https://hubspot.samcbarth.com/articles/set-default-dashboard/</guid>
@@ -1428,15 +1408,6 @@
     <category>Line items</category>
   </item>
   <item>
-    <title>Delete your own HubSpot user account</title>
-    <link>https://hubspot.samcbarth.com/articles/delete-your-own-user/</link>
-    <guid>https://hubspot.samcbarth.com/articles/delete-your-own-user/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The difference between removing a user from an account and deleting the user login, and what deletion takes with it.</description>
-    <category>Smart CRM</category>
-    <category>Users</category>
-  </item>
-  <item>
     <title>Filter a whole dashboard</title>
     <link>https://hubspot.samcbarth.com/articles/dashboard-filters/</link>
     <guid>https://hubspot.samcbarth.com/articles/dashboard-filters/</guid>
@@ -1453,16 +1424,6 @@
     <description>How to use HubSpot&#39;s RSS Listing module on page and post templates.</description>
     <category>Content Hub</category>
     <category>Design manager</category>
-  </item>
-  <item>
-    <title>Provision HubSpot users with SCIM</title>
-    <link>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</link>
-    <guid>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How SCIM user provisioning works with Google and other identity providers, and the seat setup it needs.</description>
-    <category>Smart CRM</category>
-    <category>Users</category>
-    <category>Account security</category>
   </item>
   <item>
     <title>How HubSpot improves call transcripts</title>
@@ -1784,21 +1745,11 @@
     <category>Tracking</category>
   </item>
   <item>
-    <title>Log in as another user</title>
-    <link>https://hubspot.samcbarth.com/articles/login-as-user/</link>
-    <guid>https://hubspot.samcbarth.com/articles/login-as-user/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How Super Admins use HubSpot&#39;s log in as feature and its limits.</description>
-    <category>Smart CRM</category>
-    <category>Users</category>
-    <category>Security</category>
-  </item>
-  <item>
-    <title>Manage user properties and preferences</title>
+    <title>HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM</title>
     <link>https://hubspot.samcbarth.com/articles/user-properties-preferences/</link>
     <guid>https://hubspot.samcbarth.com/articles/user-properties-preferences/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What Super Admins can set on HubSpot user records.</description>
+    <description>Seats vs permissions, what View-Only, Core, Sales and Service seats include, permission sets, Super Admin rules, logging in as another user, removing or deleting users, and SCIM provisioning.</description>
     <category>Smart CRM</category>
     <category>Users</category>
   </item>

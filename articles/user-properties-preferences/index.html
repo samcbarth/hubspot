@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Manage user properties and preferences - HubSpot Field Notes</title>
-<meta name="description" content="What Super Admins can set on HubSpot user records.">
+<title>HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM - HubSpot Field Notes</title>
+<meta name="description" content="Seats vs permissions, what View-Only, Core, Sales and Service seats include, permission sets, Super Admin rules, logging in as another user, removing or deleting users, and SCIM provisioning.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/user-properties-preferences/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/user-properties-preferences/">
-<meta property="og:title" content="Manage user properties and preferences">
-<meta property="og:description" content="What Super Admins can set on HubSpot user records.">
+<meta property="og:title" content="HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM">
+<meta property="og:description" content="Seats vs permissions, what View-Only, Core, Sales and Service seats include, permission sets, Super Admin rules, logging in as another user, removing or deleting users, and SCIM provisioning.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/user-properties-preferences/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Manage user properties and preferences",
-      "description": "What Super Admins can set on HubSpot user records.",
+      "headline": "HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM",
+      "description": "Seats vs permissions, what View-Only, Core, Sales and Service seats include, permission sets, Super Admin rules, logging in as another user, removing or deleting users, and SCIM provisioning.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/user-properties-preferences/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Manage user properties and preferences",
-      "totalTime": "PT2M",
+      "name": "HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Open a user record", "text": "Users & Teams."},
-        {"@type": "HowToStep", "name": "Edit", "text": "Presets, teams, skills."},
-        {"@type": "HowToStep", "name": "Bulk edit", "text": "Users table."}
+        {"@type": "HowToStep", "name": "Open Users and Teams", "text": "Settings, Users and Teams."},
+        {"@type": "HowToStep", "name": "Assign the right seat", "text": "View-Only, Core, Sales or Service."},
+        {"@type": "HowToStep", "name": "Use permission sets", "text": "Create once, assign to many users."},
+        {"@type": "HowToStep", "name": "Keep two Super Admins", "text": "Only a Super Admin can assign Super Admin."},
+        {"@type": "HowToStep", "name": "Automate with SCIM", "text": "Provision users from your identity provider."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Manage user properties and preferences", "item": "https://hubspot.samcbarth.com/articles/user-properties-preferences/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM", "item": "https://hubspot.samcbarth.com/articles/user-properties-preferences/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Users">Users</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
-      <h1>Manage user properties and preferences</h1>
-      <p class="dek">Custom user properties need Enterprise.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM</h1>
+      <p class="dek">Seats decide which tools a user can open, permissions decide what they can do there. The rules that trip admins up, from Super Admin assignment to log in as user.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers; custom properties Enterprise</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin</dd></div>
-        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (seat model applies to paid subscriptions)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Add and edit users</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,97 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: user records show presets, teams, skills and preferences. Edit properties <strong>in bulk</strong> from the users table. <strong>Custom user properties</strong> and the user <strong>audit log</strong> need Enterprise.</p>
+          <p>In HubSpot a <strong>seat</strong> decides which tools a user can open, and <strong>permissions</strong> decide what they can do inside them. View-Only seats are free and unlimited on paid plans; Core seats cover the core tools you bought; Sales and Service seats unlock Sales Hub or Service Hub Professional and Enterprise features. Save combinations as <strong>permission sets</strong> so new hires match existing ones. Only a <strong>Super Admin</strong> can make another Super Admin, so keep at least two. <strong>Log in as user</strong> needs two-factor login on the account and lasts 30 minutes. With an identity provider, <strong>SCIM</strong> creates and removes users for you.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
+        <h2>1. Users &amp; Teams</h2>
+        <p>Everything here lives in <strong>Settings, Users &amp; Teams</strong>, with separate tabs for Users, Seats, Teams, Permission sets and Presets (1):</p>
+        <figure class="shot"><a href="users.webp"><img src="users.webp" alt="Users and Teams settings with Users, Seats, Teams, Permission sets and Presets tabs" width="800" height="553" loading="lazy"></a><figcaption>The tabs that matter here (1).</figcaption></figure>
+
+        <h2>2. Seats</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Seat</th><th>What it gives</th></tr></thead>
+            <tbody>
+              <tr><td>View-Only</td><td>Free and unlimited on Starter, Professional and Enterprise. View records, dashboards and reports, filter reports, and log notes on records they can see. Can be given billing admin permissions.</td></tr>
+              <tr><td>Core</td><td>The core features of the hubs you bought. On Sales Hub and Service Hub Starter, a Core seat includes those hubs' features.</td></tr>
+              <tr><td>Sales or Service</td><td>All features of Sales Hub or Service Hub Professional or Enterprise.</td></tr>
+              <tr><td>Developer</td><td>Cannot be combined with other seats or Super Admin. Give developers the Developer tools access permission instead.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The seat-based model applies to accounts and subscriptions created after March 5, 2024. Older accounts that have not migrated only have purchased Sales or Service seats. Adding or removing seats can change your bill, and the Seats tab lets you transfer a seat from one user to another.</p>
+        <p>Since HubSpot's May 2026 release, Core seat users get full access to email templates and snippets without a Sales or Service seat.</p>
+
+        <h2>3. Permission sets</h2>
+        <ol>
+          <li>On the <strong>Permission sets</strong> tab, create a set, name it, and choose its access.</li>
+          <li>To assign it, select users on the <strong>Users</strong> tab, then <strong>More, Assign Permission Set</strong>.</li>
+        </ol>
+        <p>Permissions control things like communicating only with owned contacts, editing properties, exporting, and which logged emails a user can read (see <a href="../never-log-list/">email logging permissions</a>). Users with Add and edit users permission can only grant permissions they have themselves. If you provision users from an identity provider, HubSpot matches role names to permission set names.</p>
+
+        <h2>4. Super Admins</h2>
+        <ul>
+          <li>Only a Super Admin can assign Super Admin.</li>
+          <li>A Super Admin can do virtually anything. A user with every permission but not Super Admin still cannot do some things.</li>
+          <li>Removing Super Admin leaves the user with whatever permissions you assign.</li>
+        </ul>
+        <p>Keep at least two Super Admins, so the account is not stuck when one leaves or loses their two-factor device. See <a href="../locked-out-two-factor-reset/">account security and login</a>.</p>
+
+        <h2>5. Log in as another user</h2>
+        <p>Useful for seeing exactly what a user sees. The rules:</p>
+        <ul>
+          <li>Two-factor login must be required on the account.</li>
+          <li>You cannot log in as Super Admins, users with billing permissions, or users who have not accepted their invite.</li>
+          <li>Each session lasts 30 minutes, and actions are logged.</li>
+        </ul>
+        <p>Tell the user before you do it, since your actions show in their activity.</p>
+
+        <h2>6. User profile and properties</h2>
+        <p>Each user sets their own language and date, time and number format in their profile preferences:</p>
         <figure class="shot"><a href="profile.webp"><img src="profile.webp" alt="User profile preferences with Language and Date, time, and number format dropdowns" width="800" height="400" loading="lazy"></a><figcaption>Language (1) and format (2).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Some preferences only the user can change.</p>
-        <h2>3. Related</h2>
-        <p><a href="../export-users/">Exporting users</a>.</p>
+        <p>Admins see each user's presets, teams, skills and preferences on the user record and can edit properties in bulk from the users table. Some preferences only the user can change. Custom user properties and the user audit log need Enterprise.</p>
+
+        <h2>7. Remove a user, or delete your own</h2>
+        <ul>
+          <li><strong>Removing</strong> someone from your account stops their access, but their HubSpot user (tied to the email address) still exists for other accounts.</li>
+          <li>You can <strong>permanently delete your own user</strong> only when it is not associated with any other HubSpot account. That also deletes HubSpot Academy certifications on that email, so transfer them first.</li>
+          <li>A user's default meeting link cannot be deleted or transferred. Ask them to turn off their scheduling pages before you deactivate them, see <a href="../video-conferencing-meetings/">meeting links</a>.</li>
+        </ul>
+
+        <h2>8. Provision users with SCIM</h2>
+        <p>SCIM creates, updates and removes HubSpot users from your identity provider. Okta and Google have guided setups. Other providers, such as Microsoft Entra ID, use a custom SCIM integration. To assign paid seats through Google, buy the seats in HubSpot first, create a permission set that includes a paid seat, then set the user's custom attribute in Google.</p>
+
+        <h2>9. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Core seats cover more.</strong> The May 2026 change gave Core seat users templates and snippets. Review who really needs a paid Sales or Service seat at renewal.</li>
+          <li><strong>Accounts still on the old model</strong> (created before March 5, 2024 and not migrated) work differently. Check which model your account is on before planning seat changes.</li>
+          <li><strong>Offboarding is a checklist.</strong> Seats, Super Admin coverage, meeting links, service keys the person created, and SCIM deprovisioning all need to line up when someone leaves. See <a href="../private-apps-moved-to-legacy-apps/">service keys</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>What is the difference between a seat and a permission?</h3>
+        <p>The seat decides which tools the user can use. Permissions decide what they can view, create, edit or delete in those tools.</p>
+        <h3>Why can I not make someone a Super Admin?</h3>
+        <p>Only a Super Admin can assign Super Admin, even if you have Add and edit users permission.</p>
+        <h3>Why can I not log in as a user?</h3>
+        <p>The account needs two-factor login required, and you cannot log in as Super Admins, billing users, or users who have not accepted their invite.</p>
+        <h3>Do View-Only users cost anything?</h3>
+        <p>No. View-Only seats are free and unlimited on Starter, Professional and Enterprise.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/user-properties-in-workflows/143977">HubSpot Community question: User Properties in Workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/manage-seats">HubSpot Knowledge Base: Assign and manage seats</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/create-permission-sets">HubSpot Knowledge Base: Create and assign permission sets</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide">HubSpot Knowledge Base: HubSpot user permissions guide</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/manage-user-permissions">HubSpot Knowledge Base: Manage user permissions</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/log-in-as-another-hubspot-user">HubSpot Knowledge Base: Log in as another HubSpot user</a></li>
           <li><a href="https://knowledge.hubspot.com/user-management/manage-user-properties-and-preferences">HubSpot Knowledge Base: Manage user properties and preferences</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/delete-your-hubspot-user">HubSpot Knowledge Base: Delete your HubSpot user</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-security/provision-hubspot-users-with-scim-through-google">HubSpot Knowledge Base: Provision HubSpot users with SCIM through Google</a></li>
+          <li><a href="https://community.hubspot.com/t/may-2026-product-updates/150000">HubSpot Community: May 2026 product updates</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

@@ -2729,6 +2729,8 @@ var ARTICLES = [
   },
   {
     slug: "permission-sets-and-seats",
+    draft: true,
+    mergedInto: 'user-properties-preferences',
     title: "HubSpot seats versus permissions, and using permission sets to stop editing users one by one",
     excerpt: "The difference between seats and permissions in HubSpot, how to create and assign permission sets, and seat transfers.",
     type: "tip",
@@ -6839,6 +6841,8 @@ var ARTICLES = [
   },
   {
     slug: "change-super-admin",
+    draft: true,
+    mergedInto: 'user-properties-preferences',
     title: "Make someone a Super Admin",
     excerpt: "Who can grant Super Admin in HubSpot, how it differs from giving all permissions, and what happens when you remove it.",
     type: "tip",
@@ -10194,6 +10198,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-your-own-user",
+    draft: true,
+    mergedInto: 'user-properties-preferences',
     title: "Delete your own HubSpot user account",
     excerpt: "The difference between removing a user from an account and deleting the user login, and what deletion takes with it.",
     type: "tip",
@@ -11016,6 +11022,8 @@ var ARTICLES = [
   },
   {
     slug: "scim-user-provisioning",
+    draft: true,
+    mergedInto: 'user-properties-preferences',
     title: "Provision HubSpot users with SCIM",
     excerpt: "How SCIM user provisioning works with Google and other identity providers, and the seat setup it needs.",
     type: "tip",
@@ -16641,6 +16649,8 @@ var ARTICLES = [
   },
   {
     slug: "login-as-user",
+    draft: true,
+    mergedInto: 'user-properties-preferences',
     title: "Log in as another user",
     excerpt: "How Super Admins use HubSpot's log in as feature and its limits.",
     type: "tip",
@@ -16963,19 +16973,20 @@ var ARTICLES = [
   },
   {
     slug: "user-properties-preferences",
-    title: "Manage user properties and preferences",
-    excerpt: "What Super Admins can set on HubSpot user records.",
-    type: "tip",
+    title: "HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM",
+    excerpt: "Seats vs permissions, what View-Only, Core, Sales and Service seats include, permission sets, Super Admin rules, logging in as another user, removing or deleting users, and SCIM provisioning.",
+    type: "guide",
     problem: "How to",
     hubs: ["Smart CRM"],
     features: ["Users"],
-    tier: "All tiers; custom properties Enterprise",
-    permissions: "Super Admin",
-    verified: "2026-10-07",
+    tier: "All plans (seat model applies to paid subscriptions)",
+    permissions: "Super Admin or Add and edit users",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 2,
+    minutes: 10,
     difficulty: "Intermediate",
-    keywords: ["user properties hubspot", "user preferences admin", "custom user properties", "bulk edit users"]
+    keywords: ["user properties hubspot", "user preferences admin", "custom user properties", "bulk edit users"],
+    validated: "2026-11-15 19:20 ET",
   },
   {
     slug: "rich-text-table",
