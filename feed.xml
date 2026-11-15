@@ -418,16 +418,6 @@
     <category>Forms</category>
   </item>
   <item>
-    <title>AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants</title>
-    <link>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</link>
-    <guid>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s AI Referrals traffic source, which domains count, what the drill-down properties store, and where to look for it.</description>
-    <category>Marketing Hub</category>
-    <category>Analytics</category>
-    <category>Attribution</category>
-  </item>
-  <item>
     <title>Agent Hub context: what HubSpot&#39;s AI knows about your business, and how to correct it</title>
     <link>https://hubspot.samcbarth.com/articles/agent-hub-context/</link>
     <guid>https://hubspot.samcbarth.com/articles/agent-hub-context/</guid>
@@ -870,17 +860,6 @@
     <category>Forms</category>
   </item>
   <item>
-    <title>Find when a contact submitted a form: conversion date properties</title>
-    <link>https://hubspot.samcbarth.com/articles/first-and-recent-conversion-properties/</link>
-    <guid>https://hubspot.samcbarth.com/articles/first-and-recent-conversion-properties/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s First conversion, Recent conversion and their date properties on contacts and companies, and how to use them.</description>
-    <category>Smart CRM</category>
-    <category>Marketing Hub</category>
-    <category>Properties</category>
-    <category>Forms</category>
-  </item>
-  <item>
     <title>HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL</title>
     <link>https://hubspot.samcbarth.com/articles/replace-brand-domain/</link>
     <guid>https://hubspot.samcbarth.com/articles/replace-brand-domain/</guid>
@@ -1029,16 +1008,6 @@
     <category>Smart CRM</category>
     <category>API</category>
     <category>Apps</category>
-  </item>
-  <item>
-    <title>First page seen and last page seen</title>
-    <link>https://hubspot.samcbarth.com/articles/first-and-last-page-seen/</link>
-    <guid>https://hubspot.samcbarth.com/articles/first-and-last-page-seen/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s First page seen and Last page seen contact properties record, and how they relate to the referrer properties.</description>
-    <category>Marketing Hub</category>
-    <category>Properties</category>
-    <category>Analytics</category>
   </item>
   <item>
     <title>Cancel a HubSpot subscription or delete the account</title>
@@ -1635,16 +1604,6 @@
     <category>Inbox</category>
   </item>
   <item>
-    <title>Use original and latest traffic source</title>
-    <link>https://hubspot.samcbarth.com/articles/traffic-source-properties/</link>
-    <guid>https://hubspot.samcbarth.com/articles/traffic-source-properties/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot sets and updates contacts&#39; traffic source properties.</description>
-    <category>Marketing Hub</category>
-    <category>Analytics</category>
-    <category>Properties</category>
-  </item>
-  <item>
     <title>Target LinkedIn ads with HubSpot audiences</title>
     <link>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</link>
     <guid>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</guid>
@@ -1838,11 +1797,11 @@
     <category>Pages</category>
   </item>
   <item>
-    <title>HubSpot &#39;Offline Sources&#39; is not offline: how to see what created those contacts</title>
+    <title>HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties</title>
     <link>https://hubspot.samcbarth.com/articles/offline-sources-explained/</link>
     <guid>https://hubspot.samcbarth.com/articles/offline-sources-explained/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.</description>
+    <description>Every traffic source value and what its two drill-downs hold, what Offline Sources really means and why Record Source answers it, editing sources, AI Referrals, and the first and recent conversion and page seen properties.</description>
     <category>Marketing Hub</category>
     <category>Smart CRM</category>
     <category>Properties</category>

@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot 'Offline Sources' is not offline: how to see what created those contacts - HubSpot Field Notes</title>
-<meta name="description" content="Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.">
+<title>HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties - HubSpot Field Notes</title>
+<meta name="description" content="Every traffic source value and what its two drill-downs hold, what Offline Sources really means and why Record Source answers it, editing sources, AI Referrals, and the first and recent conversion and page seen properties.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/offline-sources-explained/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/offline-sources-explained/">
-<meta property="og:title" content="HubSpot 'Offline Sources' is not offline: how to see what created those contacts">
-<meta property="og:description" content="Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.">
+<meta property="og:title" content="HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties">
+<meta property="og:description" content="Every traffic source value and what its two drill-downs hold, what Offline Sources really means and why Record Source answers it, editing sources, AI Referrals, and the first and recent conversion and page seen properties.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/offline-sources-explained/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot 'Offline Sources' is not offline: how to see what created those contacts",
-      "description": "Offline Sources is a traffic source bucket for records with no tracked web source. How to read the drill-downs, and the Record Source property that shows how a record was created.",
+      "headline": "HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties",
+      "description": "Every traffic source value and what its two drill-downs hold, what Offline Sources really means and why Record Source answers it, editing sources, AI Referrals, and the first and recent conversion and page seen properties.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/offline-sources-explained/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Find out what is inside HubSpot's Offline Sources bucket",
-      "totalTime": "PT12M",
+      "name": "HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Find the properties", "text": "Search contact properties for the original traffic source properties."},
-        {"@type": "HowToStep", "name": "Filter to Offline Sources", "text": "Filter contacts where Original Traffic Source is Offline Sources."},
-        {"@type": "HowToStep", "name": "Add the drill-down columns", "text": "Add Original Traffic Source Drill-Down 1 and 2 to the view."},
-        {"@type": "HowToStep", "name": "Group by creation method", "text": "Count records by drill-down 1 to see imports, API, apps, and manual entry."}
+        {"@type": "HowToStep", "name": "Find the source properties", "text": "Search contact properties for original source."},
+        {"@type": "HowToStep", "name": "Read the drill-downs", "text": "Drill-down 1 and 2 hold the detail per source."},
+        {"@type": "HowToStep", "name": "Check Record Source for offline records", "text": "It shows how the record was created."},
+        {"@type": "HowToStep", "name": "Report on AI Referrals", "text": "Break down by Drill-Down 1."},
+        {"@type": "HowToStep", "name": "Use conversion properties", "text": "First and recent conversion for form history."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot 'Offline Sources' is not offline: how to see what created those contacts", "item": "https://hubspot.samcbarth.com/articles/offline-sources-explained/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties", "item": "https://hubspot.samcbarth.com/articles/offline-sources-explained/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Properties">Properties</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Hidden trick</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>HubSpot 'Offline Sources' is not offline: how to see what created those contacts</h1>
-      <p class="dek">A giant Offline Sources number makes attribution look broken. It usually is not. It is a bucket, and two properties tell you what is inside it.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot traffic source properties: Original and Latest source, drill-downs, Offline Sources, AI Referrals and conversion properties</h1>
+      <p class="dek">Offline Sources only means no tracked web visit. How HubSpot fills each source property, the new AI Referrals value, and where to look for how a record was really created.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers for the properties; reports need Professional</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Any user who can view contacts</dd></div>
-        <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:40:00-04:00">October 11, 2026, 5:40 PM ET</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>View access to contact properties; Professional for workflow edits</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,37 +103,89 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p><strong>Offline Sources</strong> is one of the traffic source values HubSpot assigns to a record. It is a bucket for records that did not come from a tracked web source. It does not say how the record was created. HubSpot's knowledge base points to the <strong>Record Source</strong> property for that, which covers imports, integrations, the mobile app, and records entered by hand. Use the traffic drill-down properties for web detail, and Record Source for the offline detail.</p>
+          <p><strong>Original Traffic Source</strong> is the first known web source of a contact and <strong>Latest Traffic Source</strong> is the most recent. Each has two drill-down properties with the detail (search engine, referring domain, utm_campaign, email name). <strong>Offline Sources</strong> means there was no tracked web visit, not how the record was created: for that, use the <strong>Record Source</strong> property. There is also an <strong>AI Referrals</strong> source for visits from assistants like ChatGPT, Claude and Perplexity. Conversion properties (<strong>First conversion</strong>, <strong>Recent conversion</strong>) and page properties (<strong>First page seen</strong>, <strong>Last page seen</strong>) are set by HubSpot from forms and the tracking code.</p>
         </div>
 
-        <h2>1. What the property is called</h2>
-        <p>The property is <span class="ui">Original Traffic Source</span>, with <span class="ui">Original Traffic Source Drill-Down 1</span> and <span class="ui">Drill-Down 2</span> beside it. A matching <span class="ui">Latest Traffic Source</span> property tracks the most recent web source. Open <a class="hs-link" data-hs="/property-settings/{portalId}/properties?type=0-1" href="https://app.hubspot.com/l/property-settings/properties?type=0-1"><span class="ui">Contact properties</span></a> and search "original source" to see them.</p>
+        <h2>1. The traffic source properties</h2>
+        <p>Search contact properties for "original source" to see <strong>Original Traffic Source</strong> and its two drill-downs:</p>
         <figure class="shot"><a href="properties.webp"><img src="properties.webp" alt="Contact properties filtered to original source showing Original Traffic Source and its two drill-down properties highlighted" width="800" height="613" loading="lazy"></a><figcaption>The source property and its two drill-downs.</figcaption></figure>
+        <p>The internal name is <code>hs_analytics_source</code>, in the Web analytics history group. Companies and deals associated with contacts mirror these properties.</p>
+        <figure class="shot"><a href="details.webp"><img src="details.webp" alt="Original Traffic Source property details showing label, internal name hs_analytics_source, and Web analytics history group" width="800" height="613" loading="lazy"></a><figcaption>Label, internal name hs_analytics_source, and its group.</figcaption></figure>
 
-        <h2>2. See the values</h2>
-        <p>Open the property to see its dropdown options and how many records hold each. In this demo portal most contacts are Offline Sources. They were created by a mock import, so they have no web visit behind them. The internal name is <code>OFFLINE</code>.</p>
+        <h2>2. Every source value and its drill-downs</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Source</th><th>Drill-down 1</th><th>Drill-down 2</th></tr></thead>
+            <tbody>
+              <tr><td>Organic search</td><td>Search term (if available)</td><td>Search engine site</td></tr>
+              <tr><td>Paid search</td><td>utm_campaign</td><td>Search term (if available)</td></tr>
+              <tr><td>Email marketing</td><td>utm_campaign</td><td>HubSpot email name (utm_content)</td></tr>
+              <tr><td>Organic social</td><td>Social media site</td><td>utm_campaign</td></tr>
+              <tr><td>Paid social</td><td>Social media site</td><td>utm_campaign</td></tr>
+              <tr><td>Referrals</td><td>Referring domain</td><td>Referring URL</td></tr>
+              <tr><td>AI Referrals</td><td>AI platform domain, such as chatgpt.com or claude.ai</td><td>utm_campaign</td></tr>
+              <tr><td>Direct traffic</td><td>Entrance URL</td><td>None</td></tr>
+              <tr><td>Other campaigns</td><td colspan="2">See HubSpot's source definitions</td></tr>
+              <tr><td>Offline sources</td><td colspan="2">No tracked web visit; see Record Source</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The UTM parameters come from tracked links. See <a href="../tracking-url-builder/">the tracking URL builder</a>.</p>
+
+        <h2>3. Offline Sources, and what to use instead</h2>
+        <p>Open the property to see each value and how many records hold it. In my demo portal most contacts are <strong>Offline Sources</strong> (internal value <code>OFFLINE</code>) because they came from an import:</p>
         <figure class="shot"><a href="options.webp"><img src="options.webp" alt="Original Traffic Source dropdown options with Offline Sources and its record count highlighted" width="800" height="613" loading="lazy"></a><figcaption>Offline Sources (internal name OFFLINE) and its record count.</figcaption></figure>
-        <div class="callout"><span class="callout-title">Set by HubSpot</span><p>HubSpot sets the Original Traffic Source from the first known web source and does not let you edit the drill-down properties by hand. Changing a record's traffic source clears its drill-down values.</p></div>
-        <figure class="shot"><a href="details.webp"><img src="details.webp" alt="Original Traffic Source property details showing label, internal name hs_analytics_source, and Web analytics history group" width="800" height="613" loading="lazy"></a><figcaption>Label, internal name hs_analytics_source, and its group, Web analytics history.</figcaption></figure>
-
-        <h2>3. Find out how the record was created</h2>
-        <p>For web traffic, the drill-down properties give the channel and the specific source. Offline Sources has no web detail, so look at the <span class="ui">Record Source</span> property instead. It shows how each record was created, for every object. HubSpot recommends it for this question in place of the Offline Sources value. The steps are in the knowledge base article linked below.</p>
-        <div class="callout"><span class="callout-title">Example from my portal</span><p>In my portal I had this as an example. Older records were mostly imports, and newer ones came from a connector and from automatic creation from email and meeting activity. Looking at the drill-downs alone did not show that. You may have something like this.</p></div>
-
-        <h2>4. What to do with the answer</h2>
+        <p>Offline Sources is a bucket for records with no tracked web source. It does not say whether the record came from an import, an integration, the mobile app or a person typing it in. HubSpot's KB points to the <strong>Record Source</strong> property for that, which exists on every object.</p>
         <ul>
-          <li><strong>Mostly imports:</strong> add your own source property on the import so you can tell lists apart.</li>
-          <li><strong>Mostly integrations:</strong> check whether the app can set a source, or add a workflow that sets one.</li>
-          <li><strong>Entered by hand:</strong> report it under its own name instead of Offline Sources, since it is neither an import nor a web visit.</li>
+          <li>Mostly imports: add your own source property on the import so you can tell lists apart. See <a href="../import-to-static-segment/">imports</a>.</li>
+          <li>Mostly integrations: check whether the app can set a source, or have a workflow set one.</li>
+          <li>Entered by hand: report it as its own category instead of lumping it into Offline Sources.</li>
         </ul>
+
+        <h2>4. Editing sources</h2>
+        <p>HubSpot sets Original Traffic Source from the first known web source, and Latest Traffic Source can update many times. You can change the source value by hand, or with a workflow's Edit record action on Professional or Enterprise. You cannot edit the drill-down properties by hand, and changing a source clears its drill-down values. Editing the original source overwrites what tracking recorded, so keep it for real corrections.</p>
+
+        <h2>5. AI Referrals</h2>
+        <p>AI Referrals counts visits from AI assistant domains such as chatgpt.com, claude.ai and gemini.google.com. General search domains do not count: a click from Google's results is still organic search. It shows as its own row in the <strong>Sources</strong> report (1) when there is traffic, broken down by source (2):</p>
+        <figure class="shot"><a href="sources.webp"><img src="sources.webp" alt="Traffic by source report in the marketing analytics suite with Break down by Source" width="800" height="533" loading="lazy"></a><figcaption>The Sources report (1) and its Source breakdown (2).</figcaption></figure>
+        <p>Filter contacts where Original or Latest Traffic Source is AI Referrals and break down by Drill-Down 1 to compare platforms. For where your brand appears in AI answers, see <a href="../aeo-prompts-and-outreach-recommendations/">AEO prompts</a>.</p>
+
+        <h2>6. Conversion and page properties</h2>
+        <ul>
+          <li><strong>First conversion</strong> and <strong>First conversion date</strong>: the first form the contact submitted. <strong>Recent conversion</strong> and <strong>Recent conversion date</strong>: the latest. Companies have matching properties based on any associated contact.</li>
+          <li><strong>First page seen</strong> and <strong>Last page seen</strong>: the first and last URLs the contact viewed on your site, from the tracking code. <strong>Last referring site</strong> looks at the last page viewed.</li>
+        </ul>
+        <figure class="shot"><a href="conversion-search.webp"><img src="conversion-search.webp" alt="Contact properties filtered to conversion date showing First Conversion Date and Recent Conversion Date" width="800" height="600" loading="lazy"></a><figcaption>The conversion date properties (1).</figcaption></figure>
+        <figure class="shot"><a href="page-seen.webp"><img src="page-seen.webp" alt="Contact properties searched for page seen showing Last Page Seen and First Page Seen in Web analytics history" width="800" height="400" loading="lazy"></a><figcaption>The page seen properties (1).</figcaption></figure>
+        <p>A useful view: Recent conversion date in the last 7 days for fresh leads, and First conversion to see which form brought people in. Page properties only fill in if the tracking code is on the page, see <a href="../install-tracking-code-wix/">installing the tracking code</a>.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>AI Referrals is a real channel to report on.</strong> It is now one of the ten source values, with the AI platform in Drill-Down 1. Add it to source reports and lead source dashboards.</li>
+          <li><strong>Record Source answers the offline question.</strong> HubSpot recommends it over Offline Sources for how a record was created, on every object.</li>
+          <li><strong>UTMs matter more.</strong> Several drill-downs, including AI Referrals' second one, come from <code>utm_campaign</code>. Tag the links you share.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>What does Offline Sources mean?</h3>
+        <p>No tracked web visit came before the contact was created. Check Record Source to see whether it was an import, integration, the mobile app or manual entry.</p>
+        <h3>Why is a visit from ChatGPT not showing as AI Referrals?</h3>
+        <p>Only AI-specific domains count, and the visit has to be tracked by the HubSpot tracking code.</p>
+        <h3>Can I change a contact's original source?</h3>
+        <p>Yes, by hand or with a workflow on Professional and Enterprise, but the drill-downs are cleared and cannot be edited.</p>
+        <h3>Where does a company's source come from?</h3>
+        <p>Companies and deals mirror the source properties of associated contacts.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/properties/understand-traffic-source-properties">HubSpot Knowledge Base: Understand Original and Latest traffic source properties</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/view-and-use-the-record-source-property">HubSpot Knowledge Base: Use the record source property</a></li>
-          <li><a href="https://knowledge.hubspot.com/properties/create-and-edit-properties">HubSpot Knowledge Base: Create and edit properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/update-and-filter-contacts-using-traffic-source-properties">HubSpot Knowledge Base: Update and filter contacts using traffic source properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/understand-hubspots-traffic-sources-in-the-traffic-analytics-tool">HubSpot Knowledge Base: Understand HubSpot's traffic sources</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-contact-properties">HubSpot Knowledge Base: HubSpot's default contact properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspot-crm-default-company-properties">HubSpot Knowledge Base: HubSpot's default company properties</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
