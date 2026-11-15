@@ -193,15 +193,6 @@
     <category>Properties</category>
   </item>
   <item>
-    <title>Meeting rotations in HubSpot: share inbound meetings fairly across reps</title>
-    <link>https://hubspot.samcbarth.com/articles/meeting-rotations-round-robin/</link>
-    <guid>https://hubspot.samcbarth.com/articles/meeting-rotations-round-robin/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot meeting rotations work with round robin scheduling pages, pausing a rep, prioritizing the contact owner, and what happens with deactivated users.</description>
-    <category>Sales Hub</category>
-    <category>Meetings</category>
-  </item>
-  <item>
     <title>HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions</title>
     <link>https://hubspot.samcbarth.com/articles/tracking-url-builder/</link>
     <guid>https://hubspot.samcbarth.com/articles/tracking-url-builder/</guid>
@@ -529,15 +520,6 @@
     <category>Analytics</category>
   </item>
   <item>
-    <title>HubSpot&#39;s calendar view: meetings in one place after you connect a calendar</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-calendar-view/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-calendar-view/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s dedicated calendar view does, what it needs, and how it fits with the Meetings Scheduler and sales workspace.</description>
-    <category>Sales Hub</category>
-    <category>Meetings</category>
-  </item>
-  <item>
     <title>HubSpot MCP: built-in AI connectors vs your own MCP connector</title>
     <link>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</link>
     <guid>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</guid>
@@ -782,23 +764,14 @@
     <category>Workflows</category>
   </item>
   <item>
-    <title>Add Google Meet, Zoom or Teams links to booked meetings</title>
+    <title>HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding</title>
     <link>https://hubspot.samcbarth.com/articles/video-conferencing-meetings/</link>
     <guid>https://hubspot.samcbarth.com/articles/video-conferencing-meetings/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.</description>
+    <description>Set up a HubSpot scheduling page, add Teams, Zoom or Google Meet links, how group and round robin availability work, meeting rotations and Prioritize contact owner, and why departed users keep getting booked.</description>
     <category>Sales Hub</category>
     <category>Meetings</category>
     <category>Integrations</category>
-  </item>
-  <item>
-    <title>Which calendars HubSpot checks for meeting availability</title>
-    <link>https://hubspot.samcbarth.com/articles/meetings-multiple-calendars/</link>
-    <guid>https://hubspot.samcbarth.com/articles/meetings-multiple-calendars/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s meetings tool reads availability from connected calendars, team page behavior, and what happens when a calendar disconnects.</description>
-    <category>Sales Hub</category>
-    <category>Meetings</category>
   </item>
   <item>
     <title>HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends</title>
@@ -1390,16 +1363,6 @@
     <category>Marketing Hub</category>
     <category>Smart CRM</category>
     <category>Segments</category>
-  </item>
-  <item>
-    <title>Set up a HubSpot meetings link so people can book time with you</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-meetings-link/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-meetings-link/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Create a HubSpot scheduling page, connect your calendar so availability is accurate, and share the link on your website and in email. What the setup screen looks like and what to configure.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Meetings</category>
   </item>
   <item>
     <title>HubSpot workflow enrollment triggers: event-based vs filter criteria</title>

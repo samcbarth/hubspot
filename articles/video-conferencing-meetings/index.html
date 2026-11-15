@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Add Google Meet, Zoom or Teams links to booked meetings - HubSpot Field Notes</title>
-<meta name="description" content="Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.">
+<title>HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding - HubSpot Field Notes</title>
+<meta name="description" content="Set up a HubSpot scheduling page, add Teams, Zoom or Google Meet links, how group and round robin availability work, meeting rotations and Prioritize contact owner, and why departed users keep getting booked.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/">
-<meta property="og:title" content="Add Google Meet, Zoom or Teams links to booked meetings">
-<meta property="og:description" content="Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.">
+<meta property="og:title" content="HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding">
+<meta property="og:description" content="Set up a HubSpot scheduling page, add Teams, Zoom or Google Meet links, how group and round robin availability work, meeting rotations and Prioritize contact owner, and why departed users keep getting booked.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/video-conferencing-meetings/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Add Google Meet, Zoom or Teams links to booked meetings",
-      "description": "Which video conferencing integrations HubSpot meetings support, how the link is added to scheduling pages, and the per-user install for Google Meet.",
+      "headline": "HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding",
+      "description": "Set up a HubSpot scheduling page, add Teams, Zoom or Google Meet links, how group and round robin availability work, meeting rotations and Prioritize contact owner, and why departed users keep getting booked.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Add Google Meet, Zoom or Teams links to booked meetings",
-      "totalTime": "PT3M",
+      "name": "HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Connect the app", "text": "Google Meet, Zoom, Teams or UberConference."},
-        {"@type": "HowToStep", "name": "Edit the scheduling page", "text": "Turn on Add videoconference link."},
-        {"@type": "HowToStep", "name": "Each user", "text": "Google Meet is installed per user."}
+        {"@type": "HowToStep", "name": "Connect your calendar", "text": "Before creating any scheduling page."},
+        {"@type": "HowToStep", "name": "Create the page", "text": "Title, location, duration, availability."},
+        {"@type": "HowToStep", "name": "Add video links", "text": "Teams, Zoom or Google Meet integration."},
+        {"@type": "HowToStep", "name": "Set up rotations", "text": "Settings, Tools, Meetings, Meeting Rotations."},
+        {"@type": "HowToStep", "name": "Offboard properly", "text": "Remove people from rotations and round robin pages."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Add Google Meet, Zoom or Teams links to booked meetings", "item": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding", "item": "https://hubspot.samcbarth.com/articles/video-conferencing-meetings/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Meetings">Meetings</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
-      <h1>Add Google Meet, Zoom or Teams links to booked meetings</h1>
-      <p class="dek">Connect the app, then turn on the video link on the scheduling page.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot meetings links: calendar sync, video links, group and round robin pages, rotations and offboarding</h1>
+      <p class="dek">A round robin member with a disconnected calendar looks always free, and a deactivated user in a rotation keeps getting booked. How HubSpot meetings links really pick times.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All meetings tool tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>App Marketplace access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (team pages and rotations depend on your subscription)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Meetings access; App Marketplace access for Google Meet</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,24 +103,78 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: with the Microsoft Teams, Zoom, UberConference or Google Meet integration, a scheduling page can <strong>add a videoconference link</strong>. Google Meet is a <strong>user-level app</strong>, so each user installs it, and they need App Marketplace permissions.</p>
+          <p>Connect your calendar first, then create a scheduling page in the meetings tool, set title, location, duration and availability, and share the link. Video links come from the Teams, Zoom, UberConference or Google Meet integrations; Google Meet is installed per user. Team pages are <strong>group</strong> (everyone attends) or <strong>round robin</strong> (one person takes it). A <strong>meeting rotation</strong> shows only the next person's availability, and a member with a disconnected calendar is treated as always available, so check connections and remove people who leave or they keep getting booked.</p>
         </div>
 
-        <h2>1. Meetings settings</h2>
-        <p>Meetings settings in my demo portal.</p>
+        <h2>1. Connect your calendar, then build the page</h2>
+        <p>The first time you open the meetings tool, HubSpot shows an introduction with <strong>Get Started</strong>:</p>
+        <figure class="shot"><a href="intro.webp"><img src="intro.webp" alt="HubSpot meetings tool introduction page with the Get Started button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The meetings introduction. Get Started begins setup.</figcaption></figure>
+        <ol>
+          <li><strong>Connect your calendar.</strong> Available times come from it, and a Gmail or Microsoft 365 calendar syncs both ways so bookings land on it. Sync uses each user's primary calendar.</li>
+          <li><strong>Create a scheduling page:</strong> one-on-one for yourself, or a team page.</li>
+          <li>Set the <strong>event title</strong> shown on the calendar event, the <strong>location</strong> (a video link or an address), time zone, duration and availability.</li>
+          <li>Click <strong>Copy share link</strong> for email signatures, your website and outreach, or embed the scheduling widget on a page.</li>
+        </ol>
+        <p>Test it: open your link in a private window. If the times look wrong, the problem is the calendar connection or time zone, not the page. Through the API, my demo portal's one page came back from <code>/scheduler/v3/meetings/meeting-links</code> as type <code>PERSONAL_LINK</code> with its slug, organizer and member user IDs, which is a quick way to audit everyone's links.</p>
+
+        <h2>2. Video conferencing links</h2>
+        <p>With the Microsoft Teams, Zoom, UberConference or Google Meet integration connected, a scheduling page can add a video link to each booking. Google Meet is a user-level app: each user installs it and needs App Marketplace permissions. Teams links need the user mapped to Teams, see <a href="../teams-integration-user-permissions/">Teams setup</a>.</p>
+
+        <h2>3. Team pages: group and round robin</h2>
+        <ul>
+          <li><strong>Group:</strong> HubSpot checks your custom availability against every team member's calendar and only offers times that work for all.</li>
+          <li><strong>Round robin:</strong> one member takes the meeting. Without a rotation, the page shows the combined availability of all members.</li>
+          <li>A member with a <strong>disconnected calendar</strong> is treated as always available on round robin pages, so they get booked into times they are busy.</li>
+          <li>Team pages are deleted if no active members remain.</li>
+        </ul>
+        <figure class="shot"><a href="calendar-disconnected.webp"><img src="calendar-disconnected.webp" alt="Calendar tab showing the calendar is disconnected" width="800" height="553" loading="lazy"></a><figcaption>A disconnected calendar (1) and what connecting turns on (2).</figcaption></figure>
+
+        <h2>4. Meeting rotations</h2>
+        <p><strong>Settings, Tools, Meetings</strong> has a <strong>Meeting Rotations</strong> tab (1), next to account-wide settings such as meeting outcomes, call and meeting types and reminders (2):</p>
         <figure class="shot"><a href="meetings.webp"><img src="meetings.webp" alt="Meetings settings with Meeting Configurations, Meeting Rotations and Notetaker Bot tabs" width="800" height="553" loading="lazy"></a><figcaption>Meeting Rotations (1) and account-wide meeting settings (2).</figcaption></figure>
-        <h2>2. Recordings</h2>
-        <p>See <a href="../hubspot-meeting-record-links/">meeting recordings</a>.</p>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-meetings-link/">Meetings links</a>.</p>
+        <ul>
+          <li>A rotation lists members, users or teams. On a round robin page that uses it, only the next member's availability shows.</li>
+          <li>Turn a member's <strong>Availability</strong> switch off for leave.</li>
+          <li>With <strong>Prioritize contact owner</strong> on, an owned contact sees their owner's availability first.</li>
+          <li>Adding someone to a team in the rotation adds them to the rotation.</li>
+          <li>A deactivated user still in a rotation or round robin page can keep getting booked, without being notified. Remove them as part of offboarding, see <a href="../user-properties-preferences/">users and permissions</a>.</li>
+        </ul>
+        <p>For record owners rather than meetings, use the Rotate record to owner workflow action, see <a href="../workflow-custom-code-action/">workflow actions</a>.</p>
+
+        <h2>5. The calendar view</h2>
+        <p>With a connected calendar, <strong>Sales, Calendar</strong> shows past meetings, upcoming ones to prepare for, and scheduling in one place. Without a connection it shows a <strong>Connect calendar</strong> prompt:</p>
+        <figure class="shot"><a href="calendar-view.webp"><img src="calendar-view.webp" alt="Calendar page with Capture your live meetings in HubSpot text and a Connect calendar button" width="738" height="556" loading="lazy"></a><figcaption>What it does (1) and Connect calendar (2).</figcaption></figure>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Notetaker in meeting settings.</strong> The meetings settings now include a Notetaker Bot tab next to configurations and rotations. See <a href="../call-recording-consent/">recording and the notetaker</a>.</li>
+          <li><strong>Meetings live in the sales workspace.</strong> The calendar view and sales workspace bring meeting prep into the same place reps work leads.</li>
+          <li><strong>Offboarding matters more with rotations.</strong> Deactivated users can still be booked through rotations, so add rotation cleanup to your offboarding list.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>My meetings link shows times I am busy.</h3>
+        <p>Your calendar is disconnected or the wrong calendar is primary. Reconnect it in your settings and check the time zone.</p>
+        <h3>A rep on leave keeps getting round robin bookings.</h3>
+        <p>Turn their Availability switch off in the rotation, and check their calendar is connected.</p>
+        <h3>Why is there no Google Meet option?</h3>
+        <p>Google Meet is installed per user. Each user installs the app and needs App Marketplace permissions.</p>
+        <h3>A former employee is still getting booked.</h3>
+        <p>Remove them from rotations and round robin pages. Deactivation alone does not stop bookings.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/adding-your-google-meet-links-to-your-calendar-events/25081">HubSpot Community question: Adding your Google Meet links to your Calendar Events</a></li>
           <li><a href="https://knowledge.hubspot.com/meetings-tool/create-and-edit-scheduling-pages">HubSpot Knowledge Base: Create scheduling pages with the meetings tool</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/use-meetings">HubSpot Knowledge Base: Connect your calendar to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/embed-the-meeting-widget-on-a-page">HubSpot Knowledge Base: Embed the scheduling widget on a page</a></li>
           <li><a href="https://knowledge.hubspot.com/integrations/use-hubspots-integration-with-google-meet">HubSpot Knowledge Base: Use Google Meet with HubSpot meetings</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/understand-group-and-round-robin-meeting-availability">HubSpot Knowledge Base: Understand group and round robin availability</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/schedule-a-meeting-with-a-contact-using-meeting-rotations">HubSpot Knowledge Base: Set up meeting rotations</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/remove-hubspot-users">HubSpot Knowledge Base: Deactivate and remove HubSpot users</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/dedicated-calendar-view">HubSpot Knowledge Base: Review meetings in a dedicated calendar view</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/scheduler/meetings/guide">HubSpot developer docs: Meetings API</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
