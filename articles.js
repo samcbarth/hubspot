@@ -48,6 +48,8 @@ var ARTICLES = [
   },
   {
     slug: 'coded-template-missing-from-picker',
+    draft: true,
+    pruned: '2026-11-14',
     title: 'Your coded HubSpot template is missing from the template picker? Look under Other',
     excerpt: 'The page template picker opens on your active theme. Templates that are not part of a theme only appear under Other.',
     type: 'tip',
@@ -82,6 +84,8 @@ var ARTICLES = [
   },
   {
     slug: "never-opened-email-stat",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot says 180,000 contacts never opened your email? Check who was ever sent one",
     excerpt: "A HubSpot segment of contacts who never opened an email also includes everyone who was never sent one. How to build the honest version before you sunset anyone.",
     type: "tip",
@@ -99,6 +103,8 @@ var ARTICLES = [
   },
   {
     slug: "speed-to-lead-sla-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a speed-to-lead workflow in HubSpot with a follow-up SLA and escalation",
     excerpt: "A HubSpot workflow that creates a call task when a lead arrives, checks whether anyone made contact after a day, and escalates by email to the owner if nobody did.",
     type: "guide",
@@ -116,6 +122,8 @@ var ARTICLES = [
   },
   {
     slug: "sql-count-zero",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Your HubSpot report shows zero SQLs? Set lifecycle stage from the deal, not the contact",
     excerpt: "If reps work deals and never touch the contact's lifecycle stage, SQL reports stay at zero. A workflow can set associated contacts to Sales Qualified Lead when a deal reaches the right stage.",
     type: "guide",
@@ -133,6 +141,8 @@ var ARTICLES = [
   },
   {
     slug: "troubleshoot-enrollment",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why didn't this record enroll? Use HubSpot's Troubleshoot enrollment tool",
     excerpt: "HubSpot workflows have a built-in tool that tests a specific record against the nine enrollment checks and tells you why it did or did not enroll.",
     type: "guide",
@@ -150,6 +160,8 @@ var ARTICLES = [
   },
   {
     slug: "enrich-records-record-id-import",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Enrich HubSpot companies from a spreadsheet when names don't match: import by Record ID",
     excerpt: "When company names in a spreadsheet match more than one HubSpot company, export Record IDs, match your data to them, and import with Record ID as the identifier.",
     type: "guide",
@@ -218,6 +230,8 @@ var ARTICLES = [
   },
   {
     slug: "template-doesnt-allow-modules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "'This template doesn't allow modules to be added' in HubSpot: three causes",
     excerpt: "A blank HubSpot page that will not let you add modules usually has a template problem: an empty drag and drop area, a broken extends path, or overlapping columns.",
     type: "guide",
@@ -337,6 +351,8 @@ var ARTICLES = [
   },
   {
     slug: "speed-up-landing-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Speed up a HubSpot landing page: measure first, then fix images and page-level code",
     excerpt: "How to find out why a HubSpot landing page is slow with Lighthouse, then fix the usual causes: heavy images, layout shift, and extra scripts in the page's Head and Footer HTML.",
     type: "guide",
@@ -371,6 +387,8 @@ var ARTICLES = [
   },
   {
     slug: "lifecycle-date-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Stop creating custom timestamp fields: HubSpot already tracks when a record entered each lifecycle stage",
     excerpt: "HubSpot automatically creates date entered and time in stage properties for every lifecycle stage. Check them before you build custom date fields for a journey or funnel.",
     type: "tip",
@@ -422,6 +440,8 @@ var ARTICLES = [
   },
   {
     slug: "duplicate-companies-from-connector-ids",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Two HubSpot companies share one connector ID? Merge the safe ones and hold the collisions",
     excerpt: "When a sync connector keys on an external ID and two HubSpot companies carry it, data splits across both. How to triage the groups, merge the safe ones, and leave genuine ID collisions alone.",
     type: "guide",
@@ -472,6 +492,8 @@ var ARTICLES = [
   },
   {
     slug: "exclude-own-traffic",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Exclude your own visits from HubSpot analytics (and the catch with form tests)",
     excerpt: "How to keep your own traffic out of HubSpot analytics with an IP filter and referrer filter, what bot filtering does, and what happens to your own test form submissions.",
     type: "tip",
@@ -506,6 +528,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-object-type-ids",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot object type IDs (0-1, 0-47, 0-48) and how to use them in links and the API",
     excerpt: "The numeric object type IDs behind HubSpot URLs and API calls: contacts 0-1, companies 0-2, deals 0-3, meetings 0-47, calls 0-48 and more, with a fix for links that land on a blank page.",
     type: "tip",
@@ -540,6 +564,8 @@ var ARTICLES = [
   },
   {
     slug: "spreadsheet-board-to-hubspot-pipelines",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move a project board (Planner, Trello, a spreadsheet) into HubSpot pipelines",
     excerpt: "How to turn an exported task board into HubSpot pipelines, deals, companies, contacts, and notes: map each field, do a dry run, approve each piece, and verify counts.",
     type: "guide",
@@ -591,6 +617,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-custom-domain-to-hubspot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect your own domain to HubSpot (and what the brand domain limit means)",
     excerpt: "How to see your connected HubSpot hosting domains, what a brand domain is, the DNS record each type needs, and how SSL is turned on. Includes the one brand domain limit on a lower tier.",
     type: "guide",
@@ -642,6 +670,8 @@ var ARTICLES = [
   },
   {
     slug: "form-consent-checkbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a consent checkbox to a HubSpot form (newsletter signup example)",
     excerpt: "How a HubSpot form can ask for consent: a required checkbox for the communication type plus a processing notice. The three consent options and the setup used on a real newsletter form.",
     type: "tip",
@@ -659,6 +689,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-settings-explained",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot workflow settings explained: schedules, pauses, notifications, and unenrolling from other workflows",
     excerpt: "A walk through the Settings panel of a HubSpot workflow: when actions can run, pausing on dates, auto turn-off, performance alerts, conversion metrics, and the setting that unenrolls records from other workflows.",
     type: "guide",
@@ -676,6 +708,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-delay-and-branch-actions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Delay and if/then branch actions in HubSpot workflows: what to set",
     excerpt: "How the Delay action and an if/then branch are configured in a HubSpot workflow: set amount of time, business days only, and a branch based on a property such as Last contacted.",
     type: "guide",
@@ -693,6 +727,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-create-task-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The Create task action in a HubSpot workflow: title, type, due date, and reminder",
     excerpt: "How to configure the Create task action in a HubSpot workflow: a title with personalization tokens, a task type, a due date, and an email reminder, with a call-task example.",
     type: "tip",
@@ -710,6 +746,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-edit-record-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The Edit record action in HubSpot workflows: replace, append, clear, and copy values",
     excerpt: "How the Edit record action works in a HubSpot workflow: choose the record, the property, the change type, and the value, including copying from another property and editing associated records.",
     type: "guide",
@@ -744,6 +782,8 @@ var ARTICLES = [
   },
   {
     slug: "workflows-health-unused-and-issues",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find unused HubSpot workflows and workflows with issues: the Health tab",
     excerpt: "Where HubSpot shows how many workflows are unused or have issues: the Health tab on the Automation page, the Unused view, and the Review automation issues tool.",
     type: "tip",
@@ -778,6 +818,8 @@ var ARTICLES = [
   },
   {
     slug: "add-reports-to-a-dashboard",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add reports to a HubSpot dashboard: My reports, ready-made reports, and the permission catch",
     excerpt: "How the Add reports panel works in a HubSpot dashboard: My reports and Ready-made reports tabs, search and filters, drag or Add, and why the panel can say you do not have permission.",
     type: "tip",
@@ -842,6 +884,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-properties-page-tour",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The HubSpot Properties page: find, filter, and audit your properties",
     excerpt: "A tour of the Properties settings page in HubSpot: choosing an object, the Properties, Conditional logic, Groups, and Archived tabs, the filters, search, and exporting a list of properties.",
     type: "tip",
@@ -858,6 +902,8 @@ var ARTICLES = [
   },
   {
     slug: "conditional-property-logic",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Conditional property logic in HubSpot: show or require a field based on another",
     excerpt: "How HubSpot conditional property logic works: where to create it, which property types can drive it, where it is enforced, and the gap that workflows and other tools leave open.",
     type: "tip",
@@ -874,6 +920,8 @@ var ARTICLES = [
   },
   {
     slug: "check-property-usage-before-deleting",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check where a HubSpot property is used before you change or delete it",
     excerpt: "Use the property editor's Usage section to see a property's fill rate and every view, form, workflow, and card that uses it, before you rename, change, or archive it.",
     type: "tip",
@@ -986,6 +1034,8 @@ var ARTICLES = [
   },
   {
     slug: "find-pipeline-and-stage-ids",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find a HubSpot pipeline ID and deal stage IDs (and how many pipelines you can have)",
     excerpt: "Where to find the internal IDs for HubSpot deal pipelines and stages, which imports, workflows, integrations, and the API need, plus the pipeline count and limit shown in settings.",
     type: "tip",
@@ -1018,6 +1068,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-close-date-changes-when-won",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why HubSpot changes a deal's close date when you mark it won or lost",
     excerpt: "HubSpot sets a deal's close date to today when the deal moves to a closed stage. Where that templated automation lives, the second rule for reopened deals, and when to turn either off.",
     type: "tip",
@@ -1050,6 +1102,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-email-templates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot sales email templates: create, share, personalize, and track them",
     excerpt: "How HubSpot message templates for one-to-one email work: the templates list, sharing and folders, personalization tokens, previewing with a contact, the limits by tier, and reporting with the Template ID property.",
     type: "guide",
@@ -1066,6 +1120,8 @@ var ARTICLES = [
   },
   {
     slug: "attribution-interaction-types",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot attribution interaction types: which touches count, and which are off by default",
     excerpt: "The attribution settings page in HubSpot: which interaction types are included in revenue and deal create attribution reports, which are off by default, and the reprocessing that follows a change.",
     type: "tip",
@@ -1098,6 +1154,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-multiple-currencies",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Multiple currencies in HubSpot: company currency, exchange rates, and how deals convert",
     excerpt: "How HubSpot handles more than one currency: the company currency, adding currencies, automatic exchange rate updates, and how the Amount in company currency is calculated for open and closed deals.",
     type: "guide",
@@ -1162,6 +1220,8 @@ var ARTICLES = [
   },
   {
     slug: "association-labels",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot association labels: describe how records are related",
     excerpt: "How association labels work in HubSpot: where to see them in the Data Model Builder, single vs paired labels, the 50 label limit per object pair, cardinality, and where labels can be used.",
     type: "guide",
@@ -1178,6 +1238,8 @@ var ARTICLES = [
   },
   {
     slug: "company-auto-association-by-domain",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why HubSpot creates companies from contact emails, and how to exclude a domain",
     excerpt: "The HubSpot setting that creates and associates companies based on a contact's email domain, when it does not apply, and how to opt a domain out of automatic association.",
     type: "tip",
@@ -1290,6 +1352,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-content-approvals",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot approvals: require sign-off before pages, blog posts, emails, or social posts go out",
     excerpt: "The Approvals settings page in HubSpot: which content types can require approval, who can skip approvals, how approval permission is granted, and the tiers required.",
     type: "tip",
@@ -1338,6 +1402,8 @@ var ARTICLES = [
   },
   {
     slug: "email-log-and-track-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot email log and track settings for the whole account",
     excerpt: "The account-level Email Log & Track settings in HubSpot: logging attachments, default log and track settings for the Sales extension, and allowing users to track opens and clicks.",
     type: "tip",
@@ -1387,6 +1453,8 @@ var ARTICLES = [
   },
   {
     slug: "bcc-and-forwarding-address-logging",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Log emails to HubSpot with the BCC and forwarding addresses",
     excerpt: "Where to find your HubSpot BCC and forwarding addresses, how each logs email to the CRM, what gets associated, and the limits compared with a connected inbox.",
     type: "tip",
@@ -1403,6 +1471,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-contacts-connected-apps",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Contacts from connected apps are non-marketing by default: the setting that changes it",
     excerpt: "The Marketing Contacts integration setting in HubSpot: why contacts synced by apps are non-marketing, how to set an app to sync marketing contacts, and the billing impact.",
     type: "tip",
@@ -1419,6 +1489,8 @@ var ARTICLES = [
   },
   {
     slug: "connected-apps-needs-attention",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find disconnected or expired HubSpot integrations: the Connected Apps page",
     excerpt: "The Connected Apps page in HubSpot: the Needs attention section for disconnected and expired apps, the My Apps list, connection insights, and app notifications.",
     type: "tip",
@@ -1435,6 +1507,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-url-redirects",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot URL redirects: standard, flexible, and bulk import",
     excerpt: "Where URL redirects live in HubSpot, standard vs flexible pattern redirects, bulk importing redirects from a CSV, system redirects, and what cannot be redirected.",
     type: "tip",
@@ -1467,6 +1541,8 @@ var ARTICLES = [
   },
   {
     slug: "tasks-page-shows-nothing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot tasks page shows no tasks? Check the Assigned to filter",
     excerpt: "Why the HubSpot tasks index page can show no tasks: the default Assignee filter, the standard task views, quick filters, and syncing tasks to your calendar.",
     type: "tip",
@@ -1483,6 +1559,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-products-library",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The HubSpot product library: create or import products for deals and quotes",
     excerpt: "The HubSpot Products index page: creating or importing products, product status, pricing models, and how products become line items on deals and quotes.",
     type: "tip",
@@ -1515,6 +1593,8 @@ var ARTICLES = [
   },
   {
     slug: "personalization-token-defaults",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot personalization token defaults: stop 'Hi ,' in your emails",
     excerpt: "Where to set global default values for HubSpot personalization tokens used in marketing emails, how fallbacks per email work, and what happens with no default.",
     type: "tip",
@@ -1531,6 +1611,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-send-frequency-cap",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot email send frequency cap: limit how many marketing emails a contact gets",
     excerpt: "The Send Frequency setting in HubSpot email settings: what the frequency cap includes and excludes, how to exempt an important email, and the Enterprise requirement.",
     type: "tip",
@@ -1563,6 +1645,8 @@ var ARTICLES = [
   },
   {
     slug: "calling-blocked-numbers-list",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Block phone numbers in HubSpot calling",
     excerpt: "The Blocked Numbers List in HubSpot calling settings: what it blocks, how long changes take, and what it does not cover.",
     type: "tip",
@@ -1627,6 +1711,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-roi-and-utm-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot campaign settings: how ROI is calculated and campaign UTM identifiers",
     excerpt: "The Campaigns settings page in HubSpot: choosing revenue or associated deal value for campaign ROI, ad spend currency conversion, and auto-generated unique identifiers in campaign UTMs.",
     type: "tip",
@@ -1643,6 +1729,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-availability-management",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot help desk availability: who can be assigned tickets and how many",
     excerpt: "The Availability Management page in HubSpot: each user's status (Available, Away, Pending), ticket capacity, how working hours set status, and who can change it.",
     type: "tip",
@@ -1659,6 +1747,8 @@ var ARTICLES = [
   },
   {
     slug: "teams-workflow-action-no-active-teams",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot Teams workflow action says \"There are no active teams\": it means Microsoft Teams",
     excerpt: "Why the Send Microsoft Teams notification workflow action shows no teams, what the admin-level install changes, and how to send to users while you wait.",
     type: "tip",
@@ -1707,6 +1797,8 @@ var ARTICLES = [
   },
   {
     slug: "orphan-meeting-recordings-no-company",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Meeting recordings in HubSpot named with a Meet code and attached to no one",
     excerpt: "Why a recorded Google Meet call can land in HubSpot as a meeting titled with the Meet code and no contact or company, how to attach it, and how to stop it.",
     type: "tip",
@@ -1755,6 +1847,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-meeting-record-links",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Linking to a HubSpot meeting: use 0-47, and skip the record URL",
     excerpt: "Meetings are object 0-47, calls are 0-48, and meetings do not open on the usual record URL. Here is the link pattern my demo portal uses.",
     type: "tip",
@@ -1771,6 +1865,8 @@ var ARTICLES = [
   },
   {
     slug: "connector-id-duplicates-after-rename",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connector duplicates after a company rename: sync on an ID that never changes",
     excerpt: "When a sync matches companies on an ID built from the company name, a rename can create a second company. How to choose a stable key in HubSpot.",
     type: "guide",
@@ -1803,6 +1899,8 @@ var ARTICLES = [
   },
   {
     slug: "billing-invoices-stopped-syncing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Invoices from your billing tool stopped showing in HubSpot? Check Record source and Create date",
     excerpt: "How to tell from HubSpot alone whether a billing integration is still creating invoices, using the Invoice source, Record source, and Create date columns.",
     type: "tip",
@@ -1835,6 +1933,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-test-records-skewing-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find and delete test records before they skew every HubSpot count",
     excerpt: "How to find test companies, contacts, and deals, why searching for \"test\" is not enough on its own, and how long you can restore them.",
     type: "tip",
@@ -1867,6 +1967,8 @@ var ARTICLES = [
   },
   {
     slug: "label-agencies-vs-businesses",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Label agencies and end businesses on company records so prospect lists stay clean",
     excerpt: "HubSpot's default company Type property has Prospect, Partner, Reseller, Vendor, and Other. How to use or extend it to separate agencies from businesses.",
     type: "tip",
@@ -1883,6 +1985,8 @@ var ARTICLES = [
   },
   {
     slug: "separate-customers-from-prospect-lists",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move customers and past clients out of a prospecting list",
     excerpt: "How to pull clients, former clients, and open opportunities out of an outreach list into their own static segment, and keep them out of future sends.",
     type: "tip",
@@ -1915,6 +2019,8 @@ var ARTICLES = [
   },
   {
     slug: "multi-checkbox-milestone-property",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track milestones that do not happen in order with a multiple checkboxes property",
     excerpt: "Lifecycle stage is one value. When companies hit milestones out of order, a multiple checkboxes property records every one, as long as each check has evidence.",
     type: "tip",
@@ -1931,6 +2037,8 @@ var ARTICLES = [
   },
   {
     slug: "contacts-who-viewed-a-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find every contact who viewed a specific page: use a segment, not the page URL properties",
     excerpt: "First page seen and Last page seen only hold two pages. A segment with the Page view filter finds every contact who viewed a URL, with frequency and timeframe.",
     type: "tip",
@@ -1947,6 +2055,8 @@ var ARTICLES = [
   },
   {
     slug: "send-list-exclusions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a send-safe list in HubSpot: no bounces, no unsubscribes, no customers, nobody emailed this week",
     excerpt: "A segment that removes bounced, unsubscribed, customer, and recently contacted contacts before a one-to-one email push, and the never-contacted gap to watch.",
     type: "tip",
@@ -1963,6 +2073,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-email-sending-domain-spf",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect your email sending domain in HubSpot without breaking SPF",
     excerpt: "Where to connect a sending domain, which DNS records HubSpot asks for, and the SPF rule that trips people up: one record, with HubSpot added to it.",
     type: "guide",
@@ -1980,6 +2092,8 @@ var ARTICLES = [
   },
   {
     slug: "date-property-event-reminders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Event reminders that do not need rebuilding: a date property and a delay until that date",
     excerpt: "When registration stores the event as a dropdown of dates, every new event means new workflow branches. A date property lets one workflow handle every date.",
     type: "tip",
@@ -1996,6 +2110,8 @@ var ARTICLES = [
   },
   {
     slug: "date-property-internal-name",
+    draft: true,
+    pruned: '2026-11-14',
     title: "A property named after a date keeps that date in its internal name for good",
     excerpt: "HubSpot builds a property's internal name from its first label and never lets you change it. Name date properties for their role, not a specific day.",
     type: "tip",
@@ -2012,6 +2128,8 @@ var ARTICLES = [
   },
   {
     slug: "no-forms-in-marketing-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "You cannot put a HubSpot form inside a marketing email. Link to it.",
     excerpt: "HubSpot forms cannot be embedded in emails. What to use instead, and why a form can capture more than a meeting link.",
     type: "tip",
@@ -2028,6 +2146,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-create-products-from-spreadsheet",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Load a parts list into HubSpot products from a spreadsheet",
     excerpt: "Turning a customer's parts spreadsheet into HubSpot products: import or API, what to clean first, and the uniqueness rule products do not have.",
     type: "tip",
@@ -2044,6 +2164,8 @@ var ARTICLES = [
   },
   {
     slug: "parent-and-child-companies",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Parent and child companies in HubSpot: one parent per child",
     excerpt: "How to set a parent or child company with association labels, the one parent rule, and doing it in bulk with an import.",
     type: "tip",
@@ -2060,6 +2182,8 @@ var ARTICLES = [
   },
   {
     slug: "theme-preview-webp-skipped",
+    draft: true,
+    pruned: '2026-11-14',
     title: "hs cms upload skips .webp files, so theme images vanish without an error",
     excerpt: "Why WebP images in a HubSpot theme folder never reach the Design Manager, how to spot it, and where WebP files should live instead.",
     type: "tip",
@@ -2076,6 +2200,8 @@ var ARTICLES = [
   },
   {
     slug: "theme-system-templates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot system pages: the templates a theme needs, and a 404 page pointing at a deleted template",
     excerpt: "Which system templates a HubSpot theme should ship, the templateType values they use, where to assign them, and how to spot a system page set to a template that no longer exists.",
     type: "guide",
@@ -2108,6 +2234,8 @@ var ARTICLES = [
   },
   {
     slug: "dnd-only-landing-page-template",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a HubSpot landing page template that is only a header, a footer and one drag and drop area",
     excerpt: "How to make a branded landing page template with no fixed content in the body, so marketers build each page from modules, and the two template bugs that break it.",
     type: "guide",
@@ -2124,6 +2252,8 @@ var ARTICLES = [
   },
   {
     slug: "move-template-copy-into-dnd-areas",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Page copy baked into a HubSpot template: move it into drag and drop modules so editors can change it",
     excerpt: "Why text written directly in a template cannot be edited in the page editor, the two ways I moved a landing page's copy into editable modules, and what to check after.",
     type: "guide",
@@ -2156,6 +2286,8 @@ var ARTICLES = [
   },
   {
     slug: "faq-module-faqpage-schema",
+    draft: true,
+    pruned: '2026-11-14',
     title: "FAQ modules and FAQPage schema in HubSpot after Google retired FAQ rich results",
     excerpt: "What changed with Google's FAQ rich results in 2026, why I build HubSpot FAQ modules with answers in the page HTML, and the risk of FAQ schema drifting from the visible copy.",
     type: "tip",
@@ -2220,6 +2352,8 @@ var ARTICLES = [
   },
   {
     slug: "plan-crm-migration-from-spreadsheet",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Plan a CRM migration from spreadsheets and exports: the steps that kept a bank's load clean",
     excerpt: "A step-by-step plan for moving contacts and companies from exported systems into HubSpot: count real people first, choose match keys, stage, run a small canary, and keep a rollback file.",
     type: "guide",
@@ -2236,6 +2370,8 @@ var ARTICLES = [
   },
   {
     slug: "which-hubspot-hubs-you-pay-for",
+    draft: true,
+    pruned: '2026-11-14',
     title: "How to tell which HubSpot hubs and tiers you actually pay for",
     excerpt: "Where to see your HubSpot subscription, why the API and feature probes do not answer it, and why a portal running trials can show Free on the billing page.",
     type: "tip",
@@ -2268,6 +2404,8 @@ var ARTICLES = [
   },
   {
     slug: "track-companies-hiring-for-hubspot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find companies hiring for HubSpot roles: job posts as a sales signal, plus HubSpot's intent signals",
     excerpt: "How we turned job postings for HubSpot and CRM roles into a scored company list in HubSpot, and where HubSpot's own Buyer Intent signals fit.",
     type: "guide",
@@ -2284,6 +2422,8 @@ var ARTICLES = [
   },
   {
     slug: "theme-click-tracking-custom-events",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Theme click tracking in HubSpot: custom events, and why the trackEvent fallback no longer works",
     excerpt: "How a HubSpot theme can send every click to HubSpot custom events, what tier custom events need, and why HubSpot's docs now say the old trackEvent call does nothing.",
     type: "guide",
@@ -2332,6 +2472,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-playbooks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot playbooks: call scripts and notes reps can use on the record",
     excerpt: "What HubSpot playbooks are, who can create and use them, how they show on records, and how to manage versions and sharing.",
     type: "tip",
@@ -2348,6 +2490,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-goals",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set sales goals in HubSpot for users and teams",
     excerpt: "How HubSpot goals work: templates versus custom goals, user and team contributors, the 1,000 custom goal limit, and the rule for users on more than one team.",
     type: "tip",
@@ -2396,6 +2540,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-backup-and-restore",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Back up your HubSpot CRM data: manual backups, schedules, and what is in the file",
     excerpt: "How HubSpot's Backup & Restore works: who can run it, how often by tier, what the download contains, how long it stays available, and the sensitive data warning.",
     type: "tip",
@@ -2412,6 +2558,8 @@ var ARTICLES = [
   },
   {
     slug: "portal-login-security-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Lock down who can log in to HubSpot: login methods, 2FA, IP rules and session timeout",
     excerpt: "Where HubSpot's portal login settings live, the 2FA rule for paid accounts, the 24 hour grace period, and the login restrictions you can set.",
     type: "tip",
@@ -2428,6 +2576,8 @@ var ARTICLES = [
   },
   {
     slug: "account-cleanup-tool",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot Account Cleanup: schedule removal of unused emails, pages, segments and records",
     excerpt: "What HubSpot's Account Cleanup deletes or archives, the criteria per asset type, the monthly run, the restore windows, and the change from archiving to deleting marketing emails.",
     type: "guide",
@@ -2444,6 +2594,8 @@ var ARTICLES = [
   },
   {
     slug: "data-quality-formatting-rules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Fix formatting issues in HubSpot automatically with Data Quality rules",
     excerpt: "How HubSpot's Data Quality tool finds formatting issues like name capitalization and email case, how to accept or reject fixes, and how automation rules fix new records.",
     type: "tip",
@@ -2460,6 +2612,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-sms-add-on",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot SMS: what you need before you can text contacts",
     excerpt: "The requirements for HubSpot marketing SMS: the add-on, a registered US number, contact consent and phone format, and the business types that are not allowed.",
     type: "tip",
@@ -2492,6 +2646,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-ad-accounts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect ad accounts to HubSpot: networks, permissions, and auto-tracking",
     excerpt: "Which ad networks HubSpot connects to, the permission you need, what auto-tracking adds to your ad URLs, and where ad settings live.",
     type: "tip",
@@ -2508,6 +2664,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-social-accounts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect social accounts to HubSpot and what the social tool tracks",
     excerpt: "How to connect Facebook, Instagram, LinkedIn and X to HubSpot, what HubSpot stores and tracks once connected, and the reporting rules per network.",
     type: "tip",
@@ -2556,6 +2714,8 @@ var ARTICLES = [
   },
   {
     slug: "website-chatflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add live chat to your website with HubSpot chatflows",
     excerpt: "How to create a website chatflow in HubSpot, connect it to an inbox or help desk, set the welcome message and display behavior, and the cookie that keeps a minimized chat closed.",
     type: "tip",
@@ -2652,6 +2812,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-health-tab",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The HubSpot email Health tab: your sending score and the limits that trigger suspension",
     excerpt: "What HubSpot's email health score measures, the benchmarks it compares against, and the bounce, spam and unsubscribe rates that can suspend marketing email.",
     type: "tip",
@@ -2668,6 +2830,8 @@ var ARTICLES = [
   },
   {
     slug: "restrict-property-access",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Restrict who can view or edit a HubSpot property",
     excerpt: "How field-level property access works in HubSpot, where to set it, what restricted users see, and the side effects on views, workflows and reports.",
     type: "tip",
@@ -2684,6 +2848,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-create-record-form",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Choose the fields reps see when creating a HubSpot record, and make some required",
     excerpt: "How to customize the create panel for contacts, companies, deals and tickets in HubSpot, make properties and associations required, and which tiers allow what.",
     type: "tip",
@@ -2716,6 +2882,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-documents",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot documents: share files with contacts and see who opened them",
     excerpt: "How HubSpot's documents tool tracks views of shared PDFs and decks, the require-email option, downloads, and the difference from the files tool.",
     type: "tip",
@@ -2748,6 +2916,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-calling-numbers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot calling numbers: HubSpot-provided, ported, or your own registered number",
     excerpt: "The three ways to put a phone number behind HubSpot calling, where account-wide call setup lives, minutes, and porting a number in.",
     type: "tip",
@@ -2764,6 +2934,8 @@ var ARTICLES = [
   },
   {
     slug: "legacy-ctas-vs-new-ctas",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Legacy CTAs in HubSpot: what still works and when to use the new CTA tool",
     excerpt: "Where HubSpot's legacy CTAs live now, the notice about migration, what legacy CTAs cannot do, and when to use new CTAs or button modules instead.",
     type: "tip",
@@ -2860,6 +3032,8 @@ var ARTICLES = [
   },
   {
     slug: "whatsapp-in-hubspot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect WhatsApp to HubSpot: business accounts, limits, and what syncs",
     excerpt: "What you need to connect WhatsApp to HubSpot, the business account and verification requirements, what syncs, coexistence, and template limits.",
     type: "tip",
@@ -2876,6 +3050,8 @@ var ARTICLES = [
   },
   {
     slug: "crm-data-translations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Translate custom CRM labels in HubSpot for teams that work in other languages",
     excerpt: "How HubSpot's custom data translations work: what can be translated, the export and import flow, turning a language on, and who sees translations.",
     type: "tip",
@@ -2908,6 +3084,8 @@ var ARTICLES = [
   },
   {
     slug: "record-layout-team-views",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Give each team its own HubSpot record layout with team views",
     excerpt: "How to create team views for record layouts in HubSpot, who sees them, the default view, and the subscription needed.",
     type: "tip",
@@ -2924,6 +3102,8 @@ var ARTICLES = [
   },
   {
     slug: "unused-segments-and-folders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Tidy up HubSpot segments: the Unused tab, folders, and restoring deleted ones",
     excerpt: "How to find unused segments in HubSpot, check where a segment is used before deleting, organize segments in folders, and restore recently deleted segments.",
     type: "tip",
@@ -2940,6 +3120,8 @@ var ARTICLES = [
   },
   {
     slug: "target-accounts-abm",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Target accounts in HubSpot: pick the companies sales and marketing both work",
     excerpt: "What HubSpot's target accounts home does, how to choose target accounts, the ideal customer profile tier property, and syncing target accounts to LinkedIn audiences.",
     type: "tip",
@@ -2972,6 +3154,8 @@ var ARTICLES = [
   },
   {
     slug: "sync-tasks-to-calendar",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect your calendar to HubSpot and see HubSpot tasks in it",
     excerpt: "What connecting Google or Outlook calendar to HubSpot does, the primary calendar rule, the one-provider limit, and the extra step to show HubSpot tasks in your calendar.",
     type: "tip",
@@ -3004,6 +3188,8 @@ var ARTICLES = [
   },
   {
     slug: "website-pages-manage-and-analyze",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage and analyze HubSpot website pages from the pages list",
     excerpt: "How the website and landing pages lists are organized, saved views and filters, the Analyze tab reports, and swapping in a custom dashboard.",
     type: "tip",
@@ -3020,6 +3206,8 @@ var ARTICLES = [
   },
   {
     slug: "email-sync-to-email-provider",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send pop-up and non-HubSpot form contacts to another email tool",
     excerpt: "What HubSpot's email service provider sync does for pop-up forms and non-HubSpot forms, the Mailchimp example, and its one-way limits.",
     type: "tip",
@@ -3052,6 +3240,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-templates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot marketing email templates: drag and drop, custom, and saved",
     excerpt: "Where marketing email templates live, the drag and drop versus custom split, saving your own templates, uploading an external design with AI, and the subscription for each.",
     type: "tip",
@@ -3068,6 +3258,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-analyze-tab",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Compare marketing email results on the HubSpot Analyze tab",
     excerpt: "What the marketing email Analyze tab shows, the filters and date comparison, exporting charts, and comparing individual emails.",
     type: "tip",
@@ -3084,6 +3276,8 @@ var ARTICLES = [
   },
   {
     slug: "additional-site-domains",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add your other domains to HubSpot tracking, or their form submissions may land in spam",
     excerpt: "Why HubSpot needs external site domains listed in Advanced Tracking, the form spam rule for unlisted domains, and cross-domain linking.",
     type: "tip",
@@ -3116,6 +3310,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-smart-transfer",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot Smart Transfer: move CRM data and email templates from another app",
     excerpt: "What HubSpot Smart Transfer does, its audit and configure steps, transferring email templates from other marketing tools, and cleaning up empty properties afterward.",
     type: "tip",
@@ -3132,6 +3328,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-import-limits",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot import limits: file size, rows per file, and imports per day",
     excerpt: "The size and row limits for HubSpot imports, the daily caps, how the rolling 24 hour window works, and how to plan large loads around them.",
     type: "tip",
@@ -3148,6 +3346,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-deals-in-board-view",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Work deals faster in HubSpot's board view",
     excerpt: "How to edit, bulk select and log activities from HubSpot's deal board, read the stage totals and weighted amounts, and use the data insights card.",
     type: "tip",
@@ -3180,6 +3380,8 @@ var ARTICLES = [
   },
   {
     slug: "view-property-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See who changed a HubSpot property, and restore the old value",
     excerpt: "How to view a record's property history in HubSpot, read the change source, restore a value, and the 14 day window for restoring workflow changes.",
     type: "tip",
@@ -3212,6 +3414,8 @@ var ARTICLES = [
   },
   {
     slug: "view-record-access",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See exactly who can access a HubSpot record",
     excerpt: "How the View record access panel shows users with access to a record, owners and owner history, and how sharing records grants extra access.",
     type: "tip",
@@ -3244,6 +3448,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-navigation-bookmarks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Bookmark the HubSpot tools you use most",
     excerpt: "How HubSpot's navigation bookmarks work, the ten bookmark limit, adding, reordering and removing bookmarks, and keeping the sidebar open.",
     type: "tip",
@@ -3276,6 +3482,8 @@ var ARTICLES = [
   },
   {
     slug: "second-deal-same-contact",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Second sale to the same person? Add a deal, not a second contact",
     excerpt: "Why HubSpot blocks a second contact with the same email, and how to give an existing contact a new deal from the Deals card instead.",
     type: "tip",
@@ -3356,6 +3564,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-approval-process",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Require approval before deals move forward in a pipeline",
     excerpt: "How HubSpot's deal approval process works, what blocks it from starting, and what happens if you turn it off.",
     type: "tip",
@@ -3420,6 +3630,8 @@ var ARTICLES = [
   },
   {
     slug: "other-campaigns-traffic-source",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What \"Other campaigns\" means in HubSpot traffic sources",
     excerpt: "Why sessions land in the Other campaigns source, how HubSpot decides it from UTM parameters, and how to see which campaign drove a spike.",
     type: "tip",
@@ -3500,6 +3712,8 @@ var ARTICLES = [
   },
   {
     slug: "emails-on-the-right-deal",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Emails landing on the wrong deal? How HubSpot picks which deals an activity joins",
     excerpt: "HubSpot's automatic activity association rules for contacts with several open deals, where to change them, and how to log to the right deal.",
     type: "tip",
@@ -3516,6 +3730,8 @@ var ARTICLES = [
   },
   {
     slug: "lifecycle-vs-lead-status-vs-deal-stage",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Lifecycle stage, lead status and deal stage: three properties, three questions",
     excerpt: "What each of HubSpot's three status properties tracks, which records they live on, and how they move, so a team can agree which one to report on.",
     type: "tip",
@@ -3548,6 +3764,8 @@ var ARTICLES = [
   },
   {
     slug: "block-form-spam",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Cut HubSpot form spam: blocked domains, gibberish detection and IP exclusions",
     excerpt: "Account-level HubSpot form settings that reduce spam submissions: blocked email domains, gibberish detection, and excluded IP handling.",
     type: "tip",
@@ -3564,6 +3782,8 @@ var ARTICLES = [
   },
   {
     slug: "conditional-stage-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Require fields before a deal enters a stage with conditional stage properties",
     excerpt: "How HubSpot's conditional stage logic shows or requires properties when someone moves a record into a stage, and how it differs from pipeline rules.",
     type: "tip",
@@ -3580,6 +3800,8 @@ var ARTICLES = [
   },
   {
     slug: "agentic-workflows-agent-hub",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Agentic workflows in Agent Hub: what they are and what they cost",
     excerpt: "HubSpot's Agent Hub workflow builder, the agent and AI actions it adds, the credits those actions use, and the Run agent action limit.",
     type: "tip",
@@ -3612,6 +3834,8 @@ var ARTICLES = [
   },
   {
     slug: "phone-number-validation",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn on phone number validation so new numbers arrive in one format",
     excerpt: "HubSpot's phone number property validation, the E.164 rules it enforces, the default country code option, and the workflow action for old data.",
     type: "tip",
@@ -3628,6 +3852,8 @@ var ARTICLES = [
   },
   {
     slug: "regex-property-validation",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Validate text properties with regex rules in HubSpot",
     excerpt: "HubSpot's basic and custom property validation rules, writing a regular expression or generating one with AI, and example patterns from the KB.",
     type: "tip",
@@ -3644,6 +3870,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-objects-when-to-build",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Custom objects: when to build one, and when a property is enough",
     excerpt: "HubSpot's guidance on when a custom object is the right model, the Enterprise requirement, and how to see your current data model first.",
     type: "tip",
@@ -3660,6 +3888,8 @@ var ARTICLES = [
   },
   {
     slug: "association-labels-multiple-companies",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Copying association labels from a company breaks when a contact has two companies",
     excerpt: "A client project copied assignee labels from the first-created company to contacts and deals. Records with several companies got the wrong labels. How to check and fix it.",
     type: "tip",
@@ -3676,6 +3906,8 @@ var ARTICLES = [
   },
   {
     slug: "original-traffic-source-on-deals",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Getting a contact's traffic source onto the deal: check the default property before building a workflow",
     excerpt: "Deals already have an Original Traffic Source property set from associated contacts. When you still need a copy, use a property sync field or a workflow's Edit record action.",
     type: "tip",
@@ -3724,6 +3956,8 @@ var ARTICLES = [
   },
   {
     slug: "format-data-workflow-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Format data workflow action: clean values, then write them back",
     excerpt: "What HubSpot's Format data workflow action does, why it does not change a property on its own, and how to use its output with Edit record.",
     type: "tip",
@@ -3820,6 +4054,8 @@ var ARTICLES = [
   },
   {
     slug: "imports-api",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Start a HubSpot import from code with the imports API",
     excerpt: "How the CRM imports API takes a multipart request with an importRequest JSON and the file, and how column mappings work.",
     type: "tip",
@@ -3884,6 +4120,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-send-webhook-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send a webhook from a workflow, and verify it really came from HubSpot",
     excerpt: "How the Send a webhook workflow action posts record data to your endpoint, the request signature option, and how to validate it.",
     type: "tip",
@@ -4012,6 +4250,8 @@ var ARTICLES = [
   },
   {
     slug: "choose-hubspot-api-read-method",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Search, list, batch read or webhooks: picking how to read HubSpot data",
     excerpt: "When to use the CRM search API, basic list endpoints, batch reads or webhooks, based on their documented limits.",
     type: "tip",
@@ -4044,6 +4284,8 @@ var ARTICLES = [
   },
   {
     slug: "smart-content-rules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Smart content: show different email or page content to different people",
     excerpt: "How HubSpot smart content rules swap modules and subject lines by country, device, referral source, ad source and contact data, and how to preview them.",
     type: "tip",
@@ -4076,6 +4318,8 @@ var ARTICLES = [
   },
   {
     slug: "hard-vs-soft-bounces",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Hard bounce vs soft bounce in HubSpot, and what happens next",
     excerpt: "What HubSpot means by hard and soft bounces, where to see the reason on a contact, and why a contact can be blocked from another account's bounce.",
     type: "tip",
@@ -4124,6 +4368,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-subscription-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Blog subscription emails: why the subscribe form is missing, and how frequency works",
     excerpt: "How HubSpot blog subscription emails send new posts at each subscriber's chosen frequency, why the subscription form can be hidden, and how to change a subscriber's frequency.",
     type: "tip",
@@ -4140,6 +4386,8 @@ var ARTICLES = [
   },
   {
     slug: "pop-up-forms-are-ctas",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Where did pop-up forms go? Pop-ups, slide-ins and banners are now CTAs",
     excerpt: "How HubSpot's CTA tool handles pop-up boxes, slide-ins and sticky banners, how to trigger them from a button, and why one might not show.",
     type: "tip",
@@ -4172,6 +4420,8 @@ var ARTICLES = [
   },
   {
     slug: "multi-step-forms",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Break a long HubSpot form into steps",
     excerpt: "How to add steps to a HubSpot form, how required fields behave between steps, and the progress bar option.",
     type: "tip",
@@ -4188,6 +4438,8 @@ var ARTICLES = [
   },
   {
     slug: "form-follow-up-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send a follow-up email after a form submission, from the form editor",
     excerpt: "How HubSpot's form editor creates a simple workflow to email everyone who submits a form, and when to use a full workflow instead.",
     type: "tip",
@@ -4204,6 +4456,8 @@ var ARTICLES = [
   },
   {
     slug: "adaptive-page-tests",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Adaptive page tests: test up to five landing page versions",
     excerpt: "How HubSpot adaptive tests send more traffic to the better-converting page variation, the form requirement, and what publishing does to all variations.",
     type: "tip",
@@ -4220,6 +4474,8 @@ var ARTICLES = [
   },
   {
     slug: "global-modules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Global modules: edit once, update every page that uses it",
     excerpt: "What HubSpot global modules are, how editing them affects every page, how to make a one-off local copy, and their smart content support.",
     type: "tip",
@@ -4252,6 +4508,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-events-object",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Marketing events: track webinars and their attendees in HubSpot",
     excerpt: "What HubSpot's marketing events object stores, where to find it, and how integrations create events and register attendees through the API.",
     type: "tip",
@@ -4284,6 +4542,8 @@ var ARTICLES = [
   },
   {
     slug: "google-search-console-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect Google Search Console to HubSpot's SEO tool",
     excerpt: "What the Google Search Console integration adds to HubSpot SEO, how HubSpot-hosted sites are verified, and when domain properties need manual verification.",
     type: "tip",
@@ -4300,6 +4560,8 @@ var ARTICLES = [
   },
   {
     slug: "seo-recommendations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Scan a site for SEO recommendations in HubSpot",
     excerpt: "How to run HubSpot's SEO scan on a URL, how recommendations are ranked, and what the word count check covers.",
     type: "tip",
@@ -4348,6 +4610,8 @@ var ARTICLES = [
   },
   {
     slug: "schedule-and-approve-social-posts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Schedule social posts in HubSpot, with approval if you need it",
     excerpt: "How to draft, review and schedule social posts in HubSpot, use saved publishing times, and route posts through approval.",
     type: "tip",
@@ -4380,6 +4644,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-email-open-notifications",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Too many email open notifications? Forwarding, copies and self-opens",
     excerpt: "Why HubSpot Sales open notifications can fire more than expected, how self-opens are handled, and how to test click tracking properly.",
     type: "tip",
@@ -4412,6 +4678,8 @@ var ARTICLES = [
   },
   {
     slug: "meeting-reminder-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Meeting reminder emails: up to three, and who receives them",
     excerpt: "How HubSpot meeting reminder emails work on scheduling pages and proposed times, the three-reminder limit, the account default, and time zones.",
     type: "tip",
@@ -4428,6 +4696,8 @@ var ARTICLES = [
   },
   {
     slug: "group-meetings-scheduling-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Group scheduling pages: book time when everyone is free",
     excerpt: "How HubSpot group scheduling pages find times when all selected team members are available, the seat requirement, and owner-based availability rules.",
     type: "tip",
@@ -4476,6 +4746,8 @@ var ARTICLES = [
   },
   {
     slug: "unsubscribe-survey",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ask why people unsubscribe with HubSpot's unsubscribe feedback survey",
     excerpt: "How HubSpot's unsubscribe feedback survey works, when it appears, and where to read the reasons.",
     type: "tip",
@@ -4508,6 +4780,8 @@ var ARTICLES = [
   },
   {
     slug: "email-sending-probation-suspension",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Email sending probation and suspension: what triggers them and how to recover",
     excerpt: "What HubSpot email sending probation and suspension mean, the banner you will see, and the contact cleanup HubSpot expects before you can send again.",
     type: "tip",
@@ -4525,6 +4799,8 @@ var ARTICLES = [
   },
   {
     slug: "smart-properties-data-agent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Smart properties: let Data Agent research and fill a property",
     excerpt: "What HubSpot smart properties are, which objects support them, the credit cost, and how to run them in bulk with a workflow.",
     type: "tip",
@@ -4541,6 +4817,8 @@ var ARTICLES = [
   },
   {
     slug: "prospecting-agent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Prospecting agent: what it does and where to start",
     excerpt: "What HubSpot's prospecting agent does with plays and selling profiles, how it researches and drafts outreach, and the credit cost per lead.",
     type: "tip",
@@ -4557,6 +4835,8 @@ var ARTICLES = [
   },
   {
     slug: "stripe-data-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Stripe data into HubSpot: what syncs and which way",
     excerpt: "Which Stripe objects HubSpot's Stripe sync brings in (customers, invoices, products, subscriptions), the sync direction for each, and how it differs from Stripe payment processing.",
     type: "tip",
@@ -4573,6 +4853,8 @@ var ARTICLES = [
   },
   {
     slug: "quickbooks-online-invoices",
+    draft: true,
+    pruned: '2026-11-14',
     title: "QuickBooks Online and HubSpot invoices: what syncs and what is blocked",
     excerpt: "How the QuickBooks Online data sync handles HubSpot invoices, the filter check, sync failures, and why invoice-level taxes and fees are blocked.",
     type: "tip",
@@ -4653,6 +4935,8 @@ var ARTICLES = [
   },
   {
     slug: "closed-lost-reasons",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make Closed lost reason useful: check its field type, then require it",
     excerpt: "HubSpot's Closed lost reason deal property, why a free-text version is hard to report on, and how to require it when deals close lost.",
     type: "tip",
@@ -4669,6 +4953,8 @@ var ARTICLES = [
   },
   {
     slug: "coaching-playlists",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Coaching playlists: collect your best call recordings for training",
     excerpt: "How HubSpot coaching playlists hold full or clipped call recordings, how sharing and following work, and the subscription needed.",
     type: "tip",
@@ -4685,6 +4971,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-activity-feed",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The sales activity feed: opens, clicks and revisits in one list",
     excerpt: "What HubSpot's activity feed shows, its one-year history, why only tracked emails appear, and how it connects to the Chrome extension.",
     type: "tip",
@@ -4733,6 +5021,8 @@ var ARTICLES = [
   },
   {
     slug: "developer-migrations-beta",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Developer Migrations: find app API calls HubSpot is retiring",
     excerpt: "What HubSpot's Migrations page (beta) shows for scopes and API versions, how it lists affected endpoints per app, and how apps move to the current platform version.",
     type: "tip",
@@ -4749,6 +5039,8 @@ var ARTICLES = [
   },
   {
     slug: "property-insights-data-quality",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Property Insights: find properties with issues and watch for unusual updates",
     excerpt: "What the Data Quality Property Insights tab shows, how property anomaly monitoring works, and how fill rates help you archive unused properties.",
     type: "tip",
@@ -4781,6 +5073,8 @@ var ARTICLES = [
   },
   {
     slug: "lead-revisit-notifications",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get notified when a contact comes back to your website",
     excerpt: "How HubSpot lead revisit and website visit notifications work, the channels they can arrive on, and where to manage them.",
     type: "tip",
@@ -4797,6 +5091,8 @@ var ARTICLES = [
   },
   {
     slug: "agent-inbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Agent Inbox: review what your HubSpot agents produced",
     excerpt: "Where HubSpot's Agent Inbox collects agent runs and their output, how to filter runs, and how to export results.",
     type: "tip",
@@ -4813,6 +5109,8 @@ var ARTICLES = [
   },
   {
     slug: "breeze-assistant",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Breeze Assistant: what to ask HubSpot's built-in AI",
     excerpt: "What HubSpot's Breeze Assistant can do on desktop and mobile (summaries, content, meeting prep), projects, and the quick actions in its panel.",
     type: "tip",
@@ -4845,6 +5143,8 @@ var ARTICLES = [
   },
   {
     slug: "power-dialer-voicemail-drops",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Power dialer and voicemail drops: call a list and leave recorded messages",
     excerpt: "How to add contacts to HubSpot's power dialer from a list, and how pre-recorded voicemail drops work, including their phone number requirement.",
     type: "tip",
@@ -4861,6 +5161,8 @@ var ARTICLES = [
   },
   {
     slug: "today-date-property",
+    draft: true,
+    pruned: '2026-11-14',
     title: "There is no \"today\" property: use Time since and Time until instead",
     excerpt: "Why HubSpot has no live today's date property, and how Time since, Time until and relative date properties give you a value that moves with today.",
     type: "tip",
@@ -4877,6 +5179,8 @@ var ARTICLES = [
   },
   {
     slug: "import-error-incorrect-number-of-columns",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Import error: \"Incorrect number of columns\"",
     excerpt: "What usually causes HubSpot's Incorrect number of columns import error, and how to fix the file or mapping.",
     type: "tip",
@@ -4893,6 +5197,8 @@ var ARTICLES = [
   },
   {
     slug: "stop-creating-contacts-from-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Stop HubSpot from creating contacts from every logged email",
     excerpt: "How logged emails create contacts, how to log to existing contacts only, and the account-level log and track defaults for the sales extension.",
     type: "tip",
@@ -4925,6 +5231,8 @@ var ARTICLES = [
   },
   {
     slug: "export-companies-with-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export companies with their associated contacts",
     excerpt: "How HubSpot exports include associated records, the 1,000-association default, and the options for all properties and all associations.",
     type: "tip",
@@ -4941,6 +5249,8 @@ var ARTICLES = [
   },
   {
     slug: "linkedin-url-property",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Where to store a contact's LinkedIn profile",
     excerpt: "HubSpot's default LinkedIn URL contact property, its field type, and how to show it on records and forms.",
     type: "tip",
@@ -4973,6 +5283,8 @@ var ARTICLES = [
   },
   {
     slug: "restore-deleted-records",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Restore deleted contacts, companies and deals within 90 days",
     excerpt: "Where HubSpot's restore records tool is, the 90-day window, filters by user and workflow, and why some contacts cannot be restored.",
     type: "tip",
@@ -5005,6 +5317,8 @@ var ARTICLES = [
   },
   {
     slug: "contacts-from-companies-segment",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a contact list from company criteria",
     excerpt: "How to filter contacts by their associated company's properties, and how primary company and association labels change which companies count.",
     type: "tip",
@@ -5021,6 +5335,8 @@ var ARTICLES = [
   },
   {
     slug: "renewal-deals-pipeline",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track renewals as deals without breaking recurring revenue reports",
     excerpt: "How HubSpot's recurring revenue properties treat renewals, the inactive date and reason fields, and why a renewal deal does not double count.",
     type: "tip",
@@ -5053,6 +5369,8 @@ var ARTICLES = [
   },
   {
     slug: "contact-to-contact-associations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Link contacts to each other: same-object associations",
     excerpt: "How HubSpot associates records of the same object (contact to contact, company to company), how to label those relationships, and how workflows manage them.",
     type: "tip",
@@ -5069,6 +5387,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-name-from-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set a default deal name with tokens",
     excerpt: "How HubSpot's default deal name fills when reps create deals from records, which tokens and static text it accepts, and where it does not apply.",
     type: "tip",
@@ -5085,6 +5405,8 @@ var ARTICLES = [
   },
   {
     slug: "two-contacts-same-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Two people sharing one email address",
     excerpt: "Why HubSpot can't store two contacts with the same email, how additional email addresses work, and the limits on filters and Salesforce.",
     type: "tip",
@@ -5197,6 +5519,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-deal-board-cards",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Choose what shows on deal board cards",
     excerpt: "How to customize deal cards in board view, the 15-item limit, and account versus personal settings.",
     type: "tip",
@@ -5213,6 +5537,8 @@ var ARTICLES = [
   },
   {
     slug: "prevent-deleting-activities",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Stop reps deleting notes and activities",
     excerpt: "Which HubSpot permission lets users delete activities on records, what View-only users can still do, and how to recover deletions.",
     type: "tip",
@@ -5229,6 +5555,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-remove-associations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Remove associations in bulk",
     excerpt: "Why HubSpot workflows can remove only labeled associations, and the API endpoints for removing unlabeled ones in bulk.",
     type: "tip",
@@ -5245,6 +5573,8 @@ var ARTICLES = [
   },
   {
     slug: "copy-line-items",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Copy line items to another deal: how cloning works",
     excerpt: "How HubSpot clones line items between deals, quotes and invoices, why there is no ongoing sync, and the options for reusing a deal's products.",
     type: "tip",
@@ -5261,6 +5591,8 @@ var ARTICLES = [
   },
   {
     slug: "and-or-filter-groups",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use OR in HubSpot filters with filter groups",
     excerpt: "How AND and OR work in HubSpot view filters, and an example: contacts with no upcoming activity.",
     type: "tip",
@@ -5277,6 +5609,8 @@ var ARTICLES = [
   },
   {
     slug: "import-email-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Import past emails, calls and notes onto records",
     excerpt: "How to import activities into HubSpot and associate them with contacts and companies, and why to include an activity date.",
     type: "tip",
@@ -5325,6 +5659,8 @@ var ARTICLES = [
   },
   {
     slug: "phone-country-code-form-field",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Phone number fields in forms: country codes and allowed characters",
     excerpt: "How HubSpot's phone number form field handles country codes and which characters it accepts, plus the length rule.",
     type: "tip",
@@ -5357,6 +5693,8 @@ var ARTICLES = [
   },
   {
     slug: "utm-parameters-hidden-form-fields",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Capture UTM values with hidden form fields",
     excerpt: "How HubSpot hidden form fields store values from URL parameters such as utm_campaign, and the settings that can overwrite them.",
     type: "tip",
@@ -5373,6 +5711,8 @@ var ARTICLES = [
   },
   {
     slug: "form-always-create-contact-new-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "When a form submission creates a new contact, and when it updates an old one",
     excerpt: "The form setting that creates a contact for unknown email addresses, its legacy-editor equivalent, and why cookies can attach a new email to an existing contact.",
     type: "tip",
@@ -5405,6 +5745,8 @@ var ARTICLES = [
   },
   {
     slug: "form-submission-notifications",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Who gets notified when a form is submitted",
     excerpt: "How HubSpot form submission notifications work: the default recipient, notifying the contact owner, adding users, and the daily spam digest.",
     type: "tip",
@@ -5437,6 +5779,8 @@ var ARTICLES = [
   },
   {
     slug: "segment-by-email-engagement",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Segment contacts by how many marketing emails they opened or clicked",
     excerpt: "HubSpot's Marketing emails opened, clicked and bounced properties, how they count, and how to build engagement segments.",
     type: "tip",
@@ -5469,6 +5813,8 @@ var ARTICLES = [
   },
   {
     slug: "change-content-urls",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change a page's URL, domain or language slug",
     excerpt: "Where to change a HubSpot page's URL and domain, how blog and knowledge base roots are set, and what to do about the old URL.",
     type: "tip",
@@ -5485,6 +5831,8 @@ var ARTICLES = [
   },
   {
     slug: "export-form-submissions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export form submissions to a spreadsheet",
     excerpt: "How to export all submissions from a HubSpot form, or from a specific page, and what the export file includes.",
     type: "tip",
@@ -5517,6 +5865,8 @@ var ARTICLES = [
   },
   {
     slug: "ab-test-landing-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "A/B test a landing page, including its form",
     excerpt: "How HubSpot page A/B tests split traffic between two versions at one URL, how you pick the winner, and testing form length.",
     type: "tip",
@@ -5549,6 +5899,8 @@ var ARTICLES = [
   },
   {
     slug: "export-marketing-email-html",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export a marketing email as HTML or PDF",
     excerpt: "How to export HubSpot marketing email designs as HTML or PDF from the editor or performance page, including A/B versions.",
     type: "tip",
@@ -5581,6 +5933,8 @@ var ARTICLES = [
   },
   {
     slug: "send-email-from-contact-owner",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send a marketing email from each contact's owner",
     excerpt: "How HubSpot personalization tokens set a marketing email's From name, address and signature to the contact owner, and how tests behave.",
     type: "tip",
@@ -5661,6 +6015,8 @@ var ARTICLES = [
   },
   {
     slug: "noindex-and-robots-txt",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Keep a HubSpot page out of Google: noindex vs robots.txt",
     excerpt: "When to use a noindex meta tag versus robots.txt in HubSpot, why not to combine them, and the sitemap settings that go with them.",
     type: "tip",
@@ -5693,6 +6049,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-revenue-metrics",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Revenue on HubSpot campaigns: what the numbers mean",
     excerpt: "How HubSpot campaigns report contacts with revenue and attributed revenue, which tiers see which metric, and what campaigns can't do.",
     type: "tip",
@@ -5757,6 +6115,8 @@ var ARTICLES = [
   },
   {
     slug: "filter-by-subscription-type",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find contacts subscribed to a specific email type",
     excerpt: "How to filter HubSpot contacts by subscription status for one or more subscription types, and the opt-out import caveat.",
     type: "tip",
@@ -5789,6 +6149,8 @@ var ARTICLES = [
   },
   {
     slug: "debug-custom-code-actions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Debug a workflow custom code action",
     excerpt: "Where custom code action logs show up, how to pass properties in without an API call, and how to make HubSpot retry after a rate limit error.",
     type: "tip",
@@ -5805,6 +6167,8 @@ var ARTICLES = [
   },
   {
     slug: "set-date-property-in-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set or copy a date property in a workflow",
     excerpt: "How the workflow Edit record action sets date properties to a fixed date or copies another date property, and the related date delays.",
     type: "tip",
@@ -5821,6 +6185,8 @@ var ARTICLES = [
   },
   {
     slug: "webhook-trigger-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Start a workflow when a webhook arrives",
     excerpt: "How HubSpot's \"When a webhook is received\" trigger enrolls existing records from third-party webhook data, and its limits.",
     type: "tip",
@@ -5837,6 +6203,8 @@ var ARTICLES = [
   },
   {
     slug: "dmarc-for-hubspot-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "DMARC, SPF and DKIM for email sent from HubSpot",
     excerpt: "What each email authentication record does, why Gmail and Yahoo require them for bulk senders, and how DMARC policy settings work.",
     type: "tip",
@@ -5853,6 +6221,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-associate-records-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Associate records automatically with a workflow",
     excerpt: "How the Create associations workflow action links existing records by matching property values, and when to use Create record instead.",
     type: "tip",
@@ -5869,6 +6239,8 @@ var ARTICLES = [
   },
   {
     slug: "data-sync-field-mappings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Data sync field mappings: what syncs, which way",
     excerpt: "How HubSpot data sync field mappings control direction and matching, the name and owner rules, and when custom mappings need Data Hub.",
     type: "tip",
@@ -5885,6 +6257,8 @@ var ARTICLES = [
   },
   {
     slug: "netsuite-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect NetSuite to HubSpot: setup and custom fields",
     excerpt: "What HubSpot's NetSuite integration needs on the NetSuite side, who can connect it, and why custom field mappings need Data Hub.",
     type: "tip",
@@ -5949,6 +6323,8 @@ var ARTICLES = [
   },
   {
     slug: "file-property-type",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Store files on a record with a file property",
     excerpt: "How HubSpot's File property type works: files per property, size limits on records and forms, and view access.",
     type: "tip",
@@ -5997,6 +6373,8 @@ var ARTICLES = [
   },
   {
     slug: "time-between-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Calculate the time between two dates",
     excerpt: "How HubSpot's Time between, Time since and Time until calculation properties work, the time_between function, and the millisecond gotcha.",
     type: "tip",
@@ -6013,6 +6391,8 @@ var ARTICLES = [
   },
   {
     slug: "website-accessibility",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make HubSpot pages more accessible",
     excerpt: "Practical accessibility steps for HubSpot websites from HubSpot's developer guide: alt text, form labels, skip links and keyboard navigation.",
     type: "tip",
@@ -6029,6 +6409,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-sync-rules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Salesforce sync rules: two-way, prefer Salesforce, or don't sync",
     excerpt: "How HubSpot's Salesforce field mapping update rules decide which system wins, plus the owner and reference field caveats.",
     type: "tip",
@@ -6045,6 +6427,8 @@ var ARTICLES = [
   },
   {
     slug: "historical-lifecycle-funnel",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Historical lifecycle funnels: journey vs legacy funnel reports",
     excerpt: "Why HubSpot funnel counts change, how journey funnel reports require stages in order, and what to check when contacts go missing.",
     type: "tip",
@@ -6077,6 +6461,8 @@ var ARTICLES = [
   },
   {
     slug: "copy-property-values-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Copy a property from a contact to its deal",
     excerpt: "How the Edit record workflow action copies values between properties and associated records, with the association and type rules.",
     type: "tip",
@@ -6093,6 +6479,8 @@ var ARTICLES = [
   },
   {
     slug: "zoom-integration-webinars",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Zoom webinars in HubSpot: registrants and attendees",
     excerpt: "What HubSpot's Zoom integration syncs for webinars, the registration field limit, and what it doesn't support.",
     type: "tip",
@@ -6109,6 +6497,8 @@ var ARTICLES = [
   },
   {
     slug: "create-ticket-in-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create a ticket (or deal) from a workflow",
     excerpt: "How the Create record workflow action builds tickets, deals and other records, required fields, owners and associations.",
     type: "tip",
@@ -6189,6 +6579,8 @@ var ARTICLES = [
   },
   {
     slug: "capture-gclid",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Google Click ID (GCLID) and other click IDs in HubSpot",
     excerpt: "How HubSpot sets the Google ad click ID contact property, the other click ID properties, and how ad auto-tracking adds parameters.",
     type: "tip",
@@ -6237,6 +6629,8 @@ var ARTICLES = [
   },
   {
     slug: "contact-segment-memberships",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Read and change segment memberships with the API",
     excerpt: "How the HubSpot segments (lists) API returns members, adds records, and which processing types allow manual changes.",
     type: "tip",
@@ -6285,6 +6679,8 @@ var ARTICLES = [
   },
   {
     slug: "change-login-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change the email address you log in with",
     excerpt: "How to change your HubSpot login email, why admins can't do it for you, and the SCIM and Google sign-in exceptions.",
     type: "tip",
@@ -6301,6 +6697,8 @@ var ARTICLES = [
   },
   {
     slug: "personal-date-number-format",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change how dates and numbers display for you",
     excerpt: "Where your personal language and date, time and number format live in HubSpot, and why emails and workflows still use the account default.",
     type: "tip",
@@ -6333,6 +6731,8 @@ var ARTICLES = [
   },
   {
     slug: "recurring-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make a task repeat",
     excerpt: "How to create recurring tasks in HubSpot, what each repeat copies, and the seat you need.",
     type: "tip",
@@ -6365,6 +6765,8 @@ var ARTICLES = [
   },
   {
     slug: "user-invite-not-received",
+    draft: true,
+    pruned: '2026-11-14',
     title: "A new user never got the HubSpot invite",
     excerpt: "How to resend a HubSpot user invite, what to do when the first invite bounced, and the password reset workaround.",
     type: "tip",
@@ -6381,6 +6783,8 @@ var ARTICLES = [
   },
   {
     slug: "user-activity-report",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See all activity by a user",
     excerpt: "Which HubSpot sales analytics reports show completed calls, meetings, tasks, emails and notes by user, and how dates are counted.",
     type: "tip",
@@ -6413,6 +6817,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-app-calls",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Calling and logging calls from the HubSpot mobile app",
     excerpt: "How calls work in the HubSpot mobile app, carrier versus HubSpot Calling, logging calls made outside the app on Android, and consent.",
     type: "tip",
@@ -6429,6 +6835,8 @@ var ARTICLES = [
   },
   {
     slug: "calls-marked-spam",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Your calls show as \"Spam Likely\"",
     excerpt: "What HubSpot suggests when outbound calls are blocked or labeled as spam: registering numbers, permission-based calling and a fallback number.",
     type: "tip",
@@ -6461,6 +6869,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-add-in-setup",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Which HubSpot add-in for Outlook",
     excerpt: "The difference between the HubSpot Sales Office 365 add-in and the Outlook desktop add-in, who can use each, and why not both.",
     type: "tip",
@@ -6477,6 +6887,8 @@ var ARTICLES = [
   },
   {
     slug: "calendar-sync-google-outlook",
+    draft: true,
+    pruned: '2026-11-14',
     title: "How HubSpot's calendar sync works with Google or Outlook",
     excerpt: "What HubSpot's Google Calendar and Outlook Calendar sync does, the primary-calendar rule, and what doesn't sync back.",
     type: "tip",
@@ -6493,6 +6905,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-team-email-shared-mailbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect a shared mailbox like sales@ or support@",
     excerpt: "How a team email channel brings a shared address into HubSpot's inbox, and why the same address can't also be a personal connected inbox.",
     type: "tip",
@@ -6509,6 +6923,8 @@ var ARTICLES = [
   },
   {
     slug: "email-signature-images",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Images and formatting in your HubSpot email signature",
     excerpt: "How to add an image or HTML to your HubSpot email signature, the font caveat, and who can have more than one signature.",
     type: "tip",
@@ -6525,6 +6941,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Analyze sequence performance",
     excerpt: "Where HubSpot's sequence reports live, individual versus all sequences, template performance, and the Enterprise-only deal rate.",
     type: "tip",
@@ -6541,6 +6959,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-sender",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Who a sequence email comes from",
     excerpt: "Why manual sequence enrollment always sends from your own connected inbox, how to send on behalf of another user, and the one-sequence rule.",
     type: "tip",
@@ -6589,6 +7009,8 @@ var ARTICLES = [
   },
   {
     slug: "meetings-branding",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot branding on scheduling pages",
     excerpt: "Why free and Core seat scheduling pages show HubSpot branding, and how Sales or Service seats customize the logo, colors and company details.",
     type: "tip",
@@ -6605,6 +7027,8 @@ var ARTICLES = [
   },
   {
     slug: "meeting-availability-custom-dates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Limit a scheduling page to specific dates",
     excerpt: "How HubSpot scheduling pages use a rolling window or a custom date range for events, the 10-week limit, and time zone display.",
     type: "tip",
@@ -6621,6 +7045,8 @@ var ARTICLES = [
   },
   {
     slug: "embed-meetings-scheduler",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Embed a meeting scheduler on your website",
     excerpt: "How to embed a HubSpot scheduling page on HubSpot pages or external sites, the subscription it needs, and the rich text editor caveat.",
     type: "tip",
@@ -6653,6 +7079,8 @@ var ARTICLES = [
   },
   {
     slug: "meeting-booked-create-deal-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create a deal when a meeting is booked",
     excerpt: "How to build a workflow that creates a deal when a demo meeting is booked and assigns it to the meeting owner.",
     type: "tip",
@@ -6685,6 +7113,8 @@ var ARTICLES = [
   },
   {
     slug: "attach-pdf-to-marketing-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a PDF to a marketing email",
     excerpt: "Why marketing emails link to files rather than attaching them, and how to link a PDF from HubSpot's files tool.",
     type: "tip",
@@ -6701,6 +7131,8 @@ var ARTICLES = [
   },
   {
     slug: "save-email-as-template",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Save an existing marketing email as a template",
     excerpt: "How to turn a drag-and-drop marketing email into a reusable template from the File menu, and who can manage templates.",
     type: "tip",
@@ -6717,6 +7149,8 @@ var ARTICLES = [
   },
   {
     slug: "subscription-preferences-link-token",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why there's no generic \"manage preferences\" link",
     excerpt: "Why HubSpot subscription preferences pages are personal to each recipient, where contacts find their link, and the HubL tag for coded templates.",
     type: "tip",
@@ -6733,6 +7167,8 @@ var ARTICLES = [
   },
   {
     slug: "exclude-from-active-segment",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Keep specific contacts out of an active segment",
     excerpt: "How to exclude records from an active segment with filters or another segment, plus converting an active segment to static.",
     type: "tip",
@@ -6749,6 +7185,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-record-workflow-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Delete contacts with a workflow, and get them back",
     excerpt: "How the Delete contact workflow action works, the 90-day restore window, filtering restores by workflow, and avoiding a delete loop.",
     type: "tip",
@@ -6765,6 +7203,8 @@ var ARTICLES = [
   },
   {
     slug: "additional-email-addresses",
+    draft: true,
+    pruned: '2026-11-14',
     title: "One contact, several email addresses",
     excerpt: "How HubSpot stores additional email addresses on a contact, why the primary email matters, and how to add extras by import.",
     type: "tip",
@@ -6781,6 +7221,8 @@ var ARTICLES = [
   },
   {
     slug: "date-based-workflow-trigger",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Trigger a workflow before or after a date property",
     excerpt: "How HubSpot's 'Based on a schedule' trigger enrolls records on, before or after a date property such as close date or birthday.",
     type: "tip",
@@ -6813,6 +7255,8 @@ var ARTICLES = [
   },
   {
     slug: "unenroll-records-from-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Remove a group of contacts from a workflow",
     excerpt: "How suppression segments, goals and unenrollment triggers take contacts out of HubSpot workflows, and what happens afterwards.",
     type: "tip",
@@ -6829,6 +7273,8 @@ var ARTICLES = [
   },
   {
     slug: "change-property-field-type",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change a property's field type without losing data",
     excerpt: "What HubSpot lets you change on an existing property, why changing the field type can invalidate values, and what to do first.",
     type: "tip",
@@ -6877,6 +7323,8 @@ var ARTICLES = [
   },
   {
     slug: "ad-conversion-events",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send form and lifecycle conversions to Google Ads",
     excerpt: "How HubSpot ad conversion events sync form submissions and lifecycle stage changes to Google Ads, the event limits by tier, and the MCC caveat.",
     type: "tip",
@@ -6893,6 +7341,8 @@ var ARTICLES = [
   },
   {
     slug: "add-assets-to-campaign",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add forms, emails and other assets to a campaign",
     excerpt: "How to associate existing assets with a HubSpot campaign in Marketing Studio, and the per-asset permissions it needs.",
     type: "tip",
@@ -6925,6 +7375,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-vs-google-analytics-numbers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why HubSpot and Google Analytics numbers don't match",
     excerpt: "HubSpot's guidance on comparing its analytics with Google Analytics: compare trends, align IP filters, and cross-domain caveats.",
     type: "tip",
@@ -6941,6 +7393,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-campaign-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot campaigns vs Salesforce campaigns",
     excerpt: "Why HubSpot campaigns don't sync to Salesforce, how to add contacts to Salesforce campaigns from forms and workflows, and what syncs back.",
     type: "tip",
@@ -6957,6 +7411,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-invoice-template",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize the invoices you send buyers",
     excerpt: "How HubSpot invoice presets set a custom title and up to four custom properties, and who can edit them.",
     type: "tip",
@@ -6973,6 +7429,8 @@ var ARTICLES = [
   },
   {
     slug: "paid-meetings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Take payment when someone books a meeting",
     excerpt: "How the Collect payments switch adds a payment link to a HubSpot scheduling page, and what has to be set up first.",
     type: "tip",
@@ -6989,6 +7447,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-workflow-trigger",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Start a workflow when a payment succeeds or fails",
     excerpt: "How payment-based workflows use the Payments object, Status and Source properties, with HubSpot's welcome-email and failed-payment examples.",
     type: "tip",
@@ -7005,6 +7465,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-link-discounts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Discount codes on payment links",
     excerpt: "How HubSpot discount codes work at payment link checkout, where they can't be used, and who can create them.",
     type: "tip",
@@ -7021,6 +7483,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-link-quantity",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Let buyers choose a quantity on a payment link",
     excerpt: "How HubSpot payment links let customers edit line item quantity with minimum and maximum limits, and the one-time-use setting.",
     type: "tip",
@@ -7053,6 +7517,8 @@ var ARTICLES = [
   },
   {
     slug: "export-hubspot-content",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export your website pages and blog posts",
     excerpt: "How to export HTML for all HubSpot pages and blog posts, who can do it, and the separate data exports for posts and knowledge base articles.",
     type: "tip",
@@ -7085,6 +7551,8 @@ var ARTICLES = [
   },
   {
     slug: "calculation-property-blank-values",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Calculation property blank when one input is empty",
     excerpt: "Why a HubSpot calculation property returns no value if any number input is empty, and the if/is_known pattern that treats blanks as zero.",
     type: "tip",
@@ -7101,6 +7569,8 @@ var ARTICLES = [
   },
   {
     slug: "style-hubspot-forms",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Style a HubSpot form: where styles actually apply",
     excerpt: "Why form editor themes only apply to embedded and standalone forms, how forms on HubSpot pages are styled, and the legacy raw HTML option.",
     type: "tip",
@@ -7117,6 +7587,8 @@ var ARTICLES = [
   },
   {
     slug: "navigation-menus",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit your website's navigation menu",
     excerpt: "Where HubSpot navigation menus are managed, the permissions for settings versus the global content editor, and how templates pick a menu.",
     type: "tip",
@@ -7149,6 +7621,8 @@ var ARTICLES = [
   },
   {
     slug: "linkedin-lead-gen-forms",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync LinkedIn Lead Gen Form leads into HubSpot",
     excerpt: "How HubSpot syncs leads from LinkedIn Lead Gen Forms, the LinkedIn page role you need, the required email field, and sync timeframes.",
     type: "tip",
@@ -7165,6 +7639,8 @@ var ARTICLES = [
   },
   {
     slug: "cloudflare-with-hubspot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connecting a domain to HubSpot when DNS is on Cloudflare",
     excerpt: "Why the Cloudflare proxy must be off (DNS only) for HubSpot to verify records, and where Cloudflare Enterprise's O2O setup fits.",
     type: "tip",
@@ -7181,6 +7657,8 @@ var ARTICLES = [
   },
   {
     slug: "import-blog-posts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Import a WordPress blog into HubSpot",
     excerpt: "How HubSpot's WordPress connect imports a blog from its homepage URL, the XML fallback, and permissions.",
     type: "tip",
@@ -7229,6 +7707,8 @@ var ARTICLES = [
   },
   {
     slug: "tiktok-social-publishing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Publish to TikTok from HubSpot",
     excerpt: "What HubSpot's social tool can do with a connected TikTok account: scheduling, post settings, comments and reports.",
     type: "tip",
@@ -7261,6 +7741,8 @@ var ARTICLES = [
   },
   {
     slug: "social-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Analyze social post performance",
     excerpt: "What HubSpot's social Analyze tab reports, the one-year window, delays for external and TikTok data, and why boosted posts aren't included.",
     type: "tip",
@@ -7293,6 +7775,8 @@ var ARTICLES = [
   },
   {
     slug: "create-note-api",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create a note on a contact with the API",
     excerpt: "How to create a HubSpot note and associate it with a contact in one call, and the timestamp it needs.",
     type: "tip",
@@ -7309,6 +7793,8 @@ var ARTICLES = [
   },
   {
     slug: "recently-modified-records-api",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get recently created or updated contacts by API",
     excerpt: "How to pull recently updated HubSpot records with the CRM search API instead of the retired v1 recent-contacts endpoints.",
     type: "tip",
@@ -7325,6 +7811,8 @@ var ARTICLES = [
   },
   {
     slug: "sequences-api-enroll",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Enroll a contact in a sequence with the API",
     excerpt: "How the sequences API enrolls a contact, the user and sender requirements, and the scope it needs.",
     type: "tip",
@@ -7341,6 +7829,8 @@ var ARTICLES = [
   },
   {
     slug: "webhook-response-to-property",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use a webhook's response later in the workflow",
     excerpt: "How the workflow Send a webhook action exposes response fields as action outputs, and how to save one to a property.",
     type: "tip",
@@ -7405,6 +7895,8 @@ var ARTICLES = [
   },
   {
     slug: "move-data-between-hubspot-accounts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Moving things between HubSpot accounts",
     excerpt: "What HubSpot lets you copy between accounts, such as design manager themes and modules, the same-email requirement, and marketplace limits.",
     type: "tip",
@@ -7453,6 +7945,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-integration-user",
+    draft: true,
+    pruned: '2026-11-14',
     title: "The Salesforce integration user: what it controls",
     excerpt: "Why the connected Salesforce user's permissions decide what HubSpot can sync, what to check before changing it, and the one-instance rule.",
     type: "tip",
@@ -7469,6 +7963,8 @@ var ARTICLES = [
   },
   {
     slug: "xero-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync invoices with Xero",
     excerpt: "How HubSpot's Xero data sync handles invoices in each direction, the card fee caveat, and when custom mappings need Data Hub.",
     type: "tip",
@@ -7517,6 +8013,8 @@ var ARTICLES = [
   },
   {
     slug: "form-marketing-event-registration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Register form submitters for a marketing event",
     excerpt: "How to add contacts to a HubSpot marketing event from a form with the Add participant workflow action, and why events can look missing.",
     type: "tip",
@@ -7549,6 +8047,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-receipts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Payment receipts and confirmation emails",
     excerpt: "Which HubSpot payment emails go to buyers automatically, why they can't be turned off, and where checkout settings live.",
     type: "tip",
@@ -7565,6 +8065,8 @@ var ARTICLES = [
   },
   {
     slug: "subscription-billing-dates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Start a subscription's billing on a future date",
     excerpt: "How to set a recurring line item's billing start date in the future on payment links, quotes and subscriptions, and what happens if the buyer pays late.",
     type: "tip",
@@ -7581,6 +8083,8 @@ var ARTICLES = [
   },
   {
     slug: "automated-sales-tax",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Automated sales tax on HubSpot payments",
     excerpt: "Who can use HubSpot's automated sales tax, the US and Canada requirement, local taxes with Stripe, and the unique line item name rule.",
     type: "tip",
@@ -7597,6 +8101,8 @@ var ARTICLES = [
   },
   {
     slug: "create-tickets-from-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn incoming emails into tickets automatically",
     excerpt: "How HubSpot help desk creates tickets from every incoming email, how inbox channels differ, and the April 2024 account change.",
     type: "tip",
@@ -7613,6 +8119,8 @@ var ARTICLES = [
   },
   {
     slug: "tickets-vs-conversations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Help desk vs the conversations inbox",
     excerpt: "How HubSpot's conversations inbox and help desk differ on tickets, and what moving a channel from the inbox to help desk does.",
     type: "tip",
@@ -7629,6 +8137,8 @@ var ARTICLES = [
   },
   {
     slug: "open-chat-from-link",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Open the chat widget from a link or button",
     excerpt: "How HubSpot's chat widget SDK opens the widget from your own button, loads it open, targets a chatflow, or embeds it inline.",
     type: "tip",
@@ -7645,6 +8155,8 @@ var ARTICLES = [
   },
   {
     slug: "ticket-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ticket volume and response time reports",
     excerpt: "What HubSpot's service analytics suite reports on tickets, including response time and reply counts, and how to share a customized report.",
     type: "tip",
@@ -7661,6 +8173,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-chat-widget",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change the chat widget's color, avatar and position",
     excerpt: "Where HubSpot chat widget appearance is set for inbox and help desk chat channels, and what you can change.",
     type: "tip",
@@ -7693,6 +8207,8 @@ var ARTICLES = [
   },
   {
     slug: "time-in-ticket-status",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Time in ticket status properties are empty",
     excerpt: "Why HubSpot's time-in-status properties may be blank: stage calculated properties are off by default for new pipelines and stages.",
     type: "tip",
@@ -7709,6 +8225,8 @@ var ARTICLES = [
   },
   {
     slug: "customer-portal",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Let customers check their tickets in the customer portal",
     excerpt: "How HubSpot's customer portal shows customers their tickets, the visibility options, and where portal tickets are sent.",
     type: "tip",
@@ -7725,6 +8243,8 @@ var ARTICLES = [
   },
   {
     slug: "chatflow-targeting",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Control which chatflow shows on which page",
     excerpt: "How HubSpot targeting rules decide where a chatflow appears using URLs, query parameters and visitor information.",
     type: "tip",
@@ -7741,6 +8261,8 @@ var ARTICLES = [
   },
   {
     slug: "closed-ticket-replies",
+    draft: true,
+    pruned: '2026-11-14',
     title: "When a customer replies to a closed ticket",
     excerpt: "How HubSpot help desk's reopening settings decide whether a reply reopens the ticket or creates a new linked one.",
     type: "tip",
@@ -7757,6 +8279,8 @@ var ARTICLES = [
   },
   {
     slug: "ticket-routing-assignment",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Assign help desk tickets automatically",
     excerpt: "How HubSpot help desk routing rules assign tickets, the Service seat requirement, capacity limits and skill-based routing.",
     type: "tip",
@@ -7789,6 +8313,8 @@ var ARTICLES = [
   },
   {
     slug: "sla-working-hours",
+    draft: true,
+    pruned: '2026-11-14',
     title: "SLAs and working hours in help desk",
     excerpt: "How HubSpot help desk SLA goals work, the four SLA properties, the SLA-hours properties for reporting, and the Enterprise-only conditions.",
     type: "tip",
@@ -7805,6 +8331,8 @@ var ARTICLES = [
   },
   {
     slug: "csat-surveys",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customer satisfaction (CSAT) surveys",
     excerpt: "How HubSpot CSAT surveys are delivered by email, chat or web page, where their automation lives, and what they don't support.",
     type: "tip",
@@ -7837,6 +8365,8 @@ var ARTICLES = [
   },
   {
     slug: "knowledge-base-styling",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Style your HubSpot knowledge base",
     excerpt: "How the knowledge base theme editor sets colors, typography and navigation, and the seat and permissions it needs.",
     type: "tip",
@@ -7853,6 +8383,8 @@ var ARTICLES = [
   },
   {
     slug: "noindex-knowledge-base",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Knowledge base visibility and search engine settings",
     excerpt: "Public, private, SSO and access group options for a HubSpot knowledge base, and what the search results noindex setting does and doesn't cover.",
     type: "tip",
@@ -7869,6 +8401,8 @@ var ARTICLES = [
   },
   {
     slug: "ticket-categories",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ticket categories and sub-categories",
     excerpt: "How HubSpot's default ticket Category property works, its Enterprise requirement, and using property options for sub-categories.",
     type: "tip",
@@ -7885,6 +8419,8 @@ var ARTICLES = [
   },
   {
     slug: "linkedin-sales-navigator-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "LinkedIn Sales Navigator in HubSpot",
     excerpt: "What HubSpot's LinkedIn Sales Navigator integration requires on both sides, the per-user connection, and the record card setup.",
     type: "tip",
@@ -7917,6 +8453,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-mentions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find every ticket you were @mentioned on",
     excerpt: "How mentions in help desk notes work, the My Mentions view, and how notes sync to Slack, Teams and Google Chat.",
     type: "tip",
@@ -7933,6 +8471,8 @@ var ARTICLES = [
   },
   {
     slug: "chat-availability",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Chat availability: working hours and Away status",
     excerpt: "How HubSpot sets inbox and help desk users to Available or Away from working hours, out-of-office and manual status, and how that affects routing.",
     type: "tip",
@@ -7949,6 +8489,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-out-of-office",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set out-of-office for help desk users",
     excerpt: "How out-of-office periods set HubSpot users to Away, stop automatic assignment, and who can set them.",
     type: "tip",
@@ -7965,6 +8507,8 @@ var ARTICLES = [
   },
   {
     slug: "survey-dependent-fields",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ask follow-up questions in a survey based on the answer",
     excerpt: "How dependent fields in HubSpot custom feedback surveys show extra questions based on a response.",
     type: "tip",
@@ -7981,6 +8525,8 @@ var ARTICLES = [
   },
   {
     slug: "support-survey-conditional",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customer support (CES) surveys after a ticket closes",
     excerpt: "How HubSpot customer support surveys send after tickets close, the once-per-ticket rule, delays, and why there are no reminders.",
     type: "tip",
@@ -7997,6 +8543,8 @@ var ARTICLES = [
   },
   {
     slug: "survey-response-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use survey responses in segments, workflows and reports",
     excerpt: "How HubSpot survey response properties store each response separately, and where you can use them.",
     type: "tip",
@@ -8013,6 +8561,8 @@ var ARTICLES = [
   },
   {
     slug: "survey-faqs-reenroll",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Survey FAQs: subscription type, expiry and marketing status",
     excerpt: "Answers from HubSpot's customer feedback FAQ: the survey email subscription type, how long email surveys stay open, and marketing contact status.",
     type: "tip",
@@ -8029,6 +8579,8 @@ var ARTICLES = [
   },
   {
     slug: "assign-conversation-owner-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Assign conversation owners with a workflow",
     excerpt: "How the Assign conversation owner workflow action changes a conversation's inbox and owner automatically.",
     type: "tip",
@@ -8045,6 +8597,8 @@ var ARTICLES = [
   },
   {
     slug: "bot-to-live-chat",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Hand a bot conversation to a person, or to the bot when nobody's around",
     excerpt: "How HubSpot rule-based chatbots hand off with Send to team member, the availability check, and the customer agent option.",
     type: "tip",
@@ -8077,6 +8631,8 @@ var ARTICLES = [
   },
   {
     slug: "chat-transcripts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Email chat transcripts to visitors automatically",
     excerpt: "How HubSpot help desk sends a contact the full chat transcript after the ticket closes, and the timing.",
     type: "tip",
@@ -8093,6 +8649,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-slack",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage help desk tickets in Slack",
     excerpt: "How HubSpot help desk syncs tickets to Slack channels, filters which tickets go where, and syncs internal comments.",
     type: "tip",
@@ -8109,6 +8667,8 @@ var ARTICLES = [
   },
   {
     slug: "snooze-tickets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Snooze a ticket until later",
     excerpt: "How snoozing works in HubSpot help desk, who sees snoozed tickets, and why they still count toward capacity.",
     type: "tip",
@@ -8125,6 +8685,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-macros",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Macros in help desk: saved replies plus ticket actions",
     excerpt: "How HubSpot help desk macros combine a reusable reply with ticket updates, the limits by tier, and who can create them.",
     type: "tip",
@@ -8141,6 +8703,8 @@ var ARTICLES = [
   },
   {
     slug: "chatflow-priority",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Two chatflows on the same page: set the priority",
     excerpt: "How HubSpot chatflow priority decides which chatflow shows when targeting overlaps, and how to test it.",
     type: "tip",
@@ -8157,6 +8721,8 @@ var ARTICLES = [
   },
   {
     slug: "whatsapp-templates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "WhatsApp message templates in HubSpot",
     excerpt: "How WhatsApp templates are created, approved and synced into HubSpot, personalization variables, and Meta's US marketing pause.",
     type: "tip",
@@ -8173,6 +8739,8 @@ var ARTICLES = [
   },
   {
     slug: "sms-support",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Text-message support with an SMS channel in help desk",
     excerpt: "How an SMS channel in HubSpot help desk receives customer texts, why you can't start conversations from it, and the plain-text limit.",
     type: "tip",
@@ -8189,6 +8757,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-default-team-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set which email address a team replies from in help desk",
     excerpt: "How to set a default From address per team in HubSpot help desk, the requirements, and what it doesn't cover.",
     type: "tip",
@@ -8205,6 +8775,8 @@ var ARTICLES = [
   },
   {
     slug: "chat-with-logged-in-visitors",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Chat with logged-in visitors",
     excerpt: "How HubSpot identifies logged-in visitors in chat, targeting a chatflow only to them, and the tiers involved.",
     type: "tip",
@@ -8221,6 +8793,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-form-submissions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Delete form submissions",
     excerpt: "How to delete HubSpot form submissions, the 200-per-day limit, and why deletion is permanent.",
     type: "tip",
@@ -8237,6 +8811,8 @@ var ARTICLES = [
   },
   {
     slug: "multiple-knowledge-bases",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Run more than one knowledge base",
     excerpt: "How many knowledge bases HubSpot allows, who can create them, and what they're for.",
     type: "tip",
@@ -8253,6 +8829,8 @@ var ARTICLES = [
   },
   {
     slug: "send-email-recipient-time-zone",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send a marketing email at the same local time for everyone",
     excerpt: "How HubSpot schedules marketing emails by recipient time zone and its limits.",
     type: "tip",
@@ -8269,6 +8847,8 @@ var ARTICLES = [
   },
   {
     slug: "organize-workflows-folders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Organize workflows into folders",
     excerpt: "How to group HubSpot workflows into folders, filter inside them, and keep the list manageable.",
     type: "tip",
@@ -8285,6 +8865,8 @@ var ARTICLES = [
   },
   {
     slug: "schedule-meeting-for-another-user",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Book a meeting for a colleague from a record",
     excerpt: "How scheduling meetings from HubSpot records works, including for other users on paid tiers.",
     type: "tip",
@@ -8301,6 +8883,8 @@ var ARTICLES = [
   },
   {
     slug: "external-pages-in-campaigns",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add non-HubSpot pages to a campaign",
     excerpt: "How to associate external website pages with a HubSpot campaign and why the tracking code matters.",
     type: "tip",
@@ -8333,6 +8917,8 @@ var ARTICLES = [
   },
   {
     slug: "microsoft-teams-tickets-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create HubSpot tasks and tickets from Microsoft Teams",
     excerpt: "What the HubSpot app for Microsoft Teams lets you create, and the fields you can set.",
     type: "tip",
@@ -8349,6 +8935,8 @@ var ARTICLES = [
   },
   {
     slug: "social-posts-mobile-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Publish social posts from the HubSpot mobile app",
     excerpt: "Which networks the HubSpot mobile app can post to and the permission it needs.",
     type: "tip",
@@ -8365,6 +8953,8 @@ var ARTICLES = [
   },
   {
     slug: "youtube-videos-social",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Publish YouTube videos from HubSpot",
     excerpt: "How HubSpot's social composer uploads and publishes YouTube videos.",
     type: "tip",
@@ -8397,6 +8987,8 @@ var ARTICLES = [
   },
   {
     slug: "form-submission-events",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Submitted form events are legacy: use custom events",
     excerpt: "Why HubSpot's submitted form events can't be created anymore and what replaces them.",
     type: "tip",
@@ -8413,6 +9005,8 @@ var ARTICLES = [
   },
   {
     slug: "consent-banner-new-editor",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Style the cookie consent banner",
     excerpt: "How to change HubSpot cookie banner position, shape, colors and buttons in the new editor.",
     type: "tip",
@@ -8429,6 +9023,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-messenger-primary-receiver",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Facebook Messenger: make HubSpot the primary receiver",
     excerpt: "How HubSpot receives Facebook Messenger chats, the one-account limit, and the duplicate contact caveat.",
     type: "tip",
@@ -8461,6 +9057,8 @@ var ARTICLES = [
   },
   {
     slug: "microsoft-copilot-connector",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot in Microsoft 365 Copilot",
     excerpt: "What the HubSpot Agent for Copilot can read, its read-only limit, and the one-account rule.",
     type: "tip",
@@ -8477,6 +9075,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-ab-testing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "A/B test sequence emails",
     excerpt: "How HubSpot A/B tests emails in standard sequences and what dynamic sequences don't support.",
     type: "tip",
@@ -8493,6 +9093,8 @@ var ARTICLES = [
   },
   {
     slug: "user-preference-groups",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set default notification and user preferences for your team",
     excerpt: "How HubSpot presets set default user preferences that users can still override.",
     type: "tip",
@@ -8525,6 +9127,8 @@ var ARTICLES = [
   },
   {
     slug: "log-sent-emails-to-crm",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Log emails you already sent",
     excerpt: "How to log sent and received emails to HubSpot, including retroactively, and the privacy and seat limits.",
     type: "tip",
@@ -8541,6 +9145,8 @@ var ARTICLES = [
   },
   {
     slug: "double-opt-in-languages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Double opt-in emails in several languages",
     excerpt: "How HubSpot sends double opt-in confirmation emails and pages in multiple languages.",
     type: "tip",
@@ -8557,6 +9163,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-extension-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot Sales extension settings: BCC addresses and more",
     excerpt: "Where the HubSpot Sales extension settings live and how additional BCC addresses work.",
     type: "tip",
@@ -8573,6 +9181,8 @@ var ARTICLES = [
   },
   {
     slug: "associate-records-existing-associations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Associate records through a shared record",
     excerpt: "How the Copy associations workflow action links records that share an intermediary record.",
     type: "tip",
@@ -8605,6 +9215,8 @@ var ARTICLES = [
   },
   {
     slug: "tiktok-ads",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect TikTok ads to HubSpot",
     excerpt: "What connecting a TikTok ad account lets HubSpot track and create.",
     type: "tip",
@@ -8621,6 +9233,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-return-path",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set a custom return-path for email bounces",
     excerpt: "How a custom return-path aligns bounces with your domain, DMARC alignment rules, and verification time.",
     type: "tip",
@@ -8637,6 +9251,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-custom-views",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Custom views in the conversations inbox",
     excerpt: "How to filter inbox conversations into custom views, the permission, and the 2024 account limitation.",
     type: "tip",
@@ -8669,6 +9285,8 @@ var ARTICLES = [
   },
   {
     slug: "google-chat-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use HubSpot with Google Chat",
     excerpt: "What the Google Chat app does with HubSpot: notifications, inbox and help desk, and link previews.",
     type: "tip",
@@ -8685,6 +9303,8 @@ var ARTICLES = [
   },
   {
     slug: "compare-date-ranges-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Compare this year to last year in a custom report",
     excerpt: "How Date part and Compare by work in HubSpot's custom report builder.",
     type: "tip",
@@ -8701,6 +9321,8 @@ var ARTICLES = [
   },
   {
     slug: "move-pages-website-landing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move a page between website and landing pages",
     excerpt: "How to transfer a HubSpot page between the website and landing page lists.",
     type: "tip",
@@ -8733,6 +9355,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-right-sidebar",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize the help desk right sidebar",
     excerpt: "How Super Admins add, reorder and conditionally show tabs and cards in help desk's right sidebar.",
     type: "tip",
@@ -8749,6 +9373,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-template-customize",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize a quote template's look",
     excerpt: "Who can create HubSpot quote templates, how template styles override branding, and the seat rules.",
     type: "tip",
@@ -8765,6 +9391,8 @@ var ARTICLES = [
   },
   {
     slug: "tracking-code-data-collected",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What the HubSpot tracking code collects",
     excerpt: "What data HubSpot's tracking code gathers, how consent affects it, and the setting that stops HubSpot using it for product improvement.",
     type: "tip",
@@ -8797,6 +9425,8 @@ var ARTICLES = [
   },
   {
     slug: "drill-down-dashboard-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See the records behind a dashboard number",
     excerpt: "How to drill into a HubSpot dashboard report and group the drill-down by a property.",
     type: "tip",
@@ -8813,6 +9443,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-reject-duplicates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reject many potential duplicates at once",
     excerpt: "How to clear false-positive duplicate pairs in bulk and narrow future suggestions in HubSpot.",
     type: "tip",
@@ -8829,6 +9461,8 @@ var ARTICLES = [
   },
   {
     slug: "global-module-one-template",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change a global module on just one template",
     excerpt: "How to make a local copy of a HubSpot global module so one template can differ.",
     type: "tip",
@@ -8845,6 +9479,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-contacts-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Outlook contacts with HubSpot",
     excerpt: "How the Outlook Contacts data sync works, sync directions and its fixed mappings.",
     type: "tip",
@@ -8861,6 +9497,8 @@ var ARTICLES = [
   },
   {
     slug: "anchor-links-pages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add anchor links to a long page",
     excerpt: "How to insert anchor links in HubSpot pages, naming rules and where they don't work well.",
     type: "tip",
@@ -8877,6 +9515,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-custom-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Tag marketing emails with custom properties",
     excerpt: "How custom email properties work in HubSpot for filtering and organizing marketing emails.",
     type: "tip",
@@ -8893,6 +9533,8 @@ var ARTICLES = [
   },
   {
     slug: "file-direct-download-link",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Share a direct link to a file in HubSpot",
     excerpt: "How to get a direct link to a file in the files tool and why it may open rather than download.",
     type: "tip",
@@ -8909,6 +9551,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-app-file-upload",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Upload files from the HubSpot mobile app",
     excerpt: "What you can upload to HubSpot files from a phone, folder support and default visibility.",
     type: "tip",
@@ -8925,6 +9569,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-index-columns",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Choose which columns a segment shows",
     excerpt: "How HubSpot segment columns work per user versus for everyone, and freezing columns.",
     type: "tip",
@@ -8941,6 +9587,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-error-troubleshooting",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find and fix workflow errors",
     excerpt: "Where HubSpot lists automation issues, what a real one looks like, and how to clear it.",
     type: "tip",
@@ -8958,6 +9606,8 @@ var ARTICLES = [
   },
   {
     slug: "export-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export tasks to a spreadsheet",
     excerpt: "How to export HubSpot tasks from a view, what the file includes, and the associated-records option.",
     type: "tip",
@@ -8990,6 +9640,8 @@ var ARTICLES = [
   },
   {
     slug: "meetings-mobile-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Prep for meetings on the HubSpot mobile app",
     excerpt: "What the mobile meeting details page shows and the conditions a meeting must meet.",
     type: "tip",
@@ -9006,6 +9658,8 @@ var ARTICLES = [
   },
   {
     slug: "reenroll-sequence",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Re-enroll a contact in a sequence",
     excerpt: "How to re-enroll a contact who was unenrolled from a HubSpot sequence and what's required.",
     type: "tip",
@@ -9022,6 +9676,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-properties-custom",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Which quote properties HubSpot has",
     excerpt: "HubSpot's default quote properties, which are read-only, and where they can be used.",
     type: "tip",
@@ -9038,6 +9694,8 @@ var ARTICLES = [
   },
   {
     slug: "copy-property-compatible-types",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Which property types a workflow can copy between",
     excerpt: "Field-type compatibility rules for copying values with HubSpot's Edit record action.",
     type: "tip",
@@ -9054,6 +9712,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-approvals",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Approve quotes before they go out",
     excerpt: "Who can approve HubSpot quotes and where approvals happen.",
     type: "tip",
@@ -9070,6 +9730,8 @@ var ARTICLES = [
   },
   {
     slug: "zoho-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect Zoho to HubSpot",
     excerpt: "Which Zoho apps connect to HubSpot, who can connect them, and the Zoho CRM field you need.",
     type: "tip",
@@ -9086,6 +9748,8 @@ var ARTICLES = [
   },
   {
     slug: "manually-log-activities",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Log activities that happened outside HubSpot",
     excerpt: "How to manually log calls, emails, meetings and messages on HubSpot records, and limits.",
     type: "tip",
@@ -9102,6 +9766,8 @@ var ARTICLES = [
   },
   {
     slug: "purchased-products-on-records",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show purchased products on contacts and companies",
     excerpt: "How the Product history card works on HubSpot records and its limits.",
     type: "tip",
@@ -9118,6 +9784,8 @@ var ARTICLES = [
   },
   {
     slug: "example-import-file",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Download an example import file",
     excerpt: "How HubSpot generates a sample import file with the right columns.",
     type: "tip",
@@ -9150,6 +9818,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-crashing-sales-add-in",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Outlook crashes after installing HubSpot Sales",
     excerpt: "HubSpot's troubleshooting route when Outlook desktop crashes with the HubSpot Sales add-in.",
     type: "tip",
@@ -9182,6 +9852,8 @@ var ARTICLES = [
   },
   {
     slug: "import-knowledge-base-articles",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Import knowledge base articles",
     excerpt: "How to import articles from Zendesk, Freshdesk, Help Scout, Intercom or CSV into HubSpot.",
     type: "tip",
@@ -9198,6 +9870,8 @@ var ARTICLES = [
   },
   {
     slug: "event-enrollment-triggers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Trigger a workflow when an event happens",
     excerpt: "How HubSpot event-based enrollment triggers work and their timing limits.",
     type: "tip",
@@ -9214,6 +9888,8 @@ var ARTICLES = [
   },
   {
     slug: "third-party-calling-provider",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect a third-party calling provider",
     excerpt: "How calling apps open inside HubSpot and their limits.",
     type: "tip",
@@ -9230,6 +9906,8 @@ var ARTICLES = [
   },
   {
     slug: "cross-object-reports-on-records",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add reports to CRM records",
     excerpt: "How to show custom and cross-object report cards on HubSpot record pages.",
     type: "tip",
@@ -9246,6 +9924,8 @@ var ARTICLES = [
   },
   {
     slug: "record-preview-panel",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Preview a record without leaving the page",
     excerpt: "How record preview works in HubSpot index pages and associations.",
     type: "tip",
@@ -9278,6 +9958,8 @@ var ARTICLES = [
   },
   {
     slug: "list-folders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Organize segments into folders",
     excerpt: "How HubSpot segment folders work and when to use views instead.",
     type: "tip",
@@ -9294,6 +9976,8 @@ var ARTICLES = [
   },
   {
     slug: "prepopulate-form-fields-query-string",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Prefill form fields from the URL",
     excerpt: "How to auto-populate HubSpot form fields using query strings and limits.",
     type: "tip",
@@ -9310,6 +9994,8 @@ var ARTICLES = [
   },
   {
     slug: "stripe-subscriptions-migrate",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move Stripe subscriptions into HubSpot",
     excerpt: "How Stripe subscription migration works and which subscriptions can't move.",
     type: "tip",
@@ -9326,6 +10012,8 @@ var ARTICLES = [
   },
   {
     slug: "google-calendar-auto-meetings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Why meetings don't appear on a contact's Google Calendar",
     excerpt: "Google Calendar's sender setting and how contacts approve your invites.",
     type: "tip",
@@ -9342,6 +10030,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-comments-moderation",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn on and moderate blog comments",
     excerpt: "How to enable, moderate and capture contacts from HubSpot blog comments.",
     type: "tip",
@@ -9358,6 +10048,8 @@ var ARTICLES = [
   },
   {
     slug: "dashboards-mobile-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use dashboards in the HubSpot mobile app",
     excerpt: "What dashboards and reports work in the HubSpot mobile app and what doesn't.",
     type: "tip",
@@ -9374,6 +10066,8 @@ var ARTICLES = [
   },
   {
     slug: "automated-emails-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send automated marketing emails from workflows",
     excerpt: "How automated emails work in workflows, token limits, and who gets them.",
     type: "tip",
@@ -9406,6 +10100,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-auto-post-social",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Auto-post new blog posts to social",
     excerpt: "How HubSpot blog auto-publishing to social accounts works, the timing, and the shared-account rule.",
     type: "tip",
@@ -9422,6 +10118,8 @@ var ARTICLES = [
   },
   {
     slug: "report-ai-insights",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get AI summaries of a report",
     excerpt: "Where HubSpot's AI-assisted report insights appear and which reports support them.",
     type: "tip",
@@ -9438,6 +10136,8 @@ var ARTICLES = [
   },
   {
     slug: "embed-hubspot-content-wordpress",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Embed HubSpot content in WordPress",
     excerpt: "How HubSpot content embeds work for HubSpot and WordPress pages.",
     type: "tip",
@@ -9454,6 +10154,8 @@ var ARTICLES = [
   },
   {
     slug: "product-module-marketing-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add products to an automated marketing email",
     excerpt: "How the products module works in HubSpot email, recommendations, and where it's available.",
     type: "tip",
@@ -9470,6 +10172,8 @@ var ARTICLES = [
   },
   {
     slug: "filter-segments-index",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Filter the segments list",
     excerpt: "How to filter and save views of HubSpot segments, with AND and OR logic.",
     type: "tip",
@@ -9486,6 +10190,8 @@ var ARTICLES = [
   },
   {
     slug: "automatic-image-resizing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn off automatic image resizing",
     excerpt: "How HubSpot resizes images on hosted content and the parameter that stops it.",
     type: "tip",
@@ -9502,6 +10208,8 @@ var ARTICLES = [
   },
   {
     slug: "company-rebrand-assets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Prepare HubSpot for a company rebrand",
     excerpt: "What HubSpot says to update during a rebrand: domains, brand identity and website settings.",
     type: "tip",
@@ -9518,6 +10226,8 @@ var ARTICLES = [
   },
   {
     slug: "test-workflow-before-on",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Test a workflow before turning it on",
     excerpt: "What HubSpot's workflow test checks and what it can't tell you.",
     type: "tip",
@@ -9534,6 +10244,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-data-variables",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use data from other records in workflow actions",
     excerpt: "How the workflow data panel inserts values from associated records and events.",
     type: "tip",
@@ -9550,6 +10262,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Complete sequence tasks",
     excerpt: "How tasks in HubSpot sequences are created and completed, and why bulk completion isn't available.",
     type: "tip",
@@ -9566,6 +10280,8 @@ var ARTICLES = [
   },
   {
     slug: "filter-record-timeline",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Filter a record's activity timeline",
     excerpt: "How to filter activities on HubSpot records and the 30-day limit on newer free accounts.",
     type: "tip",
@@ -9582,6 +10298,8 @@ var ARTICLES = [
   },
   {
     slug: "meetings-availability-mismatch",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Meeting availability doesn't match your calendar",
     excerpt: "HubSpot's checklist when scheduling pages show fewer slots than expected.",
     type: "tip",
@@ -9598,6 +10316,8 @@ var ARTICLES = [
   },
   {
     slug: "comments-on-assets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Comment on HubSpot assets with your team",
     excerpt: "How to leave and manage comments on HubSpot assets and conversations.",
     type: "tip",
@@ -9614,6 +10334,8 @@ var ARTICLES = [
   },
   {
     slug: "record-trend-insights",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show customer spend trends on records",
     excerpt: "How the Customer spend trends card works on HubSpot contacts and companies.",
     type: "tip",
@@ -9630,6 +10352,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-template-design-manager",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit a blog listing template",
     excerpt: "Which HubSpot blog listing pages need the design manager and how to edit them.",
     type: "tip",
@@ -9646,6 +10370,8 @@ var ARTICLES = [
   },
   {
     slug: "monitor-sequence-enrollments",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track who's enrolled in sequences",
     excerpt: "How to monitor HubSpot sequence enrollments and when sequence edits apply.",
     type: "tip",
@@ -9662,6 +10388,8 @@ var ARTICLES = [
   },
   {
     slug: "sequences-mobile-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Enroll contacts in sequences from your phone",
     excerpt: "What you can do with HubSpot sequences in the mobile app.",
     type: "tip",
@@ -9678,6 +10406,8 @@ var ARTICLES = [
   },
   {
     slug: "data-model-health-check",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Run the data model health check",
     excerpt: "What HubSpot's data model health check scans and how often to run it.",
     type: "tip",
@@ -9694,6 +10424,8 @@ var ARTICLES = [
   },
   {
     slug: "sync-owner-contact-company",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make contacts inherit the company owner",
     excerpt: "HubSpot's setting that assigns the company owner to contacts by default.",
     type: "tip",
@@ -9710,6 +10442,8 @@ var ARTICLES = [
   },
   {
     slug: "default-index-view",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set default views for everyone",
     excerpt: "How admins set default index page views for new users.",
     type: "tip",
@@ -9726,6 +10460,8 @@ var ARTICLES = [
   },
   {
     slug: "plain-text-email-version",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit a marketing email's plain text version",
     excerpt: "How HubSpot plain text emails work, link display, and click tracking.",
     type: "tip",
@@ -9742,6 +10478,8 @@ var ARTICLES = [
   },
   {
     slug: "default-send-from-address",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change your default From address for one-to-one emails",
     excerpt: "How to set the default From address with several connected inboxes.",
     type: "tip",
@@ -9758,6 +10496,8 @@ var ARTICLES = [
   },
   {
     slug: "reply-emails-inbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send and reply from the conversations inbox",
     excerpt: "How to compose and reply in HubSpot's inbox and the Office 365 junk folder gotcha.",
     type: "tip",
@@ -9774,6 +10514,8 @@ var ARTICLES = [
   },
   {
     slug: "dashboard-external-content",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Embed external content on a dashboard",
     excerpt: "How to add Google Slides and other content to HubSpot dashboards and limits.",
     type: "tip",
@@ -9790,6 +10532,8 @@ var ARTICLES = [
   },
   {
     slug: "report-chart-styles",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Pick the right report chart type",
     excerpt: "HubSpot's report chart styles and what each suits.",
     type: "tip",
@@ -9806,6 +10550,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-analytics-views",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create custom analytics views",
     excerpt: "How HubSpot analytics views filter traffic and the session rule.",
     type: "tip",
@@ -9822,6 +10568,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-go-to-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reuse workflow steps with Go to action",
     excerpt: "How HubSpot's Go to action connects workflow branches instead of duplicating steps.",
     type: "tip",
@@ -9838,6 +10586,8 @@ var ARTICLES = [
   },
   {
     slug: "export-ads-data",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export ad campaign data from HubSpot",
     excerpt: "What HubSpot's ads export includes and the ad-level data it leaves out.",
     type: "tip",
@@ -9854,6 +10604,8 @@ var ARTICLES = [
   },
   {
     slug: "convert-view-to-segment",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn a saved view into a segment",
     excerpt: "How to convert a HubSpot index page view into a segment and when it fails.",
     type: "tip",
@@ -9870,6 +10622,8 @@ var ARTICLES = [
   },
   {
     slug: "non-hubspot-forms-mailchimp",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Non-HubSpot form contacts not reaching Mailchimp",
     excerpt: "Why contacts from non-HubSpot forms don't sync to Mailchimp and the merge tag fix.",
     type: "tip",
@@ -9886,6 +10640,8 @@ var ARTICLES = [
   },
   {
     slug: "chatgpt-connector",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect HubSpot to ChatGPT",
     excerpt: "How HubSpot's ChatGPT connector handles permissions, writes and account limits.",
     type: "tip",
@@ -9918,6 +10674,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-performance-analyze",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Analyze workflow performance",
     excerpt: "Where HubSpot shows workflow enrollment data and automation opportunities.",
     type: "tip",
@@ -9934,6 +10692,8 @@ var ARTICLES = [
   },
   {
     slug: "edit-delete-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit or delete tasks",
     excerpt: "Where HubSpot tasks can be edited or deleted.",
     type: "tip",
@@ -9950,6 +10710,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-caller-id",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Caller ID in the HubSpot mobile app",
     excerpt: "How HubSpot mobile Caller ID identifies callers and the Android log screen.",
     type: "tip",
@@ -9982,6 +10744,8 @@ var ARTICLES = [
   },
   {
     slug: "adobe-acrobat-sign",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect Adobe Acrobat Sign",
     excerpt: "What the Adobe Acrobat Sign integration does in HubSpot and doesn't sync.",
     type: "tip",
@@ -9998,6 +10762,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-add-in-customize",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Outlook desktop add-in settings",
     excerpt: "The Outlook desktop add-in's status and settings.",
     type: "tip",
@@ -10030,6 +10796,8 @@ var ARTICLES = [
   },
   {
     slug: "dark-mode-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check marketing emails in dark mode",
     excerpt: "How to preview HubSpot emails in dark mode.",
     type: "tip",
@@ -10046,6 +10814,8 @@ var ARTICLES = [
   },
   {
     slug: "predictive-likelihood-to-close",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What Likelihood to close means",
     excerpt: "How HubSpot's predictive scoring sets Likelihood to close and Contact priority.",
     type: "tip",
@@ -10062,6 +10832,8 @@ var ARTICLES = [
   },
   {
     slug: "follow-a-record",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Follow a record for updates",
     excerpt: "How following records works in HubSpot.",
     type: "tip",
@@ -10078,6 +10850,8 @@ var ARTICLES = [
   },
   {
     slug: "tokens-in-templates-snippets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Personalization tokens in templates and snippets",
     excerpt: "How tokens behave in HubSpot sales templates.",
     type: "tip",
@@ -10094,6 +10868,8 @@ var ARTICLES = [
   },
   {
     slug: "whatsapp-subscription-status",
+    draft: true,
+    pruned: '2026-11-14',
     title: "WhatsApp subscription statuses",
     excerpt: "How HubSpot tracks WhatsApp Marketing and Transactional subscriptions.",
     type: "tip",
@@ -10110,6 +10886,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-cases-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Salesforce cases with HubSpot tickets",
     excerpt: "How the sync works and when records move.",
     type: "tip",
@@ -10142,6 +10920,8 @@ var ARTICLES = [
   },
   {
     slug: "block-chat-ip",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Block an IP address from starting live chats",
     excerpt: "How HubSpot IP blocking for live chat works, what happens to the conversation, and the 14-day expiry.",
     type: "tip",
@@ -10158,6 +10938,8 @@ var ARTICLES = [
   },
   {
     slug: "restore-page-version",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Restore a previous version of a page or email",
     excerpt: "What HubSpot content can be restored from version history and how to keep the current version.",
     type: "tip",
@@ -10174,6 +10956,8 @@ var ARTICLES = [
   },
   {
     slug: "embed-hubspot-video-external",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Embed HubSpot-hosted videos on another site",
     excerpt: "What you need to embed HubSpot videos on external pages and emails.",
     type: "tip",
@@ -10206,6 +10990,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-workflow-tokens-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use custom workflow tokens in automated emails",
     excerpt: "How Enterprise custom tokens pass workflow data into automated emails.",
     type: "tip",
@@ -10222,6 +11008,8 @@ var ARTICLES = [
   },
   {
     slug: "imap-smtp-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find your IMAP and SMTP server details",
     excerpt: "Where to find mail server names when connecting an inbox to HubSpot by IMAP.",
     type: "tip",
@@ -10238,6 +11026,8 @@ var ARTICLES = [
   },
   {
     slug: "cta-ab-test",
+    draft: true,
+    pruned: '2026-11-14',
     title: "A/B test legacy CTAs",
     excerpt: "How A/B testing works for HubSpot legacy CTAs and how the winner is chosen.",
     type: "tip",
@@ -10254,6 +11044,8 @@ var ARTICLES = [
   },
   {
     slug: "find-replace-user-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Replace a user across all workflows",
     excerpt: "How Super Admins bulk-replace user references in HubSpot workflows.",
     type: "tip",
@@ -10270,6 +11062,8 @@ var ARTICLES = [
   },
   {
     slug: "email-web-version",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create a web version of a marketing email",
     excerpt: "How HubSpot email web versions work, token limits and the Starter expiry.",
     type: "tip",
@@ -10286,6 +11080,8 @@ var ARTICLES = [
   },
   {
     slug: "customer-success-health-score",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show the health score card on records",
     excerpt: "How to add HubSpot's customer success Health Score card to records and who can see it.",
     type: "tip",
@@ -10302,6 +11098,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-custom-object-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Salesforce custom objects with HubSpot",
     excerpt: "How HubSpot's Salesforce integration syncs custom objects, field mapping rules and known gaps.",
     type: "tip",
@@ -10334,6 +11132,8 @@ var ARTICLES = [
   },
   {
     slug: "restore-deleted-marketing-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Restore a deleted marketing email",
     excerpt: "How long HubSpot keeps deleted marketing emails and who can restore them.",
     type: "tip",
@@ -10350,6 +11150,8 @@ var ARTICLES = [
   },
   {
     slug: "sequences-sender-score",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What the sequences sender score measures",
     excerpt: "How HubSpot calculates the sequences sender score and where to see it.",
     type: "tip",
@@ -10366,6 +11168,8 @@ var ARTICLES = [
   },
   {
     slug: "site-speed-dashboard",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check Web Vitals on the site speed dashboard",
     excerpt: "The site speed dashboard scores a domain or page against Core Web Vitals, with the steps to open it.",
     type: "tip",
@@ -10399,6 +11203,8 @@ var ARTICLES = [
   },
   {
     slug: "forms-multiple-languages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Translate a legacy form",
     excerpt: "How translations work for HubSpot legacy forms.",
     type: "tip",
@@ -10415,6 +11221,8 @@ var ARTICLES = [
   },
   {
     slug: "create-sync-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Copy data to associated records with sync properties",
     excerpt: "How sync properties copy values one way and when they can replace a workflow.",
     type: "tip",
@@ -10447,6 +11255,8 @@ var ARTICLES = [
   },
   {
     slug: "calling-channel-inbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a calling channel to the inbox",
     excerpt: "How a calling channel works in HubSpot's conversations inbox.",
     type: "tip",
@@ -10479,6 +11289,8 @@ var ARTICLES = [
   },
   {
     slug: "site-search-results-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add site search to a HubSpot site",
     excerpt: "How to set up HubSpot's search results page template.",
     type: "tip",
@@ -10495,6 +11307,8 @@ var ARTICLES = [
   },
   {
     slug: "copy-assets-another-account",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Copy assets between HubSpot accounts",
     excerpt: "How multi-account management copies assets and who can do it.",
     type: "tip",
@@ -10511,6 +11325,8 @@ var ARTICLES = [
   },
   {
     slug: "records-created-earlier-in-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use a record created earlier in the same workflow",
     excerpt: "How later workflow actions use records created by earlier ones.",
     type: "tip",
@@ -10543,6 +11359,8 @@ var ARTICLES = [
   },
   {
     slug: "single-object-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a single-object report",
     excerpt: "Limits of HubSpot single-object custom reports.",
     type: "tip",
@@ -10559,6 +11377,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-technical-requirements",
+    draft: true,
+    pruned: '2026-11-14',
     title: "IMAP requirements for connecting an inbox",
     excerpt: "What HubSpot needs from your mail server for IMAP connections.",
     type: "tip",
@@ -10575,6 +11395,8 @@ var ARTICLES = [
   },
   {
     slug: "automation-overview",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the automation overview",
     excerpt: "What HubSpot's automation overview shows.",
     type: "tip",
@@ -10591,6 +11413,8 @@ var ARTICLES = [
   },
   {
     slug: "email-links-error-page",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Email links lead to an error page",
     excerpt: "Common causes of broken links in HubSpot emails.",
     type: "tip",
@@ -10607,6 +11431,8 @@ var ARTICLES = [
   },
   {
     slug: "dataset-in-workflow-list-report",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use a dataset in workflows, segments or reports",
     excerpt: "How HubSpot datasets feed automation.",
     type: "tip",
@@ -10623,6 +11449,8 @@ var ARTICLES = [
   },
   {
     slug: "ads-data-mismatch",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot ads numbers don't match the ad network",
     excerpt: "Why HubSpot attribution differs from network conversions.",
     type: "tip",
@@ -10639,6 +11467,8 @@ var ARTICLES = [
   },
   {
     slug: "whatsapp-help-desk",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect WhatsApp to help desk",
     excerpt: "How to add a WhatsApp Business channel to HubSpot help desk and the inbox conflict.",
     type: "tip",
@@ -10655,6 +11485,8 @@ var ARTICLES = [
   },
   {
     slug: "sms-consent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Collect consent before texting contacts",
     excerpt: "How HubSpot handles SMS opt-in and opt-out keywords and manual opt-ins.",
     type: "tip",
@@ -10671,6 +11503,8 @@ var ARTICLES = [
   },
   {
     slug: "ai-connector-sensitive-data",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Let AI connectors access Sensitive Data",
     excerpt: "How Super Admins control AI connector access to HubSpot Sensitive Data.",
     type: "tip",
@@ -10687,6 +11521,8 @@ var ARTICLES = [
   },
   {
     slug: "private-blog-self-registration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Let readers register for private blog posts",
     excerpt: "How self-registration works for HubSpot private blog content.",
     type: "tip",
@@ -10703,6 +11539,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-access-to-apps",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Control which marketplace apps users can install",
     excerpt: "How Super Admins approve apps and limit their data access.",
     type: "tip",
@@ -10719,6 +11557,8 @@ var ARTICLES = [
   },
   {
     slug: "daily-spam-digest",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get a daily digest of spam form submissions",
     excerpt: "How HubSpot's daily spam submission digest works and who gets it.",
     type: "tip",
@@ -10735,6 +11575,8 @@ var ARTICLES = [
   },
   {
     slug: "meeting-confirmation-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize meeting confirmation emails",
     excerpt: "How to edit the confirmation email sent from HubSpot scheduling pages.",
     type: "tip",
@@ -10751,6 +11593,8 @@ var ARTICLES = [
   },
   {
     slug: "automated-sms-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send SMS from workflows",
     excerpt: "How HubSpot workflow SMS actions pick numbers and what's required.",
     type: "tip",
@@ -10767,6 +11611,8 @@ var ARTICLES = [
   },
   {
     slug: "meeting-wrong-confirmation-time",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Prospects get the wrong meeting time",
     excerpt: "Why bookings confirm at a different time than chosen.",
     type: "tip",
@@ -10799,6 +11645,8 @@ var ARTICLES = [
   },
   {
     slug: "weekly-data-quality-digest",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get a weekly data quality digest",
     excerpt: "How to turn on HubSpot's data quality digest.",
     type: "tip",
@@ -10815,6 +11663,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-inclusion-list",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Limit what syncs to Salesforce",
     excerpt: "How inclusion segments control the Salesforce sync.",
     type: "tip",
@@ -10831,6 +11681,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-commerce-subscriptions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage buyer subscriptions",
     excerpt: "How to view and edit HubSpot commerce subscriptions.",
     type: "tip",
@@ -10847,6 +11699,8 @@ var ARTICLES = [
   },
   {
     slug: "crm-email-font",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set the default font for CRM emails",
     excerpt: "How to change HubSpot's default font for one-to-one and inbox emails.",
     type: "tip",
@@ -10879,6 +11733,8 @@ var ARTICLES = [
   },
   {
     slug: "sandbox-copy-assets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What gets copied into a sandbox",
     excerpt: "Which production assets HubSpot copies when creating a sandbox.",
     type: "tip",
@@ -10895,6 +11751,8 @@ var ARTICLES = [
   },
   {
     slug: "javascript-file-hubspot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a JavaScript file to HubSpot",
     excerpt: "How to create and attach JavaScript files to HubSpot content.",
     type: "tip",
@@ -10911,6 +11769,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-left-sidebar-views",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize help desk views",
     excerpt: "How to set up left sidebar views in HubSpot help desk.",
     type: "tip",
@@ -10927,6 +11787,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-emails-multiple-languages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send marketing emails in multiple languages",
     excerpt: "How HubSpot handles email language, subscription translations and AI translation.",
     type: "tip",
@@ -10943,6 +11805,8 @@ var ARTICLES = [
   },
   {
     slug: "conditional-formatting-tables",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Highlight report tables with conditional formatting",
     excerpt: "How HubSpot conditional formatting works on table charts.",
     type: "tip",
@@ -10959,6 +11823,8 @@ var ARTICLES = [
   },
   {
     slug: "form-live-validation",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Live validation on form fields",
     excerpt: "How HubSpot form live validation works.",
     type: "tip",
@@ -10975,6 +11841,8 @@ var ARTICLES = [
   },
   {
     slug: "subscription-visibility-rules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show different subscription types to different contacts",
     excerpt: "How HubSpot subscription visibility rules filter the preferences page.",
     type: "tip",
@@ -10991,6 +11859,8 @@ var ARTICLES = [
   },
   {
     slug: "linkedin-crm-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect LinkedIn Sales Navigator through CRM Sync",
     excerpt: "How LinkedIn CRM Sync connects Sales Navigator and Business Manager to HubSpot.",
     type: "tip",
@@ -11007,6 +11877,8 @@ var ARTICLES = [
   },
   {
     slug: "add-line-items-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add line items to deals with a workflow",
     excerpt: "How HubSpot's Add line item to deal action works and its limits.",
     type: "tip",
@@ -11039,6 +11911,8 @@ var ARTICLES = [
   },
   {
     slug: "ads-interaction-segments",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Segment contacts by ad interactions",
     excerpt: "How to build HubSpot segments from Facebook, Google and LinkedIn ad interactions.",
     type: "tip",
@@ -11055,6 +11929,8 @@ var ARTICLES = [
   },
   {
     slug: "contacts-didnt-receive-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Contact says they didn't get your email",
     excerpt: "How to check whether a HubSpot marketing email was delivered and why it may not show.",
     type: "tip",
@@ -11071,6 +11947,8 @@ var ARTICLES = [
   },
   {
     slug: "projects-object",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the projects object",
     excerpt: "How to turn on and use HubSpot's projects object.",
     type: "tip",
@@ -11087,6 +11965,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-upload-images",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Bulk upload images from an existing page",
     excerpt: "How HubSpot scrapes images from a page into the files tool.",
     type: "tip",
@@ -11119,6 +11999,8 @@ var ARTICLES = [
   },
   {
     slug: "contact-actions-other-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Run contact actions from deal or ticket workflows",
     excerpt: "How HubSpot lets other workflow types use contact-based actions, and the one-contact limit.",
     type: "tip",
@@ -11135,6 +12017,8 @@ var ARTICLES = [
   },
   {
     slug: "auto-deactivate-inactive-users",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot can deactivate inactive users automatically",
     excerpt: "How the monthly inactive-user deactivation setting works and how to turn it off.",
     type: "tip",
@@ -11151,6 +12035,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-form-in-wordpress",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot form not working in WordPress",
     excerpt: "Fixes HubSpot gives for legacy forms embedded in WordPress pages.",
     type: "tip",
@@ -11167,6 +12053,8 @@ var ARTICLES = [
   },
   {
     slug: "template-changes-not-applying",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Content editor won't save, or a page 404s",
     excerpt: "HubSpot's common causes for unsaved changes, 404s and loading issues on content.",
     type: "tip",
@@ -11183,6 +12071,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-event-health",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check custom event usage and errors",
     excerpt: "What HubSpot's event health tool shows for custom events.",
     type: "tip",
@@ -11199,6 +12089,8 @@ var ARTICLES = [
   },
   {
     slug: "tracking-url-sessions-sources",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Tracking URL sessions missing from the sources report",
     excerpt: "HubSpot's checklist when tracking URL visits don't show in traffic analytics.",
     type: "tip",
@@ -11215,6 +12107,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-llm-workflow-actions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use your own LLM in a workflow",
     excerpt: "How HubSpot's Use a custom LLM workflow action connects supported model providers.",
     type: "tip",
@@ -11231,6 +12125,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-custom-modules",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add custom modules to quote templates",
     excerpt: "What custom modules can do on HubSpot quote templates and the API limit.",
     type: "tip",
@@ -11247,6 +12143,8 @@ var ARTICLES = [
   },
   {
     slug: "not-receiving-system-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Not getting HubSpot notification emails",
     excerpt: "HubSpot's checklist when system and notification emails stop arriving.",
     type: "tip",
@@ -11263,6 +12161,8 @@ var ARTICLES = [
   },
   {
     slug: "formula-fields-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add formula fields to custom reports",
     excerpt: "How row-level formula fields work in HubSpot's custom report builder.",
     type: "tip",
@@ -11279,6 +12179,8 @@ var ARTICLES = [
   },
   {
     slug: "exchange-rate-updates",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Update exchange rates automatically",
     excerpt: "How automatic currency exchange rate updates work in HubSpot.",
     type: "tip",
@@ -11311,6 +12213,8 @@ var ARTICLES = [
   },
   {
     slug: "slack-channel-record",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Link a Slack channel to a company or deal",
     excerpt: "How associating a Slack channel with a HubSpot record works and what it notifies.",
     type: "tip",
@@ -11327,6 +12231,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-calendar",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Plan with the marketing calendar",
     excerpt: "What HubSpot's marketing calendar shows and how to filter it.",
     type: "tip",
@@ -11343,6 +12249,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-marketing-email-report",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a custom marketing email report",
     excerpt: "How HubSpot's custom report builder handles marketing email events.",
     type: "tip",
@@ -11359,6 +12267,8 @@ var ARTICLES = [
   },
   {
     slug: "store-payment-method",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Save a buyer's payment method for later",
     excerpt: "How HubSpot stores payment methods at checkout for future charges.",
     type: "tip",
@@ -11375,6 +12285,8 @@ var ARTICLES = [
   },
   {
     slug: "social-video-clips",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make short clips from a long video in social",
     excerpt: "How HubSpot's social tool creates and edits video clips.",
     type: "tip",
@@ -11407,6 +12319,8 @@ var ARTICLES = [
   },
   {
     slug: "jira-data-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync HubSpot tickets with Jira",
     excerpt: "How the Jira data sync maps tickets to issues and notes to comments.",
     type: "tip",
@@ -11423,6 +12337,8 @@ var ARTICLES = [
   },
   {
     slug: "view-workflow-changes",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See and revert changes to a workflow",
     excerpt: "How workflow revision history works and what can't be reverted.",
     type: "tip",
@@ -11439,6 +12355,8 @@ var ARTICLES = [
   },
   {
     slug: "shopify-product-variants",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Shopify product variants",
     excerpt: "How Shopify variants sync to HubSpot as products.",
     type: "tip",
@@ -11471,6 +12389,8 @@ var ARTICLES = [
   },
   {
     slug: "optimize-email-engagement",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send only to engaged contacts",
     excerpt: "How HubSpot's engagement targeting on marketing emails works.",
     type: "tip",
@@ -11487,6 +12407,8 @@ var ARTICLES = [
   },
   {
     slug: "chat-widget-not-appearing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Chat widget not showing on your pages",
     excerpt: "HubSpot's checklist when a chatflow doesn't appear.",
     type: "tip",
@@ -11503,6 +12425,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-email-thread",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send sequence emails as one thread",
     excerpt: "How to make sequence emails reply in the same thread.",
     type: "tip",
@@ -11519,6 +12443,8 @@ var ARTICLES = [
   },
   {
     slug: "sms-custom-keywords",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Trigger workflows from SMS keywords",
     excerpt: "How custom SMS keywords trigger HubSpot workflow actions.",
     type: "tip",
@@ -11535,6 +12461,8 @@ var ARTICLES = [
   },
   {
     slug: "recorded-meetings-duplicate-calls",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Recorded meetings stop creating call records",
     excerpt: "HubSpot's change to duplicate call records from recorded meetings and what it affects.",
     type: "tip",
@@ -11551,6 +12479,8 @@ var ARTICLES = [
   },
   {
     slug: "change-primary-domain",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move primary content to another domain",
     excerpt: "How to change HubSpot's primary hosting domain and what happens to redirects.",
     type: "tip",
@@ -11567,6 +12497,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-enrollment-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Review a workflow's enrollment history",
     excerpt: "Where to see and export who enrolled in a HubSpot workflow.",
     type: "tip",
@@ -11599,6 +12531,8 @@ var ARTICLES = [
   },
   {
     slug: "association-limits",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Limit how many records can be associated",
     excerpt: "How HubSpot association limits work.",
     type: "tip",
@@ -11615,6 +12549,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-same-identity-error",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Outlook add-in: 'same identity is already installed'",
     excerpt: "HubSpot's fix for this install error.",
     type: "tip",
@@ -11631,6 +12567,8 @@ var ARTICLES = [
   },
   {
     slug: "snowflake-data-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Snowflake data sync (legacy) is ending",
     excerpt: "Status of HubSpot's legacy Snowflake data sync.",
     type: "tip",
@@ -11647,6 +12585,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-pdf-errors",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Quote reverted to draft or the PDF failed",
     excerpt: "HubSpot's troubleshooting for quote PDF generation errors, including the e-signature template case.",
     type: "tip",
@@ -11663,6 +12603,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-collaboration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reassign and collaborate on inbox conversations",
     excerpt: "How teams hand off conversations in HubSpot's conversations inbox.",
     type: "tip",
@@ -11679,6 +12621,8 @@ var ARTICLES = [
   },
   {
     slug: "email-client-previews",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Preview marketing emails in specific email clients",
     excerpt: "How HubSpot's client previews work and their limits.",
     type: "tip",
@@ -11695,6 +12639,8 @@ var ARTICLES = [
   },
   {
     slug: "direct-traffic-high",
+    draft: true,
+    pruned: '2026-11-14',
     title: "More direct traffic than expected",
     excerpt: "Why HubSpot may classify more sessions as direct traffic.",
     type: "tip",
@@ -11711,6 +12657,8 @@ var ARTICLES = [
   },
   {
     slug: "downgrade-subscription",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What you lose when you downgrade",
     excerpt: "HubSpot's notes on downgrading paid subscriptions.",
     type: "tip",
@@ -11727,6 +12675,8 @@ var ARTICLES = [
   },
   {
     slug: "global-form-styles",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set global colors and fonts for legacy forms",
     excerpt: "How HubSpot's global form styling works for legacy forms.",
     type: "tip",
@@ -11743,6 +12693,8 @@ var ARTICLES = [
   },
   {
     slug: "ads-vs-traffic-analytics",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ads tool and traffic analytics show different numbers",
     excerpt: "Why HubSpot's ads tool and analytics count contacts differently.",
     type: "tip",
@@ -11759,6 +12711,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-right-sidebar",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize the inbox right sidebar",
     excerpt: "How Super Admins configure ticket cards in the conversations inbox sidebar.",
     type: "tip",
@@ -11775,6 +12729,8 @@ var ARTICLES = [
   },
   {
     slug: "segment-predicted-recipients",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Predict email engagement for a segment",
     excerpt: "How HubSpot predicts a segment's marketing email performance.",
     type: "tip",
@@ -11791,6 +12747,8 @@ var ARTICLES = [
   },
   {
     slug: "transactional-sms",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set up transactional SMS",
     excerpt: "How HubSpot transactional SMS works.",
     type: "tip",
@@ -11807,6 +12765,8 @@ var ARTICLES = [
   },
   {
     slug: "connected-email-daily-limits",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set daily send limits for connected inboxes",
     excerpt: "How custom limits interact with providers.",
     type: "tip",
@@ -11823,6 +12783,8 @@ var ARTICLES = [
   },
   {
     slug: "form-fields-prepopulated-wrong",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Form prefilled with someone else's details",
     excerpt: "Why HubSpot forms prefill with another person's data.",
     type: "tip",
@@ -11855,6 +12817,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-deal-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync deals with Salesforce opportunities",
     excerpt: "How the updated deal sync works.",
     type: "tip",
@@ -11871,6 +12835,8 @@ var ARTICLES = [
   },
   {
     slug: "create-invoices",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create invoices in HubSpot",
     excerpt: "Where HubSpot invoices can be created.",
     type: "tip",
@@ -11887,6 +12853,8 @@ var ARTICLES = [
   },
   {
     slug: "dedicated-ip-per-brand",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Dedicated IPs per brand",
     excerpt: "How dedicated IPs work with Brands.",
     type: "tip",
@@ -11903,6 +12871,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-goals-tracker",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track goals on a campaign",
     excerpt: "How HubSpot's campaign goals tracker works and its date limits.",
     type: "tip",
@@ -11935,6 +12905,8 @@ var ARTICLES = [
   },
   {
     slug: "domain-publishing-permissions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Let only certain teams publish to a domain",
     excerpt: "How HubSpot domain publishing permissions by team work.",
     type: "tip",
@@ -11967,6 +12939,8 @@ var ARTICLES = [
   },
   {
     slug: "asana-tasks-workflow",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create Asana tasks from a HubSpot workflow",
     excerpt: "How HubSpot workflows create Asana tasks and what's needed first.",
     type: "tip",
@@ -11983,6 +12957,8 @@ var ARTICLES = [
   },
   {
     slug: "chatflow-wordpress",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a HubSpot chatflow to WordPress",
     excerpt: "How to show a HubSpot chatflow on WordPress pages via the plugin.",
     type: "tip",
@@ -11999,6 +12975,8 @@ var ARTICLES = [
   },
   {
     slug: "quarantine-contacts-manually",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manually quarantine contacts from marketing email",
     excerpt: "When HubSpot asks you to quarantine contacts and how the status clears.",
     type: "tip",
@@ -12015,6 +12993,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-brands",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage multiple brands in one account",
     excerpt: "What HubSpot Brands does and who can use it.",
     type: "tip",
@@ -12047,6 +13027,8 @@ var ARTICLES = [
   },
   {
     slug: "conversations-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Conversation properties in HubSpot",
     excerpt: "What HubSpot stores about conversations and how they differ from CRM properties.",
     type: "tip",
@@ -12079,6 +13061,8 @@ var ARTICLES = [
   },
   {
     slug: "bimi-brand-logo",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show your logo in inboxes with BIMI",
     excerpt: "How BIMI works with HubSpot email.",
     type: "tip",
@@ -12095,6 +13079,8 @@ var ARTICLES = [
   },
   {
     slug: "site-tree-hierarchy",
+    draft: true,
+    pruned: '2026-11-14',
     title: "View your site's page hierarchy in the site tree",
     excerpt: "How HubSpot site trees show page structure and what they leave out.",
     type: "tip",
@@ -12127,6 +13113,8 @@ var ARTICLES = [
   },
   {
     slug: "calendar-invites-marketing-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add calendar invites to marketing emails",
     excerpt: "Which calendar invites HubSpot marketing emails support and the tier needed.",
     type: "tip",
@@ -12143,6 +13131,8 @@ var ARTICLES = [
   },
   {
     slug: "knowledge-base-performance",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Analyze knowledge base performance",
     excerpt: "Where HubSpot shows knowledge base article metrics.",
     type: "tip",
@@ -12159,6 +13149,8 @@ var ARTICLES = [
   },
   {
     slug: "call-index",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Review calls in the call index",
     excerpt: "What HubSpot's call index shows, including third-party calling apps.",
     type: "tip",
@@ -12175,6 +13167,8 @@ var ARTICLES = [
   },
   {
     slug: "user-permissions-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Audit who had which permissions",
     excerpt: "How Super Admins view a user's permissions history in HubSpot.",
     type: "tip",
@@ -12191,6 +13185,8 @@ var ARTICLES = [
   },
   {
     slug: "comment-on-activity",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Comment on a note, call or email",
     excerpt: "How comments on HubSpot record activities work.",
     type: "tip",
@@ -12207,6 +13203,8 @@ var ARTICLES = [
   },
   {
     slug: "reset-user-passwords",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reset your password or a teammate's",
     excerpt: "How HubSpot password resets work for yourself and for other users.",
     type: "tip",
@@ -12223,6 +13221,8 @@ var ARTICLES = [
   },
   {
     slug: "whatsapp-consent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Collect consent for WhatsApp conversations",
     excerpt: "How HubSpot handles WhatsApp opt-in by keyword and manually.",
     type: "tip",
@@ -12239,6 +13239,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-based-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Automate with campaign-based workflows",
     excerpt: "How HubSpot campaign-based workflows use campaign data like budget and revenue.",
     type: "tip",
@@ -12271,6 +13273,8 @@ var ARTICLES = [
   },
   {
     slug: "kb-categories-tags",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Organize knowledge base articles with categories and tags",
     excerpt: "How categories, subcategories and tags work in HubSpot knowledge bases.",
     type: "tip",
@@ -12303,6 +13307,8 @@ var ARTICLES = [
   },
   {
     slug: "update-property-value-record",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit a property value on a record or index page",
     excerpt: "Where HubSpot lets you edit a single record's property values, and what stays read-only.",
     type: "tip",
@@ -12319,6 +13325,8 @@ var ARTICLES = [
   },
   {
     slug: "phone-number-auto-format",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Auto-format phone numbers and text properties",
     excerpt: "How HubSpot's automatic formatting rules work and where they don't apply.",
     type: "tip",
@@ -12335,6 +13343,8 @@ var ARTICLES = [
   },
   {
     slug: "user-multiple-teams",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Request access to Users & Teams settings",
     excerpt: "How users without admin rights ask a Super Admin for Users & Teams access.",
     type: "tip",
@@ -12351,6 +13361,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-spam-reporters",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Delete contacts who marked your emails as spam",
     excerpt: "How HubSpot suggests removing spam reporters with a segment and bulk delete.",
     type: "tip",
@@ -12383,6 +13395,8 @@ var ARTICLES = [
   },
   {
     slug: "instagram-connect-errors",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Instagram account won't connect to HubSpot",
     excerpt: "HubSpot's checks when an Instagram account fails to connect to the social tool.",
     type: "tip",
@@ -12399,6 +13413,8 @@ var ARTICLES = [
   },
   {
     slug: "allowed-2fa-methods",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Limit which 2FA methods users can use",
     excerpt: "How Super Admins set approved two-factor methods in HubSpot.",
     type: "tip",
@@ -12415,6 +13431,8 @@ var ARTICLES = [
   },
   {
     slug: "report-filters-or-logic",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use OR filters in HubSpot reports",
     excerpt: "How AND and OR filter groups work in HubSpot report filters.",
     type: "tip",
@@ -12448,6 +13466,8 @@ var ARTICLES = [
   },
   {
     slug: "todays-date-crm",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use today's date in HubSpot filters and properties",
     excerpt: "How HubSpot handles today's date and relative time across tools.",
     type: "tip",
@@ -12464,6 +13484,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-lifecycle-stage-change",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change lifecycle stages in bulk",
     excerpt: "The three ways HubSpot updates lifecycle stages for many records, and the backwards rule.",
     type: "tip",
@@ -12480,6 +13502,8 @@ var ARTICLES = [
   },
   {
     slug: "page-performance-errors",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Page shows an error in SEO recommendations",
     excerpt: "What HubSpot's crawler errors mean when a page can't be scanned.",
     type: "tip",
@@ -12528,6 +13552,8 @@ var ARTICLES = [
   },
   {
     slug: "seo-topics-strategy",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build topic clusters in the SEO tool",
     excerpt: "How HubSpot SEO topics work and what they don't do.",
     type: "tip",
@@ -12544,6 +13570,8 @@ var ARTICLES = [
   },
   {
     slug: "cta-smart-content",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show different CTA versions with smart content",
     excerpt: "How smart rules work in HubSpot's current CTA tool.",
     type: "tip",
@@ -12560,6 +13588,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-settings-timezone",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set when workflow actions run",
     excerpt: "How HubSpot workflow timing settings and time zones work.",
     type: "tip",
@@ -12576,6 +13606,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-workspace-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn on sales workspace tabs",
     excerpt: "How Super Admins configure Companies, Leads and Deals tabs in the sales workspace.",
     type: "tip",
@@ -12592,6 +13624,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-login-prompt",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Outlook desktop add-in asks you to log in every time",
     excerpt: "HubSpot's fix when the Outlook desktop add-in keeps asking for login.",
     type: "tip",
@@ -12608,6 +13642,8 @@ var ARTICLES = [
   },
   {
     slug: "calling-phone-numbers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot-provided vs registered phone numbers",
     excerpt: "The difference between HubSpot-provided numbers and registered outbound numbers.",
     type: "tip",
@@ -12640,6 +13676,8 @@ var ARTICLES = [
   },
   {
     slug: "social-custom-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build custom reports on social posts",
     excerpt: "How HubSpot's custom report builder handles social post data.",
     type: "tip",
@@ -12656,6 +13694,8 @@ var ARTICLES = [
   },
   {
     slug: "chatflow-availability",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Control when your chat widget appears",
     excerpt: "How HubSpot chatflow availability settings work, including for bots.",
     type: "tip",
@@ -12672,6 +13712,8 @@ var ARTICLES = [
   },
   {
     slug: "email-deliverability-practices",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot's email deliverability basics",
     excerpt: "What HubSpot's KB recommends to keep marketing emails out of spam.",
     type: "tip",
@@ -12688,6 +13730,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-objects-use",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create and work with custom object records",
     excerpt: "How HubSpot custom object records are created, associated and automated.",
     type: "tip",
@@ -12704,6 +13748,8 @@ var ARTICLES = [
   },
   {
     slug: "email-sending-domain-troubleshoot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Email sending domain won't verify",
     excerpt: "Why an email sending domain shows Not authenticated: DNS propagation, the duplicated root domain, and checking with Dig.",
     type: "tip",
@@ -12721,6 +13767,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-app-conversations",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Answer inbox conversations from the mobile app",
     excerpt: "What HubSpot's mobile app can do with the conversations inbox.",
     type: "tip",
@@ -12737,6 +13785,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-event-codes",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Facebook event codes on HubSpot pages",
     excerpt: "What HubSpot places automatically and when you install the pixel yourself.",
     type: "tip",
@@ -12769,6 +13819,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-email-summary",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Summarize an email thread in the iOS app",
     excerpt: "How HubSpot's iOS app summarizes email threads with AI.",
     type: "tip",
@@ -12785,6 +13837,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-lead-scores",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit, turn off or delete a lead score",
     excerpt: "How HubSpot lead scores are managed after they're live.",
     type: "tip",
@@ -12801,6 +13855,8 @@ var ARTICLES = [
   },
   {
     slug: "report-viewer-updated",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the updated report viewer and dashboards",
     excerpt: "What HubSpot's updated report viewer offers, including on Starter.",
     type: "tip",
@@ -12833,6 +13889,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-association-cards",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Associate records with campaigns from CRM cards",
     excerpt: "How the Campaigns CRM card adds records to a campaign.",
     type: "tip",
@@ -12849,6 +13907,8 @@ var ARTICLES = [
   },
   {
     slug: "social-direct-messages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reply to Instagram DMs in the social tool",
     excerpt: "What HubSpot's social tool shows for Instagram direct messages.",
     type: "tip",
@@ -12865,6 +13925,8 @@ var ARTICLES = [
   },
   {
     slug: "google-ads-tracking-no-ads-tool",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track Google Ads with tracking URLs",
     excerpt: "How HubSpot tracking URLs measure ad traffic without the ads tool.",
     type: "tip",
@@ -12897,6 +13959,8 @@ var ARTICLES = [
   },
   {
     slug: "segment-membership-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See who entered or left a segment",
     excerpt: "How HubSpot's segment membership history log works.",
     type: "tip",
@@ -12913,6 +13977,8 @@ var ARTICLES = [
   },
   {
     slug: "embedded-form-not-working",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Externally embedded HubSpot form not working",
     excerpt: "HubSpot's checks when a form embedded on another site fails.",
     type: "tip",
@@ -12929,6 +13995,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-link-defaults",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set default payment link settings",
     excerpt: "How Super Admins set defaults for new HubSpot payment links.",
     type: "tip",
@@ -12977,6 +14045,8 @@ var ARTICLES = [
   },
   {
     slug: "notetaker-zoom",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use HubSpot Notetaker in Zoom meetings",
     excerpt: "How Notetaker joins Zoom meetings and what Zoom needs.",
     type: "tip",
@@ -12993,6 +14063,8 @@ var ARTICLES = [
   },
   {
     slug: "data-sync-custom-objects",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync custom objects with data sync apps",
     excerpt: "How HubSpot data sync handles custom objects and what the filters do.",
     type: "tip",
@@ -13009,6 +14081,8 @@ var ARTICLES = [
   },
   {
     slug: "test-records-scoring",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Test a lead or health score before relying on it",
     excerpt: "How HubSpot lets you test individual records and preview score distribution.",
     type: "tip",
@@ -13025,6 +14099,8 @@ var ARTICLES = [
   },
   {
     slug: "customer-success-workspace",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set up the customer success workspace",
     excerpt: "How admins configure HubSpot's customer success workspace and its dashboards.",
     type: "tip",
@@ -13041,6 +14117,8 @@ var ARTICLES = [
   },
   {
     slug: "restorable-deletions",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Restorable vs permanent contact deletion",
     excerpt: "What HubSpot keeps and loses when you delete contacts.",
     type: "tip",
@@ -13057,6 +14135,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-payouts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Understand HubSpot payments payouts",
     excerpt: "How payouts work with HubSpot payments, and where Stripe users look instead.",
     type: "tip",
@@ -13073,6 +14153,8 @@ var ARTICLES = [
   },
   {
     slug: "business-unit-resubscribe",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set a resubscription email for each brand",
     excerpt: "How HubSpot resubscription emails work with the Brands add-on.",
     type: "tip",
@@ -13089,6 +14171,8 @@ var ARTICLES = [
   },
   {
     slug: "email-social-module",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add social links to marketing emails",
     excerpt: "How the social module works in HubSpot's drag and drop email editor.",
     type: "tip",
@@ -13105,6 +14189,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-connector-v3",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Salesforce connector package v3 FAQ",
     excerpt: "Common questions about HubSpot's Salesforce connector package v3.0.1.",
     type: "tip",
@@ -13121,6 +14207,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-survey-new-editor",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Build a custom survey in the new editor",
     excerpt: "What HubSpot's new survey editor supports and the one-way switch.",
     type: "tip",
@@ -13137,6 +14225,8 @@ var ARTICLES = [
   },
   {
     slug: "data-sync-association-mapping",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Keep associations in data sync",
     excerpt: "How HubSpot data sync maps record associations, and the apps that need every sync on.",
     type: "tip",
@@ -13153,6 +14243,8 @@ var ARTICLES = [
   },
   {
     slug: "migrate-knowledge-base",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Migrate to the new knowledge base editor",
     excerpt: "What happens when you migrate a HubSpot knowledge base.",
     type: "tip",
@@ -13201,6 +14293,8 @@ var ARTICLES = [
   },
   {
     slug: "one-to-one-email-send-reply",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send and reply to one-to-one emails",
     excerpt: "Who can send one-to-one emails in HubSpot and from which addresses.",
     type: "tip",
@@ -13217,6 +14311,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-listing-page-edit",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit your blog listing page",
     excerpt: "How HubSpot blog listing pages are edited and what tier coded templates need.",
     type: "tip",
@@ -13233,6 +14329,8 @@ var ARTICLES = [
   },
   {
     slug: "buyer-intent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use buyer intent to find companies researching you",
     excerpt: "How HubSpot buyer intent works and what it costs in credits.",
     type: "tip",
@@ -13249,6 +14347,8 @@ var ARTICLES = [
   },
   {
     slug: "zoom-meeting-links",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add Zoom to your HubSpot meeting links",
     excerpt: "How HubSpot meeting links create Zoom conferences.",
     type: "tip",
@@ -13265,6 +14365,8 @@ var ARTICLES = [
   },
   {
     slug: "record-sections-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Choose which properties show on records",
     excerpt: "How to customize the properties in a HubSpot record's left sidebar.",
     type: "tip",
@@ -13281,6 +14383,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-activity-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "How activities and tasks sync with Salesforce",
     excerpt: "Which HubSpot activities sync to Salesforce and when.",
     type: "tip",
@@ -13297,6 +14401,8 @@ var ARTICLES = [
   },
   {
     slug: "disconnect-facebook-ads",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Disconnect a Facebook Ads account",
     excerpt: "How to remove a Facebook Ads account from HubSpot's ads settings.",
     type: "tip",
@@ -13329,6 +14435,8 @@ var ARTICLES = [
   },
   {
     slug: "dataset-data-join",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Join data sources in a dataset",
     excerpt: "How data join works in HubSpot datasets.",
     type: "tip",
@@ -13345,6 +14453,8 @@ var ARTICLES = [
   },
   {
     slug: "kb-multiple-languages",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Publish knowledge base articles in multiple languages",
     excerpt: "How HubSpot language variations and groups work in the knowledge base.",
     type: "tip",
@@ -13361,6 +14471,8 @@ var ARTICLES = [
   },
   {
     slug: "shopify-data-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect Shopify with the data sync app",
     excerpt: "What HubSpot's Shopify (Data Sync) app syncs and how it matches records.",
     type: "tip",
@@ -13377,6 +14489,8 @@ var ARTICLES = [
   },
   {
     slug: "quickbooks-online",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect QuickBooks Online with data sync",
     excerpt: "How HubSpot's QuickBooks Online data sync matches products, invoices and payments.",
     type: "tip",
@@ -13393,6 +14507,8 @@ var ARTICLES = [
   },
   {
     slug: "netsuite-sync-card",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check NetSuite sync status on records",
     excerpt: "How HubSpot's NetSuite integration sync card shows sync details.",
     type: "tip",
@@ -13409,6 +14525,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-events-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add contacts to marketing events with workflows",
     excerpt: "How the Add participant to marketing event action works.",
     type: "tip",
@@ -13441,6 +14559,8 @@ var ARTICLES = [
   },
   {
     slug: "payments-subscription-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot's payment and subscription properties",
     excerpt: "What payment and subscription properties exist and where you can use them.",
     type: "tip",
@@ -13457,6 +14577,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-calendar-meetings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage meetings from your Outlook calendar",
     excerpt: "What the HubSpot Office 365 add-in does in the Outlook calendar.",
     type: "tip",
@@ -13473,6 +14595,8 @@ var ARTICLES = [
   },
   {
     slug: "dynamics-365-sync-card",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check Dynamics 365 sync status on records",
     excerpt: "How HubSpot's Microsoft Dynamics 365 sync card shows sync details.",
     type: "tip",
@@ -13489,6 +14613,8 @@ var ARTICLES = [
   },
   {
     slug: "google-sheets-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Install HubSpot for Google Sheets",
     excerpt: "How HubSpot's Google Sheets extension is installed and what it asks for.",
     type: "tip",
@@ -13505,6 +14631,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-tickets-manage",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage tickets in the legacy inbox",
     excerpt: "How tickets work in HubSpot's conversations inbox and who must use help desk.",
     type: "tip",
@@ -13537,6 +14665,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-ticket-from-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create and answer tickets in help desk",
     excerpt: "How HubSpot's help desk handles tickets across channels.",
     type: "tip",
@@ -13553,6 +14683,8 @@ var ARTICLES = [
   },
   {
     slug: "emails-look-different-outlook",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Coded emails render differently in Outlook",
     excerpt: "HubSpot's fixes for spacing and line issues in Outlook.",
     type: "tip",
@@ -13569,6 +14701,8 @@ var ARTICLES = [
   },
   {
     slug: "delete-bounced-unsubscribed",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Delete hard-bounced contacts",
     excerpt: "How HubSpot suggests cleaning up hard bounces with active segments.",
     type: "tip",
@@ -13585,6 +14719,8 @@ var ARTICLES = [
   },
   {
     slug: "help-desk-skills-routing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Route help desk tickets by agent skills",
     excerpt: "How HubSpot skill-based routing works in help desk.",
     type: "tip",
@@ -13617,6 +14753,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-ads-tracking",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track Facebook and Instagram ads in HubSpot",
     excerpt: "How HubSpot tracks Facebook ads and what breaks it.",
     type: "tip",
@@ -13649,6 +14787,8 @@ var ARTICLES = [
   },
   {
     slug: "enroll-via-crm-card",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Enroll records in workflows from the record",
     excerpt: "How HubSpot automation cards enroll records manually.",
     type: "tip",
@@ -13665,6 +14805,8 @@ var ARTICLES = [
   },
   {
     slug: "form-field-layout",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Arrange form fields side by side",
     excerpt: "How field layout works in HubSpot's updated form editor.",
     type: "tip",
@@ -13681,6 +14823,8 @@ var ARTICLES = [
   },
   {
     slug: "browser-calling",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Make calls from the HubSpot browser",
     excerpt: "What you need before calling from HubSpot in the browser.",
     type: "tip",
@@ -13697,6 +14841,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-status-new-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Default marketing status for new contacts",
     excerpt: "Which tools create marketing or non-marketing contacts by default.",
     type: "tip",
@@ -13713,6 +14859,8 @@ var ARTICLES = [
   },
   {
     slug: "supported-browsers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Which browsers HubSpot supports",
     excerpt: "HubSpot's supported browsers for using its tools.",
     type: "tip",
@@ -13729,6 +14877,8 @@ var ARTICLES = [
   },
   {
     slug: "email-error-sending-contact",
+    draft: true,
+    pruned: '2026-11-14',
     title: "'There was an issue sending an email to this contact'",
     excerpt: "What HubSpot's Not sent email errors mean on a contact record.",
     type: "tip",
@@ -13745,6 +14895,8 @@ var ARTICLES = [
   },
   {
     slug: "clone-content",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Clone a page, post or email",
     excerpt: "How cloning works in HubSpot content tools, with or without AI.",
     type: "tip",
@@ -13761,6 +14913,8 @@ var ARTICLES = [
   },
   {
     slug: "cart-object",
+    draft: true,
+    pruned: '2026-11-14',
     title: "View the cart object for e-commerce data",
     excerpt: "What HubSpot's cart object stores and what you can do with it.",
     type: "tip",
@@ -13777,6 +14931,8 @@ var ARTICLES = [
   },
   {
     slug: "customize-quick-filters",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize index page quick filters",
     excerpt: "How HubSpot quick filters work and who sees saved ones.",
     type: "tip",
@@ -13793,6 +14949,8 @@ var ARTICLES = [
   },
   {
     slug: "list-filter-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Compare and restore earlier segment versions",
     excerpt: "How HubSpot's segment audit log tracks filter changes.",
     type: "tip",
@@ -13809,6 +14967,8 @@ var ARTICLES = [
   },
   {
     slug: "export-social-posts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export social post data",
     excerpt: "What HubSpot's social post export includes and leaves out.",
     type: "tip",
@@ -13825,6 +14985,8 @@ var ARTICLES = [
   },
   {
     slug: "chat-email-conversation-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Report on chat and email conversations",
     excerpt: "HubSpot's default chat and email overview dashboards.",
     type: "tip",
@@ -13841,6 +15003,8 @@ var ARTICLES = [
   },
   {
     slug: "app-cards-manage",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage app cards from connected apps",
     excerpt: "How Super Admins place cards from marketplace apps on records.",
     type: "tip",
@@ -13873,6 +15037,8 @@ var ARTICLES = [
   },
   {
     slug: "connected-inbox-send-error",
+    draft: true,
+    pruned: '2026-11-14',
     title: "'This email couldn't be sent using your connected inbox'",
     excerpt: "HubSpot's fix for send-as permission errors with Exchange inboxes.",
     type: "tip",
@@ -13905,6 +15071,8 @@ var ARTICLES = [
   },
   {
     slug: "gemini-connector",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the HubSpot connector in Google Gemini",
     excerpt: "What HubSpot's Gemini connector can and can't do.",
     type: "tip",
@@ -13921,6 +15089,8 @@ var ARTICLES = [
   },
   {
     slug: "office-365-add-in-customize",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize the Office 365 add-in settings",
     excerpt: "Where HubSpot Sales Office 365 add-in settings live and what they control.",
     type: "tip",
@@ -13937,6 +15107,8 @@ var ARTICLES = [
   },
   {
     slug: "export-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export everything about one contact",
     excerpt: "How HubSpot exports a single contact's data, including for privacy requests.",
     type: "tip",
@@ -13953,6 +15125,8 @@ var ARTICLES = [
   },
   {
     slug: "conversations-inbox-basics",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Conversations missing from the inbox view",
     excerpt: "How HubSpot inbox views and filters decide what you see.",
     type: "tip",
@@ -13969,6 +15143,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-app-leads",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Work leads in the HubSpot mobile app",
     excerpt: "How sales reps create and manage leads on mobile.",
     type: "tip",
@@ -13985,6 +15161,8 @@ var ARTICLES = [
   },
   {
     slug: "data-sync-setup",
+    draft: true,
+    pruned: '2026-11-14',
     title: "How HubSpot data sync works",
     excerpt: "The basics of connecting an app with HubSpot data sync.",
     type: "tip",
@@ -14001,6 +15179,8 @@ var ARTICLES = [
   },
   {
     slug: "research-intent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find companies researching your topics",
     excerpt: "How HubSpot research intent works and how it uses credits.",
     type: "tip",
@@ -14017,6 +15197,8 @@ var ARTICLES = [
   },
   {
     slug: "mention-user-record",
+    draft: true,
+    pruned: '2026-11-14',
     title: "@mention a teammate on a record",
     excerpt: "How HubSpot @mentions work in notes and activities.",
     type: "tip",
@@ -14033,6 +15215,8 @@ var ARTICLES = [
   },
   {
     slug: "record-attachments",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Attach files to records and activities",
     excerpt: "How HubSpot record attachments work and who can see them.",
     type: "tip",
@@ -14049,6 +15233,8 @@ var ARTICLES = [
   },
   {
     slug: "survey-response-tags",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Tag survey responses to find themes",
     excerpt: "How HubSpot survey response tags work.",
     type: "tip",
@@ -14065,6 +15251,8 @@ var ARTICLES = [
   },
   {
     slug: "website-grader-widget",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add the Website Grader widget to a site",
     excerpt: "How the embeddable Website Grader is installed.",
     type: "tip",
@@ -14081,6 +15269,8 @@ var ARTICLES = [
   },
   {
     slug: "turn-off-workflows",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn off workflows in bulk",
     excerpt: "What turning off a HubSpot workflow does to enrolled records.",
     type: "tip",
@@ -14097,6 +15287,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-events-contact-record",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See marketing events on a contact",
     excerpt: "How the Marketing events card shows event history.",
     type: "tip",
@@ -14113,6 +15305,8 @@ var ARTICLES = [
   },
   {
     slug: "flexible-columns",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Arrange sections, rows and columns in the page editor",
     excerpt: "How HubSpot's drag and drop editor handles layout and reusable sections.",
     type: "tip",
@@ -14129,6 +15323,8 @@ var ARTICLES = [
   },
   {
     slug: "browser-push-notifications",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Not getting HubSpot browser notifications",
     excerpt: "HubSpot's checks when push notifications don't appear.",
     type: "tip",
@@ -14145,6 +15341,8 @@ var ARTICLES = [
   },
   {
     slug: "user-email-domain-update",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change all users' email domain after a rebrand",
     excerpt: "How Super Admins bulk update user email domains.",
     type: "tip",
@@ -14177,6 +15375,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-integration-settings",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Where to manage Salesforce integration settings",
     excerpt: "What HubSpot's Salesforce integration settings show and control.",
     type: "tip",
@@ -14193,6 +15393,8 @@ var ARTICLES = [
   },
   {
     slug: "rich-text-module",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Edit content in rich text modules",
     excerpt: "How rich text modules work across pages, emails and articles.",
     type: "tip",
@@ -14209,6 +15411,8 @@ var ARTICLES = [
   },
   {
     slug: "quick-import-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Quick import contacts from a spreadsheet",
     excerpt: "When to use HubSpot's quick contact import.",
     type: "tip",
@@ -14241,6 +15445,8 @@ var ARTICLES = [
   },
   {
     slug: "domain-language-setting",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set a domain's primary language",
     excerpt: "How HubSpot domain language settings affect URLs and search engines.",
     type: "tip",
@@ -14257,6 +15463,8 @@ var ARTICLES = [
   },
   {
     slug: "css-files-design-manager",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create and attach CSS files",
     excerpt: "How HubSpot stylesheets are attached and in what order.",
     type: "tip",
@@ -14273,6 +15481,8 @@ var ARTICLES = [
   },
   {
     slug: "linkedin-post-failed",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create LinkedIn posts, polls and documents",
     excerpt: "What HubSpot's social composer supports for LinkedIn.",
     type: "tip",
@@ -14289,6 +15499,8 @@ var ARTICLES = [
   },
   {
     slug: "send-time-optimization",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send emails at each contact's best time",
     excerpt: "How HubSpot optimizes marketing email send time.",
     type: "tip",
@@ -14305,6 +15517,8 @@ var ARTICLES = [
   },
   {
     slug: "sensitive-data",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Where Sensitive Data works in HubSpot",
     excerpt: "Which HubSpot tools support Sensitive Data and what to avoid.",
     type: "tip",
@@ -14321,6 +15535,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-record-type",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Map Salesforce record types to HubSpot",
     excerpt: "Two ways HubSpot can store Salesforce record types.",
     type: "tip",
@@ -14353,6 +15569,8 @@ var ARTICLES = [
   },
   {
     slug: "collect-payments-setup",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Ways to collect payments in HubSpot",
     excerpt: "Which HubSpot tools collect online payments and what you need first.",
     type: "tip",
@@ -14369,6 +15587,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-account-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync Salesforce accounts to HubSpot companies",
     excerpt: "How HubSpot's Salesforce account sync works.",
     type: "tip",
@@ -14385,6 +15605,8 @@ var ARTICLES = [
   },
   {
     slug: "two-factor-mobile-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set up two-factor authentication for your login",
     excerpt: "How HubSpot 2FA is set up, changed and removed.",
     type: "tip",
@@ -14401,6 +15623,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-action-sets",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reuse groups of workflow actions with action sets",
     excerpt: "How HubSpot workflow action sets work.",
     type: "tip",
@@ -14417,6 +15641,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-attribution-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Read campaign attribution reports",
     excerpt: "How HubSpot campaign attribution reports measure contacts, deals and revenue.",
     type: "tip",
@@ -14433,6 +15659,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-stories",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Publish Facebook stories from HubSpot",
     excerpt: "What HubSpot supports for Facebook stories.",
     type: "tip",
@@ -14449,6 +15677,8 @@ var ARTICLES = [
   },
   {
     slug: "record-summary-ai",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Summarize a record with the Record summary card",
     excerpt: "How HubSpot's AI record summary works and what it needs.",
     type: "tip",
@@ -14465,6 +15695,8 @@ var ARTICLES = [
   },
   {
     slug: "uninstall-sales-extension",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Uninstall the HubSpot Sales extension or add-in",
     excerpt: "What happens when you remove HubSpot Sales from your inbox.",
     type: "tip",
@@ -14497,6 +15729,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create custom campaign properties",
     excerpt: "How HubSpot campaign properties work and appear in the campaign form.",
     type: "tip",
@@ -14513,6 +15747,8 @@ var ARTICLES = [
   },
   {
     slug: "revenue-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Standard revenue reports to start with",
     excerpt: "HubSpot's library reports for revenue and what each shows.",
     type: "tip",
@@ -14529,6 +15765,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-channels-inbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect a custom channel to the inbox",
     excerpt: "How custom messaging channels connect to HubSpot's conversations inbox.",
     type: "tip",
@@ -14545,6 +15783,8 @@ var ARTICLES = [
   },
   {
     slug: "compliance-copy-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "BCC every marketing email to a compliance address",
     excerpt: "How HubSpot compliance copy email works and its costs.",
     type: "tip",
@@ -14561,6 +15801,8 @@ var ARTICLES = [
   },
   {
     slug: "connected-inbox-automation",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn on connected inbox automation",
     excerpt: "What HubSpot inbox automation reads and when it starts.",
     type: "tip",
@@ -14577,6 +15819,8 @@ var ARTICLES = [
   },
   {
     slug: "zoom-webinar-sync-errors",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Zoom webinar data didn't sync",
     excerpt: "HubSpot's common Zoom webinar sync errors and where to find them.",
     type: "tip",
@@ -14593,6 +15837,8 @@ var ARTICLES = [
   },
   {
     slug: "calling-app-help-desk",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect a calling app channel to help desk",
     excerpt: "How third-party calling apps connect to HubSpot help desk.",
     type: "tip",
@@ -14609,6 +15855,8 @@ var ARTICLES = [
   },
   {
     slug: "mailto-links",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add click-to-call and mailto links",
     excerpt: "Where HubSpot supports click-to-call and mailto links.",
     type: "tip",
@@ -14641,6 +15889,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-metrics",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What each campaign metric counts",
     excerpt: "How HubSpot campaign metrics like sessions and influenced revenue are calculated.",
     type: "tip",
@@ -14657,6 +15907,8 @@ var ARTICLES = [
   },
   {
     slug: "zoom-meetings-app",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the HubSpot app inside Zoom meetings",
     excerpt: "How the in-meeting HubSpot App for Zoom differs from the integration.",
     type: "tip",
@@ -14673,6 +15925,8 @@ var ARTICLES = [
   },
   {
     slug: "account-search",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Search your HubSpot account",
     excerpt: "How HubSpot's global search and filters work.",
     type: "tip",
@@ -14689,6 +15943,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-subscription-form-field",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a blog subscription field to a form",
     excerpt: "HubSpot's options for blog subscription fields.",
     type: "tip",
@@ -14705,6 +15961,8 @@ var ARTICLES = [
   },
   {
     slug: "repeat-import",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Repeat a past import as a template",
     excerpt: "How HubSpot reuses a completed import's setup.",
     type: "tip",
@@ -14721,6 +15979,8 @@ var ARTICLES = [
   },
   {
     slug: "export-users",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Export your user list",
     excerpt: "How Super Admins export HubSpot users.",
     type: "tip",
@@ -14737,6 +15997,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-sms-inbox",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Reply to marketing SMS in the inbox",
     excerpt: "How the Marketing SMS add-on connects to the conversations inbox.",
     type: "tip",
@@ -14753,6 +16015,8 @@ var ARTICLES = [
   },
   {
     slug: "quote-branding",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Brand your quotes",
     excerpt: "How HubSpot quote branding and template styles interact.",
     type: "tip",
@@ -14769,6 +16033,8 @@ var ARTICLES = [
   },
   {
     slug: "create-knowledge-base",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create a knowledge base",
     excerpt: "What HubSpot needs to create a knowledge base and the limits by tier.",
     type: "tip",
@@ -14785,6 +16051,8 @@ var ARTICLES = [
   },
   {
     slug: "customer-success-workspace-use",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Work day to day in the customer success workspace",
     excerpt: "How CSMs use the customer success workspace once it's set up.",
     type: "tip",
@@ -14801,6 +16069,8 @@ var ARTICLES = [
   },
   {
     slug: "codeless-behavioral-events",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create custom events without code",
     excerpt: "How HubSpot's event visualizer creates Clicked element and Visited URL events.",
     type: "tip",
@@ -14817,6 +16087,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-app-lists",
+    draft: true,
+    pruned: '2026-11-14',
     title: "View segments in the mobile app",
     excerpt: "What you can do with segments in the HubSpot mobile app.",
     type: "tip",
@@ -14833,6 +16105,8 @@ var ARTICLES = [
   },
   {
     slug: "smart-forms",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Show different forms to different visitors",
     excerpt: "How HubSpot smart forms work on pages and templates.",
     type: "tip",
@@ -14849,6 +16123,8 @@ var ARTICLES = [
   },
   {
     slug: "airtable-workflow-action",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send HubSpot data to Airtable from a workflow",
     excerpt: "How the Airtable workflow action creates rows.",
     type: "tip",
@@ -14865,6 +16141,8 @@ var ARTICLES = [
   },
   {
     slug: "netsuite-sales-order",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create NetSuite sales orders from HubSpot",
     excerpt: "How the NetSuite sales order workflow action works.",
     type: "tip",
@@ -14897,6 +16175,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-analytics-suite",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the marketing analytics suite",
     excerpt: "What reports HubSpot's marketing analytics suite offers.",
     type: "tip",
@@ -14913,6 +16193,8 @@ var ARTICLES = [
   },
   {
     slug: "complete-tasks",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Complete tasks back to back",
     excerpt: "How to work through HubSpot tasks in a queue.",
     type: "tip",
@@ -14929,6 +16211,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-link-embed",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add a payment link to a page, email or site",
     excerpt: "Ways to place HubSpot payment links in your content.",
     type: "tip",
@@ -14945,6 +16229,8 @@ var ARTICLES = [
   },
   {
     slug: "google-ads-conversion-tag",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track Google Ads conversions on HubSpot pages",
     excerpt: "How to add Google's global site tag to HubSpot pages.",
     type: "tip",
@@ -14961,6 +16247,8 @@ var ARTICLES = [
   },
   {
     slug: "support-portal-setup",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set up the support portal",
     excerpt: "How HubSpot's support portal works and who sees which tickets.",
     type: "tip",
@@ -14993,6 +16281,8 @@ var ARTICLES = [
   },
   {
     slug: "abandoned-cart-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send abandoned cart emails",
     excerpt: "How HubSpot's cart module works in automated emails.",
     type: "tip",
@@ -15009,6 +16299,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-duplicate-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Duplicates between Salesforce and HubSpot",
     excerpt: "How HubSpot dedupes Salesforce leads and contacts.",
     type: "tip",
@@ -15041,6 +16333,8 @@ var ARTICLES = [
   },
   {
     slug: "survey-folders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Organize feedback surveys and responses",
     excerpt: "How HubSpot's feedback survey views and columns work.",
     type: "tip",
@@ -15057,6 +16351,8 @@ var ARTICLES = [
   },
   {
     slug: "social-bulk-schedule",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Bulk upload and schedule social posts",
     excerpt: "How HubSpot's social bulk upload works and its limits.",
     type: "tip",
@@ -15073,6 +16369,8 @@ var ARTICLES = [
   },
   {
     slug: "subscription-types-review",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Find and archive unused subscription types",
     excerpt: "How to review which assets use each subscription type.",
     type: "tip",
@@ -15105,6 +16403,8 @@ var ARTICLES = [
   },
   {
     slug: "imap-connection-troubleshoot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "IMAP inbox won't connect",
     excerpt: "HubSpot's checks when an IMAP/SMTP inbox connection fails.",
     type: "tip",
@@ -15121,6 +16421,8 @@ var ARTICLES = [
   },
   {
     slug: "app-objects",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use app objects from connected apps",
     excerpt: "What app objects are and where they appear in HubSpot.",
     type: "tip",
@@ -15137,6 +16439,8 @@ var ARTICLES = [
   },
   {
     slug: "google-analytics-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect Google Analytics to HubSpot pages",
     excerpt: "Two ways to add Google Analytics to HubSpot-hosted content.",
     type: "tip",
@@ -15153,6 +16457,8 @@ var ARTICLES = [
   },
   {
     slug: "data-center-migration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Move your account to another data center",
     excerpt: "What HubSpot requires to migrate regional data centers.",
     type: "tip",
@@ -15169,6 +16475,8 @@ var ARTICLES = [
   },
   {
     slug: "bot-performance",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Analyze rule-based bot performance",
     excerpt: "Where HubSpot shows chatbot completion and action data.",
     type: "tip",
@@ -15217,6 +16525,8 @@ var ARTICLES = [
   },
   {
     slug: "kb-article-create",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create and customize knowledge base articles",
     excerpt: "Requirements and URL options for HubSpot knowledge base articles.",
     type: "tip",
@@ -15233,6 +16543,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-user-access",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Manage inbox users and availability",
     excerpt: "How HubSpot inbox membership and working hours control routing.",
     type: "tip",
@@ -15249,6 +16561,8 @@ var ARTICLES = [
   },
   {
     slug: "goal-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Report on goals",
     excerpt: "How HubSpot goals show up in reports.",
     type: "tip",
@@ -15265,6 +16579,8 @@ var ARTICLES = [
   },
   {
     slug: "notetaker-best-practices",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Notetaker consent and announcement rules",
     excerpt: "How HubSpot Notetaker announces itself and handles consent.",
     type: "tip",
@@ -15281,6 +16597,8 @@ var ARTICLES = [
   },
   {
     slug: "send-to-more-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send a marketing email to more contacts",
     excerpt: "How Send to more works after the first send.",
     type: "tip",
@@ -15297,6 +16615,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-ads-connect",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Connect a Facebook ad account",
     excerpt: "HubSpot's requirements for connecting Facebook ads.",
     type: "tip",
@@ -15313,6 +16633,8 @@ var ARTICLES = [
   },
   {
     slug: "workflow-if-then-branches",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use if/then branches in workflows",
     excerpt: "How HubSpot workflow branches work, including percentage splits.",
     type: "tip",
@@ -15329,6 +16651,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-add-in-missing",
+    draft: true,
+    pruned: '2026-11-14',
     title: "HubSpot Sales missing from Outlook",
     excerpt: "Why Outlook hides the HubSpot Sales add-in and how to bring it back.",
     type: "tip",
@@ -15345,6 +16669,8 @@ var ARTICLES = [
   },
   {
     slug: "social-metrics-differences",
+    draft: true,
+    pruned: '2026-11-14',
     title: "What HubSpot's social metrics mean",
     excerpt: "Definitions behind HubSpot's social analytics numbers.",
     type: "tip",
@@ -15361,6 +16687,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-link-deals",
+    draft: true,
+    pruned: '2026-11-14',
     title: "When payment links create deals",
     excerpt: "How HubSpot's create-new-deals setting changes deal creation.",
     type: "tip",
@@ -15377,6 +16705,8 @@ var ARTICLES = [
   },
   {
     slug: "salesforce-company-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn on the new Salesforce company sync",
     excerpt: "What changes with HubSpot's updated Salesforce company sync.",
     type: "tip",
@@ -15393,6 +16723,8 @@ var ARTICLES = [
   },
   {
     slug: "list-properties",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create custom segment properties",
     excerpt: "How HubSpot segment properties organize your segments.",
     type: "tip",
@@ -15409,6 +16741,8 @@ var ARTICLES = [
   },
   {
     slug: "sequence-enroll-error",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Contact can't be enrolled in a sequence",
     excerpt: "HubSpot's sequence enrollment errors and what they mean.",
     type: "tip",
@@ -15425,6 +16759,8 @@ var ARTICLES = [
   },
   {
     slug: "property-change-events",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Track property changes as events",
     excerpt: "How HubSpot property change events work and their limits.",
     type: "tip",
@@ -15441,6 +16777,8 @@ var ARTICLES = [
   },
   {
     slug: "enrichment-test",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Test records before running enrichment",
     excerpt: "How HubSpot's enrichment data test estimates coverage.",
     type: "tip",
@@ -15457,6 +16795,8 @@ var ARTICLES = [
   },
   {
     slug: "breeze-slack",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use Breeze Assistant in Slack",
     excerpt: "How Breeze Assistant responds in Slack.",
     type: "tip",
@@ -15489,6 +16829,8 @@ var ARTICLES = [
   },
   {
     slug: "rich-text-table",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Insert a table in a rich text module",
     excerpt: "Where HubSpot rich text tables work and how to style cells.",
     type: "tip",
@@ -15505,6 +16847,8 @@ var ARTICLES = [
   },
   {
     slug: "lead-ownership-sync",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Sync lead owner and activities",
     excerpt: "How HubSpot syncs lead owners with contact owners and logs activities to leads.",
     type: "tip",
@@ -15521,6 +16865,8 @@ var ARTICLES = [
   },
   {
     slug: "subscription-links-email",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Add subscription links in email body",
     excerpt: "How HubSpot subscription links and the top unsubscribe link work.",
     type: "tip",
@@ -15537,6 +16883,8 @@ var ARTICLES = [
   },
   {
     slug: "lead-score-history",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See lead score history and performance",
     excerpt: "Where HubSpot shows lead score changes over time.",
     type: "tip",
@@ -15553,6 +16901,8 @@ var ARTICLES = [
   },
   {
     slug: "email-tracking-off",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Turn off one-to-one email tracking",
     excerpt: "What changes when HubSpot email tracking or attachment logging is turned off.",
     type: "tip",
@@ -15569,6 +16919,8 @@ var ARTICLES = [
   },
   {
     slug: "form-field-options",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change dropdown options in a form field",
     excerpt: "How HubSpot form options come from properties.",
     type: "tip",
@@ -15585,6 +16937,8 @@ var ARTICLES = [
   },
   {
     slug: "inbox-create-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create contacts from inbox conversations",
     excerpt: "When HubSpot creates contacts from chats and how to add them manually.",
     type: "tip",
@@ -15601,6 +16955,8 @@ var ARTICLES = [
   },
   {
     slug: "revenue-analytics-suite",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the revenue analytics suite",
     excerpt: "What HubSpot's revenue analytics reports cover and how to share them.",
     type: "tip",
@@ -15633,6 +16989,8 @@ var ARTICLES = [
   },
   {
     slug: "test-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Test whether a record matches a segment",
     excerpt: "How HubSpot's Test matches feature checks segment criteria.",
     type: "tip",
@@ -15649,6 +17007,8 @@ var ARTICLES = [
   },
   {
     slug: "ad-campaign-custom-reports",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Report on ad campaigns in the custom report builder",
     excerpt: "How HubSpot ad data works in custom reports.",
     type: "tip",
@@ -15665,6 +17025,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-extension-crm-cards",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Customize cards in the Sales extension sidebar",
     excerpt: "How Super Admins choose cards in the HubSpot Sales extension and add-in.",
     type: "tip",
@@ -15681,6 +17043,8 @@ var ARTICLES = [
   },
   {
     slug: "rich-text-links",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Insert links in a rich text module",
     excerpt: "What you can link to in HubSpot rich text and how to set link attributes.",
     type: "tip",
@@ -15697,6 +17061,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-template-options",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Change your blog's template and settings",
     excerpt: "Where HubSpot blog template and display options live.",
     type: "tip",
@@ -15713,6 +17079,8 @@ var ARTICLES = [
   },
   {
     slug: "form-no-email-contacts",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Create contacts from forms without an email",
     excerpt: "How HubSpot's no-email form setting works.",
     type: "tip",
@@ -15729,6 +17097,8 @@ var ARTICLES = [
   },
   {
     slug: "chatflow-language",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set your chatflow's language",
     excerpt: "How HubSpot chatflow and bot language settings work.",
     type: "tip",
@@ -15745,6 +17115,8 @@ var ARTICLES = [
   },
   {
     slug: "domain-audit-log",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Download the domain audit log",
     excerpt: "What HubSpot's domain audit log records.",
     type: "tip",
@@ -15761,6 +17133,8 @@ var ARTICLES = [
   },
   {
     slug: "sms-quiet-hours",
+    draft: true,
+    pruned: '2026-11-14',
     title: "SMS quiet hours",
     excerpt: "How HubSpot defers SMS during quiet hours.",
     type: "tip",
@@ -15777,6 +17151,8 @@ var ARTICLES = [
   },
   {
     slug: "task-reminders-digest",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Task reminders and the daily digest",
     excerpt: "How HubSpot task reminder emails and daily digests work.",
     type: "tip",
@@ -15793,6 +17169,8 @@ var ARTICLES = [
   },
   {
     slug: "progressive-fields",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use progressive fields in legacy forms",
     excerpt: "How HubSpot progressive fields swap known fields for new questions.",
     type: "tip",
@@ -15825,6 +17203,8 @@ var ARTICLES = [
   },
   {
     slug: "mobile-marketing-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Send and review marketing emails from the mobile app",
     excerpt: "What the HubSpot mobile app can do with marketing emails.",
     type: "tip",
@@ -15841,6 +17221,8 @@ var ARTICLES = [
   },
   {
     slug: "facebook-ads-troubleshooting",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Facebook ad account won't appear when connecting",
     excerpt: "HubSpot's checks when a Facebook ad account won't connect.",
     type: "tip",
@@ -15857,6 +17239,8 @@ var ARTICLES = [
   },
   {
     slug: "uninstall-salesforce-integration",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Uninstall the Salesforce integration",
     excerpt: "How to remove the HubSpot-Salesforce integration and why reinstalling rarely fixes sync.",
     type: "tip",
@@ -15873,6 +17257,8 @@ var ARTICLES = [
   },
   {
     slug: "lead-record-view",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Work with a lead record",
     excerpt: "What a HubSpot lead record shows and what deletes it.",
     type: "tip",
@@ -15889,6 +17275,8 @@ var ARTICLES = [
   },
   {
     slug: "configure-research-intent",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Configure research intent",
     excerpt: "How to set markets, topics and limits for HubSpot research intent.",
     type: "tip",
@@ -15905,6 +17293,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-desktop-sales-tools",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use sales tools in the Outlook desktop add-in",
     excerpt: "What the HubSpot Sales Outlook desktop add-in can insert.",
     type: "tip",
@@ -15921,6 +17311,8 @@ var ARTICLES = [
   },
   {
     slug: "validate-hubspot-numbers",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Get a HubSpot-provided phone number",
     excerpt: "How Super Admins acquire HubSpot numbers and their limits.",
     type: "tip",
@@ -15937,6 +17329,8 @@ var ARTICLES = [
   },
   {
     slug: "chrome-extension-defaults",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Set your Chrome extension's Gmail defaults",
     excerpt: "Set log and track, default associations, and the never log list in your Gmail inbox, plus the account defaults a Super Admin sets.",
     type: "tip",
@@ -15954,6 +17348,8 @@ var ARTICLES = [
   },
   {
     slug: "import-website-content",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Import your website and blog into HubSpot",
     excerpt: "HubSpot's options for bringing content in from another CMS.",
     type: "tip",
@@ -15970,6 +17366,8 @@ var ARTICLES = [
   },
   {
     slug: "file-folders",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Organize and export files",
     excerpt: "How HubSpot's files tool handles folders, search and export.",
     type: "tip",
@@ -15986,6 +17384,8 @@ var ARTICLES = [
   },
   {
     slug: "seo-performance",
+    draft: true,
+    pruned: '2026-11-14',
     title: "See SEO performance with Search Console",
     excerpt: "How HubSpot's SEO analytics use Google Search Console.",
     type: "tip",
@@ -16002,6 +17402,8 @@ var ARTICLES = [
   },
   {
     slug: "campaign-lifecycle-metrics",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Campaign contact lifecycle count and cost",
     excerpt: "How HubSpot's campaign lifecycle reports work.",
     type: "tip",
@@ -16018,6 +17420,8 @@ var ARTICLES = [
   },
   {
     slug: "outlook-desktop-troubleshoot",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Troubleshoot the Outlook desktop add-in",
     excerpt: "HubSpot's steps for the Outlook desktop add-in.",
     type: "tip",
@@ -16034,6 +17438,8 @@ var ARTICLES = [
   },
   {
     slug: "blog-subscription-performance",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Check blog subscription email performance",
     excerpt: "Where HubSpot shows blog subscription email history.",
     type: "tip",
@@ -16050,6 +17456,8 @@ var ARTICLES = [
   },
   {
     slug: "scheduled-sequence-emails",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Review scheduled sequence emails and send limits",
     excerpt: "Where HubSpot shows sequence send limits and queued emails.",
     type: "tip",
@@ -16083,6 +17491,8 @@ var ARTICLES = [
   },
   {
     slug: "use-the-hubspot-mcp-connector-in-claude",
+    draft: true,
+    pruned: '2026-11-14',
     title: "Use the HubSpot connector in Claude: set up, approvals, limits, and your own MCP connector",
     excerpt: "How to connect Claude to HubSpot through the HubSpot connector, set write tools to need approval, what it can and cannot change, where it shows in the audit log, and how the MCP Connectors page differs.",
     type: "guide",

@@ -15,6 +15,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://hubspot.samcbarth.com';
 const ARTICLES = require(path.join(ROOT, 'articles.js'));
+const TOPICS = fs.existsSync(path.join(ROOT, 'topics.js')) ? require(path.join(ROOT, 'topics.js')) : [];
 const published = ARTICLES.filter(a => !a.draft).sort((a, b) => b.published.localeCompare(a.published));
 const errors = [];
 const warnings = [];
@@ -38,6 +39,14 @@ for (const a of ARTICLES) {
   const page = `articles/${a.slug}/index.html`;
   if (!fs.existsSync(path.join(ROOT, page))) { errors.push(`${a.slug}: missing ${page}`); continue; }
   const html = read(page);
+  if (a.mergedInto) {
+    // Merged into a topic guide: the page is a redirect stub to the host.
+    if (!a.draft) errors.push(`${a.slug}: mergedInto pages must also be draft`);
+    const host = ARTICLES.find(x => x.slug === a.mergedInto);
+    if (!host || host.draft) errors.push(`${a.slug}: mergedInto "${a.mergedInto}" is not a published article`);
+    if (!html.includes(`/articles/${a.mergedInto}/`)) errors.push(`${page}: stub does not point to ${a.mergedInto}`);
+    continue;
+  }
   if (!html.includes(`data-slug="${a.slug}"`)) errors.push(`${page}: body data-slug does not match`);
   if (!html.includes(`/articles/${a.slug}/"`)) errors.push(`${page}: canonical does not match slug`);
   if (/\b(TITLE|EXCERPT|SLUG|VERIFIED_ISO|ANSWER_FIRST_SUMMARY)\b/.test(html.replace(/<!--[\s\S]*?-->/g, ''))) errors.push(`${page}: template placeholders left in`);
@@ -75,6 +84,22 @@ function cardHTML(a, base) {
     `<div class="card-meta"><span>${esc(a.minutes)} min</span><span>${esc(a.difficulty)}</span><span>${a.validated ? `Validated ${esc(a.validated)}` : `Verified ${esc(a.verified)}`}</span></div></a>`;
 }
 
+function topicsHTML() {
+  if (!TOPICS.length) return '';
+  const bySlug = Object.fromEntries(ARTICLES.map(a => [a.slug, a]));
+  const sections = [];
+  for (const t of TOPICS) {
+    const host = bySlug[t.host];
+    if (!host || host.draft) { errors.push(`topics.js: "${t.title}" host ${t.host} is not published`); continue; }
+    let s = sections.find(x => x.name === t.section);
+    if (!s) sections.push(s = { name: t.section, items: [] });
+    s.items.push(`<li><a href="articles/${esc(t.host)}/">${esc(t.title)}</a></li>`);
+  }
+  return `<section class="topics" aria-labelledby="topics-h">\n<h2 id="topics-h">Browse by topic</h2>\n<div class="topic-grid">\n` +
+    sections.map(s => `<div class="topic-group"><h3>${esc(s.name)}</h3><ul>${s.items.join('')}</ul></div>`).join('\n') +
+    `\n</div>\n</section>`;
+}
+
 function replaceBlock(html, name, content, file) {
   const re = new RegExp(`(<!--#${name}-->)[\\s\\S]*?(<!--/${name}-->)`);
   if (!re.test(html)) return html;
@@ -88,12 +113,15 @@ for (const file of pages()) {
   const slug = (html.match(/data-slug="([^"]+)"/) || [])[1];
   const art = slug && ARTICLES.find(a => a.slug === slug);
   const isDraft = file.startsWith('articles/') && (!art || art.draft);
+  // Merge stubs carry a meta refresh + canonical to the host and no robots tag.
+  if (art && art.mergedInto) { write(file, html); continue; }
   const robots = isDraft || file === 'article-template.html' ? '<meta name="robots" content="noindex">\n' : '<meta name="robots" content="index, follow, max-image-preview:large">\n';
   html = html.replace(/<html lang="en" data-base="[^"]*">/, `<html lang="en" data-base="${base}">`);
   html = replaceBlock(html, 'head', robots + partials.head.replace(/\{\{base\}\}/g, base), file);
   html = replaceBlock(html, 'header', partials.header.replace(/\{\{base\}\}/g, base), file);
   html = replaceBlock(html, 'footer', partials.footer.replace(/\{\{base\}\}/g, base), file);
   if (file === 'index.html') {
+    html = replaceBlock(html, 'topics', topicsHTML(), file);
     const cards = published.length ? published.map(a => cardHTML(a, '')).join('\n') : '<p class="empty">The first field notes are publishing now.</p>';
     html = replaceBlock(html, 'cards', cards, file);
   }

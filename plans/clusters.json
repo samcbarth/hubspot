@@ -1,0 +1,974 @@
+[
+ {
+  "title": "Marketing email deliverability and engagement",
+  "host": "resend-email-to-unengaged",
+  "members": [
+   "email-deliverability-spam-checklist",
+   "bot-email-opens-clicks",
+   "quarantined-contacts",
+   "unengaged-contacts-graymail",
+   "resend-email-to-unengaged",
+   "resend-bounced-contacts",
+   "bounced-contacts-still-marketing",
+   "marketing-email-send-stopped",
+   "click-rate-vs-click-through-rate"
+  ],
+  "impr": 433,
+  "clicks": 1
+ },
+ {
+  "title": "Build and send marketing emails",
+  "host": "transactional-email-add-on",
+  "members": [
+   "marketing-email-footer-address",
+   "cancel-scheduled-email",
+   "send-test-email-preview",
+   "custom-fonts-in-email",
+   "personalized-links-in-emails",
+   "marketing-email-approval",
+   "exclude-lists-marketing-email",
+   "rss-email",
+   "ctas-in-emails",
+   "programmable-emails",
+   "replies-to-marketing-emails",
+   "email-ab-test",
+   "marketing-email-automation",
+   "transactional-email-add-on"
+  ],
+  "impr": 504,
+  "clicks": 0
+ },
+ {
+  "title": "Subscriptions, opt-outs and marketing contacts",
+  "host": "remove-email-opt-out",
+  "members": [
+   "double-opt-in-marketing-email",
+   "email-subscription-types",
+   "remove-email-opt-out",
+   "resubscribe-contacts",
+   "opt-out-contact-all-email",
+   "unsubscribe-links-one-to-one-emails",
+   "import-opted-out-contacts",
+   "sync-contacts-as-non-marketing"
+  ],
+  "impr": 247,
+  "clicks": 1
+ },
+ {
+  "title": "Connect your inbox and log sales emails",
+  "host": "never-log-list",
+  "members": [
+   "never-log-list",
+   "log-replies-only-vs-log-all-emails",
+   "connect-inbox-alias-signature",
+   "email-tracking-consent-review",
+   "limit-logged-email-access",
+   "one-to-one-email-drafts",
+   "schedule-one-to-one-email",
+   "sales-email-send-limits",
+   "hubspot-snippets-shortcuts"
+  ],
+  "impr": 335,
+  "clicks": 1
+ },
+ {
+  "title": "Office 365 and Outlook with HubSpot",
+  "host": "office-365-add-in-troubleshoot",
+  "members": [
+   "office-365-admin-consent",
+   "office-365-gcc-high",
+   "office-365-add-in-troubleshoot",
+   "office-365-add-in-sales-tools"
+  ],
+  "impr": 192,
+  "clicks": 3
+ },
+ {
+  "title": "HubSpot Sales Chrome extension",
+  "host": "hubspot-sales-extension",
+  "members": [
+   "hubspot-sales-extension",
+   "chrome-extension-troubleshoot"
+  ],
+  "impr": 229,
+  "clicks": 0
+ },
+ {
+  "title": "Sequences",
+  "host": "enroll-list-in-sequence",
+  "members": [
+   "sequence-settings-and-unenrollment",
+   "enroll-list-in-sequence",
+   "sequences-out-of-office-replies",
+   "dynamic-sequences",
+   "enroll-in-sequence-workflow"
+  ],
+  "impr": 113,
+  "clicks": 0
+ },
+ {
+  "title": "HubSpot API rate limits",
+  "host": "hubspot-api-rate-limits",
+  "members": [
+   "hubspot-api-rate-limits",
+   "crm-search-api-limits"
+  ],
+  "impr": 415,
+  "clicks": 2
+ },
+ {
+  "title": "Property history",
+  "host": "property-history-api",
+  "members": [
+   "property-history-api",
+   "export-property-history"
+  ],
+  "impr": 104,
+  "clicks": 2
+ },
+ {
+  "title": "Service keys and legacy private apps",
+  "host": "private-apps-moved-to-legacy-apps",
+  "members": [
+   "private-apps-moved-to-legacy-apps",
+   "hubspot-service-keys",
+   "create-a-hubspot-service-key",
+   "private-app-api-key"
+  ],
+  "impr": 313,
+  "clicks": 1
+ },
+ {
+  "title": "OAuth for HubSpot apps",
+  "host": "oauth-client-id-secret",
+  "members": [
+   "oauth-client-id-secret",
+   "oauth-refresh-token"
+  ],
+  "impr": 102,
+  "clicks": 1
+ },
+ {
+  "title": "Developer projects, CLI and test accounts",
+  "host": "developer-test-accounts-and-sandboxes",
+  "members": [
+   "hs-project-upload-cli",
+   "hubspot-agent-cli-setup",
+   "ui-extension-card-sync-button",
+   "developer-test-accounts-and-sandboxes"
+  ],
+  "impr": 164,
+  "clicks": 0
+ },
+ {
+  "title": "Upsert and dedupe records through the API",
+  "host": "api-scripts-create-duplicates",
+  "members": [
+   "api-scripts-create-duplicates",
+   "batch-upsert-api",
+   "search-companies-by-name-api"
+  ],
+  "impr": 48,
+  "clicks": 2
+ },
+ {
+  "title": "Owner IDs and the owners API",
+  "host": "owners-api-owner-id",
+  "members": [
+   "owners-api-owner-id"
+  ],
+  "impr": 19,
+  "clicks": 1
+ },
+ {
+  "title": "Attach files and log activities through the API",
+  "host": "attach-file-to-record-api",
+  "members": [
+   "attach-file-to-record-api",
+   "log-sms-to-contact-timeline-api"
+  ],
+  "impr": 23,
+  "clicks": 1
+ },
+ {
+  "title": "Webhooks",
+  "host": "webhooks-api-subscriptions",
+  "members": [
+   "webhooks-api-subscriptions"
+  ],
+  "impr": 25,
+  "clicks": 0
+ },
+ {
+  "title": "HubSQL API",
+  "host": "hubsql-beta-api",
+  "members": [
+   "hubsql-beta-api"
+  ],
+  "impr": 67,
+  "clicks": 0
+ },
+ {
+  "title": "Custom events",
+  "host": "analyze-custom-behavioral-events",
+  "members": [
+   "custom-events-api",
+   "analyze-custom-behavioral-events"
+  ],
+  "impr": 32,
+  "clicks": 0
+ },
+ {
+  "title": "Associations and association labels",
+  "host": "data-model-builder",
+  "members": [
+   "associations-v4-api-labels",
+   "filter-by-association-labels",
+   "association-history",
+   "data-model-builder"
+  ],
+  "impr": 77,
+  "clicks": 0
+ },
+ {
+  "title": "HubSpot with AI assistants (MCP and Claude)",
+  "host": "hubspot-mcp-connectors",
+  "members": [
+   "hubspot-mcp-connectors",
+   "claude-connector",
+   "claude-design-landing-page-to-hubspot"
+  ],
+  "impr": 125,
+  "clicks": 0
+ },
+ {
+  "title": "Forms API and embedding",
+  "host": "embed-form-in-react",
+  "members": [
+   "forms-submission-api",
+   "get-form-submissions-api",
+   "embed-form-in-react",
+   "embed-hubspot-form-external-site",
+   "form-guid",
+   "non-hubspot-forms-collected"
+  ],
+  "impr": 114,
+  "clicks": 1
+ },
+ {
+  "title": "Form settings and spam control",
+  "host": "form-file-upload-field",
+  "members": [
+   "form-submissions-marked-spam",
+   "form-captcha-settings",
+   "blocked-email-domains-list",
+   "form-file-upload-field",
+   "form-conditional-logic",
+   "form-redirect-with-url-parameters",
+   "form-email-response",
+   "manage-forms",
+   "unpublish-form"
+  ],
+  "impr": 319,
+  "clicks": 0
+ },
+ {
+  "title": "Source and conversion properties",
+  "host": "offline-sources-explained",
+  "members": [
+   "offline-sources-explained",
+   "first-and-recent-conversion-properties",
+   "first-and-last-page-seen",
+   "traffic-source-properties",
+   "ai-referrals-traffic-source"
+  ],
+  "impr": 206,
+  "clicks": 1
+ },
+ {
+  "title": "Property types and setup",
+  "host": "dropdown-vs-multiple-checkboxes",
+  "members": [
+   "dropdown-vs-multiple-checkboxes",
+   "dropdown-option-labels-vs-internal-names",
+   "unique-value-properties",
+   "url-property-clickable-link",
+   "industry-property-options",
+   "contact-local-time-zone"
+  ],
+  "impr": 261,
+  "clicks": 0
+ },
+ {
+  "title": "Calculated and rollup properties",
+  "host": "stage-calculated-properties-off-by-default",
+  "members": [
+   "rollup-properties",
+   "calculation-properties",
+   "stage-calculated-properties-off-by-default"
+  ],
+  "impr": 126,
+  "clicks": 0
+ },
+ {
+  "title": "Lifecycle stages",
+  "host": "default-lifecycle-and-deal-stages",
+  "members": [
+   "default-lifecycle-and-deal-stages",
+   "customize-lifecycle-stages",
+   "lifecycle-stage-automation-deals",
+   "audit-company-lifecycle-stages"
+  ],
+  "impr": 53,
+  "clicks": 0
+ },
+ {
+  "title": "Deal properties, amounts and splits",
+  "host": "deal-default-amount-and-close-date",
+  "members": [
+   "deal-default-amount-and-close-date",
+   "deal-revenue-properties",
+   "deal-line-items",
+   "deal-splits",
+   "deal-collaborators",
+   "deal-score"
+  ],
+  "impr": 179,
+  "clicks": 0
+ },
+ {
+  "title": "Deal pipelines and stages",
+  "host": "deal-pipeline-rules",
+  "members": [
+   "deal-pipeline-rules",
+   "deal-progression",
+   "deal-stage-probability",
+   "delete-pipeline",
+   "board-view-redesigned",
+   "hubspot-deal-tags",
+   "close-stale-deals",
+   "move-deal-stage-automatically"
+  ],
+  "impr": 192,
+  "clicks": 0
+ },
+ {
+  "title": "Sales forecast",
+  "host": "sales-forecast-tool",
+  "members": [
+   "sales-forecast-tool"
+  ],
+  "impr": 77,
+  "clicks": 0
+ },
+ {
+  "title": "Quotes, products and payments",
+  "host": "price-books",
+  "members": [
+   "hubspot-quotes-basics",
+   "price-books",
+   "tiered-product-pricing",
+   "payment-links",
+   "invoice-credit-notes",
+   "create-commerce-subscriptions"
+  ],
+  "impr": 160,
+  "clicks": 1
+ },
+ {
+  "title": "Leads and lead scoring",
+  "host": "lead-scoring-setup",
+  "members": [
+   "lead-scoring-setup",
+   "hubspot-leads-object"
+  ],
+  "impr": 244,
+  "clicks": 1
+ },
+ {
+  "title": "Buyer intent",
+  "host": "intent-signals",
+  "members": [
+   "intent-signals"
+  ],
+  "impr": 6,
+  "clicks": 1
+ },
+ {
+  "title": "Workflow enrollment and re-enrollment",
+  "host": "workflow-wont-re-enroll",
+  "members": [
+   "workflow-wont-re-enroll",
+   "workflow-enrollment-triggers-explained"
+  ],
+  "impr": 52,
+  "clicks": 0
+ },
+ {
+  "title": "Workflow actions",
+  "host": "workflow-custom-code-action",
+  "members": [
+   "workflow-custom-code-action",
+   "google-sheets-workflow-action",
+   "workflow-internal-email-notification",
+   "rotate-record-to-owner",
+   "contact-owner-changed-automatically"
+  ],
+  "impr": 124,
+  "clicks": 1
+ },
+ {
+  "title": "Export and restore workflows",
+  "host": "export-and-restore-workflows",
+  "members": [
+   "export-and-restore-workflows"
+  ],
+  "impr": 26,
+  "clicks": 0
+ },
+ {
+  "title": "Cookies and the consent banner",
+  "host": "google-consent-mode",
+  "members": [
+   "cookie-consent-analytics",
+   "hubspot-cookies",
+   "hubspot-cookie-consent-banner",
+   "google-consent-mode",
+   "global-privacy-control"
+  ],
+  "impr": 206,
+  "clicks": 1
+ },
+ {
+  "title": "GDPR settings and deleting contacts",
+  "host": "gdpr-data-privacy-settings",
+  "members": [
+   "gdpr-data-privacy-settings",
+   "gdpr-delete-contacts-api",
+   "delete-inactive-contacts-automatically",
+   "bulk-delete-contacts"
+  ],
+  "impr": 208,
+  "clicks": 1
+ },
+ {
+  "title": "Domains and SSL",
+  "host": "replace-brand-domain",
+  "members": [
+   "replace-brand-domain",
+   "reverse-proxy-hubspot-cms",
+   "ssl-certificate-provisioning",
+   "custom-ssl-certificate"
+  ],
+  "impr": 160,
+  "clicks": 3
+ },
+ {
+  "title": "Site settings (sitemap, favicon, brand kit, schema)",
+  "host": "favicon-setup",
+  "members": [
+   "hubspot-sitemap-settings",
+   "favicon-setup",
+   "brand-kit-setup",
+   "add-schema-markup"
+  ],
+  "impr": 149,
+  "clicks": 2
+ },
+ {
+  "title": "AEO in HubSpot",
+  "host": "aeo-prompts-and-outreach-recommendations",
+  "members": [
+   "aeo-prompts-and-outreach-recommendations"
+  ],
+  "impr": 97,
+  "clicks": 0
+ },
+ {
+  "title": "CMS developer notes",
+  "host": "claude-code-hubspot-themes-templates",
+  "members": [
+   "cms-serverless-functions",
+   "hubdb-tables",
+   "hubl-set-inside-for-loop",
+   "module-font-controls-override-theme",
+   "claude-code-hubspot-themes-templates",
+   "theme-upload-validation-errors",
+   "rss-feed-on-page"
+  ],
+  "impr": 132,
+  "clicks": 1
+ },
+ {
+  "title": "Blog setup",
+  "host": "blog-publish-date",
+  "members": [
+   "blog-authors-and-tags",
+   "blog-publish-date",
+   "blog-featured-image",
+   "related-blog-posts"
+  ],
+  "impr": 87,
+  "clicks": 0
+ },
+ {
+  "title": "Multi-language content",
+  "host": "auto-translate-content",
+  "members": [
+   "multi-language-pages",
+   "auto-translate-content",
+   "multi-language-blog"
+  ],
+  "impr": 59,
+  "clicks": 1
+ },
+ {
+  "title": "Restrict page access",
+  "host": "memberships-access-groups",
+  "members": [
+   "memberships-access-groups",
+   "password-protect-a-page"
+  ],
+  "impr": 73,
+  "clicks": 1
+ },
+ {
+  "title": "Building pages",
+  "host": "embed-code-content",
+  "members": [
+   "embed-code-content",
+   "clone-landing-page-per-location",
+   "starter-page-limit",
+   "replace-file-keep-url"
+  ],
+  "impr": 47,
+  "clicks": 0
+ },
+ {
+  "title": "Calling setup",
+  "host": "receive-inbound-calls",
+  "members": [
+   "receive-inbound-calls",
+   "calling-supported-countries",
+   "calling-microphone",
+   "teams-click-to-call-logging",
+   "teams-phone-recordings-to-hubspot"
+  ],
+  "impr": 111,
+  "clicks": 1
+ },
+ {
+  "title": "Call recording, transcripts and notetaker",
+  "host": "call-recording-consent",
+  "members": [
+   "call-recording-consent",
+   "call-transcripts-quality",
+   "hubspot-notetaker-settings"
+  ],
+  "impr": 73,
+  "clicks": 0
+ },
+ {
+  "title": "Meeting scheduling links",
+  "host": "video-conferencing-meetings",
+  "members": [
+   "hubspot-meetings-link",
+   "meetings-multiple-calendars",
+   "meeting-rotations-round-robin",
+   "video-conferencing-meetings",
+   "hubspot-calendar-view"
+  ],
+  "impr": 93,
+  "clicks": 1
+ },
+ {
+  "title": "Meeting logging and outcomes",
+  "host": "meeting-outcomes-and-call-types",
+  "members": [
+   "meeting-outcomes-and-call-types",
+   "recurring-meetings-not-logging"
+  ],
+  "impr": 30,
+  "clicks": 0
+ },
+ {
+  "title": "Users, seats and permissions",
+  "host": "user-properties-preferences",
+  "members": [
+   "permission-sets-and-seats",
+   "change-super-admin",
+   "login-as-user",
+   "delete-your-own-user",
+   "user-properties-preferences",
+   "scim-user-provisioning"
+  ],
+  "impr": 209,
+  "clicks": 1
+ },
+ {
+  "title": "Account security and login",
+  "host": "locked-out-two-factor-reset",
+  "members": [
+   "locked-out-two-factor-reset",
+   "user-login-sessions",
+   "hubspot-user-connection-audit",
+   "hubspot-audit-log"
+  ],
+  "impr": 179,
+  "clicks": 0
+ },
+ {
+  "title": "Account settings",
+  "host": "join-hubspot-beta-product-updates",
+  "members": [
+   "account-defaults-time-zone-fiscal-year",
+   "join-hubspot-beta-product-updates",
+   "multi-account-management",
+   "cancel-or-delete-hubspot-account",
+   "hubspot-notification-preferences"
+  ],
+  "impr": 173,
+  "clicks": 0
+ },
+ {
+  "title": "Find your HubSpot portal ID",
+  "host": "find-hubspot-portal-id",
+  "members": [
+   "find-hubspot-portal-id"
+  ],
+  "impr": 173,
+  "clicks": 1
+ },
+ {
+  "title": "HubSpot credits",
+  "host": "nurture-agent-credits",
+  "members": [
+   "hubspot-credits-usage-limits",
+   "nurture-agent-credits"
+  ],
+  "impr": 131,
+  "clicks": 0
+ },
+ {
+  "title": "Duplicates and merging",
+  "host": "manage-duplicates-tool",
+  "members": [
+   "manage-duplicates-tool",
+   "merge-two-records",
+   "unmerge-records",
+   "phone-format-duplicates",
+   "callrail-duplicate-contacts",
+   "multiple-companies-same-domain"
+  ],
+  "impr": 66,
+  "clicks": 2
+ },
+ {
+  "title": "Imports",
+  "host": "import-to-static-segment",
+  "members": [
+   "duplicates-after-import",
+   "import-to-static-segment",
+   "find-records-from-an-import",
+   "bulk-assign-owners-from-sheet",
+   "import-contacts-and-companies-together",
+   "marketing-event-participants-import"
+  ],
+  "impr": 240,
+  "clicks": 2
+ },
+ {
+  "title": "Restore deleted data",
+  "host": "restore-deleted-activity",
+  "members": [
+   "restore-deleted-activity",
+   "restore-crm-changes"
+  ],
+  "impr": 113,
+  "clicks": 2
+ },
+ {
+  "title": "Exports",
+  "host": "export-records-from-a-view",
+  "members": [
+   "export-records-from-a-view",
+   "export-activities",
+   "export-segments",
+   "export-reports"
+  ],
+  "impr": 519,
+  "clicks": 0
+ },
+ {
+  "title": "Records, views and filters",
+  "host": "hubspot-saved-views-and-filters",
+  "members": [
+   "clone-records",
+   "hubspot-saved-views-and-filters"
+  ],
+  "impr": 56,
+  "clicks": 0
+ },
+ {
+  "title": "Segments",
+  "host": "active-vs-static-segments",
+  "members": [
+   "active-vs-static-segments",
+   "change-segment-type",
+   "list-add-remove-contacts",
+   "random-split-segment"
+  ],
+  "impr": 164,
+  "clicks": 0
+ },
+ {
+  "title": "Custom report builder",
+  "host": "customer-journey-analytics",
+  "members": [
+   "custom-report-builder",
+   "which-reports-hubspot-can-build",
+   "reports-list-and-analytics-suites",
+   "funnel-reports",
+   "form-reports-custom-builder",
+   "customer-journey-analytics",
+   "recurring-report-email"
+  ],
+  "impr": 292,
+  "clicks": 0
+ },
+ {
+  "title": "Dashboards",
+  "host": "set-default-dashboard",
+  "members": [
+   "set-default-dashboard",
+   "dashboard-filters",
+   "dashboard-settings-access-refresh-caching"
+  ],
+  "impr": 90,
+  "clicks": 0
+ },
+ {
+  "title": "Campaigns and attribution",
+  "host": "campaign-influenced-contacts",
+  "members": [
+   "campaign-influenced-contacts",
+   "marketing-studio-campaigns",
+   "campaign-zero-sessions",
+   "revenue-attribution-deal-requirements"
+  ],
+  "impr": 76,
+  "clicks": 0
+ },
+ {
+  "title": "Tracking URL builder",
+  "host": "tracking-url-builder",
+  "members": [
+   "tracking-url-builder"
+  ],
+  "impr": 201,
+  "clicks": 0
+ },
+ {
+  "title": "Install the tracking code",
+  "host": "install-tracking-code-wix",
+  "members": [
+   "install-tracking-code-wix",
+   "detect-hubspot-tracking-code",
+   "add-google-tag-manager",
+   "install-ad-pixels"
+  ],
+  "impr": 68,
+  "clicks": 2
+ },
+ {
+  "title": "Ads lead syncing and audiences",
+  "host": "facebook-lead-ads-sync",
+  "members": [
+   "facebook-lead-ads-sync",
+   "ads-audiences-and-lookalikes",
+   "linkedin-ads-audiences",
+   "connect-reddit-ads"
+  ],
+  "impr": 179,
+  "clicks": 1
+ },
+ {
+  "title": "Social",
+  "host": "instagram-carousel-posts",
+  "members": [
+   "instagram-carousel-posts",
+   "social-link-shortening"
+  ],
+  "impr": 41,
+  "clicks": 0
+ },
+ {
+  "title": "Google Workspace integrations",
+  "host": "google-contacts-sync",
+  "members": [
+   "google-contacts-sync",
+   "google-drive-integration"
+  ],
+  "impr": 111,
+  "clicks": 0
+ },
+ {
+  "title": "Microsoft Teams and SharePoint",
+  "host": "teams-integration-user-permissions",
+  "members": [
+   "teams-integration-user-permissions",
+   "sharepoint-onedrive-files"
+  ],
+  "impr": 68,
+  "clicks": 2
+ },
+ {
+  "title": "GoToWebinar integration",
+  "host": "gotowebinar-integration",
+  "members": [
+   "gotowebinar-integration"
+  ],
+  "impr": 36,
+  "clicks": 1
+ },
+ {
+  "title": "DocuSign integration",
+  "host": "docusign-integration",
+  "members": [
+   "docusign-integration"
+  ],
+  "impr": 6,
+  "clicks": 1
+ },
+ {
+  "title": "Surveys",
+  "host": "surveymonkey-integration",
+  "members": [
+   "surveymonkey-integration",
+   "nps-surveys"
+  ],
+  "impr": 55,
+  "clicks": 0
+ },
+ {
+  "title": "Zapier",
+  "host": "zapier-hubspot",
+  "members": [
+   "zapier-hubspot"
+  ],
+  "impr": 14,
+  "clicks": 0
+ },
+ {
+  "title": "Slack integration",
+  "host": "slack-integration",
+  "members": [
+   "slack-integration"
+  ],
+  "impr": 41,
+  "clicks": 0
+ },
+ {
+  "title": "Shopify integration",
+  "host": "shopify-integration",
+  "members": [
+   "shopify-integration"
+  ],
+  "impr": 18,
+  "clicks": 0
+ },
+ {
+  "title": "WordPress plugin",
+  "host": "hubspot-wordpress-plugin",
+  "members": [
+   "hubspot-wordpress-plugin"
+  ],
+  "impr": 93,
+  "clicks": 0
+ },
+ {
+  "title": "Salesforce and Dynamics sync",
+  "host": "dynamics-365-integration",
+  "members": [
+   "salesforce-sync-errors-resync",
+   "sync-salesforce-leads",
+   "salesforce-sandbox-connect",
+   "dynamics-365-integration"
+  ],
+  "impr": 259,
+  "clicks": 1
+ },
+ {
+  "title": "Inbox channels and chat",
+  "host": "inbox-channels-and-fallback-email",
+  "members": [
+   "inbox-channels-and-fallback-email",
+   "hosted-email-inbox",
+   "inbox-allow-and-deny-list",
+   "facebook-messenger-inbox",
+   "visitor-identification-api"
+  ],
+  "impr": 71,
+  "clicks": 0
+ },
+ {
+  "title": "Tickets",
+  "host": "ticket-pipeline-statuses",
+  "members": [
+   "ticket-pipeline-statuses",
+   "ticket-notifications"
+  ],
+  "impr": 45,
+  "clicks": 0
+ },
+ {
+  "title": "HubSpot AI settings and agents",
+  "host": "hubspot-ai-access-settings",
+  "members": [
+   "hubspot-ai-access-settings",
+   "customer-agent-ai",
+   "agent-hub-context"
+  ],
+  "impr": 59,
+  "clicks": 0
+ },
+ {
+  "title": "Tasks and the sales workspace",
+  "host": "follow-up-task-prompt",
+  "members": [
+   "follow-up-task-prompt",
+   "sales-workspace",
+   "task-queues"
+  ],
+  "impr": 26,
+  "clicks": 1
+ },
+ {
+  "title": "HubSpot mobile app",
+  "host": "mobile-app-offline",
+  "members": [
+   "mobile-app-offline",
+   "mobile-business-card-scanner"
+  ],
+  "impr": 43,
+  "clicks": 0
+ },
+ {
+  "title": "HubSpot Markets",
+  "host": "hubspot-markets-beta",
+  "members": [
+   "hubspot-markets-beta"
+  ],
+  "impr": 20,
+  "clicks": 1
+ },
+ {
+  "title": "Data enrichment",
+  "host": "hubspot-data-enrichment-settings",
+  "members": [
+   "hubspot-data-enrichment-settings"
+  ],
+  "impr": 24,
+  "clicks": 0
+ }
+]

@@ -347,3 +347,12 @@ button, input, select { font: inherit; color: inherit; }
 .book-type h2 { font-size: 1.15rem; margin: 0 0 .25rem; }
 .book-type p { color: var(--text-2); font-size: .95rem; margin: 0; }
 .role-label { font-weight: 600; font-size: .9rem; }
+
+/* topic hubs on the homepage */
+.topics { margin: 1.5rem 0 1rem; }
+.topics h2 { font-size: 1.25rem; margin: 0 0 .8rem; }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; }
+.topic-group { border: 1px solid var(--line); background: var(--bg-2); border-radius: 14px; padding: .9rem 1rem; }
+.topic-group h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 .5rem; }
+.topic-group ul { list-style: none; margin: 0; padding: 0; }
+.topic-group li { margin: .3rem 0; font-size: .92rem; line-height: 1.35; }
