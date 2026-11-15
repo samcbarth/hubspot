@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Transactional emails in HubSpot: the add-on and when to use it - HubSpot Field Notes</title>
-<meta name="description" content="What HubSpot's Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.">
+<title>Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email - HubSpot Field Notes</title>
+<meta name="description" content="The full send checklist: footer address, fonts and personalized links, programmable email limits, previews and test sends, A/B tests, approvals, cancelling a send, simple workflows and the transactional add-on.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/transactional-email-add-on/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/transactional-email-add-on/">
-<meta property="og:title" content="Transactional emails in HubSpot: the add-on and when to use it">
-<meta property="og:description" content="What HubSpot's Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.">
+<meta property="og:title" content="Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email">
+<meta property="og:description" content="The full send checklist: footer address, fonts and personalized links, programmable email limits, previews and test sends, A/B tests, approvals, cancelling a send, simple workflows and the transactional add-on.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/transactional-email-add-on/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Transactional emails in HubSpot: the add-on and when to use it",
-      "description": "What HubSpot's Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.",
+      "headline": "Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email",
+      "description": "The full send checklist: footer address, fonts and personalized links, programmable email limits, previews and test sends, A/B tests, approvals, cancelling a send, simple workflows and the transactional add-on.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/transactional-email-add-on/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Transactional emails in HubSpot",
-      "totalTime": "PT3M",
+      "name": "Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email",
+      "totalTime": "PT13M",
       "step": [
-        {"@type": "HowToStep", "name": "Confirm the need", "text": "Transactional means an agreed transaction or ongoing updates."},
-        {"@type": "HowToStep", "name": "Buy the add-on", "text": "Through your Customer Success Manager or sales rep."},
-        {"@type": "HowToStep", "name": "Create emails", "text": "Create transactional emails once it's active."}
+        {"@type": "HowToStep", "name": "Set the footer address", "text": "Settings, Marketing, Email, Footer addresses."},
+        {"@type": "HowToStep", "name": "Build and personalize", "text": "Set token defaults for every personalized link."},
+        {"@type": "HowToStep", "name": "Preview and test", "text": "Preview as a contact and send a test."},
+        {"@type": "HowToStep", "name": "Choose recipients", "text": "Send to and Don't send to, or workflow enrollment for automated emails."},
+        {"@type": "HowToStep", "name": "Schedule or send", "text": "Cancel from the performance page while it is still processing."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Transactional emails in HubSpot: the add-on and when to use it", "item": "https://hubspot.samcbarth.com/articles/transactional-email-add-on/" }
+        { "@type": "ListItem", "position": 2, "name": "Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email", "item": "https://hubspot.samcbarth.com/articles/transactional-email-add-on/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>Transactional emails in HubSpot: the add-on and when to use it</h1>
-      <p class="dek">Receipts and account notices shouldn't depend on marketing subscriptions.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email</h1>
+      <p class="dek">Everything between a blank email and a safe send, with the tier each feature needs and the limits HubSpot puts on programmable emails, tests and cancels.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub Professional or Enterprise plus the add-on</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Marketing email access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub (A/B tests need Professional, approvals need Enterprise)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing email publish access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>13 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,24 +103,118 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: the <strong>Transactional Email Add-On</strong> sends transactional emails from a <strong>dedicated IP</strong>, which only carries transactional email; marketing email on a dedicated IP needs the separate dedicated IP add-on. Keep content to an agreed transaction or updates on one. Buy it through your Customer Success Manager or sales rep, and check content rules with your legal team.</p>
+          <p>Before the first send, set the footer address and subscription types in <strong>Settings, Marketing, Email</strong>. Build in the drag and drop editor, set token defaults so links and greetings never break, and use <strong>Preview &amp; test</strong> before every send (test emails arrive from noreply@hubspot.com, so do not judge the From name there). A/B tests need Marketing Hub Professional, approvals need Enterprise, and a scheduled or still-processing email can be cancelled until it finishes sending. Receipts, password resets and other transactional messages belong on the Transactional Email Add-On, not in a marketing email.</p>
         </div>
 
-        <h2>1. Where emails live</h2>
-        <p>The marketing email tool in my demo portal.</p>
-        <figure class="shot"><a href="emails.webp"><img src="emails.webp" alt="Marketing Email list with tabs and emails" width="738" height="780" loading="lazy"></a><figcaption>Tabs (1) and emails (2).</figcaption></figure>
-        <h2>2. Not a loophole</h2>
-        <p>Promotions in a transactional email still need marketing consent.</p>
-        <h2>3. Related</h2>
-        <p><a href="../email-subscription-types/">Subscription types</a>.</p>
+        <h2>1. Set up once: footer address and subscription types</h2>
+        <p>Every marketing email footer pulls the business address from <strong>Settings, Marketing, Email, Configuration, Footer addresses</strong> (1). The default address (2) is used unless an email picks another location, and <strong>Add address</strong> (3) adds more. Required fields are company name, address, city and postal code. Multiple office locations need Marketing Hub Enterprise.</p>
+        <figure class="shot"><a href="footer.webp"><img src="footer.webp" alt="Email settings Footer addresses tab with the address list and Add address button highlighted" width="800" height="553" loading="lazy"></a><figcaption>Footer addresses tab (1), the default address (2), and Add address (3).</figcaption></figure>
+        <p>Check it now. Whatever is saved there shows on every marketing email, and my demo portal's default still says Test. If you build a custom footer in the design manager, it must keep the address and unsubscribe tokens. Subscription types control who can receive what: see <a href="../email-subscription-types/">subscription types</a> and <a href="../double-opt-in-marketing-email/">double opt-in</a>.</p>
+
+        <h2>2. Build the email</h2>
+        <ul>
+          <li><strong>Fonts.</strong> Custom fonts show in Apple Mail and partly in Samsung Mail, but not in Gmail, Outlook or most mobile web clients. Those show the fallback, so pick a fallback with a similar x-height and weight. Google Fonts are not available for custom modules in email templates. Brand fonts live in the <a href="../brand-kit-setup/">brand kit</a>.</li>
+          <li><strong>Personalized links.</strong> Button and image modules can use links built from personalization tokens, so each contact lands on a page for them. Give every token a default value, or contacts with an empty property get a broken link.</li>
+          <li><strong>CTAs.</strong> Embedded CTAs work in drag and drop marketing emails and keep the offer's results in one place across emails and pages. External pages need the HubSpot tracking code to track them.</li>
+          <li><strong>Programmable emails.</strong> HubL in a coded template can pull CRM data into the email. Professional can read standard objects such as contacts, companies and products. Enterprise adds HubDB tables and custom objects. Each CRM function lowers the recipient cap: one function allows 500,000 recipients, two 250,000, three 165,000, four 125,000, and five (the maximum) 100,000. Programmable emails that use CRM functions cannot be A/B tested and send more slowly.</li>
+        </ul>
+<pre><code>{% set product = crm_object("product", 2444498793, "name,description,price") %}
+Name: {{ product.name }}
+Price: {{ product.price }}</code></pre>
+        <p>That is HubSpot's own example from the developer docs. A coded template opts in with <code>isEnabledForEmailV3Rendering: true</code>.</p>
+
+        <h2>3. Recipients, exclusions and replies</h2>
+        <p>On a regular marketing email, pick the segments to send to and the segments or contacts to exclude in <strong>Send to</strong> and <strong>Don't send to</strong>. Automated emails ignore those fields: the workflow's enrollment decides who gets them, so put exclusions in the workflow's criteria. HubSpot also leaves out unengaged, bounced and quarantined contacts on its own. See <a href="../resend-email-to-unengaged/">marketing email deliverability</a> for why a send reaches fewer people than the segment.</p>
+        <p>Replies go to the From address unless you add a custom reply-to address. Each email has one reply-to, so use a shared or distribution address when several people need replies. To log replies, connect that inbox to HubSpot. Some mail providers still send out-of-office and other automatic replies to the original From address.</p>
+
+        <h2>4. Preview and test</h2>
+        <p>Open <strong>Preview &amp; test</strong> in the editor. The menu has <strong>Preview as a contact</strong>, <strong>Preview in an email client</strong> and <strong>Preview web version</strong> (1), plus <strong>Send test email</strong> (2) and <strong>Copy shareable link</strong> for reviewers who do not log in.</p>
+        <figure class="shot"><a href="preview-menu.webp"><img src="preview-menu.webp" alt="Preview and test menu with Preview as a contact, Preview in an email client, Preview web version, Send test email and Copy shareable link" width="800" height="824" loading="lazy"></a><figcaption>Preview options (1) and Send test email (2).</figcaption></figure>
+        <p>In the test dialog you can pick a contact to send it as, which shows their tokens and smart content in a real inbox. HubSpot's KB says test emails come from noreply@hubspot.com with the From name Marketing Email Preview Send. That is normal and not what your contacts will see.</p>
+        <p>What to check on every test: token defaults, smart content for each audience, every link, the footer address, and how the email looks in Outlook and Gmail with the fallback font.</p>
+
+        <h2>5. A/B tests</h2>
+        <p>Click <strong>A/B test</strong> at the top of the editor (1) to create version B. Then set:</p>
+        <figure class="shot"><a href="ab-test.webp"><img src="ab-test.webp" alt="Marketing email editor with an A/B test button and the Send to and Don't send to fields" width="800" height="824" loading="lazy"></a><figcaption>A/B test (1) and the recipients summary (2).</figcaption></figure>
+        <ul>
+          <li><strong>How many recipients should receive the A/B test</strong>: that share gets A and B, and everyone else gets the winner.</li>
+          <li><strong>Winning metric</strong>: open rate, click rate or click-through rate. Pick click rate. Opens are distorted by privacy features and scanners.</li>
+          <li><strong>Test length</strong> in hours.</li>
+          <li><strong>Fallback version</strong>: sent to the rest if the result is inconclusive.</li>
+        </ul>
+        <p>It needs Marketing Hub Professional or Enterprise, and HubSpot recommends at least 1,000 contacts for useful results. Change one thing per test, such as the subject line or one block, so you know what made the difference. Automated emails can be A/B tested through workflows.</p>
+
+        <h2>6. Approvals</h2>
+        <p>With Enterprise, you can require approval before marketing emails are published. Turn it on under <strong>Settings, Approvals</strong>: web content (1), marketing (2), and notifications to Slack or Teams (3).</p>
+        <figure class="shot"><a href="approvals.webp"><img src="approvals.webp" alt="Approvals settings with Web content and Marketing toggles and the Slack or Teams notification banner highlighted" width="800" height="553" loading="lazy"></a><figcaption>Web content (1), Marketing (2), and approval notifications (3).</figcaption></figure>
+        <p>Only assigned approvers can publish pending content. RSS and blog subscription emails need approval once, not on every send. Name more than one approver so a vacation does not stop the newsletter.</p>
+
+        <h2>7. Schedule and cancel</h2>
+        <p>Emails can go out now, at a set time, or by each recipient's time zone. The email list (2) shows scheduled, sent and draft emails.</p>
+        <figure class="shot"><a href="email-index.webp"><img src="email-index.webp" alt="Marketing Email page with the email tracking warning banner and the status tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The tracking banner (1) and the email status tabs (2).</figcaption></figure>
+        <ul>
+          <li><strong>Scheduled (including time zone sends):</strong> open the email, go to the <strong>Schedule</strong> tab, and select <strong>Send now</strong>. HubSpot's KB gives this as the way to cancel the scheduled send.</li>
+          <li><strong>Still processing:</strong> on the performance page, <strong>Actions, Cancel processing</strong>. Contacts who already got it keep it.</li>
+          <li><strong>Finished:</strong> it cannot be cancelled.</li>
+        </ul>
+        <p>To finish a cancelled send without emailing anyone twice, clone the email and put the segment of contacts who were already sent the original in <strong>Don't send to</strong>.</p>
+
+        <h2>8. Automation after the send</h2>
+        <p>Simple workflows inside the email editor can act on what recipients do, for example adding people who clicked to a segment, then waiting, sending a follow-up, notifying a teammate or creating a task. HubSpot redesigned this in May 2026 with templates and inline setup in the editor, for Marketing Hub Starter and above. More than one simple workflow per email needs Professional or Enterprise, and cloning an email can copy its simple workflows. For one-to-one sales follow-up, use <a href="../sequence-settings-and-unenrollment/">sequences</a> instead.</p>
+        <p>For a blog hosted outside HubSpot, an <strong>RSS email</strong> sends subscribers new posts from the feed. Featured images are not added automatically, so include them in the feed, and each send only includes posts that are new since the last one.</p>
+
+        <h2>9. Transactional email</h2>
+        <p>Receipts, invoices, account signups and password changes are transactional: relationship emails triggered by something the recipient did. The <strong>Transactional Email Add-On</strong> sends them from a dedicated IP address that carries only transactional email, which HubSpot says helps manage your domain reputation for inbox placement. It needs Marketing Hub Professional or Enterprise and is bought through your Customer Success Manager or sales rep. You can send three ways:</p>
+        <ul>
+          <li>from the email tool, directly or in a workflow,</li>
+          <li>the single-send API, or</li>
+          <li>the SMTP API.</li>
+        </ul>
+        <figure class="shot"><a href="emails.webp"><img src="emails.webp" alt="Marketing Email list with tabs and emails" width="738" height="780" loading="lazy"></a><figcaption>Transactional emails live in the same email tool: tabs (1) and emails (2).</figcaption></figure>
+        <p>It is not a loophole. Keep the content to the transaction. A promotion inside a receipt still needs marketing consent, and marketing email on a dedicated IP needs the separate dedicated IP add-on.</p>
+
+        <h2>10. What is changing for 2027</h2>
+        <ul>
+          <li><strong>AI-written emails.</strong> HubSpot's Fall 2026 Spotlight introduced nurture emails written for each recipient. It runs on HubSpot credits, see <a href="../nurture-agent-credits/">nurture agent credits</a>. The testing and approval steps above matter more, not less, when the copy is generated.</li>
+          <li><strong>The editor spreads.</strong> In June 2026 the drag and drop marketing email editor became available for help desk Ticket Received and Ticket Closed messages without a Marketing Hub subscription, so service teams will meet the same editor.</li>
+          <li><strong>Mailbox rules keep tightening.</strong> Gmail and Outlook.com already require SPF, DKIM, DMARC and one-click unsubscribe from bulk senders. See <a href="../resend-email-to-unengaged/">deliverability</a> for the details.</li>
+          <li><strong>Programmable emails and the API move to dated versions.</strong> Any script using the single-send or marketing email APIs should plan for HubSpot's date-based API versions. See <a href="../hubspot-api-rate-limits/">API rate limits and versioning</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>My test email came from noreply@hubspot.com. Is my From address broken?</h3>
+        <p>No. Test sends always use that address and the From name Marketing Email Preview Send. Check the real From line in the editor header or send to a small test segment instead.</p>
+        <h3>Can I stop an email that is already going out?</h3>
+        <p>Yes, while it is still processing: performance page, <strong>Actions, Cancel processing</strong>. Anyone who already received it keeps it.</p>
+        <h3>Why is my custom font showing as Arial in Gmail?</h3>
+        <p>Gmail and Outlook do not load custom fonts in email. They show your fallback. Choose a fallback that looks close and check it in the client preview.</p>
+        <h3>Can I exclude a segment from an automated email?</h3>
+        <p>Not in the email. Add the exclusion to the workflow's enrollment or as a branch before the send action.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/transactional-email-vs-operational-email/14007">HubSpot Community question: Transactional email vs Operational email</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/create-and-send-marketing-emails">HubSpot Knowledge Base: Create and send marketing emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/edit-email-footer-addresses">HubSpot Knowledge Base: Edit email footer addresses</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/use-fonts-in-hubspot">HubSpot Knowledge Base: Use fonts in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/add-a-personalization-link-to-a-button-or-image-in-marketing-emails">HubSpot Knowledge Base: Personalize links in marketing emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/ctas/add-ctas-to-your-emails">HubSpot Knowledge Base: Add CTAs to your content</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/create-programmable-emails">HubSpot Knowledge Base: Create programmable emails</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/features/data-driven-content/emails-with-programmable-content">HubSpot developer docs: Emails with programmable content</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/exclude-specific-lists-or-contacts-from-receiving-a-marketing-email">HubSpot Knowledge Base: Exclude segments or contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/add-a-custom-reply-to-address-to-your-marketing-email">HubSpot Knowledge Base: Add custom reply-to addresses</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/send-a-test-marketing-email">HubSpot Knowledge Base: Send a test marketing email</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/run-an-a/b-test-on-your-marketing-email">HubSpot Knowledge Base: Run A/B tests for marketing emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/request-approval-to-send-a-marketing-email">HubSpot Knowledge Base: Request approval to send a marketing email</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/cancel-a-scheduled-or-processing-marketing-email">HubSpot Knowledge Base: Cancel a scheduled or processing marketing email</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/use-automation-with-marketing-emails">HubSpot Knowledge Base: Use automation with emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/send-blog-subscription-emails-for-external-blogs-using-rss-feeds">HubSpot Knowledge Base: RSS emails for external blogs</a></li>
           <li><a href="https://knowledge.hubspot.com/marketing-email/send-transactional-emails">HubSpot Knowledge Base: Send transactional emails</a></li>
-          <li><a href="https://knowledge.hubspot.com/marketing-email/connect-a-dedicated-ip-address-for-sending-emails">HubSpot Knowledge Base: Connect a dedicated IP address</a></li>
+          <li><a href="https://community.hubspot.com/t/may-2026-product-updates/150000">HubSpot Community: May 2026 product updates</a></li>
+          <li><a href="https://community.hubspot.com/t/june-2026-product-updates/151744">HubSpot Community: June 2026 product updates</a></li>
+          <li><a href="https://www.hubspot.com/spotlight">HubSpot: Fall 2026 Spotlight</a></li>
+          <li><a href="https://community.hubspot.com/t/transactional-email-vs-operational-email/14007">HubSpot Community: Transactional email vs operational email</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

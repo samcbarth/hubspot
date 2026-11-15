@@ -671,34 +671,6 @@
     <category>Properties</category>
   </item>
   <item>
-    <title>Programmable emails: pull CRM data into marketing emails with HubL</title>
-    <link>https://hubspot.samcbarth.com/articles/programmable-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/programmable-emails/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What programmable emails can read on Professional versus Enterprise, how to enable a module for them, and the recipient limits tied to CRM functions.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Personalization</category>
-  </item>
-  <item>
-    <title>A/B test a HubSpot marketing email: how the test split and winner work</title>
-    <link>https://hubspot.samcbarth.com/articles/email-ab-test/</link>
-    <guid>https://hubspot.samcbarth.com/articles/email-ab-test/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s marketing email A/B test sends two versions to a share of recipients and the winning version to everyone else.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
-    <title>Send a test marketing email and preview it as a real contact</title>
-    <link>https://hubspot.samcbarth.com/articles/send-test-email-preview/</link>
-    <guid>https://hubspot.samcbarth.com/articles/send-test-email-preview/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to preview a HubSpot marketing email as a specific contact, check email clients, and send a test, plus what the test email&#39;s sender looks like.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Manage HubSpot blog authors and tags</title>
     <link>https://hubspot.samcbarth.com/articles/blog-authors-and-tags/</link>
     <guid>https://hubspot.samcbarth.com/articles/blog-authors-and-tags/</guid>
@@ -1050,26 +1022,6 @@
     <category>Forms</category>
   </item>
   <item>
-    <title>Where replies to marketing emails go, and how to log them</title>
-    <link>https://hubspot.samcbarth.com/articles/replies-to-marketing-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/replies-to-marketing-emails/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot custom reply-to addresses route marketing email replies, and why the inbox must be connected for replies to log.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Inbox</category>
-  </item>
-  <item>
-    <title>Put personalization tokens in email links and buttons</title>
-    <link>https://hubspot.samcbarth.com/articles/personalized-links-in-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/personalized-links-in-emails/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot lets image and button links in marketing emails use personalization tokens to send each contact to a different URL.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Personalization</category>
-  </item>
-  <item>
     <title>Unsubscribe links in one-to-one and sequence emails</title>
     <link>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</link>
     <guid>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</guid>
@@ -1081,20 +1033,11 @@
     <category>Consent</category>
   </item>
   <item>
-    <title>Transactional emails in HubSpot: the add-on and when to use it</title>
+    <title>Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email</title>
     <link>https://hubspot.samcbarth.com/articles/transactional-email-add-on/</link>
     <guid>https://hubspot.samcbarth.com/articles/transactional-email-add-on/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
-    <title>Why your custom font doesn&#39;t show in Gmail or Outlook</title>
-    <link>https://hubspot.samcbarth.com/articles/custom-fonts-in-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/custom-fonts-in-email/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Which email clients support custom fonts in HubSpot marketing emails, how fallback fonts work, and where fonts are set.</description>
+    <description>The full send checklist: footer address, fonts and personalized links, programmable email limits, previews and test sends, A/B tests, approvals, cancelling a send, simple workflows and the transactional add-on.</description>
     <category>Marketing Hub</category>
     <category>Email</category>
   </item>
@@ -1395,16 +1338,6 @@
     <category>Content Hub</category>
     <category>Domains</category>
     <category>Website</category>
-  </item>
-  <item>
-    <title>RSS emails for blogs hosted outside HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/rss-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/rss-email/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot RSS emails send new posts from an external blog feed, what&#39;s included, and the featured image caveat.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Blog</category>
   </item>
   <item>
     <title>SSL certificates on HubSpot domains</title>
@@ -1728,15 +1661,6 @@
     <category>Design manager</category>
   </item>
   <item>
-    <title>Cancel a scheduled or sending marketing email</title>
-    <link>https://hubspot.samcbarth.com/articles/cancel-scheduled-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/cancel-scheduled-email/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to cancel a marketing email and why you then need to clone it.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Provision HubSpot users with SCIM</title>
     <link>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</link>
     <guid>https://hubspot.samcbarth.com/articles/scim-user-provisioning/</guid>
@@ -1896,15 +1820,6 @@
     <category>Segments</category>
   </item>
   <item>
-    <title>Exclude segments or contacts from an email</title>
-    <link>https://hubspot.samcbarth.com/articles/exclude-lists-marketing-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/exclude-lists-marketing-email/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How exclusions work on HubSpot marketing emails.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Switch a segment between active and static</title>
     <link>https://hubspot.samcbarth.com/articles/change-segment-type/</link>
     <guid>https://hubspot.samcbarth.com/articles/change-segment-type/</guid>
@@ -1912,16 +1827,6 @@
     <description>What happens when you change a HubSpot segment&#39;s type.</description>
     <category>Smart CRM</category>
     <category>Segments</category>
-  </item>
-  <item>
-    <title>Add embedded CTAs to marketing emails</title>
-    <link>https://hubspot.samcbarth.com/articles/ctas-in-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/ctas-in-emails/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How embedded CTAs work in HubSpot drag and drop emails and on pages.</description>
-    <category>Marketing Hub</category>
-    <category>CTAs</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Limit who can see logged emails</title>
@@ -1999,16 +1904,6 @@
     <category>Marketing Hub</category>
     <category>Forms</category>
     <category>Email</category>
-  </item>
-  <item>
-    <title>Add simple workflows to marketing emails</title>
-    <link>https://hubspot.samcbarth.com/articles/marketing-email-automation/</link>
-    <guid>https://hubspot.samcbarth.com/articles/marketing-email-automation/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How simple workflows inside marketing emails automate follow-up.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Workflows</category>
   </item>
   <item>
     <title>Customize the board view for pipelines</title>
@@ -2216,16 +2111,6 @@
     <description>What Super Admins can set on HubSpot user records.</description>
     <category>Smart CRM</category>
     <category>Users</category>
-  </item>
-  <item>
-    <title>Require approval before marketing emails go out</title>
-    <link>https://hubspot.samcbarth.com/articles/marketing-email-approval/</link>
-    <guid>https://hubspot.samcbarth.com/articles/marketing-email-approval/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot content approvals work for emails and posts.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Approvals</category>
   </item>
   <item>
     <title>Microphone not working on HubSpot calls</title>
@@ -2804,15 +2689,6 @@
     <category>Service Hub</category>
     <category>Tickets</category>
     <category>Pipelines</category>
-  </item>
-  <item>
-    <title>HubSpot marketing email footer addresses: where they are set and why they are required</title>
-    <link>https://hubspot.samcbarth.com/articles/marketing-email-footer-address/</link>
-    <guid>https://hubspot.samcbarth.com/articles/marketing-email-footer-address/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where the business address in HubSpot marketing email footers comes from, how to add or edit a footer address, and the tier needed for multiple office locations.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Join a HubSpot beta from the Product Updates page</title>

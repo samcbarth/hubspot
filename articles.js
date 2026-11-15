@@ -1577,6 +1577,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-footer-address",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "HubSpot marketing email footer addresses: where they are set and why they are required",
     excerpt: "Where the business address in HubSpot marketing email footers comes from, how to add or edit a footer address, and the tier needed for multiple office locations.",
     type: "tip",
@@ -4242,6 +4244,8 @@ var ARTICLES = [
   },
   {
     slug: "programmable-emails",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Programmable emails: pull CRM data into marketing emails with HubL",
     excerpt: "What programmable emails can read on Professional versus Enterprise, how to enable a module for them, and the recipient limits tied to CRM functions.",
     type: "tip",
@@ -4276,6 +4280,8 @@ var ARTICLES = [
   },
   {
     slug: "email-ab-test",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "A/B test a HubSpot marketing email: how the test split and winner work",
     excerpt: "How HubSpot's marketing email A/B test sends two versions to a share of recipients and the winning version to everyone else.",
     type: "tip",
@@ -4346,6 +4352,8 @@ var ARTICLES = [
   },
   {
     slug: "send-test-email-preview",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Send a test marketing email and preview it as a real contact",
     excerpt: "How to preview a HubSpot marketing email as a specific contact, check email clients, and send a test, plus what the test email's sender looks like.",
     type: "tip",
@@ -5895,6 +5903,8 @@ var ARTICLES = [
   },
   {
     slug: "replies-to-marketing-emails",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Where replies to marketing emails go, and how to log them",
     excerpt: "How HubSpot custom reply-to addresses route marketing email replies, and why the inbox must be connected for replies to log.",
     type: "tip",
@@ -5929,6 +5939,8 @@ var ARTICLES = [
   },
   {
     slug: "personalized-links-in-emails",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Put personalization tokens in email links and buttons",
     excerpt: "How HubSpot lets image and button links in marketing emails use personalization tokens to send each contact to a different URL.",
     type: "tip",
@@ -5979,22 +5991,25 @@ var ARTICLES = [
   },
   {
     slug: "transactional-email-add-on",
-    title: "Transactional emails in HubSpot: the add-on and when to use it",
-    excerpt: "What HubSpot's Transactional Email Add-On sends, its dedicated IP, how it differs from marketing email, and how to buy it.",
-    type: "tip",
+    title: "Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email",
+    excerpt: "The full send checklist: footer address, fonts and personalized links, programmable email limits, previews and test sends, A/B tests, approvals, cancelling a send, simple workflows and the transactional add-on.",
+    type: "guide",
     problem: "How to",
     hubs: ["Marketing Hub"],
     features: ["Email"],
-    tier: "Marketing Hub Professional or Enterprise plus the add-on",
-    permissions: "Marketing email access",
-    verified: "2026-10-07",
+    tier: "Marketing Hub (A/B tests need Professional, approvals need Enterprise)",
+    permissions: "Marketing email publish access",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 3,
+    minutes: 13,
     difficulty: "Intermediate",
-    keywords: ["hubspot transactional email", "transactional email add-on", "operational emails hubspot", "dedicated ip transactional"]
+    keywords: ["hubspot transactional email", "transactional email add-on", "operational emails hubspot", "dedicated ip transactional"],
+    validated: "2026-11-15 13:10 ET",
   },
   {
     slug: "custom-fonts-in-email",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Why your custom font doesn't show in Gmail or Outlook",
     excerpt: "Which email clients support custom fonts in HubSpot marketing emails, how fallback fonts work, and where fonts are set.",
     type: "tip",
@@ -7554,6 +7569,8 @@ var ARTICLES = [
   },
   {
     slug: "rss-email",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "RSS emails for blogs hosted outside HubSpot",
     excerpt: "How HubSpot RSS emails send new posts from an external blog feed, what's included, and the featured image caveat.",
     type: "tip",
@@ -10799,6 +10816,8 @@ var ARTICLES = [
   },
   {
     slug: "cancel-scheduled-email",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Cancel a scheduled or sending marketing email",
     excerpt: "How to cancel a marketing email and why you then need to clone it.",
     type: "tip",
@@ -13032,6 +13051,8 @@ var ARTICLES = [
   },
   {
     slug: "exclude-lists-marketing-email",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Exclude segments or contacts from an email",
     excerpt: "How exclusions work on HubSpot marketing emails.",
     type: "tip",
@@ -13118,6 +13139,8 @@ var ARTICLES = [
   },
   {
     slug: "ctas-in-emails",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Add embedded CTAs to marketing emails",
     excerpt: "How embedded CTAs work in HubSpot drag and drop emails and on pages.",
     type: "tip",
@@ -13894,6 +13917,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-automation",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Add simple workflows to marketing emails",
     excerpt: "How simple workflows inside marketing emails automate follow-up.",
     type: "tip",
@@ -17000,6 +17025,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-approval",
+    draft: true,
+    mergedInto: 'transactional-email-add-on',
     title: "Require approval before marketing emails go out",
     excerpt: "How HubSpot content approvals work for emails and posts.",
     type: "tip",
