@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot pipeline rules: stop deals skipping stages or moving backwards - HubSpot Field Notes</title>
-<meta name="description" content="The Pipeline Rules tab in HubSpot deal pipeline settings: limit creation to certain stages, restrict skipping and moving backwards, control editing access, and approvals, plus who can bypass them.">
+<title>HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically - HubSpot Field Notes</title>
+<meta name="description" content="How stage probability drives the weighted amount, every pipeline rule and who can bypass it, deal tags, board view cleanup of stale deals, automatic stage moves with workflows, deleting pipelines, and AI deal progression.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/deal-pipeline-rules/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/deal-pipeline-rules/">
-<meta property="og:title" content="HubSpot pipeline rules: stop deals skipping stages or moving backwards">
-<meta property="og:description" content="The Pipeline Rules tab in HubSpot deal pipeline settings: limit creation to certain stages, restrict skipping and moving backwards, control editing access, and approvals, plus who can bypass them.">
+<meta property="og:title" content="HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically">
+<meta property="og:description" content="How stage probability drives the weighted amount, every pipeline rule and who can bypass it, deal tags, board view cleanup of stale deals, automatic stage moves with workflows, deleting pipelines, and AI deal progression.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/deal-pipeline-rules/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot pipeline rules: stop deals skipping stages or moving backwards",
-      "description": "The Pipeline Rules tab in HubSpot deal pipeline settings: limit creation to certain stages, restrict skipping and moving backwards, control editing access, and approvals, plus who can bypass them.",
+      "headline": "HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically",
+      "description": "How stage probability drives the weighted amount, every pipeline rule and who can bypass it, deal tags, board view cleanup of stale deals, automatic stage moves with workflows, deleting pipelines, and AI deal progression.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/deal-pipeline-rules/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Turn on pipeline rules for a HubSpot deal pipeline",
-      "totalTime": "PT6M",
+      "name": "HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically",
+      "totalTime": "PT11M",
       "step": [
-        {"@type": "HowToStep", "name": "Open pipelines", "text": "Go to Settings, Objects, Deals, and click the Pipelines tab."},
-        {"@type": "HowToStep", "name": "Open the pipeline", "text": "Click the pipeline's name."},
-        {"@type": "HowToStep", "name": "Open Pipeline Rules", "text": "Click the Pipeline Rules tab."},
-        {"@type": "HowToStep", "name": "Toggle the rules", "text": "Turn on the rules you need and choose the stages they apply to."}
+        {"@type": "HowToStep", "name": "Open the pipeline", "text": "Settings, Objects, Deals, Pipelines."},
+        {"@type": "HowToStep", "name": "Set stage probabilities", "text": "Configure tab."},
+        {"@type": "HowToStep", "name": "Add pipeline rules", "text": "Pipeline Rules tab; test as a normal user."},
+        {"@type": "HowToStep", "name": "Create deal tags", "text": "Deal Tags tab."},
+        {"@type": "HowToStep", "name": "Automate stage moves", "text": "Workflow with an Edit record action on Deal stage."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot pipeline rules: stop deals skipping stages or moving backwards", "item": "https://hubspot.samcbarth.com/articles/deal-pipeline-rules/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically", "item": "https://hubspot.samcbarth.com/articles/deal-pipeline-rules/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Pipelines">Pipelines</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
-      <h1>HubSpot pipeline rules: stop deals skipping stages or moving backwards</h1>
-      <p class="dek">If reps drag deals straight from Discovery to Closed Won, pipeline rules make the board follow your process.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically</h1>
+      <p class="dek">Pipeline rules look enforced until a Super Admin tests them. How stages, rules, tags and automation fit together in a HubSpot deal pipeline.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Professional or Enterprise; deal approvals need Sales Hub Enterprise</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit property settings</dd></div>
-        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Sales Hub (approvals need Enterprise; scoped tags and card styling need Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or edit property settings for pipeline setup</dd></div>
+        <div class="fact"><dt>Time</dt><dd>11 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,32 +103,103 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Open a deal pipeline in <span class="ui">Settings</span>, <span class="ui">Objects</span>, <span class="ui">Deals</span>, <span class="ui">Pipelines</span>, then the <strong>Pipeline Rules</strong> tab. The rules are: limit deal creation to specific stages, restrict skipping stages, restrict moving backwards, control deal editing access, and add an approval process. HubSpot says Super Admins, users with edit property settings permission, and pipeline automations can bypass all but approval rules. Moving to a closed stage is still allowed when skipping is restricted.</p>
+          <p>Each deal pipeline in <strong>Settings, Objects, Deals, Pipelines</strong> has four tabs that matter. <strong>Configure</strong> sets stages and their probability, which drives the weighted amount. <strong>Pipeline Rules</strong> limit where deals start, block skipping or moving backwards, lock editing, and add approvals (Sales Hub Enterprise). Super Admins, users who can edit property settings, and automations can bypass every rule except approvals. <strong>Deal Tags</strong> put color labels such as Overdue or Stale on cards. <strong>Automate</strong> runs actions when a deal reaches a stage; to move deals automatically, use a workflow with an Edit record action.</p>
         </div>
 
-        <h2>1. The Pipeline Rules tab</h2>
-        <p>Open <a class="hs-link" data-hs="/pipelines-settings/{portalId}/object/0-3" href="https://app.hubspot.com/l/pipelines-settings/object/0-3"><span class="ui">deal pipeline settings</span></a>, click a pipeline, then <span class="ui">Pipeline Rules</span>. All rules are off in my demo pipeline.</p>
-        <figure class="shot"><a href="rules.webp"><img src="rules.webp" alt="Pipeline Rules tab with the bypass note and the list of rule toggles highlighted" width="800" height="600" loading="lazy"></a><figcaption>The bypass note (1) and the rule toggles (2).</figcaption></figure>
-
-        <h2>2. The rules</h2>
+        <h2>1. Stages and probability</h2>
+        <p>Open a pipeline. The <strong>Configure</strong> tab lists each stage (1) and its probability (2):</p>
+        <figure class="shot"><a href="stages.webp"><img src="stages.webp" alt="Pipeline Configure tab showing seven stages and their probability column" width="800" height="600" loading="lazy"></a><figcaption>Stage names (1) and probability (2).</figcaption></figure>
         <ul>
-          <li><strong>Limit deal creation to specific stages.</strong> Users can only create a new deal in the stages you select.</li>
-          <li><strong>Restrict deals from skipping stages.</strong> Users can only move a deal to the next stage. HubSpot says deals can still skip to a closed stage, and the rule also applies to edits through the API and integrations.</li>
-          <li><strong>Restrict deals from moving backwards.</strong> Once a deal reaches or passes the selected stages, it cannot move back. A deal that is reopened from a closed stage can still move.</li>
-          <li><strong>Control deal editing access.</strong> Limit who can edit deals in certain stages to Super Admins or specific users and teams.</li>
-          <li><strong>Add approval process for deals.</strong> Deals need approval when they reach an approval stage. HubSpot says this needs Sales Hub Enterprise.</li>
+          <li>The weighted amount in board view is each stage's total amount multiplied by its probability.</li>
+          <li>HubSpot's default pipeline uses Appointment scheduled 20%, Qualified to buy 40%, Presentation scheduled 60%, Decision maker bought-in 80%, Contract sent 90%, then Closed won and Closed lost.</li>
+          <li>Won and Lost are what make a stage closed. In the pipelines API, my demo portal's closed stages came back as probability <code>1.0</code> or <code>0.0</code> with <code>isClosed: true</code>; every other stage had <code>isClosed: false</code>.</li>
+        </ul>
+        <p>If a 60% stage closes far less often than that, the weighted pipeline looks better than reality. Agree what each stage means before trusting the numbers. For forecasting, see <a href="../sales-forecast-tool/">the sales forecast</a>.</p>
+
+        <h2>2. Pipeline rules</h2>
+        <p>The <strong>Pipeline Rules</strong> tab has the rule switches (2) and a note on who can bypass them (1):</p>
+        <figure class="shot"><a href="rules.webp"><img src="rules.webp" alt="Pipeline Rules tab with the bypass note and the list of rule toggles highlighted" width="800" height="600" loading="lazy"></a><figcaption>The bypass note (1) and the rule toggles (2).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rule</th><th>Effect</th></tr></thead>
+            <tbody>
+              <tr><td>Limit deal creation to specific stages</td><td>New deals can only start in the stages you pick</td></tr>
+              <tr><td>Restrict deals from skipping stages</td><td>Deals move one stage at a time, but can still jump to a closed stage. Also applies to API and integration edits.</td></tr>
+              <tr><td>Restrict deals from moving backwards</td><td>Once past the selected stages, a deal cannot move back. Reopened deals can still move.</td></tr>
+              <tr><td>Control deal editing access</td><td>Only Super Admins or chosen users and teams can edit deals in certain stages</td></tr>
+              <tr><td>Add approval process for deals</td><td>Deals need approval at an approval stage. Sales Hub Enterprise.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Super Admins, users with permission to edit property settings, and pipeline automations bypass every rule except approvals. Test with a normal user's login before telling the team a rule is enforced.</p>
+
+        <h2>3. Deal tags</h2>
+        <p>The <strong>Deal Tags</strong> tab (1) defines color labels that show on deal cards when conditions are met (2):</p>
+        <figure class="shot"><a href="tags.webp"><img src="tags.webp" alt="Deal Tags tab listing Overdue, Urgent, and Add Contact tags with their conditions" width="800" height="600" loading="lazy"></a><figcaption>The Deal Tags tab (1) and the tags with their conditions (2).</figcaption></figure>
+        <ul>
+          <li>My demo pipeline has Overdue (close date more than 1 day ago), Urgent (close date less than 3 days away), Add Contact (no associated contacts), Stale (created more than 90 days ago) and Next Activity Due Soon.</li>
+          <li>Each tag has a name, optional description, emoji and color, and filters on the deal or associated records (AND inside a group, OR across groups).</li>
+          <li>Starter tags apply to all pipelines; Professional and Enterprise can scope them to one. Creating tags needs Super Admin.</li>
+          <li>The tag property works in saved views, reports, workflows and segments, and as a Deal Tags column.</li>
         </ul>
 
-        <h2>3. Who can get around them</h2>
-        <p>The note at the top of the tab says Super Admins, users with permission to edit property settings, and pipeline automations can bypass all but approval rules. So test with a normal user's login, not your own admin account, before you tell the team it is enforced.</p>
-        <p>For the stage list itself, see <a href="../deal-stage-probability/">deal stage probability</a>.</p>
+        <h2>4. Board view and closing stale deals</h2>
+        <p>Customize board cards from the view configuration icon, <strong>Board settings</strong>, account-wide or for yourself; customizing card appearance needs Professional or Enterprise. To clean up stale deals, filter the board on <strong>Last activity date</strong> (1); tags like Overdue and Stale flag cards to check (2):</p>
+        <figure class="shot"><a href="board-stale.webp"><img src="board-stale.webp" alt="Deals board with the quick filters above the columns and Overdue and Stale tags on cards highlighted" width="800" height="613" loading="lazy"></a><figcaption>Filters (1) and the Overdue and Stale tags on cards (2). Names are blurred.</figcaption></figure>
+        <ol>
+          <li>Open each candidate: last activity date, whether a next activity is scheduled, and the owner.</li>
+          <li>Move it to <strong>Closed Lost</strong> with a <strong>Closed lost reason</strong>, such as Stale. The Deal loss reasons report in the sales analytics suite counts by that reason.</li>
+          <li>For many at once, Ctrl or Cmd-click the cards, then <strong>Edit</strong>.</li>
+          <li>Close rather than delete; deleting removes the record. Tell owners before closing their deals.</li>
+        </ol>
+
+        <h2>5. Move deal stages automatically</h2>
+        <p>The pipeline's <strong>Automate</strong> tab (1) works from the stage outward: templated close date automations (2) and workflows that run when a deal reaches a stage (3).</p>
+        <figure class="shot"><a href="automate.webp"><img src="automate.webp" alt="Pipeline Automate tab with templated deal close date automations and a Create workflows from scratch section" width="781" height="426" loading="lazy"></a><figcaption>The Automate tab (1), templated automations (2), and stage-triggered workflows (3).</figcaption></figure>
+        <p>To move a deal <em>to</em> a stage when something happens, build a deal workflow:</p>
+        <ul>
+          <li><strong>Trigger</strong> on the property that proves progress, plus <strong>Pipeline is</strong> the right pipeline, or deals in other pipelines get the wrong stage.</li>
+          <li><strong>Action:</strong> Edit record, Deal stage.</li>
+          <li><strong>Guard</strong> against moving deals that are already further along.</li>
+        </ul>
+        <p>Automations bypass pipeline rules except approvals. Moving to a closed stage sets the close date to today unless that automation is off, and probability follows the stage unless someone edited it by hand.</p>
+
+        <h2>6. Deleting pipelines</h2>
+        <p>You cannot delete a pipeline that still has records or is used in other tools or integrations. Move records out first with a bulk edit from a view. Custom pipeline limits are shared across objects and do not count each object's default pipeline. Ticket stages are called statuses but work the same way, see <a href="../ticket-pipeline-statuses/">ticket pipelines</a>.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>AI deal progression.</strong> In Agent Hub, Deal progression (2) under Win deals (1) reviews all calls and meetings on a deal, updates CRM data and suggests next steps. It needs a Sales or Service seat on Professional or Enterprise, and some features use HubSpot credits.</li>
+        </ul>
+        <figure class="shot"><a href="agents.webp"><img src="agents.webp" alt="Agent Hub overview with a Win deals card listing Prospecting agent and Deal progression" width="800" height="554" loading="lazy"></a><figcaption>Win deals (1) and Deal progression (2).</figcaption></figure>
+        <ul>
+          <li><strong>Recorded calls feed it.</strong> Deal progression works from transcripts, so call recording and the notetaker matter more. See <a href="../call-recording-consent/">call recording</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>I turned on Restrict skipping stages, but I can still skip.</h3>
+        <p>Super Admins and users who can edit property settings bypass it. Test as a normal user.</p>
+        <h3>Why can a deal jump straight to Closed Lost?</h3>
+        <p>Moving to a closed stage is allowed even when skipping is restricted.</p>
+        <h3>How is the weighted amount calculated?</h3>
+        <p>Each stage's total amount times that stage's probability.</p>
+        <h3>Why can't I delete a pipeline?</h3>
+        <p>It still has records, or another tool or integration uses it.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines">HubSpot Knowledge Base: Set up and manage object pipelines</a></li>
           <li><a href="https://knowledge.hubspot.com/object-settings/set-up-pipeline-rules">HubSpot Knowledge Base: Set up rules for object pipelines</a></li>
           <li><a href="https://knowledge.hubspot.com/object-settings/pipeline-approvals">HubSpot Knowledge Base: Require approvals for deals</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/color-coded-object-tags">HubSpot Knowledge Base: Create color-coded object tags</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/customize-the-redesigned-board-view">HubSpot Knowledge Base: Customize the board view</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/manage-records-in-board-view">HubSpot Knowledge Base: Manage records in board view</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-sales-reports-in-the-sales-analytics-suite">HubSpot Knowledge Base: Sales analytics suite</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/move-deals-forward-with-deal-progression">HubSpot Knowledge Base: Move deals forward with deal progression</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/pipelines/guide">HubSpot developer docs: Pipelines API</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

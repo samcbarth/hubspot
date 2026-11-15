@@ -284,17 +284,6 @@
     <category>AI</category>
   </item>
   <item>
-    <title>Move a deal to the next stage automatically when a property changes</title>
-    <link>https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/</link>
-    <guid>https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Use a deal-based workflow with an Edit record action to set Deal stage from another property, and where the pipeline&#39;s Automate tab fits in.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Workflows</category>
-    <category>Pipelines</category>
-  </item>
-  <item>
     <title>HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads</title>
     <link>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</link>
     <guid>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</guid>
@@ -537,16 +526,6 @@
     <description>What HubSpot multi-account management needs (an Enterprise main account and Super Admin in each), where to set it up, and why the create button can be greyed out.</description>
     <category>Smart CRM</category>
     <category>Account settings</category>
-  </item>
-  <item>
-    <title>Deal progression: AI next steps on deal records</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-progression/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-progression/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s deal progression card does with calls, meetings and emails, what seat it needs, and where it shows in Agent Hub.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-    <category>AI</category>
   </item>
   <item>
     <title>Enroll many contacts in a sequence at once</title>
@@ -886,16 +865,6 @@
     <category>Files</category>
   </item>
   <item>
-    <title>Why you can&#39;t delete a pipeline</title>
-    <link>https://hubspot.samcbarth.com/articles/delete-pipeline/</link>
-    <guid>https://hubspot.samcbarth.com/articles/delete-pipeline/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What blocks deleting a HubSpot ticket or deal pipeline, and how pipeline limits are shared across objects.</description>
-    <category>Smart CRM</category>
-    <category>Service Hub</category>
-    <category>Pipelines</category>
-  </item>
-  <item>
     <title>Get notified about new or assigned tickets</title>
     <link>https://hubspot.samcbarth.com/articles/ticket-notifications/</link>
     <guid>https://hubspot.samcbarth.com/articles/ticket-notifications/</guid>
@@ -1124,17 +1093,6 @@
     <category>Subscriptions</category>
   </item>
   <item>
-    <title>Customize the board view for pipelines</title>
-    <link>https://hubspot.samcbarth.com/articles/board-view-redesigned/</link>
-    <guid>https://hubspot.samcbarth.com/articles/board-view-redesigned/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot board settings and card contents are configured.</description>
-    <category>Smart CRM</category>
-    <category>Sales Hub</category>
-    <category>Pipelines</category>
-    <category>Views</category>
-  </item>
-  <item>
     <title>HubSpot with Outlook and Office 365: which add-in, connection errors, admin consent and GCC High</title>
     <link>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</link>
     <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</guid>
@@ -1335,15 +1293,6 @@
     <category>Deals</category>
   </item>
   <item>
-    <title>How to close out stale HubSpot deals safely: check activity first, then use a reason</title>
-    <link>https://hubspot.samcbarth.com/articles/close-stale-deals/</link>
-    <guid>https://hubspot.samcbarth.com/articles/close-stale-deals/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-  </item>
-  <item>
     <title>Deal missing from HubSpot revenue attribution? A deal needs four things</title>
     <link>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</link>
     <guid>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</guid>
@@ -1407,31 +1356,11 @@
     <category>Deals</category>
   </item>
   <item>
-    <title>HubSpot pipeline rules: stop deals skipping stages or moving backwards</title>
+    <title>HubSpot deal pipelines: stage probability, pipeline rules, deal tags, closing stale deals and moving stages automatically</title>
     <link>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The Pipeline Rules tab in HubSpot deal pipeline settings: limit creation to certain stages, restrict skipping and moving backwards, control editing access, and approvals, plus who can bypass them.</description>
-    <category>Sales Hub</category>
-    <category>Pipelines</category>
-    <category>Deals</category>
-  </item>
-  <item>
-    <title>HubSpot deal stage probability: what the percentage does and where to change it</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-stage-probability/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-stage-probability/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Every HubSpot deal stage has a probability. Where to see and change it in pipeline settings, HubSpot&#39;s default stages and percentages, and how it drives the weighted amount on the board.</description>
-    <category>Sales Hub</category>
-    <category>Pipelines</category>
-    <category>Deals</category>
-  </item>
-  <item>
-    <title>HubSpot deal tags: color-coded labels for Overdue, Stale, and anything you can filter</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot deal tags (object tags) work: where to set them per pipeline, the conditions behind them, the tags in my demo pipeline, tier differences, and where else the tag property can be used.</description>
+    <description>How stage probability drives the weighted amount, every pipeline rule and who can bypass it, deal tags, board view cleanup of stale deals, automatic stage moves with workflows, deleting pipelines, and AI deal progression.</description>
     <category>Sales Hub</category>
     <category>Pipelines</category>
     <category>Deals</category>

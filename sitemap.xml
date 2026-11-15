@@ -32,7 +32,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-credits-usage-limits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/nurture-agent-credits/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/move-deal-stage-automatically/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/agent-hub-context/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</loc><lastmod>2026-11-15</lastmod></url>
@@ -57,7 +56,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/custom-events-api/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/multi-account-management/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/deal-progression/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/enroll-list-in-sequence/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/sequences-out-of-office-replies/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dropdown-vs-multiple-checkboxes/</loc><lastmod>2026-11-15</lastmod></url>
@@ -92,7 +90,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/slack-integration/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/clone-records/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/replace-file-keep-url/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/delete-pipeline/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/ticket-notifications/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/nps-surveys/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/customer-agent-ai/</loc><lastmod>2026-10-07</lastmod></url>
@@ -117,7 +114,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/campaign-influenced-contacts/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/board-view-redesigned/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/blog-publish-date/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/surveymonkey-integration/</loc><lastmod>2026-10-07</lastmod></url>
@@ -138,16 +134,13 @@
   <url><loc>https://hubspot.samcbarth.com/articles/campaign-zero-sessions/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubsql-beta-api/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/close-stale-deals/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/active-vs-static-segments/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/workflow-enrollment-triggers-explained/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-saved-views-and-filters/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/deal-stage-probability/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-notification-preferences/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/customize-lifecycle-stages/</loc><lastmod>2026-10-03</lastmod></url>
