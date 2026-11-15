@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Set up lead scoring in HubSpot: engagement, fit, and combined scores - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.">
+<title>HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot&#x27;s lead scoring tool builds engagement, fit and combined scores, score limits, decay and AI scoring, and how the separate leads object and its pipeline work with scores.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/lead-scoring-setup/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/lead-scoring-setup/">
-<meta property="og:title" content="Set up lead scoring in HubSpot: engagement, fit, and combined scores">
-<meta property="og:description" content="How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.">
+<meta property="og:title" content="HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines">
+<meta property="og:description" content="How HubSpot&#x27;s lead scoring tool builds engagement, fit and combined scores, score limits, decay and AI scoring, and how the separate leads object and its pipeline work with scores.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/lead-scoring-setup/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Set up lead scoring in HubSpot: engagement, fit, and combined scores",
-      "description": "How HubSpot's lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.",
+      "headline": "HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines",
+      "description": "How HubSpot's lead scoring tool builds engagement, fit and combined scores, score limits, decay and AI scoring, and how the separate leads object and its pipeline work with scores.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Create a lead score",
-      "totalTime": "PT6M",
+      "name": "HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Open Lead Scoring", "text": "Go to Marketing, Lead Scoring and start from scratch or with AI."},
-        {"@type": "HowToStep", "name": "Pick the score type", "text": "Choose engagement, fit, or combined."},
-        {"@type": "HowToStep", "name": "Add criteria", "text": "Set event-based engagement criteria and property-based fit criteria with points."},
-        {"@type": "HowToStep", "name": "Set thresholds", "text": "Define High, Medium and Low ranges, or the A to C and 1 to 3 bands for combined scores."}
+        {"@type": "HowToStep", "name": "Open Lead Scoring", "text": "Marketing, Lead Scoring, Create score."},
+        {"@type": "HowToStep", "name": "Pick the score type", "text": "Engagement, fit or combined."},
+        {"@type": "HowToStep", "name": "Set limits and groups", "text": "Choose a score limit and group maximums."},
+        {"@type": "HowToStep", "name": "Set thresholds", "text": "High, Medium, Low or A1 to C3."},
+        {"@type": "HowToStep", "name": "Create leads for sales", "text": "Workflow Create record action when a score crosses the threshold."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Set up lead scoring in HubSpot: engagement, fit, and combined scores", "item": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines", "item": "https://hubspot.samcbarth.com/articles/lead-scoring-setup/" }
       ]
     }
   ]
@@ -88,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Contacts">Contacts</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
-      <h1>Set up lead scoring in HubSpot: engagement, fit, and combined scores</h1>
-      <p class="dek">A score is only useful if sales trusts it. Start with the score type, then the thresholds, then the places reps will see it.</p>
+      <h1>HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines</h1>
+      <p class="dek">Two different features are called leads in HubSpot. One scores records, the other tracks a sales attempt. How each works and how to connect them.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Contact scores need Marketing Hub; AI-built scores need Marketing Hub Enterprise</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Lead scoring access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub or Sales Hub Professional or Enterprise (leads need Sales Hub Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit permissions for Lead Scoring; an assigned Sales seat for some lead creation</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,33 +103,78 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's lead scoring tool builds three kinds of score. <strong>Engagement</strong> scores count actions such as site visits, CTA clicks and email opens. <strong>Fit</strong> scores use property values such as job title or company size. <strong>Combined</strong> scores do both and label records A1 to C3, where the letter is fit and the number is engagement. Contact scores need Marketing Hub. Each score creates properties you can use in views, segments and workflows.</p>
+          <p>HubSpot has two separate tools that both get called "leads". <strong>Lead scoring</strong> (<strong>Marketing, Lead Scoring</strong>, Marketing Hub or Sales Hub Professional and up) gives contacts, companies or deals a number: an <strong>engagement</strong> score from actions, a <strong>fit</strong> score from property values, or a <strong>combined</strong> score labelled A1 to C3. The <strong>leads object</strong> (Sales Hub Professional and up) is a separate record attached to a contact or company that tracks one sales attempt through New, Attempting, Connected, Qualified and Disqualified. Use the score to decide who is ready, and a lead record to work them.</p>
         </div>
 
-        <h2>1. Where it lives</h2>
-        <p>Go to <span class="ui">Marketing &gt; Lead Scoring</span>. With no scores yet, my demo portal offers <span class="ui">Start from scratch</span> or <span class="ui">Start with AI</span>.</p>
+        <h2>1. Lead scoring: start a score</h2>
+        <p>Go to <strong>Marketing, Lead Scoring</strong>. With no scores yet, HubSpot offers <strong>Start from scratch</strong> or <strong>Start with AI</strong> (1). You need Edit permissions for Lead Scoring, and the kinds and number of scores you can create depend on your subscription.</p>
         <figure class="shot"><a href="start.webp"><img src="start.webp" alt="Lead Scoring start screen with Start from scratch and Start with AI buttons" width="800" height="553" loading="lazy"></a><figcaption>The two ways to start (1) and what the tool is for (2).</figcaption></figure>
 
-        <h2>2. The three score types</h2>
+        <h2>2. Engagement, fit or combined</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Based on</th><th>Labels</th></tr></thead>
+            <tbody>
+              <tr><td>Engagement</td><td>Actions: website visits, subscribing, CTA clicks, marketing email opens and similar events</td><td>High, Medium, Low</td></tr>
+              <tr><td>Fit</td><td>Property values: job title, company size, annual revenue</td><td>High, Medium, Low</td></tr>
+              <tr><td>Combined</td><td>Both. Stores a total, a fit value and an engagement value</td><td>A1 to C3</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>In combined scores the letter is fit and the number is engagement: <strong>A1</strong> is a great fit and very engaged, <strong>C1</strong> is very engaged but a poor fit, <strong>A3</strong> is a great fit who has not engaged yet. Each score creates a property, and setting thresholds adds a color-coded threshold property, so you can use scores in views, segments, workflows and reports.</p>
+
+        <h2>3. Build the rules</h2>
+        <ol>
+          <li>Click <strong>Create score</strong> and pick the object and score type.</li>
+          <li>Choose a <strong>score limit</strong>: from -100 to 100 up to -10,000 to 10,000. Negative points are allowed, for example for a competitor's email domain.</li>
+          <li>Add groups of rules. Each group can have its own maximum (100 points by default), so one signal cannot dominate the score.</li>
+          <li>Set thresholds for High, Medium and Low (or A to C and 1 to 3).</li>
+        </ol>
+        <p><strong>Score decay</strong> is available for engagement and combined event groups. It lowers an event's points as it ages, at intervals of 1, 3, 6 or 12 months (30-day months). It does not work with segment membership criteria.</p>
+        <p>When you turn a score on or edit it, HubSpot scores existing records retroactively from current and historical data, then keeps updating as properties and actions change.</p>
+        <p><strong>AI scoring</strong> for contact engagement and fit scores needs Marketing Hub Enterprise and at least 50 contacts, 25 converted and 25 not.</p>
+
+        <h2>4. The leads object</h2>
+        <p>A lead record cannot exist on its own: it always has a primary association with a contact or company. The leads index has default views for All leads, Open leads, Target Accounts, Recent Activity and Not In Sequence (1), and filters by lead stage (2):</p>
+        <figure class="shot"><a href="leads.webp"><img src="leads.webp" alt="Leads index with All leads, Open leads, Target Accounts, Recent Activity and Not In Sequence views and Lead stage filters" width="800" height="553" loading="lazy"></a><figcaption>Lead views (1) and lead filters (2).</figcaption></figure>
         <ul>
-          <li><strong>Engagement:</strong> actions and interactions, such as visiting your website, subscribing, clicking a CTA, or opening a marketing email.</li>
-          <li><strong>Fit:</strong> property values, such as job title, company size or annual revenue.</li>
-          <li><strong>Combined:</strong> both. HubSpot stores a total, a fit value and an engagement value.</li>
+          <li><strong>Create leads</strong> from the contacts index (select contacts, <strong>Create leads</strong>), the leads index, the sales workspace's Leads tab, or a workflow's <strong>Create record</strong> action. Creating from the contacts index and the sales workspace needs an assigned Sales seat.</li>
+          <li><strong>Owner:</strong> with <strong>Sync lead owner with contact or company owner</strong> on, users only see and create leads for records they own.</li>
+          <li><strong>Pipeline automation</strong> (<strong>Settings, Objects, Leads, Pipelines, Automate</strong>) can move leads to the next stage when reps act, for example emailing a New lead moves it to Attempting, and can create a follow-up lead. Moving a lead to a qualified stage can prompt deal creation.</li>
         </ul>
-        <p>Score limits run from -100 to 100 up to -10,000 to 10,000, so negative points are allowed. Use them for signals like a competitor email domain.</p>
 
-        <h2>3. Thresholds</h2>
-        <p>Engagement and fit scores get High, Medium and Low labels, for example 70 to 100 as High. Combined scores get A1 through C3: A is high fit, C is low fit, 1 is high engagement, 3 is low. A C1 contact is very engaged but a poor fit.</p>
+        <h2>5. How the two fit together</h2>
+        <ul>
+          <li><strong>Lifecycle stage</strong> describes the contact or company. A <strong>lead record</strong> describes one attempt to sell to them. One contact can get a new lead after an earlier one was disqualified.</li>
+          <li>To hand scored contacts to sales, a workflow can enroll contacts whose combined score reaches A1 or A2 and create a lead with the <strong>Create record</strong> action, so they show up in the sales workspace.</li>
+        </ul>
 
-        <h2>4. Use it</h2>
-        <p>Build a saved view or segment of High or A1 records, and agree with sales what happens when a record crosses the line.</p>
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Scoring covers deals.</strong> Scores work on contacts, companies and deals. HubSpot's own example is a deal score built from the company's industry and whether associated contacts are decision makers who recently met your sales team.</li>
+          <li><strong>AI-built scores.</strong> <strong>Start with AI</strong> drafts rules, and AI scoring (Enterprise) learns from your converted contacts.</li>
+          <li><strong>Leads are the sales workspace's unit of work.</strong> The sales workspace's Leads tab runs on lead records, so teams that only use lifecycle stages do not get those views.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>What does C1 mean?</h3>
+        <p>Low fit (C), high engagement (1). Very active, but not your target profile.</p>
+        <h3>Can a score go negative?</h3>
+        <p>Yes. Score limits run from a negative minimum, such as -100, to the matching maximum.</p>
+        <h3>Do I need the leads object if I use lifecycle stages?</h3>
+        <p>Not to track stage. But the sales workspace's Leads tab and lead pipeline automation work on lead records.</p>
+        <h3>Why did old activity raise scores right after I created one?</h3>
+        <p>New and edited scores evaluate records retroactively. Use score decay if old events should count less.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot Knowledge Base: Overview of the lead scoring tool</a></li>
           <li><a href="https://knowledge.hubspot.com/scoring/build-lead-scores">HubSpot Knowledge Base: Build lead scores</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/create-leads">HubSpot Knowledge Base: Create leads</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/set-up-lead-pipeline-automation">HubSpot Knowledge Base: Set up lead pipeline automation</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-lead-properties">HubSpot Knowledge Base: HubSpot's default lead properties</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

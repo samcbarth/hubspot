@@ -102,11 +102,11 @@
     <category>Campaigns</category>
   </item>
   <item>
-    <title>Set up lead scoring in HubSpot: engagement, fit, and combined scores</title>
+    <title>HubSpot lead scoring and the leads object: engagement, fit and A1 to C3 scores, and lead pipelines</title>
     <link>https://hubspot.samcbarth.com/articles/lead-scoring-setup/</link>
     <guid>https://hubspot.samcbarth.com/articles/lead-scoring-setup/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s lead scoring tool works: engagement versus fit scores, combined A1 to C3 labels, score limits, and where scores show up once they exist.</description>
+    <description>How HubSpot&#39;s lead scoring tool builds engagement, fit and combined scores, score limits, decay and AI scoring, and how the separate leads object and its pipeline work with scores.</description>
     <category>Marketing Hub</category>
     <category>Sales Hub</category>
     <category>Contacts</category>
@@ -275,16 +275,6 @@
     <category>Marketing Hub</category>
     <category>Website</category>
     <category>Pages</category>
-  </item>
-  <item>
-    <title>The HubSpot leads object: what a lead record is and how lead stages move</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-leads-object/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-leads-object/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s leads object differs from lifecycle stage, the default lead pipeline, creating leads from contacts, and pipeline automation.</description>
-    <category>Sales Hub</category>
-    <category>Pipelines</category>
-    <category>Contacts</category>
   </item>
   <item>
     <title>HubSpot payment links: sell a product without a quote</title>
