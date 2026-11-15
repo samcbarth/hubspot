@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot data privacy settings (GDPR): what turning them on changes - HubSpot Field Notes</title>
-<meta name="description" content="What the Data privacy settings toggle in HubSpot does: legal basis tracking, unsubscribe links on sales email, tracking limits for contacts without a legal basis, and who can turn it on.">
+<title>HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup - HubSpot Field Notes</title>
+<meta name="description" content="What turning on HubSpot&#x27;s data privacy settings changes, the difference between normal, bulk and GDPR deletes, the GDPR delete API call, and how Delete inactive contacts automatically decides who is inactive.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/">
-<meta property="og:title" content="HubSpot data privacy settings (GDPR): what turning them on changes">
-<meta property="og:description" content="What the Data privacy settings toggle in HubSpot does: legal basis tracking, unsubscribe links on sales email, tracking limits for contacts without a legal basis, and who can turn it on.">
+<meta property="og:title" content="HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup">
+<meta property="og:description" content="What turning on HubSpot&#x27;s data privacy settings changes, the difference between normal, bulk and GDPR deletes, the GDPR delete API call, and how Delete inactive contacts automatically decides who is inactive.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot data privacy settings (GDPR): what turning them on changes",
-      "description": "What the Data privacy settings toggle in HubSpot does: legal basis tracking, unsubscribe links on sales email, tracking limits for contacts without a legal basis, and who can turn it on.",
+      "headline": "HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup",
+      "description": "What turning on HubSpot's data privacy settings changes, the difference between normal, bulk and GDPR deletes, the GDPR delete API call, and how Delete inactive contacts automatically decides who is inactive.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Turn on data privacy settings in HubSpot",
-      "totalTime": "PT7M",
+      "name": "HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup",
+      "totalTime": "PT8M",
       "step": [
-        {"@type": "HowToStep", "name": "Open Privacy & Consent", "text": "Go to Settings, Privacy & Consent, Setup."},
-        {"@type": "HowToStep", "name": "Read what will happen", "text": "Expand What will happen in my account."},
-        {"@type": "HowToStep", "name": "Turn it on", "text": "Toggle Data privacy settings on."},
-        {"@type": "HowToStep", "name": "Review legal text", "text": "Review the text for your legal reasons for storing data."}
+        {"@type": "HowToStep", "name": "Turn on data privacy settings", "text": "Settings, Privacy and Consent."},
+        {"@type": "HowToStep", "name": "Choose the delete type", "text": "Normal, bulk, or GDPR."},
+        {"@type": "HowToStep", "name": "Export before bulk deletes", "text": "Keep a copy past 90 days."},
+        {"@type": "HowToStep", "name": "Use the API for requests", "text": "POST to contacts gdpr-delete with idProperty email."},
+        {"@type": "HowToStep", "name": "Set a retention policy", "text": "Delete inactive contacts automatically."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot data privacy settings (GDPR): what turning them on changes", "item": "https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup", "item": "https://hubspot.samcbarth.com/articles/gdpr-data-privacy-settings/" }
       ]
     }
   ]
@@ -88,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Privacy">Privacy</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span><span class="badge">Marketing Hub</span></div>
-      <h1>HubSpot data privacy settings (GDPR): what turning them on changes</h1>
-      <p class="dek">One toggle in Privacy & Consent changes how HubSpot handles tracking and consent across the account. Know what it changes before you flip it.</p>
+      <h1>HubSpot GDPR settings and deleting contacts: data privacy settings, GDPR delete, bulk delete and inactive contact cleanup</h1>
+      <p class="dek">A normal delete can be undone for 90 days, a GDPR delete never. How HubSpot&#x27;s privacy settings, deletes and retention policy fit together.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit account defaults</dd></div>
-        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin for privacy settings; bulk delete permission for bulk deletes</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,34 +103,81 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Go to <span class="ui">Settings</span>, <span class="ui">Privacy &amp; Consent</span>. Under GDPR &amp; regional settings (EU, U.K., Canada, Brazil), the <strong>Data privacy settings</strong> toggle turns on tools for tracking legal basis and consent. HubSpot lists what changes: unsubscribe links are turned on for one-to-one and sequence emails, the Sales extension shows banners on contacts without a legal basis, and open and click tracking is not added for contacts with no legal basis. For EU-hosted accounts it is on by default. It is off in my demo. This is not legal advice.</p>
+          <p>Turn on <strong>Data privacy settings</strong> in <strong>Settings, Privacy &amp; Consent</strong> if you market to people in the EU, U.K., Canada or Brazil (it is on by default for accounts with data stored in the EU). That adds legal basis tracking, unsubscribe links in one-to-one email, and stops open and click tracking for contacts without a legal basis. For deletion there are three routes: a normal delete (restorable for 90 days), a <strong>GDPR delete</strong> (permanent, no recycle bin, also available through the API), and <strong>Delete inactive contacts automatically</strong>, which clears contacts that have been inactive longer than the period you set on the 1st of each month.</p>
         </div>
 
-        <h2>1. The Setup tab</h2>
-        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/data-privacy" href="https://app.hubspot.com/l/settings/data-privacy"><span class="ui">Privacy &amp; Consent</span></a>. My demo login cannot change it, so a yellow banner sits at the top.</p>
+        <h2>1. Data privacy settings</h2>
+        <p>Open <strong>Settings, Privacy &amp; Consent</strong>. Under GDPR and regional settings, the regions covered are listed (1), the <strong>Data privacy settings</strong> switch turns the tools on (2), and the legal reasons card explains what it does (3). It is off in my demo portal.</p>
         <figure class="shot"><a href="setup.webp"><img src="setup.webp" alt="Data Privacy and Consent setup tab with the regional badges, the Data privacy settings toggle, and the legal reasons card highlighted" width="800" height="553" loading="lazy"></a><figcaption>Regions (1), the Data privacy settings toggle (2), and the legal reasons text (3).</figcaption></figure>
-
-        <h2>2. What turning it on changes</h2>
+        <p>Turning it on:</p>
         <ul>
-          <li>Unsubscribe links turn on for one-to-one and sequence emails, for users who do not have them on yet.</li>
-          <li>The HubSpot Sales extension or add-in shows banners on contacts without a legal basis for processing.</li>
-          <li>You can add consent and legal basis through imports, bulk edit, or manual creation.</li>
-          <li>Open and click tracking is not added for contacts without a legal basis. See <a href="../never-log-list/">email tracking consent</a>.</li>
+          <li>turns on unsubscribe links in one-to-one and sequence emails for users who do not have them yet,</li>
+          <li>shows banners in the HubSpot Sales extension or add-in on contacts with no legal basis for processing,</li>
+          <li>lets you record consent and legal basis through imports, bulk edit or manual entry, and</li>
+          <li>stops open and click tracking being added for contacts with no legal basis.</li>
+        </ul>
+        <p>Turning it off does not turn off the cookie consent banner, which is a separate setting, see <a href="../google-consent-mode/">cookies and the consent banner</a>. HubSpot says your legal team is the right source for compliance advice.</p>
+
+        <h2>2. Delete contacts: normal, bulk, or GDPR</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Delete type</th><th>Where</th><th>Recoverable?</th></tr></thead>
+            <tbody>
+              <tr><td>Normal delete</td><td>The record, or select records in a view and choose Delete</td><td>Yes, for 90 days from Restore records</td></tr>
+              <tr><td>Bulk delete from an index page</td><td>Select records, <strong>More, Delete</strong> (needs bulk delete permission)</td><td>Yes, for 90 days</td></tr>
+              <tr><td>GDPR or permanent delete</td><td>A permanent (GDPR) delete, or the API</td><td>No. Gone for users immediately, purged from HubSpot within 30 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="shot"><a href="more.webp"><img src="more.webp" alt="Contacts bulk actions menu with Delete" width="800" height="824" loading="lazy"></a><figcaption>Delete in the bulk actions menu (1). I did not delete anything.</figcaption></figure>
+        <p>Export the view before a bulk delete so you have a copy past the 90 days. See <a href="../restore-deleted-activity/">restoring deleted data</a> and <a href="../export-records-from-a-view/">exports</a>.</p>
+
+        <h2>3. GDPR delete through the API</h2>
+        <p>The contacts API has a GDPR delete that permanently removes a contact and associated content. Set <code>idProperty</code> to <code>email</code> to identify the contact by email address instead of record ID:</p>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/contacts/gdpr-delete
+{
+  "objectId": "user@example.com",
+  "idProperty": "email"
+}</code></pre>
+        <p>Use it when deletion requests arrive through another system, such as a privacy request form or ticketing tool. Like a GDPR delete in the app, it skips the recycle bin. Authenticate it like any other API call, see <a href="../private-apps-moved-to-legacy-apps/">service keys</a>.</p>
+
+        <h2>4. Delete inactive contacts automatically</h2>
+        <p>Under <strong>Privacy &amp; Consent, Additional settings</strong>, <strong>Delete inactive contacts automatically</strong> (1) is a data retention policy. A second setting, <strong>Process data enrichment requests automatically</strong> (2), deletes enriched data when a contact opts out.</p>
+        <figure class="shot"><a href="additional.webp"><img src="additional.webp" alt="Privacy Additional settings with Delete inactive contacts automatically and Process data enrichment requests automatically highlighted" width="800" height="553" loading="lazy"></a><figcaption>Delete inactive contacts (1) and enrichment deletion requests (2).</figcaption></figure>
+        <ul>
+          <li>HubSpot checks <strong>Create date</strong>, <strong>Time of last session</strong>, <strong>Last marketing email open date</strong> and <strong>Last engagement date</strong> against the inactivity period you set. A contact is inactive if it was created before the period and those values are unknown or not updated within it.</li>
+          <li>Deletion runs on the 1st of each month.</li>
+          <li>Deleted contacts sit in the recycle bin for 90 days, then are permanently deleted.</li>
+          <li>Deleted contacts drop out of reports, so HubSpot recommends checking the reporting impact first.</li>
         </ul>
 
-        <h2>3. Things to know</h2>
+        <h2>5. What is changing for 2027</h2>
         <ul>
-          <li>For accounts with data stored in the EU, HubSpot says this is on by default.</li>
-          <li>Turning it off does not turn off the cookie consent banner. See <a href="../hubspot-cookie-consent-banner/">cookie consent banners</a>.</li>
-          <li>HubSpot says your legal team is the best resource for compliance advice.</li>
+          <li><strong>The GDPR delete endpoint is on HubSpot's legacy v3 docs.</strong> HubSpot's date-based API versions are replacing them. v3 keeps working for now, but plan new privacy integrations on the dated URLs. See <a href="../hubspot-api-rate-limits/">API versioning</a>.</li>
+          <li><strong>Retention by setting.</strong> Delete inactive contacts automatically applies the same inactivity rule every month, so retention does not depend on someone remembering a cleanup.</li>
+          <li><strong>Enrichment and privacy meet.</strong> If you use HubSpot's data enrichment, turn on automatic processing of enrichment deletion requests. See <a href="../hubspot-data-enrichment-settings/">data enrichment settings</a>.</li>
         </ul>
+
+        <h2>Common questions</h2>
+        <h3>Do I need data privacy settings if I am in the U.S.?</h3>
+        <p>If you market to people in the EU, U.K., Canada or Brazil, those are the regions HubSpot lists. Ask your legal team.</p>
+        <h3>Can I undo a GDPR delete?</h3>
+        <p>No. It bypasses the recycle bin. A normal delete can be undone for 90 days.</p>
+        <h3>When does Delete inactive contacts run?</h3>
+        <p>On the 1st of each month. Contacts it deletes can be restored for 90 days.</p>
+        <h3>Who can bulk delete contacts?</h3>
+        <p>Users with bulk delete permission. It is separate from regular delete permission.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/how-do-i-turn-on-gdpr-functionality-in-my-hubspot-account">HubSpot Knowledge Base: Manage data privacy settings in your HubSpot account</a></li>
-          <li><a href="https://knowledge.hubspot.com/contacts/how-can-i-track-lawful-basis-of-processing-in-hubspot">HubSpot Knowledge Base: Track legal basis of processing in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/how-do-i-turn-on-gdpr-functionality-in-my-hubspot-account">HubSpot Knowledge Base: Manage data privacy settings</a></li>
+          <li><a href="https://knowledge.hubspot.com/contacts/how-can-i-track-lawful-basis-of-processing-in-hubspot">HubSpot Knowledge Base: Track legal basis of processing</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/manage-data-retention-policy-settings">HubSpot Knowledge Base: Manage data retention policy settings for inactive contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/restore-deleted-records">HubSpot Knowledge Base: Restore deleted records</a></li>
+          <li><a href="https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide">HubSpot Knowledge Base: HubSpot user permissions guide</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/contacts/gdpr/gdpr-delete-contact">HubSpot developer docs: Permanently delete a contact (GDPR)</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
