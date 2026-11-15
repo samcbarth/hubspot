@@ -190,7 +190,7 @@ def hubspot_get(url, token, tries=5):
 
         <h2>6. Make fewer calls</h2>
         <ul>
-          <li><strong>Batch endpoints.</strong> One batch call reads, creates or updates up to 100 records and counts as one request. See <a href="../batch-upsert-api/">batch upsert</a>.</li>
+          <li><strong>Batch endpoints.</strong> One batch call reads, creates or updates up to 100 records and counts as one request. See <a href="../api-scripts-create-duplicates/">batch upsert</a>.</li>
           <li><strong>Webhooks instead of polling.</strong> Let HubSpot tell you when a record changes instead of asking every few minutes. See <a href="../webhooks-api-subscriptions/">webhooks</a>.</li>
           <li><strong>Cache what rarely changes.</strong> Owners, pipelines and property definitions do not need a fresh call per record.</li>
           <li><strong>Ask for only the properties you use.</strong> It does not change the count, but smaller responses keep loops fast enough that throttling is easy to reason about.</li>

@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Your script created duplicate HubSpot records? Merge them, don't delete them - HubSpot Field Notes</title>
-<meta name="description" content="Why bulk writes through the HubSpot API create duplicate companies and contacts, why to merge instead of delete, and how to write the script so it does not happen again.">
+<title>Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested) - HubSpot Field Notes</title>
+<meta name="description" content="A live test: the API made two companies with the same domain, search could not see them for several seconds, upsert by email updated instead of duplicating, and merging returned a new record ID. Patterns for duplicate-free scripts.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/">
-<meta property="og:title" content="Your script created duplicate HubSpot records? Merge them, don't delete them">
-<meta property="og:description" content="Why bulk writes through the HubSpot API create duplicate companies and contacts, why to merge instead of delete, and how to write the script so it does not happen again.">
+<meta property="og:title" content="Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)">
+<meta property="og:description" content="A live test: the API made two companies with the same domain, search could not see them for several seconds, upsert by email updated instead of duplicating, and merging returned a new record ID. Patterns for duplicate-free scripts.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Your script created duplicate HubSpot records? Merge them, don't delete them",
-      "description": "Why bulk writes through the HubSpot API create duplicate companies and contacts, why to merge instead of delete, and how to write the script so it does not happen again.",
+      "headline": "Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)",
+      "description": "A live test: the API made two companies with the same domain, search could not see them for several seconds, upsert by email updated instead of duplicating, and merging returned a new record ID. Patterns for duplicate-free scripts.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Clean up duplicate records created by an API script",
-      "totalTime": "PT15M",
+      "name": "Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Find the duplicate pairs", "text": "Search by the field that should be unique and group records that share it."},
-        {"@type": "HowToStep", "name": "Pick a primary", "text": "Choose the record to keep, usually the oldest or the one with more associations."},
-        {"@type": "HowToStep", "name": "Merge through the API", "text": "Call the merge endpoint with the primary and the duplicate IDs."},
-        {"@type": "HowToStep", "name": "Fix the writer", "text": "Use search before create, or batch upsert on a unique property."}
+        {"@type": "HowToStep", "name": "Upsert, do not create", "text": "POST batch/upsert with email or a unique property as idProperty."},
+        {"@type": "HowToStep", "name": "Do not search right after creating", "text": "New records take seconds to appear in search."},
+        {"@type": "HowToStep", "name": "Merge existing duplicates", "text": "POST objects/merge with primaryObjectId and objectIdToMerge."},
+        {"@type": "HowToStep", "name": "Store the new ID", "text": "The merge response returns the surviving record ID."},
+        {"@type": "HowToStep", "name": "Log and count", "text": "Log created IDs and compare totals per batch."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Your script created duplicate HubSpot records? Merge them, don't delete them", "item": "https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/" }
+        { "@type": "ListItem", "position": 2, "name": "Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)", "item": "https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/" }
       ]
     }
   ]
@@ -88,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span><span class="badge">Developer</span></div>
-      <h1>Your script created duplicate HubSpot records? Merge them, don't delete them</h1>
-      <p class="dek">A bulk write through the API does not dedupe for you. When it goes wrong, the cleanup choice matters more than the bug.</p>
+      <h1>Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)</h1>
+      <p class="dek">Tested on a live portal: API-created companies skip domain dedupe, new records take seconds to reach search, and a merge hands back a brand new ID.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Any tier with a private app</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Private app with CRM write scopes</dd></div>
-        <div class="fact"><dt>Time</dt><dd>15 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T17:20:00-04:00">October 11, 2026, 5:20 PM ET</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>API scope for the object (write)</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,37 +103,108 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>The CRM API creates whatever you send. HubSpot's knowledge base says companies created through the API are not deduplicated by Company domain name, so a script that retries or runs twice creates duplicates. Merge the extra records into one primary record with the merge endpoint, then change the script to search before it creates.</p>
+          <p>The CRM API creates whatever you send, and companies created through the API are not deduplicated by domain. I proved it on November 15, 2026: two POSTs with the same domain made two companies, and a search right after found neither for several seconds. Use <strong>batch upsert</strong> on email or a unique property instead of search-then-create. If duplicates already exist, the <strong>merge</strong> endpoint combines them, but note what my test showed: the merged record came back with a <strong>new record ID</strong>, and both old IDs now resolve to it.</p>
         </div>
 
-        <h2>1. How the duplicates happen</h2>
-        <p>A script that runs in more than one phase, or retries after a timeout, can create the same company or contact again. Companies created through the API skip the domain check that imports and forms apply, so nothing stops the second copy. Imports dedupe differently. See <a href="../import-to-static-segment/">import created duplicates</a> for that side.</p>
-        <p>To merge two records by hand, open a record and use the <span class="ui">Actions</span> menu. <span class="ui">Merge</span> sits in the same menu as <span class="ui">Opt out of email</span>.</p>
-        <figure class="shot"><a href="record-actions.webp"><img src="record-actions.webp" alt="Contact record Actions menu with Merge highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Actions menu on a record. Merge is highlighted.</figcaption></figure>
+        <h2>1. Why scripts create duplicates</h2>
+        <ul>
+          <li>Companies created through the API skip the domain check that imports and manual creation apply.</li>
+          <li>A script that retries after a timeout, or runs in more than one phase, sends the same record twice.</li>
+          <li>A search-then-create script searches, finds nothing because new records take a moment to appear in search, and creates a second copy.</li>
+        </ul>
+        <p>My test, on my developer test portal:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Step</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>POST two companies with the same name and domain</td><td>Both returned 201 with different IDs</td></tr>
+              <tr><td>Search by that domain immediately</td><td>0 results</td></tr>
+              <tr><td>Search again about 2 seconds later</td><td>0 results</td></tr>
+              <tr><td>Search again about 7 seconds after creation</td><td>2 results</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>So a script that creates a record and checks for it a second later will believe it does not exist. HubSpot's search docs note that new and updated records can take a few moments to appear. See <a href="../hubspot-api-rate-limits/">the search API limits</a>.</p>
 
-        <h2>2. Merge from the script, not delete</h2>
-        <p>For a large batch of duplicates, call the merge endpoint instead of merging by hand. The record ID in <code>primaryObjectId</code> stays. The record in <code>objectIdToMerge</code> is merged into it:</p>
-        <div class="code"><pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/merge
+        <h2>2. Upsert instead of search-then-create</h2>
+        <p><code>POST /crm/v3/objects/{object}/batch/upsert</code> creates or updates records by a unique value in one call. Each input names the <code>idProperty</code>, the value, and the properties to set:</p>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/contacts/batch/upsert
+{
+  "inputs": [
+    { "idProperty": "email", "id": "person@example.com", "properties": { "firstname": "Run0" } }
+  ]
+}</code></pre>
+        <p>I ran the same upsert twice with the same email. The first returned <code>"new": true</code>, the second <code>"new": false</code> with the <strong>same record ID</strong> and the updated first name. No search, no race.</p>
+        <ul>
+          <li>Contacts can use <code>email</code> as the <code>idProperty</code>.</li>
+          <li>Companies and other objects need a property set to <strong>require unique values</strong>, for example an ERP account number. See <a href="../dropdown-vs-multiple-checkboxes/">unique value properties</a>.</li>
+          <li>A batch counts as one call against the burst limit.</li>
+        </ul>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/batch/upsert
+{
+  "inputs": [
+    { "idProperty": "erp_account_number", "id": "100245", "properties": { "name": "Example Co", "city": "Austin" } }
+  ]
+}</code></pre>
+
+        <h2>3. Merge duplicates through the API</h2>
+        <p>For many duplicates, call the merge endpoint instead of merging by hand from the record's Actions menu:</p>
+        <figure class="shot"><a href="record-actions.webp"><img src="record-actions.webp" alt="Contact record Actions menu with Merge highlighted" width="800" height="600" loading="lazy"></a><figcaption>Merge in a record's Actions menu (1), the manual route.</figcaption></figure>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/merge
 {
   "primaryObjectId": "PRIMARY_ID",
   "objectIdToMerge": "DUPLICATE_ID"
-}</code></pre></div>
-        <p>Contacts use the same body at <code>/crm/v3/objects/contacts/merge</code>. Keep the primary record's ID as the one you want to survive. Write the pairs to a file and review a sample before you run the merge.</p>
-
-        <h2>3. Stop it recurring</h2>
+}</code></pre>
+        <p>Contacts use the same body at <code>/crm/v3/objects/contacts/merge</code>. What I saw when merging my two test companies:</p>
         <ul>
-          <li><strong>Search before create.</strong> Query by domain (companies) or email (contacts) and create only when the search returns no match.</li>
-          <li><strong>Upsert on a unique property.</strong> Where an object has a unique property, batch upsert with <code>idProperty</code> so existing records update instead of duplicating.</li>
-          <li><strong>Make runs repeatable.</strong> Log the IDs your script creates, so a re-run reads them instead of creating the records again.</li>
-          <li><strong>Compare totals after each batch.</strong> If the count is higher than expected, stop the run before the next batch.</li>
+          <li>The response returned a <strong>third, new ID</strong>, not the primary's.</li>
+          <li>A GET on either old ID returned the record under the new ID.</li>
+          <li>The new record's <code>hs_merged_object_ids</code> property listed both old IDs.</li>
         </ul>
+        <p>So if your own system stores HubSpot IDs, update them from the merge response, or look up <code>hs_merged_object_ids</code>. Old IDs still resolve, but code that compares IDs will not match. Merges cannot be undone. Write the pairs to a file and review a sample first. See <a href="../manage-duplicates-tool/">duplicates and merging</a>. I deleted the test records afterwards.</p>
+
+        <h2>4. Search by name</h2>
+        <p>To find companies whose name contains a word, use <code>CONTAINS_TOKEN</code> with a <code>*</code> wildcard:</p>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/companies/search
+{
+  "filterGroups": [
+    { "filters": [ { "propertyName": "name", "operator": "CONTAINS_TOKEN", "value": "acme*" } ] }
+  ]
+}</code></pre>
+        <p>A free-text <code>query</code> searches each object's default searchable properties; for companies that includes name, domain, website and phone. Queries max out at 3,000 characters and return at most 10,000 results. Name matching is a poor dedupe key: use it to review candidates, not to decide merges.</p>
+
+        <h2>5. A safe pattern for import scripts</h2>
+        <ol>
+          <li>Upsert on email or a unique property instead of creating.</li>
+          <li>Log every ID your script creates, so a rerun reads them instead of creating again.</li>
+          <li>Compare record totals after each batch. If the count is higher than expected, stop before the next batch.</li>
+          <li>Never rely on a search right after a create.</li>
+        </ol>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Dated versions.</strong> Batch upsert, merge and search all have date-based versions alongside v3. Move scripts to them before v4 and the 2025-09 versions lose support in March 2027. See <a href="../hubspot-api-rate-limits/">API versioning</a>.</li>
+          <li><strong>Service keys for scripts.</strong> New one-account scripts use service keys now that legacy private app creation is off in production. See <a href="../private-apps-moved-to-legacy-apps/">service keys</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why did my script create two companies with the same domain?</h3>
+        <p>Companies created through the API are not deduplicated by domain. Use batch upsert on a unique property.</p>
+        <h3>My search did not find a record I just created.</h3>
+        <p>New records take a few seconds to appear in search. In my test it was several seconds.</p>
+        <h3>Does the merged record keep the primary's ID?</h3>
+        <p>In my test it did not: the merge returned a new ID, and both old IDs resolved to it.</p>
+        <h3>Can I upsert companies by domain?</h3>
+        <p>Upsert needs a property that requires unique values. Domain is not set up that way by default, so use a custom unique property.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/records/deduplication-of-records">HubSpot Knowledge Base: Deduplicate records in HubSpot</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/companies/batch/upsert-companies">HubSpot developer docs: Create or update a batch of companies by unique property values</a></li>
           <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/companies/merge-companies">HubSpot developer docs: Merge two companies</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/search-the-crm">HubSpot developer docs: Search the CRM</a></li>
           <li><a href="https://developers.hubspot.com/docs/api/crm/contacts">HubSpot developer docs: Contacts API</a></li>
         </ul>
 

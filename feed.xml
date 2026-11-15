@@ -427,17 +427,6 @@
     <category>Associations</category>
   </item>
   <item>
-    <title>Create or update records in one call with HubSpot&#39;s batch upsert</title>
-    <link>https://hubspot.samcbarth.com/articles/batch-upsert-api/</link>
-    <guid>https://hubspot.samcbarth.com/articles/batch-upsert-api/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How the batch upsert endpoint uses a unique property (idProperty) to create missing records and update existing ones, so sync scripts stop making duplicates.</description>
-    <category>Smart CRM</category>
-    <category>Data Hub</category>
-    <category>API</category>
-    <category>Duplicates</category>
-  </item>
-  <item>
     <title>Owner ID vs user ID: assigning record owners through the API</title>
     <link>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</link>
     <guid>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</guid>
@@ -825,15 +814,6 @@
     <description>How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.</description>
     <category>Marketing Hub</category>
     <category>Forms</category>
-    <category>API</category>
-  </item>
-  <item>
-    <title>Search companies by name with the CRM search API</title>
-    <link>https://hubspot.samcbarth.com/articles/search-companies-by-name-api/</link>
-    <guid>https://hubspot.samcbarth.com/articles/search-companies-by-name-api/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to filter companies by name using the CRM search endpoint, wildcards, the query parameter, and the 10,000 result limit.</description>
-    <category>Smart CRM</category>
     <category>API</category>
   </item>
   <item>
@@ -1487,11 +1467,11 @@
     <category>Companies</category>
   </item>
   <item>
-    <title>Your script created duplicate HubSpot records? Merge them, don&#39;t delete them</title>
+    <title>Stop HubSpot API scripts creating duplicates: upsert, search lag, and what merge does to record IDs (tested)</title>
     <link>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</link>
     <guid>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why bulk writes through the HubSpot API create duplicate companies and contacts, why to merge instead of delete, and how to write the script so it does not happen again.</description>
+    <description>A live test: the API made two companies with the same domain, search could not see them for several seconds, upsert by email updated instead of duplicating, and merging returned a new record ID. Patterns for duplicate-free scripts.</description>
     <category>Smart CRM</category>
     <category>API</category>
     <category>Duplicates</category>
