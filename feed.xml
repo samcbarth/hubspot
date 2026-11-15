@@ -2044,11 +2044,11 @@
     <category>Workflows</category>
   </item>
   <item>
-    <title>How to find your HubSpot portal ID (Hub ID)</title>
+    <title>Find your HubSpot portal ID (Hub ID): account menu, URL, tracking code and API</title>
     <link>https://hubspot.samcbarth.com/articles/find-hubspot-portal-id/</link>
     <guid>https://hubspot.samcbarth.com/articles/find-hubspot-portal-id/</guid>
     <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Your portal ID, also called Hub ID or account ID, is in the account menu and in every HubSpot URL.</description>
+    <description>Four places to find your HubSpot portal ID, also called the Hub ID or account ID: the account menu, any HubSpot URL, the tracking code script, and the account information API, with what the API returns.</description>
     <category>Smart CRM</category>
     <category>Settings</category>
   </item>
