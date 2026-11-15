@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026 - HubSpot Field Notes</title>
-<meta name="description" content="Where HubSpot private apps went, the dates when creating new legacy private apps is turned off, what still works, and what to use instead.">
+<title>HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead - HubSpot Field Notes</title>
+<meta name="description" content="Private apps moved to Legacy Apps and new ones were disabled in production in September and October 2026. How to create and rotate a service key, what it cannot do, the sandbox exception, and when you need an app instead.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/">
-<meta property="og:title" content="HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026">
-<meta property="og:description" content="Where HubSpot private apps went, the dates when creating new legacy private apps is turned off, what still works, and what to use instead.">
+<meta property="og:title" content="HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead">
+<meta property="og:description" content="Private apps moved to Legacy Apps and new ones were disabled in production in September and October 2026. How to create and rotate a service key, what it cannot do, the sandbox exception, and when you need an app instead.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026",
-      "description": "Where HubSpot private apps went, the dates when creating new legacy private apps is turned off, what still works, and what to use instead.",
+      "headline": "HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead",
+      "description": "Private apps moved to Legacy Apps and new ones were disabled in production in September and October 2026. How to create and rotate a service key, what it cannot do, the sandbox exception, and when you need an app instead.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Find and plan for your private apps",
-      "totalTime": "PT4M",
+      "name": "HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Open Development", "text": "Go to Development, Legacy Apps."},
-        {"@type": "HowToStep", "name": "List what you have", "text": "Write down each private app, its scopes, and what uses its token."},
-        {"@type": "HowToStep", "name": "Use Service Keys for new integrations", "text": "Create new in-account integrations with Service Keys."},
-        {"@type": "HowToStep", "name": "Plan migrations", "text": "Migrate existing private apps to the projects framework when ready."}
+        {"@type": "HowToStep", "name": "Find existing private apps", "text": "Development, Legacy Apps."},
+        {"@type": "HowToStep", "name": "Create a service key", "text": "Development, Keys, Service Keys, Create service key."},
+        {"@type": "HowToStep", "name": "Grant the least scope", "text": "Add only the scopes the job needs."},
+        {"@type": "HowToStep", "name": "Use it as a Bearer token", "text": "Store it in a secrets store, never in code."},
+        {"@type": "HowToStep", "name": "Rotate it", "text": "Every six months, or set automatic rotation."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026", "item": "https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead", "item": "https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Smart CRM</span></div>
-      <h1>HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026</h1>
-      <p class="dek">The Private Apps page now says "Your private apps have moved." Existing tokens keep working. Creating new ones is ending.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead</h1>
+      <p class="dek">Existing private app tokens still work, but you cannot make new ones in production. Service keys replace them for REST API work, and test accounts keep a back door.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Super Admin or Developer tools access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,33 +103,100 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Private apps now live under <span class="ui">Development &gt; Legacy Apps</span>, and the old Private Apps page says so. HubSpot's changelog says creating new legacy private apps is being removed: September 28, 2026 for accounts created on or after that date, and October 26, 2026 for older accounts. Existing private apps keep working. For new in-account integrations HubSpot points to Service Keys under Settings, Integrations, Service Keys.</p>
+          <p>Private apps are now <strong>legacy apps</strong>, under <strong>Development, Legacy Apps</strong>. HubSpot turned off creating new ones in production accounts on <strong>September 28, 2026</strong> (accounts created that day or later) and <strong>October 26, 2026</strong> (older accounts). Existing private apps and their tokens keep working. For a new in-account integration, create a <strong>service key</strong>: <strong>Development, Keys, Service Keys</strong>, name it, pick scopes, and send it as a Bearer token. Service keys only make REST API calls. For webhooks or UI extensions you need a project-based app. Sandbox and test accounts can still create legacy private apps.</p>
         </div>
 
-        <h2>1. Where they went</h2>
-        <p>Opening the old <a class="hs-link" data-hs="/private-apps/{portalId}" href="https://app.hubspot.com/l/private-apps"><span class="ui">Private Apps</span></a> link in my demo portal shows a moved message and a button to Legacy Apps.</p>
+        <h2>1. Where private apps went</h2>
+        <p>The old Private Apps link now shows a "Your private apps have moved" page (1), and the apps live in <strong>Legacy Apps</strong> in the Development menu (2):</p>
         <figure class="shot"><a href="moved.webp"><img src="moved.webp" alt="Private Apps page saying your private apps have moved, with a Go to Legacy Apps button" width="800" height="553" loading="lazy"></a><figcaption>The moved notice (1) and Legacy Apps in the Development menu (2).</figcaption></figure>
+        <p>Open the app that owns a token to see or change its scopes:</p>
+        <figure class="shot"><a href="legacy-apps.webp"><img src="legacy-apps.webp" alt="Legacy Apps list with two private apps and the Create legacy app button highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Legacy Apps list. Open the app that owns your token to change its scopes.</figcaption></figure>
 
-        <h2>2. The dates</h2>
+        <h2>2. The creation cutoff, and the exception</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Account</th><th>New legacy private apps disabled</th></tr></thead>
+            <tbody>
+              <tr><td>Created on or after September 28, 2026</td><td>September 28, 2026</td></tr>
+              <tr><td>Created before September 28, 2026</td><td>October 26, 2026</td></tr>
+              <tr><td>Sandbox and developer test accounts</td><td>Still allowed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>HubSpot's changelog says existing legacy private apps "are not affected at this time and continue to work as-is", and gives no retirement date for them. The token I used for this site's API tests on November 15, 2026 belongs to a legacy private app and worked normally.</p>
+        <p>The exception is not in the changelog but it is on the page. When I opened Legacy Apps in my developer test account on November 15, 2026, the <strong>Create legacy app</strong> button was still there (2), with this notice (1):</p>
+        <figure class="shot"><a href="sandbox-banner.webp"><img src="sandbox-banner.webp" alt="Legacy Apps page with a notice that legacy private apps are still available in sandbox and test accounts, and the Create legacy app button" width="800" height="131" loading="lazy"></a><figcaption>"Legacy private apps are still available in sandbox and test accounts" (1) and Create legacy app (2).</figcaption></figure>
+        <p>The point is to let you mirror a production setup for testing. In production, HubSpot's direction is service keys or project-based apps.</p>
+
+        <h2>3. Create a service key</h2>
+        <p>Super Admins and users with the <strong>Developer tools access</strong> permission can create and manage service keys. Go to <strong>Development, Keys, Service Keys</strong> and click <strong>Create service key</strong> (1):</p>
+        <figure class="shot"><a href="keys.webp"><img src="keys.webp" alt="Service Keys page with a Create service key button and one existing key" width="800" height="553" loading="lazy"></a><figcaption>Create service key (1) and existing keys (2).</figcaption></figure>
+        <ol>
+          <li><strong>Name</strong> it for its job, such as <code>powerbi-contacts-read</code>. The name must be unique in the account and shows up in logs.</li>
+          <li>Click <strong>Add new scope</strong>, search with <strong>Find a scope</strong>, tick what the job needs, and click <strong>Update</strong>. A key can only get scopes the creating user already has. Some scopes may be greyed out for your user.</li>
+          <li>Click <strong>Create</strong> and confirm.</li>
+        </ol>
+        <figure class="shot"><a href="form-filled.webp"><img src="form-filled.webp" alt="Create Service Key page with a name typed in, one selected scope, and the Create button active" width="800" height="450" loading="lazy"></a><figcaption>Name (1), selected scope (2) and Create (3).</figcaption></figure>
+        <p>Open the key, click <strong>Show</strong>, then <strong>Copy</strong>, and send it as a Bearer token:</p>
+<pre><code>curl --request GET \
+  --header "Authorization: Bearer pat-na1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" \
+  --url "https://api.hubapi.com/crm/v3/objects/contacts?limit=10"</code></pre>
+        <p>A service key is a password. Put it in an environment variable or a secrets store, never in front-end code, a committed file, or a chat with an AI agent.</p>
+
+        <h2>4. Rotate, log and delete</h2>
+        <figure class="shot"><a href="details.webp"><img src="details.webp" alt="Service key details page showing the masked key, its scopes, View Logs, Rotate and Delete" width="800" height="522" loading="lazy"></a><figcaption>The key (1), Rotate (2), scopes (3), View Logs (4) and Delete (5).</figcaption></figure>
         <ul>
-          <li>Accounts created on or after September 28, 2026: creation disabled that day.</li>
-          <li>Accounts created before September 28, 2026: creation disabled October 26, 2026.</li>
-          <li>Existing legacy private apps are not affected for now.</li>
+          <li><strong>View logs</strong> shows recent requests made with the key.</li>
+          <li><strong>Rotate</strong> creates a new key. <strong>Rotate and expire now</strong> is for a leaked key. <strong>Rotate and expire later</strong> keeps the old one working for 7 days so you can swap it in your systems. You can also set automatic rotation every 3, 6 or 12 months. HubSpot recommends rotating every six months.</li>
+          <li><strong>Delete</strong> is permanent. You confirm by typing the key's name.</li>
         </ul>
 
-        <h2>3. What to do</h2>
+        <h2>5. Service key, legacy private app, or app?</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>You need</th><th>Use</th></tr></thead>
+            <tbody>
+              <tr><td>A script, BI tool or data warehouse reading or writing one account through the REST API</td><td>Service key</td></tr>
+              <tr><td>Webhooks, UI extensions (CRM cards) or other developer platform features</td><td>A project-based app</td></tr>
+              <tr><td>One integration for many customer accounts</td><td>A public app with OAuth. See <a href="../oauth-client-id-secret/">OAuth for HubSpot apps</a>.</td></tr>
+              <tr><td>An existing integration on a private app token</td><td>Leave it running, but inventory it and plan the move</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>There is a combined limit of 100 project-based apps, service keys and MCP connectors per account, and service keys have the same API limits as privately distributed apps. See <a href="../hubspot-api-rate-limits/">API rate limits</a>.</p>
+        <p>The old <strong>developer API key</strong> is a different thing. It lives in a developer account and is only used where an endpoint's docs ask for the <code>hapikey</code> parameter.</p>
+
+        <h2>6. What is changing for 2027</h2>
         <ul>
-          <li>If you need a new token soon, check your account's date before assuming you can still create a private app.</li>
-          <li>For new system-to-system integrations, use Service Keys, which need Developer Platform projects version 2026.09 or later.</li>
-          <li>Keep an inventory of every private app, its scopes and what depends on it, so migration later is planned rather than urgent.</li>
+          <li><strong>No new private apps in production.</strong> Anyone following an older tutorial that says "create a private app" will not find the button. Point them to service keys.</li>
+          <li><strong>Inventory existing private apps now.</strong> No retirement date has been announced. List every private app, its scopes, and what depends on it, so a future migration is planned rather than urgent.</li>
+          <li><strong>Dated API versions.</strong> The same platform shift moved the REST APIs to date-based versions, with v4 and the 2025-09 versions unsupported from March 2027. If you are rewriting an integration onto a service key, move it to the dated URLs at the same time. Details in <a href="../hubspot-api-rate-limits/">the API rate limits guide</a>.</li>
+          <li><strong>Keys are an audit item.</strong> Each key shows its own request log. Review keys and their scopes when people who created them leave.</li>
         </ul>
+
+        <h2>Common questions</h2>
+        <h3>I cannot find "Create private app". Where did it go?</h3>
+        <p>It was removed from production accounts on September 28 or October 26, 2026, depending on when the account was created. Create a service key under Development, Keys, Service Keys.</p>
+        <h3>Will my existing private app token stop working?</h3>
+        <p>Not as of November 2026. HubSpot says existing legacy private apps continue to work as-is and has not announced a retirement date.</p>
+        <h3>Can a service key receive webhooks?</h3>
+        <p>No. Service keys only authenticate REST API requests. Webhooks need a project-based app.</p>
+        <h3>Why is a scope greyed out when I create a service key?</h3>
+        <p>A key can only get scopes the creating user has. Check your own permissions, or ask a Super Admin to create the key.</p>
+        <h3>Where is my HubSpot API key?</h3>
+        <p>HubSpot retired account-level API keys in 2022. For one account, use a service key. The developer API key in a developer account is only for the few endpoints that ask for it.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://developers.hubspot.com/changelog/legacy-private-app-creation-sunset">HubSpot developer docs: Legacy private app creation being disabled (changelog)</a></li>
+          <li><a href="https://developers.hubspot.com/changelog/legacy-private-app-creation-sunset">HubSpot developer changelog: Legacy private app creation being disabled (August 27, 2026)</a></li>
           <li><a href="https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview">HubSpot developer docs: Legacy private apps</a></li>
+          <li><a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys">HubSpot developer docs: Make API requests using a service key</a></li>
+          <li><a href="https://developers.hubspot.com/changelog/service-keys">HubSpot developer changelog: Service Keys</a></li>
+          <li><a href="https://developers.hubspot.com/changelog/introducing-date-based-api-versioning">HubSpot developer changelog: Date-based API versioning</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key">HubSpot Knowledge Base: Authentication overview</a></li>
+          <li><a href="https://community.hubspot.com/t/where-is-my-developer-api-key/113930">HubSpot Community: Where is my developer API key?</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

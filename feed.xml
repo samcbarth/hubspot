@@ -7,16 +7,6 @@
   <description>HubSpot fixes, how-tos, and hidden tricks with real screenshots, by Sam Barth.</description>
   <language>en-us</language>
   <item>
-    <title>Create a HubSpot service key, step by step</title>
-    <link>https://hubspot.samcbarth.com/articles/create-a-hubspot-service-key/</link>
-    <guid>https://hubspot.samcbarth.com/articles/create-a-hubspot-service-key/</guid>
-    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to create a HubSpot service key: where it lives, who can make one, how to pick scopes, copy the token, call the API with it, and rotate or delete it later.</description>
-    <category>Smart CRM</category>
-    <category>API</category>
-    <category>Integrations</category>
-  </item>
-  <item>
     <title>HubSpot Agent CLI: install it, sign in, and run your first safe commands</title>
     <link>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</link>
     <guid>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</guid>
@@ -184,11 +174,11 @@
     <category>User settings</category>
   </item>
   <item>
-    <title>HubSpot private apps moved to Legacy Apps, and new ones stop on October 26, 2026</title>
+    <title>HubSpot private apps are now legacy apps: the creation cutoff, service keys, and what to use instead</title>
     <link>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</link>
     <guid>https://hubspot.samcbarth.com/articles/private-apps-moved-to-legacy-apps/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot private apps went, the dates when creating new legacy private apps is turned off, what still works, and what to use instead.</description>
+    <description>Private apps moved to Legacy Apps and new ones were disabled in production in September and October 2026. How to create and rotate a service key, what it cannot do, the sandbox exception, and when you need an app instead.</description>
     <category>Smart CRM</category>
     <category>API</category>
     <category>Integrations</category>
@@ -305,16 +295,6 @@
     <category>Commerce Hub</category>
     <category>Sales Hub</category>
     <category>Deals</category>
-  </item>
-  <item>
-    <title>HubSpot Service Keys: the replacement for private app tokens</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-service-keys/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-service-keys/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot Service Keys are, where to create them, the permission and scope rules, what they cannot do, and how they relate to legacy private apps.</description>
-    <category>Smart CRM</category>
-    <category>API</category>
-    <category>Integrations</category>
   </item>
   <item>
     <title>Meeting rotations in HubSpot: share inbound meetings fairly across reps</title>
@@ -1564,15 +1544,6 @@
     <description>How HubSpot session management works, what it shows, and its limits.</description>
     <category>Smart CRM</category>
     <category>Account security</category>
-  </item>
-  <item>
-    <title>Where&#39;s my HubSpot API key?</title>
-    <link>https://hubspot.samcbarth.com/articles/private-app-api-key/</link>
-    <guid>https://hubspot.samcbarth.com/articles/private-app-api-key/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What replaced HubSpot API keys and where the developer API key still lives.</description>
-    <category>Developer</category>
-    <category>API</category>
   </item>
   <item>
     <title>Use line items on deals</title>
