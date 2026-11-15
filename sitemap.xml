@@ -89,7 +89,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-mcp-connectors/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/multi-account-management/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-progression/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/import-contacts-and-companies-together/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/bulk-delete-contacts/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/multiple-companies-same-domain/</loc><lastmod>2026-10-07</lastmod></url>
@@ -132,7 +131,7 @@
   <url><loc>https://hubspot.samcbarth.com/articles/video-conferencing-meetings/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/meetings-multiple-calendars/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/import-to-static-segment/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/import-to-static-segment/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/unmerge-records/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/install-tracking-code-wix/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/customer-journey-analytics/</loc><lastmod>2026-10-07</lastmod></url>
@@ -197,7 +196,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/surveymonkey-integration/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hosted-email-inbox/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/traffic-source-properties/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/marketing-event-participants-import/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/sales-email-send-limits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</loc><lastmod>2026-10-07</lastmod></url>
@@ -219,7 +217,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/clone-landing-page-per-location/</loc><lastmod>2026-10-03</lastmod></url>
@@ -246,7 +243,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/email-subscription-types/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-saved-views-and-filters/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/find-records-from-an-import/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-pipeline-rules/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-stage-probability/</loc><lastmod>2026-10-03</lastmod></url>
@@ -272,6 +268,5 @@
   <url><loc>https://hubspot.samcbarth.com/articles/inbox-channels-and-fallback-email/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/inbox-allow-and-deny-list/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/workflow-wont-re-enroll/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/duplicates-after-import/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/find-hubspot-portal-id/</loc><lastmod>2026-10-02</lastmod></url>
 </urlset>

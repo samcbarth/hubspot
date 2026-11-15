@@ -30,6 +30,8 @@ var ARTICLES = [
   },
   {
     slug: 'duplicates-after-import',
+    draft: true,
+    mergedInto: 'import-to-static-segment',
     title: 'HubSpot import created duplicate contacts? Why it happens and how to fix it',
     excerpt: 'HubSpot only matches imported rows by a unique identifier. Spot an import that duplicated records, clean it up, and stop it next time.',
     type: 'guide',
@@ -179,6 +181,8 @@ var ARTICLES = [
   },
   {
     slug: "bulk-assign-owners-from-sheet",
+    draft: true,
+    mergedInto: 'import-to-static-segment',
     title: "Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone",
     excerpt: "Use a customer's own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.",
     type: "guide",
@@ -970,6 +974,8 @@ var ARTICLES = [
   },
   {
     slug: "find-records-from-an-import",
+    draft: true,
+    mergedInto: 'import-to-static-segment',
     title: "Find the records from a HubSpot import, and what else the import page can do",
     excerpt: "Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.",
     type: "tip",
@@ -5233,6 +5239,8 @@ var ARTICLES = [
   },
   {
     slug: "import-contacts-and-companies-together",
+    draft: true,
+    mergedInto: 'import-to-static-segment',
     title: "Import contacts and their companies in one file",
     excerpt: "How to import contacts and companies together so they associate, the unique identifiers that prevent duplicates, and how multiple associations per row work.",
     type: "tip",
@@ -7274,19 +7282,20 @@ var ARTICLES = [
   },
   {
     slug: "import-to-static-segment",
-    title: "Put imported contacts into a segment",
-    excerpt: "How to add contacts from an import to a new or existing static segment, or create an active segment from import membership.",
-    type: "tip",
+    title: "HubSpot imports: limits, create vs update, duplicates, segments from an import and update-only imports",
+    excerpt: "Import limits by tier, how HubSpot matches rows to existing records, why imports create duplicates, checking an import, turning it into a segment, merging, owner updates from a sheet, and event participant imports.",
+    type: "guide",
     problem: "How to",
     hubs: ["Smart CRM", "Marketing Hub"],
     features: ["Import", "Segments"],
-    tier: "All tiers",
-    permissions: "Import and segment access",
-    verified: "2026-10-07",
+    tier: "All plans (limits are higher on paid plans)",
+    permissions: "Import permission; edit access to the records",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 2,
+    minutes: 13,
     difficulty: "Beginner",
-    keywords: ["import into static list hubspot", "add imported contacts to segment", "import list hubspot", "segment from import"]
+    keywords: ["import into static list hubspot", "add imported contacts to segment", "import list hubspot", "segment from import"],
+    validated: "2026-11-15 14:55 ET",
   },
   {
     slug: "unenroll-records-from-workflow",
@@ -14709,6 +14718,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-event-participants-import",
+    draft: true,
+    mergedInto: 'import-to-static-segment',
     title: "Import marketing event participants",
     excerpt: "How to import attendees into a HubSpot marketing event.",
     type: "tip",

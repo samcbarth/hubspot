@@ -864,16 +864,6 @@
     <category>AI</category>
   </item>
   <item>
-    <title>Import contacts and their companies in one file</title>
-    <link>https://hubspot.samcbarth.com/articles/import-contacts-and-companies-together/</link>
-    <guid>https://hubspot.samcbarth.com/articles/import-contacts-and-companies-together/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to import contacts and companies together so they associate, the unique identifiers that prevent duplicates, and how multiple associations per row work.</description>
-    <category>Smart CRM</category>
-    <category>Imports</category>
-    <category>Associations</category>
-  </item>
-  <item>
     <title>Make a property a clickable link with the URL field type</title>
     <link>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</link>
     <guid>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</guid>
@@ -1289,11 +1279,11 @@
     <category>Segments</category>
   </item>
   <item>
-    <title>Put imported contacts into a segment</title>
+    <title>HubSpot imports: limits, create vs update, duplicates, segments from an import and update-only imports</title>
     <link>https://hubspot.samcbarth.com/articles/import-to-static-segment/</link>
     <guid>https://hubspot.samcbarth.com/articles/import-to-static-segment/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to add contacts from an import to a new or existing static segment, or create an active segment from import membership.</description>
+    <description>Import limits by tier, how HubSpot matches rows to existing records, why imports create duplicates, checking an import, turning it into a segment, merging, owner updates from a sheet, and event participant imports.</description>
     <category>Smart CRM</category>
     <category>Marketing Hub</category>
     <category>Import</category>
@@ -1918,15 +1908,6 @@
     <category>Properties</category>
   </item>
   <item>
-    <title>Import marketing event participants</title>
-    <link>https://hubspot.samcbarth.com/articles/marketing-event-participants-import/</link>
-    <guid>https://hubspot.samcbarth.com/articles/marketing-event-participants-import/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to import attendees into a HubSpot marketing event.</description>
-    <category>Marketing Hub</category>
-    <category>Marketing events</category>
-  </item>
-  <item>
     <title>Target LinkedIn ads with HubSpot audiences</title>
     <link>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</link>
     <guid>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</guid>
@@ -2139,17 +2120,6 @@
     <category>Smart CRM</category>
     <category>Sales Hub</category>
     <category>Lifecycle stages</category>
-    <category>Companies</category>
-  </item>
-  <item>
-    <title>Bulk assign HubSpot company owners from a spreadsheet without overwriting anyone</title>
-    <link>https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/</link>
-    <guid>https://hubspot.samcbarth.com/articles/bulk-assign-owners-from-sheet/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Use a customer&#39;s own file of account owners to set Company owner on thousands of HubSpot companies, only where none is set, and handle owners who are not HubSpot users.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Imports</category>
     <category>Companies</category>
   </item>
   <item>
@@ -2420,16 +2390,6 @@
     <category>Records</category>
   </item>
   <item>
-    <title>Find the records from a HubSpot import, and what else the import page can do</title>
-    <link>https://hubspot.samcbarth.com/articles/find-records-from-an-import/</link>
-    <guid>https://hubspot.samcbarth.com/articles/find-records-from-an-import/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot keeps import history, what the import details page shows, and the Actions menu that lets you view the imported records, add them to a segment, or download the file.</description>
-    <category>Smart CRM</category>
-    <category>Import</category>
-    <category>Segments</category>
-  </item>
-  <item>
     <title>HubSpot deal settings: default deal amount, default close date, and the create form</title>
     <link>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</guid>
@@ -2682,19 +2642,6 @@
     <category>Service Hub</category>
     <category>Data Hub</category>
     <category>Workflows</category>
-  </item>
-  <item>
-    <title>HubSpot import created duplicate contacts? Why it happens and how to fix it</title>
-    <link>https://hubspot.samcbarth.com/articles/duplicates-after-import/</link>
-    <guid>https://hubspot.samcbarth.com/articles/duplicates-after-import/</guid>
-    <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot only matches imported rows by a unique identifier. Spot an import that duplicated records, clean it up, and stop it next time.</description>
-    <category>Smart CRM</category>
-    <category>Data Hub</category>
-    <category>Marketing Hub</category>
-    <category>Sales Hub</category>
-    <category>Imports</category>
-    <category>Data quality</category>
   </item>
   <item>
     <title>How to find your HubSpot portal ID (Hub ID)</title>
