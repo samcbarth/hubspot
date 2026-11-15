@@ -723,26 +723,6 @@
     <category>Ownership</category>
   </item>
   <item>
-    <title>Resubscribe a contact who opted out of marketing email</title>
-    <link>https://hubspot.samcbarth.com/articles/resubscribe-contacts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/resubscribe-contacts/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot allows when resubscribing contacts, the resubscription email, and why self opt-outs cannot be reversed by a workflow.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Consent</category>
-  </item>
-  <item>
-    <title>Import an opt-out list so old unsubscribes stay unsubscribed</title>
-    <link>https://hubspot.samcbarth.com/articles/import-opted-out-contacts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/import-opted-out-contacts/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to import contacts as opted out of marketing email, and why deleting and re-importing them as opted out can keep them out of your marketing contact count.</description>
-    <category>Marketing Hub</category>
-    <category>Imports</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Send HubSpot data to Google Sheets from a workflow</title>
     <link>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</link>
     <guid>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</guid>
@@ -969,17 +949,6 @@
     <category>Marketing Hub</category>
     <category>Content Hub</category>
     <category>Forms</category>
-  </item>
-  <item>
-    <title>Unsubscribe links in one-to-one and sequence emails</title>
-    <link>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot adds unsubscribe links to one-to-one and sequence emails, how they map to subscription types, and who controls the defaults.</description>
-    <category>Sales Hub</category>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Consent</category>
   </item>
   <item>
     <title>Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email</title>
@@ -1731,11 +1700,11 @@
     <category>Events</category>
   </item>
   <item>
-    <title>Reverse an opt-out of all email</title>
+    <title>HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts</title>
     <link>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</link>
     <guid>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>When HubSpot lets you remove an opt-out and when it doesn&#39;t.</description>
+    <description>Subscription types and the preferences page, double opt-in limits, opting a contact out, unsubscribe links in one-to-one email, who can resubscribe whom, importing old opt-outs, and marketing vs non-marketing contacts.</description>
     <category>Marketing Hub</category>
     <category>Smart CRM</category>
     <category>Subscriptions</category>
@@ -1973,17 +1942,6 @@
     <category>Meetings</category>
   </item>
   <item>
-    <title>Sync contacts from another system as non-marketing, then let a workflow decide</title>
-    <link>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</link>
-    <guid>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</guid>
-    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>When a sync brings every contact into HubSpot, bring them in as non-marketing and use the Set marketing contact status workflow action with rules you control.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Contacts</category>
-    <category>Workflows</category>
-  </item>
-  <item>
     <title>Same phone number, different formats: why HubSpot does not flag those duplicates</title>
     <link>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</link>
     <guid>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</guid>
@@ -2004,18 +1962,6 @@
     <category>Sales Hub</category>
     <category>Lifecycle stages</category>
     <category>Companies</category>
-  </item>
-  <item>
-    <title>How to opt a HubSpot contact out of all email, and what it does not stop</title>
-    <link>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and how to opt out a group with a spreadsheet.</description>
-    <category>Marketing Hub</category>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Contacts</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Your script created duplicate HubSpot records? Merge them, don&#39;t delete them</title>
@@ -2220,27 +2166,6 @@
     <category>Marketing Hub</category>
     <category>Sales Hub</category>
     <category>Dashboards</category>
-  </item>
-  <item>
-    <title>Double opt-in for HubSpot marketing email: what it does and what it limits</title>
-    <link>https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Consent</category>
-  </item>
-  <item>
-    <title>HubSpot email subscription types: marketing, one-to-one, customer service, and your own</title>
-    <link>https://hubspot.samcbarth.com/articles/email-subscription-types/</link>
-    <guid>https://hubspot.samcbarth.com/articles/email-subscription-types/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot subscription types work: the default types, the subscription preferences page contacts see, how to create or archive types, and what happens to the one-to-one type.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Email</category>
-    <category>Subscriptions</category>
   </item>
   <item>
     <title>HubSpot dropdown options: labels vs internal names, and why imports and integrations care</title>

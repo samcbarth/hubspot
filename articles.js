@@ -200,6 +200,8 @@ var ARTICLES = [
   },
   {
     slug: "opt-out-contact-all-email",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "How to opt a HubSpot contact out of all email, and what it does not stop",
     excerpt: "Actions, Opt out of email stops future marketing and one-to-one email from HubSpot. Where it lives, what it does not stop, and how to opt out a group with a spreadsheet.",
     type: "tip",
@@ -858,6 +860,8 @@ var ARTICLES = [
   },
   {
     slug: "double-opt-in-marketing-email",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "Double opt-in for HubSpot marketing email: what it does and what it limits",
     excerpt: "How HubSpot double opt-in works: a confirmation email after a form submission, who counts as confirmed, the difference between basic and advanced setup, and the limits to know before you turn it on.",
     type: "guide",
@@ -874,6 +878,8 @@ var ARTICLES = [
   },
   {
     slug: "email-subscription-types",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "HubSpot email subscription types: marketing, one-to-one, customer service, and your own",
     excerpt: "How HubSpot subscription types work: the default types, the subscription preferences page contacts see, how to create or archive types, and what happens to the one-to-one type.",
     type: "guide",
@@ -1901,6 +1907,8 @@ var ARTICLES = [
   },
   {
     slug: "sync-contacts-as-non-marketing",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "Sync contacts from another system as non-marketing, then let a workflow decide",
     excerpt: "When a sync brings every contact into HubSpot, bring them in as non-marketing and use the Set marketing contact status workflow action with rules you control.",
     type: "tip",
@@ -4771,6 +4779,8 @@ var ARTICLES = [
   },
   {
     slug: "resubscribe-contacts",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "Resubscribe a contact who opted out of marketing email",
     excerpt: "What HubSpot allows when resubscribing contacts, the resubscription email, and why self opt-outs cannot be reversed by a workflow.",
     type: "tip",
@@ -4805,6 +4815,8 @@ var ARTICLES = [
   },
   {
     slug: "import-opted-out-contacts",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "Import an opt-out list so old unsubscribes stay unsubscribed",
     excerpt: "How to import contacts as opted out of marketing email, and why deleting and re-importing them as opted out can keep them out of your marketing contact count.",
     type: "tip",
@@ -6001,6 +6013,8 @@ var ARTICLES = [
   },
   {
     slug: "unsubscribe-links-one-to-one-emails",
+    draft: true,
+    mergedInto: 'remove-email-opt-out',
     title: "Unsubscribe links in one-to-one and sequence emails",
     excerpt: "How HubSpot adds unsubscribe links to one-to-one and sequence emails, how they map to subscription types, and who controls the defaults.",
     type: "tip",
@@ -13755,19 +13769,20 @@ var ARTICLES = [
   },
   {
     slug: "remove-email-opt-out",
-    title: "Reverse an opt-out of all email",
-    excerpt: "When HubSpot lets you remove an opt-out and when it doesn't.",
-    type: "tip",
-    problem: "Gotcha",
+    title: "HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts",
+    excerpt: "Subscription types and the preferences page, double opt-in limits, opting a contact out, unsubscribe links in one-to-one email, who can resubscribe whom, importing old opt-outs, and marketing vs non-marketing contacts.",
+    type: "guide",
+    problem: "How to",
     hubs: ["Marketing Hub", "Smart CRM"],
     features: ["Subscriptions"],
-    tier: "All tiers",
-    permissions: "Edit contacts",
-    verified: "2026-10-07",
+    tier: "All plans (double opt-in options and the resubscription email need Marketing Hub Professional)",
+    permissions: "Marketing access; Super Admin for account-wide defaults",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 2,
+    minutes: 12,
     difficulty: "Intermediate",
-    keywords: ["reverse email opt out hubspot", "remove opt out of all email", "resubscribe contact hubspot", "unsubscribed from all email"]
+    keywords: ["reverse email opt out hubspot", "remove opt out of all email", "resubscribe contact hubspot", "unsubscribed from all email"],
+    validated: "2026-11-15 17:35 ET",
   },
   {
     slug: "social-custom-reports",

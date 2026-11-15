@@ -75,8 +75,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-sales-extension/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/call-recording-consent/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-splits/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/resubscribe-contacts/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/import-opted-out-contacts/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/custom-report-builder/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/memberships-access-groups/</loc><lastmod>2026-10-07</lastmod></url>
@@ -100,7 +98,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/first-and-recent-conversion-properties/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/replace-brand-domain/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/blocked-email-domains-list/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/unsubscribe-links-one-to-one-emails/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/transactional-email-add-on/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/favicon-setup/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/instagram-carousel-posts/</loc><lastmod>2026-10-07</lastmod></url>
@@ -178,7 +175,7 @@
   <url><loc>https://hubspot.samcbarth.com/articles/campaign-influenced-contacts/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/chrome-extension-troubleshoot/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/remove-email-opt-out/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/form-email-response/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/board-view-redesigned/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</loc><lastmod>2026-11-15</lastmod></url>
@@ -202,10 +199,8 @@
   <url><loc>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/recurring-meetings-not-logging/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-user-connection-audit/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/sync-contacts-as-non-marketing/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/opt-out-contact-all-email/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/api-scripts-create-duplicates/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/clone-landing-page-per-location/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/starter-page-limit/</loc><lastmod>2026-10-03</lastmod></url>
@@ -226,8 +221,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-meetings-link/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/workflow-enrollment-triggers-explained/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dashboard-settings-access-refresh-caching/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/email-subscription-types/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-saved-views-and-filters/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</loc><lastmod>2026-10-03</lastmod></url>

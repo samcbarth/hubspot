@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Reverse an opt-out of all email - HubSpot Field Notes</title>
-<meta name="description" content="When HubSpot lets you remove an opt-out and when it doesn't.">
+<title>HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts - HubSpot Field Notes</title>
+<meta name="description" content="Subscription types and the preferences page, double opt-in limits, opting a contact out, unsubscribe links in one-to-one email, who can resubscribe whom, importing old opt-outs, and marketing vs non-marketing contacts.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/remove-email-opt-out/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/remove-email-opt-out/">
-<meta property="og:title" content="Reverse an opt-out of all email">
-<meta property="og:description" content="When HubSpot lets you remove an opt-out and when it doesn't.">
+<meta property="og:title" content="HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts">
+<meta property="og:description" content="Subscription types and the preferences page, double opt-in limits, opting a contact out, unsubscribe links in one-to-one email, who can resubscribe whom, importing old opt-outs, and marketing vs non-marketing contacts.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/remove-email-opt-out/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Reverse an opt-out of all email",
-      "description": "When HubSpot lets you remove an opt-out and when it doesn't.",
+      "headline": "HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts",
+      "description": "Subscription types and the preferences page, double opt-in limits, opting a contact out, unsubscribe links in one-to-one email, who can resubscribe whom, importing old opt-outs, and marketing vs non-marketing contacts.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/remove-email-opt-out/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Reverse an opt-out of all email",
-      "totalTime": "PT2M",
+      "name": "HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts",
+      "totalTime": "PT12M",
       "step": [
-        {"@type": "HowToStep", "name": "Find who opted out", "text": "Filter by opt-out status."},
-        {"@type": "HowToStep", "name": "Manual opt-outs", "text": "Can be removed."},
-        {"@type": "HowToStep", "name": "Self opt-outs", "text": "Resubscribe from the record."}
+        {"@type": "HowToStep", "name": "Set subscription types", "text": "Settings, Marketing, Email, Subscriptions."},
+        {"@type": "HowToStep", "name": "Turn on double opt-in if you need it", "text": "The Double opt-in tab in email settings."},
+        {"@type": "HowToStep", "name": "Opt a contact out", "text": "Record, Actions, Opt out of email."},
+        {"@type": "HowToStep", "name": "Import old opt-outs", "text": "Before the first send."},
+        {"@type": "HowToStep", "name": "Set non-marketing contacts", "text": "From a view, the Clean up tool, or a workflow."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Reverse an opt-out of all email", "item": "https://hubspot.samcbarth.com/articles/remove-email-opt-out/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts", "item": "https://hubspot.samcbarth.com/articles/remove-email-opt-out/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Subscriptions">Subscriptions</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>Reverse an opt-out of all email</h1>
-      <p class="dek">Self opt-outs can't be bulk reversed.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot subscriptions and opt-outs: subscription types, double opt-in, resubscribing, and marketing contacts</h1>
+      <p class="dek">A contact who unsubscribed themselves can only come back on their own. Here is how subscriptions, opt-outs and marketing contact status fit together, and which ones you can change.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Edit contacts</dd></div>
-        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (double opt-in options and the resubscription email need Marketing Hub Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing access; Super Admin for account-wide defaults</dd></div>
+        <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,98 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: you can remove an <strong>opt-out of all email</strong> that a user added manually. If the contact <strong>opted out themselves</strong>, you can't add the subscription back in bulk; resubscribe them from their record. Preferences are tied to the <strong>email address</strong>.</p>
+          <p>Every marketing email goes out under a <strong>subscription type</strong>, and contacts can leave one type or all email. Opting a contact out of all email is <strong>Actions, Opt out of email</strong> on the record. Getting them back is harder on purpose: a contact who unsubscribed <strong>themselves</strong> has to resubscribe themselves (a preferences link, a subscription form, or a resubscription email). You can only reverse an opt-out your team added, with a legal basis. Separately, <strong>marketing contact status</strong> decides who you can market to and pay for; non-marketing contacts still get one-to-one, sequence and transactional email. Import old unsubscribes as opted out before your first send.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
+        <h2>1. Subscription types</h2>
+        <p>Set them up in <strong>Settings, Marketing, Email, Subscriptions</strong>. The defaults include Marketing Information, Customer Service Communication and One to One, and you can have up to 1,000. Contacts see them on the subscription preferences page when they click <strong>Manage preferences</strong> in an email:</p>
+        <figure class="shot"><a href="preferences-page.webp"><img src="preferences-page.webp" alt="Subscription preferences page template preview listing three subscription types with the preview highlighted" width="800" height="600" loading="lazy"></a><figcaption>The preferences page preview with the default subscription types.</figcaption></figure>
+        <ul>
+          <li>Drag types to change their order on the page. Edit one from its <strong>Actions</strong> menu. Archive types you no longer use.</li>
+          <li>One to One and Customer Service Communication cannot be tied to a brand. If you archive One to One and later send a one-to-one email, HubSpot unarchives it.</li>
+          <li>A contact who leaves one type stays subscribed to the others.</li>
+        </ul>
+        <p>Connect your own domain so the preferences page shows your brand. See <a href="../replace-brand-domain/">domains and SSL</a>.</p>
+
+        <h2>2. Double opt-in</h2>
+        <p>With double opt-in on, new contacts get a confirmation email and cannot receive marketing email until they click it. Turn it on in the <strong>Double opt-in</strong> tab of email settings:</p>
+        <figure class="shot"><a href="doi.webp"><img src="doi.webp" alt="Email settings Double opt-in tab with the explanation and the Set up double opt-in button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Double opt-in tab and its setup button.</figcaption></figure>
+        <ul>
+          <li>It applies to contacts from HubSpot forms, non-HubSpot forms, lead ad forms and the Forms API.</li>
+          <li>Existing contacts you already sent marketing email to count as confirmed.</li>
+          <li>Basic double opt-in (free tools and Starter) covers every form with a default confirmation email; you can still change the sender, language and subject. Turning it on for only some forms and fully customizing the email needs Marketing Hub Professional or Enterprise.</li>
+          <li>It covers marketing email only, not SMS or WhatsApp, and is tied to the email address. A new primary email needs confirming again.</li>
+          <li>A workflow that tries to email an unconfirmed contact retries for up to one day, then stops.</li>
+        </ul>
+
+        <h2>3. Opt a contact out of all email</h2>
+        <p>Open the contact, click <strong>Actions</strong> in the left sidebar, choose <strong>Opt out of email</strong>, and confirm. You need marketing access permissions.</p>
+        <figure class="shot"><a href="record-actions.webp"><img src="record-actions.webp" alt="Contact record with the Actions menu open and Opt out of email highlighted" width="800" height="600" loading="lazy"></a><figcaption>Actions, then Opt out of email.</figcaption></figure>
+        <p>Check the result in the <strong>Communication subscriptions</strong> card, then <strong>View subscriptions</strong>:</p>
+        <figure class="shot"><a href="subscriptions-card.webp"><img src="subscriptions-card.webp" alt="Communication subscriptions card with View subscriptions highlighted" width="800" height="600" loading="lazy"></a><figcaption>Communication subscriptions card on the contact record.</figcaption></figure>
         <figure class="shot"><a href="subscription-status.webp"><img src="subscription-status.webp" alt="Subscription status panel listing three email subscription types with status" width="800" height="600" loading="lazy"></a><figcaption>Subscription status panel. Check it after you opt someone out.</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Get the contact's consent before resubscribing.</p>
-        <h2>3. Related</h2>
-        <p><a href="../opt-out-contact-all-email/">Opting out a contact</a> and <a href="../resubscribe-contacts/">resubscribing</a>.</p>
+        <p>Opting out stops future marketing and one-to-one email. It does not stop transactional email, phone calls, or other brands if you use the Brands add-on, and it does not delete the contact. For a group, import an opt-out list (section 6).</p>
+
+        <h2>4. Unsubscribe links in one-to-one emails</h2>
+        <p>You can add an unsubscribe link to one-to-one emails sent from records and sequences. Clicking it opens the unsubscribe page for that subscription type, with a link to manage the others. If data privacy settings are off, the links are not included by default. Managing the defaults needs Super Admin or Account access permissions. The setting sits in Activities settings, see <a href="../never-log-list/">email logging settings</a>.</p>
+
+        <h2>5. Getting someone back: resubscribe</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>How they opted out</th><th>How they come back</th></tr></thead>
+            <tbody>
+              <tr><td>They unsubscribed themselves</td><td>Only they can resubscribe: <strong>Manage preferences</strong> in an old email, a form tied to a subscription type, or a resubscription email</td></tr>
+              <tr><td>Your team opted them out manually</td><td>A user can resubscribe them on the record with a legal basis and an explanation</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The <strong>Manage communication subscription</strong> workflow action follows the same rule: it cannot resubscribe someone who opted out themselves. The <strong>Resubscription email</strong> lets unsubscribed contacts ask to rejoin when they fill in a form that is not tied to a subscription type. It needs Marketing Hub Professional or Enterprise and is off until you publish the email (1):</p>
+        <figure class="shot"><a href="options.webp"><img src="options.webp" alt="Resubscription email setting switched off with a Publish email link" width="495" height="676" loading="lazy"></a><figcaption>Resubscription email (1).</figcaption></figure>
+        <p>Get the contact's consent before resubscribing anyone. Opted-out contacts still receive one-to-one and transactional email in the meantime.</p>
+
+        <h2>6. Import old opt-outs before the first send</h2>
+        <p>HubSpot recommends importing contacts who hard bounced or unsubscribed in your previous email tool as opted out, to protect your sending reputation. Use the opt-out import from <strong>Data integration, Import a file</strong>, and confirm by typing the number of contacts. HubSpot's KB also notes you can keep these contacts out of your billed total by deleting them and re-importing just their email addresses as opted out. See <a href="../import-to-static-segment/">imports</a> and <a href="../resend-email-to-unengaged/">deliverability</a>.</p>
+
+        <h2>7. Marketing contacts vs non-marketing contacts</h2>
+        <p>With Marketing Hub Starter and above, only <strong>marketing contacts</strong> count toward your contact tier and price. They are the only ones you can send marketing email to or put in ad audiences. Non-marketing contacts can still get one-to-one sales email, sequences, registration emails, ticket emails, transactional email and feedback surveys.</p>
+        <ul>
+          <li><strong>From a view:</strong> select contacts, then <strong>More, Set as non-marketing contacts</strong>.</li>
+          <li><strong>In bulk:</strong> <strong>Account &amp; Billing, Marketing Contacts, Clean up contacts</strong> groups unsubscribed and bounced contacts for you.</li>
+          <li><strong>Automatically:</strong> the <strong>Set marketing contact status</strong> workflow action. Its note (1) says non-marketing changes apply on the 1st of the following month or your renewal date, whichever comes first (2).</li>
+        </ul>
+        <figure class="shot"><a href="marketing-status-action.webp"><img src="marketing-status-action.webp" alt="Set marketing contact status workflow action with the note about when non-marketing updates apply and the two status options" width="800" height="553" loading="lazy"></a><figcaption>The timing note (1) and the two options (2).</figcaption></figure>
+        <p>Opted-out and bounced contacts are the obvious first group to switch off.</p>
+
+        <h2>8. What is changing for 2027</h2>
+        <ul>
+          <li><strong>One-click unsubscribe is required by Gmail and Outlook.com</strong> for bulk senders. Keep the unsubscribe link and preferences page in every marketing email footer. See <a href="../resend-email-to-unengaged/">deliverability</a>.</li>
+          <li><strong>Channels are separate.</strong> Double opt-in and email subscription types do not cover SMS or WhatsApp, which have their own subscriptions. Plan consent per channel.</li>
+          <li><strong>Brands split preferences.</strong> With the Brands add-on, an opt-out applies to the brand you are working in. Contacts can be subscribed to one brand and opted out of another.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Can I resubscribe a contact who unsubscribed by mistake?</h3>
+        <p>Not if they did it themselves. Send them a one-to-one email with a link to your preferences page or a subscription form so they can resubscribe.</p>
+        <h3>Why can a contact who opted out still get my emails?</h3>
+        <p>Opt-out covers marketing and one-to-one email. Transactional email is still delivered.</p>
+        <h3>I set contacts to non-marketing but my count did not drop.</h3>
+        <p>Non-marketing changes apply on the 1st of the next month or your renewal date, whichever comes first.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/how-to-reverse-email-opt-out/3122">HubSpot Community question: How to Reverse Email Opt-Out</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/set-up-email-subscription-types">HubSpot Knowledge Base: Set up email subscription types</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/manage-your-subscription-preferences-and-types">HubSpot Knowledge Base: Manage your contacts' messaging subscriptions</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/set-up-double-opt-in-for-emails">HubSpot Knowledge Base: Set up double opt-in for emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-double-opt-in-confirmation-status">HubSpot Knowledge Base: Understand double opt-in confirmation status</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/how-do-i-unsubscribe-or-opt-out-contacts-from-email">HubSpot Knowledge Base: Unsubscribe or opt out contacts from email</a></li>
           <li><a href="https://knowledge.hubspot.com/contacts/remove-an-opt-out-of-email-status">HubSpot Knowledge Base: View and edit contacts' subscription preferences</a></li>
+          <li><a href="https://knowledge.hubspot.com/one-to-one-email/manage-unsubscribe-links-for-one-to-one-emails">HubSpot Knowledge Base: Manage unsubscribe links for one-to-one emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/resubscribe-contacts-to-your-marketing-emails">HubSpot Knowledge Base: Resubscribe contacts to your marketing emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/import-an-opt-out-list">HubSpot Knowledge Base: Import opted-out contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/marketing-contacts">HubSpot Knowledge Base: Understand marketing contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/set-contacts-as-non-marketing">HubSpot Knowledge Base: Set contacts as non-marketing</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
