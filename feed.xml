@@ -336,11 +336,11 @@
     <category>Records</category>
   </item>
   <item>
-    <title>Restore a deleted note, call, meeting or task on a HubSpot record</title>
+    <title>Restore deleted data in HubSpot: records, activities, and rolling back CRM changes</title>
     <link>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</link>
     <guid>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to restore deleted activities from a record in HubSpot, the 90 day window, bulk restore, and the related restore pages for records and workflows.</description>
+    <description>The three HubSpot undo tools and their windows: restore deleted records (90 days, 10,000 at a time), restore deleted activity on a record (90 days), and Restore CRM changes to roll back workflow, import or manual edits (14 days).</description>
     <category>Smart CRM</category>
     <category>Activities</category>
     <category>Records</category>
@@ -1327,15 +1327,6 @@
     <description>How HubSpot NPS surveys are sent by email or web page, why recipients don&#39;t need to be marketing contacts, and where the automation lives.</description>
     <category>Service Hub</category>
     <category>Surveys</category>
-  </item>
-  <item>
-    <title>Undo a bulk edit, import or workflow mistake</title>
-    <link>https://hubspot.samcbarth.com/articles/restore-crm-changes/</link>
-    <guid>https://hubspot.samcbarth.com/articles/restore-crm-changes/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s Restore CRM changes tool rolls records back up to 14 days, the filters for manual changes, and restoring a single workflow&#39;s changes.</description>
-    <category>Smart CRM</category>
-    <category>Data</category>
   </item>
   <item>
     <title>HubSpot&#39;s customer agent: what it answers and when it hands off</title>

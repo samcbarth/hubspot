@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Restore a deleted note, call, meeting or task on a HubSpot record - HubSpot Field Notes</title>
-<meta name="description" content="How to restore deleted activities from a record in HubSpot, the 90 day window, bulk restore, and the related restore pages for records and workflows.">
+<title>Restore deleted data in HubSpot: records, activities, and rolling back CRM changes - HubSpot Field Notes</title>
+<meta name="description" content="The three HubSpot undo tools and their windows: restore deleted records (90 days, 10,000 at a time), restore deleted activity on a record (90 days), and Restore CRM changes to roll back workflow, import or manual edits (14 days).">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/restore-deleted-activity/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/restore-deleted-activity/">
-<meta property="og:title" content="Restore a deleted note, call, meeting or task on a HubSpot record">
-<meta property="og:description" content="How to restore deleted activities from a record in HubSpot, the 90 day window, bulk restore, and the related restore pages for records and workflows.">
+<meta property="og:title" content="Restore deleted data in HubSpot: records, activities, and rolling back CRM changes">
+<meta property="og:description" content="The three HubSpot undo tools and their windows: restore deleted records (90 days, 10,000 at a time), restore deleted activity on a record (90 days), and Restore CRM changes to roll back workflow, import or manual edits (14 days).">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/restore-deleted-activity/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Restore a deleted note, call, meeting or task on a HubSpot record",
-      "description": "How to restore deleted activities from a record in HubSpot, the 90 day window, bulk restore, and the related restore pages for records and workflows.",
+      "headline": "Restore deleted data in HubSpot: records, activities, and rolling back CRM changes",
+      "description": "The three HubSpot undo tools and their windows: restore deleted records (90 days, 10,000 at a time), restore deleted activity on a record (90 days), and Restore CRM changes to roll back workflow, import or manual edits (14 days).",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/restore-deleted-activity/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Restore deleted activities",
-      "totalTime": "PT3M",
+      "name": "Restore deleted data in HubSpot: records, activities, and rolling back CRM changes",
+      "totalTime": "PT8M",
       "step": [
-        {"@type": "HowToStep", "name": "Open the record", "text": "Open the record the activity was on."},
-        {"@type": "HowToStep", "name": "Restore activity", "text": "Click Actions, Restore activity. A new tab opens."},
-        {"@type": "HowToStep", "name": "Filter dates", "text": "Adjust the date range, default last 90 days."},
-        {"@type": "HowToStep", "name": "Restore", "text": "Select the activities and click Restore."}
+        {"@type": "HowToStep", "name": "Pick the right tool", "text": "Deleted records, deleted activity, or changed values."},
+        {"@type": "HowToStep", "name": "Restore deleted records", "text": "Object index, Actions, Restore records."},
+        {"@type": "HowToStep", "name": "Restore deleted activity", "text": "Record, Actions, Restore activity."},
+        {"@type": "HowToStep", "name": "Roll back changes", "text": "Settings, Data management, Backup and Restore, Restore."},
+        {"@type": "HowToStep", "name": "Preview, then run", "text": "Check the preview before you restore."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Restore a deleted note, call, meeting or task on a HubSpot record", "item": "https://hubspot.samcbarth.com/articles/restore-deleted-activity/" }
+        { "@type": "ListItem", "position": 2, "name": "Restore deleted data in HubSpot: records, activities, and rolling back CRM changes", "item": "https://hubspot.samcbarth.com/articles/restore-deleted-activity/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Activities">Activities</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
-      <h1>Restore a deleted note, call, meeting or task on a HubSpot record</h1>
-      <p class="dek">Deleted activity is not gone right away. There is a 90 day window and a restore page per record.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Smart CRM</span></div>
+      <h1>Restore deleted data in HubSpot: records, activities, and rolling back CRM changes</h1>
+      <p class="dek">Deleted records and activities come back for 90 days. Overwritten values can be rolled back for 14. After that, only property history and your own exports help.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Edit access to the record</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (Restore CRM changes needs Starter or above)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin for Restore CRM changes; Account access for restoring records</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,28 +103,85 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>On a record, <span class="ui">Actions &gt; Restore activity</span> opens a page listing activities deleted from that record in the last 90 days, such as notes, calls, meetings and tasks. Select them, or select all, and click <strong>Restore</strong>. After 90 days they are permanently deleted. Deleted records themselves are restored from the object's Actions menu, also within 90 days.</p>
+          <p>HubSpot has three undo tools with different windows. <strong>Deleted records</strong> can be restored for <strong>90 days</strong> from the object's <strong>Actions, Restore records</strong>, up to 10,000 at a time. <strong>Deleted activities</strong> (notes, calls, meetings, tasks) come back for 90 days from the record's <strong>Actions, Restore activity</strong>. <strong>Changed values</strong> can be rolled back to any point in the last <strong>14 days</strong> with <strong>Settings, Data management, Backup &amp; Restore, Restore</strong>, which undoes workflow, import and manual edits (Starter and above, Super Admin only). Permanent and GDPR deletions are not recoverable.</p>
         </div>
 
-        <h2>1. Where</h2>
-        <figure class="shot"><a href="actions.webp"><img src="actions.webp" alt="Company record Actions menu with Restore activity option" width="800" height="553" loading="lazy"></a><figcaption>Restore activity (1).</figcaption></figure>
+        <h2>1. Which tool to use</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>What happened</th><th>Tool</th><th>Window</th></tr></thead>
+            <tbody>
+              <tr><td>Records deleted</td><td>Object index, Actions, Restore records (all plans; Account access and Add and edit users permissions)</td><td>90 days</td></tr>
+              <tr><td>Notes, calls, meetings or tasks deleted from a record</td><td>Record, Actions, Restore activity</td><td>90 days</td></tr>
+              <tr><td>Property values overwritten by a workflow, import or person</td><td>Backup &amp; Restore, Restore tab (Starter and above; Super Admin)</td><td>14 days</td></tr>
+              <tr><td>One property on one record</td><td>Undo a value from the property's history on the record</td><td>Property history</td></tr>
+              <tr><td>A workflow's own property changes</td><td>Restore option in the workflow editor</td><td>See the KB</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Both restore entry points sit in the object index's actions menu: <strong>Restore records</strong> (1) and <strong>Restore CRM changes</strong> (2).</p>
+        <figure class="shot"><a href="menu.webp"><img src="menu.webp" alt="Contacts index actions menu with Restore records and Restore CRM changes" width="800" height="600" loading="lazy"></a><figcaption>Restore records (1) and Restore CRM changes (2).</figcaption></figure>
 
-        <h2>2. Steps</h2>
+        <h2>2. Restore deleted records</h2>
+        <ol>
+          <li>Open the object, such as <strong>CRM, Contacts</strong>, and choose <strong>Actions, Restore records</strong>.</li>
+          <li>Filter by date, the user who deleted them, or the workflow that deleted them.</li>
+          <li>Select records and restore.</li>
+        </ol>
         <ul>
-          <li>The restore page opens in a new tab, filtered to the last 90 days.</li>
-          <li>Select activities individually or use Select all.</li>
-          <li>Click Restore in the upper right.</li>
+          <li>It works for HubSpot-defined objects such as contacts, companies, emails, products and appointments, and for custom objects.</li>
+          <li>The page shows and restores at most 10,000 records at a time. Beyond that, restore in batches.</li>
+          <li>You can export the deleted records shown on the page to keep a copy outside HubSpot.</li>
+          <li>Restoring a contact does not bring back everything. Some associated data is lost when a contact is deleted.</li>
+          <li><strong>Permanent and GDPR deletions</strong> skip the recycle bin. They are gone for users immediately and purged from HubSpot within 30 days.</li>
+        </ul>
+        <p>The audit log can also restore records from a delete entry. See <a href="../locked-out-two-factor-reset/">account security and the audit log</a>.</p>
+
+        <h2>3. Restore deleted activity on a record</h2>
+        <p>On the record, open <strong>Actions</strong> and choose <strong>Restore activity</strong> (1):</p>
+        <figure class="shot"><a href="actions.webp"><img src="actions.webp" alt="Company record Actions menu with Restore activity option" width="800" height="553" loading="lazy"></a><figcaption>Restore activity (1).</figcaption></figure>
+        <p>A page opens in a new tab with activities deleted from that record in the last 90 days. Select them, or <strong>Select all</strong>, and click <strong>Restore</strong>. After 90 days they are permanently deleted.</p>
+
+        <h2>4. Roll back changes: Restore CRM changes</h2>
+        <p>This is the undo for a bad import or a workflow that overwrote a field on thousands of records.</p>
+        <ol>
+          <li>Go to <strong>Settings, Data management, Backup &amp; Restore</strong>, <strong>Restore</strong> tab.</li>
+          <li>Pick the objects and the source of the change: workflows, imports or manual edits. For manual changes you can limit it to certain properties or to one user with <strong>Changed by</strong>.</li>
+          <li>Pick the date and time to roll back to, up to 14 days ago, and click <strong>Prepare preview</strong>.</li>
+          <li>Open the preview, check what will change, and run it.</li>
+        </ol>
+        <ul>
+          <li>Supported objects: contacts, companies, deals, tickets, calls, products, leads, marketing events, orders, tasks and custom objects.</li>
+          <li>Rolling back past a record's creation moves that record to the recycle bin. HubSpot's own example: undoing a workflow that created 100 contacts.</li>
+          <li>A prepared restore stays available for 14 days. Completed restores stay in Restore History for 90 days.</li>
+        </ul>
+        <p>Act fast. After 14 days this tool cannot help, and you are left with property history on each record. See <a href="../property-history-api/">property history</a>.</p>
+
+        <h2>5. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Backup &amp; Restore is a settings area now</strong>, not a hidden action. HubSpot is adding to it: a public beta exports a CSV summary of each completed or partly failed restore job.</li>
+          <li><strong>More objects are covered.</strong> Leads, orders, marketing events and custom objects are on the list, so restore works for newer sales objects as well as the classic four.</li>
+          <li><strong>Exports are your long-term backup.</strong> The restore windows are 14 and 90 days. For anything older, keep scheduled exports, see <a href="../export-records-from-a-view/">exports</a>.</li>
         </ul>
 
-        <h2>3. Other restore points</h2>
-        <p>Deleted records: object index, <span class="ui">Actions &gt; Restore records</span>, filterable by user or the workflow that deleted them. Deleted workflows: see <a href="../export-and-restore-workflows/">restoring workflows</a>. The audit log also restores deleted records from a Delete log entry.</p>
+        <h2>Common questions</h2>
+        <h3>A workflow overwrote a field on thousands of contacts. Can I undo it?</h3>
+        <p>Yes, within 14 days, with Restore CRM changes filtered to workflow changes. You need Super Admin and a Starter subscription or above.</p>
+        <h3>I deleted contacts by mistake three months ago.</h3>
+        <p>If it was more than 90 days ago, the restore tool cannot bring them back. Re-import them from an export if you have one.</p>
+        <h3>Why can I not see all deleted records?</h3>
+        <p>The restore page shows up to 10,000 at a time. Restore or filter in batches.</p>
+        <h3>Can I restore a contact deleted for GDPR?</h3>
+        <p>No. GDPR and permanent deletions bypass the recycle bin.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/records/restore-deleted-activity-in-a-record">HubSpot Knowledge Base: Restore deleted activities logged on a record</a></li>
           <li><a href="https://knowledge.hubspot.com/records/restore-deleted-records">HubSpot Knowledge Base: Restore deleted records</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/restore-deleted-activity-in-a-record">HubSpot Knowledge Base: Restore deleted activities logged on a record</a></li>
+          <li><a href="https://knowledge.hubspot.com/object-settings/restore-crm-changes">HubSpot Knowledge Base: Restore CRM changes</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/undo-property-value-changes">HubSpot Knowledge Base: Undo property value changes</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
