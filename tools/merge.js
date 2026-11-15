@@ -55,3 +55,20 @@ for (const m of members) {
   console.log(`merged ${m} -> ${host}`);
 }
 fs.writeFileSync(path.join(ROOT, 'articles.js'), src);
+
+// Point internal links at the host instead of the stub.
+const dir = path.join(ROOT, 'articles');
+let rewired = 0;
+for (const s of fs.readdirSync(dir)) {
+  if (members.includes(s)) continue;
+  const p = path.join(dir, s, 'index.html');
+  if (!fs.existsSync(p)) continue;
+  let html = fs.readFileSync(p, 'utf8');
+  let changed = false;
+  for (const m of members) {
+    const re = new RegExp(`href="\\.\\./${m}/"`, 'g');
+    if (re.test(html)) { html = html.replace(re, s === host ? 'href="#"' : `href="../${host}/"`); changed = true; }
+  }
+  if (changed) { fs.writeFileSync(p, html); rewired++; }
+}
+console.log(`rewired links in ${rewired} article(s)`);

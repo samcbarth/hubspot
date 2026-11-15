@@ -13,13 +13,13 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot API rate limits: the numbers, the headers, and where to see usage - HubSpot Field Notes</title>
-<meta name="description" content="HubSpot's burst and daily API limits for privately distributed apps by tier, the 429 response and rate limit headers, and the API Call Usage page.">
+<title>HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them - HubSpot Field Notes</title>
+<meta name="description" content="Burst and daily API limits by tier and app type, the search API's five per second and 10,000 result caps, real 429 headers from a live test, retry code, and the 2027 versioning changes.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/">
-<meta property="og:title" content="HubSpot API rate limits: the numbers, the headers, and where to see usage">
-<meta property="og:description" content="HubSpot's burst and daily API limits for privately distributed apps by tier, the 429 response and rate limit headers, and the API Call Usage page.">
+<meta property="og:title" content="HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them">
+<meta property="og:description" content="Burst and daily API limits by tier and app type, the search API's five per second and 10,000 result caps, real 429 headers from a live test, retry code, and the 2027 versioning changes.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/og.png">
 <meta property="article:published_time" content="2026-10-07">
 <meta property="article:modified_time" content="2026-10-07">
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot API rate limits: the numbers, the headers, and where to see usage",
-      "description": "HubSpot's burst and daily API limits for privately distributed apps by tier, the 429 response and rate limit headers, and the API Call Usage page.",
+      "headline": "HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them",
+      "description": "Burst and daily API limits by tier and app type, the search API's five per second and 10,000 result caps, real 429 headers from a live test, retry code, and the 2027 versioning changes.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-14",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/og.png",
@@ -57,7 +57,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot API rate limits: the numbers, the headers, and where to see usage", "item": "https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them", "item": "https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/" }
       ]
     }
   ]
@@ -88,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
-      <h1>HubSpot API rate limits: the numbers, the headers, and where to see usage</h1>
-      <p class="dek">Scripts that loop over records hit the 10-second burst limit long before the daily one.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them</h1>
+      <p class="dek">Tested on a live Enterprise portal: exactly 190 calls per 10 seconds, search capped at five per second, and rejected calls still count toward the daily cap.</p>
       <dl class="facts">
         <div class="fact"><dt>Subscription</dt><dd>Limits vary by tier</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin or developer access to view usage</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Developer tools access to see usage</dd></div>
+        <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-14">November 14, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -105,33 +105,132 @@
       <article class="prose">
         <div class="tldr">
           <h2>Short answer</h2>
-          <p>For privately distributed apps, HubSpot's docs list <strong>100 requests per 10 seconds</strong> per app and 250,000 per day per account on Free and Starter, <strong>190 per 10 seconds</strong> with 625,000 per day on Professional, and 190 with 1,000,000 per day on Enterprise. The API limit increase add-on raises it to 250 per 10 seconds. Exceeding a limit returns <code>429</code>. Search endpoints have their own limit of five requests per second and do not return the rate limit headers.</p>
+          <p>Private apps and service keys get <strong>100 requests per 10 seconds</strong> on Free and Starter and <strong>190 per 10 seconds</strong> on Professional and Enterprise, per app. The daily cap is per account: 250,000 (Free, Starter), 625,000 (Professional) or 1,000,000 (Enterprise). Public OAuth apps get 110 per 10 seconds. The CRM search API has its own limit of <strong>five requests per second per account</strong> and stops at 10,000 results per query. Go over any of these and every call returns <code>429</code> until the window resets, and those rejected calls still count toward the daily total.</p>
         </div>
 
-        <h2>1. See your usage</h2>
-        <p>Development, Monitoring, API Call Usage shows the last 24 hours. My demo portal shows 1 of 1,000,000 calls, the Enterprise daily limit.</p>
-        <figure class="shot"><a href="usage.webp"><img src="usage.webp" alt="API Call Usage page showing 1 of 1,000,000 calls and usage for apps and service keys built here and third party apps" width="698" height="656" loading="lazy"></a><figcaption>API Call Usage (1), the daily total (2), and usage by app type (3).</figcaption></figure>
+        <h2>1. The limits, by app type</h2>
+        <p>The number that matters most is the 10-second burst limit. A script that loops over records with no pause hits it in a second or two, long before the daily cap is anywhere close.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>App type</th><th>Per 10 seconds</th><th>Per day (whole account)</th></tr></thead>
+            <tbody>
+              <tr><td>Private app or service key, Free and Starter</td><td>100 per app</td><td>250,000</td></tr>
+              <tr><td>Private app or service key, Professional</td><td>190 per app</td><td>625,000</td></tr>
+              <tr><td>Private app or service key, Enterprise</td><td>190 per app</td><td>1,000,000</td></tr>
+              <tr><td>With the API limit increase add-on (any tier)</td><td>250 per app</td><td>+1,000,000 per add-on, two add-ons max</td></tr>
+              <tr><td>Public OAuth app (Marketplace)</td><td>110</td><td>Not listed separately</td></tr>
+              <tr><td>CRM search endpoints</td><td>5 per second, per account</td><td>Counts toward the daily total</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Two details catch people. The burst limit is per app, so two private apps in the same portal each get their own 190. The daily limit is shared by every private app and service key in the account, so a noisy integration can starve a quiet one.</p>
 
-        <h2>2. The 429 response</h2>
-        <pre><code>HTTP/1.1 429 Too Many Requests
+        <h2>2. See your usage in HubSpot</h2>
+        <p>Go to <strong>Development, Monitoring, API Call Usage</strong> (1). The top counter is the last 24 hours for the whole account against the daily cap (2), and the card below splits it between apps and service keys built in the portal and third-party apps (3). Counts reset at midnight.</p>
+        <figure class="shot"><a href="usage-24h.webp"><img src="usage-24h.webp" alt="API Call Usage page in HubSpot showing 233 of 1,000,000 calls in the last 24 hours, split into apps and service keys built here and third party apps" width="679" height="660" loading="lazy"></a><figcaption>API Call Usage (1), the account total against the daily cap (2), and usage by app type (3).</figcaption></figure>
+        <p>Click <strong>Show more</strong> to see which app made the calls (1). When the daily number climbs and nobody knows why, this is the first place to look.</p>
+        <figure class="shot"><a href="usage-by-app.webp"><img src="usage-by-app.webp" alt="API Call Usage expanded to show calls per private app" width="429" height="460" loading="lazy"></a><figcaption>Calls broken down per app (1).</figcaption></figure>
+        <p>The 233 in that screenshot is from a test I ran on my Enterprise demo portal on November 14, 2026: one single call, then 220 calls fired in parallel, then 12 parallel search requests. Of the 220, exactly 189 succeeded and 31 got a 429, which matches the 190 per 10 seconds limit to the call. All 233 requests, the rejected ones included, landed in the daily count.</p>
+
+        <h2>3. What a 429 looks like</h2>
+        <p>Every normal response carries the limit headers. This is the first call from that test:</p>
+<pre><code>X-HubSpot-RateLimit-Daily: 1000000
+X-HubSpot-RateLimit-Daily-Remaining: 999999
 X-HubSpot-RateLimit-Interval-Milliseconds: 10000
 X-HubSpot-RateLimit-Max: 190
-X-HubSpot-RateLimit-Remaining: 0</code></pre>
+X-HubSpot-RateLimit-Remaining: 189
+X-HubSpot-RateLimit-Secondly: 19
+X-HubSpot-RateLimit-Secondly-Remaining: 18</code></pre>
+        <p>HubSpot's docs mark the two <code>Secondly</code> headers as deprecated, but they were still being sent in November 2026. Do not build logic on them. Watch <code>X-HubSpot-RateLimit-Remaining</code> instead.</p>
+        <p>Once the window is used up, the body tells you which limit you hit in <code>policyName</code>:</p>
+<pre><code>{
+  "status": "error",
+  "message": "You have reached your ten_secondly_rolling limit.",
+  "errorType": "RATE_LIMIT",
+  "policyName": "TEN_SECONDLY_ROLLING"
+}</code></pre>
         <ul>
-          <li>The burst limit applies per app. The daily limit is shared by all apps in the account.</li>
-          <li>HubSpot says error responses should stay under 5% of daily requests.</li>
-          <li>High request volume can also produce 5xx errors. Treat them like 429s.</li>
+          <li><code>TEN_SECONDLY_ROLLING</code>: the per-app burst limit. Slow down and the next window clears it.</li>
+          <li><code>SECONDLY</code>: the search API's five per second. In my test the sixth parallel search request was rejected.</li>
+          <li><code>DAILY</code>: the account cap. Nothing clears it until the reset at midnight, so stop the job instead of retrying.</li>
+        </ul>
+        <p>HubSpot also says error responses should stay under 5% of your daily requests, and Marketplace apps must stay under that to be certified. High volume can surface as 5xx errors too, so treat those like 429s.</p>
+
+        <h2>4. Handle 429s in your code</h2>
+        <p>Throttle before you hit the limit, then back off when you do. A minimal Python pattern:</p>
+<pre><code>import time, requests
+
+def hubspot_get(url, token, tries=5):
+    for attempt in range(tries):
+        r = requests.get(url, headers={"Authorization": f"Bearer {token}"})
+        if r.status_code != 429 and r.status_code &lt; 500:
+            return r
+        policy = r.json().get("policyName", "") if r.status_code == 429 else ""
+        if policy == "DAILY":
+            raise RuntimeError("Daily HubSpot API limit reached, stop until midnight")
+        time.sleep(2 + attempt * 3)  # wait out the 10-second window
+    r.raise_for_status()</code></pre>
+        <p>If you use the official Node client, <code>@hubspot/api-client</code> has retry and rate limiting options built in, so use those instead of writing your own.</p>
+        <p>Inside a workflow <strong>custom code action</strong> you do not need a retry loop. If an API call fails with a rate limit error, or a 429 or 5xx from axios or <code>@hubspot/api-client</code>, HubSpot retries the whole action for up to three days, starting one minute after the failure. Let the error throw. If you catch it and carry on, the retry never happens.</p>
+
+        <h2>5. The search API: five per second and 10,000 results</h2>
+        <p>Search is the limit people hit without realizing it is separate. The docs list five requests per second per account, 200 records per page, 10,000 total results per query (paging past that returns a 400), a 3,000-character query body, and up to five filter groups with six filters each and 18 in total. Search responses in my test still carried the two daily headers, but none of the 10-second ones, so you cannot read your remaining search budget from the response.</p>
+        <p>To read more than 10,000 records, sort by a stable property, page with <code>after</code>, and when you get close to 10,000 start a new query filtered from the last value you received:</p>
+<pre><code>POST https://api.hubapi.com/crm/v3/objects/contacts/search
+{
+  "filterGroups": [
+    { "filters": [ { "propertyName": "createdate", "operator": "GTE", "value": "1767225600000" } ] }
+  ],
+  "sorts": [ { "propertyName": "createdate", "direction": "ASCENDING" } ],
+  "properties": ["email", "createdate"],
+  "limit": 200,
+  "after": 0
+}</code></pre>
+        <p>Deduplicate on record ID, because records that share the boundary timestamp come back twice. Also keep in mind that new and updated records can take a few moments to show up in search, archived records never appear, and only one sort rule is allowed per search. If you need every record of an object, page through the list endpoints instead: they fall under the normal burst limit, not the five per second search limit.</p>
+
+        <h2>6. Make fewer calls</h2>
+        <ul>
+          <li><strong>Batch endpoints.</strong> One batch call reads, creates or updates up to 100 records and counts as one request. See <a href="../batch-upsert-api/">batch upsert</a>.</li>
+          <li><strong>Webhooks instead of polling.</strong> Let HubSpot tell you when a record changes instead of asking every few minutes. See <a href="../webhooks-api-subscriptions/">webhooks</a>.</li>
+          <li><strong>Cache what rarely changes.</strong> Owners, pipelines and property definitions do not need a fresh call per record.</li>
+          <li><strong>Ask for only the properties you use.</strong> It does not change the count, but smaller responses keep loops fast enough that throttling is easy to reason about.</li>
         </ul>
 
-        <h2>3. Cut the number of calls</h2>
-        <p>Use batch endpoints (see <a href="../batch-upsert-api/">batch upsert</a>), webhooks instead of polling (see <a href="../webhooks-api-subscriptions/">webhooks</a>), and the search API carefully (see <a href="../crm-search-api-limits/">search API limits</a>).</p>
+        <h2>7. When the add-on is worth it</h2>
+        <p>The API limit increase add-on raises the burst limit to 250 per 10 seconds and adds 1,000,000 calls a day per add-on, with a maximum of two. It helps when a well-behaved integration genuinely needs the volume, such as a nightly sync of a very large database. It does not fix a script with no throttling: that script will hit 250 almost as fast as it hit 190.</p>
+
+        <h2>8. What is changing for 2027</h2>
+        <p>The limits themselves have no announced change. The bigger shift is versioning. Since March 30, 2026, HubSpot's REST APIs use date-based versions, so <code>/crm/v3/objects/contacts</code> has a counterpart at <code>/crm/objects/2026-09/contacts</code>. New versions ship every March and September, and each is supported for 18 months.</p>
+        <ul>
+          <li>Current <strong>v4 APIs</strong> and the <code>/2025-09/</code> CRM APIs become unsupported when <code>/2027-03/</code> is released in March 2027. Unsupported means they may keep working but are no longer guaranteed fixes or stability.</li>
+          <li>v1 to v3 endpoints keep working for now. HubSpot says their support timeline will be announced later.</li>
+          <li>Many v3 endpoints have identical contracts in <code>2026-09</code>, so the migration is often just the URL. Check the request body and response for each endpoint before you switch.</li>
+        </ul>
+        <p>If you are writing new rate-limit handling now, build it against the date-based URLs so you only touch the code once. Legacy private apps are part of the same move: see <a href="../private-apps-moved-to-legacy-apps/">private apps moved to legacy apps</a>.</p>
+
+        <h2>Common questions</h2>
+        <h3>Why do I get 429s when I am nowhere near the daily limit?</h3>
+        <p>Because the burst limit is what you hit. 190 calls in 10 seconds is 19 a second. A loop with no delay, or a few parallel workers, passes that immediately. Check <code>policyName</code>: if it says <code>TEN_SECONDLY_ROLLING</code>, add throttling.</p>
+        <h3>I am under five search requests per second and still get 429s from search. Why?</h3>
+        <p>The search limit is per account, not per app or per token. Every integration in the portal that uses search shares those five requests a second.</p>
+        <h3>Do failed calls count toward the daily limit?</h3>
+        <p>In my test they did. The 31 rejected calls and the 7 rejected searches all showed up in the 24-hour total, and the daily remaining header went down on the 429 responses too. A retry loop with no backoff burns the daily budget while getting nothing done.</p>
+        <h3>Several tools connect to my portal. Do they share a limit?</h3>
+        <p>Private apps and service keys built in the portal share the daily cap but each has its own burst limit. Marketplace apps installed through OAuth have their own 110 per 10 seconds. A tool like Make or Zapier connects through one app, so every scenario or zap that uses that connection draws from the same limit.</p>
+        <h3>Can HubSpot raise the limit for me without the add-on?</h3>
+        <p>HubSpot's documented options are the API limit increase add-on (up to two) and reducing calls with batch endpoints, caching and webhooks.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines">HubSpot developer docs: API usage guidelines and limits</a></li>
-          <li><a href="https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview">HubSpot developer docs: Legacy private apps</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/search-the-crm">HubSpot developer docs: CRM search API</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/error-handling">HubSpot developer docs: Error handling and retries</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/automation/workflow-actions/custom-code-actions">HubSpot developer docs: Custom code actions</a></li>
+          <li><a href="https://developers.hubspot.com/changelog/introducing-date-based-api-versioning">HubSpot developer changelog: Introducing date-based API versioning (March 30, 2026)</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/migration-guide">HubSpot developer docs: Legacy API migration guide</a></li>
+          <li><a href="https://community.hubspot.com/t/rate-limit-error-you-have-reached-your-ten-secondly-rolling-limit/82654">HubSpot Community: ten_secondly_rolling limit question</a></li>
+          <li><a href="https://community.hubspot.com/t/resolve-429-status-error/144620">HubSpot Community: Resolve 429 status error</a></li>
         </ul>
-
         <div class="vote" data-vote></div>
       </article>
     </div>

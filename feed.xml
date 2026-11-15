@@ -560,20 +560,11 @@
     <category>Ownership</category>
   </item>
   <item>
-    <title>HubSpot API rate limits: the numbers, the headers, and where to see usage</title>
+    <title>HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them</title>
     <link>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</link>
     <guid>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s burst and daily API limits for privately distributed apps by tier, the 429 response and rate limit headers, and the API Call Usage page.</description>
-    <category>Smart CRM</category>
-    <category>API</category>
-  </item>
-  <item>
-    <title>HubSpot search API stops at 10,000 results: how to page past it</title>
-    <link>https://hubspot.samcbarth.com/articles/crm-search-api-limits/</link>
-    <guid>https://hubspot.samcbarth.com/articles/crm-search-api-limits/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The CRM search API&#39;s limits (10,000 results per query, 200 per page, five requests per second, 3,000-character queries, filter group caps) and a pattern for pulling larger sets.</description>
+    <description>Burst and daily API limits by tier and app type, the search API&#39;s five per second and 10,000 result caps, real 429 headers from a live test, retry code, and the 2027 versioning changes.</description>
     <category>Smart CRM</category>
     <category>API</category>
   </item>
