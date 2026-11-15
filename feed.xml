@@ -28,36 +28,15 @@
     <category>Integrations</category>
   </item>
   <item>
-    <title>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server</title>
+    <title>HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB</title>
     <link>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</link>
     <guid>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</guid>
     <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.</description>
+    <description>Build HubSpot themes with the CLI and the developer MCP server, upload safely, the seven theme validation errors and how to sweep them, why set inside a for loop does nothing, per-page module fonts, serverless limits, HubDB and RSS.</description>
     <category>Content Hub</category>
     <category>Themes</category>
     <category>Templates</category>
     <category>Modules</category>
-  </item>
-  <item>
-    <title>HubL: a variable set inside a for loop is gone after the loop ends</title>
-    <link>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot&#39;s docs, and the CSS fallback I used instead.</description>
-    <category>Content Hub</category>
-    <category>Themes</category>
-    <category>Design Manager</category>
-  </item>
-  <item>
-    <title>Give each HubSpot module its own font controls that win over the theme stylesheet</title>
-    <link>https://hubspot.samcbarth.com/articles/module-font-controls-override-theme/</link>
-    <guid>https://hubspot.samcbarth.com/articles/module-font-controls-override-theme/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to add font fields to custom modules so editors can set the font per text element in the page editor, render them so the theme CSS cannot override them, and scale them down on mobile.</description>
-    <category>Content Hub</category>
-    <category>Marketing Hub</category>
-    <category>Themes</category>
-    <category>Design Manager</category>
   </item>
   <item>
     <title>A HubSpot record card with a Sync now button when your plan has no serverless functions</title>
@@ -222,17 +201,6 @@
     <category>Data Hub</category>
     <category>Associations</category>
     <category>Properties</category>
-  </item>
-  <item>
-    <title>HubDB: store structured content once and show it on pages</title>
-    <link>https://hubspot.samcbarth.com/articles/hubdb-tables/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubdb-tables/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubDB tables are for, the subscriptions that use them for dynamic pages and programmable emails, adding rows and importing CSVs, and the dynamic page limit.</description>
-    <category>Content Hub</category>
-    <category>Marketing Hub</category>
-    <category>Website</category>
-    <category>Pages</category>
   </item>
   <item>
     <title>Meeting rotations in HubSpot: share inbound meetings fairly across reps</title>
@@ -454,16 +422,6 @@
     <description>How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.</description>
     <category>Data Hub</category>
     <category>Workflows</category>
-    <category>API</category>
-  </item>
-  <item>
-    <title>HubSpot CMS serverless functions: what they are for, and the 10-second limit</title>
-    <link>https://hubspot.samcbarth.com/articles/cms-serverless-functions/</link>
-    <guid>https://hubspot.samcbarth.com/articles/cms-serverless-functions/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How serverless functions run server-side code for HubSpot CMS pages, their execution limits, and where to see their logs.</description>
-    <category>Content Hub</category>
-    <category>Website</category>
     <category>API</category>
   </item>
   <item>
@@ -1133,15 +1091,6 @@
     <category>Dashboards</category>
   </item>
   <item>
-    <title>Add an RSS feed to a page template</title>
-    <link>https://hubspot.samcbarth.com/articles/rss-feed-on-page/</link>
-    <guid>https://hubspot.samcbarth.com/articles/rss-feed-on-page/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to use HubSpot&#39;s RSS Listing module on page and post templates.</description>
-    <category>Content Hub</category>
-    <category>Design manager</category>
-  </item>
-  <item>
     <title>How HubSpot improves call transcripts</title>
     <link>https://hubspot.samcbarth.com/articles/call-transcripts-quality/</link>
     <guid>https://hubspot.samcbarth.com/articles/call-transcripts-quality/</guid>
@@ -1542,16 +1491,6 @@
     <description>A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.</description>
     <category>Sales Hub</category>
     <category>Deals</category>
-  </item>
-  <item>
-    <title>Seven HubSpot theme upload errors I hit, and how to sweep for the whole class</title>
-    <link>https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/</link>
-    <guid>https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.</description>
-    <category>Content Hub</category>
-    <category>Design Manager</category>
-    <category>Themes</category>
   </item>
   <item>
     <title>Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn&#39;t</title>

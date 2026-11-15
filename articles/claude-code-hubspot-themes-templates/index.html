@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server - HubSpot Field Notes</title>
-<meta name="description" content="How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.">
+<title>HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB - HubSpot Field Notes</title>
+<meta name="description" content="Build HubSpot themes with the CLI and the developer MCP server, upload safely, the seven theme validation errors and how to sweep them, why set inside a for loop does nothing, per-page module fonts, serverless limits, HubDB and RSS.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/">
-<meta property="og:title" content="Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server">
-<meta property="og:description" content="How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.">
+<meta property="og:title" content="HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB">
+<meta property="og:description" content="Build HubSpot themes with the CLI and the developer MCP server, upload safely, the seven theme validation errors and how to sweep them, why set inside a for loop does nothing, per-page module fonts, serverless limits, HubDB and RSS.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/og.png">
 <meta property="article:published_time" content="2026-10-15">
-<meta property="article:modified_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server",
-      "description": "How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.",
+      "headline": "HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB",
+      "description": "Build HubSpot themes with the CLI and the developer MCP server, upload safely, the seven theme validation errors and how to sweep them, why set inside a for loop does nothing, per-page module fonts, serverless limits, HubDB and RSS.",
       "datePublished": "2026-10-15",
-      "dateModified": "2026-10-15",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/og.png",
@@ -43,21 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Set up Claude Code to build HubSpot themes and templates",
-      "totalTime": "PT12M",
+      "name": "HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB",
+      "totalTime": "PT14M",
       "step": [
-        {"@type": "HowToStep", "name": "Update the CLI", "text": "Install or update @hubspot/cli to version 8.2.0 or higher."},
-        {"@type": "HowToStep", "name": "Run hs mcp setup", "text": "Run hs mcp setup and select Claude as the client."},
-        {"@type": "HowToStep", "name": "Restart and verify", "text": "Restart Claude Code and run /mcp to see the HubSpotDev server."},
-        {"@type": "HowToStep", "name": "Scaffold", "text": "Create a theme, template or module with the CLI or through the MCP tools."},
-        {"@type": "HowToStep", "name": "Upload to a draft", "text": "Upload with a draft publish mode and review in Design Manager."}
+        {"@type": "HowToStep", "name": "Install the CLI", "text": "npm install -g @hubspot/cli, version 8.2.0 or higher."},
+        {"@type": "HowToStep", "name": "Set up the MCP server", "text": "hs mcp setup, then check /mcp for HubSpotDev."},
+        {"@type": "HowToStep", "name": "Scaffold the theme", "text": "hs cms theme create."},
+        {"@type": "HowToStep", "name": "Upload in draft", "text": "hs cms upload or watch with --cms-publish-mode draft."},
+        {"@type": "HowToStep", "name": "Sweep validation errors by class", "text": "Search the theme for every reserved word at once."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server", "item": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB", "item": "https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/" }
       ]
     }
   ]
@@ -89,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Themes">Themes</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Content Hub</span></div>
-      <h1>Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server</h1>
-      <p class="dek">Claude Code can write the files, and the hs CLI puts them in Design Manager. Set up the MCP server, scaffold, then upload to a draft first.</p>
+      <h1>HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB</h1>
+      <p class="dek">Notes from building HubSpot themes with the CLI and an AI assistant: the commands, the validation errors in the order they appear, and the HubL and module rules that cost time.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Developer tooling; check your subscription for custom code in Design Manager</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Design Tools access; HubSpot CLI authenticated to the account</dd></div>
-        <div class="fact"><dt>Time</dt><dd>12 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-15T15:48:00-04:00">October 15, 2026, 3:48 PM ET</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Content Hub (HubDB dynamic pages need Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Design tools access; Developer tools access for the CLI</dd></div>
+        <div class="fact"><dt>Time</dt><dd>14 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,69 +103,130 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Install the HubSpot CLI (version 8.2.0 or higher), run <code>hs mcp setup</code>, pick Claude, restart Claude Code and check <code>/mcp</code> for the <strong>HubSpotDev</strong> server. Its CMS tools create templates, modules and serverless functions, and the CLI scaffolds a full theme with <code>hs cms theme create</code>. Upload with <code>hs cms upload</code> or <code>hs cms watch</code>, use a draft publish mode while you test, and review the result in Design Manager.</p>
+          <p>Build HubSpot CMS themes locally with the HubSpot CLI (8.2.0 or higher) and, if you use an AI assistant, HubSpot's local developer MCP server (<code>hs mcp setup</code>). Scaffold with <code>hs cms theme create</code>, add templates and modules with <code>hs cms template create</code> and <code>hs cms module create</code>, and upload with <code>hs cms upload</code> or <code>hs cms watch</code> in draft mode first. Expect theme validation to report one class of error per upload. Know three HubL and module rules that bite: variables set inside a loop vanish at <code>endfor</code>, theme fonts are global so per-page control needs module font fields, and serverless functions stop at 10 seconds.</p>
         </div>
 
-        <h2>1. Install the CLI and the Developer MCP server</h2>
-        <p>HubSpot's developer MCP server runs locally and gives your AI assistant tools for app and CMS development. It needs version 8.2.0 or higher of the HubSpot CLI.</p>
-        <pre><code>hs --version
+        <h2>1. CLI and the developer MCP server</h2>
+        <p>HubSpot's developer MCP server runs locally and gives an AI assistant tools for app and CMS work. It needs HubSpot CLI 8.2.0 or higher:</p>
+<pre><code>hs --version
 npm install -g @hubspot/cli
 hs mcp setup</code></pre>
-        <p>When prompted, use the arrow keys and space bar to choose your client, then press Enter. Supported clients include Claude Code, Codex CLI, Cursor, Gemini CLI, VS Code and Windsurf. You will also be asked whether to use standalone mode, which runs <code>npx @hubspot/cli</code> instead of a global install, useful on machines where global npm installs are restricted. Restart the client if it was open.</p>
+        <p>Pick your client with the arrow keys and space bar. Supported clients include Claude Code, Codex CLI, Cursor, Gemini CLI, VS Code and Windsurf. Standalone mode runs <code>npx @hubspot/cli</code> instead of a global install, for machines that block global npm installs. On my machine, CLI 8.5.0's help shows a <code>--client</code> option for <code>codex</code>, <code>claude</code>, <code>cursor</code>, <code>gemini</code>, <code>vscode</code> and <code>windsurf</code> (1):</p>
         <figure class="shot"><a href="mcp-setup-help.webp"><img src="mcp-setup-help.webp" alt="Terminal showing hs --version and hs mcp setup --help with a client option listing codex, claude, cursor, gemini, vscode and windsurf" width="800" height="335" loading="lazy"></a><figcaption>Terminal output: hs mcp setup can target a client (1).</figcaption></figure>
-        <div class="callout"><span class="callout-title">Example from my portal</span><p>My CLI is version 8.5.0. Its help for <code>hs mcp setup</code> has a <code>--client</code> option with the choices codex, claude, cursor, gemini, vscode and windsurf, so the setup can be run for Claude directly.</p></div>
-        <p>To check it worked, run <code>/mcp</code> in Claude Code and look for <strong>HubSpotDev</strong>. This server is separate from the remote HubSpot MCP server that the Claude connector uses. The developer server is local and for building. The remote one is for working with CRM data.</p>
+        <p>In Claude Code, run <code>/mcp</code> and look for <strong>HubSpotDev</strong>. This local server is for building; it is separate from the remote HubSpot MCP server the Claude connector uses for CRM data, see <a href="../hubspot-mcp-connectors/">HubSpot with AI assistants</a>. Its CMS tools include <code>create-cms-template</code> (page, email, partial, global partial, blog listing, blog post, search and section), <code>create-cms-module</code> (HubL or React), <code>create-cms-function</code>, and <code>search-docs</code> and <code>fetch-doc</code> so the agent reads HubSpot's docs before writing code.</p>
 
-        <h2>2. What the CMS tools do</h2>
-        <p>HubSpot's tool reference lists CMS tools that run CLI commands for the agent.</p>
-        <ul>
-          <li><strong>create-cms-template:</strong> creates a template. Types include page, email, partial, global partial, blog listing, blog post, search and section.</li>
-          <li><strong>create-cms-module:</strong> creates a HubL or React module, with content type targeting, a global flag and a new-content availability flag.</li>
-          <li><strong>create-cms-function:</strong> creates a serverless function with an endpoint path and HTTP method.</li>
-          <li><strong>search-docs and fetch-doc:</strong> let the agent read HubSpot's developer docs before it writes code.</li>
-        </ul>
-        <p>HubSpot's example prompt for a website module tells the agent to ask what the module should look and do, what fields you want to control, and where it will be used, then to use brand colors by default and walk you through testing.</p>
-
-        <h2>3. Scaffold a theme</h2>
-        <p>The CLI can scaffold a complete theme. On my machine, <code>hs cms theme create ./site-theme</code> made a folder with <code>css</code>, <code>fields.json</code>, <code>images</code>, <code>js</code>, <code>modules</code>, <code>sections</code>, <code>templates</code> and <code>theme.json</code>.</p>
+        <h2>2. Scaffold a theme, templates and modules</h2>
+        <p><code>hs cms theme create ./site-theme</code> made a folder with css, fields.json, images, js, modules, sections, templates and theme.json (1), and starting templates such as home, about, contact, landing-page, pricing and blog (2):</p>
         <figure class="shot"><a href="theme-create.webp"><img src="theme-create.webp" alt="Terminal showing hs cms theme create, then the theme folder listing and its templates folder listing" width="800" height="671" loading="lazy"></a><figcaption>Terminal output: the theme folders (1) and its templates (2).</figcaption></figure>
-        <div class="callout"><span class="callout-title">Example from my portal</span><p>The scaffold's <code>theme.json</code> on my machine points to a preview path, a screenshot path and a single <code>mobile</code> responsive breakpoint. The <code>templates</code> folder had home, about, contact, landing-page, pricing, blog and other starting templates.</p></div>
-        <p>The theme folder from this command did not include a <code>CLAUDE.md</code> or <code>AGENTS.md</code>. HubSpot says it automatically includes agent context files, <code>AGENTS.md</code>, <code>CLAUDE.md</code> and <code>HUBSPOT_PROJECTS.md</code>, in projects created through <code>hs project create</code>, <code>hs get-started</code> or the MCP server. For a theme folder, add your own <code>CLAUDE.md</code> with your brand rules and the commands you want the agent to use.</p>
-
-        <h2>4. Add a template</h2>
-        <p>Templates are HTML files with a comment header. A new page template from <code>hs cms template create</code> had <code>templateType: page</code>, a label, and <code>isAvailableForNewContent: true</code>, plus two example modules and the standard header and footer includes.</p>
+        <p>The theme folder did not include a CLAUDE.md or AGENTS.md. HubSpot adds agent context files to projects made with <code>hs project create</code>, <code>hs get-started</code> or the MCP server, so for a theme add your own with brand rules and the commands you want the agent to use.</p>
+        <p><code>hs cms template create</code> wrote a page template with a comment header (<code>templateType: page</code>, a label, <code>isAvailableForNewContent: true</code>) (1) and example modules (2):</p>
         <figure class="shot"><a href="template-create.webp"><img src="template-create.webp" alt="Terminal showing hs cms template create and the generated page template file with its comment header and module tags" width="800" height="608" loading="lazy"></a><figcaption>Terminal output: the comment header (1) and the example modules (2).</figcaption></figure>
-        <p>HubSpot's docs list <code>hs cms template create</code>, while some of their command lists still show the older <code>hs create template</code>. In CLI 8.5.0 on my machine, <code>hs create</code> answered with a hint to use the <code>hs cms ... create</code> form, so use that if your agent follows an older doc. If a coded template does not show up where you expect in the page picker, see <a href="../coded-template-missing-from-picker/">coded template missing from the picker</a>.</p>
-
-        <h2>5. Add a module</h2>
-        <p><code>hs cms module create</code> takes a label and the content types where the module can be used. It asked whether the module should be available for new content, then wrote <code>fields.json</code>, <code>meta.json</code>, <code>module.css</code>, <code>module.html</code> and <code>module.js</code>.</p>
+        <p>Some HubSpot command lists still show the older <code>hs create template</code>; in CLI 8.5.0, <code>hs create</code> answered with a hint to use the <code>hs cms ... create</code> form. Coded root templates can show up under <strong>Other</strong> in the landing page template picker rather than with the theme.</p>
+        <p><code>hs cms module create</code> asks for a label, content types and whether the module is available for new content, then writes fields.json, meta.json, module.css, module.html and module.js (1), with the content types in meta.json (2):</p>
         <figure class="shot"><a href="module-create.webp"><img src="module-create.webp" alt="Terminal showing hs cms module create, the module files, and meta.json with content_types LANDING_PAGE and SITE_PAGE" width="800" height="734" loading="lazy"></a><figcaption>Terminal output: the module files (1) and the content types (2).</figcaption></figure>
-        <p>Fields are what editors control, so tell Claude which settings a marketer should be able to change. The upload validation errors for fields and themes are covered in <a href="../theme-upload-validation-errors/">theme upload validation errors</a>.</p>
 
-        <h2>6. Preview and upload safely</h2>
-        <p>The CLI has two ways to push files: <code>hs cms upload &lt;src&gt; &lt;dest&gt;</code> for a one-time upload and <code>hs cms watch &lt;src&gt; &lt;dest&gt;</code> to upload changes as you save. Both accept <code>--cms-publish-mode</code> with <code>draft</code> or <code>publish</code>, and <code>hs cms theme preview</code> uploads and watches a theme and starts a local preview server.</p>
+        <h2>3. Upload and preview safely</h2>
+        <p><code>hs cms upload &lt;src&gt; &lt;dest&gt;</code> uploads once; <code>hs cms watch &lt;src&gt; &lt;dest&gt;</code> uploads as you save. Both take <code>--cms-publish-mode draft</code> or <code>publish</code>, and <code>hs cms theme preview</code> uploads, watches and starts a local preview server (1, 2):</p>
         <figure class="shot"><a href="upload-preview-help.webp"><img src="upload-preview-help.webp" alt="Terminal showing hs cms theme preview --help and hs cms watch --help" width="800" height="650" loading="lazy"></a><figcaption>Terminal output: theme preview options (1) and the watch command (2).</figcaption></figure>
         <ul>
-          <li>Start with a draft publish mode, and look at the result in Design Manager before anything is published.</li>
-          <li><code>hs cms upload --clean</code> deletes the destination directory and its contents before uploading, and that includes the global content for global partials and modules.</li>
+          <li>Start in draft mode and check the result in Design Manager before publishing.</li>
+          <li><code>hs cms upload --clean</code> deletes the destination folder first, including global content for global partials and modules.</li>
           <li><code>hs cms watch --remove</code> deletes files in HubSpot that are not found locally.</li>
-          <li>HubSpot's tool notes for project uploads say to run them only when you explicitly ask. Say the same in your prompt for CMS uploads.</li>
-          <li>Use a copy of the theme or a new destination path while you experiment.</li>
+          <li>Upload to a fresh folder while experimenting, and tell your AI assistant to upload only when you ask.</li>
+        </ul>
+        <figure class="shot"><a href="design-manager.webp"><img src="design-manager.webp" alt="Design Manager showing the file tree with several themes and a Create a new file button" width="800" height="450" loading="lazy"></a><figcaption>Design Manager: the file tree with themes (1) and Create a new file (2).</figcaption></figure>
+
+        <h2>4. Theme upload validation errors</h2>
+        <p>HubSpot will not validate a theme until every rule passes, and it reports one class of error at a time. Building a theme with fifteen templates and eleven modules, it took me six uploads. The errors, quoted from my own upload output, in the order I hit them:</p>
+        <ol>
+          <li>Field name cannot be <code>label</code>. Reserved word.</li>
+          <li><code>email_backup_unsubscribe</code> is not a valid template type. Email system template types need a <code>_page</code> suffix.</li>
+          <li>Duplicate field id <code>enabled</code>. Theme field IDs are unique across the whole theme, not per group.</li>
+          <li>Text fields are not supported in the theme's fields.json. Footer copy had to become a module.</li>
+          <li>Invalid breakpoint <code>tablet</code>. <code>mobile</code> was the only name accepted.</li>
+          <li>Duplicate field id inside one module. Nested child fields count too.</li>
+          <li>Field name cannot be <code>body</code>. Another reserved name.</li>
+        </ol>
+        <p>When an error names a reserved word, search the whole theme for every reserved word at once instead of fixing the one it named:</p>
+<pre><code>grep -rn '"name": "\(label\|body\)"' my-theme</code></pre>
+        <p>Also plan the required system templates (404, 500, password prompt, search results, subscription pages) from the start.</p>
+
+        <h2>5. HubL: set inside a for loop does not escape</h2>
+        <p>HubSpot's loop docs say variables defined inside a loop are limited to that loop. So this never works, because the <code>set</code> inside creates a new variable that disappears at <code>endfor</code>:</p>
+<pre><code>{% set has_logos = false %}
+{% for item in module.logos %}
+  {% if item.logo.src %}{% set has_logos = true %}{% endif %}
+{% endfor %}
+{% if has_logos %} ...never renders... {% endif %}</code></pre>
+        <p>The pattern from HubSpot's variables docs is a dict outside the loop, changed with <code>do</code>:</p>
+<pre><code>{% set state = {"found": false} %}
+{% for item in module.logos %}
+  {% if item.logo.src %}{% do state.update({"found": true}) %}{% endif %}
+{% endfor %}
+{% if state.found %} ...the list... {% endif %}</code></pre>
+        <figure class="shot"><a href="hubl-module.webp"><img src="hubl-module.webp" alt="Logo wall module.html in the Design Manager showing a for loop and a set statement inside it" width="800" height="553" loading="lazy"></a><figcaption>A live module: the loop (1) and a set inside it (2). That set is fine because it is only used inside the loop.</figcaption></figure>
+        <p>For my logo wall I only needed to hide an empty box, so I dropped the HubL guard for one CSS rule: <code>.logo-wall:not(:has(li)) { display: none; }</code>.</p>
+
+        <h2>6. Per-page font control in modules</h2>
+        <p>Theme styles are global; HubSpot's panel says changes apply to every page using the theme (1, 2). A module with no style fields only offers visibility on its Styles tab:</p>
+        <figure class="shot"><a href="theme-styles.webp"><img src="theme-styles.webp" alt="Global theme styles panel in the page editor with a tip that changes apply to all pages using the theme" width="800" height="553" loading="lazy"></a><figcaption>Global theme styles (1). The tip (2) says changes apply to all pages using this theme.</figcaption></figure>
+        <figure class="shot"><a href="styles-empty.webp"><img src="styles-empty.webp" alt="A module Styles tab that only shows a Visibility option" width="800" height="553" loading="lazy"></a><figcaption>A module with no style fields: the Styles tab only has visibility (1).</figcaption></figure>
+        <p>To let editors resize one heading on one page, add a <strong>font</strong> field per text element in a group on the STYLE tab. Font family needs both <code>font</code> and <code>font_set</code>. On my landing page theme I rendered each field as an inline style, passing size through a CSS variable so a media query can still shrink it on phones:</p>
+<pre><code>[data-f] { font-size: var(--fs) !important; }
+@media (max-width: 860px) {
+  [data-f] { font-size: min(var(--fs), calc(var(--fs) * .6 + 14px)) !important; }
+}</code></pre>
+        <p>Set <code>load_external_fonts</code> to false if the template already loads the font. HubSpot notes that hiding a font subfield does not stop its CSS being output. Keep the field defaults equal to the theme fonts so pages look the same until someone changes them.</p>
+
+        <h2>7. Serverless functions, HubDB and RSS</h2>
+        <ul>
+          <li><strong>Serverless functions</strong> run server-side JavaScript for CMS pages, such as form handling or calling an API with a secret. Each run can last at most 10 seconds, and hitting execution count or time limits returns 429. Keep secrets in HubSpot secrets. For workflow-side code, see <a href="../workflow-custom-code-action/">custom code actions</a>.</li>
+        </ul>
+<pre><code>// functions/hello.js
+exports.main = async (context) =&gt; {
+  return { statusCode: 200, body: { ok: true, q: context.params } };
+};</code></pre>
+        <ul>
+          <li><strong>HubDB</strong> stores structured content such as events, catalogs and staff directories under <strong>Content, HubDB</strong> (1). Dynamic pages need Content Hub Professional or Enterprise; HubDB in programmable emails needs Marketing Hub Enterprise. Add rows by hand or import a CSV (Add or Replace). Each data source can drive up to 10 dynamic pages, and HubDB dynamic pages do not appear in workflow and list filters.</li>
+        </ul>
+        <figure class="shot"><a href="hubdb.webp"><img src="hubdb.webp" alt="HubDB empty state with Create table button" width="800" height="553" loading="lazy"></a><figcaption>Create table (1).</figcaption></figure>
+        <ul>
+          <li><strong>RSS Listing module</strong> shows HubSpot or external blog posts on page or post templates, added in the layout editor. It needs Design tools permission. RSS emails are a separate feature, see <a href="../transactional-email-add-on/">marketing emails</a>.</li>
         </ul>
 
-        <h2>7. Check it in Design Manager</h2>
-        <p>Open <span class="ui">Development &gt; Design Manager</span>. Uploaded themes appear in the file tree, and you can open any template or module to inspect it.</p>
-        <figure class="shot"><a href="design-manager.webp"><img src="design-manager.webp" alt="Design Manager showing the file tree with several themes and a Create a new file button" width="800" height="450" loading="lazy"></a><figcaption>The file tree with themes (1) and Create a new file (2).</figcaption></figure>
-        <div class="callout"><span class="callout-title">Example from my portal</span><p>My Design Manager tree lists several themes and a Custom Modules folder, so a new upload path should be different from any of those. I would upload to a fresh folder first, check it, then decide whether it replaces anything.</p></div>
+        <h2>8. What is changing for 2027</h2>
+        <ul>
+          <li><strong>AI-assisted building is supported.</strong> The developer MCP server, agent context files and example prompts are part of HubSpot's official tooling. Keep a CLAUDE.md or AGENTS.md in every theme folder.</li>
+          <li><strong>Commands moved under <code>hs cms</code>.</strong> Older <code>hs create</code> commands point you to the new form. Update scripts and agent instructions.</li>
+          <li><strong>Projects for apps.</strong> App work runs through <code>hs project</code> and the developer platform, see <a href="../developer-test-accounts-and-sandboxes/">developer projects and test accounts</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why does my variable reset after a for loop?</h3>
+        <p>Variables set inside a loop are scoped to it. Use a dict defined outside and <code>do dict.update()</code>.</p>
+        <h3>Why does my theme fail to upload one error at a time?</h3>
+        <p>The validator reports one class of error per upload. Sweep the theme for the whole class before uploading again.</p>
+        <h3>Is the developer MCP server the same as the HubSpot Claude connector?</h3>
+        <p>No. The developer server runs locally for building. The connector uses HubSpot's remote MCP server for CRM data.</p>
+        <h3>How long can a serverless function run?</h3>
+        <p>10 seconds per execution.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/developer-mcp/setup">HubSpot developer docs: Set up the developer MCP server</a></li>
           <li><a href="https://developers.hubspot.com/docs/developer-tooling/local-development/developer-mcp/tools">HubSpot developer docs: Developer MCP server tools</a></li>
-          <li><a href="https://developers.hubspot.com/docs/build-with-ai/agent-context-files">HubSpot developer docs: Using agent context files</a></li>
-          <li><a href="https://developers.hubspot.com/docs/build-with-ai/example-prompts">HubSpot developer docs: Example prompts for building on HubSpot with AI</a></li>
+          <li><a href="https://developers.hubspot.com/docs/build-with-ai/agent-context-files">HubSpot developer docs: Agent context files</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/themes">HubSpot developer docs: Themes</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/building-blocks/templates/overview">HubSpot developer docs: Templates overview</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/loops">HubSpot developer docs: For loops</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/hubl/variables-macros-syntax">HubSpot developer docs: HubL variables and macros</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/reference/fields/module-theme-fields">HubSpot developer docs: Module and theme fields</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/start-building/features/serverless-functions/overview">HubSpot developer docs: Serverless functions</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/create-and-hubdb-tables">HubSpot Knowledge Base: Create and populate HubDB tables</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/create-dynamic-pages">HubSpot Knowledge Base: Create dynamic pages</a></li>
+          <li><a href="https://knowledge.hubspot.com/design-manager/add-an-rss-feed-to-a-page-or-post">HubSpot Knowledge Base: Add an RSS feed to a page or post</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

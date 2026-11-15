@@ -7,9 +7,7 @@
   <url><loc>https://hubspot.samcbarth.com/book.html</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-agent-cli-setup/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/claude-design-landing-page-to-hubspot/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/hubl-set-inside-for-loop/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/module-font-controls-override-theme/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/claude-code-hubspot-themes-templates/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/ui-extension-card-sync-button/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/log-sms-to-contact-timeline-api/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/aeo-prompts-and-outreach-recommendations/</loc><lastmod>2026-10-07</lastmod></url>
@@ -26,7 +24,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/sales-workspace/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/sales-forecast-tool/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/data-model-builder/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/hubdb-tables/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/meeting-rotations-round-robin/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/tracking-url-builder/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/password-protect-a-page/</loc><lastmod>2026-10-07</lastmod></url>
@@ -49,7 +46,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/webhooks-api-subscriptions/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/cms-serverless-functions/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hs-project-upload-cli/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/forms-submission-api/</loc><lastmod>2026-10-07</lastmod></url>
@@ -117,7 +113,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/user-login-sessions/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-line-items/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dashboard-filters/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/rss-feed-on-page/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/call-transcripts-quality/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/analyze-custom-behavioral-events/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/google-drive-integration/</loc><lastmod>2026-10-07</lastmod></url>
@@ -159,7 +154,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubsql-beta-api/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/default-lifecycle-and-deal-stages/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/close-stale-deals/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/theme-upload-validation-errors/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/revenue-attribution-deal-requirements/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/</loc><lastmod>2026-10-03</lastmod></url>

@@ -488,6 +488,8 @@ var ARTICLES = [
   },
   {
     slug: "theme-upload-validation-errors",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "Seven HubSpot theme upload errors I hit, and how to sweep for the whole class",
     excerpt: "Building a HubSpot theme from scratch failed validation six times. The seven errors: reserved field names, template type suffixes, global field IDs, unsupported field types, and breakpoint names.",
     type: "guide",
@@ -2264,6 +2266,8 @@ var ARTICLES = [
   },
   {
     slug: "hubl-set-inside-for-loop",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "HubL: a variable set inside a for loop is gone after the loop ends",
     excerpt: "Why {% set %} inside a HubL for loop does not change the variable outside it, the dict and do update pattern from HubSpot's docs, and the CSS fallback I used instead.",
     type: "tip",
@@ -2316,6 +2320,8 @@ var ARTICLES = [
   },
   {
     slug: "module-font-controls-override-theme",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "Give each HubSpot module its own font controls that win over the theme stylesheet",
     excerpt: "How to add font fields to custom modules so editors can set the font per text element in the page editor, render them so the theme CSS cannot override them, and scale them down on mobile.",
     type: "guide",
@@ -3041,6 +3047,8 @@ var ARTICLES = [
   },
   {
     slug: "hubdb-tables",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "HubDB: store structured content once and show it on pages",
     excerpt: "What HubDB tables are for, the subscriptions that use them for dynamic pages and programmable emails, adding rows and importing CSVs, and the dynamic page limit.",
     type: "tip",
@@ -4223,6 +4231,8 @@ var ARTICLES = [
   },
   {
     slug: "cms-serverless-functions",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "HubSpot CMS serverless functions: what they are for, and the 10-second limit",
     excerpt: "How serverless functions run server-side code for HubSpot CMS pages, their execution limits, and where to see their logs.",
     type: "tip",
@@ -10923,6 +10933,8 @@ var ARTICLES = [
   },
   {
     slug: "rss-feed-on-page",
+    draft: true,
+    mergedInto: 'claude-code-hubspot-themes-templates',
     title: "Add an RSS feed to a page template",
     excerpt: "How to use HubSpot's RSS Listing module on page and post templates.",
     type: "tip",
@@ -17803,18 +17815,18 @@ var ARTICLES = [
   },
   {
     slug: "claude-code-hubspot-themes-templates",
-    title: "Build HubSpot themes, templates and modules with Claude Code and the Developer MCP server",
-    excerpt: "How to set up the HubSpot Developer MCP server for Claude Code, what its CMS tools create, how the hs CLI scaffolds a theme, template and module, and how to upload safely.",
+    title: "HubSpot CMS developer notes: CLI and MCP setup, theme validation errors, HubL loop scope, module fonts, serverless and HubDB",
+    excerpt: "Build HubSpot themes with the CLI and the developer MCP server, upload safely, the seven theme validation errors and how to sweep them, why set inside a for loop does nothing, per-page module fonts, serverless limits, HubDB and RSS.",
     type: "guide",
     problem: "Developer",
     hubs: ["Content Hub"],
     features: ["Themes", "Templates", "Modules"],
-    tier: "Developer tooling; check your subscription for custom code in Design Manager",
-    permissions: "Design Tools access; HubSpot CLI authenticated to the account",
-    verified: "2026-10-15",
+    tier: "Content Hub (HubDB dynamic pages need Professional)",
+    permissions: "Design tools access; Developer tools access for the CLI",
+    verified: "2026-11-15",
     published: "2026-10-15",
-    validated: "2026-10-15 15:48 ET",
-    minutes: 12,
+    validated: "2026-11-16 00:45 ET",
+    minutes: 14,
     difficulty: "Advanced",
     keywords: ["claude code hubspot theme", "hubspot developer mcp server", "hs mcp setup", "hs cms theme create", "hubspot template claude"]
   }
