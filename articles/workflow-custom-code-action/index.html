@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Custom code workflow actions: the basics that save debugging time - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.">
+<title>HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners - HubSpot Field Notes</title>
+<meta name="description" content="Custom code actions (20 seconds, 128 MB, three days of retries if you throw), Google Sheets row actions, internal notifications, Rotate record to owner seat rules, and the two contact settings that change owners without a workflow.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/workflow-custom-code-action/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/workflow-custom-code-action/">
-<meta property="og:title" content="Custom code workflow actions: the basics that save debugging time">
-<meta property="og:description" content="How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.">
+<meta property="og:title" content="HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners">
+<meta property="og:description" content="Custom code actions (20 seconds, 128 MB, three days of retries if you throw), Google Sheets row actions, internal notifications, Rotate record to owner seat rules, and the two contact settings that change owners without a workflow.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/workflow-custom-code-action/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Custom code workflow actions: the basics that save debugging time",
-      "description": "How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.",
+      "headline": "HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners",
+      "description": "Custom code actions (20 seconds, 128 MB, three days of retries if you throw), Google Sheets row actions, internal notifications, Rotate record to owner seat rules, and the two contact settings that change owners without a workflow.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/workflow-custom-code-action/og.png",
@@ -43,21 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Add a custom code action",
-      "totalTime": "PT5M",
+      "name": "HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Add the action", "text": "Data ops, Custom code."},
-        {"@type": "HowToStep", "name": "Add secrets", "text": "Store tokens as secrets, not in the code."},
-        {"@type": "HowToStep", "name": "Map inputs", "text": "Choose properties to pass in as inputFields."},
-        {"@type": "HowToStep", "name": "Return outputs", "text": "Call callback with outputFields to use in later actions."},
-        {"@type": "HowToStep", "name": "Read logs", "text": "Check the workflow's action logs after it runs."}
+        {"@type": "HowToStep", "name": "Add a custom code action", "text": "Data ops, Custom code."},
+        {"@type": "HowToStep", "name": "Throw errors to get retries", "text": "Rate limit and 5xx errors retry for up to three days."},
+        {"@type": "HowToStep", "name": "Map Google Sheets by header", "text": "Create or update rows."},
+        {"@type": "HowToStep", "name": "Rotate owners", "text": "Users need a Sales or Service Professional seat."},
+        {"@type": "HowToStep", "name": "Check owner automation", "text": "Settings, Objects, Contacts, Setup, Automation."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Custom code workflow actions: the basics that save debugging time", "item": "https://hubspot.samcbarth.com/articles/workflow-custom-code-action/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners", "item": "https://hubspot.samcbarth.com/articles/workflow-custom-code-action/" }
       ]
     }
   ]
@@ -88,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Workflows">Workflows</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Data Hub</span></div>
-      <h1>Custom code workflow actions: the basics that save debugging time</h1>
-      <p class="dek">A few lines of Node.js inside a workflow can replace a middleware service.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Data Hub</span></div>
+      <h1>HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners</h1>
+      <p class="dek">The workflow actions people ask about most, with their limits: custom code, Google Sheets, internal alerts and owner rotation, plus the settings that reassign owners on their own.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Data Hub Professional or Enterprise</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Workflows access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Workflows need Professional; custom code needs Data Hub Professional</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Workflow edit access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,37 +103,94 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Custom code actions run Node.js by default. Properties come in through <code>event.inputFields</code>, and <code>callback({ outputFields })</code> returns values that later actions can use, for example with Edit record. Keep tokens in secrets. HubSpot's docs say that to have a rate-limited call retried, you must <strong>throw the error</strong> in your catch block. Logs are in the workflow's action logs.</p>
+          <p>Workflow actions do the work after enrollment. <strong>Custom code</strong> runs Node.js (Python in beta) with inputs from <code>event.inputFields</code> and outputs through <code>callback</code>; it must finish within <strong>20 seconds</strong> and <strong>128 MB</strong>, and HubSpot retries rate-limit and 5xx errors for up to three days, but only if you throw the error. <strong>Google Sheets</strong> actions create or update rows mapped by column header. <strong>Internal email notification</strong> alerts users and teams. <strong>Rotate record to owner</strong> spreads records across users with a Sales or Service Professional seat. And two contact settings can change owners without any workflow at all.</p>
         </div>
 
-        <h2>1. Where it is</h2>
+        <h2>1. Custom code</h2>
+        <p>In the workflow editor, add an action and pick <strong>Custom code</strong> from the Data ops group (1):</p>
         <figure class="shot"><a href="dataops.webp"><img src="dataops.webp" alt="Workflow action picker Data ops group with Custom code highlighted" width="440" height="430" loading="lazy"></a><figcaption>Custom code (1).</figcaption></figure>
-
-        <h2>2. The shape of the code</h2>
-        <pre><code>exports.main = async (event, callback) =&gt; {
-  const email = event.inputFields[&#x27;email&#x27;];
+<pre><code>exports.main = async (event, callback) =&gt; {
+  const email = event.inputFields['email'];
   try {
     // call another system here
-    callback({ outputFields: { domain: email.split(&#x27;@&#x27;)[1] } });
+    callback({ outputFields: { domain: email.split('@')[1] } });
   } catch (err) {
     // throw so HubSpot retries rate-limited calls
     throw err;
   }
 };</code></pre>
-
-        <h2>3. Practical notes</h2>
         <ul>
-          <li>Inputs and outputs are typed fields in the action panel. Declare outputs so other actions can see them.</li>
-          <li>Swallowing errors means no retry and a silent success.</li>
-          <li>Agent Hub workflows also support custom code. See <a href="../agentic-workflows-agent-hub/">agentic workflows</a>.</li>
+          <li><strong>Inputs and outputs</strong> are typed fields in the action panel. Declare outputs so later actions, such as Edit record, can use them.</li>
+          <li><strong>Limits:</strong> finish within 20 seconds and use at most 128 MB of memory. Exceeding either fails the action.</li>
+          <li><strong>Retries:</strong> if a call fails with a rate limit error, or a 429 or 5xx from axios or <code>@hubspot/api-client</code>, HubSpot retries for up to three days, starting one minute after the failure, with gaps growing to at most eight hours. In Node.js you must throw the error in the catch block, in Python raise it in the except block. Swallowing it means no retry and a silent success.</li>
+          <li><strong>Secrets:</strong> keep tokens in the action's secrets, never in the code. Test accounts need OAuth or an app token; developer API keys do not work there.</li>
+          <li><strong>Logs</strong> are in the workflow's action logs.</li>
         </ul>
+        <p>See <a href="../hubspot-api-rate-limits/">API rate limits</a> for the limits your code's API calls share.</p>
+
+        <h2>2. Google Sheets actions</h2>
+        <p>Search the action picker for "Google Sheet". With the Google Sheets integration installed there are two actions: <strong>Update data in a Google Sheet</strong> (1) and <strong>Create Google Sheet row</strong> (2).</p>
+        <figure class="shot"><a href="sheets.webp"><img src="sheets.webp" alt="Workflow action search for google sheet showing Update data in a Google Sheet and Create Google Sheet row" width="440" height="520" loading="lazy"></a><figcaption>Update a row (1) and create a row (2).</figcaption></figure>
+        <p>Map each value by choosing the sheet's column header, so keep the header row stable. Values from earlier actions, such as Format data, can be sent as action outputs. For a one-off file instead of a live sheet, see <a href="../export-records-from-a-view/">exports</a>.</p>
+
+        <h2>3. Internal notifications</h2>
+        <figure class="shot"><a href="internal.webp"><img src="internal.webp" alt="Workflow action search for internal showing Send internal email notification and Send internal marketing email" width="800" height="600" loading="lazy"></a><figcaption>Internal notification (1) and internal marketing email (2).</figcaption></figure>
+        <ul>
+          <li><strong>Send internal email notification</strong> (1) emails specific users, teams or owners, works in every workflow type, and supports tokens from the enrolled record.</li>
+          <li><strong>Send internal marketing email</strong> (2) sends an automated marketing email to specific addresses or to an address held in a property. It needs Marketing Hub Professional or Enterprise.</li>
+          <li><strong>Send in-app notification</strong> alerts users inside HubSpot.</li>
+        </ul>
+        <p>None of these email the enrolled contact. For that, use Send email with an automated marketing email, see <a href="../transactional-email-add-on/">marketing emails</a>.</p>
+
+        <h2>4. Rotate record to owner</h2>
+        <p>Search "rotate" to find <strong>Rotate record to owner</strong> (2) and <strong>Rotate record by skill</strong> (3), which is for tickets.</p>
+        <figure class="shot"><a href="rotate.webp"><img src="rotate.webp" alt="Workflow action search for rotate showing Rotate record to owner and Rotate record by skill" width="440" height="500" loading="lazy"></a><figcaption>The search (1), Rotate record to owner (2), and Rotate record by skill (3).</figcaption></figure>
+        <ul>
+          <li>It assigns enrolled records evenly between chosen users or a team, on the owner property or any custom user property.</li>
+          <li>Users must be active and have a Sales or Service Hub Professional or Enterprise seat. Core and View-Only seats and users who have not accepted their invite are greyed out.</li>
+          <li>For teams, only main team members with those seats are included.</li>
+          <li>Each Rotate action keeps its own count, so two in one workflow do not share a sequence.</li>
+          <li>If the owner property syncs to Salesforce, HubSpot warns the action may not work as expected.</li>
+        </ul>
+        <p>For a one-time bulk assignment, use an update-only import instead, see <a href="../import-to-static-segment/">imports</a>.</p>
+
+        <h2>5. Owners that change with no workflow</h2>
+        <p>If contact owners change and no workflow did it, check <strong>Settings, Objects, Contacts, Setup, Automation</strong>:</p>
+        <figure class="shot"><a href="owner-automation.webp"><img src="owner-automation.webp" alt="Contacts setup page Automation section with both ownership checkboxes ticked" width="800" height="600" loading="lazy"></a><figcaption>Assign Company owner to Contact (1) and Assign unowned contacts to email sender (2).</figcaption></figure>
+        <ul>
+          <li><strong>Assign Company owner to Contact by default</strong> (1): a contact added to a company gets the company's owner. Changing the contact's owner does not change the company's, unless the company has none.</li>
+          <li><strong>Assign unowned contacts to email sender</strong> (2): the first user to email an unowned contact from the CRM becomes its owner. HubSpot says it is on by default and also applies to one-to-one emails received and logged.</li>
+        </ul>
+        <p>Turn the second one off if support or ops users take ownership of leads by emailing them, or if a rotate workflow should assign owners. Turning it off does not change owners already set; check the contact's owner history.</p>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Python in custom code</strong> is in beta next to Node.js.</li>
+          <li><strong>AI writes the code.</strong> In the Agent Hub workflow builder, you can describe what a custom code step should do and Breeze Assistant generates the code. Review it against the limits above before turning the workflow on. See <a href="../hubspot-ai-access-settings/">HubSpot AI settings and agents</a>.</li>
+          <li><strong>Dated API versions inside code.</strong> Calls your custom code makes to v4 or 2025-09 APIs lose support in March 2027. See <a href="../hubspot-api-rate-limits/">API versioning</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>My custom code failed with a 429 and was not retried.</h3>
+        <p>The error was caught and not thrown. Throw it (Node.js) or raise it (Python) so HubSpot retries.</p>
+        <h3>Why is a user missing from Rotate record to owner?</h3>
+        <p>They need an active Sales or Service Hub Professional or Enterprise seat and an accepted invite, and for teams they must be a main member.</p>
+        <h3>Who changed this contact's owner?</h3>
+        <p>Check the owner history on the record. If no workflow did it, the email-sender or company-owner settings probably did.</p>
+        <h3>How long can custom code run?</h3>
+        <p>20 seconds, with up to 128 MB of memory.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://developers.hubspot.com/docs/api-reference/latest/automation/workflow-actions/custom-code-actions">HubSpot developer docs: Custom code actions</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/optimize-processes-with-workflows-and-other-tools">HubSpot Knowledge Base: Optimize processes with workflows and other tools</a></li>
           <li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot Knowledge Base: Choose your workflow actions</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/add-data-to-google-sheets-with-workflows">HubSpot Knowledge Base: Add data to Google Sheets with workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/use-workflow-action-outputs">HubSpot Knowledge Base: Use workflow action outputs</a></li>
+          <li><a href="https://knowledge.hubspot.com/workflows/assign-and-rotate-record-owners-using-workflows">HubSpot Knowledge Base: Assign and rotate record owners using workflows</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/how-to-set-a-record-owner">HubSpot Knowledge Base: Assign ownership of records</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

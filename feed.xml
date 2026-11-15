@@ -366,16 +366,6 @@
     <category>Associations</category>
   </item>
   <item>
-    <title>Rotate record to owner: who is eligible, and why a team shows greyed out</title>
-    <link>https://hubspot.samcbarth.com/articles/rotate-record-to-owner/</link>
-    <guid>https://hubspot.samcbarth.com/articles/rotate-record-to-owner/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s Rotate record to owner workflow action distributes records, the seat rules for eligible users and teams, and the Salesforce caveat.</description>
-    <category>Sales Hub</category>
-    <category>Workflows</category>
-    <category>Ownership</category>
-  </item>
-  <item>
     <title>HubSpot API rate limits: the real numbers, the 429 response, and how to stay under them</title>
     <link>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</link>
     <guid>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</guid>
@@ -415,11 +405,11 @@
     <category>Integrations</category>
   </item>
   <item>
-    <title>Custom code workflow actions: the basics that save debugging time</title>
+    <title>HubSpot workflow actions: custom code limits and retries, Google Sheets, internal notifications, rotating owners</title>
     <link>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</link>
     <guid>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot custom code actions are structured, how inputs, outputs and secrets work, where to see logs, and how to get retries on rate limits.</description>
+    <description>Custom code actions (20 seconds, 128 MB, three days of retries if you throw), Google Sheets row actions, internal notifications, Rotate record to owner seat rules, and the two contact settings that change owners without a workflow.</description>
     <category>Data Hub</category>
     <category>Workflows</category>
     <category>API</category>
@@ -535,17 +525,6 @@
     <category>Sales Hub</category>
     <category>Deals</category>
     <category>Ownership</category>
-  </item>
-  <item>
-    <title>Send HubSpot data to Google Sheets from a workflow</title>
-    <link>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</link>
-    <guid>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How the Google Sheets workflow actions create or update rows, how to map columns, and how to send formatted values.</description>
-    <category>Smart CRM</category>
-    <category>Data Hub</category>
-    <category>Workflows</category>
-    <category>Integrations</category>
   </item>
   <item>
     <title>Private content with memberships: access groups and their limits</title>
@@ -721,17 +700,6 @@
     <category>Data Hub</category>
     <category>Sales Hub</category>
     <category>Integrations</category>
-  </item>
-  <item>
-    <title>Email your team from a workflow</title>
-    <link>https://hubspot.samcbarth.com/articles/workflow-internal-email-notification/</link>
-    <guid>https://hubspot.samcbarth.com/articles/workflow-internal-email-notification/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The Send internal email notification and Send internal marketing email workflow actions, what they can include, and who can receive them.</description>
-    <category>Marketing Hub</category>
-    <category>Sales Hub</category>
-    <category>Workflows</category>
-    <category>Notifications</category>
   </item>
   <item>
     <title>Shopify data sync: what comes over and what doesn&#39;t</title>
@@ -1624,17 +1592,6 @@
     <description>How HubSpot user notifications work: the six channels, setting channel defaults, turning topics on or off, the daily email notification cap, and notification profiles admins can push to users.</description>
     <category>Smart CRM</category>
     <category>Notifications</category>
-  </item>
-  <item>
-    <title>Why a HubSpot contact&#39;s owner changed when you emailed them</title>
-    <link>https://hubspot.samcbarth.com/articles/contact-owner-changed-automatically/</link>
-    <guid>https://hubspot.samcbarth.com/articles/contact-owner-changed-automatically/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot can assign an unowned contact to whoever emails them from the CRM, and give contacts their company&#39;s owner. Where those two settings live and when to turn them off.</description>
-    <category>Smart CRM</category>
-    <category>Sales Hub</category>
-    <category>Ownership</category>
-    <category>Contacts</category>
   </item>
   <item>
     <title>Customize HubSpot lifecycle stages: add, rename, and what contacts and companies share</title>

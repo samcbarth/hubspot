@@ -40,12 +40,11 @@
   <url><loc>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/calculation-properties/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/rollup-properties/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/rotate-record-to-owner/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-api-rate-limits/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/associations-v4-api-labels/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/owners-api-owner-id/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/webhooks-api-subscriptions/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://hubspot.samcbarth.com/articles/workflow-custom-code-action/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hs-project-upload-cli/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/developer-test-accounts-and-sandboxes/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/forms-submission-api/</loc><lastmod>2026-10-07</lastmod></url>
@@ -57,7 +56,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-sales-extension/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/call-recording-consent/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-splits/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/google-sheets-workflow-action/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/memberships-access-groups/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/custom-events-api/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-calendar-view/</loc><lastmod>2026-10-07</lastmod></url>
@@ -76,7 +74,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/instagram-carousel-posts/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/google-consent-mode/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/dynamics-365-integration/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/workflow-internal-email-notification/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/shopify-integration/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-score/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/deal-revenue-properties/</loc><lastmod>2026-10-07</lastmod></url>
@@ -167,7 +164,6 @@
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-deal-tags/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-notification-preferences/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://hubspot.samcbarth.com/articles/contact-owner-changed-automatically/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/customize-lifecycle-stages/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/lifecycle-stage-automation-deals/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://hubspot.samcbarth.com/articles/hubspot-data-enrichment-settings/</loc><lastmod>2026-10-03</lastmod></url>
