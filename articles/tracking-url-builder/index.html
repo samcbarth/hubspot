@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot's tracking URL builder: tag links so traffic lands in the right source - HubSpot Field Notes</title>
-<meta name="description" content="How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.">
+<title>HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions - HubSpot Field Notes</title>
+<meta name="description" content="Build tracked links in HubSpot: required and optional UTM fields, how the Source choice decides the traffic source bucket, copying short URLs, and why a tracked link can show no sessions.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/tracking-url-builder/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/tracking-url-builder/">
-<meta property="og:title" content="HubSpot's tracking URL builder: tag links so traffic lands in the right source">
-<meta property="og:description" content="How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.">
+<meta property="og:title" content="HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions">
+<meta property="og:description" content="Build tracked links in HubSpot: required and optional UTM fields, how the Source choice decides the traffic source bucket, copying short URLs, and why a tracked link can show no sessions.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/tracking-url-builder/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot's tracking URL builder: tag links so traffic lands in the right source",
-      "description": "How to create tracking URLs in HubSpot, the UTM fields, short links, building from a campaign, and why tracked links still show no sessions.",
+      "headline": "HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions",
+      "description": "Build tracked links in HubSpot: required and optional UTM fields, how the Source choice decides the traffic source bucket, copying short URLs, and why a tracked link can show no sessions.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/tracking-url-builder/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Create a tracking URL",
-      "totalTime": "PT4M",
+      "name": "HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions",
+      "totalTime": "PT6M",
       "step": [
-        {"@type": "HowToStep", "name": "Open the builder", "text": "Go to Settings, Tracking & Analytics, Tracking URLs."},
-        {"@type": "HowToStep", "name": "Create tracking URL", "text": "Enter the page URL, campaign, source and medium."},
-        {"@type": "HowToStep", "name": "Copy it", "text": "Use Actions, Copy tracking URL or Copy short URL."},
-        {"@type": "HowToStep", "name": "Check traffic", "text": "Review sessions in traffic analytics under UTM parameters."}
+        {"@type": "HowToStep", "name": "Open Tracking URLs", "text": "Settings, Tracking and Analytics, Tracking URLs."},
+        {"@type": "HowToStep", "name": "Enter URL and campaign", "text": "Campaign is required."},
+        {"@type": "HowToStep", "name": "Pick the source", "text": "It decides the traffic source bucket."},
+        {"@type": "HowToStep", "name": "Copy the link", "text": "Actions, Copy tracking URL or Copy short URL."},
+        {"@type": "HowToStep", "name": "Check the destination", "text": "It needs the HubSpot tracking code."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot's tracking URL builder: tag links so traffic lands in the right source", "item": "https://hubspot.samcbarth.com/articles/tracking-url-builder/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions", "item": "https://hubspot.samcbarth.com/articles/tracking-url-builder/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Campaigns">Campaigns</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>HubSpot's tracking URL builder: tag links so traffic lands in the right source</h1>
-      <p class="dek">A tracking URL is your page link plus UTM parameters. HubSpot's builder saves them so the team reuses the same values.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot tracking URL builder: UTM fields, which source to pick, short links, and links that show no sessions</h1>
+      <p class="dek">The Source you pick in the tracking URL builder decides where every visit is reported. What each field does and why some tracked links show nothing.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Marketing reports access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Access to tracking and analytics settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,29 +103,78 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Settings, Tracking &amp; Analytics, <strong>Tracking URLs</strong> builds and stores links with UTM parameters for campaign, source, medium, term and content. Copy the full or short URL from Actions, or build one from a campaign so it uses the campaign's UTM value. If a tracked link shows no sessions, check the report's time frame, that the destination page has the tracking code, and that the URL is formatted correctly.</p>
+          <p>Build tracked links in <strong>Settings, Tracking &amp; Analytics, Tracking URLs</strong>. A campaign name is required, and the <strong>Source</strong> you pick decides which traffic source the visit lands in: Email marketing, Paid search, Organic social, Paid social, or Other campaigns with a custom source. Medium, term and content are optional. Copy the full or short URL from <strong>Actions</strong>. If a tracked link shows no sessions, widen the report's date range and check the destination page has the HubSpot tracking code.</p>
         </div>
 
-        <h2>1. The builder</h2>
+        <h2>1. Create a tracking URL</h2>
+        <p>Open <strong>Settings, Tracking &amp; Analytics, Tracking URLs</strong> and click <strong>Create tracking URL</strong> (1):</p>
         <figure class="shot"><a href="builder.webp"><img src="builder.webp" alt="Tracking URL Builder empty state with Create tracking URL buttons" width="800" height="553" loading="lazy"></a><figcaption>Create tracking URL (1).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Field</th><th>Required?</th><th>What it does</th></tr></thead>
+            <tbody>
+              <tr><td>URL</td><td>Yes</td><td>The destination page</td></tr>
+              <tr><td>Campaign (<code>utm_campaign</code>)</td><td>Yes</td><td>Used in several HubSpot reports and counts toward the campaign in the campaigns tool</td></tr>
+              <tr><td>Source (<code>utm_source</code>)</td><td>Yes</td><td>Decides the traffic source bucket (next section)</td></tr>
+              <tr><td>Medium (<code>utm_medium</code>)</td><td>No</td><td>The specific ad, post or email. For Other campaigns, shown when you drill into the campaign</td></tr>
+              <tr><td>Term (<code>utm_term</code>)</td><td>No</td><td>Paid search keywords</td></tr>
+              <tr><td>Content (<code>utm_content</code>)</td><td>No</td><td>Tells apart several ads or links on the same page</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Click <strong>Create</strong>, or <strong>Create and add another</strong>. To use it, hover the URL, open <strong>Actions</strong> and choose <strong>Copy tracking URL</strong> or <strong>Copy short URL</strong>. You can also build a tracking URL from a campaign so it uses that campaign's UTM value.</p>
 
-        <h2>2. Fields</h2>
+        <h2>2. Pick the right source</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Source in the builder</th><th>Use it for</th></tr></thead>
+            <tbody>
+              <tr><td>Email marketing</td><td>Links in a marketing email</td></tr>
+              <tr><td>Paid search</td><td>Paid search ads</td></tr>
+              <tr><td>Organic social</td><td>Unpaid social posts</td></tr>
+              <tr><td>Paid social</td><td>Paid social campaigns</td></tr>
+              <tr><td>Other campaigns</td><td>Anything else, with a custom UTM source such as <code>FB_Campaign_1</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These sources and their drill-downs feed the Original and Latest Traffic Source properties on contacts. See <a href="../offline-sources-explained/">traffic source properties</a> for what each drill-down holds.</p>
         <ul>
-          <li><strong>Campaign</strong> and <strong>Source</strong> decide where the visit is bucketed.</li>
-          <li><strong>Medium</strong> is optional, typically the specific ad, post or email.</li>
-          <li><strong>Term</strong> is optional, for paid keywords.</li>
+          <li>Social posts published through HubSpot already get tracking; you cannot add custom tracking URLs to them.</li>
+          <li>Connected ad accounts can add UTMs automatically. See <a href="../facebook-lead-ads-sync/">ads</a>.</li>
+          <li>Google Ads auto-tagging does not pass a campaign name HubSpot can read, so those visits show as paid search without a campaign. Add your own UTMs if you need the campaign.</li>
         </ul>
-        <p>Social posts published through HubSpot already get tracking, and you cannot use custom tracking URLs there. Connected ad accounts can add UTMs automatically. See <a href="../connect-ad-accounts/">connecting ad accounts</a>.</p>
 
-        <h2>3. No sessions?</h2>
-        <p>Widen the date range, confirm the tracking code is on the destination page, and check the URL. Campaigns with contacts but no sessions are covered in <a href="../campaign-zero-sessions/">campaign shows zero sessions</a>.</p>
+        <h2>3. When a tracked link shows nothing</h2>
+        <ul>
+          <li><strong>Date range:</strong> sessions only show if the link was visited during the report's time frame.</li>
+          <li><strong>Tracking code:</strong> the destination page must have the HubSpot tracking code. See <a href="../install-tracking-code-wix/">installing the tracking code</a>.</li>
+          <li><strong>Formatting:</strong> check the URL was copied whole, with its parameters.</li>
+        </ul>
+        <p>Emails sent from non-HubSpot tools without link tracking, or HubSpot emails with source tracking turned off, show up as Direct traffic. For campaigns with contacts but no sessions, see <a href="../campaign-influenced-contacts/">campaigns and attribution</a>.</p>
+
+        <h2>4. What is changing for 2027</h2>
+        <ul>
+          <li><strong>AI Referrals use UTMs too.</strong> For the AI Referrals source, Drill-Down 2 holds <code>utm_campaign</code>, so a tagged link that reaches people through an AI assistant still carries its campaign name. See <a href="../offline-sources-explained/">traffic sources</a>.</li>
+          <li><strong>Campaigns tie it together.</strong> Building tracking URLs from a campaign keeps the UTM value consistent with the campaign's reporting.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Is a campaign name required?</h3>
+        <p>Yes. It is used in several reports and in the campaigns tool.</p>
+        <h3>Why are my email visits in Direct traffic?</h3>
+        <p>The email links had no tracking parameters, either because the email came from another tool or source tracking was off.</p>
+        <h3>Can I add a tracking URL to a HubSpot social post?</h3>
+        <p>No. HubSpot adds its own tracking to social posts it publishes.</p>
+        <h3>Where is the short link?</h3>
+        <p>Hover the tracking URL, open Actions, and choose Copy short URL.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/settings/how-do-i-create-a-tracking-url">HubSpot Knowledge Base: Create tracking URLs</a></li>
           <li><a href="https://knowledge.hubspot.com/reports/traffic-analytics-faq">HubSpot Knowledge Base: Web traffic analytics FAQ</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/understand-traffic-source-properties">HubSpot Knowledge Base: Understand traffic source properties</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

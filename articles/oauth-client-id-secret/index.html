@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Where to find an app's client ID and client secret - HubSpot Field Notes</title>
-<meta name="description" content="Where HubSpot shows an app's client ID, client secret and redirect URLs, how to rotate the secret, and install limits.">
+<title>OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens - HubSpot Field Notes</title>
+<meta name="description" content="When to use OAuth instead of a service key, where the client ID, secret and redirect URLs are, building the authorization URL with scopes and optional scopes, and refreshing access tokens without 401s.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/oauth-client-id-secret/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/oauth-client-id-secret/">
-<meta property="og:title" content="Where to find an app's client ID and client secret">
-<meta property="og:description" content="Where HubSpot shows an app's client ID, client secret and redirect URLs, how to rotate the secret, and install limits.">
+<meta property="og:title" content="OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens">
+<meta property="og:description" content="When to use OAuth instead of a service key, where the client ID, secret and redirect URLs are, building the authorization URL with scopes and optional scopes, and refreshing access tokens without 401s.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/oauth-client-id-secret/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Where to find an app's client ID and client secret",
-      "description": "Where HubSpot shows an app's client ID, client secret and redirect URLs, how to rotate the secret, and install limits.",
+      "headline": "OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens",
+      "description": "When to use OAuth instead of a service key, where the client ID, secret and redirect URLs are, building the authorization URL with scopes and optional scopes, and refreshing access tokens without 401s.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/oauth-client-id-secret/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Where to find an app's client ID and client secret",
-      "totalTime": "PT3M",
+      "name": "OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens",
+      "totalTime": "PT8M",
       "step": [
-        {"@type": "HowToStep", "name": "Open the app", "text": "In your developer account's apps."},
-        {"@type": "HowToStep", "name": "Authentication", "text": "Find Client credentials."},
-        {"@type": "HowToStep", "name": "Rotate if exposed", "text": "Rotate the secret if compromised."}
+        {"@type": "HowToStep", "name": "Choose OAuth or a service key", "text": "OAuth for many accounts, service key for one."},
+        {"@type": "HowToStep", "name": "Copy client credentials", "text": "App authentication settings, Client credentials."},
+        {"@type": "HowToStep", "name": "Send users to the authorize URL", "text": "With scope, optional_scope, redirect_uri and state."},
+        {"@type": "HowToStep", "name": "Exchange the code for tokens", "text": "POST to the token endpoint."},
+        {"@type": "HowToStep", "name": "Refresh before expires_in", "text": "Store the newest refresh token."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Where to find an app's client ID and client secret", "item": "https://hubspot.samcbarth.com/articles/oauth-client-id-secret/" }
+        { "@type": "ListItem", "position": 2, "name": "OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens", "item": "https://hubspot.samcbarth.com/articles/oauth-client-id-secret/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=API">API</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
-      <h1>Where to find an app's client ID and client secret</h1>
-      <p class="dek">They're in the app's authentication settings, not in account settings.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Smart CRM</span></div>
+      <h1>OAuth for HubSpot apps: client ID and secret, the authorization URL, scopes, and refreshing tokens</h1>
+      <p class="dek">OAuth is for apps that live in many HubSpot accounts. Where the credentials are, how the flow works, and the refresh rules that keep integrations running.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Developer account or app access</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>App developer access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Developer account or Developer tools access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,86 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's developer docs: the client ID, client secret and redirect URLs are in the app's <strong>authentication</strong> settings, under <strong>Client credentials</strong>. The secret is confidential; rotate it if compromised. Privately distributed OAuth apps can be installed in up to 10 allowlisted accounts; marketplace apps before listing in up to 25.</p>
+          <p>Use OAuth when one app needs to work in many HubSpot accounts; use a <strong>service key</strong> for one account. The <strong>client ID</strong>, <strong>client secret</strong> and <strong>redirect URLs</strong> are in the app's authentication settings under <strong>Client credentials</strong>. Send users to the authorization URL with your scopes, exchange the returned code for tokens, and refresh the access token before it expires: read <code>expires_in</code> from every token response and always keep the newest refresh token. Privately distributed OAuth apps install in up to 10 allowlisted accounts; Marketplace apps in up to 25 before listing.</p>
         </div>
 
-        <h2>1. Apps moved</h2>
-        <p>In my demo portal, private apps now sit under Legacy Apps.</p>
+        <h2>1. OAuth, service key or token?</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Need</th><th>Use</th></tr></thead>
+            <tbody>
+              <tr><td>A script or integration for one account's REST API</td><td>Service key, see <a href="../private-apps-moved-to-legacy-apps/">service keys</a></td></tr>
+              <tr><td>An app installed by other companies' HubSpot accounts</td><td>OAuth (public or privately distributed app)</td></tr>
+              <tr><td>Webhooks or UI extensions</td><td>A project-based app</td></tr>
+              <tr><td>Third-party transcripts or other OAuth-only APIs</td><td>OAuth</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Private apps have moved to Legacy Apps, and new ones cannot be created in production accounts:</p>
         <figure class="shot"><a href="moved.webp"><img src="moved.webp" alt="Private Apps page saying your private apps have moved, with a Go to Legacy Apps button" width="800" height="553" loading="lazy"></a><figcaption>The moved notice (1) and Legacy Apps in the Development menu (2).</figcaption></figure>
-        <h2>2. Not the same as a token</h2>
-        <p>Private app and service key tokens are separate credentials. See <a href="../private-apps-moved-to-legacy-apps/">service keys</a>.</p>
-        <h2>3. Related</h2>
-        <p><a href="../private-apps-moved-to-legacy-apps/">Legacy apps</a>.</p>
+
+        <h2>2. Find the client ID and secret</h2>
+        <p>In your developer account or project app, open the app's <strong>authentication</strong> settings. Under <strong>Client credentials</strong> are the client ID and client secret, and below them the redirect URLs.</p>
+        <ul>
+          <li>The client secret is confidential. Keep it server-side and rotate it if it leaks.</li>
+          <li>Redirect URLs must match what you send exactly. Production apps need https.</li>
+          <li>Install limits: privately distributed apps install in up to 10 allowlisted accounts; Marketplace apps in up to 25 accounts before they are listed.</li>
+        </ul>
+
+        <h2>3. The authorization URL</h2>
+<pre><code>https://app.hubspot.com/oauth/authorize
+  ?client_id=YOUR_CLIENT_ID
+  &amp;scope=oauth%20crm.objects.contacts.read
+  &amp;optional_scope=automation
+  &amp;redirect_uri=https://yourapp.example.com/oauth-callback
+  &amp;state=RANDOM_VALUE</code></pre>
+        <ul>
+          <li><code>scope</code>: required scopes, separated by URL-encoded spaces (<code>%20</code>).</li>
+          <li><code>optional_scope</code>: scopes dropped if the installing account does not have those products.</li>
+          <li><code>state</code>: a random value you check on return to protect against forged callbacks.</li>
+        </ul>
+        <p>After the user approves, HubSpot redirects to your <code>redirect_uri</code> with a <code>code</code>. Exchange it at the token endpoint for an access token and a refresh token.</p>
+
+        <h2>4. Refresh tokens without breaking</h2>
+<pre><code>POST https://api.hubapi.com/oauth/v1/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token
+&amp;client_id=YOUR_CLIENT_ID
+&amp;client_secret=YOUR_CLIENT_SECRET
+&amp;refresh_token=LATEST_REFRESH_TOKEN</code></pre>
+        <ul>
+          <li>Access tokens expire. The lifetime in seconds is in <code>expires_in</code> on every token response; HubSpot's developer blog uses 30 minutes in its example. Read it rather than hard-coding a value.</li>
+          <li>Refresh slightly before expiry instead of waiting for a 401.</li>
+          <li>Store the newest refresh token the response returns.</li>
+          <li>Never put refresh tokens or client secrets in a shared cache, logs or front-end code.</li>
+        </ul>
+        <p>Access tokens are subject to the normal API limits. See <a href="../hubspot-api-rate-limits/">API rate limits</a>.</p>
+
+        <h2>5. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Projects for new apps.</strong> New apps are built as developer platform projects; see <a href="../developer-test-accounts-and-sandboxes/">developer projects and test accounts</a>.</li>
+          <li><strong>Service keys cover single-account work.</strong> With legacy private app creation off, OAuth is for multi-account apps and service keys for one account.</li>
+          <li><strong>Dated API versions.</strong> Calls your OAuth app makes to v4 or 2025-09 APIs lose support in March 2027. See <a href="../hubspot-api-rate-limits/">API versioning</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Where is my client secret?</h3>
+        <p>In the app's authentication settings under Client credentials.</p>
+        <h3>My integration fails every half hour with 401.</h3>
+        <p>The access token expired. Refresh it before <code>expires_in</code> runs out and store the newest refresh token.</p>
+        <h3>Do I need OAuth for my own company's account?</h3>
+        <p>No. Use a service key, unless the API you need is OAuth only.</p>
+        <h3>Why did some scopes not get granted?</h3>
+        <p>Scopes in <code>optional_scope</code> are dropped when the account lacks those products.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/where-to-find-the-client-id-and-client-secret-in-hubspot/69702">HubSpot Community question: Where to find the Client Id and Client Secret in HubSpot</a></li>
           <li><a href="https://developers.hubspot.com/docs/apps/developer-platform/build-apps/manage-apps-in-hubspot">HubSpot developer docs: Manage apps in HubSpot</a></li>
+          <li><a href="https://developers.hubspot.com/docs/apps/legacy-apps/authentication/oauth-quickstart-guide">HubSpot developer docs: OAuth quickstart guide</a></li>
+          <li><a href="https://developers.hubspot.com/blog/oauth-token-management-hubspot-integrations">HubSpot developer blog: OAuth token management</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
