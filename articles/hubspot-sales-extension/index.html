@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot Sales extension for Gmail and Outlook: install, log and track - HubSpot Field Notes</title>
-<meta name="description" content="What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.">
+<title>HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging - HubSpot Field Notes</title>
+<meta name="description" content="What the HubSpot Sales Chrome extension adds to Gmail, the account-wide log and track defaults, and the checklist when it stops working or emails stop tracking or logging: Rapid Release, conflicting extensions, VPNs and Gmail layouts.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/">
-<meta property="og:title" content="HubSpot Sales extension for Gmail and Outlook: install, log and track">
-<meta property="og:description" content="What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.">
+<meta property="og:title" content="HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging">
+<meta property="og:description" content="What the HubSpot Sales Chrome extension adds to Gmail, the account-wide log and track defaults, and the checklist when it stops working or emails stop tracking or logging: Rapid Release, conflicting extensions, VPNs and Gmail layouts.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/hubspot-sales-extension/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot Sales extension for Gmail and Outlook: install, log and track",
-      "description": "What the HubSpot Sales Chrome extension and Outlook add-in do, the account-wide default log setting, and the limits on logging attachments and custom Gmail layouts.",
+      "headline": "HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging",
+      "description": "What the HubSpot Sales Chrome extension adds to Gmail, the account-wide log and track defaults, and the checklist when it stops working or emails stop tracking or logging: Rapid Release, conflicting extensions, VPNs and Gmail layouts.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "HubSpot Sales extension for Gmail and Outlook",
-      "totalTime": "PT4M",
+      "name": "HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging",
+      "totalTime": "PT7M",
       "step": [
-        {"@type": "HowToStep", "name": "Install", "text": "Add the HubSpot Sales Chrome extension or the Outlook add-in."},
-        {"@type": "HowToStep", "name": "Sign in", "text": "Connect it to your HubSpot user."},
-        {"@type": "HowToStep", "name": "Set defaults", "text": "Choose your log and track defaults in the extension settings."},
-        {"@type": "HowToStep", "name": "Admin default", "text": "Optionally apply a default log setting for all extension users."}
+        {"@type": "HowToStep", "name": "Install the extension", "text": "HubSpot Sales for Gmail from the Chrome Web Store."},
+        {"@type": "HowToStep", "name": "Set defaults", "text": "Settings, Objects, Activities, Email Log and Track."},
+        {"@type": "HowToStep", "name": "Update Chrome and the extension", "text": "First troubleshooting step."},
+        {"@type": "HowToStep", "name": "Check profile and release track", "text": "Rapid Release is not compatible."},
+        {"@type": "HowToStep", "name": "Remove conflicts", "text": "Disable conflicting extensions and VPNs."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot Sales extension for Gmail and Outlook: install, log and track", "item": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging", "item": "https://hubspot.samcbarth.com/articles/hubspot-sales-extension/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>HubSpot Sales extension for Gmail and Outlook: install, log and track</h1>
-      <p class="dek">Reps who live in Gmail or Outlook can log and track emails without opening HubSpot.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot Sales Chrome extension for Gmail: setup, log and track defaults, and fixing tracking and logging</h1>
+      <p class="dek">When tracking stops, it is usually an unticked box, a conflicting extension, a VPN or a custom Gmail layout. The full checklist from HubSpot&#x27;s troubleshooting guide.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Any user; admins set account defaults</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (click tracking needs Sales Hub Starter and a Sales seat)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin for account defaults; each user installs the extension</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,26 +103,75 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Install the <strong>HubSpot Sales Chrome extension</strong> for Gmail or the <strong>Outlook add-in</strong> to log and track emails from your inbox. Admins can turn on <span class="ui">Apply Default Log setting for all users - Sales Extension Only</span> in Settings, Objects, Activities, Email Log &amp; Track. HubSpot's KB notes tracking and logging do not work with customized Gmail layouts, and attachments over 50 MB do not log.</p>
+          <p>The <strong>HubSpot Sales Chrome extension</strong> adds Track and Log checkboxes, templates, meetings and tasks to Gmail. Account-wide defaults live in <strong>Settings, Objects, Activities, Email Log &amp; Track</strong>. When it stops working, update Chrome and the extension first, make sure you are in the Chrome profile where it is installed, and check you are not on Google's Rapid Release track, which is not compatible. When emails stop tracking, the usual causes are the Track box not ticked, a conflicting extension (AdBlock, Boomerang, MailTrack, Privacy Badger, Yesware and others), a VPN, or a customized Gmail layout.</p>
         </div>
 
-        <h2>1. Account settings</h2>
-        <p>In my demo portal, Email Log &amp; Track has the attachment setting and the extension-wide default.</p>
-        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2).</figcaption></figure>
-        <h2>2. Per-user control</h2>
+        <h2>1. What the extension does</h2>
+        <p>Install the HubSpot Sales Chrome extension for Gmail (or the Office 365 add-in for Outlook, see <a href="../office-365-add-in-troubleshoot/">HubSpot with Outlook</a>). In a Gmail compose window it adds:</p>
         <ul>
-          <li>Users can turn tracking and logging off for a message, contacts or domains.</li>
-          <li>Use a never-log list for internal domains. See <a href="../never-log-list/">the never log list</a>.</li>
+          <li><strong>Track</strong>: inserts a tracking pixel so you see opens. Tracking one-to-one email <strong>clicks</strong> needs Sales Hub Starter, Professional or Enterprise and an assigned Sales seat.</li>
+          <li><strong>Log</strong>: saves the email to the contact's timeline in HubSpot. If the recipient is already a contact, a HubSpot sprocket icon shows next to their address in the To field.</li>
+          <li><strong>Templates, Meetings and Tasks</strong> on the compose toolbar.</li>
+          <li>An <strong>Activity Feed</strong> under the HubSpot icon in Chrome's toolbar, showing when tracked emails were opened.</li>
         </ul>
-        <h2>3. Related</h2>
-        <p><a href="../sales-email-open-notifications/">Open notifications</a> and <a href="../email-log-and-track-settings/">log and track settings</a>.</p>
+        <p>To log emails and create contacts, the sending address must be a user in your account, one of your connected email addresses, or an alias set in Gmail or in your HubSpot profile.</p>
+
+        <h2>2. Account-wide defaults</h2>
+        <p>Admins set defaults in <strong>Settings, Objects, Activities, Email Log &amp; Track</strong>: whether users can log attachments (1), and <strong>Apply Default Log setting for all users - Sales Extension Only</strong> (2):</p>
+        <figure class="shot"><a href="logsettings.webp"><img src="logsettings.webp" alt="Email log and track settings with Allow all users to log email attachments and Apply Default Log setting for all users - Sales Extension Only" width="495" height="780" loading="lazy"></a><figcaption>Attachment logging (1) and the extension default (2).</figcaption></figure>
+        <ul>
+          <li>Attachments over 50 MB do not log.</li>
+          <li>Users can still turn tracking and logging off for one message, or for specific contacts or domains in their extension settings.</li>
+          <li>Keep internal domains out with the <a href="../never-log-list/">Never Log list</a>. The same page covers log-all vs log-replies rules.</li>
+        </ul>
+
+        <h2>3. The extension is not working at all</h2>
+        <ol>
+          <li><strong>Update Chrome</strong> (three dots, Help, About Google Chrome) and update the extension.</li>
+          <li><strong>Check the Chrome profile.</strong> The extension only runs in the profile where it is installed.</li>
+          <li><strong>Check the release track.</strong> HubSpot says Google's Rapid Release track is not compatible. Ask IT to switch to the default track.</li>
+        </ol>
+
+        <h2>4. Emails are not tracking</h2>
+        <ul>
+          <li><strong>Was Track ticked?</strong> Without it, no tracking pixel is inserted.</li>
+          <li><strong>Conflicting extensions.</strong> HubSpot lists AdBlock, Bomb Bomb, Boomerang, Ghostery, Gmail - reply from top, MailTrack, Privacy Badger and Yesware. The extension's own <strong>Help &amp; troubleshooting</strong> section (sprocket icon in Gmail) checks for known conflicts.</li>
+          <li><strong>VPN software</strong> such as NordVPN can block the tracking request. Turn it off and send a tracked test email to check.</li>
+          <li><strong>Customized Gmail layouts</strong> do not support tracking or logging.</li>
+          <li><strong>Data privacy settings.</strong> With them on, tracking is not added for contacts without a legal basis. See <a href="../gdpr-data-privacy-settings/">GDPR settings</a>.</li>
+        </ul>
+
+        <h2>5. Emails are not logging</h2>
+        <ul>
+          <li>The sending address is not a HubSpot user, connected inbox or alias.</li>
+          <li>The recipient is on your or your account's Never Log list.</li>
+          <li>The Log box was not ticked and the default log setting is off.</li>
+          <li>The attachment is over 50 MB (the email logs, the attachment does not).</li>
+        </ul>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Opens are less reliable.</strong> Privacy features and scanners trigger open events, so judge sales emails on replies and clicks. See <a href="../resend-email-to-unengaged/">how opens are counted</a>.</li>
+          <li><strong>Browser release tracks matter.</strong> Faster Chrome release channels are where compatibility breaks first; keep sales teams on the default track.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>The HubSpot icon disappeared from Gmail.</h3>
+        <p>Update Chrome and the extension, check you are in the right Chrome profile, and check you are not on the Rapid Release track.</p>
+        <h3>Why does my tracked email show no opens?</h3>
+        <p>Check the Track box was ticked, then look for conflicting extensions or a VPN. Recipients' privacy tools can also block or fake opens.</p>
+        <h3>Can I track clicks for free?</h3>
+        <p>No. Tracking one-to-one email clicks needs Sales Hub Starter or above and a Sales seat.</p>
+        <h3>How do I stop internal emails logging?</h3>
+        <p>Add your company domain to the Never Log list.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/connected-email/how-to-install-hubspot-sales">HubSpot Knowledge Base: Install HubSpot Sales for Gmail, Office 365 and Outlook desktop</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/how-to-install-hubspot-sales">HubSpot Knowledge Base: Install HubSpot Sales for Gmail and Office 365</a></li>
           <li><a href="https://knowledge.hubspot.com/connected-email/track-and-log-emails-with-the-hubspot-sales-chrome-extension">HubSpot Knowledge Base: Track and log emails with the HubSpot Sales Chrome extension</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/troubleshooting-the-hubspot-sales-chrome-extension">HubSpot Knowledge Base: Troubleshoot the HubSpot Sales Chrome extension</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
