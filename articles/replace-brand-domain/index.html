@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Subdomain or new domain? Connecting and replacing HubSpot domains - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot hosting domains, brand domains and subdomains relate, and what replacing a brand domain involves.">
+<title>HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL - HubSpot Field Notes</title>
+<meta name="description" content="Domain limits by tier, how HubSpot&#x27;s free SSL is issued and renewed, pre-provisioning a live HTTPS site, reverse proxy requirements, custom SSL, security headers, and the 2027 certificate lifetime change.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/replace-brand-domain/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/replace-brand-domain/">
-<meta property="og:title" content="Subdomain or new domain? Connecting and replacing HubSpot domains">
-<meta property="og:description" content="How HubSpot hosting domains, brand domains and subdomains relate, and what replacing a brand domain involves.">
+<meta property="og:title" content="HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL">
+<meta property="og:description" content="Domain limits by tier, how HubSpot&#x27;s free SSL is issued and renewed, pre-provisioning a live HTTPS site, reverse proxy requirements, custom SSL, security headers, and the 2027 certificate lifetime change.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/replace-brand-domain/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Subdomain or new domain? Connecting and replacing HubSpot domains",
-      "description": "How HubSpot hosting domains, brand domains and subdomains relate, and what replacing a brand domain involves.",
+      "headline": "HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL",
+      "description": "Domain limits by tier, how HubSpot's free SSL is issued and renewed, pre-provisioning a live HTTPS site, reverse proxy requirements, custom SSL, security headers, and the 2027 certificate lifetime change.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/replace-brand-domain/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Subdomain or new domain? Connecting and replacing HubSpot domains",
-      "totalTime": "PT5M",
+      "name": "HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL",
+      "totalTime": "PT11M",
       "step": [
-        {"@type": "HowToStep", "name": "Open domains", "text": "Settings, Content, Domains & URLs."},
-        {"@type": "HowToStep", "name": "Connect", "text": "Click Connect hosting domain for a new subdomain."},
-        {"@type": "HowToStep", "name": "Replacing a brand domain", "text": "Follow the replace steps; update the blog root URL."},
-        {"@type": "HowToStep", "name": "Check limits", "text": "Review your subscription's domain limits."}
+        {"@type": "HowToStep", "name": "Connect the domain", "text": "Settings, Content, Domains and URLs, Connect hosting domain."},
+        {"@type": "HowToStep", "name": "Add the DNS records", "text": "Usually a CNAME for the subdomain."},
+        {"@type": "HowToStep", "name": "Pre-provision SSL for live sites", "text": "Add the pre-provisioning records and verify before switching."},
+        {"@type": "HowToStep", "name": "Check CAA records", "text": "Include pki.goog."},
+        {"@type": "HowToStep", "name": "Turn on Require HTTPS", "text": "And set HSTS in the domain security settings."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Subdomain or new domain? Connecting and replacing HubSpot domains", "item": "https://hubspot.samcbarth.com/articles/replace-brand-domain/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL", "item": "https://hubspot.samcbarth.com/articles/replace-brand-domain/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Domains">Domains</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span><span class="badge">Marketing Hub</span></div>
-      <h1>Subdomain or new domain? Connecting and replacing HubSpot domains</h1>
-      <p class="dek">Changing only the top-level domain is simpler than replacing the brand domain.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL</h1>
+      <p class="dek">HubSpot&#x27;s certificates come from Google Trust Services and renew themselves, as long as your DNS keeps pointing at HubSpot. Here is everything around that, checked against a live HubSpot-hosted site.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Domain limits vary by subscription</dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Content Hub, Marketing Hub or Service Hub (limits vary by tier)</dd></div>
         <div class="fact"><dt>Permissions</dt><dd>Domain settings permission</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Time</dt><dd>11 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,24 +103,110 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: if you're only changing the <strong>top-level domain</strong> (for example .com to .io), you don't need to replace your brand domain; connect a domain with the new TLD. Replacing a brand domain needs the Domain settings permission, and afterwards you update things like the blog root URL. Additional brand domains need Enterprise with the domain limits increase or the Brands add-on.</p>
+          <p>Connect a domain under <strong>Settings, Content, Domains &amp; URLs</strong> and HubSpot provisions a free SAN SSL certificate from Google Trust Services, usually in minutes and at most four hours. It renews itself 30 days before expiry as long as the domain's CNAME still points at HubSpot. If your site already has HTTPS, use <strong>pre-provisioning</strong> so there is no gap. Your own certificate needs the Custom SSL add-on. A subfolder such as example.com/blog on another platform needs a reverse proxy that you run and support yourself. Changing only the ending (.com to .io) does not need a brand domain replacement: connect the new domain.</p>
         </div>
 
-        <h2>1. Domains settings</h2>
-        <p>My demo portal has only the system domain connected.</p>
+        <h2>1. How domains are counted</h2>
+        <p>Every connected domain is a subdomain, a brand domain and a top-level domain: in <code>blog.example.com</code> those are <code>blog</code>, <code>example</code> and <code>.com</code>. The limit that matters is brand domains.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Subscription</th><th>Brand domains</th><th>Subdomains</th></tr></thead>
+            <tbody>
+              <tr><td>Content Hub Professional</td><td>1</td><td>Unlimited on that brand domain, one primary each for website pages, landing pages and blog</td></tr>
+              <tr><td>Content Hub Enterprise</td><td>10, more with the Domain Limit Increase</td><td>Unlimited</td></tr>
+              <tr><td>Marketing Hub Professional</td><td>1</td><td>Unlimited for marketing email</td></tr>
+              <tr><td>Marketing Hub Enterprise</td><td>1, more with the Domain Limit Increase or the Brands add-on</td><td>Unlimited</td></tr>
+              <tr><td>Service Hub Professional</td><td>1</td><td>One for the knowledge base</td></tr>
+              <tr><td>All other subscriptions</td><td>1</td><td>One custom subdomain</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The Brands add-on gives one brand domain per additional brand. Extra subdomains beyond the primary for each content type connect as secondary domains.</p>
+
+        <h2>2. Connect a domain</h2>
+        <p>Go to <strong>Settings, Content, Domains &amp; URLs</strong> and click <strong>Connect hosting domain</strong> (1). Connected domains are listed below it (2). My demo portal only has the system domain HubSpot gives every account.</p>
         <figure class="shot"><a href="domains.webp"><img src="domains.webp" alt="Domains and URLs settings with Connect hosting domain and the hosting domains table" width="800" height="600" loading="lazy"></a><figcaption>Connect hosting domain (1) and hosting domains (2).</figcaption></figure>
-        <h2>2. Subdomain vs subfolder</h2>
-        <p>HubSpot hosts content on domains you connect, such as blog.example.com. A subfolder on another platform's domain needs a reverse proxy, which is a developer setup.</p>
-        <h2>3. Related</h2>
-        <p><a href="../connect-custom-domain-to-hubspot/">Connecting a domain</a>.</p>
+        <p>HubSpot gives you DNS records to add at your domain provider, usually a CNAME for the subdomain. Add them exactly as shown, then verify.</p>
+        <p><strong>Subdomain or subfolder?</strong> HubSpot hosts content on domains you connect, such as <code>blog.example.com</code>. If the blog has to live at <code>example.com/blog</code> while the main site stays on another platform, that is a reverse proxy (section 5).</p>
+
+        <h2>3. SSL: what HubSpot does for you</h2>
+        <ul>
+          <li><strong>Certificate:</strong> a standard SAN certificate from Google Trust Services, provisioned when you connect the domain. It usually takes a few minutes and can take up to four hours.</li>
+          <li><strong>Renewal:</strong> automatic, 30 days before expiry, as long as the domain's CNAME still points to HubSpot. Move the DNS elsewhere and renewal fails.</li>
+          <li><strong>CAA records:</strong> if your domain has CAA records, <code>pki.goog</code> must be listed or Google cannot issue the certificate.</li>
+          <li><strong>TLS:</strong> HubSpot accepts TLS 1.2 and above. Older clients fail to connect.</li>
+        </ul>
+        <p>I checked a live site hosted on HubSpot's CMS on November 15, 2026. Its certificate was issued by Google Trust Services (WE1) on October 14, 2026 and expires January 12, 2027: a 90-day certificate. The response also carried <code>Strict-Transport-Security: max-age=31536000</code> and HubSpot's <code>X-HS-Cache-*</code> headers. Short certificates are fine here because renewal is automatic.</p>
+        <p>The Domains &amp; URLs page shows a notice when SSL is still activating (bottom) next to the brand domain limit (top):</p>
+        <figure class="shot"><a href="domains-top.webp"><img src="domains-top.webp" alt="Domains and URLs page with the brand domain limit notice and the SSL activation message highlighted" width="800" height="600" loading="lazy"></a><figcaption>The brand domain notice (top) and the SSL activation message (bottom).</figcaption></figure>
+
+        <h2>4. Moving a live HTTPS site: pre-provision first</h2>
+        <p>If the domain already serves HTTPS somewhere else, switching the CNAME before HubSpot has a certificate means visitors get a security warning for up to four hours. Pre-provisioning avoids that:</p>
+        <ol>
+          <li>While connecting the domain, click <strong>pre-provisioning</strong> in the banner.</li>
+          <li>At your DNS provider, add the records from the <strong>Pre-provision your SSL certificate</strong> dialog, copying the <strong>Host</strong> and <strong>Required Data</strong> values.</li>
+          <li>Click <strong>Verify</strong>. It can take up to four hours.</li>
+          <li>Only then point the live CNAME at HubSpot.</li>
+        </ol>
+        <p>Do not use the pre-provisioning CNAME as the origin for a reverse proxy. They are different records.</p>
+
+        <h2>5. Reverse proxy (subfolder on another platform)</h2>
+        <p>A reverse proxy serves HubSpot pages under your main domain's path. HubSpot's developer docs list what the proxy must do:</p>
+        <ul>
+          <li>Forward to the origin host for your Hub ID and data center, given in HubSpot's setup guide.</li>
+          <li>Send <code>X-Forwarded-For</code> with the visitor's IP, <code>X-HubSpot-Trust-Forwarded-For: true</code>, and <code>X-HS-Public-Host</code> set to your public domain.</li>
+          <li>Proxy HubSpot's system paths: <code>/_hcms/*</code>, <code>/hs/*</code>, <code>/hubfs/*</code>, <code>/hs-fs/*</code>, <code>/cs/c/*</code>, <code>/e3t/*</code> and <code>/events/*</code>.</li>
+          <li>Not cache anything from HubSpot. HubSpot manages its own CDN cache so published changes appear.</li>
+          <li>Have its own SSL certificate. If HubSpot shows "Reverse proxy domains need your action to avoid website disruption", add the DCV record it gives you.</li>
+        </ul>
+        <p>Cloudflare's Orange-to-Orange setup needs a Cloudflare Enterprise account, zone hold turned off, and headers set with request header transform rules. HubSpot support does not cover reverse proxies, so someone on your side has to own it.</p>
+
+        <h2>6. Custom SSL certificate</h2>
+        <p>If you need a specific certificate type or validation level, such as an organization-validated certificate, you need the Custom SSL add-on. You generate a new CSR inside HubSpot and buy the certificate against it. You cannot upload a certificate you already have. Status shows on the Custom SSL tab. Decide the certificate type and validation level before you buy, because the CSR comes from HubSpot.</p>
+
+        <h2>7. Domain security settings</h2>
+        <p>Each connected domain has security settings in Domains &amp; URLs:</p>
+        <ul>
+          <li><strong>Require HTTPS</strong>: forces every page on the domain to load over HTTPS. Turn it on.</li>
+          <li><strong>HSTS</strong>: choose a max-age, and optionally <strong>Include subdomains</strong> and <strong>Enable preload</strong>. Only use preload if every subdomain of the brand domain, including ones not on HubSpot, serves HTTPS, because preload is hard to undo.</li>
+          <li><strong>Other headers</strong>: X-Frame-Options, X-XSS-Protection, X-Content-Type-Options, Content-Security-Policy (and Report-Only), Referrer-Policy and Permissions-Policy.</li>
+        </ul>
+
+        <h2>8. Replacing a brand domain</h2>
+        <p>Replacing a brand domain (example.com becomes newname.com) needs the Domain settings permission. Afterwards, check the settings that hold the old domain, such as the blog root URL. HubSpot's KB lists what to update after the replacement. If you are only changing the ending (.com to .io), HubSpot says you do not need a replacement: connect the domain with the new ending.</p>
+
+        <h2>9. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Certificates get shorter.</strong> Under CA/Browser Forum ballot SC-081, public TLS certificates issued since March 15, 2026 last at most 200 days. From March 15, 2027 the maximum is 100 days, and from March 15, 2029 it is 47 days. HubSpot's automatic certificates already renew on their own. The work falls on anything you manage yourself: a Custom SSL certificate, and the certificate on a reverse proxy.</li>
+          <li><strong>Keep the CNAME pointed at HubSpot.</strong> With renewals every few weeks, a DNS change that breaks the CNAME shows up as an expired certificate much sooner than it used to.</li>
+          <li><strong>Check CAA records.</strong> If someone adds CAA records for another certificate authority and leaves out <code>pki.goog</code>, the next renewal fails.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>My SSL has been "pending" for hours. What do I check?</h3>
+        <p>That the CNAME resolves to the value HubSpot gave you, that any CAA record includes <code>pki.goog</code>, and that you waited the full four hours. If it is still stuck, contact HubSpot support with the domain name.</p>
+        <h3>Can I host my blog at example.com/blog?</h3>
+        <p>Only if example.com is on HubSpot, or with a reverse proxy on the platform that hosts example.com. Otherwise use a subdomain such as blog.example.com.</p>
+        <h3>Can I upload the certificate we already bought?</h3>
+        <p>No. Custom SSL needs a new CSR generated in HubSpot.</p>
+        <h3>We switched DNS providers and the site shows a certificate error.</h3>
+        <p>The new DNS zone is probably missing the CNAME to HubSpot or has an extra CAA record. Fix the record and the certificate renews.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/subfolder-vs-subdomain/531">HubSpot Community question: Subfolder vs. Subdomain</a></li>
-          <li><a href="https://knowledge.hubspot.com/domains-and-urls/replace-your-brand-domain">HubSpot Knowledge Base: Replace a brand domain</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/ssl-and-domain-security-in-hubspot">HubSpot Knowledge Base: SSL and domain security in HubSpot</a></li>
           <li><a href="https://knowledge.hubspot.com/domains-and-urls/understand-subscription-limits-for-domains">HubSpot Knowledge Base: Understand subscription limits for domains</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/connect-a-domain-to-hubspot">HubSpot Knowledge Base: Connect a domain to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/replace-your-brand-domain">HubSpot Knowledge Base: Replace a brand domain</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/add-a-custom-ssl-certificate-to-your-account">HubSpot Knowledge Base: Add a custom SSL certificate</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/best-practices/testing-staging-performance/reverse-proxies/overview">HubSpot developer docs: Reverse proxy support overview</a></li>
+          <li><a href="https://developers.hubspot.com/docs/cms/best-practices/testing-staging-performance/reverse-proxies/setup">HubSpot developer docs: Set up a reverse proxy with HubSpot</a></li>
+          <li><a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/">CA/Browser Forum: Ballot SC-081v3</a></li>
+          <li><a href="https://community.hubspot.com/t/subfolder-vs-subdomain/531">HubSpot Community: Subfolder vs subdomain</a></li>
+          <li><a href="https://community.hubspot.com/t/ssl-provisioning-stuck-custom-hostname-reset-needed/144471">HubSpot Community: SSL provisioning stuck</a></li>
+          <li><a href="https://community.hubspot.com/t/tutorial-setting-up-a-reverse-proxy-with-hubspot-cms-with-sample-nginx-cloudfront-configs/37034">HubSpot Community: Reverse proxy tutorial with nginx and CloudFront</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

@@ -1001,11 +1001,11 @@
     <category>Forms</category>
   </item>
   <item>
-    <title>Subdomain or new domain? Connecting and replacing HubSpot domains</title>
+    <title>HubSpot domains and SSL: connecting, certificate provisioning, reverse proxies and custom SSL</title>
     <link>https://hubspot.samcbarth.com/articles/replace-brand-domain/</link>
     <guid>https://hubspot.samcbarth.com/articles/replace-brand-domain/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot hosting domains, brand domains and subdomains relate, and what replacing a brand domain involves.</description>
+    <description>Domain limits by tier, how HubSpot&#39;s free SSL is issued and renewed, pre-provisioning a live HTTPS site, reverse proxy requirements, custom SSL, security headers, and the 2027 certificate lifetime change.</description>
     <category>Content Hub</category>
     <category>Marketing Hub</category>
     <category>Domains</category>
@@ -1328,26 +1328,6 @@
     <category>Marketing Hub</category>
     <category>Sales Hub</category>
     <category>Reporting</category>
-  </item>
-  <item>
-    <title>Serve HubSpot pages from a subfolder with a reverse proxy</title>
-    <link>https://hubspot.samcbarth.com/articles/reverse-proxy-hubspot-cms/</link>
-    <guid>https://hubspot.samcbarth.com/articles/reverse-proxy-hubspot-cms/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s developer docs say about running HubSpot CMS behind your own reverse proxy or CDN, the origin CNAME, and the support limits.</description>
-    <category>Content Hub</category>
-    <category>Domains</category>
-    <category>Website</category>
-  </item>
-  <item>
-    <title>SSL certificates on HubSpot domains</title>
-    <link>https://hubspot.samcbarth.com/articles/ssl-certificate-provisioning/</link>
-    <guid>https://hubspot.samcbarth.com/articles/ssl-certificate-provisioning/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot provisions SSL when you connect a domain, pre-provisioning for sites already on HTTPS, renewal, and the custom SSL add-on.</description>
-    <category>Content Hub</category>
-    <category>Domains</category>
-    <category>Security</category>
   </item>
   <item>
     <title>Show related blog posts by tag</title>
@@ -1896,16 +1876,6 @@
     <description>Which HubSpot Sales add-in to use in classic and new Outlook, every Office 365 connection error with its fix, admin consent in Entra ID, grayed-out and login-loop problems, and GCC High.</description>
     <category>Sales Hub</category>
     <category>Outlook</category>
-  </item>
-  <item>
-    <title>Add a custom SSL certificate</title>
-    <link>https://hubspot.samcbarth.com/articles/custom-ssl-certificate/</link>
-    <guid>https://hubspot.samcbarth.com/articles/custom-ssl-certificate/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>When and how HubSpot accepts a custom SSL certificate.</description>
-    <category>Content Hub</category>
-    <category>Domains</category>
-    <category>Security</category>
   </item>
   <item>
     <title>Change a blog post&#39;s publish date</title>
