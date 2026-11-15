@@ -469,6 +469,8 @@ var ARTICLES = [
   },
   {
     slug: "callrail-duplicate-contacts",
+    draft: true,
+    mergedInto: 'manage-duplicates-tool',
     title: "Call tracking is creating duplicate HubSpot contacts? Fix the source before you merge",
     excerpt: "Placeholder emails from a call tracking tool stop texts and calls matching real HubSpot contacts and create duplicates. How to analyze the duplicates by phone, what is safe to merge, and how to stop it.",
     type: "guide",
@@ -1991,6 +1993,8 @@ var ARTICLES = [
   },
   {
     slug: "phone-format-duplicates",
+    draft: true,
+    mergedInto: 'manage-duplicates-tool',
     title: "Same phone number, different formats: why HubSpot does not flag those duplicates",
     excerpt: "HubSpot deduplicates contacts by email and companies by domain. Phone numbers in different formats hide duplicates until you normalize them.",
     type: "guide",
@@ -3417,6 +3421,8 @@ var ARTICLES = [
   },
   {
     slug: "merge-two-records",
+    draft: true,
+    mergedInto: 'manage-duplicates-tool',
     title: "Merge two HubSpot records: which values win and what cannot be undone",
     excerpt: "How merging contacts or companies works in HubSpot, which record's property values are kept, the exceptions, the Salesforce sync effect, and why merges cannot be reverted.",
     type: "tip",
@@ -3739,19 +3745,20 @@ var ARTICLES = [
   },
   {
     slug: "manage-duplicates-tool",
-    title: "Work through thousands of duplicates with HubSpot's Manage Duplicates tool",
-    excerpt: "What the Manage Duplicates tool shows, its 10,000-pair display limit, custom duplicate rules, alerts, and the 250-merge limit per record.",
+    title: "HubSpot duplicates and merging: the duplicates tool, what merging keeps, no unmerge, and duplicates HubSpot misses",
+    excerpt: "How the Manage Duplicates tool works by tier, which values survive a merge, why merges cannot be undone and what you can recover, and how to find phone, call tracking and API company duplicates HubSpot does not catch.",
     type: "guide",
-    problem: "How to",
+    problem: "Fix it",
     hubs: ["Smart CRM", "Data Hub"],
     features: ["Duplicates", "Data quality"],
-    tier: "Professional or Enterprise to manage individual duplicates",
-    permissions: "Data quality tools access and merge rights",
-    verified: "2026-10-07",
+    tier: "Professional or Enterprise for pair review; Data Hub Professional for bulk merge and custom rules",
+    permissions: "Data quality tools access and edit access to records",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 6,
+    minutes: 11,
     difficulty: "Intermediate",
-    keywords: ["hubspot manage duplicates", "hubspot duplicate limit 10000", "merge duplicates hubspot bulk", "hubspot duplicate rules"]
+    keywords: ["hubspot manage duplicates", "hubspot duplicate limit 10000", "merge duplicates hubspot bulk", "hubspot duplicate rules"],
+    validated: "2026-11-15 23:15 ET",
   },
   {
     slug: "unique-value-properties",
@@ -5444,6 +5451,8 @@ var ARTICLES = [
   },
   {
     slug: "multiple-companies-same-domain",
+    draft: true,
+    mergedInto: 'manage-duplicates-tool',
     title: "Several companies with the same domain: how HubSpot decides",
     excerpt: "How HubSpot deduplicates companies by domain in manual creation, imports and the API, and what happens to contact association when domains repeat.",
     type: "tip",
@@ -7424,6 +7433,8 @@ var ARTICLES = [
   },
   {
     slug: "unmerge-records",
+    draft: true,
+    mergedInto: 'manage-duplicates-tool',
     title: "Two records merged by mistake: what you can do",
     excerpt: "Why HubSpot merges can't be undone, how to find what was merged, and the export that shows pre-merge values.",
     type: "tip",

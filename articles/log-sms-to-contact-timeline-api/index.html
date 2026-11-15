@@ -130,7 +130,7 @@
         <h2>3. Matching the contact by phone</h2>
         <p>We run this from an automation tool: a webhook receives the SMS, a search finds the contact by <code>phone</code>, then an API call creates the communication. Two limits we hit:</p>
         <ul>
-          <li><strong>Exact match.</strong> The search uses an exact equals filter, so <code>4695551234</code> does not find <code>+14695551234</code> or <code>(469) 555-1234</code>. Normalize both sides. See <a href="../phone-format-duplicates/">phone formats hiding duplicates</a>.</li>
+          <li><strong>Exact match.</strong> The search uses an exact equals filter, so <code>4695551234</code> does not find <code>+14695551234</code> or <code>(469) 555-1234</code>. Normalize both sides. See <a href="../manage-duplicates-tool/">phone formats hiding duplicates</a>.</li>
           <li><strong>No contact, no log.</strong> When the search finds nobody, the scenario stops and nothing is logged. Add a branch that records unmatched messages somewhere you will see them.</li>
         </ul>
 

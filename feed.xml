@@ -295,16 +295,6 @@
     <category>Workflows</category>
   </item>
   <item>
-    <title>Merge two HubSpot records: which values win and what cannot be undone</title>
-    <link>https://hubspot.samcbarth.com/articles/merge-two-records/</link>
-    <guid>https://hubspot.samcbarth.com/articles/merge-two-records/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How merging contacts or companies works in HubSpot, which record&#39;s property values are kept, the exceptions, the Salesforce sync effect, and why merges cannot be reverted.</description>
-    <category>Smart CRM</category>
-    <category>Duplicates</category>
-    <category>Records</category>
-  </item>
-  <item>
     <title>Restore deleted data in HubSpot: records, activities, and rolling back CRM changes</title>
     <link>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</link>
     <guid>https://hubspot.samcbarth.com/articles/restore-deleted-activity/</guid>
@@ -407,11 +397,11 @@
     <category>Account settings</category>
   </item>
   <item>
-    <title>Work through thousands of duplicates with HubSpot&#39;s Manage Duplicates tool</title>
+    <title>HubSpot duplicates and merging: the duplicates tool, what merging keeps, no unmerge, and duplicates HubSpot misses</title>
     <link>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</link>
     <guid>https://hubspot.samcbarth.com/articles/manage-duplicates-tool/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What the Manage Duplicates tool shows, its 10,000-pair display limit, custom duplicate rules, alerts, and the 250-merge limit per record.</description>
+    <description>How the Manage Duplicates tool works by tier, which values survive a merge, why merges cannot be undone and what you can recover, and how to find phone, call tracking and API company duplicates HubSpot does not catch.</description>
     <category>Smart CRM</category>
     <category>Data Hub</category>
     <category>Duplicates</category>
@@ -722,16 +712,6 @@
     <category>Properties</category>
   </item>
   <item>
-    <title>Several companies with the same domain: how HubSpot decides</title>
-    <link>https://hubspot.samcbarth.com/articles/multiple-companies-same-domain/</link>
-    <guid>https://hubspot.samcbarth.com/articles/multiple-companies-same-domain/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot deduplicates companies by domain in manual creation, imports and the API, and what happens to contact association when domains repeat.</description>
-    <category>Smart CRM</category>
-    <category>Duplicates</category>
-    <category>Companies</category>
-  </item>
-  <item>
     <title>See a contact&#39;s time zone before you call</title>
     <link>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</link>
     <guid>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</guid>
@@ -1026,16 +1006,6 @@
     <category>Marketing Hub</category>
     <category>Import</category>
     <category>Segments</category>
-  </item>
-  <item>
-    <title>Two records merged by mistake: what you can do</title>
-    <link>https://hubspot.samcbarth.com/articles/unmerge-records/</link>
-    <guid>https://hubspot.samcbarth.com/articles/unmerge-records/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why HubSpot merges can&#39;t be undone, how to find what was merged, and the export that shows pre-merge values.</description>
-    <category>Smart CRM</category>
-    <category>Data</category>
-    <category>Contacts</category>
   </item>
   <item>
     <title>Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels</title>
@@ -1598,17 +1568,6 @@
     <category>Meetings</category>
   </item>
   <item>
-    <title>Same phone number, different formats: why HubSpot does not flag those duplicates</title>
-    <link>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</link>
-    <guid>https://hubspot.samcbarth.com/articles/phone-format-duplicates/</guid>
-    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot deduplicates contacts by email and companies by domain. Phone numbers in different formats hide duplicates until you normalize them.</description>
-    <category>Smart CRM</category>
-    <category>Data Hub</category>
-    <category>Duplicates</category>
-    <category>Data quality</category>
-  </item>
-  <item>
     <title>Audit company lifecycle stages against invoices and won deals</title>
     <link>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</link>
     <guid>https://hubspot.samcbarth.com/articles/audit-company-lifecycle-stages/</guid>
@@ -1695,17 +1654,6 @@
     <description>A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.</description>
     <category>Sales Hub</category>
     <category>Deals</category>
-  </item>
-  <item>
-    <title>Call tracking is creating duplicate HubSpot contacts? Fix the source before you merge</title>
-    <link>https://hubspot.samcbarth.com/articles/callrail-duplicate-contacts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/callrail-duplicate-contacts/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Placeholder emails from a call tracking tool stop texts and calls matching real HubSpot contacts and create duplicates. How to analyze the duplicates by phone, what is safe to merge, and how to stop it.</description>
-    <category>Smart CRM</category>
-    <category>Marketing Hub</category>
-    <category>Duplicates</category>
-    <category>Integrations</category>
   </item>
   <item>
     <title>Seven HubSpot theme upload errors I hit, and how to sweep for the whole class</title>
