@@ -91,15 +91,6 @@
     <category>Meetings</category>
   </item>
   <item>
-    <title>The HubSpot audit log: see who changed what, and what your tier shows</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-audit-log/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-audit-log/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where to find HubSpot&#39;s centralized audit log, the Events and Analyze tabs, login history, and which categories each subscription tier can see.</description>
-    <category>Smart CRM</category>
-    <category>Account settings</category>
-  </item>
-  <item>
     <title>HubSpot Notetaker: recording settings, smart data capture, and what will cost credits</title>
     <link>https://hubspot.samcbarth.com/articles/hubspot-notetaker-settings/</link>
     <guid>https://hubspot.samcbarth.com/articles/hubspot-notetaker-settings/</guid>
@@ -254,11 +245,11 @@
     <category>Properties</category>
   </item>
   <item>
-    <title>Locked out of HubSpot by two-factor authentication: how the reset works</title>
+    <title>HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits</title>
     <link>https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/</link>
     <guid>https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What to do when you lose your 2FA device, how HubSpot&#39;s admin recovery and photo ID verification work, and how to set up 2FA so it does not happen again.</description>
+    <description>Recover from a 2FA lockout with admin recovery, prevent the next one, manage your login sessions, read the audit log by tier, and audit every user&#39;s email and calendar connections.</description>
     <category>Smart CRM</category>
     <category>User settings</category>
     <category>Account settings</category>
@@ -893,15 +884,6 @@
     <category>Calling</category>
   </item>
   <item>
-    <title>See where you&#39;re logged in and sign out of devices</title>
-    <link>https://hubspot.samcbarth.com/articles/user-login-sessions/</link>
-    <guid>https://hubspot.samcbarth.com/articles/user-login-sessions/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot session management works, what it shows, and its limits.</description>
-    <category>Smart CRM</category>
-    <category>Account security</category>
-  </item>
-  <item>
     <title>Filter a whole dashboard</title>
     <link>https://hubspot.samcbarth.com/articles/dashboard-filters/</link>
     <guid>https://hubspot.samcbarth.com/articles/dashboard-filters/</guid>
@@ -1152,17 +1134,6 @@
     <category>Smart CRM</category>
     <category>Meetings</category>
     <category>Activities</category>
-  </item>
-  <item>
-    <title>Check every HubSpot user&#39;s email and calendar connection before blaming the integration</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-user-connection-audit/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-user-connection-audit/</guid>
-    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>A per-user check of email, calendar, and sync status that explains most missing meetings, calls, and emails in HubSpot, with where each setting lives.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>User settings</category>
-    <category>Meetings</category>
   </item>
   <item>
     <title>Audit company lifecycle stages against invoices and won deals</title>

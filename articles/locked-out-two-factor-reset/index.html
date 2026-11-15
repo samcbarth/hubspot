@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Locked out of HubSpot by two-factor authentication: how the reset works - HubSpot Field Notes</title>
-<meta name="description" content="What to do when you lose your 2FA device, how HubSpot's admin recovery and photo ID verification work, and how to set up 2FA so it does not happen again.">
+<title>HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits - HubSpot Field Notes</title>
+<meta name="description" content="Recover from a 2FA lockout with admin recovery, prevent the next one, manage your login sessions, read the audit log by tier, and audit every user&#x27;s email and calendar connections.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/">
-<meta property="og:title" content="Locked out of HubSpot by two-factor authentication: how the reset works">
-<meta property="og:description" content="What to do when you lose your 2FA device, how HubSpot's admin recovery and photo ID verification work, and how to set up 2FA so it does not happen again.">
+<meta property="og:title" content="HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits">
+<meta property="og:description" content="Recover from a 2FA lockout with admin recovery, prevent the next one, manage your login sessions, read the audit log by tier, and audit every user&#x27;s email and calendar connections.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Locked out of HubSpot by two-factor authentication: how the reset works",
-      "description": "What to do when you lose your 2FA device, how HubSpot's admin recovery and photo ID verification work, and how to set up 2FA so it does not happen again.",
+      "headline": "HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits",
+      "description": "Recover from a 2FA lockout with admin recovery, prevent the next one, manage your login sessions, read the audit log by tier, and audit every user's email and calendar connections.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/og.png",
@@ -43,21 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Request a 2FA reset",
-      "totalTime": "PT4M",
+      "name": "HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Start the login", "text": "Enter your login details on the HubSpot login screen."},
-        {"@type": "HowToStep", "name": "Choose reset", "text": "On the 2FA page, click Reset authentication device."},
-        {"@type": "HowToStep", "name": "Request admin recovery", "text": "Review which Super Admins will be notified, then click Request admin recovery."},
-        {"@type": "HowToStep", "name": "Share the code", "text": "Give your Super Admin the code from the email so they can complete the reset."},
-        {"@type": "HowToStep", "name": "Fallback", "text": "If admin recovery is not offered, click Verify with photo ID, or contact HubSpot support."}
+        {"@type": "HowToStep", "name": "Start admin recovery", "text": "Reset authentication device, then Request admin recovery."},
+        {"@type": "HowToStep", "name": "Give the code to a Super Admin", "text": "They reset 2FA and passkeys."},
+        {"@type": "HowToStep", "name": "Set a backup method", "text": "Secondary 2FA and backup codes."},
+        {"@type": "HowToStep", "name": "Review sessions", "text": "Settings, General, Security."},
+        {"@type": "HowToStep", "name": "Check the audit log", "text": "Settings, Audit Log, Analyze for spikes."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Locked out of HubSpot by two-factor authentication: how the reset works", "item": "https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits", "item": "https://hubspot.samcbarth.com/articles/locked-out-two-factor-reset/" }
       ]
     }
   ]
@@ -88,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=User+settings">User settings</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Fix it</span><span class="badge">Smart CRM</span></div>
-      <h1>Locked out of HubSpot by two-factor authentication: how the reset works</h1>
-      <p class="dek">A lost phone can lock a user out. If every Super Admin is locked out at once, recovery takes longer.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot account security: locked out of two-factor, passkeys, login sessions, the audit log and user connection audits</h1>
+      <p class="dek">A Super Admin cannot reset your 2FA until you start the request. Lockout recovery, prevention, and the logs that show who did what.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Any user; a Super Admin completes admin recovery</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (more audit log categories on Enterprise)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin to reset another user&#x27;s 2FA and see the audit log</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,35 +103,83 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>On the 2FA screen, click <span class="ui">Reset authentication device</span>, then <span class="ui">Request admin recovery</span>. You get an email with a code to share with a Super Admin, who can then reset your 2FA and passkeys. HubSpot's KB says a Super Admin can only reset another user's 2FA after that user starts the request. If admin recovery is not offered, the next options are photo ID verification and then HubSpot support. To avoid this, set up a primary and a secondary 2FA method and save your backup codes.</p>
+          <p>Locked out by two-factor? On the 2FA screen click <strong>Reset authentication device</strong>, then <strong>Request admin recovery</strong>; you get a code to give a Super Admin, who can then reset your 2FA and passkeys. A Super Admin cannot start this for you. If admin recovery is not offered, use photo ID verification, then HubSpot support. Prevent it with a primary and secondary 2FA method, saved backup codes, and more than one Super Admin. Your own sessions are under <strong>Settings, General, Security</strong>, and <strong>Settings, Audit Log</strong> shows what users did, including logins and exports.</p>
         </div>
 
-        <h2>1. Where your login security lives</h2>
-        <p>Your own security settings are under Settings, General, Security. In my demo portal the page shows a saved passkey and the two-factor authentication setup link.</p>
+        <h2>1. Your login security settings</h2>
+        <p>Open <strong>Settings, General, Security</strong>. It lists your passkeys (1) and your two-factor setup (2):</p>
         <figure class="shot"><a href="security.webp"><img src="security.webp" alt="User security settings with a Passkeys section listing Google Password Manager and a Two-factor authentication section" width="781" height="272" loading="lazy"></a><figcaption>Passkeys (1) and two-factor authentication (2).</figcaption></figure>
+        <p>Passkeys are stored by your device or password manager, not HubSpot. If you lose one, recover it through that provider.</p>
 
-        <h2>2. Who gets the recovery email</h2>
-        <ul>
-          <li>With one HubSpot account, the Super Admins in that account.</li>
-          <li>With several accounts, the Super Admins of the account you have had access to longest.</li>
-          <li>With many Super Admins, the first 25 added to the account.</li>
-        </ul>
-        <p>The login screen lists who will be notified before you send the request.</p>
+        <h2>2. Locked out: admin recovery</h2>
+        <ol>
+          <li>On the 2FA screen, click <strong>Reset authentication device</strong>.</li>
+          <li>Click <strong>Request admin recovery</strong>. You get an email with a code.</li>
+          <li>Share the code with a Super Admin. They can now reset your 2FA and passkeys.</li>
+        </ol>
+        <p>Who gets the recovery request: with one account, its Super Admins; with several accounts, the Super Admins of the account you have had access to longest; with many Super Admins, the first 25 added. The login screen shows who will be notified before you send it.</p>
+        <p>If admin recovery is not offered, the next steps are photo ID verification, then HubSpot support.</p>
 
         <h2>3. Prevent the next lockout</h2>
         <ul>
-          <li>Set up both a primary and a secondary 2FA method, and download the backup codes.</li>
-          <li>Keep more than one active Super Admin, and make sure they are not all relying on the same device.</li>
-          <li>Passkeys are stored by your device or password manager, not HubSpot. If you lose one, recover it through that provider. See <a href="../portal-login-security-settings/">account login security settings</a>.</li>
+          <li>Set up a primary <strong>and</strong> a secondary 2FA method, and download the backup codes.</li>
+          <li>Keep more than one active Super Admin, not all relying on the same phone. See <a href="../user-properties-preferences/">users and permissions</a>.</li>
+          <li>Account-wide login rules, such as requiring 2FA or single sign-on, live on the <strong>Login</strong> tab of security settings (2):</li>
         </ul>
+        <figure class="shot"><a href="login.webp"><img src="login.webp" alt="Security settings Login tab with a Setup Portal Login Settings button" width="800" height="553" loading="lazy"></a><figcaption>Login and Permissions tabs (1) and the setup button (2).</figcaption></figure>
+
+        <h2>4. Login sessions</h2>
+        <p>A new session starts each time you log in from a different device, browser or app. In your security settings you can see each session's Last Active time and log out of individual sessions, except the one you are using. You can only see and end your own sessions; each user checks theirs.</p>
+
+        <h2>5. The audit log</h2>
+        <p><strong>Settings, Audit Log</strong> records actions taken by HubSpot users. Tabs cover All Logs, Login History and Security Activity (1), and <strong>Analyze</strong> (2) summarizes daily logins, deletions, exports and reports:</p>
+        <figure class="shot"><a href="log.webp"><img src="log.webp" alt="Audit Log page with All Logs, Login History and Security Activity tabs and a list of recent changes" width="800" height="553" loading="lazy"></a><figcaption>All Logs, Login History and Security Activity (1), and the Analyze tab (2).</figcaption></figure>
+        <ul>
+          <li>Logins (including mobile) and security activity: all tiers.</li>
+          <li>Approvals, communication preference changes and more categories: Enterprise.</li>
+          <li>Retention: 365 days on Starter and Professional, unlimited on Enterprise.</li>
+          <li>The log records actions by HubSpot users, so changes made by integrations may not appear.</li>
+        </ul>
+        <p>A spike in exports in Analyze is worth a question. For the export audit itself, see <a href="../export-records-from-a-view/">exports</a>; for restoring deleted records from a log entry, see <a href="../restore-deleted-activity/">restoring deleted data</a>.</p>
+
+        <h2>6. Audit every user's connections</h2>
+        <p>When meetings or emails are not logging, check users before blaming the integration. Each user connects their own email and calendar:</p>
+        <figure class="shot"><a href="users.webp"><img src="users.webp" alt="Users and Teams active users list with names and emails blurred" width="800" height="553" loading="lazy"></a><figcaption>Active users (1). Each one connects their own email and calendar.</figcaption></figure>
+        <ol>
+          <li>List everyone in <strong>Users &amp; Teams</strong> who meets clients.</li>
+          <li>For each, check <strong>Settings, General, Email</strong>. If it shows <strong>Connect email account</strong>, nothing is connected (1).</li>
+          <li>Check the <strong>Calendar</strong> tab on the same page. HubSpot lists logging outgoing meetings automatically among what a connected calendar does, and connecting a calendar needs personal email access.</li>
+        </ol>
+        <figure class="shot"><a href="email-connect.webp"><img src="email-connect.webp" alt="Email preferences tab with Connect email account button" width="800" height="553" loading="lazy"></a><figcaption>Not connected: the Connect email account button (1).</figcaption></figure>
+        <p>Comparing each person's calendar with the meetings logged in HubSpot on a regular schedule catches gaps before someone asks why the history is empty. See <a href="../never-log-list/">connecting your inbox</a> and <a href="../video-conferencing-meetings/">meetings</a>.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Passkeys.</strong> HubSpot logins support passkeys stored by your device or password manager, alongside 2FA.</li>
+          <li><strong>Exports and keys are audit items.</strong> The audit log's export counts, the export audit and service key logs together show who took data out. See <a href="../private-apps-moved-to-legacy-apps/">service keys</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Can a Super Admin reset my 2FA without me?</h3>
+        <p>No. You start the request from the login screen and give them the code.</p>
+        <h3>All our Super Admins are locked out.</h3>
+        <p>Use photo ID verification, then HubSpot support.</p>
+        <h3>Can I log out another user's session?</h3>
+        <p>No. Users can only see and end their own sessions.</p>
+        <h3>Why doesn't the audit log show an integration's changes?</h3>
+        <p>It records actions taken by HubSpot users. Check the integration's own logs or property history.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/account-security/reset-your-two-factor-authentication">HubSpot Knowledge Base: Reset two-factor authentication and passkeys</a></li>
-          <li><a href="https://knowledge.hubspot.com/account-security/set-up-two-factor-authentication-for-your-hubspot-login">HubSpot Knowledge Base: Set up two-factor authentication for your HubSpot login</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-security/set-up-two-factor-authentication-for-your-hubspot-login">HubSpot Knowledge Base: Set up two-factor authentication</a></li>
           <li><a href="https://knowledge.hubspot.com/account-management/set-up-and-log-in-with-passkeys">HubSpot Knowledge Base: Set up and log in with passkeys</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-security/manage-user-login-sessions">HubSpot Knowledge Base: Manage user login sessions</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/view-and-export-account-activity-history">HubSpot Knowledge Base: View and export account activity history</a></li>
+          <li><a href="https://knowledge.hubspot.com/meetings-tool/use-meetings">HubSpot Knowledge Base: Connect your calendar to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/use-hubspots-integration-with-google-calendar-or-outlook-calendar">HubSpot Knowledge Base: Calendar sync</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
