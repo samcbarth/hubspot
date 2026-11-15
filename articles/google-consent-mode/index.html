@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Google Consent Mode with HubSpot's cookie banner - HubSpot Field Notes</title>
-<meta name="description" content="When HubSpot handles Google Consent Mode for you, when you must implement it yourself, and the EEA/UK opt-in banner requirement.">
+<title>HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC - HubSpot Field Notes</title>
+<meta name="description" content="How HubSpot&#x27;s default and domain consent banners work, what each HubSpot cookie does and how long it lasts, when Google Consent Mode works through HubSpot and when to set it up yourself, and the Global Privacy Control switch.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/google-consent-mode/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/google-consent-mode/">
-<meta property="og:title" content="Google Consent Mode with HubSpot's cookie banner">
-<meta property="og:description" content="When HubSpot handles Google Consent Mode for you, when you must implement it yourself, and the EEA/UK opt-in banner requirement.">
+<meta property="og:title" content="HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC">
+<meta property="og:description" content="How HubSpot&#x27;s default and domain consent banners work, what each HubSpot cookie does and how long it lasts, when Google Consent Mode works through HubSpot and when to set it up yourself, and the Global Privacy Control switch.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/google-consent-mode/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Google Consent Mode with HubSpot's cookie banner",
-      "description": "When HubSpot handles Google Consent Mode for you, when you must implement it yourself, and the EEA/UK opt-in banner requirement.",
+      "headline": "HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC",
+      "description": "How HubSpot's default and domain consent banners work, what each HubSpot cookie does and how long it lasts, when Google Consent Mode works through HubSpot and when to set it up yourself, and the Global Privacy Control switch.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/google-consent-mode/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Google Consent Mode with HubSpot's cookie banner",
-      "totalTime": "PT4M",
+      "name": "HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC",
+      "totalTime": "PT8M",
       "step": [
-        {"@type": "HowToStep", "name": "Use HubSpot's banner", "text": "Set up an opt-in banner for EEA, EU and UK visitors."},
-        {"@type": "HowToStep", "name": "Integrate Google", "text": "Connect GA4 or GTM in page settings."},
-        {"@type": "HowToStep", "name": "Otherwise implement manually", "text": "Non-HubSpot sites or banners need manual setup."}
+        {"@type": "HowToStep", "name": "Open cookie settings", "text": "Settings, Privacy and Consent, Cookies."},
+        {"@type": "HowToStep", "name": "Set the default banner", "text": "It shows on every site with your tracking code."},
+        {"@type": "HowToStep", "name": "Add domain banners", "text": "Verify the domain, then override the default."},
+        {"@type": "HowToStep", "name": "Set up Consent Mode", "text": "Through HubSpot's banner, or yourself if you use another banner."},
+        {"@type": "HowToStep", "name": "Turn on GPC per banner", "text": "Respond to Global Privacy Control signaling."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Google Consent Mode with HubSpot's cookie banner", "item": "https://hubspot.samcbarth.com/articles/google-consent-mode/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC", "item": "https://hubspot.samcbarth.com/articles/google-consent-mode/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Privacy">Privacy</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Content Hub</span></div>
-      <h1>Google Consent Mode with HubSpot's cookie banner</h1>
-      <p class="dek">HubSpot's banner and Google integrations can pass consent to Google automatically.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Content Hub</span></div>
+      <h1>HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC</h1>
+      <p class="dek">HubSpot&#x27;s banner controls HubSpot&#x27;s cookies, not every script on your site. What it covers, which cookies load before consent, and how it connects to Google Consent Mode.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers with the cookie banner</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Settings access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or privacy and consent settings access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,25 +103,82 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: Consent Mode only works in the EEA, EU and UK if a HubSpot <strong>opt-in</strong> cookie banner shows to those visitors. If your site isn't on HubSpot, you aren't integrated with GTM or GA4 through HubSpot, or you use a non-HubSpot banner, <strong>implement Consent Mode yourself</strong>. Google set a March 2024 deadline, after which non-integrated sites could lose measured data from those regions.</p>
+          <p>Consent banners are set in <strong>Settings, Privacy &amp; Consent, Cookies</strong>. A <strong>default banner</strong> shows on every site that runs your HubSpot tracking code, including external sites, and a <strong>domain banner</strong> overrides it on one domain. HubSpot's banner controls HubSpot's cookies only (<code>__hstc</code>, <code>hubspotutk</code>, <code>__hssc</code>, <code>__hssrc</code>), not other scripts on the page. <strong>Google Consent Mode</strong> through HubSpot only works for EEA, EU and UK visitors if a HubSpot opt-in banner shows to them; with any other banner or setup, implement Consent Mode yourself. Each banner has its own <strong>Global Privacy Control</strong> switch.</p>
         </div>
 
-        <h2>1. The banner</h2>
-        <p>Cookie settings in my demo portal.</p>
-        <figure class="shot"><a href="cookies.webp"><img src="cookies.webp" alt="Cookies settings with consent banners" width="800" height="553" loading="lazy"></a><figcaption>Cookies (1), external domains (2), and default banners (3).</figcaption></figure>
-        <h2>2. The notice</h2>
-        <p>Page integration settings in my demo portal show HubSpot's Consent Mode notice.</p>
-        <figure class="shot"><a href="integrations.webp"><img src="integrations.webp" alt="Pages integrations settings with a Notice for Google Integration users about Consent Mode V2" width="800" height="600" loading="lazy"></a><figcaption>The notice (1).</figcaption></figure>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-cookie-consent-banner/">Cookie banner</a> and <a href="../add-google-tag-manager/">Google Tag Manager</a>.</p>
+        <h2>1. Default and domain banners</h2>
+        <p>Open <strong>Settings, Privacy &amp; Consent, Cookies</strong> (1). <strong>Add external domain</strong> (2) adds a site that is not hosted on HubSpot, and the default banners are listed below (3).</p>
+        <figure class="shot"><a href="cookies.webp"><img src="cookies.webp" alt="Cookies settings with Add external domain and the Default consent banners section highlighted" width="800" height="553" loading="lazy"></a><figcaption>Cookies (1), Add external domain (2), and default banners (3).</figcaption></figure>
+        <ul>
+          <li>Default banners show on every website linked to your account, including external sites with your tracking code.</li>
+          <li>A banner for a specific domain overrides the default on that domain.</li>
+          <li>HubSpot needs to verify a domain before you add a banner for it with the new editor.</li>
+          <li>Accounts created after November 2022 have the new (v2) banner editor; older accounts are being migrated.</li>
+          <li>Turning off data privacy settings does not turn off the banner. See <a href="../gdpr-data-privacy-settings/">GDPR settings</a>.</li>
+        </ul>
+        <p>The banner works on HubSpot pages and on external pages with the tracking code. To check a site has the code, see <a href="../install-tracking-code-wix/">installing the tracking code</a>.</p>
+
+        <h2>2. What HubSpot's cookies are</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Cookie</th><th>Purpose</th><th>Expires</th></tr></thead>
+            <tbody>
+              <tr><td><code>__hstc</code></td><td>Main visitor tracking cookie: domain, hubspotutk, first, last and current visit timestamps, session number</td><td>6 months</td></tr>
+              <tr><td><code>hubspotutk</code></td><td>Visitor identity, passed on form submission and used to deduplicate contacts</td><td>6 months</td></tr>
+              <tr><td><code>__hssc</code></td><td>Session tracking: page view count and session start</td><td>30 minutes</td></tr>
+              <tr><td><code>__hssrc</code></td><td>Detects a browser restart for a new session</td><td>Session</td></tr>
+              <tr><td><code>__hs_opt_out</code></td><td>Remembers not to ask the visitor again</td><td>See KB</td></tr>
+              <tr><td><code>__cf_bm</code>, <code>__cfruid</code>, <code>__cfuvid</code></td><td>Set by HubSpot's CDN provider for bot protection and rate limiting. Necessary, no consent needed.</td><td>30 minutes or session</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>On November 15, 2026 I requested the home page of a site hosted on HubSpot's CMS with no cookies. The server response set <code>__cf_bm</code> and <code>_cfuvid</code> straight away, before any banner, which matches HubSpot listing them as necessary cookies. The tracking cookies are set by the tracking script in the browser.</p>
+        <p>Accepting HubSpot's banner covers HubSpot's cookies only. Third-party scripts on the page, such as other analytics or ad pixels, need their own consent handling. Visitors from before you added the banner already have tracking cookies.</p>
+
+        <h2>3. Google Consent Mode</h2>
+        <p>HubSpot can pass banner choices to Google as Consent Mode signals. HubSpot's KB says this only works in the EEA, EU and UK if a HubSpot opt-in banner shows to those visitors. My demo portal's page integration settings carry HubSpot's Consent Mode notice (1):</p>
+        <figure class="shot"><a href="integrations.webp"><img src="integrations.webp" alt="Pages integrations settings with a Notice for Google Integration users about Consent Mode V2" width="800" height="600" loading="lazy"></a><figcaption>The Consent Mode notice (1).</figcaption></figure>
+        <p>Implement Consent Mode yourself if:</p>
+        <ul>
+          <li>your site is not hosted on HubSpot,</li>
+          <li>you do not connect Google Tag Manager or GA4 through HubSpot, or</li>
+          <li>you use a cookie banner that is not HubSpot's.</li>
+        </ul>
+        <p>Google set a March 2024 deadline. Sites without Consent Mode can lose measured data from those regions. HubSpot's developer docs cover implementing it with HubSpot's banner API.</p>
+
+        <h2>4. Global Privacy Control</h2>
+        <p>Global Privacy Control lets visitors send a privacy preference from their browser. Turn on <strong>Respond to Global Privacy Control signaling</strong> in the banner settings. It is set per banner, so check each default and domain banner. HubSpot notes your legal team is the right source for compliance advice.</p>
+
+        <h2>5. Report on consent</h2>
+        <p>Banner interactions are logged on contact records. Notify-style banner interactions appear in segments and reports only with the new banner editor.</p>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Old banner editor migration.</strong> Accounts from before November 2022 are being moved to the new editor. Check your banners after the move, including domain overrides and the GPC switch.</li>
+          <li><strong>External domains need verifying.</strong> Domain banners in the new editor need a verified domain, so add and verify each external site.</li>
+          <li><strong>Consent signals feed reporting.</strong> In the EEA, EU and UK, Consent Mode decides how much Google can measure. A missing or misconfigured banner shows up as gaps in analytics and ad conversion data.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Does HubSpot's banner block Google Analytics?</h3>
+        <p>Not by itself. It controls HubSpot's cookies. Google's tags follow Consent Mode signals if you set them up through HubSpot or yourself.</p>
+        <h3>Why do some cookies appear before the visitor accepts?</h3>
+        <p>HubSpot's CDN sets necessary cookies such as <code>__cf_bm</code> for bot protection. HubSpot lists them as not requiring consent.</p>
+        <h3>The banner shows on my WordPress site. Why?</h3>
+        <p>Default banners show on every site with your tracking code. Add a domain banner for that site to change it.</p>
+        <h3>Where do I turn on Global Privacy Control?</h3>
+        <p>In each banner's settings: Respond to Global Privacy Control signaling.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/any-best-practices-on-how-to-implement-3rd-party-cookie-tools-onetrust-cookiebot/22817">HubSpot Community question: Any best practices on how to implement 3rd party cookie tools? (Onetrust, Cookiebot)</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/set-up-a-consent-banner-with-the-new-editor">HubSpot Knowledge Base: Set up cookie tracking settings and consent banners</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser">HubSpot Knowledge Base: Cookies set in your visitor's browser by HubSpot</a></li>
           <li><a href="https://knowledge.hubspot.com/privacy-and-consent/support-google-consent-mode-v2">HubSpot Knowledge Base: Understand and implement Google Consent Mode</a></li>
           <li><a href="https://developers.hubspot.com/docs/api-reference/latest/account/settings/consent-banner/google-consent-mode">HubSpot developer docs: Implement Google Consent Mode</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/turn-on-support-for-global-privacy-control">HubSpot Knowledge Base: Turn on support for Global Privacy Control</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/analyze-cookie-consent-interactions">HubSpot Knowledge Base: Analyze cookie consent interactions</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

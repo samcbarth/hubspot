@@ -908,11 +908,11 @@
     <category>Integrations</category>
   </item>
   <item>
-    <title>Google Consent Mode with HubSpot&#39;s cookie banner</title>
+    <title>HubSpot cookies and the consent banner: default and domain banners, cookie list, Google Consent Mode and GPC</title>
     <link>https://hubspot.samcbarth.com/articles/google-consent-mode/</link>
     <guid>https://hubspot.samcbarth.com/articles/google-consent-mode/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>When HubSpot handles Google Consent Mode for you, when you must implement it yourself, and the EEA/UK opt-in banner requirement.</description>
+    <description>How HubSpot&#39;s default and domain consent banners work, what each HubSpot cookie does and how long it lasts, when Google Consent Mode works through HubSpot and when to set it up yourself, and the Global Privacy Control switch.</description>
     <category>Marketing Hub</category>
     <category>Content Hub</category>
     <category>Privacy</category>
@@ -1415,15 +1415,6 @@
     <category>Subscriptions</category>
   </item>
   <item>
-    <title>Analyze cookie banner interactions</title>
-    <link>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</link>
-    <guid>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot logs cookie consent banner interactions.</description>
-    <category>Marketing Hub</category>
-    <category>Privacy</category>
-  </item>
-  <item>
     <title>Add collaborators to a deal</title>
     <link>https://hubspot.samcbarth.com/articles/deal-collaborators/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-collaborators/</guid>
@@ -1440,15 +1431,6 @@
     <description>How automatic link shortening works in HubSpot social and its effect on X posts.</description>
     <category>Marketing Hub</category>
     <category>Social</category>
-  </item>
-  <item>
-    <title>Respect Global Privacy Control signals</title>
-    <link>https://hubspot.samcbarth.com/articles/global-privacy-control/</link>
-    <guid>https://hubspot.samcbarth.com/articles/global-privacy-control/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to turn on GPC support in HubSpot consent banners.</description>
-    <category>Marketing Hub</category>
-    <category>Privacy</category>
   </item>
   <item>
     <title>Connect HubSpot to Zapier</title>
@@ -1671,17 +1653,6 @@
     <category>Content Hub</category>
     <category>Multi-language</category>
     <category>AI</category>
-  </item>
-  <item>
-    <title>Cookies HubSpot sets on your visitors</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-cookies/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-cookies/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s cookie list covers and what it can&#39;t control.</description>
-    <category>Marketing Hub</category>
-    <category>Content Hub</category>
-    <category>Privacy</category>
-    <category>Tracking</category>
   </item>
   <item>
     <title>HubSpot users, seats and permissions: seat types, permission sets, Super Admins, log in as user and SCIM</title>
@@ -2090,17 +2061,6 @@
     <category>Marketing Hub</category>
     <category>Privacy</category>
     <category>Consent</category>
-  </item>
-  <item>
-    <title>HubSpot cookie consent banners: default banners, domains, and where to start</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-cookie-consent-banner/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-cookie-consent-banner/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The Cookies tab in HubSpot Privacy &amp; Consent: default consent banners that apply to every site with your tracking code, domain-specific banners, and adding an external domain.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Privacy</category>
-    <category>Tracking</category>
   </item>
   <item>
     <title>HubSpot AI settings: turn generative AI on or off and choose what data it can use</title>
