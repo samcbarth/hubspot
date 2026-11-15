@@ -173,17 +173,6 @@
     <category>Workflows</category>
   </item>
   <item>
-    <title>HubSpot quotes: statuses, approvals, and who still has legacy quotes</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-quotes-basics/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-quotes-basics/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to read quote statuses in HubSpot, where to turn on quote approvals, and the September 2025 legacy quote access rules.</description>
-    <category>Sales Hub</category>
-    <category>Commerce Hub</category>
-    <category>Deals</category>
-    <category>Pipelines</category>
-  </item>
-  <item>
     <title>Export data from HubSpot: records, segments, reports, and calls and notes</title>
     <link>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</link>
     <guid>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</guid>
@@ -244,16 +233,6 @@
     <category>Marketing Hub</category>
     <category>Website</category>
     <category>Pages</category>
-  </item>
-  <item>
-    <title>HubSpot payment links: sell a product without a quote</title>
-    <link>https://hubspot.samcbarth.com/articles/payment-links/</link>
-    <guid>https://hubspot.samcbarth.com/articles/payment-links/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot payment links are, the HubSpot payments versus Stripe choice, testing in a sandbox, and attaching a payment link to a form.</description>
-    <category>Commerce Hub</category>
-    <category>Sales Hub</category>
-    <category>Deals</category>
   </item>
   <item>
     <title>Meeting rotations in HubSpot: share inbound meetings fairly across reps</title>
@@ -365,16 +344,6 @@
     <category>Smart CRM</category>
     <category>Workflows</category>
     <category>Pipelines</category>
-  </item>
-  <item>
-    <title>One product, several prices: tiered pricing in the HubSpot product library</title>
-    <link>https://hubspot.samcbarth.com/articles/tiered-product-pricing/</link>
-    <guid>https://hubspot.samcbarth.com/articles/tiered-product-pricing/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot&#39;s tiered pricing methods (volume-based, graduated and stair-step) live, what subscription and seat they need, and what you see without them.</description>
-    <category>Sales Hub</category>
-    <category>Commerce Hub</category>
-    <category>Products</category>
   </item>
   <item>
     <title>HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads</title>
@@ -1078,16 +1047,6 @@
     <category>Files</category>
   </item>
   <item>
-    <title>Credit memos, voids and refunds on HubSpot invoices</title>
-    <link>https://hubspot.samcbarth.com/articles/invoice-credit-notes/</link>
-    <guid>https://hubspot.samcbarth.com/articles/invoice-credit-notes/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot credit memos apply to invoices, why invoices with payments can&#39;t be voided, and what blocks deleting an invoice.</description>
-    <category>Commerce Hub</category>
-    <category>Invoices</category>
-    <category>Commerce</category>
-  </item>
-  <item>
     <title>Why you can&#39;t delete a pipeline</title>
     <link>https://hubspot.samcbarth.com/articles/delete-pipeline/</link>
     <guid>https://hubspot.samcbarth.com/articles/delete-pipeline/</guid>
@@ -1233,16 +1192,6 @@
     <category>Integrations</category>
   </item>
   <item>
-    <title>Create recurring subscriptions for buyers</title>
-    <link>https://hubspot.samcbarth.com/articles/create-commerce-subscriptions/</link>
-    <guid>https://hubspot.samcbarth.com/articles/create-commerce-subscriptions/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot commerce subscriptions automate recurring payments or invoices.</description>
-    <category>Sales Hub</category>
-    <category>Payments</category>
-    <category>Subscriptions</category>
-  </item>
-  <item>
     <title>Add collaborators to a deal</title>
     <link>https://hubspot.samcbarth.com/articles/deal-collaborators/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-collaborators/</guid>
@@ -1289,11 +1238,11 @@
     <category>AI</category>
   </item>
   <item>
-    <title>Use price books for different pricing</title>
+    <title>HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices</title>
     <link>https://hubspot.samcbarth.com/articles/price-books/</link>
     <guid>https://hubspot.samcbarth.com/articles/price-books/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot price books work.</description>
+    <description>What Sales Hub and Revenue Hub each cover for products, price books, tiered pricing and quotes, quote approvals and e-signatures, legacy quote rules, payment links with HubSpot payments or Stripe, and invoice and subscription limits.</description>
     <category>Sales Hub</category>
     <category>Products</category>
   </item>

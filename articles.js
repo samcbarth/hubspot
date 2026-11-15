@@ -2816,6 +2816,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-quotes-basics",
+    draft: true,
+    mergedInto: 'price-books',
     title: "HubSpot quotes: statuses, approvals, and who still has legacy quotes",
     excerpt: "How to read quote statuses in HubSpot, where to turn on quote approvals, and the September 2025 legacy quote access rules.",
     type: "tip",
@@ -3073,6 +3075,8 @@ var ARTICLES = [
   },
   {
     slug: "payment-links",
+    draft: true,
+    mergedInto: 'price-books',
     title: "HubSpot payment links: sell a product without a quote",
     excerpt: "What HubSpot payment links are, the HubSpot payments versus Stripe choice, testing in a sandbox, and attaching a payment link to a form.",
     type: "tip",
@@ -3644,6 +3648,8 @@ var ARTICLES = [
   },
   {
     slug: "tiered-product-pricing",
+    draft: true,
+    mergedInto: 'price-books',
     title: "One product, several prices: tiered pricing in the HubSpot product library",
     excerpt: "Where HubSpot's tiered pricing methods (volume-based, graduated and stair-step) live, what subscription and seat they need, and what you see without them.",
     type: "tip",
@@ -8198,6 +8204,8 @@ var ARTICLES = [
   },
   {
     slug: "invoice-credit-notes",
+    draft: true,
+    mergedInto: 'price-books',
     title: "Credit memos, voids and refunds on HubSpot invoices",
     excerpt: "How HubSpot credit memos apply to invoices, why invoices with payments can't be voided, and what blocks deleting an invoice.",
     type: "tip",
@@ -11426,6 +11434,8 @@ var ARTICLES = [
   },
   {
     slug: "create-commerce-subscriptions",
+    draft: true,
+    mergedInto: 'price-books',
     title: "Create recurring subscriptions for buyers",
     excerpt: "How HubSpot commerce subscriptions automate recurring payments or invoices.",
     type: "tip",
@@ -12998,19 +13008,20 @@ var ARTICLES = [
   },
   {
     slug: "price-books",
-    title: "Use price books for different pricing",
-    excerpt: "How HubSpot price books work.",
-    type: "tip",
+    title: "HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices",
+    excerpt: "What Sales Hub and Revenue Hub each cover for products, price books, tiered pricing and quotes, quote approvals and e-signatures, legacy quote rules, payment links with HubSpot payments or Stripe, and invoice and subscription limits.",
+    type: "guide",
     problem: "How to",
     hubs: ["Sales Hub"],
     features: ["Products"],
-    tier: "Core or Revenue Hub seat",
-    permissions: "Super Admin or Edit/Delete products",
-    verified: "2026-10-07",
+    tier: "Sales Hub for quotes; Revenue Hub for price books, tiered pricing and newer e-signatures",
+    permissions: "Commerce access; Core or Revenue Hub seat for price books",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 2,
+    minutes: 10,
     difficulty: "Intermediate",
-    keywords: ["price books hubspot", "partner pricing", "regional price list", "product pricing tiers"]
+    keywords: ["price books hubspot", "partner pricing", "regional price list", "product pricing tiers"],
+    validated: "2026-11-15 23:59 ET",
   },
   {
     slug: "salesforce-deal-sync",

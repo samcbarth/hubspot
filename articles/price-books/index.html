@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Use price books for different pricing - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot price books work.">
+<title>HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices - HubSpot Field Notes</title>
+<meta name="description" content="What Sales Hub and Revenue Hub each cover for products, price books, tiered pricing and quotes, quote approvals and e-signatures, legacy quote rules, payment links with HubSpot payments or Stripe, and invoice and subscription limits.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/price-books/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/price-books/">
-<meta property="og:title" content="Use price books for different pricing">
-<meta property="og:description" content="How HubSpot price books work.">
+<meta property="og:title" content="HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices">
+<meta property="og:description" content="What Sales Hub and Revenue Hub each cover for products, price books, tiered pricing and quotes, quote approvals and e-signatures, legacy quote rules, payment links with HubSpot payments or Stripe, and invoice and subscription limits.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/price-books/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Use price books for different pricing",
-      "description": "How HubSpot price books work.",
+      "headline": "HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices",
+      "description": "What Sales Hub and Revenue Hub each cover for products, price books, tiered pricing and quotes, quote approvals and e-signatures, legacy quote rules, payment links with HubSpot payments or Stripe, and invoice and subscription limits.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/price-books/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Use price books for different pricing",
-      "totalTime": "PT2M",
+      "name": "HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Create price book", "text": "Products."},
-        {"@type": "HowToStep", "name": "Set prices", "text": "Per product."},
-        {"@type": "HowToStep", "name": "Lock down", "text": "Custom line items off."}
+        {"@type": "HowToStep", "name": "Build the product library", "text": "Commerce, Products, Add products."},
+        {"@type": "HowToStep", "name": "Set pricing", "text": "Single price, or tiered pricing and price books with Revenue Hub."},
+        {"@type": "HowToStep", "name": "Set quote approvals", "text": "Settings, Objects, Quotes, Approvals."},
+        {"@type": "HowToStep", "name": "Set up payments", "text": "HubSpot payments or Stripe, then create payment links."},
+        {"@type": "HowToStep", "name": "Handle invoice changes", "text": "Refund instead of voiding paid invoices."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Use price books for different pricing", "item": "https://hubspot.samcbarth.com/articles/price-books/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices", "item": "https://hubspot.samcbarth.com/articles/price-books/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Products">Products</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
-      <h1>Use price books for different pricing</h1>
-      <p class="dek">Referral, partner or regional pricing.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot quotes, products and payments: price books, tiered pricing, legacy quotes, payment links and invoices</h1>
+      <p class="dek">Commerce in HubSpot is split between Sales Hub and Revenue Hub, and between HubSpot payments and Stripe. Which features need which, and the rules on quotes and invoices.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Core or Revenue Hub seat</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit/Delete products</dd></div>
-        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Sales Hub for quotes; Revenue Hub for price books, tiered pricing and newer e-signatures</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Commerce access; Core or Revenue Hub seat for price books</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,88 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: create books for <strong>referral, partner or regional</strong> pricing. To force use, turn off <strong>Create custom line items</strong> for users.</p>
+          <p>HubSpot's commerce tools split across two subscriptions. <strong>Sales Hub</strong> covers the product library, quotes and quote approvals. <strong>Revenue Hub</strong> adds price books, tiered pricing (volume, graduated, stair-step) and e-signatures on newer quotes, and needs Revenue Hub seats to use them. <strong>Payment links</strong> and <strong>subscriptions</strong> work with HubSpot payments (Starter and above) or a connected Stripe account. Legacy quotes stay for Sales Hub accounts. An invoice with a payment against it cannot be voided: refund the payment instead.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
+        <h2>1. Products</h2>
+        <p>The product library is under <strong>Commerce, Products</strong>: <strong>Add products</strong> (1), quick filters (2) and columns (3).</p>
         <figure class="shot"><a href="products.webp"><img src="products.webp" alt="Products index with Add products, quick filters and columns" width="800" height="553" loading="lazy"></a><figcaption>Add products (1), quick filters (2), and columns (3).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Managing price books needs a core or Revenue Hub seat.</p>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-products-library/">Product library</a>.</p>
+        <p>Without Revenue Hub, the create form's pricing section has <strong>Unit price</strong>, <strong>Unit cost</strong> and <strong>Margin</strong> only, plus billing frequency for recurring products:</p>
+        <figure class="shot"><a href="create-product.webp"><img src="create-product.webp" alt="Create product form with Billing details and a Pricing configuration section showing Unit price, Unit cost and Margin" width="800" height="358" loading="lazy"></a><figcaption>Billing frequency (1) and the single-price Pricing configuration (2).</figcaption></figure>
+        <p>Through the API, my demo portal's two products returned <code>hs_pricing_model: flat</code>, which is the single-price model.</p>
+
+        <h2>2. Tiered pricing and price books (Revenue Hub)</h2>
+        <ul>
+          <li><strong>Tiered pricing:</strong> the product form's <strong>Pricing method</strong> offers volume-based, graduated and stair-step, each starting with two tiers. Volume-based bills all units at the rate of the tier the total quantity falls into. It needs a Revenue Hub subscription, and a Revenue Hub seat to create tiered products or add them to quotes and invoices.</li>
+          <li><strong>Price books</strong> hold different prices for the same products, for example referral, partner or regional pricing. To force reps to use them, turn off <strong>Create custom line items</strong> for users. Managing price books needs a Core or Revenue Hub seat.</li>
+        </ul>
+
+        <h2>3. Quotes</h2>
+        <p>The quotes index has views for All quotes, Expiring soon, Pending acceptance and Pending approval (1), with status and signing status columns (2):</p>
+        <figure class="shot"><a href="quotes.webp"><img src="quotes.webp" alt="Quotes index with All quotes, Expiring soon, Pending acceptance and Pending approval views" width="800" height="553" loading="lazy"></a><figcaption>Quote views (1) and statuses (2).</figcaption></figure>
+        <ul>
+          <li>An expired quote has passed the expiration date set when it was created. In the API, my demo portal's expired quote still had <code>hs_status</code> <code>APPROVAL_NOT_NEEDED</code>; expiry comes from the date, not the status. Open it from the deal and view the PDF. The PDF link HubSpot generates expires after one hour.</li>
+          <li><strong>Approvals:</strong> <strong>Settings, Objects, Quotes, Approvals</strong>. Standard approvals use simple rules; advanced approvals use an approval workflow.</li>
+          <li><strong>E-signatures:</strong> on legacy quotes they need Sales Hub; on newer quotes they need Revenue Hub.</li>
+        </ul>
+        <p><strong>Legacy quotes:</strong> Sales Hub accounts keep them after September 3, 2025. Free accounts keep them only if they created a quote in the six months before that date. Revenue Hub seats lose legacy quotes and templates if legacy quote creation is turned off.</p>
+
+        <h2>4. Payment links</h2>
+        <p>Payment links are checkout pages for one or more line items. <strong>Set up online payments</strong> (1) first, then <strong>Create a payment link</strong> (2):</p>
+        <figure class="shot"><a href="links.webp"><img src="links.webp" alt="Payment Links list with Set up online payments link and Create a payment link button" width="800" height="553" loading="lazy"></a><figcaption>Set up online payments (1) and Create a payment link (2).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Processor</th><th>Available on</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>HubSpot payments</td><td>Starter, Professional, Enterprise</td><td>Processing through HubSpot; you choose the link's domain. Not supported in sandboxes.</td></tr>
+              <tr><td>Stripe</td><td>All subscriptions</td><td>Processing and payment reporting stay in Stripe.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Test the flow in a sandbox account with Stripe's test values; sandbox transactions do not reach your main account. To take payment after a form, create the payment link first, then set the form to redirect to it. See <a href="../form-file-upload-field/">form redirects</a>.</p>
+
+        <h2>5. Invoices, credit memos and subscriptions</h2>
+        <ul>
+          <li>An invoice with payments against it cannot be voided. Refund the payment instead.</li>
+          <li>A credit memo is associated with an invoice when you apply it.</li>
+          <li>Invoices tied to a credit memo, an online payment or a subscription cannot be deleted. With a manual payment, delete the payment first.</li>
+          <li><strong>Subscriptions</strong> automate recurring payments or invoices with line items, taxes, discounts and fees. Invoices can be due on receipt or on net terms. These are subscriptions you sell to buyers, not your own HubSpot plan.</li>
+        </ul>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Revenue Hub is the commerce tier.</strong> Price books, tiered pricing, and e-signatures on newer quotes moved behind Revenue Hub subscriptions and seats. Check seat assignments before rolling these out.</li>
+          <li><strong>Legacy quotes are being phased out for some accounts.</strong> Free accounts without recent quotes lost them after September 3, 2025, and Revenue Hub accounts can turn legacy creation off.</li>
+          <li><strong>Payments in sandboxes.</strong> HubSpot payments does not run in sandboxes, so test with Stripe test values.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why is there no tiered pricing option on my product form?</h3>
+        <p>Tiered pricing needs Revenue Hub and a Revenue Hub seat. Without them the form shows a single unit price.</p>
+        <h3>Can I void an invoice that was paid?</h3>
+        <p>No. Refund the payment instead.</p>
+        <h3>Can I use payment links without HubSpot payments?</h3>
+        <p>Yes, by connecting a Stripe account, on any subscription.</p>
+        <h3>Why does a quote link I shared stop working?</h3>
+        <p>The PDF link HubSpot generates for viewing expires after one hour. Share the quote itself, or generate the PDF again.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/product-with-calculated-price/136433">HubSpot Community question: Product with calculated price</a></li>
+          <li><a href="https://knowledge.hubspot.com/products/create-and-manage-products">HubSpot Knowledge Base: Create and manage products</a></li>
+          <li><a href="https://knowledge.hubspot.com/cpq/understand-hubspot-cpq">HubSpot Knowledge Base: Understand HubSpot CPQ</a></li>
           <li><a href="https://knowledge.hubspot.com/products/use-price-books">HubSpot Knowledge Base: Use price books</a></li>
+          <li><a href="https://knowledge.hubspot.com/quotes/manage-legacy-quotes">HubSpot Knowledge Base: Manage legacy quotes</a></li>
+          <li><a href="https://knowledge.hubspot.com/quotes/set-up-quote-approvals">HubSpot Knowledge Base: Set up quote approvals</a></li>
+          <li><a href="https://knowledge.hubspot.com/quotes/use-e-signatures-with-quotes">HubSpot Knowledge Base: Use e-signatures with quotes</a></li>
+          <li><a href="https://knowledge.hubspot.com/payment-links/create-and-share-a-products-payment-link">HubSpot Knowledge Base: Create and share payment links</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/redirect-a-form-to-a-payment-link">HubSpot Knowledge Base: Use forms to collect payments</a></li>
+          <li><a href="https://knowledge.hubspot.com/payment-processing/payments-frequently-asked-questions">HubSpot Knowledge Base: HubSpot payments FAQ</a></li>
+          <li><a href="https://knowledge.hubspot.com/invoices/create-credit-memos">HubSpot Knowledge Base: Create and apply credit memos</a></li>
+          <li><a href="https://knowledge.hubspot.com/invoices/manage-invoices">HubSpot Knowledge Base: Manage invoices</a></li>
+          <li><a href="https://knowledge.hubspot.com/subscriptions/create-subscriptions">HubSpot Knowledge Base: Create subscriptions</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/objects/products/guide">HubSpot developer docs: Products API</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
