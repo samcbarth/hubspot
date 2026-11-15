@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app - HubSpot Field Notes</title>
-<meta name="description" content="Admin consent for the HubSpot app in Microsoft Teams is not the last step. Each HubSpot user is mapped to a Teams user, and some had to accept permissions themselves.">
+<title>HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards - HubSpot Field Notes</title>
+<meta name="description" content="Admin-level vs user-level Microsoft Teams installs, mapping each HubSpot user to Teams, what the integration does, why it works for some users and not others, and setting up SharePoint and OneDrive files on records.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/">
-<meta property="og:title" content="Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app">
-<meta property="og:description" content="Admin consent for the HubSpot app in Microsoft Teams is not the last step. Each HubSpot user is mapped to a Teams user, and some had to accept permissions themselves.">
+<meta property="og:title" content="HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards">
+<meta property="og:description" content="Admin-level vs user-level Microsoft Teams installs, mapping each HubSpot user to Teams, what the integration does, why it works for some users and not others, and setting up SharePoint and OneDrive files on records.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/og.png">
 <meta property="article:published_time" content="2026-10-06">
-<meta property="article:modified_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app",
-      "description": "Admin consent for the HubSpot app in Microsoft Teams is not the last step. Each HubSpot user is mapped to a Teams user, and some had to accept permissions themselves.",
+      "headline": "HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards",
+      "description": "Admin-level vs user-level Microsoft Teams installs, mapping each HubSpot user to Teams, what the integration does, why it works for some users and not others, and setting up SharePoint and OneDrive files on records.",
       "datePublished": "2026-10-06",
-      "dateModified": "2026-10-06",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Connect each HubSpot user to Microsoft Teams",
-      "totalTime": "PT5M",
+      "name": "HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards",
+      "totalTime": "PT7M",
       "step": [
-        {"@type": "HowToStep", "name": "Approve the app", "text": "Have the Microsoft admin approve the HubSpot app and assign it to the right Entra groups."},
-        {"@type": "HowToStep", "name": "Open My settings", "text": "Each user goes to Settings, Integrations, Connected Apps, Microsoft Teams, Settings, My settings."},
-        {"@type": "HowToStep", "name": "Connect account", "text": "Click Connect account, enter the Teams email, and click Update linked account."},
-        {"@type": "HowToStep", "name": "Verify in Teams", "text": "Open Microsoft Teams and click Verify on the message from HubSpot."}
+        {"@type": "HowToStep", "name": "Pick the install", "text": "Admin level for everything, user level for the basics."},
+        {"@type": "HowToStep", "name": "Map each user", "text": "Automatic when emails match, otherwise My settings and Verify in Teams."},
+        {"@type": "HowToStep", "name": "Check Microsoft access", "text": "Admin consent, Entra group assignment and user prompts."},
+        {"@type": "HowToStep", "name": "Add the SharePoint card", "text": "Record layouts, by a Super Admin."},
+        {"@type": "HowToStep", "name": "Track who is connected", "text": "Review mapped users in General Settings."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app", "item": "https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards", "item": "https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Gotcha</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app</h1>
-      <p class="dek">IT approved the app, and meeting links still failed for one user. The fix was on that user's own account, not in the tenant.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards</h1>
+      <p class="dek">Admin consent lets the Teams app into your tenant but does not connect anyone. How installs, user mapping and Microsoft-side access fit together.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Each user connects their own account; Microsoft admin consent for the app</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or App Marketplace access; a Microsoft admin for the admin-level install</dd></div>
+        <div class="fact"><dt>Time</dt><dd>7 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,36 +103,82 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Admin consent lets the HubSpot app into the Microsoft tenant. It does not connect each person. HubSpot maps a HubSpot user to a Teams user automatically when the email matches, and otherwise the user connects from <span class="ui">My settings</span> and clicks <strong>Verify</strong> on a message from HubSpot in Teams. On an IT services client's rollout, one user's meeting links only started working after they accepted the permission prompts on their own account, and access also depended on which Entra groups they were in. Entra groups can control who gets the app, but they do not set HubSpot roles. Those stay in HubSpot.</p>
+          <p>The Microsoft Teams app installs at <strong>admin level</strong> (a Microsoft admin consents for the tenant) or <strong>user level</strong> (no admin needed, but limited to notifications, creating tasks and tickets, and Teams meeting links). Either way, each person's HubSpot user has to be <strong>mapped</strong> to their Teams user: automatic when the emails match, otherwise they connect it in <strong>My settings</strong> and click <strong>Verify</strong> on HubSpot's message in Teams. Admin consent lets the app into the tenant; it does not connect each user. The SharePoint and OneDrive app attaches files to records, but a Super Admin has to add its card to record layouts first.</p>
         </div>
 
-        <h2>1. What happened</h2>
-        <p>On an IT services client's Teams rollout, the IT lead had approved the HubSpot app. Teams meeting links and notifications worked for some users and not for one. That user's Microsoft permissions differed from a colleague's. What fixed it:</p>
-        <ul>
-          <li>IT added the user to the Entra group that had the HubSpot app assigned.</li>
-          <li>The user accepted the permission prompts on their own account. After that their meeting links worked.</li>
-          <li>IT also removed redundant HubSpot app entries in the tenant.</li>
-        </ul>
-        <p>One thing we confirmed on that call: Entra groups can decide who gets the app, but they cannot assign HubSpot roles or permissions. Those are still managed in HubSpot.</p>
+        <h2>1. Install Microsoft Teams</h2>
+        <p>Install from the HubSpot Marketplace listing. The <strong>Manage access</strong> banner on the listing (1) is HubSpot's own app approval, separate from Microsoft's consent.</p>
+        <figure class="shot"><a href="listing.webp"><img src="listing.webp" alt="Microsoft Teams app listing with the Manage access approve banner highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Marketplace listing and its Manage access banner (1).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Install</th><th>Who</th><th>What you get</th></tr></thead>
+            <tbody>
+              <tr><td>Admin level</td><td>A Microsoft admin consents for the organization</td><td>The full integration</td></tr>
+              <tr><td>User level</td><td>Any user, no Microsoft admin needed</td><td>HubSpot notifications in Teams, creating tasks and tickets from Teams, and Teams links on your meetings</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>You sign in with your Microsoft account. A user-level install goes straight to the Teams connected app settings.</p>
 
-        <h2>2. The HubSpot side of it</h2>
-        <p>HubSpot's help article says you must map your HubSpot user to your Teams user to use all of the integration's features. Mapping is automatic when the email matches in both apps. When it does not:</p>
+        <h2>2. Map each user</h2>
+        <p>HubSpot needs your HubSpot user mapped to your Teams user to add Teams meeting links, send you notifications, and create custom notifications. Mapping is automatic when the email address matches in both apps. When it does not:</p>
         <ol>
-          <li>Open <a class="hs-link" data-hs="/integrations-settings/{portalId}/installed" href="https://app.hubspot.com/l/integrations-settings/installed"><span class="ui">Connected Apps</span></a>, click Microsoft Teams, then the Settings tab and My settings.</li>
-          <li>Click <span class="ui">Connect account</span>, enter the Teams email, and click <span class="ui">Update linked account</span>.</li>
-          <li>In Microsoft Teams, click <span class="ui">Verify</span> on the message from HubSpot.</li>
+          <li>Open <strong>Connected Apps</strong>, click <strong>Microsoft Teams</strong>, then the <strong>Settings</strong> tab and <strong>My settings</strong>.</li>
+          <li>Click <strong>Connect account</strong>, enter your Teams email, and click <strong>Update linked account</strong>.</li>
+          <li>In Teams, click <strong>Verify</strong> on the message from HubSpot. A welcome message confirms it.</li>
         </ol>
-        <figure class="shot"><a href="listing.webp"><img src="listing.webp" alt="Microsoft Teams app listing with the Manage access approve banner highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Marketplace listing. The Manage access banner (1) is HubSpot's own app approval, separate from Microsoft's.</figcaption></figure>
+        <p>Super Admins can review all mapped users on the <strong>General Settings</strong> tab. Because mapping happens per person, track who has connected rather than guessing from errors. See <a href="../locked-out-two-factor-reset/">auditing user connections</a>.</p>
 
-        <h2>3. Make it a checklist</h2>
-        <p>On that rollout the team tracked each rep's connection as a HubSpot task, because the work happens on each person's account. A list of who has connected beats guessing from error messages. The same idea applies to email and calendar, covered in <a href="../hubspot-user-connection-audit/">auditing every user's connections</a>.</p>
+        <h2>3. What the Teams integration does</h2>
+        <ul>
+          <li><strong>Meeting links:</strong> add a Teams link when scheduling a meeting from a record or in the meetings tool. Links are created in the account's default language. See <a href="../video-conferencing-meetings/">meeting links</a>.</li>
+          <li><strong>Notifications:</strong> HubSpot notifications in Teams, plus custom notifications.</li>
+          <li><strong>Tasks and tickets</strong> created from Teams.</li>
+          <li><strong>Webinars:</strong> Teams webinar sync, set per user (My settings) and for the team (Global Settings) under Settings, Webinars.</li>
+          <li><strong>Calls:</strong> for click-to-call and call logging, see <a href="../receive-inbound-calls/">calling setup</a>.</li>
+        </ul>
+
+        <h2>4. When it works for some users and not others</h2>
+        <ul>
+          <li>Check the user is mapped (General Settings, or their My settings).</li>
+          <li>Check their Microsoft account can use the app. Organizations often assign enterprise apps to Entra ID groups; a user outside the group cannot use it even after admin consent.</li>
+          <li>Have the user accept any permission prompts on their own account.</li>
+          <li>Remember Entra groups control who gets the app, not HubSpot permissions. HubSpot roles and permissions are still set in HubSpot, see <a href="../user-properties-preferences/">users and permissions</a>.</li>
+        </ul>
+
+        <h2>5. SharePoint and OneDrive files</h2>
+        <p>The Microsoft SharePoint and OneDrive app attaches and organizes files on records and in workflows. It shows under <strong>Connected Apps</strong> (3):</p>
+        <figure class="shot"><a href="connected.webp"><img src="connected.webp" alt="Connected Apps page with the tabs, the Needs attention section, and the My Apps table highlighted" width="800" height="553" loading="lazy"></a><figcaption>Tabs (1), Needs attention (2), and My Apps (3).</figcaption></figure>
+        <ul>
+          <li>A Super Admin, or a user with the Customize record page layout permission, must add the card to record layouts before anyone sees it.</li>
+          <li>Users need access to the files they link in Microsoft.</li>
+          <li>Workflow actions can create and organize files.</li>
+          <li>You can connect SharePoint or OneDrive first and add the other later.</li>
+        </ul>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>User-level installs.</strong> People can connect Teams for themselves without a Microsoft admin, for notifications, tasks and tickets, and meeting links. Everything else needs the admin-level install.</li>
+          <li><strong>Microsoft-side access decides a lot.</strong> Admin consent, Entra group assignment and per-user prompts all have to line up, and they are fixed in Microsoft, not HubSpot. The same applies to Outlook, see <a href="../office-365-add-in-troubleshoot/">HubSpot with Outlook</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>We approved the app but a user still cannot add Teams links.</h3>
+        <p>Admin consent does not map users. Check the user's mapping in My settings and their access to the app in Microsoft.</p>
+        <h3>Do I need a Microsoft admin?</h3>
+        <p>Not for a user-level install, which covers notifications, tasks and tickets, and meeting links. Yes for the full admin-level install.</p>
+        <h3>Can Entra groups give users HubSpot permissions?</h3>
+        <p>No. They decide who can use the app in Microsoft. HubSpot permissions are managed in HubSpot.</p>
+        <h3>Why do I not see SharePoint files on records?</h3>
+        <p>The card has to be added to the record layout by a Super Admin or a user with the layout permission.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/integrations/connect-hubspot-and-microsoft-teams">HubSpot Knowledge Base: Connect HubSpot and Microsoft Teams</a></li>
           <li><a href="https://knowledge.hubspot.com/integrations/manage-records-and-notifications-in-microsoft-teams">HubSpot Knowledge Base: Manage records and notifications in Microsoft Teams</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/add-and-use-sharepoint-and-onedrive-files-in-hubspot">HubSpot Knowledge Base: Add and use SharePoint and OneDrive files</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

@@ -1218,16 +1218,6 @@
     <category>Calling</category>
   </item>
   <item>
-    <title>Use SharePoint and OneDrive files in HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/sharepoint-onedrive-files/</link>
-    <guid>https://hubspot.samcbarth.com/articles/sharepoint-onedrive-files/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s SharePoint and OneDrive app links files to records and workflows.</description>
-    <category>Smart CRM</category>
-    <category>Integrations</category>
-    <category>Files</category>
-  </item>
-  <item>
     <title>Use the HubSpot mobile app offline</title>
     <link>https://hubspot.samcbarth.com/articles/mobile-app-offline/</link>
     <guid>https://hubspot.samcbarth.com/articles/mobile-app-offline/</guid>
@@ -1564,11 +1554,11 @@
     <category>Calling</category>
   </item>
   <item>
-    <title>Microsoft Teams and HubSpot: why each user still has to connect after IT approves the app</title>
+    <title>HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards</title>
     <link>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</guid>
     <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Admin consent for the HubSpot app in Microsoft Teams is not the last step. Each HubSpot user is mapped to a Teams user, and some had to accept permissions themselves.</description>
+    <description>Admin-level vs user-level Microsoft Teams installs, mapping each HubSpot user to Teams, what the integration does, why it works for some users and not others, and setting up SharePoint and OneDrive files on records.</description>
     <category>Sales Hub</category>
     <category>Smart CRM</category>
     <category>Integrations</category>
