@@ -408,17 +408,6 @@
     <category>Data quality</category>
   </item>
   <item>
-    <title>Make a custom property require unique values, and use it as an ID</title>
-    <link>https://hubspot.samcbarth.com/articles/unique-value-properties/</link>
-    <guid>https://hubspot.samcbarth.com/articles/unique-value-properties/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s Require unique values rule works, the 10-property limit shown in settings, and how unique properties work in imports and the API.</description>
-    <category>Smart CRM</category>
-    <category>Data Hub</category>
-    <category>Properties</category>
-    <category>Imports</category>
-  </item>
-  <item>
     <title>Calculation properties: build a custom equation in HubSpot</title>
     <link>https://hubspot.samcbarth.com/articles/calculation-properties/</link>
     <guid>https://hubspot.samcbarth.com/articles/calculation-properties/</guid>
@@ -703,26 +692,6 @@
     <category>AI</category>
   </item>
   <item>
-    <title>Make a property a clickable link with the URL field type</title>
-    <link>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</link>
-    <guid>https://hubspot.samcbarth.com/articles/url-property-clickable-link/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s URL field type for properties that should be clickable links, and how it compares to text fields.</description>
-    <category>Smart CRM</category>
-    <category>Properties</category>
-  </item>
-  <item>
-    <title>See a contact&#39;s time zone before you call</title>
-    <link>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</link>
-    <guid>https://hubspot.samcbarth.com/articles/contact-local-time-zone/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s Time zone and IP time zone contact properties, how each is set, and the daylight saving catch.</description>
-    <category>Smart CRM</category>
-    <category>Sales Hub</category>
-    <category>Properties</category>
-    <category>Contacts</category>
-  </item>
-  <item>
     <title>Enroll many contacts in a sequence at once</title>
     <link>https://hubspot.samcbarth.com/articles/enroll-list-in-sequence/</link>
     <guid>https://hubspot.samcbarth.com/articles/enroll-list-in-sequence/</guid>
@@ -741,11 +710,11 @@
     <category>Email</category>
   </item>
   <item>
-    <title>Dropdown, radio or multiple checkboxes: picking an option field</title>
+    <title>HubSpot property types: dropdown vs checkboxes, labels vs internal names, unique values, URL, Industry and Time zone</title>
     <link>https://hubspot.samcbarth.com/articles/dropdown-vs-multiple-checkboxes/</link>
     <guid>https://hubspot.samcbarth.com/articles/dropdown-vs-multiple-checkboxes/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The difference between HubSpot&#39;s enumeration field types, which allow one value versus several, and how they look in forms.</description>
+    <description>Which field type to pick and how each maps to the properties API, option labels vs internal names for imports and integrations, option limits, unique value properties as identifiers, and the quirks of Industry and Time zone.</description>
     <category>Smart CRM</category>
     <category>Properties</category>
   </item>
@@ -926,16 +895,6 @@
     <description>The difference between canceling a paid HubSpot subscription and deleting the account, who can do each, and when deletion is allowed.</description>
     <category>Smart CRM</category>
     <category>Account</category>
-  </item>
-  <item>
-    <title>Edit or add options to the Industry property</title>
-    <link>https://hubspot.samcbarth.com/articles/industry-property-options/</link>
-    <guid>https://hubspot.samcbarth.com/articles/industry-property-options/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What you can and can&#39;t change on HubSpot&#39;s default company Industry property, and how to add your own options.</description>
-    <category>Smart CRM</category>
-    <category>Properties</category>
-    <category>Companies</category>
   </item>
   <item>
     <title>Set your default dashboard</title>
@@ -1738,16 +1697,6 @@
     <category>Marketing Hub</category>
     <category>Sales Hub</category>
     <category>Dashboards</category>
-  </item>
-  <item>
-    <title>HubSpot dropdown options: labels vs internal names, and why imports and integrations care</title>
-    <link>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</link>
-    <guid>https://hubspot.samcbarth.com/articles/dropdown-option-labels-vs-internal-names/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.</description>
-    <category>Smart CRM</category>
-    <category>Properties</category>
-    <category>Import</category>
   </item>
   <item>
     <title>HubSpot saved views: quick filters, advanced filters, view types, and sharing</title>

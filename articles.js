@@ -958,6 +958,8 @@ var ARTICLES = [
   },
   {
     slug: "dropdown-option-labels-vs-internal-names",
+    draft: true,
+    mergedInto: 'dropdown-vs-multiple-checkboxes',
     title: "HubSpot dropdown options: labels vs internal names, and why imports and integrations care",
     excerpt: "Every option in a HubSpot dropdown, radio, or checkbox property has a label and an internal name. Where to see both, how imports match them, and the other columns on the options table.",
     type: "tip",
@@ -3762,6 +3764,8 @@ var ARTICLES = [
   },
   {
     slug: "unique-value-properties",
+    draft: true,
+    mergedInto: 'dropdown-vs-multiple-checkboxes',
     title: "Make a custom property require unique values, and use it as an ID",
     excerpt: "How HubSpot's Require unique values rule works, the 10-property limit shown in settings, and how unique properties work in imports and the API.",
     type: "tip",
@@ -5363,6 +5367,8 @@ var ARTICLES = [
   },
   {
     slug: "url-property-clickable-link",
+    draft: true,
+    mergedInto: 'dropdown-vs-multiple-checkboxes',
     title: "Make a property a clickable link with the URL field type",
     excerpt: "HubSpot's URL field type for properties that should be clickable links, and how it compares to text fields.",
     type: "tip",
@@ -5523,6 +5529,8 @@ var ARTICLES = [
   },
   {
     slug: "contact-local-time-zone",
+    draft: true,
+    mergedInto: 'dropdown-vs-multiple-checkboxes',
     title: "See a contact's time zone before you call",
     excerpt: "HubSpot's Time zone and IP time zone contact properties, how each is set, and the daylight saving catch.",
     type: "tip",
@@ -5571,19 +5579,20 @@ var ARTICLES = [
   },
   {
     slug: "dropdown-vs-multiple-checkboxes",
-    title: "Dropdown, radio or multiple checkboxes: picking an option field",
-    excerpt: "The difference between HubSpot's enumeration field types, which allow one value versus several, and how they look in forms.",
-    type: "tip",
+    title: "HubSpot property types: dropdown vs checkboxes, labels vs internal names, unique values, URL, Industry and Time zone",
+    excerpt: "Which field type to pick and how each maps to the properties API, option labels vs internal names for imports and integrations, option limits, unique value properties as identifiers, and the quirks of Industry and Time zone.",
+    type: "guide",
     problem: "How to",
     hubs: ["Smart CRM"],
     features: ["Properties"],
-    tier: "All tiers",
+    tier: "All plans",
     permissions: "Edit property settings",
-    verified: "2026-10-07",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 3,
+    minutes: 10,
     difficulty: "Beginner",
-    keywords: ["hubspot dropdown multiple values", "multiple checkboxes property hubspot", "radio select vs dropdown hubspot", "select multiple options property"]
+    keywords: ["hubspot dropdown multiple values", "multiple checkboxes property hubspot", "radio select vs dropdown hubspot", "select multiple options property"],
+    validated: "2026-11-15 23:40 ET",
   },
   {
     slug: "follow-up-task-prompt",
@@ -6853,6 +6862,8 @@ var ARTICLES = [
   },
   {
     slug: "industry-property-options",
+    draft: true,
+    mergedInto: 'dropdown-vs-multiple-checkboxes',
     title: "Edit or add options to the Industry property",
     excerpt: "What you can and can't change on HubSpot's default company Industry property, and how to add your own options.",
     type: "tip",
