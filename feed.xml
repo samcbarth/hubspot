@@ -1412,16 +1412,6 @@
     <category>Contacts</category>
   </item>
   <item>
-    <title>Office 365 asks for admin approval when connecting to HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/office-365-admin-consent/</link>
-    <guid>https://hubspot.samcbarth.com/articles/office-365-admin-consent/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why Microsoft 365 tenants block HubSpot&#39;s inbox connection until an admin grants consent, and what the admin does next.</description>
-    <category>Sales Hub</category>
-    <category>Email</category>
-    <category>Integrations</category>
-  </item>
-  <item>
     <title>DocuSign with HubSpot: what it does and doesn&#39;t sync</title>
     <link>https://hubspot.samcbarth.com/articles/docusign-integration/</link>
     <guid>https://hubspot.samcbarth.com/articles/docusign-integration/</guid>
@@ -1802,15 +1792,6 @@
     <category>Products</category>
   </item>
   <item>
-    <title>Connect Microsoft 365 GCC High inboxes</title>
-    <link>https://hubspot.samcbarth.com/articles/office-365-gcc-high/</link>
-    <guid>https://hubspot.samcbarth.com/articles/office-365-gcc-high/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot supports for GCC High inboxes and the compliance caveat.</description>
-    <category>Sales Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Split a segment into random groups</title>
     <link>https://hubspot.samcbarth.com/articles/random-split-segment/</link>
     <guid>https://hubspot.samcbarth.com/articles/random-split-segment/</guid>
@@ -1867,15 +1848,6 @@
     <category>Sales extension</category>
   </item>
   <item>
-    <title>Use sales tools in the Office 365 add-in</title>
-    <link>https://hubspot.samcbarth.com/articles/office-365-add-in-sales-tools/</link>
-    <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-sales-tools/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s Office 365 add-in can insert while you compose in Outlook.</description>
-    <category>Sales Hub</category>
-    <category>Outlook</category>
-  </item>
-  <item>
     <title>Connect GoToWebinar to HubSpot</title>
     <link>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</link>
     <guid>https://hubspot.samcbarth.com/articles/gotowebinar-integration/</guid>
@@ -1917,11 +1889,11 @@
     <category>Views</category>
   </item>
   <item>
-    <title>Office 365 add-in won&#39;t install or connect</title>
+    <title>HubSpot with Outlook and Office 365: which add-in, connection errors, admin consent and GCC High</title>
     <link>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</link>
     <guid>https://hubspot.samcbarth.com/articles/office-365-add-in-troubleshoot/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s compatibility checks for the Sales Office 365 add-in.</description>
+    <description>Which HubSpot Sales add-in to use in classic and new Outlook, every Office 365 connection error with its fix, admin consent in Entra ID, grayed-out and login-loop problems, and GCC High.</description>
     <category>Sales Hub</category>
     <category>Outlook</category>
   </item>
