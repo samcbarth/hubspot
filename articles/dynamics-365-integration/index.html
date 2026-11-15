@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Sync Microsoft Dynamics 365 with HubSpot - HubSpot Field Notes</title>
-<meta name="description" content="What HubSpot's Dynamics 365 integration syncs, the permissions it needs, and how sales orders and tasks behave.">
+<title>HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors - HubSpot Field Notes</title>
+<meta name="description" content="What the Salesforce integration needs, connecting a sandbox, the inclusion segment, Sync Health and API allocation, every suspension cause with its fix, resyncing errors, and what Dynamics 365 syncs on which plan.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/dynamics-365-integration/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/dynamics-365-integration/">
-<meta property="og:title" content="Sync Microsoft Dynamics 365 with HubSpot">
-<meta property="og:description" content="What HubSpot's Dynamics 365 integration syncs, the permissions it needs, and how sales orders and tasks behave.">
+<meta property="og:title" content="HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors">
+<meta property="og:description" content="What the Salesforce integration needs, connecting a sandbox, the inclusion segment, Sync Health and API allocation, every suspension cause with its fix, resyncing errors, and what Dynamics 365 syncs on which plan.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/dynamics-365-integration/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Sync Microsoft Dynamics 365 with HubSpot",
-      "description": "What HubSpot's Dynamics 365 integration syncs, the permissions it needs, and how sales orders and tasks behave.",
+      "headline": "HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors",
+      "description": "What the Salesforce integration needs, connecting a sandbox, the inclusion segment, Sync Health and API allocation, every suspension cause with its fix, resyncing errors, and what Dynamics 365 syncs on which plan.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/dynamics-365-integration/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Sync Microsoft Dynamics 365 with HubSpot",
-      "totalTime": "PT5M",
+      "name": "HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors",
+      "totalTime": "PT12M",
       "step": [
-        {"@type": "HowToStep", "name": "Connect", "text": "Install the Microsoft Dynamics 365 app."},
-        {"@type": "HowToStep", "name": "Choose objects", "text": "Pick objects to sync."},
-        {"@type": "HowToStep", "name": "Set direction", "text": "Check permissions for two-way sync."},
-        {"@type": "HowToStep", "name": "Map fields", "text": "Custom mappings need Data Hub."}
+        {"@type": "HowToStep", "name": "Check requirements", "text": "HubSpot Professional or Enterprise and a Salesforce edition with API access."},
+        {"@type": "HowToStep", "name": "Install from the Marketplace", "text": "Tick the sandbox box when connecting a sandbox."},
+        {"@type": "HowToStep", "name": "Set an inclusion segment", "text": "Otherwise all contacts sync."},
+        {"@type": "HowToStep", "name": "Watch Sync Health", "text": "Set Allocated to HubSpot and check sync errors."},
+        {"@type": "HowToStep", "name": "Clear suspensions, then resync", "text": "Bulk resync up to 100 errors at a time."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Sync Microsoft Dynamics 365 with HubSpot", "item": "https://hubspot.samcbarth.com/articles/dynamics-365-integration/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors", "item": "https://hubspot.samcbarth.com/articles/dynamics-365-integration/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Data Hub</span><span class="badge">Sales Hub</span></div>
-      <h1>Sync Microsoft Dynamics 365 with HubSpot</h1>
-      <p class="dek">Two-way sync needs Read and Write on each Dynamics record type.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Data Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors</h1>
+      <p class="dek">When a CRM sync quietly stops, it is usually a suspension that still shows as connected. This guide covers setup, the fixes HubSpot lists for each suspension, and Dynamics 365.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Data Hub for custom field mappings</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>App Marketplace access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Salesforce: Professional or Enterprise. Dynamics 365: all plans (custom mappings need Data Hub)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or App Marketplace Access; a Salesforce admin integration user</dd></div>
+        <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,23 +103,125 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: two-way sync needs <strong>Read and Write</strong> permissions for each record type in Dynamics 365. Tasks must be associated with another record to sync. You can create Dynamics sales orders from deals or workflows; a line item price changed on the HubSpot deal won't sync to the created sales order. Custom field mappings need Data Hub.</p>
+          <p>The Salesforce integration needs a HubSpot Professional or Enterprise subscription, a Salesforce edition with API access (or Salesforce Professional, not Group), and an integration user who is a Salesforce admin with <strong>API Enabled</strong> and <strong>Modify All</strong> on the synced objects. Records do not sync on install. Set an inclusion segment first, then import or let triggers sync them. When sync stops, check for a <strong>suspension</strong> before anything else: a suspended integration can look connected while nothing moves. Microsoft Dynamics 365 connects from <strong>Data integration</strong> on any plan, two-way sync needs Read and Write in Dynamics, and custom field mappings need Data Hub.</p>
         </div>
 
-        <h2>1. Data integration</h2>
-        <p>Sync settings live under data integration in my demo portal.</p>
+        <h2>1. Before you connect Salesforce</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Requirement</th><th>Detail</th></tr></thead>
+            <tbody>
+              <tr><td>HubSpot</td><td>Professional or Enterprise in any hub, or Smart CRM Professional or Enterprise</td></tr>
+              <tr><td>Salesforce edition</td><td>Any edition with API access, Salesforce Professional, or Government Cloud. Group Edition is not supported.</td></tr>
+              <tr><td>Integration user</td><td>Salesforce system administrator with API Enabled, View Setup and Configuration, Modify All on each synced object, Download AppExchange Packages, Customize Application, and the Task Type field visible</td></tr>
+              <tr><td>Deals and the embed window</td><td>Also Modify Metadata</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>2. Install, and the sandbox option</h2>
+        <ol>
+          <li>Open the <strong>HubSpot Marketplace</strong> from the Marketplace icon and search for Salesforce.</li>
+          <li>Click <strong>Install</strong>. If you are connecting a Salesforce sandbox, tick <strong>Yes, this will connect to a sandbox</strong>.</li>
+          <li>Log in with the integration user's Salesforce credentials and finish the setup wizard.</li>
+        </ol>
+        <p>A HubSpot account connects to either a production org or a sandbox. Test mappings in a sandbox before production. If production is already connected, HubSpot's KB has separate steps for switching.</p>
+
+        <h2>3. Decide what syncs: the inclusion segment</h2>
+        <p>By default <strong>all contacts</strong> sync to Salesforce. An inclusion segment limits that to the contacts you choose, and it is much easier to set before the first sync than to clean up after. Contacts outside the segment stay in HubSpot only.</p>
+        <p>Salesforce has both leads and contacts, and HubSpot has contacts. HubSpot creates new records in Salesforce as leads or contacts according to your settings. If a lead field and a contact field share an internal name, the data syncs to both. Map deliberately and check fields with matching names on both objects.</p>
+        <p>Nothing syncs on install. Records sync when they are imported from Salesforce or when an automatic sync trigger fires, such as a change to a mapped property. A single contact sync can use up to four Salesforce API calls.</p>
+
+        <h2>4. Watch the sync: Connected Apps and Sync Health</h2>
+        <p><strong>Connected Apps</strong> flags integrations that need attention (1) above the list of installed apps (2). My demo portal shows three apps with expired connections; Salesforce is not installed there.</p>
+        <figure class="shot"><a href="connected.webp"><img src="connected.webp" alt="Connected Apps page with a Needs attention panel showing disconnected apps and the My Apps list" width="800" height="372" loading="lazy"></a><figcaption>Needs attention (1) and installed apps (2).</figcaption></figure>
+        <p>In the Salesforce app settings, the <strong>Sync Health</strong> tab has two sections that matter:</p>
+        <ul>
+          <li><strong>API call use</strong>: how many Salesforce API calls the integration used, and the <strong>Allocated to HubSpot</strong> number you can edit so HubSpot never eats the whole org's daily limit.</li>
+          <li><strong>Sync errors</strong>, grouped as associations, custom code, duplicates, permissions, picklists, property mappings, property values, and other. Error notifications can be instant, daily or weekly.</li>
+        </ul>
+
+        <h2>5. Suspensions: fix these first</h2>
+        <p>A suspended integration can still appear connected while it cannot read Salesforce data, so records stop syncing and campaign data goes missing. Turn on suspension email notifications. HubSpot's list of causes:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Suspension</th><th>Fix</th></tr></thead>
+            <tbody>
+              <tr><td>Salesforce organization API limit exceeded</td><td>Set the API call allocation in HubSpot. During a migration, Salesforce support can raise the limit temporarily. Sync usually resumes when the limit resets.</td></tr>
+              <tr><td>HubSpot API limit exceeded</td><td>Raise <strong>Allocated to HubSpot</strong> if Salesforce has spare capacity. It clears automatically.</td></tr>
+              <tr><td>API access disabled</td><td>Give the integration user API Enabled, then re-enter its credentials.</td></tr>
+              <tr><td>Object or field permissions missing</td><td>Read and Edit on the object or field, including objects and fields related by lookup.</td></tr>
+              <tr><td>Organization locked</td><td>Your Salesforce admin unlocks the org.</td></tr>
+              <tr><td>Storage limits exceeded</td><td>Free up Salesforce storage, for example by bulk deleting HubSpot-created records you do not need.</td></tr>
+              <tr><td>Organization unavailable or server error</td><td>Check Salesforce Status, then <strong>Clear Suspension</strong>.</td></tr>
+              <tr><td>Missing field mappings or unknown error</td><td>Clear Suspension. If it persists, contact HubSpot support.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>6. Resync records after errors</h2>
+        <ul>
+          <li><strong>Up to 100 errors</strong>: bulk resync from the Sync errors section.</li>
+          <li><strong>More than that</strong>: import the records from Salesforce, or update a mapped property on them so they sync again.</li>
+          <li><strong>One record</strong>: the <strong>Salesforce sync</strong> card on the record, <strong>Actions, Resync</strong>, after checking it is in the inclusion segment. If the integration was installed after October 7, 2025, an admin has to add that card to the record sidebar first.</li>
+        </ul>
+        <p>Fix the cause before resyncing. A resync against an unresolved suspension or permission gap fails the same way.</p>
+
+        <h2>7. Microsoft Dynamics 365</h2>
+        <p>Dynamics connects through <strong>Data Management, Data integration</strong>: <strong>Sync from apps</strong> (1) starts it and the <strong>App syncs</strong> tab (2) shows its status.</p>
         <figure class="shot"><a href="integration.webp"><img src="integration.webp" alt="Data integration page with Sync from apps card and App syncs tab" width="738" height="780" loading="lazy"></a><figcaption>Sync from apps (1) and App syncs (2).</figcaption></figure>
-        <h2>2. Plan first</h2>
-        <p>Decide which system owns each field before turning on two-way sync.</p>
-        <h2>3. Related</h2>
-        <p><a href="../data-sync-field-mappings/">Field mappings</a>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>HubSpot</th><th>Dynamics 365</th></tr></thead>
+            <tbody>
+              <tr><td>Company</td><td>Account</td></tr>
+              <tr><td>Contact</td><td>Contact and Lead</td></tr>
+              <tr><td>Deal</td><td>Opportunity</td></tr>
+              <tr><td>Product</td><td>Bundles and Products</td></tr>
+              <tr><td>Meetings, notes, tasks, emails, calls</td><td>Appointments, Notes, Tasks, Emails, Phone calls</td></tr>
+              <tr><td>Invoice, Order</td><td>Invoice, Sales orders</td></tr>
+              <tr><td>Custom objects</td><td>Entities</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>Installing needs Super Admin or App Marketplace Access in HubSpot. In Dynamics you need Read on the records, and Read and Write on each record type for two-way sync.</li>
+          <li>The integration itself is on all plans. <strong>Custom field mappings need Data Hub</strong>, and creating Dynamics sales orders from workflows needs Professional or Enterprise.</li>
+          <li>A task must be associated with another record to sync from HubSpot. Tasks on a Dynamics Lead only sync one way, Dynamics to HubSpot.</li>
+          <li>You can create Dynamics sales orders from a deal or a workflow, but changing a line item price on the HubSpot deal afterwards does not update the sales order.</li>
+        </ul>
+        <p>Before you turn on two-way sync for either CRM, decide which system owns each field. See <a href="../manage-duplicates-tool/">duplicates and merging</a> for cleaning up after.</p>
+
+        <h2>8. What is changing for 2027</h2>
+        <ul>
+          <li><strong>App syncs live with imports.</strong> Data integration puts Dynamics and other app syncs next to file imports under <strong>Monitor your imports &amp; syncs</strong>. See <a href="../import-to-static-segment/">the imports guide</a>.</li>
+          <li><strong>The Salesforce sync card is opt-in for newer installs.</strong> Since October 7, 2025, new installs need an admin to add the card to record sidebars, so users cannot resync records until someone does.</li>
+          <li><strong>Share the Salesforce API budget.</strong> Each Salesforce contact sync can cost up to four calls. Review <strong>Allocated to HubSpot</strong> whenever another integration starts using the same Salesforce org's API limit.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>The integration says connected but nothing is syncing.</h3>
+        <p>Look for a suspension in the Salesforce app settings. A suspended integration can still show as connected. Fix the cause, click Clear Suspension, then resync the errors.</p>
+        <h3>Why did every HubSpot contact go to Salesforce?</h3>
+        <p>All contacts sync by default. Set an inclusion segment to limit it.</p>
+        <h3>Can I connect a Salesforce sandbox?</h3>
+        <p>Yes. Tick <strong>Yes, this will connect to a sandbox</strong> when installing. A HubSpot account connects to either a sandbox or production.</p>
+        <h3>Can I map custom fields to Dynamics without Data Hub?</h3>
+        <p>No. The default mappings are included, custom ones need a Data Hub subscription.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/hubspot-marketing-integration-with-dynamics-365-crm/50841">HubSpot Community question: HubSpot Marketing integration with Dynamics 365 CRM</a></li>
+          <li><a href="https://knowledge.hubspot.com/salesforce/install-the-hubspot-salesforce-integration">HubSpot Knowledge Base: Connect HubSpot and Salesforce</a></li>
+          <li><a href="https://knowledge.hubspot.com/salesforce/how-do-i-connect-my-salesforce-sandbox-to-hubspot">HubSpot Knowledge Base: Connect your Salesforce sandbox to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/sync-salesforce-leads-and-contacts-to-hubspot">HubSpot Knowledge Base: Sync Salesforce leads and contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/salesforce/resolve-salesforce-integration-sync-errors">HubSpot Knowledge Base: Manage Salesforce integration API calls and sync errors</a></li>
+          <li><a href="https://knowledge.hubspot.com/salesforce/resolve-salesforce-integration-suspension-errors">HubSpot Knowledge Base: Resolve Salesforce integration suspension errors</a></li>
+          <li><a href="https://knowledge.hubspot.com/salesforce/import-salesforce-records">HubSpot Knowledge Base: Import and sync Salesforce records</a></li>
           <li><a href="https://knowledge.hubspot.com/integrations/connect-hubspot-and-microsoft-dynamics-365">HubSpot Knowledge Base: Connect HubSpot and Microsoft Dynamics 365</a></li>
+          <li><a href="https://community.hubspot.com/t/hubspot-x-salesforce-integration-lead-creation/130822">HubSpot Community: HubSpot x Salesforce integration, lead creation</a></li>
+          <li><a href="https://community.hubspot.com/t/hubspot-marketing-integration-with-dynamics-365-crm/50841">HubSpot Community: HubSpot Marketing integration with Dynamics 365 CRM</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

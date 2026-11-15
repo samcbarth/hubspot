@@ -438,16 +438,6 @@
     <category>Forms</category>
   </item>
   <item>
-    <title>Resync Salesforce records after the integration stops syncing</title>
-    <link>https://hubspot.samcbarth.com/articles/salesforce-sync-errors-resync/</link>
-    <guid>https://hubspot.samcbarth.com/articles/salesforce-sync-errors-resync/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot shows Salesforce sync errors, the 100-at-a-time resync limit, resyncing a single record, and what to do about integration suspensions.</description>
-    <category>Smart CRM</category>
-    <category>Sales Hub</category>
-    <category>Integrations</category>
-  </item>
-  <item>
     <title>AI Referrals: how HubSpot counts traffic from ChatGPT, Claude and other assistants</title>
     <link>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</link>
     <guid>https://hubspot.samcbarth.com/articles/ai-referrals-traffic-source/</guid>
@@ -1061,11 +1051,11 @@
     <category>API</category>
   </item>
   <item>
-    <title>Sync Microsoft Dynamics 365 with HubSpot</title>
+    <title>HubSpot Salesforce and Dynamics 365 sync: requirements, inclusion segments, suspensions and resyncing errors</title>
     <link>https://hubspot.samcbarth.com/articles/dynamics-365-integration/</link>
     <guid>https://hubspot.samcbarth.com/articles/dynamics-365-integration/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What HubSpot&#39;s Dynamics 365 integration syncs, the permissions it needs, and how sales orders and tasks behave.</description>
+    <description>What the Salesforce integration needs, connecting a sandbox, the inclusion segment, Sync Health and API allocation, every suspension cause with its fix, resyncing errors, and what Dynamics 365 syncs on which plan.</description>
     <category>Data Hub</category>
     <category>Sales Hub</category>
     <category>Integrations</category>
@@ -1642,15 +1632,6 @@
     <category>Privacy</category>
   </item>
   <item>
-    <title>How Salesforce leads and contacts sync</title>
-    <link>https://hubspot.samcbarth.com/articles/sync-salesforce-leads/</link>
-    <guid>https://hubspot.samcbarth.com/articles/sync-salesforce-leads/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s rules for syncing to Salesforce leads and contacts.</description>
-    <category>Smart CRM</category>
-    <category>Salesforce</category>
-  </item>
-  <item>
     <title>Add collaborators to a deal</title>
     <link>https://hubspot.samcbarth.com/articles/deal-collaborators/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-collaborators/</guid>
@@ -1694,15 +1675,6 @@
     <description>How HubSpot dynamic sequences combine automated emails with tasks for contacts who engage.</description>
     <category>Sales Hub</category>
     <category>Sequences</category>
-  </item>
-  <item>
-    <title>Connect a Salesforce sandbox</title>
-    <link>https://hubspot.samcbarth.com/articles/salesforce-sandbox-connect/</link>
-    <guid>https://hubspot.samcbarth.com/articles/salesforce-sandbox-connect/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to point HubSpot&#39;s Salesforce integration at a sandbox.</description>
-    <category>Smart CRM</category>
-    <category>Salesforce</category>
   </item>
   <item>
     <title>Use the HubSpot connector for Claude</title>
