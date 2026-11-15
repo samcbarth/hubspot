@@ -790,17 +790,6 @@
     <category>Reports</category>
   </item>
   <item>
-    <title>Add Google Tag Manager to HubSpot pages</title>
-    <link>https://hubspot.samcbarth.com/articles/add-google-tag-manager/</link>
-    <guid>https://hubspot.samcbarth.com/articles/add-google-tag-manager/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot&#39;s Google Tag Manager integration lives, what it covers, and when to add the container code by hand instead.</description>
-    <category>Marketing Hub</category>
-    <category>Content Hub</category>
-    <category>Tracking code</category>
-    <category>Website</category>
-  </item>
-  <item>
     <title>HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic</title>
     <link>https://hubspot.samcbarth.com/articles/form-file-upload-field/</link>
     <guid>https://hubspot.samcbarth.com/articles/form-file-upload-field/</guid>
@@ -845,16 +834,6 @@
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
     <description>How HubSpot&#39;s social tool publishes Instagram carousel posts of up to 10 media files, and the post types it supports.</description>
     <category>Marketing Hub</category>
-    <category>Integrations</category>
-  </item>
-  <item>
-    <title>Install the Meta pixel, Google tag or LinkedIn Insight Tag through HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/install-ad-pixels/</link>
-    <guid>https://hubspot.samcbarth.com/articles/install-ad-pixels/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot installs ad network pixels on pages with the tracking code, the account connection it needs, and who can install them.</description>
-    <category>Marketing Hub</category>
-    <category>Tracking code</category>
     <category>Integrations</category>
   </item>
   <item>
@@ -1059,11 +1038,11 @@
     <category>Contacts</category>
   </item>
   <item>
-    <title>Install the HubSpot tracking code on Wix</title>
+    <title>Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels</title>
     <link>https://hubspot.samcbarth.com/articles/install-tracking-code-wix/</link>
     <guid>https://hubspot.samcbarth.com/articles/install-tracking-code-wix/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s steps for adding the tracking code to a Wix site with Custom Code, where to place it, and live chat on Wix.</description>
+    <description>Where to get the HubSpot tracking code, how to install it on any site or Wix, how to check it is working (and spot HubSpot on other sites), plus Google Tag Manager, GA4 and ad pixels on HubSpot pages.</description>
     <category>Marketing Hub</category>
     <category>Tracking code</category>
     <category>Website</category>
@@ -1717,16 +1696,6 @@
     <category>Sales Hub</category>
     <category>Properties</category>
     <category>Deals</category>
-  </item>
-  <item>
-    <title>How to tell if a website uses HubSpot: check for the tracking code</title>
-    <link>https://hubspot.samcbarth.com/articles/detect-hubspot-tracking-code/</link>
-    <guid>https://hubspot.samcbarth.com/articles/detect-hubspot-tracking-code/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s tracking code is a script from js.hs-scripts.com with the account&#39;s Hub ID. How to check one site by hand, validate your own, and scan a list of domains.</description>
-    <category>Smart CRM</category>
-    <category>Marketing Hub</category>
-    <category>Tracking code</category>
   </item>
   <item>
     <title>How to close out stale HubSpot deals safely: check activity first, then use a reason</title>

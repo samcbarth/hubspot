@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Install the HubSpot tracking code on Wix - HubSpot Field Notes</title>
-<meta name="description" content="HubSpot's steps for adding the tracking code to a Wix site with Custom Code, where to place it, and live chat on Wix.">
+<title>Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels - HubSpot Field Notes</title>
+<meta name="description" content="Where to get the HubSpot tracking code, how to install it on any site or Wix, how to check it is working (and spot HubSpot on other sites), plus Google Tag Manager, GA4 and ad pixels on HubSpot pages.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/install-tracking-code-wix/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/install-tracking-code-wix/">
-<meta property="og:title" content="Install the HubSpot tracking code on Wix">
-<meta property="og:description" content="HubSpot's steps for adding the tracking code to a Wix site with Custom Code, where to place it, and live chat on Wix.">
+<meta property="og:title" content="Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels">
+<meta property="og:description" content="Where to get the HubSpot tracking code, how to install it on any site or Wix, how to check it is working (and spot HubSpot on other sites), plus Google Tag Manager, GA4 and ad pixels on HubSpot pages.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/install-tracking-code-wix/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Install the HubSpot tracking code on Wix",
-      "description": "HubSpot's steps for adding the tracking code to a Wix site with Custom Code, where to place it, and live chat on Wix.",
+      "headline": "Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels",
+      "description": "Where to get the HubSpot tracking code, how to install it on any site or Wix, how to check it is working (and spot HubSpot on other sites), plus Google Tag Manager, GA4 and ad pixels on HubSpot pages.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/install-tracking-code-wix/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Install the HubSpot tracking code on Wix",
-      "totalTime": "PT3M",
+      "name": "Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Copy the code", "text": "From HubSpot tracking code settings."},
-        {"@type": "HowToStep", "name": "Wix settings", "text": "Advanced, Custom Code, Add Custom Code."},
-        {"@type": "HowToStep", "name": "Paste", "text": "Name it HubSpot Tracking Code."},
-        {"@type": "HowToStep", "name": "Placement", "text": "All pages, load on each new page, Body - end."}
+        {"@type": "HowToStep", "name": "Copy the code", "text": "Settings, Tracking and Analytics, Tracking Code."},
+        {"@type": "HowToStep", "name": "Paste before closing body", "text": "On every page, usually in the footer template."},
+        {"@type": "HowToStep", "name": "Register the domain", "text": "Advanced Tracking, Additional site domains."},
+        {"@type": "HowToStep", "name": "Check it loads", "text": "Page source or Network tab, search for your Hub ID .js."},
+        {"@type": "HowToStep", "name": "Add GTM and pixels", "text": "Pages integrations and the ads tool."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Install the HubSpot tracking code on Wix", "item": "https://hubspot.samcbarth.com/articles/install-tracking-code-wix/" }
+        { "@type": "ListItem", "position": 2, "name": "Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels", "item": "https://hubspot.samcbarth.com/articles/install-tracking-code-wix/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Tracking+code">Tracking code</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>Install the HubSpot tracking code on Wix</h1>
-      <p class="dek">Custom Code, all pages, Body - end.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
+      <h1>Install and check the HubSpot tracking code: any site, Wix, WordPress, Google Tag Manager and ad pixels</h1>
+      <p class="dek">One script tag named after your Hub ID. How to install it, prove it loads, and add GTM and ad pixels without breaking consent.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Wix site admin; HubSpot settings access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (GTM integration needs Marketing Hub Professional or Content Hub Starter)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Website settings access; Ads Publish for pixels</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,23 +103,93 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB for Wix: in the site dashboard go to <strong>Settings &gt; Advanced &gt; Custom Code</strong>, click <strong>Add Custom Code</strong>, paste the tracking code, apply it to <strong>All pages</strong> with <strong>Load code on each new page</strong>, and place it in <strong>Body - end</strong>. That also loads chatflows on every page.</p>
+          <p>Copy the tracking code from <strong>Settings, Tracking &amp; Analytics, Tracking Code</strong> and paste it before the closing <code>&lt;/body&gt;</code> tag on every page of any site not hosted on HubSpot (HubSpot pages have it already). It is one script tag that loads a file named after your Hub ID from <code>hs-scripts.com</code>, which is also how you check a site: view the source and search for <code>YOUR_ID.js</code>. Google Tag Manager and GA4 can run on HubSpot-hosted pages from <strong>Settings, Content, Pages, Integrations</strong>. Ad pixels install from the ads tool after you connect the ad account, and load wherever the tracking code does.</p>
         </div>
 
-        <h2>1. Your code</h2>
-        <p>Tracking code settings in my demo portal, Hub ID blurred.</p>
+        <h2>1. Get the code</h2>
+        <p>Open <strong>Settings, Tracking &amp; Analytics, Tracking Code</strong>. The embed code (1) is for your account, and <strong>Validate your tracking code</strong> (2) tests a page. The Hub ID is blurred here.</p>
         <figure class="shot"><a href="tracking-code.webp"><img src="tracking-code.webp" alt="Tracking code tab showing the embed code and Validate your tracking code" width="800" height="613" loading="lazy"></a><figcaption>The embed code (1) and the Validate your tracking code box (2).</figcaption></figure>
-        <h2>2. Check it works</h2>
-        <p>See <a href="../detect-hubspot-tracking-code/">checking the tracking code</a>.</p>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-wordpress-plugin/">WordPress plugin</a>.</p>
+        <p>It is a single script tag. My demo portal's, hosted in the na2 data center, looks like this:</p>
+<pre><code>&lt;!-- Start of HubSpot Embed Code --&gt;
+&lt;script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/HUB_ID.js"&gt;&lt;/script&gt;
+&lt;!-- End of HubSpot Embed Code --&gt;</code></pre>
+        <p>Accounts in the default data center load from <code>js.hs-scripts.com</code>. Use the exact code your account shows rather than editing the host by hand.</p>
+
+        <h2>2. Install it</h2>
+        <ul>
+          <li><strong>HubSpot-hosted pages:</strong> nothing to do, the code is already on them.</li>
+          <li><strong>Any site:</strong> paste it before <code>&lt;/body&gt;</code> on every page, usually in the site's footer template so new pages get it too.</li>
+          <li><strong>Wix:</strong> in the site dashboard, <strong>Settings, Advanced, Custom Code, Add Custom Code</strong>. Paste the code, apply it to <strong>All pages</strong> with <strong>Load code on each new page</strong>, and place it in <strong>Body - end</strong>. That also loads chatflows on every page.</li>
+          <li><strong>WordPress:</strong> the HubSpot plugin adds it. See <a href="../hubspot-wordpress-plugin/">the WordPress plugin</a>.</li>
+          <li><strong>Tag manager:</strong> loading it through Google Tag Manager works, but hides it from the page source (section 3).</li>
+        </ul>
+        <p>Then add the site's domain to <strong>Additional site domains</strong> in Advanced Tracking, or form submissions from it can be flagged as spam. See <a href="../form-file-upload-field/">forms and spam</a>.</p>
+
+        <h2>3. Check that it is working</h2>
+        <ol>
+          <li>Open a page, right-click, <strong>View page source</strong>, and search for your Hub ID followed by <code>.js</code>. You may see "HubSpot Embed Code" or "Async HubSpot Analytics Code"; either means it is installed.</li>
+          <li>To confirm it loads, open the browser's Network tab, refresh, and look for the Hub ID file. A 200 or 304 status means it loaded.</li>
+          <li>In <strong>Validate your tracking code</strong>, enter the full URL with http or https. HubSpot tests the page and emails the result. Some sites cannot be tested this way and give a false failure, so fall back to the manual check.</li>
+        </ol>
+        <p>If the code is loaded through a tag manager, it will not be in the page source. Check the Network tab instead.</p>
+
+        <h2>4. Find which companies run HubSpot</h2>
+        <p>The same check works on other sites, for example to see which companies in your CRM use HubSpot. Fetch each homepage and search the HTML:</p>
+<pre><code>hs-scripts.com/NUMBER.js   tracking code; NUMBER is the account's Hub ID
+hsforms.net                embedded HubSpot forms; does not prove tracking</code></pre>
+        <ul>
+          <li>Keep "forms only" and "tracking code" as separate results. They are different signals.</li>
+          <li>Sites that load tracking through a tag manager will not show it in a plain HTML fetch. Treat a miss as unknown, not "no HubSpot".</li>
+          <li>Write results to a property you control and review a sample before writing in bulk.</li>
+          <li>Fetch one page per site, pace your requests, and identify your script in its user agent.</li>
+        </ul>
+        <p>The number in the file name is the portal ID. See <a href="../find-hubspot-portal-id/">finding a portal ID</a>.</p>
+
+        <h2>5. Google Tag Manager and GA4 on HubSpot pages</h2>
+        <p>In <strong>Settings, Content, Pages, Integrations</strong> (1), tick <strong>Integrate with Google Tag Manager</strong> (2), or Google Analytics 4. AdRoll is listed there too.</p>
+        <figure class="shot"><a href="integrations.webp"><img src="integrations.webp" alt="Pages settings Integrations tab with Integrate with Google Analytics 4, Google Tag Manager and AdRoll checkboxes" width="800" height="600" loading="lazy"></a><figcaption>Integrations (1) and Google Tag Manager (2).</figcaption></figure>
+        <ul>
+          <li>The tag manager then runs on all HubSpot-hosted content: landing pages, website pages, blog and knowledge base.</li>
+          <li>External sites need GTM added separately.</li>
+          <li>To run it on only some HubSpot domains, add the GTM code manually instead.</li>
+          <li>It needs Marketing Hub Professional or Enterprise, or Content Hub Starter or higher.</li>
+          <li>If your cookie banner requires opt-in, these integrations only track visitors who opted in. See <a href="../google-consent-mode/">cookies and Consent Mode</a>.</li>
+        </ul>
+
+        <h2>6. Ad pixels</h2>
+        <p>Pixels and tags such as the Facebook pixel, Google conversion tag and LinkedIn Insight Tag install from the ads tool. Connect the ad account first (1):</p>
+        <figure class="shot"><a href="ads.webp"><img src="ads.webp" alt="Ads settings with Connect ad network" width="800" height="554" loading="lazy"></a><figcaption>Connect ad network (1) and one of the supported networks (2).</figcaption></figure>
+        <ul>
+          <li>Once installed, a pixel loads alongside the tracking code on every HubSpot-hosted or external page that has it.</li>
+          <li>Only the user who connected the Facebook Ads account can install the Facebook pixel. Installers need the Ads Publish permission.</li>
+          <li>Pixels follow your cookie banner settings.</li>
+        </ul>
+        <p>See <a href="../facebook-lead-ads-sync/">ads lead syncing and audiences</a>.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Data center hosts.</strong> Tracking code hosts follow your account's data center, such as <code>js-na2.hs-scripts.com</code>. A detection script that only looks for <code>js.hs-scripts.com</code> misses those accounts; search for <code>hs-scripts.com/</code> instead.</li>
+          <li><strong>Consent decides what loads.</strong> With an opt-in banner, GTM, GA4 and pixels added through HubSpot only track visitors who opt in, and Google's Consent Mode affects what Google can measure in the EEA, EU and UK.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Do I need the tracking code on HubSpot pages?</h3>
+        <p>No. HubSpot-hosted pages include it already.</p>
+        <h3>The validator says my code is missing, but I installed it.</h3>
+        <p>Some sites cannot be tested by the validator. Check the page source or the Network tab for your Hub ID file.</p>
+        <h3>Can I see if a competitor or prospect uses HubSpot?</h3>
+        <p>View their page source and search for <code>hs-scripts.com/</code>. A miss can still mean the code is loaded through a tag manager.</p>
+        <h3>Why do pixels not fire for some visitors?</h3>
+        <p>With an opt-in cookie banner, pixels only load for visitors who accept.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/how-to-implement-hubspot-on-a-wix-site/2589">HubSpot Community question: How to implement Hubspot on a Wix site?</a></li>
           <li><a href="https://knowledge.hubspot.com/reports/install-the-hubspot-tracking-code">HubSpot Knowledge Base: Install the HubSpot tracking code</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/how-do-i-know-if-my-hubspot-tracking-code-is-working">HubSpot Knowledge Base: Troubleshoot the HubSpot tracking code</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/add-the-google-tag-manager-code-to-hubspot-content">HubSpot Knowledge Base: Add the Google Tag Manager code to HubSpot content</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/install-pixels-from-external-ad-networks">HubSpot Knowledge Base: Install pixels from external ad networks</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
