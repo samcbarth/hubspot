@@ -17,10 +17,17 @@ const SITE = 'https://hubspot.samcbarth.com';
 const ARTICLES = require(path.join(ROOT, 'articles.js'));
 const TOPICS = fs.existsSync(path.join(ROOT, 'topics.js')) ? require(path.join(ROOT, 'topics.js')) : [];
 const published = ARTICLES.filter(a => !a.draft).sort((a, b) => b.published.localeCompare(a.published));
+// Homepage order: guides first, then everything else newest first.
+const fresh = a => String(a.validated || a.verified || a.published);
+const byGuideFirst = (a, b) => (a.type === 'guide' ? 0 : 1) - (b.type === 'guide' ? 0 : 1) || (a.type === 'guide' ? fresh(b).localeCompare(fresh(a)) : b.published.localeCompare(a.published));
+const CLUSTERS = fs.existsSync(path.join(ROOT, 'plans', 'clusters.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'plans', 'clusters.json'), 'utf8')) : [];
 const errors = [];
 const warnings = [];
 
 const read = p => fs.readFileSync(path.join(ROOT, p), 'utf8');
+// Content hashes for cache busting: pages reference assets/site.css?v=HASH so a changed file is never served stale.
+const ASSET_VER = Object.fromEntries(['assets/site.css', 'assets/site.js'].map(f => [f, require('crypto').createHash('sha1').update(fs.readFileSync(path.join(ROOT, f))).digest('hex').slice(0, 10)]));
+const versionAssets = html => html.replace(/(assets\/site\.(?:css|js))(?:\?v=[a-f0-9]+)?"/g, (m, f) => `${f}?v=${ASSET_VER[f]}"`);
 const write = (p, s) => fs.writeFileSync(path.join(ROOT, p), s);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -60,9 +67,9 @@ for (const a of ARTICLES) {
 
 /* ---------- partials ---------- */
 const partials = {
-  head: read('partials/head.html'),
+  head: versionAssets(read('partials/head.html')),
   header: read('partials/header.html'),
-  footer: read('partials/footer.html'),
+  footer: versionAssets(read('partials/footer.html')),
 };
 
 function pages() {
@@ -77,7 +84,7 @@ function pages() {
 
 function cardHTML(a, base) {
   const hubs = (a.hubs || []).slice(0, 2).map(h => `<span class="badge">${esc(h)}</span>`).join('');
-  return `<a class="card" href="${base}articles/${esc(a.slug)}/">` +
+  return `<a class="card${a.type === 'guide' ? ' card-guide' : ''}" href="${base}articles/${esc(a.slug)}/">` +
     `<div class="badges"><span class="badge badge-type">${a.type === 'tip' ? 'Quick tip' : 'Guide'}</span>` +
     `<span class="badge badge-problem">${esc(a.problem)}</span>${hubs}</div>` +
     `<h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p>` +
@@ -93,11 +100,56 @@ function topicsHTML() {
     if (!host || host.draft) { errors.push(`topics.js: "${t.title}" host ${t.host} is not published`); continue; }
     let s = sections.find(x => x.name === t.section);
     if (!s) sections.push(s = { name: t.section, items: [] });
-    s.items.push(`<li><a href="articles/${esc(t.host)}/">${esc(t.title)}</a></li>`);
+    s.items.push(`<li><a href="articles/${esc(t.host)}/">${esc(t.title)}</a>${host.type === 'guide' ? ' <span class="topic-guide">Guide</span>' : ''}</li>`);
   }
   return `<section class="topics" aria-labelledby="topics-h">\n<h2 id="topics-h">Browse by topic</h2>\n<div class="topic-grid">\n` +
     sections.map(s => `<div class="topic-group"><h3>${esc(s.name)}</h3><ul>${s.items.join('')}</ul></div>`).join('\n') +
     `\n</div>\n</section>`;
+}
+
+/* Featured guides slider: guides in build-priority order (plans/clusters.json). */
+function firstShot(slug) {
+  const p = path.join(ROOT, 'articles', slug, 'index.html');
+  if (!fs.existsSync(p)) return null;
+  const body = fs.readFileSync(p, 'utf8').split('<article class="prose">')[1] || '';
+  const m = body.match(/<img src="([^"]+\.(?:webp|png|jpe?g))" alt="([^"]*)" width="(\d+)" height="(\d+)"/);
+  return m ? { src: m[1], w: +m[3], h: +m[4] } : null;
+}
+function featuredHTML() {
+  const bySlug = Object.fromEntries(ARTICLES.map(a => [a.slug, a]));
+  const order = ['hubspot-api-rate-limits', ...CLUSTERS.map(c => c.host)];
+  const seen = new Set();
+  const picks = [];
+  for (const slug of order) {
+    const a = bySlug[slug];
+    if (!a || a.draft || a.type !== 'guide' || seen.has(slug)) continue;
+    seen.add(slug);
+    const shot = firstShot(slug);
+    if (!shot) continue;
+    picks.push({ a, shot });
+    if (picks.length >= 8) break;
+  }
+  if (picks.length < 2) return '';
+  const slides = picks.map(({ a, shot }, i) => {
+    const merged = ARTICLES.filter(x => x.mergedInto === a.slug).length;
+    return `<article class="slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${picks.length}">` +
+      `<div class="slide-text"><div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">${esc(a.problem)}</span></div>` +
+      `<h3><a href="articles/${esc(a.slug)}/">${esc(a.title)}</a></h3><p>${esc(a.excerpt)}</p>` +
+      `<div class="card-meta"><span>${esc(a.minutes)} min</span>${merged ? `<span>${merged + 1} notes in one guide</span>` : ''}<span>Validated ${esc(a.validated || a.verified)}</span></div>` +
+      `<a class="btn btn-primary slide-cta" href="articles/${esc(a.slug)}/" tabindex="-1">Read the guide</a></div>` +
+      `<a class="slide-shot" href="articles/${esc(a.slug)}/" tabindex="-1" aria-hidden="true"><img src="articles/${esc(a.slug)}/${esc(shot.src)}" alt="" width="${shot.w}" height="${shot.h}" loading="${i ? 'lazy' : 'eager'}"></a></article>`;
+  }).join('\n');
+  const dots = picks.map((_, i) => `<button type="button" class="slider-dot" aria-label="Show guide ${i + 1}"${i ? '' : ' aria-current="true"'}></button>`).join('');
+  return `<section class="featured" aria-labelledby="featured-h" data-slider>
+<div class="featured-head"><div><span class="eyebrow">Topic guides</span><h2 id="featured-h">Start with a full guide</h2></div>
+<div class="slider-controls"><button type="button" class="slider-btn" data-prev aria-label="Previous guide">&#8249;</button><button type="button" class="slider-btn" data-pause aria-label="Pause slideshow">&#10074;&#10074;</button><button type="button" class="slider-btn" data-next aria-label="Next guide">&#8250;</button></div></div>
+<div class="slider-track" tabindex="0" aria-label="Featured guides. Use the arrow keys to move.">
+<div class="slider-row">
+${slides}
+</div>
+</div>
+<div class="slider-dots">${dots}</div>
+</section>`;
 }
 
 function replaceBlock(html, name, content, file) {
@@ -115,6 +167,7 @@ for (const file of pages()) {
   const isDraft = file.startsWith('articles/') && (!art || art.draft);
   // Merge stubs carry a meta refresh + canonical to the host and no robots tag.
   if (art && art.mergedInto) { write(file, html); continue; }
+  html = versionAssets(html);
   const robots = isDraft || file === 'article-template.html' ? '<meta name="robots" content="noindex">\n' : '<meta name="robots" content="index, follow, max-image-preview:large">\n';
   html = html.replace(/<html lang="en" data-base="[^"]*">/, `<html lang="en" data-base="${base}">`);
   html = replaceBlock(html, 'head', robots + partials.head.replace(/\{\{base\}\}/g, base), file);
@@ -122,7 +175,8 @@ for (const file of pages()) {
   html = replaceBlock(html, 'footer', partials.footer.replace(/\{\{base\}\}/g, base), file);
   if (file === 'index.html') {
     html = replaceBlock(html, 'topics', topicsHTML(), file);
-    const cards = published.length ? published.map(a => cardHTML(a, '')).join('\n') : '<p class="empty">The first field notes are publishing now.</p>';
+    html = replaceBlock(html, 'featured', featuredHTML(), file);
+    const cards = published.length ? [...published].sort(byGuideFirst).map(a => cardHTML(a, '')).join('\n') : '<p class="empty">The first field notes are publishing now.</p>';
     html = replaceBlock(html, 'cards', cards, file);
   }
   write(file, html);

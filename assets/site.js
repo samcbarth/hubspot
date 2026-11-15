@@ -74,10 +74,16 @@
 
   /* ---------- Article cards ---------- */
   var ARTICLES = (window.ARTICLES || []).filter(function (a) { return !a.draft; });
+  // Guides first, then newest first (matches the static cards build.js writes).
+  ARTICLES.sort(function (a, b) {
+    var fresh = function (x) { return String(x.validated || x.verified || x.published); };
+    return ((a.type === 'guide' ? 0 : 1) - (b.type === 'guide' ? 0 : 1)) ||
+      (a.type === 'guide' ? fresh(b).localeCompare(fresh(a)) : String(b.published).localeCompare(String(a.published)));
+  });
 
   function cardHTML(a) {
     var hubs = (a.hubs || []).slice(0, 2).map(function (h) { return '<span class="badge">' + esc(h) + '</span>'; }).join('');
-    return '<a class="card" href="' + base + 'articles/' + esc(a.slug) + '/">' +
+    return '<a class="card' + (a.type === 'guide' ? ' card-guide' : '') + '" href="' + base + 'articles/' + esc(a.slug) + '/">' +
       '<div class="badges"><span class="badge badge-type">' + (a.type === 'tip' ? 'Quick tip' : 'Guide') + '</span>' +
       '<span class="badge badge-problem">' + esc(a.problem) + '</span>' + hubs + '</div>' +
       '<h3>' + esc(a.title) + '</h3><p>' + esc(a.excerpt) + '</p>' +
@@ -87,7 +93,7 @@
   /* ---------- Home: search + filters ---------- */
   var cardsEl = $('#cards');
   if (cardsEl && $('#search')) {
-    var search = $('#search'), fHub = $('#f-hub'), fFeature = $('#f-feature'), fProblem = $('#f-problem'), countEl = $('#result-count');
+    var search = $('#search'), fHub = $('#f-hub'), fFeature = $('#f-feature'), fProblem = $('#f-problem'), fType = $('#f-type'), countEl = $('#result-count');
 
     function fill(select, values) {
       values.sort().forEach(function (v) {
@@ -108,6 +114,7 @@
     if (params.get('hub')) fHub.value = params.get('hub');
     if (params.get('feature')) fFeature.value = params.get('feature');
     if (params.get('problem')) fProblem.value = params.get('problem');
+    if (fType && params.get('type')) fType.value = params.get('type');
 
     function haystack(a) {
       return [a.title, a.excerpt, a.problem, a.tier, (a.hubs || []).join(' '), (a.features || []).join(' '), (a.keywords || []).join(' ')].join(' ').toLowerCase();
@@ -118,6 +125,7 @@
         if (fHub.value && (a.hubs || []).indexOf(fHub.value) < 0) return false;
         if (fFeature.value && (a.features || []).indexOf(fFeature.value) < 0) return false;
         if (fProblem.value && a.problem !== fProblem.value) return false;
+        if (fType && fType.value && a.type !== fType.value) return false;
         var h = haystack(a);
         return terms.every(function (t) { return h.indexOf(t) >= 0; });
       });
@@ -128,11 +136,78 @@
       if (fHub.value) q.set('hub', fHub.value);
       if (fFeature.value) q.set('feature', fFeature.value);
       if (fProblem.value) q.set('problem', fProblem.value);
+      if (fType && fType.value) q.set('type', fType.value);
       var qs = q.toString();
       history.replaceState(null, '', qs ? '?' + qs : location.pathname);
     }
-    [search, fHub, fFeature, fProblem].forEach(function (el) { el.addEventListener('input', render); });
+    [search, fHub, fFeature, fProblem, fType].filter(Boolean).forEach(function (el) { el.addEventListener('input', render); });
     render();
+  }
+
+
+  /* ---------- Home: featured guides slider ---------- */
+  var slider = $('[data-slider]');
+  if (slider) {
+    var strack = $('.slider-track', slider);
+    var row = $('.slider-row', slider);
+    var slides = $$('.slide', slider);
+    var dots = $$('.slider-dot', slider);
+    var pauseBtn = $('[data-pause]', slider);
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = 0, timer = null, userPaused = reduced, hovering = false;
+
+    function go(i) {
+      current = (i + slides.length) % slides.length;
+      row.style.transform = 'translateX(' + (-100 * current) + '%)';
+      mark();
+    }
+    function mark() {
+      dots.forEach(function (d, i) { if (i === current) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+      slides.forEach(function (sl, i) {
+        var on = i === current;
+        $$('a', sl).forEach(function (a) { a.tabIndex = on && !a.classList.contains('slide-shot') ? 0 : -1; });
+      });
+    }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() {
+      stop();
+      if (userPaused || hovering || document.hidden) return;
+      timer = setInterval(function () { go(current + 1); }, 7000);
+    }
+    function setPaused(p) {
+      userPaused = p;
+      if (pauseBtn) {
+        pauseBtn.setAttribute('aria-label', p ? 'Play slideshow' : 'Pause slideshow');
+        pauseBtn.innerHTML = p ? '&#9654;' : '&#10074;&#10074;';
+      }
+      start();
+    }
+
+    // Swipe on touch screens: a horizontal drag of 40px or more changes slide.
+    var sx = null, sy = null;
+    strack.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    strack.addEventListener('touchend', function (e) {
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      sx = sy = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { go(current + (dx < 0 ? 1 : -1)); start(); }
+    }, { passive: true });
+
+    $('[data-prev]', slider).addEventListener('click', function () { go(current - 1); start(); });
+    $('[data-next]', slider).addEventListener('click', function () { go(current + 1); start(); });
+    if (pauseBtn) pauseBtn.addEventListener('click', function () { setPaused(!userPaused); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); start(); }); });
+    strack.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); start(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); start(); }
+    });
+    slider.addEventListener('mouseenter', function () { hovering = true; stop(); });
+    slider.addEventListener('mouseleave', function () { hovering = false; start(); });
+    slider.addEventListener('focusin', function () { hovering = true; stop(); });
+    slider.addEventListener('focusout', function (e) { if (!slider.contains(e.relatedTarget)) { hovering = false; start(); } });
+    document.addEventListener('visibilitychange', start);
+    mark();
+    if (reduced) setPaused(true); else start();
   }
 
   /* ---------- Article page ---------- */

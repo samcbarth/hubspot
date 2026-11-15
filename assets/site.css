@@ -367,3 +367,66 @@ button, input, select { font: inherit; color: inherit; }
 /* Code blocks written directly in guide prose */
 .prose pre { background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; padding: 1rem; overflow-x: auto; font-size: .88rem; line-height: 1.5; max-width: 100%; }
 .prose pre code { background: none; border: 0; padding: 0; white-space: pre; }
+
+/* Guides stand out from quick tips */
+.card-guide {
+  position: relative; border-color: var(--orange-line);
+  background: linear-gradient(180deg, var(--orange-soft), transparent 55%), var(--bg-2);
+}
+.card-guide::before {
+  content: ""; position: absolute; left: -1px; top: 14px; bottom: 14px; width: 3px;
+  border-radius: 0 3px 3px 0; background: linear-gradient(180deg, var(--orange), var(--orange-strong));
+}
+.card-guide .badge-type, .slide .badge-type { background: var(--orange); border-color: var(--orange); color: #fff; }
+.topic-guide {
+  display: inline-block; margin-left: .3rem; font-size: .64rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .07em; color: #fff; background: var(--orange); border-radius: 4px; padding: 0 .3rem; vertical-align: 1px;
+}
+
+/* Featured guides slider */
+.featured { margin: .5rem 0 2rem; }
+.featured-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: .8rem; }
+.featured-head h2 { font-size: 1.35rem; margin: .2rem 0 0; }
+.slider-controls { display: flex; gap: .4rem; flex-shrink: 0; }
+.slider-btn {
+  width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1px solid var(--line-2); background: var(--bg-2);
+  color: var(--text); font-size: 1.15rem; line-height: 1; cursor: pointer; display: grid; place-items: center;
+}
+.slider-btn:hover { border-color: var(--orange); color: var(--orange); }
+.slider-btn[data-pause] { font-size: .7rem; letter-spacing: -1px; }
+.slider-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; border-radius: 16px; border: 1px solid var(--orange-line);
+  background: linear-gradient(120deg, var(--orange-soft), transparent 60%), var(--bg-2);
+}
+.slider-track::-webkit-scrollbar { display: none; }
+.slide {
+  scroll-snap-align: start; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 1.5rem; padding: 1.5rem; align-items: center; min-width: 0;
+}
+.slide-text { display: flex; flex-direction: column; gap: .7rem; min-width: 0; }
+.slide h3 { font-size: 1.4rem; line-height: 1.25; margin: 0; }
+.slide h3 a { color: var(--text); text-decoration: none; }
+.slide h3 a:hover { color: var(--orange); }
+.slide p { color: var(--text-2); margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.slide-cta { align-self: flex-start; margin-top: .3rem; }
+.slide-shot {
+  display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-3);
+  aspect-ratio: 16 / 10;
+}
+.slide-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+.slider-dots { display: flex; justify-content: center; gap: .45rem; margin-top: .8rem; }
+.slider-dot { width: .55rem; height: .55rem; border-radius: 50%; border: 0; padding: 0; background: var(--line-2); cursor: pointer; }
+.slider-dot[aria-current="true"] { background: var(--orange); width: 1.4rem; border-radius: 99px; }
+@media (max-width: 760px) {
+  .slide { grid-template-columns: minmax(0, 1fr); padding: 1.1rem; gap: 1rem; }
+  .slide-shot { order: -1; aspect-ratio: 16 / 9; }
+  .slide h3 { font-size: 1.15rem; }
+  .featured-head h2 { font-size: 1.15rem; }
+}
+@media (prefers-reduced-motion: reduce) { .slider-track { scroll-behavior: auto; } }
+/* Slider moves with a transform, not scrolling */
+.slider-track { display: block; overflow: hidden; scroll-snap-type: none; }
+.slider-row { display: flex; transition: transform .5s ease; will-change: transform; }
+.slider-row > .slide { flex: 0 0 100%; }
+@media (prefers-reduced-motion: reduce) { .slider-row { transition: none; } }
