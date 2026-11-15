@@ -840,6 +840,8 @@ var ARTICLES = [
   },
   {
     slug: "email-tracking-consent-review",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "HubSpot says 'Before you send: review your email tracking settings'. What it means and what to do",
     excerpt: "The HubSpot warning about email open and click tracking consent: where it appears, the Tracking settings it links to, and how to turn tracking off account-wide or for one email.",
     type: "tip",
@@ -1092,6 +1094,8 @@ var ARTICLES = [
   },
   {
     slug: "hubspot-snippets-shortcuts",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "HubSpot snippets: reusable text you insert with a # shortcut",
     excerpt: "How HubSpot snippets work: where to create them, the # shortcut, where you can use them, the 2,500 character limit, personalization tokens, and the account limits by tier.",
     type: "tip",
@@ -1194,6 +1198,8 @@ var ARTICLES = [
   },
   {
     slug: "connect-inbox-alias-signature",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Your HubSpot email setup: connect your inbox, add an alias, and set a signature",
     excerpt: "The personal Email preferences tab in HubSpot: connecting a work inbox, adding an email alias, and managing email signatures, with what each one is for.",
     type: "tip",
@@ -1426,6 +1432,8 @@ var ARTICLES = [
   },
   {
     slug: "log-replies-only-vs-log-all-emails",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Why some contact emails do not log to HubSpot: log replies only vs log all emails",
     excerpt: "HubSpot's contact email logging rules: Log replies only vs Log all emails, what each logs, the requirements for a reply to log, and the unsubscribe link setting below them.",
     type: "tip",
@@ -1442,18 +1450,18 @@ var ARTICLES = [
   },
   {
     slug: "never-log-list",
-    title: "The HubSpot never log list: stop emails and meetings with certain domains logging",
-    excerpt: "How HubSpot's never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.",
-    type: "tip",
+    title: "Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits",
+    excerpt: "Connect a work inbox, aliases and signatures; Log all emails vs Log replies only; the Never Log list; who can read logged emails; tracking consent; drafts, scheduling, send limits and snippets.",
+    type: "guide",
     problem: "How to",
     hubs: ["Sales Hub", "Smart CRM"],
     features: ["Email", "Activities"],
-    tier: "All tiers",
-    permissions: "Super Admin for the account-wide list",
-    verified: "2026-10-03",
-    validated: "2026-10-11 15:15 ET",
+    tier: "All plans (some options need Sales Hub Professional)",
+    permissions: "Super Admin for account-wide logging rules; your own email preferences",
+    verified: "2026-11-15",
+    validated: "2026-11-15 15:25 ET",
     published: "2026-10-03",
-    minutes: 5,
+    minutes: 12,
     difficulty: "Beginner",
     keywords: ["never log", "email logging", "exclude domain", "privacy"]
   },
@@ -9994,6 +10002,8 @@ var ARTICLES = [
   },
   {
     slug: "one-to-one-email-drafts",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Save and schedule one-to-one email drafts",
     excerpt: "How drafts and scheduled one-to-one emails work in HubSpot.",
     type: "tip",
@@ -13319,6 +13329,8 @@ var ARTICLES = [
   },
   {
     slug: "limit-logged-email-access",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Limit who can see logged emails",
     excerpt: "How CRM email permissions control access to logged emails in HubSpot.",
     type: "tip",
@@ -14842,6 +14854,8 @@ var ARTICLES = [
   },
   {
     slug: "sales-email-send-limits",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Daily send limits for one-to-one and sequence emails",
     excerpt: "How HubSpot and provider send limits apply to connected inboxes.",
     type: "tip",
@@ -15092,6 +15106,8 @@ var ARTICLES = [
   },
   {
     slug: "schedule-one-to-one-email",
+    draft: true,
+    mergedInto: 'never-log-list',
     title: "Schedule a one-to-one email to send later",
     excerpt: "How Send Later works for CRM emails.",
     type: "tip",

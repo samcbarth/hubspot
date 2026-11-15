@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>The HubSpot never log list: stop emails and meetings with certain domains logging - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot's never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.">
+<title>Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits - HubSpot Field Notes</title>
+<meta name="description" content="Connect a work inbox, aliases and signatures; Log all emails vs Log replies only; the Never Log list; who can read logged emails; tracking consent; drafts, scheduling, send limits and snippets.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/never-log-list/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/never-log-list/">
-<meta property="og:title" content="The HubSpot never log list: stop emails and meetings with certain domains logging">
-<meta property="og:description" content="How HubSpot's never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.">
+<meta property="og:title" content="Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits">
+<meta property="og:description" content="Connect a work inbox, aliases and signatures; Log all emails vs Log replies only; the Never Log list; who can read logged emails; tracking consent; drafts, scheduling, send limits and snippets.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/never-log-list/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "The HubSpot never log list: stop emails and meetings with certain domains logging",
-      "description": "How HubSpot's never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.",
+      "headline": "Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits",
+      "description": "Connect a work inbox, aliases and signatures; Log all emails vs Log replies only; the Never Log list; who can read logged emails; tracking consent; drafts, scheduling, send limits and snippets.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/never-log-list/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Add domains to the HubSpot never log list",
-      "totalTime": "PT5M",
+      "name": "Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits",
+      "totalTime": "PT12M",
       "step": [
-        {"@type": "HowToStep", "name": "Open the settings", "text": "Go to Settings, Objects, Activities, Email Log & Track."},
-        {"@type": "HowToStep", "name": "Find Never Log", "text": "Scroll to the Never Log section."},
-        {"@type": "HowToStep", "name": "Add an entry", "text": "Click Add emails or domains and enter an address or @domain.com."},
-        {"@type": "HowToStep", "name": "Save", "text": "Save and check the entry shows as All Users."}
+        {"@type": "HowToStep", "name": "Connect your inbox", "text": "Settings, General, Email, Connect email account."},
+        {"@type": "HowToStep", "name": "Pick the logging rule", "text": "Settings, Objects, Activities, Contact email logging rules."},
+        {"@type": "HowToStep", "name": "Fill the Never Log list", "text": "Add @yourdomain.com and private correspondents."},
+        {"@type": "HowToStep", "name": "Limit logged email access", "text": "CRM email permissions in Users and Teams."},
+        {"@type": "HowToStep", "name": "Check send limits", "text": "1,000 a day for most business inboxes."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "The HubSpot never log list: stop emails and meetings with certain domains logging", "item": "https://hubspot.samcbarth.com/articles/never-log-list/" }
+        { "@type": "ListItem", "position": 2, "name": "Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits", "item": "https://hubspot.samcbarth.com/articles/never-log-list/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>The HubSpot never log list: stop emails and meetings with certain domains logging</h1>
-      <p class="dek">Internal emails, your accountant, your own domain. Some conversations do not belong in the CRM, and the never log list keeps them out.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
+      <h1>Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits</h1>
+      <p class="dek">What gets logged is one account-wide setting most people never look at. Here it is, with the Never Log list, permissions, and the real send limits per inbox type.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Super Admin for the account-wide list</dd></div>
-        <div class="fact"><dt>Time</dt><dd>5 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Validated</dt><dd><time datetime="2026-10-11T15:15:00-04:00">October 11, 2026, 3:15 PM ET</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (some options need Sales Hub Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin for account-wide logging rules; your own email preferences</dd></div>
+        <div class="fact"><dt>Time</dt><dd>12 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,34 +103,116 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>The <strong>Never Log</strong> list keeps emails and meetings with specific addresses or domains out of the CRM. The account-wide list is in <span class="ui">Settings</span>, <span class="ui">Objects</span>, <span class="ui">Activities</span>, and needs Super Admin. Each user also has a personal list in their email preferences. Enter domains as <code>@domain.com</code>. HubSpot says listed addresses are excluded from email logging and contact creation, and tracking activity does not appear on the timeline.</p>
+          <p>Connect your work inbox under <strong>Settings, General, Email</strong> (Gmail, Outlook, Exchange or IMAP; View-Only seats cannot). What gets logged is decided account-wide in <strong>Settings, Objects, Activities</strong>: <strong>Log all emails</strong> logs every email between users and existing contacts, <strong>Log replies only</strong> logs a contact's email only when it continues a thread someone already logged. Keep internal and private correspondents out with the <strong>Never Log</strong> list, limit who can read logged emails with CRM email permissions, and know your send limits: 1,000 a day for most business inboxes and 350 for free Gmail.</p>
         </div>
 
-        <h2>1. The section</h2>
-        <p>Open <a class="hs-link" data-hs="/settings/{portalId}/objects/activities/email-logging" href="https://app.hubspot.com/l/settings/objects/activities/email-logging"><span class="ui">Activities settings</span></a> and scroll to Never Log. The Meetings settings page links here too.</p>
+        <h2>1. Connect the inbox, aliases and signature</h2>
+        <p>These preferences apply only to you. Open <strong>Settings, General, Email</strong>: <strong>Connect email account</strong> (1), <strong>Add email alias</strong> (2) and <strong>Manage email signatures</strong> (3).</p>
+        <figure class="shot"><a href="email.webp"><img src="email.webp" alt="Personal Email preferences with Connect email account, Add email alias, and Manage email signatures highlighted" width="800" height="600" loading="lazy"></a><figcaption>Connect email account (1), Add email alias (2), and Manage email signatures (3).</figcaption></figure>
+        <ul>
+          <li><strong>Connecting</strong> lets you send, schedule and log one-to-one emails from HubSpot, send sequence emails, and use the sales tools in your inbox. Tick <strong>Turn on inbox automation</strong> while connecting for follow-up task suggestions. You can connect more than one work inbox.</li>
+          <li><strong>Aliases</strong> let emails sent from other addresses be associated with your user. Gmail aliases set up in Gmail can be used. With Exchange or IMAP you cannot send from an alias inside HubSpot, but you can log alias emails with the BCC address or the add-in. Outlook alias sending is a beta that needs you to disconnect and reconnect.</li>
+          <li><strong>Signatures</strong> can be written in the simple editor or pasted as HTML (1). Your signature is used in one-to-one emails and is also available as a personalization token, so a marketing email can be signed by the contact owner.</li>
+        </ul>
+        <figure class="shot"><a href="signature.webp"><img src="signature.webp" alt="Manage email signatures dialog with the Simple and HTML toggle and Add new signature highlighted" width="800" height="600" loading="lazy"></a><figcaption>Simple or HTML editor (1) and Add new signature (2).</figcaption></figure>
+        <p>For Outlook specifics and connection errors, see <a href="../office-365-add-in-troubleshoot/">HubSpot with Outlook and Office 365</a>.</p>
+
+        <h2>2. Log all emails or log replies only</h2>
+        <p>The rule is account-wide, under <strong>Settings, Objects, Activities, Contact email logging rules</strong> (2). Tracking (1) and unsubscribe link settings (3) are on the same page.</p>
+        <figure class="shot"><a href="rules.webp"><img src="rules.webp" alt="Email logging settings with the tracking checkbox, the contact email logging rules, and unsubscribe links highlighted" width="800" height="553" loading="lazy"></a><figcaption>Tracking (1), logging rules (2), and unsubscribe links (3).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rule</th><th>What logs</th></tr></thead>
+            <tbody>
+              <tr><td>Log all emails (HubSpot's default)</td><td>Emails to and from existing contacts for every user with a connected inbox, including emails sent outside HubSpot. Emails to people who are not contacts do not log.</td></tr>
+              <tr><td>Log replies only</td><td>A contact's email logs only if it continues a thread a user already logged from the CRM or the sales extension with Log ticked. A brand-new email from a contact does not log.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A reply under Log replies only also needs the original not sent to a Never Log address, the inbox still connected, the user still active, and the same subject line. Changing the rule only affects new emails. My demo portal is set to Log replies only even though HubSpot calls Log all emails the default, so check yours rather than assuming.</p>
+
+        <h2>3. The Never Log list</h2>
+        <p>Addresses and domains on the Never Log list are excluded from email logging and contact creation, and their tracking activity does not appear on timelines. It covers meetings too. The account-wide list is at the bottom of Activities settings (1) and needs Super Admin. Each user also has a personal list in their own email preferences.</p>
         <figure class="shot"><a href="neverlog.webp"><img src="neverlog.webp" alt="Never Log section with search, view filter, Add emails or domains, and the unsubscribe links settings above it highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Never Log section (1) and the unsubscribe links settings above it (2).</figcaption></figure>
-
-        <h2>2. Account vs personal</h2>
         <ul>
-          <li>Account-wide entries apply to all users and team email accounts and are tagged <em>All Users</em>.</li>
-          <li>Personal entries, added in your own email preferences, are tagged <em>Only You</em>.</li>
-          <li>The <span class="ui">View</span> filter switches between them.</li>
+          <li>Enter domains as <code>@domain.com</code>.</li>
+          <li>Account-wide entries are tagged <strong>All Users</strong>, personal ones <strong>Only You</strong>. The View filter switches between them.</li>
+          <li>Add your own company domain so internal threads stay off contact timelines, plus vendors and personal correspondents.</li>
         </ul>
 
-        <h2>3. What to add</h2>
+        <h2>4. Who can read logged emails</h2>
+        <p>Logged emails can contain things not everyone should see. Under <strong>Users &amp; Teams</strong> (1), edit each user's or permission set's <strong>CRM email</strong> permissions to control who can view, edit or delete logged emails. The scope can be all CRM emails, or only the user's own (sent, received or copied on) plus their team's.</p>
+        <figure class="shot"><a href="users.webp"><img src="users.webp" alt="Users and Teams settings with Users, Seats, Teams, Permission sets and Presets tabs" width="800" height="553" loading="lazy"></a><figcaption>Users &amp; Teams, where permission sets are edited (1).</figcaption></figure>
+        <p>The team scope only works if team membership is accurate. See <a href="../permission-sets-and-seats/">permission sets and seats</a>.</p>
+
+        <h2>5. Tracking and consent</h2>
+        <p>Open and click tracking may need the recipient's prior consent in some places, including parts of the EU. For marketing email, HubSpot's Tracking tab says that by leaving tracking on you confirm you are responsible for deciding whether consent rules apply and for having it. You can turn off <strong>Track email opens</strong> (2) and <strong>Track clicks</strong> (3) account-wide, or for one email in the editor.</p>
+        <figure class="shot"><a href="tracking-settings.webp"><img src="tracking-settings.webp" alt="Email settings Tracking tab with the consent note, the Track email opens toggle, and the Track clicks toggle highlighted" width="800" height="600" loading="lazy"></a><figcaption>The consent note (1), Track email opens (2), and Track clicks (3).</figcaption></figure>
+        <p>One-to-one email tracking is a separate setting: the checkbox that lets users track emails, in Activities settings. With data privacy settings on (the default for EU accounts), tracking is not added for contacts with no legal basis recorded.</p>
+
+        <h2>6. Drafts, scheduling and send limits</h2>
         <ul>
-          <li>Your own company domain, so internal threads stay out of contact timelines.</li>
-          <li>Personal or sensitive correspondents.</li>
-          <li>Vendors who are not customers.</li>
+          <li><strong>Drafts</strong>: save a one-to-one email as a draft from the record. Drafts show on the record and the one-to-one email index. You need a Core, Sales Hub or Service Hub seat, and you can only email contacts you have access to.</li>
+          <li><strong>Scheduling</strong>: up to six months ahead. A scheduled email cannot be edited, only deleted and rewritten, so proofread first. Do not use the Tab key to pick send options, or tracking is not added. <strong>Best time to send</strong> needs Sales Hub Professional or Enterprise.</li>
         </ul>
-        <p>For the rest of the logging settings, see <a href="../email-log-and-track-settings/">email log and track settings</a>.</p>
+        <p>Send limits run on a rolling 24 hours, not a midnight reset, and count one-to-one emails from connected inboxes, including team addresses in the conversations inbox:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Inbox</th><th>Emails per day</th></tr></thead>
+            <tbody>
+              <tr><td>Free Gmail</td><td>350</td></tr>
+              <tr><td>Google Workspace, Office 365, Exchange, other IMAP</td><td>1,000</td></tr>
+              <tr><td>HubSpot hosted inbox, free account</td><td>500</td></tr>
+              <tr><td>HubSpot hosted inbox, paid account</td><td>5,000</td></tr>
+              <tr><td>Sequences, Sales or Service Professional seat</td><td>Up to 500</td></tr>
+              <tr><td>Sequences, Sales or Service Enterprise seat</td><td>Up to 1,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sales Hub Professional and Enterprise can set a custom daily limit that takes precedence over both. The sequence limit counts sends, not enrollments, including emails already scheduled from earlier enrollments.</p>
+
+        <h2>7. Snippets</h2>
+        <p>A snippet is a reusable block of text with a shortcut. In an email, note, chat or logged activity, type <code>#</code> and the shortcut. Each has an internal name, text (1) and shortcut (2):</p>
+        <figure class="shot"><a href="snippet.webp"><img src="snippet.webp" alt="View snippet dialog with the snippet text and the shortcut field highlighted" width="800" height="600" loading="lazy"></a><figcaption>Snippet text (1) and shortcut (2).</figcaption></figure>
+        <p>Limits: 2,500 characters per snippet (double-byte languages hit it sooner), 3 snippets on free accounts and 5,000 per account on Starter and above. Personalization tokens only fill in on a record's Email tab. Snippets also work in your own inbox through the Chrome extension or Outlook add-in.</p>
+
+        <h2>8. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Templates and snippets for Core seats.</strong> HubSpot's May 2026 release gave Core seat users full access to email templates and snippets without a Sales or Service seat, and raised the per-account template limit to 10,000.</li>
+          <li><strong>AI in the composer.</strong> Since June 2026, Breeze can be called from the CRM email composer with "/" or the toolbar button to draft or suggest text inline. Logging, tracking and Never Log rules apply to those emails like any other.</li>
+          <li><strong>The Outlook desktop add-in is in maintenance mode.</strong> Plan the move to the Office 365 add-in as people switch to new Outlook. See <a href="../office-365-add-in-troubleshoot/">the Outlook guide</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why is a contact's email not on their timeline?</h3>
+        <p>Check the logging rule (Log replies only skips new threads), the Never Log list (yours and the account's), whether the sender is an existing contact, and whether the user's inbox is still connected.</p>
+        <h3>Internal emails are cluttering contact records.</h3>
+        <p>Add your company domain to the account-wide Never Log list as <code>@yourdomain.com</code>.</p>
+        <h3>Can I edit a scheduled one-to-one email?</h3>
+        <p>No. Delete it and write a new one.</p>
+        <h3>Sales reps can read each other's logged emails. How do I stop that?</h3>
+        <p>Set CRM email permissions to the user's own and team's emails in their permission set, and make sure teams are set up correctly.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/connected-email/add-emails-and-domains-to-the-never-log-list">HubSpot Knowledge Base: Exclude recipients from CRM email and meeting logging</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/connect-your-inbox-to-hubspot">HubSpot Knowledge Base: Connect an individual work email</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/add-an-email-alias">HubSpot Knowledge Base: Add an email alias</a></li>
+          <li><a href="https://knowledge.hubspot.com/account-management/add-an-email-signature-in-the-crm">HubSpot Knowledge Base: Add and manage email signatures in the CRM</a></li>
           <li><a href="https://knowledge.hubspot.com/connected-email/manage-contact-email-logging-rules">HubSpot Knowledge Base: Manage contact email logging rules</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/log-email-replies-in-the-crm">HubSpot Knowledge Base: Understand reply-only email logging rules</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/add-emails-and-domains-to-the-never-log-list">HubSpot Knowledge Base: Exclude recipients from CRM email and meeting logging</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/limit-access-to-logged-emails-in-the-crm">HubSpot Knowledge Base: Limit access to logged emails in the CRM</a></li>
+          <li><a href="https://knowledge.hubspot.com/privacy-and-consent/email-tracking-consent-guidelines">HubSpot Knowledge Base: Review email tracking consent guidelines</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/manage-marketing-email-open-and-click-tracking">HubSpot Knowledge Base: Manage marketing email open and click tracking</a></li>
+          <li><a href="https://knowledge.hubspot.com/one-to-one-email/create-and-manage-one-to-one-email-drafts">HubSpot Knowledge Base: Create and manage one-to-one email drafts</a></li>
+          <li><a href="https://knowledge.hubspot.com/one-to-one-email/schedule-a-one-to-one-email-from-the-crm">HubSpot Knowledge Base: Schedule a one-to-one email from the CRM</a></li>
+          <li><a href="https://knowledge.hubspot.com/connected-email/sales-email-send-limits">HubSpot Knowledge Base: Sending limits for connected email accounts</a></li>
+          <li><a href="https://knowledge.hubspot.com/conversations/use-snippets">HubSpot Knowledge Base: Create and use snippets</a></li>
+          <li><a href="https://community.hubspot.com/t/may-2026-product-updates/150000">HubSpot Community: May 2026 product updates</a></li>
+          <li><a href="https://community.hubspot.com/t/june-2026-product-updates/151744">HubSpot Community: June 2026 product updates</a></li>
+          <li><a href="https://community.hubspot.com/t/limit-who-can-access-outgoing-group-emails-in-service-hub/104859">HubSpot Community: Limit who can access outgoing group emails</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

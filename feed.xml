@@ -1585,15 +1585,6 @@
     <category>Line items</category>
   </item>
   <item>
-    <title>Save and schedule one-to-one email drafts</title>
-    <link>https://hubspot.samcbarth.com/articles/one-to-one-email-drafts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/one-to-one-email-drafts/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How drafts and scheduled one-to-one emails work in HubSpot.</description>
-    <category>Sales Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Delete your own HubSpot user account</title>
     <link>https://hubspot.samcbarth.com/articles/delete-your-own-user/</link>
     <guid>https://hubspot.samcbarth.com/articles/delete-your-own-user/</guid>
@@ -1780,16 +1771,6 @@
     <category>Segments</category>
   </item>
   <item>
-    <title>Limit who can see logged emails</title>
-    <link>https://hubspot.samcbarth.com/articles/limit-logged-email-access/</link>
-    <guid>https://hubspot.samcbarth.com/articles/limit-logged-email-access/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How CRM email permissions control access to logged emails in HubSpot.</description>
-    <category>Smart CRM</category>
-    <category>Permissions</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Set a featured image for blog listings and social shares</title>
     <link>https://hubspot.samcbarth.com/articles/blog-featured-image/</link>
     <guid>https://hubspot.samcbarth.com/articles/blog-featured-image/</guid>
@@ -1916,26 +1897,6 @@
     <category>Marketing Hub</category>
     <category>Ads</category>
     <category>LinkedIn</category>
-  </item>
-  <item>
-    <title>Daily send limits for one-to-one and sequence emails</title>
-    <link>https://hubspot.samcbarth.com/articles/sales-email-send-limits/</link>
-    <guid>https://hubspot.samcbarth.com/articles/sales-email-send-limits/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot and provider send limits apply to connected inboxes.</description>
-    <category>Sales Hub</category>
-    <category>Email</category>
-    <category>Sequences</category>
-  </item>
-  <item>
-    <title>Schedule a one-to-one email to send later</title>
-    <link>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</link>
-    <guid>https://hubspot.samcbarth.com/articles/schedule-one-to-one-email/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How Send Later works for CRM emails.</description>
-    <category>Sales Hub</category>
-    <category>Service Hub</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Manage forms from the forms index</title>
@@ -2339,16 +2300,6 @@
     <category>Dashboards</category>
   </item>
   <item>
-    <title>HubSpot says &#39;Before you send: review your email tracking settings&#39;. What it means and what to do</title>
-    <link>https://hubspot.samcbarth.com/articles/email-tracking-consent-review/</link>
-    <guid>https://hubspot.samcbarth.com/articles/email-tracking-consent-review/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The HubSpot warning about email open and click tracking consent: where it appears, the Tracking settings it links to, and how to turn tracking off account-wide or for one email.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Consent</category>
-  </item>
-  <item>
     <title>Double opt-in for HubSpot marketing email: what it does and what it limits</title>
     <link>https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/</link>
     <guid>https://hubspot.samcbarth.com/articles/double-opt-in-marketing-email/</guid>
@@ -2430,16 +2381,6 @@
     <category>Deals</category>
   </item>
   <item>
-    <title>HubSpot snippets: reusable text you insert with a # shortcut</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-snippets-shortcuts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-snippets-shortcuts/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot snippets work: where to create them, the # shortcut, where you can use them, the 2,500 character limit, personalization tokens, and the account limits by tier.</description>
-    <category>Sales Hub</category>
-    <category>Service Hub</category>
-    <category>Snippets</category>
-  </item>
-  <item>
     <title>HubSpot account defaults: time zone and fiscal year, and what they change</title>
     <link>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</link>
     <guid>https://hubspot.samcbarth.com/articles/account-defaults-time-zone-fiscal-year/</guid>
@@ -2456,17 +2397,6 @@
     <description>How HubSpot user notifications work: the six channels, setting channel defaults, turning topics on or off, the daily email notification cap, and notification profiles admins can push to users.</description>
     <category>Smart CRM</category>
     <category>Notifications</category>
-  </item>
-  <item>
-    <title>Your HubSpot email setup: connect your inbox, add an alias, and set a signature</title>
-    <link>https://hubspot.samcbarth.com/articles/connect-inbox-alias-signature/</link>
-    <guid>https://hubspot.samcbarth.com/articles/connect-inbox-alias-signature/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The personal Email preferences tab in HubSpot: connecting a work inbox, adding an email alias, and managing email signatures, with what each one is for.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Email</category>
-    <category>User settings</category>
   </item>
   <item>
     <title>Why a HubSpot contact&#39;s owner changed when you emailed them</title>
@@ -2561,22 +2491,11 @@
     <category>Calls</category>
   </item>
   <item>
-    <title>Why some contact emails do not log to HubSpot: log replies only vs log all emails</title>
-    <link>https://hubspot.samcbarth.com/articles/log-replies-only-vs-log-all-emails/</link>
-    <guid>https://hubspot.samcbarth.com/articles/log-replies-only-vs-log-all-emails/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s contact email logging rules: Log replies only vs Log all emails, what each logs, the requirements for a reply to log, and the unsubscribe link setting below them.</description>
-    <category>Sales Hub</category>
-    <category>Smart CRM</category>
-    <category>Email</category>
-    <category>Activities</category>
-  </item>
-  <item>
-    <title>The HubSpot never log list: stop emails and meetings with certain domains logging</title>
+    <title>Connect your inbox to HubSpot and control email logging: rules, Never Log, permissions, tracking and send limits</title>
     <link>https://hubspot.samcbarth.com/articles/never-log-list/</link>
     <guid>https://hubspot.samcbarth.com/articles/never-log-list/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s never log list works: account-wide vs personal lists, adding domains in the @domain.com format, and what it stops.</description>
+    <description>Connect a work inbox, aliases and signatures; Log all emails vs Log replies only; the Never Log list; who can read logged emails; tracking consent; drafts, scheduling, send limits and snippets.</description>
     <category>Sales Hub</category>
     <category>Smart CRM</category>
     <category>Email</category>
