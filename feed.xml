@@ -215,11 +215,11 @@
     <category>Pipelines</category>
   </item>
   <item>
-    <title>Export HubSpot records from a view: what is included and how to get more</title>
+    <title>Export data from HubSpot: records, segments, reports, and calls and notes</title>
     <link>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</link>
     <guid>https://hubspot.samcbarth.com/articles/export-records-from-a-view/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.</description>
+    <description>How to export records from a view, segments and reports, the file limits, how to export calls and notes with the exports API (tested), and where the export audit log is.</description>
     <category>Smart CRM</category>
     <category>Records</category>
     <category>Views</category>
@@ -1200,15 +1200,6 @@
     <category>Products</category>
   </item>
   <item>
-    <title>Export report data or email it on a schedule</title>
-    <link>https://hubspot.samcbarth.com/articles/export-reports/</link>
-    <guid>https://hubspot.samcbarth.com/articles/export-reports/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to export HubSpot reports as CSV or Excel, which report types can be emailed as files, and what columns come out.</description>
-    <category>Smart CRM</category>
-    <category>Reporting</category>
-  </item>
-  <item>
     <title>Embed a HubSpot form in React or another single-page app</title>
     <link>https://hubspot.samcbarth.com/articles/embed-form-in-react/</link>
     <guid>https://hubspot.samcbarth.com/articles/embed-form-in-react/</guid>
@@ -1265,16 +1256,6 @@
     <description>How HubSpot legacy forms redirect to a page, meeting link or external URL after submission, conditional redirects, and the page module override.</description>
     <category>Marketing Hub</category>
     <category>Forms</category>
-  </item>
-  <item>
-    <title>Export calls, notes, emails and tasks</title>
-    <link>https://hubspot.samcbarth.com/articles/export-activities/</link>
-    <guid>https://hubspot.samcbarth.com/articles/export-activities/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why record exports don&#39;t include activities, and the two ways HubSpot suggests getting activity data out: reports and the engagements API.</description>
-    <category>Smart CRM</category>
-    <category>Export</category>
-    <category>Reporting</category>
   </item>
   <item>
     <title>Cancel a HubSpot subscription or delete the account</title>
@@ -2226,17 +2207,6 @@
     <category>Smart CRM</category>
     <category>Users</category>
     <category>Security</category>
-  </item>
-  <item>
-    <title>Export a segment</title>
-    <link>https://hubspot.samcbarth.com/articles/export-segments/</link>
-    <guid>https://hubspot.samcbarth.com/articles/export-segments/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot segment exports work and what they leave out.</description>
-    <category>Smart CRM</category>
-    <category>Marketing Hub</category>
-    <category>Segments</category>
-    <category>Export</category>
   </item>
   <item>
     <title>Manage user properties and preferences</title>

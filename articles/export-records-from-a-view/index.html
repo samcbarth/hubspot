@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Export HubSpot records from a view: what is included and how to get more - HubSpot Field Notes</title>
-<meta name="description" content="How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.">
+<title>Export data from HubSpot: records, segments, reports, and calls and notes - HubSpot Field Notes</title>
+<meta name="description" content="How to export records from a view, segments and reports, the file limits, how to export calls and notes with the exports API (tested), and where the export audit log is.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/export-records-from-a-view/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/export-records-from-a-view/">
-<meta property="og:title" content="Export HubSpot records from a view: what is included and how to get more">
-<meta property="og:description" content="How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.">
+<meta property="og:title" content="Export data from HubSpot: records, segments, reports, and calls and notes">
+<meta property="og:description" content="How to export records from a view, segments and reports, the file limits, how to export calls and notes with the exports API (tested), and where the export audit log is.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/export-records-from-a-view/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Export HubSpot records from a view: what is included and how to get more",
-      "description": "How to export contacts, companies, deals or tickets from a saved view, the default columns, the 1,000 association limit, format options, and export notifications.",
+      "headline": "Export data from HubSpot: records, segments, reports, and calls and notes",
+      "description": "How to export records from a view, segments and reports, the file limits, how to export calls and notes with the exports API (tested), and where the export audit log is.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Export records from a view",
-      "totalTime": "PT4M",
+      "name": "Export data from HubSpot: records, segments, reports, and calls and notes",
+      "totalTime": "PT11M",
       "step": [
-        {"@type": "HowToStep", "name": "Open the view", "text": "Open the saved view, or All records for everything."},
-        {"@type": "HowToStep", "name": "Click Export", "text": "Use Export at the bottom of the table."},
-        {"@type": "HowToStep", "name": "Customize", "text": "Choose properties in view, all properties, or all properties and associations, and the file format."},
-        {"@type": "HowToStep", "name": "Download", "text": "Use the emailed link to download the file."}
+        {"@type": "HowToStep", "name": "Open the view", "text": "Filter the records you want in a saved or unsaved view."},
+        {"@type": "HowToStep", "name": "Click Export", "text": "Choose format, properties and associations."},
+        {"@type": "HowToStep", "name": "Download from the email", "text": "The link expires after 30 days."},
+        {"@type": "HowToStep", "name": "Export activities by API", "text": "POST to the exports API with objectType CALL or NOTE."},
+        {"@type": "HowToStep", "name": "Check the audit", "text": "Settings, Data Management, Import and Export."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Export HubSpot records from a view: what is included and how to get more", "item": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/" }
+        { "@type": "ListItem", "position": 2, "name": "Export data from HubSpot: records, segments, reports, and calls and notes", "item": "https://hubspot.samcbarth.com/articles/export-records-from-a-view/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Records">Records</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
-      <h1>Export HubSpot records from a view: what is included and how to get more</h1>
-      <p class="dek">An export copies the view you are looking at. Set up the view first and the file comes out the way you need it.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Smart CRM</span></div>
+      <h1>Export data from HubSpot: records, segments, reports, and calls and notes</h1>
+      <p class="dek">Every export route in HubSpot with its limits, plus the one most people ask about: getting calls and notes into a spreadsheet, tested through the exports API.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Export permission for the object</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Export permission; Super Admin for the full export log</dd></div>
+        <div class="fact"><dt>Time</dt><dd>11 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,30 +103,127 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>Exports come from the view you have open. By default the file holds the view's properties and associations, with up to 1,000 associated record IDs per association column. Click <span class="ui">Customize</span> to export all properties, or all properties and associations, and to choose the format and header language. The download link arrives by email. Super Admins can set export notifications for large exports, up to a 275,000 record threshold.</p>
+          <p>Export records from the view you have open: <strong>Export</strong> at the bottom of the index page sends a download link by email, and the link expires after <strong>30 days</strong>. Segments export from <strong>CRM, Segments, More, Export</strong> but cannot include associated records. Reports export as CSV or Excel. Calls and notes cannot be exported from the record index, but the <strong>exports API</strong> handles them: I exported 22 calls and 49 notes with their bodies from my demo portal on November 15, 2026. Everything needs the Export permission.</p>
         </div>
 
-        <h2>1. Export from the view</h2>
-        <p>Open <a class="hs-link" data-hs="/contacts/{portalId}/objects/0-1/views/all/list" href="https://app.hubspot.com/l/contacts/objects/0-1/views/all/list"><span class="ui">Contacts</span></a> or another object, pick the view, and click <span class="ui">Export</span> at the bottom.</p>
+        <h2>1. Export records from a view</h2>
+        <p>Open <strong>Contacts</strong> (or companies, deals, tickets, or a custom object), pick or filter the view, and click <strong>Export</strong> at the bottom of the table (1). The export uses the view that is open (2), so set the filters first.</p>
         <figure class="shot"><a href="index.webp"><img src="index.webp" alt="Contacts index with view tabs and an Export button at the bottom" width="800" height="553" loading="lazy"></a><figcaption>Export (1) uses the current view (2).</figcaption></figure>
-
-        <h2>2. What is in the file</h2>
+        <p>In the export dialog you choose where the link is sent, the file format and what goes in the file:</p>
+        <figure class="shot"><a href="export.webp"><img src="export.webp" alt="Export view dialog showing where the file is sent, export name, file format and the associations included" width="800" height="600" loading="lazy"></a><figcaption>Where the file goes (1), the file settings (2), and the association limit (3).</figcaption></figure>
         <ul>
-          <li><strong>Default:</strong> properties and associations in the view, in the view's column order.</li>
-          <li><strong>All properties:</strong> every property, no associations.</li>
-          <li><strong>All properties and associations:</strong> the widest file.</li>
-          <li>Association columns hold up to 1,000 associated record IDs plus the record name by default. Customize can export all associated records.</li>
+          <li><strong>Properties and associations in your view</strong> (default): the view's columns, in the view's order.</li>
+          <li><strong>All properties on records</strong>: every property, no associations.</li>
+          <li><strong>All properties and associations on records</strong>: the widest file.</li>
+          <li><strong>Associations</strong>: up to 1,000 associated record IDs and names per association column by default, or all associated records (CSV only).</li>
+          <li><strong>Language of column headers</strong>: useful when your team works in more than one language.</li>
+        </ul>
+        <p>To import the file back later to update the same records, keep the <strong>Record ID</strong> column. HubSpot matches on it.</p>
+
+        <h2>2. File formats and limits</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Limit</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Formats</td><td>CSV, XLSX, XLS</td></tr>
+              <tr><td>Rows per file</td><td>1,000,000 for CSV and XLSX, 65,535 for XLS. Larger exports come as multiple files.</td></tr>
+              <tr><td>Columns</td><td>16,384 for XLSX, 256 for XLS</td></tr>
+              <tr><td>Zipping</td><td>CSV files over 2MB are zipped automatically</td></tr>
+              <tr><td>Exports per day</td><td>300 in a rolling 24 hours, up to three at once</td></tr>
+              <tr><td>Download link</td><td>Expires after 30 days</td></tr>
+              <tr><td>Associated records</td><td>1,000 per association column unless you choose all (CSV only)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Use CSV for anything large. XLS hits its row limit at 65,535, which is easy to pass on a contacts export.</p>
+
+        <h2>3. Export a segment</h2>
+        <ol>
+          <li>Go to <strong>CRM, Segments</strong>.</li>
+          <li>Hover over the segment, click <strong>More</strong>, then <strong>Export</strong>.</li>
+          <li>Tick the properties to include, or <strong>Select all properties</strong>, then <strong>Next</strong>.</li>
+          <li>Choose the file format and header language, then <strong>Export</strong>. The download link arrives by email.</li>
+        </ol>
+        <p>The catch: a segment export <strong>cannot include associated records</strong>. If you add associated company properties, you only get the primary company's values. When you need contacts with their companies or deals, filter a contact view to match the segment and export the view instead.</p>
+        <p>If the Export option is missing, the user does not have the Export permission. A Super Admin can add it in <strong>Users &amp; Teams</strong>.</p>
+
+        <h2>4. Export reports</h2>
+        <p>From <strong>Reporting, Reports</strong> (1), open a report and use <strong>Export</strong> to download it as CSV, XLS or XLSX, or share it by email. Recurring emails can go out daily, weekly or monthly.</p>
+        <figure class="shot"><a href="reports.webp"><img src="reports.webp" alt="Reports list with My dashboards, My reports, Analytics suites, and All reports, Custom reports, Favorites tabs" width="800" height="553" loading="lazy"></a><figcaption>Analytics suites (1) and the report tabs and filters (2).</figcaption></figure>
+        <ul>
+          <li>Single-object reports export the properties in the <strong>Selected properties</strong> section. Custom reports export the fields on the <strong>Configure</strong> tab.</li>
+          <li>Only <strong>single object</strong>, <strong>event-based</strong> and <strong>customer journey</strong> reports can be sent as file attachments by email.</li>
+          <li>Web analytics reports, reports with email as the data type, annotations, unified data type reports and sales analytics widgets cannot be sent as attachments.</li>
+          <li>Managing a recurring report email needs Super Admin or report ownership. Sending dashboard data once to someone outside the account needs Professional or Enterprise and admin-level Reporting permissions.</li>
+        </ul>
+        <p>If you want a live Google Sheet instead of a file, a workflow can write rows to it. See <a href="../google-sheets-workflow-action/">the Google Sheets workflow action</a>.</p>
+
+        <h2>5. Export calls, notes and other activities</h2>
+        <p>This is the most asked export question on the HubSpot Community, going back to 2019: how do I get call logs and notes into a spreadsheet? The record index has no Export for activities. HubSpot's KB lists three routes: export one contact's data, export certain activity reports, or use the API.</p>
+        <p>The API route turned out to be simpler than expected. The <strong>exports API</strong> accepts activity objects as the <code>objectType</code>. On my Enterprise demo portal on November 15, 2026:</p>
+<pre><code>POST https://api.hubapi.com/crm/exports/2026-09/export/async
+{
+  "exportType": "VIEW",
+  "exportName": "All calls",
+  "format": "CSV",
+  "language": "EN",
+  "objectType": "CALL",
+  "objectProperties": ["hs_call_title", "hs_call_body", "hs_timestamp"]
+}</code></pre>
+        <ul>
+          <li><code>CALL</code> returned a CSV of 22 calls with the columns Record ID, Call Title, Call notes, Activity date, Create date and Last modified date, in under a second.</li>
+          <li><code>NOTE</code> with <code>hs_note_body</code> returned 49 notes with the full note body.</li>
+          <li><code>EMAIL</code> was accepted too.</li>
+        </ul>
+        <p>The response is a task ID and a status link. Poll the link until <code>status</code> is <code>COMPLETE</code>, then download the file from <code>result</code>. The API has tighter limits than the interface:</p>
+        <ul>
+          <li><strong>30 exports</strong> in a rolling 24 hours, and <strong>one at a time</strong>. Others queue until the current one finishes. In my test a 180,000-record contact export was still processing after eight minutes, and the call and email exports I started after it sat in <code>PENDING</code> the whole time. Start small exports first.</li>
+          <li>The download URL <strong>expires five minutes</strong> after the export completes, so download it in the same script that polls.</li>
+          <li>Up to four associated objects per request, with 1,000 associations per row by default.</li>
+          <li>It needs the <code>crm.export</code> scope on your private app. See <a href="../private-apps-moved-to-legacy-apps/">private apps and service keys</a>.</li>
+        </ul>
+        <p>Two details from the test that the docs do not cover: the status link pointed at the <code>/crm/v3/</code> path even though I started the export on <code>/2026-09/</code>, and the file host returned <code>403</code> to a download request with no <code>User-Agent</code> header. Set one.</p>
+        <p>To see which contact each call belongs to, add <code>"associatedObjectType": "CONTACT"</code> to the request.</p>
+
+        <h2>6. See who exported what</h2>
+        <p>Every export is logged under <strong>Settings, Data Management, Import &amp; Export</strong>, in <strong>Export Audit</strong> (1). Super Admins see every user's exports, other users see only their own, and files from the last 30 days can be downloaded again from there.</p>
+        <figure class="shot"><a href="audit.webp"><img src="audit.webp" alt="HubSpot Import and Export settings with the Export Audit section" width="800" height="251" loading="lazy"></a><figcaption>Export Audit (1).</figcaption></figure>
+        <p>One thing I noticed: the six API exports I ran that morning did not appear in this list. Treat the audit as a log of exports made in the HubSpot interface, and track API exports in your own code.</p>
+        <p>Super Admins can also turn on a notification for large exports, with a threshold of up to 275,000 records, so they hear about it when someone exports most of the database.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>The exports API has a date-based version.</strong> The current docs use <code>/crm/exports/2026-09/export/async</code>. The older <code>/crm/v3/exports/export/async</code> path is now under HubSpot's legacy docs. v3 endpoints keep working for now, and HubSpot says their support timeline will be announced later, so new scripts should use the dated path. See <a href="../hubspot-api-rate-limits/">API rate limits and versioning</a>.</li>
+          <li><strong>Segments, not lists.</strong> HubSpot now calls lists segments throughout the app and KB, and the menu is <strong>CRM, Segments</strong>. Older guides that tell you to go to Contacts, Lists are describing the same feature.</li>
+          <li><strong>Exports are a security question now.</strong> The audit log and large-export notifications exist because an export is the easiest way to take a whole CRM out of a company. Review who has the Export permission when people change roles.</li>
         </ul>
 
-        <h2>3. Keep an eye on exports</h2>
-        <p>Settings, Import &amp; Export lists past exports. Super Admins see everyone's. Each Super Admin can set their own notification threshold for large exports. To import a file back, include the Record ID: see <a href="../enrich-records-record-id-import/">updating records by Record ID</a>.</p>
+        <h2>Common questions</h2>
+        <h3>Why can't I see the Export button?</h3>
+        <p>The user is missing the Export permission. It is separate from view and edit access, so a user can see every record and still not be able to export them.</p>
+        <h3>The export email never arrived. Where is the file?</h3>
+        <p>Check <strong>Settings, Data Management, Import &amp; Export</strong>. Exports from the last 30 days can be downloaded from the Export Audit list. Large exports also take a while to build, so give it a few minutes before assuming it failed.</p>
+        <h3>How do I export contacts with their company name?</h3>
+        <p>Export a contact view with associations included, not a segment. The associated company column holds the company's name and Record ID.</p>
+        <h3>Can I export a single contact's full history?</h3>
+        <p>HubSpot has a separate export for an individual contact's data, linked from its export KB article. For activities across many contacts, use the exports API with the activity object.</p>
+        <h3>Can I schedule a recurring export?</h3>
+        <p>Not for record views. Reports can be emailed daily, weekly or monthly as a file, and a script can call the exports API on a schedule, within its 30 a day.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/import-and-export/export-records">HubSpot Knowledge Base: Export your records</a></li>
-          <li><a href="https://knowledge.hubspot.com/import-and-export/view-a-log-of-your-users-exports-in-your-account">HubSpot Knowledge Base: Export notifications and log</a></li>
+          <li><a href="https://knowledge.hubspot.com/segments/export-your-lists">HubSpot Knowledge Base: Export segments</a></li>
+          <li><a href="https://knowledge.hubspot.com/dashboard/email-or-export-reports-and-dashboards">HubSpot Knowledge Base: Share or export reports and dashboards</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/view-a-log-of-your-users-exports-in-your-account">HubSpot Knowledge Base: Set up export notifications and view a log of exports</a></li>
+          <li><a href="https://knowledge.hubspot.com/import-and-export/export-contact-data">HubSpot Knowledge Base: Export individual contact data</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/exports/guide">HubSpot developer docs: Exports API</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/crm/exports/guide">HubSpot developer docs: Exports API (legacy v3)</a></li>
+          <li><a href="https://community.hubspot.com/t/how-do-export-call-logs-and-contact-notes/14306">HubSpot Community: How do export call logs and contact notes?</a></li>
+          <li><a href="https://community.hubspot.com/t/cant-export-my-contacts-list/157578">HubSpot Community: Can't export my contacts list</a></li>
+          <li><a href="https://community.hubspot.com/t/simple-report-export-to-google-sheets/34108">HubSpot Community: Simple report export to Google Sheets</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
