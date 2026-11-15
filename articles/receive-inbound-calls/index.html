@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Take inbound calls through a calling app in HubSpot - HubSpot Field Notes</title>
-<meta name="description" content="How inbound calling works with third-party calling apps in HubSpot and why the calling window must stay open.">
+<title>HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone - HubSpot Field Notes</title>
+<meta name="description" content="HubSpot-provided, ported and registered numbers and their trade-offs, seat requirements, calling apps and inbound calls, fixing microphone problems, logging Teams Phone calls, and what it takes to get Teams call recordings in.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/receive-inbound-calls/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/receive-inbound-calls/">
-<meta property="og:title" content="Take inbound calls through a calling app in HubSpot">
-<meta property="og:description" content="How inbound calling works with third-party calling apps in HubSpot and why the calling window must stay open.">
+<meta property="og:title" content="HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone">
+<meta property="og:description" content="HubSpot-provided, ported and registered numbers and their trade-offs, seat requirements, calling apps and inbound calls, fixing microphone problems, logging Teams Phone calls, and what it takes to get Teams call recordings in.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/receive-inbound-calls/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Take inbound calls through a calling app in HubSpot",
-      "description": "How inbound calling works with third-party calling apps in HubSpot and why the calling window must stay open.",
+      "headline": "HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone",
+      "description": "HubSpot-provided, ported and registered numbers and their trade-offs, seat requirements, calling apps and inbound calls, fixing microphone problems, logging Teams Phone calls, and what it takes to get Teams call recordings in.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/receive-inbound-calls/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Take inbound calls through a calling app in HubSpot",
-      "totalTime": "PT2M",
+      "name": "HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Check the provider", "text": "It must support inbound in HubSpot."},
-        {"@type": "HowToStep", "name": "Open the calling window", "text": "Log in to the provider if asked."},
-        {"@type": "HowToStep", "name": "Leave it open", "text": "Calls arrive there."}
+        {"@type": "HowToStep", "name": "Pick a number", "text": "HubSpot-provided, ported, registered or a calling app."},
+        {"@type": "HowToStep", "name": "Check seats", "text": "Calling needs a Sales or Service seat."},
+        {"@type": "HowToStep", "name": "Fix audio", "text": "Allow the microphone and pick the right device."},
+        {"@type": "HowToStep", "name": "Log Teams calls", "text": "Teams app settings, Teams Phone, inbound and outbound."},
+        {"@type": "HowToStep", "name": "Match phone numbers exactly", "text": "Include country and area code."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Take inbound calls through a calling app in HubSpot", "item": "https://hubspot.samcbarth.com/articles/receive-inbound-calls/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone", "item": "https://hubspot.samcbarth.com/articles/receive-inbound-calls/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Calling">Calling</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
-      <h1>Take inbound calls through a calling app in HubSpot</h1>
-      <p class="dek">Keep the calling window open or calls won't reach you.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Service Hub</span></div>
+      <h1>HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone</h1>
+      <p class="dek">Which number to use and why registered numbers get blocked, how calling apps change inbound calls, and why Teams Phone calls log but their recordings do not.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Depends on the calling app</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Calling access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>2 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Sales Hub or Service Hub Starter and up</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>An assigned Sales Hub or Service Hub seat</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,88 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: providers build inbound support with the <strong>Calling Extensions SDK</strong>. When you use it, the app opens in a <strong>separate calling window</strong>, and that window must stay open to make and receive calls. You may need to log in to your provider there.</p>
+          <p>Calling in HubSpot needs an assigned <strong>Sales Hub or Service Hub seat</strong> (Starter and up). You can use a <strong>HubSpot-provided number</strong> (from the supported countries list, and you do not need to be there), <strong>port</strong> a number, <strong>register</strong> your own (higher risk of spam labels and blocked calls), or connect a <strong>calling app</strong> from the Marketplace, which then handles calls instead of HubSpot's minutes. Inbound calls work on HubSpot numbers; for apps it depends on the provider. Microsoft Teams Phone can log calls to HubSpot, but phone call recordings and transcripts do not sync, only meeting ones.</p>
         </div>
 
-        <h2>1. In HubSpot</h2>
-        <p>The relevant screen in my demo portal.</p>
+        <h2>1. Pick a number</h2>
+        <p>The <strong>Call Setup</strong> page in calling settings shows how many HubSpot numbers you have used (1) and the options to get or port one (2):</p>
         <figure class="shot"><a href="setup.webp"><img src="setup.webp" alt="Call Setup page with HubSpot numbers section, 0 of 2 HubSpot Numbers Used, Port a number and Get a HubSpot number buttons" width="800" height="553" loading="lazy"></a><figcaption>Numbers used (1) and the get or port options (2).</figcaption></figure>
-        <h2>2. Worth knowing</h2>
-        <p>Not every calling app supports inbound in HubSpot. HubSpot-provided numbers handle inbound calls without a third-party app.</p>
-        <h2>3. Related</h2>
-        <p><a href="../hubspot-calling-numbers/">HubSpot calling numbers</a> and <a href="../third-party-calling-provider/">connecting a calling provider</a>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Option</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>HubSpot-provided number</td><td>From the supported countries list; you do not have to be located there. Handles inbound calls without a third-party app.</td></tr>
+              <tr><td>Ported number</td><td>Move an existing number to HubSpot. Porting has its own supported countries list.</td></tr>
+              <tr><td>Registered number</td><td>Your own number with verified caller ID. Cannot be toll-free. Not owned by Twilio, so calls are more likely to be marked spam or blocked, and many countries may have connection issues.</td></tr>
+              <tr><td>Calling app</td><td>A Marketplace provider or your own through the Calling Extensions SDK. Calls no longer use HubSpot's calling minutes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>HubSpot also limits calls to special service numbers and high-fraud-risk numbers. For countries not on the list, HubSpot points to a Twilio Connect account or a calling app.</p>
+
+        <h2>2. Personal calling settings and the microphone</h2>
+        <p>Each user's calling preferences show their HubSpot numbers (1) and a link to third-party integrations (2):</p>
+        <figure class="shot"><a href="calling.webp"><img src="calling.webp" alt="Calling preferences page with the third-party integration link and HubSpot numbers section highlighted" width="800" height="553" loading="lazy"></a><figcaption>Personal calling settings: HubSpot numbers (1) and the third-party integration link (2).</figcaption></figure>
+        <p>When calls have no audio, HubSpot says most issues come from the computer or browser: allow the microphone for HubSpot in the browser, pick the right input device, try another network, and test with a different headset. Calling is not supported in Internet Explorer.</p>
+
+        <h2>3. Calling apps and inbound calls</h2>
+        <ul>
+          <li>Depending on the provider, a calling app opens as a calling remote and window, a remote only, or the calling widget.</li>
+          <li>Apps built for inbound calls open a separate calling window that must stay open to receive calls; you may need to sign in to the provider there.</li>
+          <li>Not every app supports inbound calls in HubSpot. What happens during and after a call varies by provider.</li>
+          <li>You cannot call from a custom object record with a calling app.</li>
+        </ul>
+
+        <h2>4. Microsoft Teams Phone</h2>
+        <p>With the Microsoft Teams app connected (see <a href="../teams-integration-user-permissions/">Teams setup</a>), turn on call logging under <strong>Connected Apps, Microsoft Teams, Settings, Teams Phone</strong>: <strong>For outbound calls</strong> and <strong>For inbound calls</strong>.</p>
+        <figure class="shot"><a href="listing.webp"><img src="listing.webp" alt="Microsoft Teams app in the HubSpot Marketplace with the Install button highlighted" width="800" height="553" loading="lazy"></a><figcaption>The Microsoft Teams app (1). Calling settings live in its Settings tab after install.</figcaption></figure>
+        <p>Calls log to the contact, its primary company and associated deals, when:</p>
+        <ul>
+          <li>the HubSpot user is mapped to their Teams user,</li>
+          <li>the contact already exists,</li>
+          <li>the Teams number matches the contact's Phone number or Mobile phone number exactly, including country and area code, and</li>
+          <li>the contact's email does not match a HubSpot user.</li>
+        </ul>
+        <p>Calls take about 15 minutes on average, and up to 60, to appear. <strong>Click to call</strong> is set outside HubSpot: on Windows, make Microsoft Teams the default app for TEL links, then the external link icon next to a phone number starts a Teams call. For inbound calls, Teams can open the contact record through a HubSpot redirect URL in Teams' call settings.</p>
+
+        <h2>5. Teams Phone recordings and transcripts</h2>
+        <p>HubSpot syncs recordings and transcripts for Teams <strong>meetings</strong>, not Teams Phone <strong>calls</strong>, and its call logging article does not mention recordings. Getting call recordings in means a custom pipeline:</p>
+        <ul>
+          <li><strong>Microsoft side:</strong> Microsoft Graph exposes call recordings and transcripts, with application permissions and an application access policy on the tenant. Graph transcript access has been off by default since July 31, 2026, so an admin must turn on the transcript API setting in Teams meeting settings or calls return 403. Plain PSTN phone calls are the weak point: a Microsoft Tech Community thread ends without a supported way to fetch them with application permissions.</li>
+          <li><strong>HubSpot side:</strong> create or update the call with the recording URL through the CRM API, and attach a transcript with HubSpot's third-party transcripts API (utterances with speaker, text and start and end times). That API is OAuth only and needs the calling transcripts scopes.</li>
+          <li><strong>Glue:</strong> a tool such as Make can run it: an Azure app calling Graph, a webhook or polling trigger, a contact match by phone number, and the HubSpot calls. Store the recording as a link to the OneDrive or SharePoint file.</li>
+        </ul>
+        <p>Test first whether your Teams Phone calls produce recording or transcript entries in Graph at all. That decides whether this route works. This section is research; I did not build the pipeline.</p>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Carriers distrust registered numbers.</strong> HubSpot warns that registered numbers face more spam labeling and blocking. HubSpot-provided or ported numbers avoid that.</li>
+          <li><strong>Microsoft locked down transcripts.</strong> The July 2026 Graph change means any call or meeting transcript integration needs an admin to turn the setting on.</li>
+          <li><strong>Check inbound support per app.</strong> HubSpot says not every calling app supports inbound calls in HubSpot, and features vary by provider.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Do I need a Sales seat to make calls?</h3>
+        <p>Yes, an assigned Sales Hub or Service Hub seat, whatever kind of number you use.</p>
+        <h3>Why are my outbound calls marked as spam?</h3>
+        <p>Registered numbers use verified caller ID and are not owned by Twilio, so carriers block or label them more often. Use a HubSpot-provided or ported number.</p>
+        <h3>Teams calls are not logging.</h3>
+        <p>Check user mapping, that the contact exists, and that the phone number matches exactly with country and area code. Then wait up to an hour.</p>
+        <h3>Can HubSpot record Teams Phone calls?</h3>
+        <p>Not natively. Only Teams meeting recordings and transcripts sync.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/handle-inbound-incoming-calls-in-hubspot/1898">HubSpot Community question: Handle inbound / incoming calls in HubSpot</a></li>
-          <li><a href="https://knowledge.hubspot.com/calling/receive-inbound-calls-with-calling-apps-within-hubspot">HubSpot Knowledge Base: Receive inbound calls with calling apps</a></li>
+          <li><a href="https://knowledge.hubspot.com/calling/calling-supported-countries-and-phone-number-availability">HubSpot Knowledge Base: Calling supported countries and phone number availability</a></li>
+          <li><a href="https://knowledge.hubspot.com/calling/receive-inbound-calls-with-calling-apps-within-hubspot">HubSpot Knowledge Base: Use a calling app to make and receive calls</a></li>
+          <li><a href="https://knowledge.hubspot.com/calling/why-is-my-microphone-not-working-when-making-calls">HubSpot Knowledge Base: Microphone not working when making calls</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/log-microsoft-teams-calls-to-hubspot-records">HubSpot Knowledge Base: Log Microsoft Teams calls to HubSpot records</a></li>
+          <li><a href="https://knowledge.hubspot.com/integrations/sync-microsoft-teams-meeting-recordings-and-transcripts-to-hubspot">HubSpot Knowledge Base: Sync Teams meeting recordings and transcripts</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/latest/crm/extensions/calling-extensions/third-party-transcripts">HubSpot developer docs: Third-party transcripts</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/answers/questions/5965856/graph-api-access-to-transcripts-stopped-working-af">Microsoft Q&amp;A: Graph transcript access change</a></li>
+          <li><a href="https://techcommunity.microsoft.com/discussions/microsoftteams/access-teams-phone-call-recordings-via-api/4202274">Microsoft Tech Community: Teams Phone recordings via API</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

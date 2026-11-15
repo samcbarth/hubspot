@@ -972,16 +972,6 @@
     <category>Languages</category>
   </item>
   <item>
-    <title>Where HubSpot calling works</title>
-    <link>https://hubspot.samcbarth.com/articles/calling-supported-countries/</link>
-    <guid>https://hubspot.samcbarth.com/articles/calling-supported-countries/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot-provided numbers are available, the seat requirement, and registered numbers.</description>
-    <category>Sales Hub</category>
-    <category>Service Hub</category>
-    <category>Calling</category>
-  </item>
-  <item>
     <title>Use the HubSpot mobile app offline</title>
     <link>https://hubspot.samcbarth.com/articles/mobile-app-offline/</link>
     <guid>https://hubspot.samcbarth.com/articles/mobile-app-offline/</guid>
@@ -991,11 +981,11 @@
     <category>Mobile</category>
   </item>
   <item>
-    <title>Take inbound calls through a calling app in HubSpot</title>
+    <title>HubSpot calling setup: numbers, calling apps, inbound calls, microphone fixes and Microsoft Teams Phone</title>
     <link>https://hubspot.samcbarth.com/articles/receive-inbound-calls/</link>
     <guid>https://hubspot.samcbarth.com/articles/receive-inbound-calls/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How inbound calling works with third-party calling apps in HubSpot and why the calling window must stay open.</description>
+    <description>HubSpot-provided, ported and registered numbers and their trade-offs, seat requirements, calling apps and inbound calls, fixing microphone problems, logging Teams Phone calls, and what it takes to get Teams call recordings in.</description>
     <category>Sales Hub</category>
     <category>Service Hub</category>
     <category>Calling</category>
@@ -1270,16 +1260,6 @@
     <category>Users</category>
   </item>
   <item>
-    <title>Microphone not working on HubSpot calls</title>
-    <link>https://hubspot.samcbarth.com/articles/calling-microphone/</link>
-    <guid>https://hubspot.samcbarth.com/articles/calling-microphone/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot&#39;s checks when your mic fails on calls.</description>
-    <category>Sales Hub</category>
-    <category>Service Hub</category>
-    <category>Calling</category>
-  </item>
-  <item>
     <title>HubSpot with Microsoft Teams, SharePoint and OneDrive: admin vs user install, user mapping and file cards</title>
     <link>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</link>
     <guid>https://hubspot.samcbarth.com/articles/teams-integration-user-permissions/</guid>
@@ -1289,17 +1269,6 @@
     <category>Smart CRM</category>
     <category>Integrations</category>
     <category>Meetings</category>
-  </item>
-  <item>
-    <title>Click to call with Microsoft Teams from HubSpot: what logs, and what you set up outside HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</link>
-    <guid>https://hubspot.samcbarth.com/articles/teams-click-to-call-logging/</guid>
-    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How Teams Phone calls log to HubSpot records, the exact phone match rule, the 15 to 60 minute delay, and the Windows setting that makes HubSpot phone numbers open Teams.</description>
-    <category>Sales Hub</category>
-    <category>Service Hub</category>
-    <category>Calling</category>
-    <category>Integrations</category>
   </item>
   <item>
     <title>Recurring client meetings not logging in HubSpot: what to check, in order</title>
@@ -1410,17 +1379,6 @@
     <description>A safe routine for closing old HubSpot deals: find stale ones on the board, check last activity and next steps, then move them to Closed Lost with a reason.</description>
     <category>Sales Hub</category>
     <category>Deals</category>
-  </item>
-  <item>
-    <title>Can HubSpot get Microsoft Teams Phone recordings and transcripts? What works and what doesn&#39;t</title>
-    <link>https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/</link>
-    <guid>https://hubspot.samcbarth.com/articles/teams-phone-recordings-to-hubspot/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>HubSpot logs Teams calls and syncs Teams meeting recordings, but not Teams Phone recordings. What Microsoft Graph offers, the 2026 transcript setting, HubSpot&#39;s transcripts API, and a Make versus Data Hub comparison.</description>
-    <category>Sales Hub</category>
-    <category>Data Hub</category>
-    <category>Integrations</category>
-    <category>Calling</category>
   </item>
   <item>
     <title>Deal missing from HubSpot revenue attribution? A deal needs four things</title>
