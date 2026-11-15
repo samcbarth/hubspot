@@ -681,17 +681,6 @@
     <category>Tracking code</category>
   </item>
   <item>
-    <title>Set up your brand kit: logos, favicon, colors, fonts and theme</title>
-    <link>https://hubspot.samcbarth.com/articles/brand-kit-setup/</link>
-    <guid>https://hubspot.samcbarth.com/articles/brand-kit-setup/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot&#39;s brand kit lives, what it controls, and how it ties into themes and AI brand voice.</description>
-    <category>Marketing Hub</category>
-    <category>Content Hub</category>
-    <category>Website</category>
-    <category>AI</category>
-  </item>
-  <item>
     <title>Build ad audiences and lookalikes from HubSpot segments</title>
     <link>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</link>
     <guid>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</guid>
@@ -1002,11 +991,11 @@
     <category>Email</category>
   </item>
   <item>
-    <title>Set your website favicon in HubSpot</title>
+    <title>HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages</title>
     <link>https://hubspot.samcbarth.com/articles/favicon-setup/</link>
     <guid>https://hubspot.samcbarth.com/articles/favicon-setup/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where HubSpot&#39;s favicon setting is, what content it applies to, and how it ties to the brand kit.</description>
+    <description>Set the brand kit and favicon, see what HubSpot puts in your sitemap (landing pages are not automatic), turn on the BlogPosting schema switch, and add other schema in templates or page head HTML.</description>
     <category>Content Hub</category>
     <category>Website</category>
   </item>
@@ -1297,16 +1286,6 @@
     <description>How HubSpot&#39;s related_blog_posts HubL tag lists posts by tag, author or blog, and why it isn&#39;t an editable module.</description>
     <category>Content Hub</category>
     <category>Blog</category>
-    <category>HubL</category>
-  </item>
-  <item>
-    <title>Add schema markup (structured data) to HubSpot pages and posts</title>
-    <link>https://hubspot.samcbarth.com/articles/add-schema-markup/</link>
-    <guid>https://hubspot.samcbarth.com/articles/add-schema-markup/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Two ways to add JSON-LD structured data in HubSpot: per page in head HTML, or in the template with HubL, then validate it.</description>
-    <category>Content Hub</category>
-    <category>SEO</category>
     <category>HubL</category>
   </item>
   <item>
@@ -2462,16 +2441,6 @@
     <description>How the HubSpot Product Updates page works: New to you, Your Betas, Live, In beta, In development, and Sunset, and how to join a public beta or request a private one.</description>
     <category>Smart CRM</category>
     <category>Account settings</category>
-  </item>
-  <item>
-    <title>The HubSpot sitemap: what is included automatically and what is not</title>
-    <link>https://hubspot.samcbarth.com/articles/hubspot-sitemap-settings/</link>
-    <guid>https://hubspot.samcbarth.com/articles/hubspot-sitemap-settings/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where to view and edit the sitemap for a HubSpot-hosted domain, which content HubSpot adds automatically, why landing pages are not included, and how to add a page.</description>
-    <category>Content Hub</category>
-    <category>Website</category>
-    <category>SEO</category>
   </item>
   <item>
     <title>HubSpot inbox channels and the fallback email address</title>

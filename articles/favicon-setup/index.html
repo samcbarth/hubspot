@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Set your website favicon in HubSpot - HubSpot Field Notes</title>
-<meta name="description" content="Where HubSpot's favicon setting is, what content it applies to, and how it ties to the brand kit.">
+<title>HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages - HubSpot Field Notes</title>
+<meta name="description" content="Set the brand kit and favicon, see what HubSpot puts in your sitemap (landing pages are not automatic), turn on the BlogPosting schema switch, and add other schema in templates or page head HTML.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/favicon-setup/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/favicon-setup/">
-<meta property="og:title" content="Set your website favicon in HubSpot">
-<meta property="og:description" content="Where HubSpot's favicon setting is, what content it applies to, and how it ties to the brand kit.">
+<meta property="og:title" content="HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages">
+<meta property="og:description" content="Set the brand kit and favicon, see what HubSpot puts in your sitemap (landing pages are not automatic), turn on the BlogPosting schema switch, and add other schema in templates or page head HTML.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/favicon-setup/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Set your website favicon in HubSpot",
-      "description": "Where HubSpot's favicon setting is, what content it applies to, and how it ties to the brand kit.",
+      "headline": "HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages",
+      "description": "Set the brand kit and favicon, see what HubSpot puts in your sitemap (landing pages are not automatic), turn on the BlogPosting schema switch, and add other schema in templates or page head HTML.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/favicon-setup/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Set your website favicon in HubSpot",
-      "totalTime": "PT2M",
+      "name": "HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Open Brand", "text": "Marketing, Brand, Brand kit."},
-        {"@type": "HowToStep", "name": "Add favicon", "text": "Click Add Favicon and upload."},
-        {"@type": "HowToStep", "name": "Check", "text": "Reload a HubSpot page and clear the browser cache."}
+        {"@type": "HowToStep", "name": "Fill the brand kit", "text": "Marketing, Brand: logo, favicon, colors, fonts."},
+        {"@type": "HowToStep", "name": "Check the sitemap", "text": "Settings, Content, Domains and URLs, Sitemap."},
+        {"@type": "HowToStep", "name": "Add landing pages you want indexed", "text": "Use Add a page."},
+        {"@type": "HowToStep", "name": "Turn on blog structured data", "text": "Blog settings, Structured Data switch."},
+        {"@type": "HowToStep", "name": "Add other schema", "text": "Template or page head HTML, then validate."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Set your website favicon in HubSpot", "item": "https://hubspot.samcbarth.com/articles/favicon-setup/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages", "item": "https://hubspot.samcbarth.com/articles/favicon-setup/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Website">Website</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span></div>
-      <h1>Set your website favicon in HubSpot</h1>
-      <p class="dek">The favicon comes from the brand kit and only applies to HubSpot-hosted content.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Content Hub</span></div>
+      <h1>HubSpot site settings: brand kit and favicon, sitemap, and structured data for blogs and pages</h1>
+      <p class="dek">Older blogs often have HubSpot&#x27;s BlogPosting schema switched off, and landing pages never enter the sitemap on their own. The four site-wide settings worth checking once.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All CMS tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Brand settings access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>2 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Content Hub or Marketing Hub (any tier with hosted content)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or Edit account defaults for the brand kit; Website settings access</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,92 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: on the <strong>Brand Kit</strong> tab, click <strong>Add Favicon</strong>. The favicon is the small image in the browser tab and <strong>only applies to content hosted on HubSpot</strong>. With the Brands add-on, set it per brand. Browsers cache favicons, so a change can take time to appear.</p>
+          <p>Four site-wide settings decide how a HubSpot-hosted site looks in browsers and search. The <strong>brand kit</strong> (<strong>Marketing, Brand</strong>) holds the logo, favicon, colors, fonts and theme. The <strong>sitemap</strong> (<strong>Settings, Content, Domains &amp; URLs, Sitemap</strong>) adds live website pages and blog posts automatically, but not landing pages. <strong>Structured data</strong> for blog posts is one switch in blog settings that applies BlogPosting schema; it was off by default for blogs created before June 2022. Anything else, such as Organization or Product schema, goes in the template or the page's head HTML. The favicon only applies to content hosted on HubSpot.</p>
         </div>
 
-        <h2>1. The brand kit</h2>
-        <p>My demo portal has no favicon yet.</p>
-        <figure class="shot"><a href="brand.webp"><img src="brand.webp" alt="Brand kit with an empty Favicons slot" width="738" height="780" loading="lazy"></a><figcaption>Favicons (1).</figcaption></figure>
-        <h2>2. External sites</h2>
-        <p>Sites not hosted on HubSpot set favicons in their own platform.</p>
-        <h2>3. Related</h2>
-        <p><a href="../brand-kit-setup/">Brand kit setup</a>.</p>
+        <h2>1. Brand kit and favicon</h2>
+        <p>Go to <strong>Marketing, Brand</strong>. The brand kit holds the logo, favicon, brand colors, fonts and a theme used by pages and blogs. Editing it needs Super Admin or the Edit account defaults permission. With the Brands add-on, pick the brand from the dropdown at the top right first, because each brand has its own kit.</p>
+        <figure class="shot"><a href="brand.webp"><img src="brand.webp" alt="Brand kit with an empty Favicons slot" width="738" height="780" loading="lazy"></a><figcaption>The Favicons slot in the brand kit (1). My demo portal has none set.</figcaption></figure>
+        <ul>
+          <li><strong>Favicon:</strong> click <strong>Add Favicon</strong> and pick an image from the files tool or upload one. You can store up to 20 per brand. It only applies to content hosted on HubSpot, so a WordPress or Webflow site sets its own.</li>
+          <li><strong>Fonts:</strong> pick a fallback font with a similar x-height and weight to your custom font. Email clients like Gmail and Outlook show the fallback, see <a href="../transactional-email-add-on/">building marketing emails</a>.</li>
+          <li><strong>Brand voice and knowledge:</strong> the same page has Brand voice and Brand knowledge tabs that HubSpot's AI tools use. See <a href="../agent-hub-context/">Agent Hub context</a>.</li>
+        </ul>
+        <p>A new favicon can take a while to show because browsers cache favicons. Check it in a private window before assuming it failed.</p>
+
+        <h2>2. The sitemap</h2>
+        <p>Open <strong>Settings, Content, Domains &amp; URLs</strong>, then the <strong>Sitemap</strong> tab (1). Pick a domain to see its pages (3). <strong>View XML file</strong> (2) opens the file, which is also at <code>/sitemap.xml</code> on your domain.</p>
+        <figure class="shot"><a href="sitemap.webp"><img src="sitemap.webp" alt="Sitemap settings with the Sitemap tab, View XML file and Configure sitemap, and the page list highlighted" width="800" height="553" loading="lazy"></a><figcaption>Sitemap tab (1), View XML and configure (2), and the page list (3).</figcaption></figure>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Content</th><th>In the sitemap?</th></tr></thead>
+            <tbody>
+              <tr><td>Live website pages and blog posts</td><td>Automatically</td></tr>
+              <tr><td>Landing pages</td><td>Only if you add them with <strong>+ Add a page</strong></td></tr>
+              <tr><td>HubDB dynamic child pages</td><td>Only if the parent page is in the sitemap. They show in the XML, not the list.</td></tr>
+              <tr><td>Videos on HubSpot-hosted pages</td><td>Can generate video entries with title, description, tags and thumbnail</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>To remove a page, hover over it and click <strong>Remove</strong>.</li>
+          <li>To set change frequency and priority, hover, click <strong>Options</strong>, pick values, and save.</li>
+          <li>Campaign landing pages reached from ads usually do not need to be in it. Add the ones you want found in search.</li>
+        </ul>
+        <p>For comparison, I read the sitemap of a live site on HubSpot's CMS on November 15, 2026. It listed 454 URLs with a <code>lastmod</code> date on each, image entries for page images, and 90 video entries, all generated by HubSpot. After you change pages, submit <code>https://yourdomain.com/sitemap.xml</code> in Google Search Console so Google rereads it.</p>
+
+        <h2>3. Structured data for blog posts: one switch</h2>
+        <p>In your blog settings (the blog's <strong>General</strong> tab), pick the blog and scroll to <strong>Structured Data</strong>, "Apply BlogPosting schema to all blog posts" (1):</p>
+        <figure class="shot"><a href="blog-schema.webp"><img src="blog-schema.webp" alt="Blog settings with the Structured Data switch, Apply BlogPosting schema to all blog posts, turned on" width="800" height="58" loading="lazy"></a><figcaption>The Structured Data switch in blog settings (1).</figcaption></figure>
+        <p>HubSpot added this setting in June 2022. It was turned <strong>off for every blog that existed then</strong> and on for blogs created afterwards, so older portals often have it off. Turn it on unless your template already outputs its own BlogPosting JSON-LD, or the post will carry two copies.</p>
+        <p>On the live HubSpot blog I checked, the generated JSON-LD included the headline, author name and author page, publish and modified dates, the publisher with its logo, and <code>mainEntityOfPage</code>. Users in HubSpot's announcement thread point out it does not include the post's meta description.</p>
+
+        <h2>4. Other schema: template or page head</h2>
+        <p>For anything beyond BlogPosting, such as Organization, LocalBusiness, Product or Event, add JSON-LD yourself:</p>
+        <ul>
+          <li><strong>One page:</strong> paste it into the page's settings under head HTML.</li>
+          <li><strong>Every page of a type:</strong> add it to the template in the design manager (1) so HubL fills in the values.</li>
+        </ul>
+        <figure class="shot"><a href="dm.webp"><img src="dm.webp" alt="Design Manager file tree with theme folders and a Create a new file button" width="800" height="824" loading="lazy"></a><figcaption>Theme folders (1) and Create a new file (2).</figcaption></figure>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ content.name }}"
+}
+&lt;/script&gt;</code></pre>
+        <p>That pattern is from HubSpot's developer blog. Validate the result with Google's Rich Results Test before publishing,.</p>
+
+        <h2>5. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Fewer rich results.</strong> Google stopped showing How-to rich results in September 2023, announced in June 2025 it was phasing out several lesser-used structured data features, and in May 2026 added a deprecation notice to the FAQ rich result. Schema still helps search engines understand the page, but do not add FAQ or HowTo markup expecting a visual result.</li>
+          <li><strong>Brand context feeds AI.</strong> Brand voice and Brand knowledge sit next to the brand kit, and HubSpot's AI tools read them. Fill them in the same pass as logos and colors.</li>
+          <li><strong>Check old blogs.</strong> If your blog predates June 2022, the BlogPosting switch is probably still off.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>My favicon is not showing.</h3>
+        <p>Browsers cache favicons, so try a private window. If the site is not hosted on HubSpot, HubSpot's favicon does not apply; set it on that platform.</p>
+        <h3>Why are my landing pages not in the sitemap?</h3>
+        <p>HubSpot only adds website pages and blog posts automatically. Add landing pages with <strong>+ Add a page</strong> in the sitemap settings.</p>
+        <h3>Does HubSpot add schema automatically?</h3>
+        <p>For blog posts, yes, if the Structured Data switch in blog settings is on. For website and landing pages, add it yourself.</p>
+        <h3>Should I still add FAQ schema?</h3>
+        <p>Google has deprecated the FAQ rich result, so it no longer produces a visual result. Add it only if you have another reason to.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/favicon-not-showing/64559">HubSpot Community question: Favicon Not Showing</a></li>
           <li><a href="https://knowledge.hubspot.com/branding/edit-your-logo-favicon-and-brand-colors">HubSpot Knowledge Base: Edit a brand's logo, favicon, colors, fonts and theme</a></li>
+          <li><a href="https://knowledge.hubspot.com/website-and-landing-pages/use-fonts-in-hubspot">HubSpot Knowledge Base: Use fonts in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/domains-and-urls/view-and-edit-a-hubspot-hosted-domain-sitemap">HubSpot Knowledge Base: View and edit a HubSpot-hosted domain sitemap</a></li>
+          <li><a href="https://community.hubspot.com/t/now-live-setting-to-apply-blogposting-json-ld-schema-to-blog-posts/58540">HubSpot Community: Setting to apply BlogPosting JSON-LD schema to blog posts (June 2022)</a></li>
+          <li><a href="https://developers.hubspot.com/blog/how-to-use-structured-data-schema-markup-in-hubspot-to-improve-seo">HubSpot developer blog: How to use structured data in HubSpot</a></li>
+          <li><a href="https://developers.google.com/search/updates">Google Search Central: Documentation updates (FAQ deprecation, May 2026)</a></li>
+          <li><a href="https://developers.google.com/search/blog/2025/06/simplifying-search-results">Google Search Central: Simplifying the search results page (June 2025)</a></li>
+          <li><a href="https://community.hubspot.com/t/favicon-not-showing/64559">HubSpot Community: Favicon not showing</a></li>
+          <li><a href="https://community.hubspot.com/t/add-schema-markup-to-blog/61638">HubSpot Community: Add schema markup to blog</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
