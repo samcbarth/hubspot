@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Customer journey reports - HubSpot Field Notes</title>
-<meta name="description" content="What HubSpot's customer journey reports show, the Enterprise requirement, Pathfinder for defining stages, and how funnels count stages.">
+<title>HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails - HubSpot Field Notes</title>
+<meta name="description" content="Single-object vs custom report builder vs funnel, journey and attribution reports, with tiers, the 1,000-row and two-hour refresh limits, form reporting rules, and how recurring report and dashboard emails work.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/customer-journey-analytics/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/customer-journey-analytics/">
-<meta property="og:title" content="Customer journey reports">
-<meta property="og:description" content="What HubSpot's customer journey reports show, the Enterprise requirement, Pathfinder for defining stages, and how funnels count stages.">
+<meta property="og:title" content="HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails">
+<meta property="og:description" content="Single-object vs custom report builder vs funnel, journey and attribution reports, with tiers, the 1,000-row and two-hour refresh limits, form reporting rules, and how recurring report and dashboard emails work.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/customer-journey-analytics/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Customer journey reports",
-      "description": "What HubSpot's customer journey reports show, the Enterprise requirement, Pathfinder for defining stages, and how funnels count stages.",
+      "headline": "HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails",
+      "description": "Single-object vs custom report builder vs funnel, journey and attribution reports, with tiers, the 1,000-row and two-hour refresh limits, form reporting rules, and how recurring report and dashboard emails work.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/customer-journey-analytics/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Customer journey reports",
-      "totalTime": "PT4M",
+      "name": "HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails",
+      "totalTime": "PT10M",
       "step": [
-        {"@type": "HowToStep", "name": "Create a report", "text": "Customer journey report."},
-        {"@type": "HowToStep", "name": "Define stages", "text": "Manually or with Pathfinder for contacts."},
-        {"@type": "HowToStep", "name": "Run and adjust", "text": "Customize, then save."}
+        {"@type": "HowToStep", "name": "Open Reports", "text": "Reporting, Reports, Create report."},
+        {"@type": "HowToStep", "name": "Pick the builder", "text": "Single-object for one object, custom for related data."},
+        {"@type": "HowToStep", "name": "Mind the limits", "text": "1,000 rows for charts, two-hour refresh."},
+        {"@type": "HowToStep", "name": "Add to a dashboard", "text": "From the report's hover actions."},
+        {"@type": "HowToStep", "name": "Schedule emails", "text": "Recurring only to HubSpot users; delete two hours ahead to stop."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Customer journey reports", "item": "https://hubspot.samcbarth.com/articles/customer-journey-analytics/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails", "item": "https://hubspot.samcbarth.com/articles/customer-journey-analytics/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Reporting">Reporting</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
-      <h1>Customer journey reports</h1>
-      <p class="dek">Journeys show which touch points move people forward.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span><span class="badge">Sales Hub</span></div>
+      <h1>HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails</h1>
+      <p class="dek">The report type you pick decides how fresh the data is and how many rows you get. A guide to choosing, plus the rules for emailing reports that catch people out.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Marketing, Sales or Service Hub Enterprise</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Reports access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Advanced</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Any plan for single-object reports; Professional for custom reports; Enterprise for journeys and attribution</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Create/own and Edit report permissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>10 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,23 +103,94 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: customer journey reports show which touch points are most effective at attracting and converting customers. With <strong>Contacts</strong> as the source, <strong>Pathfinder</strong> can suggest stages. In funnel reports, contacts must pass required stages <strong>in order</strong> to count later. Listed for Enterprise.</p>
+          <p>Start with a <strong>single-object report</strong> when one object answers the question: it queries the live CRM and updates fastest. Use the <strong>custom report builder</strong> (Professional or Enterprise) when you need related objects or activities; those reports refresh about every two hours and non-table charts stop at 1,000 rows. <strong>Funnel</strong> reports measure conversion between stages, <strong>customer journey</strong> reports show which touch points convert (Enterprise), and <strong>attribution</strong> reports need Marketing Hub or Content Hub Enterprise. Recurring report and dashboard emails only go to HubSpot users, and a schedule deleted less than two hours before it is due still sends.</p>
         </div>
 
-        <h2>1. Report types</h2>
-        <p>Report options in my demo portal.</p>
+        <h2>1. Where reports live</h2>
+        <p><strong>Reporting, Reports</strong> lists your dashboards and reports, plus HubSpot's prebuilt <strong>analytics suites</strong> for Marketing, Sales, Service and Revenue:</p>
+        <figure class="shot"><a href="reports-list.webp"><img src="reports-list.webp" alt="Reports page listing My dashboards, My reports, and Analytics suites for Sales, Service, and Revenue highlighted" width="800" height="613" loading="lazy"></a><figcaption>Reports and the prebuilt analytics suites.</figcaption></figure>
+        <ul>
+          <li>Tabs for All, Custom and Favorites, filters for dashboard, owner and tags, list or grid view.</li>
+          <li>Hover a report to change its owner, manage access (only for reports not on a dashboard), or add it to a dashboard.</li>
+          <li>Star reports you open often, tag them by team, and change the owner when someone leaves. Account Cleanup can delete unused reports.</li>
+          <li>Analytics suite reports, such as web traffic analysis, open and export from the suite.</li>
+        </ul>
+
+        <h2>2. Pick the right builder</h2>
+        <p>The <strong>Create</strong> menu offers Create dashboard, Create report and Create report with AI:</p>
+        <figure class="shot"><a href="create-menu.webp"><img src="create-menu.webp" alt="Reports Create menu with Create report and Create report with AI highlighted" width="800" height="613" loading="lazy"></a><figcaption>The Create menu.</figcaption></figure>
+        <p><strong>Create report</strong> opens the chooser: custom report (1), single-object (2), and the template library (3), plus customer journey and attribution reports.</p>
         <figure class="shot"><a href="builders.webp"><img src="builders.webp" alt="Create report chooser with Template report library, Custom report, Single-object report, Customer journey report and Attribution report" width="800" height="824" loading="lazy"></a><figcaption>Custom report (1), single-object (2), and templates (3).</figcaption></figure>
-        <h2>2. Funnels</h2>
-        <p>See <a href="../historical-lifecycle-funnel/">journey vs legacy funnels</a>.</p>
-        <h2>3. Related</h2>
-        <p><a href="../deal-progression/">Deal progression</a>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Report</th><th>Use it for</th><th>Needs</th></tr></thead>
+            <tbody>
+              <tr><td>Single-object</td><td>One object, such as contacts by lifecycle stage. Fastest to update.</td><td>Any plan with reporting</td></tr>
+              <tr><td>Custom report builder</td><td>A primary data source plus related objects, activities and events, with calculations</td><td>Professional or Enterprise; Create/own and Edit report permissions</td></tr>
+              <tr><td>Funnel</td><td>Conversion between lifecycle or pipeline stages, or a custom event funnel (Enterprise)</td><td>Custom report limits apply</td></tr>
+              <tr><td>Customer journey</td><td>Which touch points attract and convert customers</td><td>Enterprise</td></tr>
+              <tr><td>Attribution</td><td>Contact attribution; deal create and revenue attribution</td><td>Marketing Hub or Content Hub Enterprise; revenue needs Marketing Hub Enterprise</td></tr>
+              <tr><td>One-to-one email</td><td>Open, click and reply rates over time</td><td>Professional or Enterprise</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A template is often the fastest starting point. The number of custom reports you can have depends on your subscription, and owning several subscriptions of the same tier does not add the limits together.</p>
+
+        <h2>3. Custom report builder limits</h2>
+        <ul>
+          <li>Non-table charts are limited to 1,000 unique rows. Add filters or use a dimension with fewer values. Table reports paginate past 1,000.</li>
+          <li>Custom reports refresh about every two hours, so a change in the CRM may not show yet.</li>
+          <li>Existing reports cannot be merged. Build a new report with all the data sources, or keep separate reports on one dashboard.</li>
+          <li><strong>Forms:</strong> supports HubSpot forms, non-HubSpot forms, blog comment forms and legacy pop-ups, but not lead ads, scheduling pages or surveys. Form submissions and form analytics data sources cannot be in the same report. For quick numbers, the forms list Analyze tab may be enough, see <a href="../form-file-upload-field/">forms</a>.</li>
+        </ul>
+        <p>If <strong>Create report</strong> shows a tooltip instead of opening, the user lacks report creation permissions. A Super Admin changes this in Users &amp; Teams:</p>
+        <figure class="shot"><a href="no-access.webp"><img src="no-access.webp" alt="Tooltip saying you don't have access to create reports and to ask an admin to change permissions in Users and Teams" width="800" height="613" loading="lazy"></a><figcaption>The tooltip when the user lacks report creation permission.</figcaption></figure>
+
+        <h2>4. Funnels and customer journeys</h2>
+        <p>Funnel reports show conversion between stages as a funnel bar, column or table. Pick stages in order, or the rates do not make sense. In customer journey funnels, contacts must pass required stages in order to count at later ones. With Contacts as the source, Pathfinder can suggest stages. For time in stage on deals, see <a href="../deal-pipeline-rules/">deal pipelines</a>.</p>
+
+        <h2>5. Email reports and dashboards</h2>
+        <p>Recurring report and dashboard emails go daily, weekly or monthly, and <strong>only to HubSpot users</strong>. The dialog labels the field Internal recipients (2):</p>
+        <figure class="shot"><a href="recurring.webp"><img src="recurring.webp" alt="Email this dashboard dialog with Yes, this is a recurring email selected and the Internal recipients field" width="800" height="553" loading="lazy"></a><figcaption>Recurring (1) and Internal recipients (2).</figcaption></figure>
+        <p>One-time sends are looser:</p>
+        <figure class="shot"><a href="once.webp"><img src="once.webp" alt="Email this dashboard dialog with the send once option selected and a Send now button" width="800" height="553" loading="lazy"></a><figcaption>Send once (1) and Send now (2).</figcaption></figure>
+        <ul>
+          <li>Reports can go once to non-users through <strong>Other recipients</strong>, on a verified domain.</li>
+          <li>Dashboards can go once to non-users whose domain is connected as an email sending domain. That needs Professional or Enterprise and admin-level Reporting permissions.</li>
+          <li>HubSpot allows 100 emails a day to non-HubSpot users, and bounced addresses cannot receive report emails.</li>
+          <li>Only single object, event-based and customer journey reports can be attached as files, see <a href="../export-records-from-a-view/">exports</a>.</li>
+        </ul>
+        <p>To change or stop a schedule: for a report, hover it and choose <strong>Actions, Manage recurring shares</strong>; for a dashboard, <strong>Share, Manage recurring emails</strong>. You need Super Admin or ownership. Delete it at least <strong>two hours</strong> before it is due: HubSpot captures the data two hours ahead, and a schedule deleted inside that window still sends. If someone does not get them, check that they allowlist HubSpot's sending addresses and have share notifications on.</p>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Create report with AI</strong> sits next to the builders in the Create menu. Check what it builds against the table above, since the builder it picks decides refresh speed and row limits.</li>
+          <li><strong>Revenue suite.</strong> The analytics suites now include Revenue beside Marketing, Sales and Service.</li>
+          <li><strong>Legacy funnels.</strong> HubSpot's KB calls the older custom funnel builder legacy. New funnels belong in the journey and funnel report types.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why does my custom report not show today's changes?</h3>
+        <p>Custom reports refresh about every two hours. Single-object reports query the live CRM and update faster.</p>
+        <h3>Can I send a recurring report to someone outside HubSpot?</h3>
+        <p>No. Recurring emails only go to HubSpot users. One-time sends can reach outside addresses under the conditions above.</p>
+        <h3>Why does my chart stop at 1,000 rows?</h3>
+        <p>Non-table charts in the custom report builder are capped at 1,000 unique rows. Use a table, or filter.</p>
+        <h3>I deleted a recurring email and it still went out.</h3>
+        <p>It was deleted less than two hours before its send time, after HubSpot had already captured the data.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/visualize-your-journey-custom-journey-analytics/85220">HubSpot Community question: Visualize your Journey: Custom Journey Analytics</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-reports-with-the-custom-report-builder">HubSpot Knowledge Base: Create reports with the custom report builder</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-custom-reports">HubSpot Knowledge Base: Create custom reports</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/manage-reports-in-your-reports-list">HubSpot Knowledge Base: Manage reports in your reports list</a></li>
           <li><a href="https://knowledge.hubspot.com/reports/create-a-journey-report">HubSpot Knowledge Base: Create a report with journey analytics</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/create-custom-funnel-reports">HubSpot Knowledge Base: Create custom (legacy) funnel reports</a></li>
+          <li><a href="https://knowledge.hubspot.com/reports/understand-attribution-reporting">HubSpot Knowledge Base: Understand attribution reporting</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/report-on-forms-using-the-custom-report-builder">HubSpot Knowledge Base: Report on forms using the custom report builder</a></li>
+          <li><a href="https://knowledge.hubspot.com/dashboard/email-or-export-reports-and-dashboards">HubSpot Knowledge Base: Share or export reports and dashboards</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

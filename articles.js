@@ -323,6 +323,8 @@ var ARTICLES = [
   },
   {
     slug: "which-reports-hubspot-can-build",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Which reports can HubSpot build? Report types, limits, and what needs a higher tier",
     excerpt: "HubSpot's custom report types: single object, funnel, custom report builder, attribution, and email reports. What each can and cannot do, and which tier you need.",
     type: "guide",
@@ -2371,6 +2373,8 @@ var ARTICLES = [
   },
   {
     slug: "recurring-report-email",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Email a HubSpot report or dashboard on a schedule: who can receive it and the 2 hour rule",
     excerpt: "How recurring report and dashboard emails work in HubSpot, why recipients must be HubSpot users, how one-time sends differ, and the timing rule for deleting a schedule.",
     type: "tip",
@@ -2992,6 +2996,8 @@ var ARTICLES = [
   },
   {
     slug: "reports-list-and-analytics-suites",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Find and organize reports in HubSpot: the reports list, favorites, and analytics suites",
     excerpt: "How HubSpot's reports list is organized, using views, favorites and tags, changing report owners and access, and where the analytics suites live.",
     type: "tip",
@@ -4958,6 +4964,8 @@ var ARTICLES = [
   },
   {
     slug: "custom-report-builder",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Custom report builder vs single-object reports: which to use",
     excerpt: "What HubSpot's custom report builder adds over single-object reports, the permissions it needs, and how often custom reports refresh.",
     type: "tip",
@@ -7472,19 +7480,20 @@ var ARTICLES = [
   },
   {
     slug: "customer-journey-analytics",
-    title: "Customer journey reports",
-    excerpt: "What HubSpot's customer journey reports show, the Enterprise requirement, Pathfinder for defining stages, and how funnels count stages.",
-    type: "tip",
+    title: "HubSpot custom report builder and report types: which to use, limits, funnels, journeys and recurring report emails",
+    excerpt: "Single-object vs custom report builder vs funnel, journey and attribution reports, with tiers, the 1,000-row and two-hour refresh limits, form reporting rules, and how recurring report and dashboard emails work.",
+    type: "guide",
     problem: "How to",
     hubs: ["Marketing Hub", "Sales Hub"],
     features: ["Reporting"],
-    tier: "Marketing, Sales or Service Hub Enterprise",
-    permissions: "Reports access",
-    verified: "2026-10-07",
+    tier: "Any plan for single-object reports; Professional for custom reports; Enterprise for journeys and attribution",
+    permissions: "Create/own and Edit report permissions",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 4,
+    minutes: 10,
     difficulty: "Advanced",
-    keywords: ["hubspot customer journey report", "journey analytics hubspot", "pathfinder hubspot report", "lifecycle journey report"]
+    keywords: ["hubspot customer journey report", "journey analytics hubspot", "pathfinder hubspot report", "lifecycle journey report"],
+    validated: "2026-11-15 21:20 ET",
   },
   {
     slug: "hubspot-vs-google-analytics-numbers",
@@ -9168,6 +9177,8 @@ var ARTICLES = [
   },
   {
     slug: "form-reports-custom-builder",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Report on forms with the custom report builder",
     excerpt: "Which form data the custom report builder supports and the data source rule.",
     type: "tip",
@@ -16338,6 +16349,8 @@ var ARTICLES = [
   },
   {
     slug: "funnel-reports",
+    draft: true,
+    mergedInto: 'customer-journey-analytics',
     title: "Build a funnel report",
     excerpt: "How HubSpot custom funnel reports show stage conversion.",
     type: "tip",
