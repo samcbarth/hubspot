@@ -477,16 +477,6 @@
     <category>Privacy</category>
   </item>
   <item>
-    <title>Split deal credit between users</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-splits/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-splits/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot deal splits share a deal amount between users for forecasting, where to turn them on, and how collaborators differ.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-    <category>Ownership</category>
-  </item>
-  <item>
     <title>Private content with memberships: access groups and their limits</title>
     <link>https://hubspot.samcbarth.com/articles/memberships-access-groups/</link>
     <guid>https://hubspot.samcbarth.com/articles/memberships-access-groups/</guid>
@@ -652,26 +642,6 @@
     <category>Commerce Hub</category>
     <category>Integrations</category>
     <category>Commerce</category>
-  </item>
-  <item>
-    <title>Deal score: what the number means</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-score/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-score/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s AI deal score predicts the chance of winning open deals, when it updates, and why closed or reopened deals don&#39;t get one.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-    <category>AI</category>
-  </item>
-  <item>
-    <title>ACV, ARR, MRR and TCV on HubSpot deals</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-revenue-properties/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-revenue-properties/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s deal revenue properties are calculated from line items, which tier gets ARR and MRR, and why ACV may look wrong.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-    <category>Products</category>
   </item>
   <item>
     <title>Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means</title>
@@ -932,16 +902,6 @@
     <category>Account security</category>
   </item>
   <item>
-    <title>Use line items on deals</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-line-items/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-line-items/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How line items work on HubSpot deals, the 200-item display limit, and import behavior.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
-    <category>Line items</category>
-  </item>
-  <item>
     <title>Filter a whole dashboard</title>
     <link>https://hubspot.samcbarth.com/articles/dashboard-filters/</link>
     <guid>https://hubspot.samcbarth.com/articles/dashboard-filters/</guid>
@@ -979,15 +939,6 @@
     <description>How the Google Drive integration works per user and its file access rules.</description>
     <category>Smart CRM</category>
     <category>Integrations</category>
-  </item>
-  <item>
-    <title>Add collaborators to a deal</title>
-    <link>https://hubspot.samcbarth.com/articles/deal-collaborators/</link>
-    <guid>https://hubspot.samcbarth.com/articles/deal-collaborators/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How deal collaborators work versus deal splits.</description>
-    <category>Sales Hub</category>
-    <category>Deals</category>
   </item>
   <item>
     <title>Why HubSpot shortens links in social posts</title>
@@ -1346,11 +1297,11 @@
     <category>Records</category>
   </item>
   <item>
-    <title>HubSpot deal settings: default deal amount, default close date, and the create form</title>
+    <title>HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score</title>
     <link>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</link>
     <guid>https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/</guid>
     <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.</description>
+    <description>How the default deal amount (TCV, ACV, ARR, MRR or manual) is calculated, when revenue properties fill in, why API line item changes do not update the amount, deal splits vs collaborators, and how the AI Deal Score works.</description>
     <category>Sales Hub</category>
     <category>Smart CRM</category>
     <category>Deals</category>

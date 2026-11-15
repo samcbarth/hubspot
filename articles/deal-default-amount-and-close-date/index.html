@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>HubSpot deal settings: default deal amount, default close date, and the create form - HubSpot Field Notes</title>
-<meta name="description" content="The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.">
+<title>HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score - HubSpot Field Notes</title>
+<meta name="description" content="How the default deal amount (TCV, ACV, ARR, MRR or manual) is calculated, when revenue properties fill in, why API line item changes do not update the amount, deal splits vs collaborators, and how the AI Deal Score works.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/">
-<meta property="og:title" content="HubSpot deal settings: default deal amount, default close date, and the create form">
-<meta property="og:description" content="The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.">
+<meta property="og:title" content="HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score">
+<meta property="og:description" content="How the default deal amount (TCV, ACV, ARR, MRR or manual) is calculated, when revenue properties fill in, why API line item changes do not update the amount, deal splits vs collaborators, and how the AI Deal Score works.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/og.png">
 <meta property="article:published_time" content="2026-10-03">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "HubSpot deal settings: default deal amount, default close date, and the create form",
-      "description": "The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.",
+      "headline": "HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score",
+      "description": "How the default deal amount (TCV, ACV, ARR, MRR or manual) is calculated, when revenue properties fill in, why API line item changes do not update the amount, deal splits vs collaborators, and how the AI Deal Score works.",
       "datePublished": "2026-10-03",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Set the default deal amount and close date in HubSpot",
-      "totalTime": "PT8M",
+      "name": "HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Open deal settings", "text": "Go to Settings, Data Management, Objects, and select Deals."},
-        {"@type": "HowToStep", "name": "Choose the amount calculation", "text": "Under Default Deal amount, pick TCV, ACV, ARR, MRR, or manual entry."},
-        {"@type": "HowToStep", "name": "Set the close date default", "text": "Turn on Apply default close date and choose a period or time from creation."},
-        {"@type": "HowToStep", "name": "Review the create form", "text": "Customize the Create Deal form fields."}
+        {"@type": "HowToStep", "name": "Choose the default amount", "text": "Settings, Objects, Deals, Setup."},
+        {"@type": "HowToStep", "name": "Set a default close date", "text": "End of period or time after creation."},
+        {"@type": "HowToStep", "name": "Use line items for revenue properties", "text": "TCV, ACV, ARR, MRR fill from line items."},
+        {"@type": "HowToStep", "name": "Recalculate after API changes", "text": "Imports and API edits do not update the amount."},
+        {"@type": "HowToStep", "name": "Pick splits or collaborators", "text": "Splits give credit, collaborators do not."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "HubSpot deal settings: default deal amount, default close date, and the create form", "item": "https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score", "item": "https://hubspot.samcbarth.com/articles/deal-default-amount-and-close-date/" }
       ]
     }
   ]
@@ -88,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Deals">Deals</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Sales Hub</span><span class="badge">Smart CRM</span></div>
-      <h1>HubSpot deal settings: default deal amount, default close date, and the create form</h1>
-      <p class="dek">Two settings decide what every new deal's amount and close date look like before a rep touches them.</p>
+      <h1>HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score</h1>
+      <p class="dek">A deal&#x27;s Amount can come from line items or a rep&#x27;s typing, and the revenue properties only fill in for one of them. The settings that decide it, checked through the API.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Account settings access; Super Admin to set a default deal name</dd></div>
-        <div class="fact"><dt>Time</dt><dd>8 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-03">October 3, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Sales Hub (ARR and MRR need Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Super Admin or edit property settings for deal setup</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,39 +103,91 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>In <span class="ui">Settings</span>, <span class="ui">Objects</span>, <span class="ui">Deals</span>, the <strong>Default Deal amount</strong> decides how the Amount is calculated when line items are on a deal. HubSpot's options are Total contract value (TCV), Annual contract value (ACV), Annual recurring revenue (ARR), Monthly recurring revenue (MRR), and Manual entry. My demo uses ACV. Below it, <strong>Apply default close date to new Deals</strong> sets the close date to the end of a period (this month, in my demo) or a time after creation.</p>
+          <p><strong>Settings, Objects, Deals, Setup</strong> decides how a deal's <strong>Amount</strong> is calculated from line items: TCV, ACV, ARR, MRR or manual entry. The same page sets a default close date, deal splits and collaborators. The revenue properties (<code>hs_tcv</code>, <code>hs_acv</code>, <code>hs_arr</code>, <code>hs_mrr</code>) only fill in when the deal has line items. Line items imported or changed through the API do not update the amount. <strong>Splits</strong> share credit, <strong>collaborators</strong> do not, and the AI <strong>Deal Score</strong> is a win-probability percentage, not a substitute for judgment.</p>
         </div>
 
-        <h2>1. The Deals setup page</h2>
-        <p>Open <a class="hs-link" data-hs="/object-type-settings/{portalId}/object/0-3" href="https://app.hubspot.com/l/object-type-settings/object/0-3"><span class="ui">Deals settings</span></a>. The Setup tab is a short list of defaults.</p>
+        <h2>1. The deal setup page</h2>
+        <p>Open <strong>Settings, Objects, Deals</strong>. The Setup tab has the default deal amount (1), the Create Deal form (2), the default close date (3) and line item owner sync (4):</p>
         <figure class="shot"><a href="setup.webp"><img src="setup.webp" alt="Deals setup page with Default Deal amount, the Create Deal form, Apply default close date, and Sync line item owner highlighted" width="800" height="600" loading="lazy"></a><figcaption>Default deal amount (1), the create form (2), default close date (3), and line item owner sync (4).</figcaption></figure>
-
-        <h2>2. Default deal amount</h2>
-        <p>HubSpot's definitions:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Default deal amount</th><th>Amount equals</th></tr></thead>
+            <tbody>
+              <tr><td>Total contract value (TCV)</td><td>All line items, recurring and one-time</td></tr>
+              <tr><td>Annual contract value (ACV)</td><td>Value over 12 months</td></tr>
+              <tr><td>Annual recurring revenue (ARR)</td><td>Annual revenue from recurring line items and their term (12 months assumed with no term)</td></tr>
+              <tr><td>Monthly recurring revenue (MRR)</td><td>Monthly revenue from recurring line items</td></tr>
+              <tr><td>Manual entry</td><td>Whatever reps type. Adding or removing line items does not change it.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>TCV, ARR and MRR ignore a value typed into Amount. If reps both type amounts and add line items, decide which wins before changing this.</p>
         <ul>
-          <li><strong>TCV:</strong> the total value from the deal's line items, including recurring and one-time charges.</li>
-          <li><strong>ACV:</strong> the value of the deal over a 12-month period.</li>
-          <li><strong>ARR:</strong> annual revenue from recurring line items and their term. With no term, HubSpot assumes 12 months.</li>
-          <li><strong>MRR:</strong> monthly revenue from recurring line items.</li>
-          <li><strong>Manual entry:</strong> adding or removing line items does not change the Amount. Reps update it by hand.</li>
+          <li><strong>Apply default close date to new Deals</strong>: end of a period (such as this month) or a time after creation. It keeps new deals out of the "no close date" bucket, but it is a placeholder.</li>
+          <li><strong>Customize the Create Deal form</strong> sets which fields reps fill in.</li>
+          <li><strong>Sync Line item owner to Deal owner</strong> updates line item owners when the deal owner changes.</li>
         </ul>
-        <p>HubSpot notes that TCV, ARR, and MRR do not take into account a value typed into Amount. If your reps type amounts and also add line items, decide which one wins before you change this.</p>
 
-        <h2>3. Default close date</h2>
-        <p><span class="ui">Apply default close date to new Deals</span> is ticked in my demo, set to <em>End of a certain period</em>, <em>This month</em>. The other choice is <em>Time from Deal creation</em>. A default close date keeps new deals out of the "no close date" bucket in forecasts, but it is a placeholder. For what happens to it when a deal closes, see <a href="../deal-close-date-changes-when-won/">why the close date changes when a deal is won</a>.</p>
+        <h2>2. Revenue properties</h2>
+        <p>The deal revenue group holds Total contract value and Annual contract value (1), and Annual and Monthly recurring revenue (1):</p>
+        <figure class="shot"><a href="value.webp"><img src="value.webp" alt="Deal properties searched for value showing Total contract value and Annual contract value in the Deal revenue group" width="800" height="400" loading="lazy"></a><figcaption>TCV and ACV (1).</figcaption></figure>
+        <figure class="shot"><a href="recurring.webp"><img src="recurring.webp" alt="Deal properties searched for recurring showing Annual recurring revenue and Monthly recurring revenue" width="800" height="400" loading="lazy"></a><figcaption>ARR and MRR (1).</figcaption></figure>
+        <p>Through the API, a demo deal with a one-time line item returned <code>amount</code> 12500, <code>hs_tcv</code> and <code>hs_acv</code> 12500.00, and <code>hs_arr</code> and <code>hs_mrr</code> 0.00. Deals with an amount but no line items returned all four as empty. ARR and MRR need Sales Hub Professional or Enterprise. If ACV looks wrong, check the line items' billing frequency and term.</p>
 
-        <h2>4. The create form and line item owners</h2>
+        <h2>3. Line items</h2>
         <ul>
-          <li><span class="ui">Customize the 'Create Deal' form</span> sets which fields reps see when they create a deal.</li>
-          <li><span class="ui">Sync Line item owner to Deal owner</span>, under Automation, updates the owner on all associated line items when the deal owner changes. It is off in my demo.</li>
+          <li>Line items imported or updated through the API <strong>do not update the deal amount</strong>. Recalculate or set the amount in the same job.</li>
+          <li>The Line items card shows up to 200 line items.</li>
+          <li>Custom line items outside the product library need the Create custom line items permission. Turning that off forces reps onto price books, see <a href="../price-books/">quotes, products and payments</a>.</li>
+          <li>In reports, line item currency matches the deal amount's currency.</li>
         </ul>
+
+        <h2>4. Splits and collaborators</h2>
+        <p>In the Setup tab's <strong>Collaboration</strong> section: <strong>Split Deals among users</strong> (1) and <strong>Allow users to add collaborators</strong> (2). Both are off in my demo portal.</p>
+        <figure class="shot"><a href="collaboration.webp"><img src="collaboration.webp" alt="Deal setup Collaboration section with Split Deals among users and Allow users to add collaborators checkboxes" width="495" height="736" loading="lazy"></a><figcaption>Deal splits (1) and collaborators (2).</figcaption></figure>
+        <ul>
+          <li><strong>Splits</strong> give each user a percentage of the amount, shown on the record and used in forecast totals per user. Agree split rules with sales leadership first.</li>
+          <li><strong>Collaborators</strong> worked on the deal but get no credit. A user can be both.</li>
+          <li>If you customized the deal record layout, add the Collaborators card yourself.</li>
+        </ul>
+        <p>For how splits show in forecasts, see <a href="../sales-forecast-tool/">the sales forecast</a>.</p>
+
+        <h2>5. Deal Score</h2>
+        <figure class="shot"><a href="score.webp"><img src="score.webp" alt="Deal properties searched for score showing Deal Score in Deal information" width="800" height="400" loading="lazy"></a><figcaption>Deal Score (1).</figcaption></figure>
+        <ul>
+          <li>An AI prediction of the probability of winning an open deal, from deal properties and activities, shown as a percentage. In my demo portal 10 deals had scores, between 12% and 22%; the internal name is <code>hs_deal_score</code>.</li>
+          <li>New deals usually get a score within about 36 hours.</li>
+          <li>Closed deals stop updating, reopened deals get no score, and setting probability to 0% or 100% without closing still leaves a score.</li>
+          <li>HubSpot sets no "good score" threshold by stage and says scores should not be the only factor in decisions.</li>
+        </ul>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Revenue Hub.</strong> Pricing features that feed line items, such as tiered pricing and price books, sit in Revenue Hub. See <a href="../price-books/">quotes, products and payments</a>.</li>
+          <li><strong>AI on deals.</strong> Deal Score and Deal progression both read deal activity, so logged calls, meetings and emails make them better. See <a href="../deal-pipeline-rules/">deal pipelines</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Why didn't the amount change when I imported line items?</h3>
+        <p>Imports and API updates to line items do not update the deal amount.</p>
+        <h3>Why are TCV and ARR empty on my deal?</h3>
+        <p>They come from line items. A deal with only a typed amount has none.</p>
+        <h3>Does a collaborator get forecast credit?</h3>
+        <p>No. Use deal splits for credit.</p>
+        <h3>How soon does a new deal get a score?</h3>
+        <p>Usually within about 36 hours.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://knowledge.hubspot.com/object-settings/set-defaults-for-creating-deals">HubSpot Knowledge Base: Set defaults for creating deals</a></li>
           <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-deal-properties">HubSpot Knowledge Base: HubSpot's default deal properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/properties/hubspots-default-line-item-properties">HubSpot Knowledge Base: HubSpot's default line item properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/use-line-items-with-deals">HubSpot Knowledge Base: Use line items with deals</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/split-deal-credit-among-users">HubSpot Knowledge Base: Split deal credit among users</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/add-collaborators-to-a-deal">HubSpot Knowledge Base: Add collaborators to a deal</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/use-deal-scores">HubSpot Knowledge Base: Predict likelihood to close with deal scores</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

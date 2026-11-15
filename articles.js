@@ -1020,19 +1020,20 @@ var ARTICLES = [
   },
   {
     slug: "deal-default-amount-and-close-date",
-    title: "HubSpot deal settings: default deal amount, default close date, and the create form",
-    excerpt: "The Deals setup page in HubSpot: choosing how the deal amount is calculated (TCV, ACV, ARR, MRR, or manual), the default close date for new deals, the create deal form, and line item owner sync.",
+    title: "HubSpot deal amount, revenue properties, line items, splits, collaborators and Deal Score",
+    excerpt: "How the default deal amount (TCV, ACV, ARR, MRR or manual) is calculated, when revenue properties fill in, why API line item changes do not update the amount, deal splits vs collaborators, and how the AI Deal Score works.",
     type: "guide",
     problem: "How to",
     hubs: ["Sales Hub", "Smart CRM"],
     features: ["Deals"],
-    tier: "All tiers",
-    permissions: "Account settings access; Super Admin to set a default deal name",
-    verified: "2026-10-03",
+    tier: "Sales Hub (ARR and MRR need Professional)",
+    permissions: "Super Admin or edit property settings for deal setup",
+    verified: "2026-11-16",
     published: "2026-10-03",
-    minutes: 8,
+    minutes: 9,
     difficulty: "Intermediate",
-    keywords: ["deal amount", "acv", "tcv", "arr", "mrr", "default close date", "deal settings"]
+    keywords: ["deal amount", "acv", "tcv", "arr", "mrr", "default close date", "deal settings"],
+    validated: "2026-11-16 13:05 ET",
   },
   {
     slug: "deal-pipeline-rules",
@@ -4854,6 +4855,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-splits",
+    draft: true,
+    mergedInto: 'deal-default-amount-and-close-date',
     title: "Split deal credit between users",
     excerpt: "How HubSpot deal splits share a deal amount between users for forecasting, where to turn them on, and how collaborators differ.",
     type: "tip",
@@ -6536,6 +6539,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-score",
+    draft: true,
+    mergedInto: 'deal-default-amount-and-close-date',
     title: "Deal score: what the number means",
     excerpt: "How HubSpot's AI deal score predicts the chance of winning open deals, when it updates, and why closed or reopened deals don't get one.",
     type: "tip",
@@ -6552,6 +6557,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-revenue-properties",
+    draft: true,
+    mergedInto: 'deal-default-amount-and-close-date',
     title: "ACV, ARR, MRR and TCV on HubSpot deals",
     excerpt: "How HubSpot's deal revenue properties are calculated from line items, which tier gets ARR and MRR, and why ACV may look wrong.",
     type: "tip",
@@ -10089,6 +10096,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-line-items",
+    draft: true,
+    mergedInto: 'deal-default-amount-and-close-date',
     title: "Use line items on deals",
     excerpt: "How line items work on HubSpot deals, the 200-item display limit, and import behavior.",
     type: "tip",
@@ -11988,6 +11997,8 @@ var ARTICLES = [
   },
   {
     slug: "deal-collaborators",
+    draft: true,
+    mergedInto: 'deal-default-amount-and-close-date',
     title: "Add collaborators to a deal",
     excerpt: "How deal collaborators work versus deal splits.",
     type: "tip",
