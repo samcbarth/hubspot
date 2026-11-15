@@ -510,15 +510,6 @@
     <category>Imports</category>
   </item>
   <item>
-    <title>HubSpot marketing emails going to spam: a deliverability checklist</title>
-    <link>https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/</link>
-    <guid>https://hubspot.samcbarth.com/articles/email-deliverability-spam-checklist/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The checks HubSpot&#39;s KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Connect a Reddit Ads account to HubSpot</title>
     <link>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</link>
     <guid>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</guid>
@@ -695,15 +686,6 @@
     <guid>https://hubspot.samcbarth.com/articles/email-ab-test/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
     <description>How HubSpot&#39;s marketing email A/B test sends two versions to a share of recipients and the winning version to everyone else.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-  </item>
-  <item>
-    <title>Why fewer people got your email: HubSpot&#39;s Don&#39;t send to unengaged contacts setting</title>
-    <link>https://hubspot.samcbarth.com/articles/unengaged-contacts-graymail/</link>
-    <guid>https://hubspot.samcbarth.com/articles/unengaged-contacts-graymail/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s graymail suppression excludes contacts who have not opened recent marketing emails, and the cases where it surprises people.</description>
     <category>Marketing Hub</category>
     <category>Email</category>
   </item>
@@ -1018,16 +1000,6 @@
     <category>Website</category>
   </item>
   <item>
-    <title>Bot opens and clicks in marketing email stats, and Apple Mail Privacy Protection</title>
-    <link>https://hubspot.samcbarth.com/articles/bot-email-opens-clicks/</link>
-    <guid>https://hubspot.samcbarth.com/articles/bot-email-opens-clicks/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s bot filtering removes security scanners and privacy filters from marketing email metrics, and how to check whether it was on for a send.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Analytics</category>
-  </item>
-  <item>
     <title>File upload fields in HubSpot forms: size limit and where files go</title>
     <link>https://hubspot.samcbarth.com/articles/form-file-upload-field/</link>
     <guid>https://hubspot.samcbarth.com/articles/form-file-upload-field/</guid>
@@ -1134,16 +1106,6 @@
     <description>Where HubSpot&#39;s favicon setting is, what content it applies to, and how it ties to the brand kit.</description>
     <category>Content Hub</category>
     <category>Website</category>
-  </item>
-  <item>
-    <title>Click rate vs click-through rate in HubSpot email reports</title>
-    <link>https://hubspot.samcbarth.com/articles/click-rate-vs-click-through-rate/</link>
-    <guid>https://hubspot.samcbarth.com/articles/click-rate-vs-click-through-rate/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The difference between HubSpot&#39;s click rate and click-through rate, and how open rate is counted.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Analytics</category>
   </item>
   <item>
     <title>Post several images at once to Instagram from HubSpot</title>
@@ -1393,11 +1355,11 @@
     <category>Meetings</category>
   </item>
   <item>
-    <title>Resend a marketing email to people who didn&#39;t engage</title>
+    <title>HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends</title>
     <link>https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/</link>
     <guid>https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to build a segment of contacts who were sent an email but didn&#39;t click or open, and why HubSpot skips unengaged contacts by default.</description>
+    <description>Why HubSpot sends to fewer contacts than your segment, how graymail suppression, bounces and quarantine work, what to do when a send is stopped, and the Gmail and Outlook rules to meet.</description>
     <category>Marketing Hub</category>
     <category>Email</category>
     <category>Segments</category>
@@ -1844,16 +1806,6 @@
     <category>Subscriptions</category>
   </item>
   <item>
-    <title>Your marketing email send was stopped</title>
-    <link>https://hubspot.samcbarth.com/articles/marketing-email-send-stopped/</link>
-    <guid>https://hubspot.samcbarth.com/articles/marketing-email-send-stopped/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why HubSpot stops sends and how to resend to engaged contacts.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Deliverability</category>
-  </item>
-  <item>
     <title>Analyze cookie banner interactions</title>
     <link>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</link>
     <guid>https://hubspot.samcbarth.com/articles/cookie-consent-analytics/</guid>
@@ -2226,16 +2178,6 @@
     <category>Segments</category>
   </item>
   <item>
-    <title>Why contacts get quarantined</title>
-    <link>https://hubspot.samcbarth.com/articles/quarantined-contacts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/quarantined-contacts/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot quarantines contacts and how they come back.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
-    <category>Contacts</category>
-  </item>
-  <item>
     <title>Use intent signals on tracked companies</title>
     <link>https://hubspot.samcbarth.com/articles/intent-signals/</link>
     <guid>https://hubspot.samcbarth.com/articles/intent-signals/</guid>
@@ -2263,15 +2205,6 @@
     <category>Content Hub</category>
     <category>Multi-language</category>
     <category>AI</category>
-  </item>
-  <item>
-    <title>Unbounce a contact and resend</title>
-    <link>https://hubspot.samcbarth.com/articles/resend-bounced-contacts/</link>
-    <guid>https://hubspot.samcbarth.com/articles/resend-bounced-contacts/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot handles previously bounced contacts.</description>
-    <category>Marketing Hub</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Cookies HubSpot sets on your visitors</title>
@@ -2388,17 +2321,6 @@
     <category>Smart CRM</category>
     <category>Contacts</category>
     <category>Workflows</category>
-  </item>
-  <item>
-    <title>Bounced contacts still counted as marketing contacts: find them and switch them off</title>
-    <link>https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/</link>
-    <guid>https://hubspot.samcbarth.com/articles/bounced-contacts-still-marketing/</guid>
-    <pubDate>Tue, 06 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Contacts</category>
-    <category>Email</category>
   </item>
   <item>
     <title>Same phone number, different formats: why HubSpot does not flag those duplicates</title>

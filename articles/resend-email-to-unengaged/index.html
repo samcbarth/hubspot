@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Resend a marketing email to people who didn't engage - HubSpot Field Notes</title>
-<meta name="description" content="How to build a segment of contacts who were sent an email but didn't click or open, and why HubSpot skips unengaged contacts by default.">
+<title>HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends - HubSpot Field Notes</title>
+<meta name="description" content="Why HubSpot sends to fewer contacts than your segment, how graymail suppression, bounces and quarantine work, what to do when a send is stopped, and the Gmail and Outlook rules to meet.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/">
-<meta property="og:title" content="Resend a marketing email to people who didn't engage">
-<meta property="og:description" content="How to build a segment of contacts who were sent an email but didn't click or open, and why HubSpot skips unengaged contacts by default.">
+<meta property="og:title" content="HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends">
+<meta property="og:description" content="Why HubSpot sends to fewer contacts than your segment, how graymail suppression, bounces and quarantine work, what to do when a send is stopped, and the Gmail and Outlook rules to meet.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Resend a marketing email to people who didn't engage",
-      "description": "How to build a segment of contacts who were sent an email but didn't click or open, and why HubSpot skips unengaged contacts by default.",
+      "headline": "HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends",
+      "description": "Why HubSpot sends to fewer contacts than your segment, how graymail suppression, bounces and quarantine work, what to do when a send is stopped, and the Gmail and Outlook rules to meet.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Resend a marketing email to people who didn't engage",
-      "totalTime": "PT4M",
+      "name": "HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends",
+      "totalTime": "PT13M",
       "step": [
-        {"@type": "HowToStep", "name": "Create a segment", "text": "Active, contact-based."},
-        {"@type": "HowToStep", "name": "Add an events filter", "text": "Marketing emails, your email, sent but didn't click (or open)."},
-        {"@type": "HowToStep", "name": "Clone the email", "text": "Change the subject line."},
-        {"@type": "HowToStep", "name": "Send to the segment", "text": "Check the unengaged setting."}
+        {"@type": "HowToStep", "name": "Check the unengaged setting", "text": "Settings, Marketing, Email, Subscriptions, Don't send to unengaged contacts."},
+        {"@type": "HowToStep", "name": "Resend to non-engagers", "text": "Segment with the email events filter, clone the email, send to the segment."},
+        {"@type": "HowToStep", "name": "Clean bounced contacts", "text": "Filter on hard bounce reason and set them as non-marketing."},
+        {"@type": "HowToStep", "name": "Handle a stopped send", "text": "Clean recipients, then Send to remaining engaged contacts."},
+        {"@type": "HowToStep", "name": "Authenticate your domain", "text": "Set up SPF, DKIM and DMARC for your sending domain."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resend a marketing email to people who didn't engage", "item": "https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends", "item": "https://hubspot.samcbarth.com/articles/resend-email-to-unengaged/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Email">Email</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>Resend a marketing email to people who didn't engage</h1>
-      <p class="dek">Segment the non-engagers with an email event filter, then send a new version.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends</h1>
+      <p class="dek">Every reason HubSpot skips a recipient or stops a send, the current 11 and 16 email graymail rule, and how to read opens and clicks now that bots and privacy features distort them.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All marketing email tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Marketing email and segment access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All Marketing Hub tiers (some settings need Starter or above)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Marketing email access; Super Admin or email permissions to unbounce</dd></div>
+        <div class="fact"><dt>Time</dt><dd>13 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,24 +103,128 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's re-engagement guide uses an events-based filter: <strong>Marketing emails | [your email] | Email was sent to contact but they didn't click on a link</strong>. Use the same approach for non-openers. By default, HubSpot doesn't send to unengaged contacts, meaning recipients who haven't opened your last 11 marketing emails.</p>
+          <p>HubSpot quietly drops some recipients from every marketing email. <strong>Don't send to unengaged contacts</strong> is on by default and skips anyone who never engaged and ignored your last <strong>11</strong> emails, or who engaged once but ignored the last <strong>16</strong>. Contacts who hard bounced are skipped too, quarantined contacts are skipped, and a send with too many bounces or spam reports can be stopped partway. Leave the protections on, clean bounced and unengaged contacts out of your segments, authenticate your sending domain, and judge results on clicks rather than opens.</p>
         </div>
 
-        <h2>1. Recipients</h2>
-        <p>Send to and Don't send to in my demo portal.</p>
-        <figure class="shot"><a href="editor.webp"><img src="editor.webp" alt="Marketing email editor with Send to and Don't send to fields and a Review and schedule button" width="800" height="824" loading="lazy"></a><figcaption>Recipients (1) and Review and schedule (2).</figcaption></figure>
-        <h2>2. Go easy</h2>
-        <p>Resending to people who ignored the first email adds to graymail. See <a href="../unengaged-contacts-graymail/">unengaged contacts</a>.</p>
-        <h2>3. Related</h2>
-        <p><a href="../segment-by-email-engagement/">Engagement segments</a>.</p>
+        <h2>1. Why fewer people got your email</h2>
+        <p>The number that receives an email is often lower than the segment size. The usual reason is graymail suppression: mail that people opted in to but never open. HubSpot defines an unengaged contact with the <strong>Sends since last engagement</strong> property:</p>
+        <ul>
+          <li>Never engaged with any of your marketing emails, and did not engage with the last 11 you sent them.</li>
+          <li>Engaged in the past, but did not engage with the last 16 you sent them.</li>
+        </ul>
+        <p>The account default lives in <strong>Settings, Marketing, Email, Subscriptions</strong>, under <strong>Resubscription and sending options</strong> (1). It is on in a new portal. Turning it off for the whole account needs Marketing Hub Starter, Professional or Enterprise.</p>
+        <figure class="shot"><a href="graymail-setting.webp"><img src="graymail-setting.webp" alt="HubSpot email subscription settings with the Don't send to unengaged contacts switch turned on" width="800" height="178" loading="lazy"></a><figcaption>The account-wide Don't send to unengaged contacts switch (1).</figcaption></figure>
+        <p>Each email also has its own switch in the editor's send options. The editor shows who is included and excluded at the top (1), and the switch is part of the options you see before <strong>Review and schedule</strong> (2).</p>
+        <figure class="shot"><a href="editor.webp"><img src="editor.webp" alt="HubSpot marketing email editor showing Send to and Don't send to, and the Review and schedule button" width="800" height="824" loading="lazy"></a><figcaption>Send to and Don't send to (1), and Review and schedule (2).</figcaption></figure>
+        <p>One catch for automated emails: if you change the setting after the email is published, the change is not applied, so set it before you publish.</p>
+
+        <h2>2. Resend to people who did not engage</h2>
+        <p>HubSpot's own re-engagement method uses an events filter in a segment, not a property:</p>
+        <ol>
+          <li>Go to <strong>CRM, Segments</strong> and create an active contact segment.</li>
+          <li>Add a filter: <strong>Marketing emails</strong>, pick the email, then <strong>Email was sent to contact but they didn't click on a link</strong>. Use the matching open filter if you want non-openers instead.</li>
+          <li>Clone the original email, change the subject line and preview text, and send the clone to the new segment.</li>
+        </ol>
+        <p>Two things to keep in mind. The clone still respects the unengaged setting, so the people who ignore everything will not get it either way. And every resend to people who ignored the first one adds to graymail. Do it for emails that matter, not every newsletter.</p>
+        <p>If you do need to reach the excluded contacts once, HubSpot's documented route is to clone the email, turn the setting off on the clone, and send it to a segment of the people who were left out.</p>
+
+        <h2>3. Bounced contacts</h2>
+        <p>HubSpot does not send to contacts who have previously bounced for a permanent reason. They show on the email's <strong>Not sent</strong> list and the contact record carries a <strong>Contact has bounced</strong> alert. An address that never bounced in your account is still sent to, unless it has bounced across other HubSpot accounts (a global bounce).</p>
+        <p>To unbounce a contact whose address you have confirmed is correct, open the record, click <strong>Unbounce</strong>, tick <strong>I confirm that this email address is correct</strong>, and confirm. You need Super Admin or marketing email permissions. You have to go through HubSpot Support instead when:</p>
+        <ul>
+          <li>you have unbounced more than 1,000 contacts, or more than 2% of the contacts in the account, this month,</li>
+          <li>the contact has been unbounced before, or</li>
+          <li>the address is a global bounce.</li>
+        </ul>
+        <p>Emails that were dropped while the contact was bounced do not go out after the unbounce. Clone and resend them.</p>
+        <p><strong>Bounced contacts you are still paying for.</strong> A hard-bounced contact can still be a marketing contact. In <strong>Contacts</strong>, filter on <strong>Email hard bounce reason</strong> is known (or <strong>Marketing emails bounced</strong> is greater than 0) plus <strong>Marketing contact status</strong> is marketing contact. Select them and use <strong>More, Set as non-marketing contacts</strong>. With Marketing Hub, <strong>Account &amp; Billing, Marketing Contacts, Clean up contacts</strong> groups unsubscribed and bounced contacts for you. The change takes effect on your next marketing contact update date.</p>
+
+        <h2>4. Quarantined contacts</h2>
+        <p>HubSpot quarantines contacts that put your sending at risk. Its KB lists four causes:</p>
+        <ul>
+          <li>They caused a high hard bounce rate on several emails, or a critically high rate on one.</li>
+          <li>They generated spam complaints or widespread bounce reports from other email services.</li>
+          <li>Their address has a history of hard bounces across HubSpot (global bounces).</li>
+          <li>They came in through suspicious form activity. If many appear at once, check <a href="../form-submissions-marked-spam/">form spam settings</a>.</li>
+        </ul>
+        <p>Find them in the default <strong>Quarantined Contacts</strong> segment under <strong>CRM, Segments</strong>, or build your own with <strong>Quarantined Emails</strong> is known. My Enterprise demo portal has never had a quarantined contact and the default segment does not appear in its list, so if you search and find nothing, that is a good sign.</p>
+        <p>You cannot take a contact out of quarantine by hand. They have to re-engage: reply to a one-to-one email from a connected inbox where they are the only recipient, or submit a HubSpot form.</p>
+
+        <h2>5. When HubSpot stops a send</h2>
+        <p>HubSpot's email protection system can stop a marketing email partway when it builds up a high share of hard bounces, spam reports or unsubscribes, or is flagged for phishing or abusive content. HubSpot does not publish the thresholds. The email is not sent to the remaining recipients.</p>
+        <p>Before you resend, HubSpot asks you to clean the recipients: remove contacts without opt-in consent, check that imported contacts were not already opted out, remove contacts who have not heard from you in over six months, and optionally run the list through an email validation tool. Then use <strong>Send to remaining engaged contacts</strong> in the stopped email notification. It creates a clone with unengaged contacts excluded, which you send from the editor.</p>
+        <p>Treat a stop as a warning about the list, not a glitch. Repeated stops can lead to contacts being quarantined or to a sending suspension for the account.</p>
+
+        <h2>6. Read the numbers correctly</h2>
+        <p>HubSpot's definitions:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Metric</th><th>Out of</th><th>Use it for</th></tr></thead>
+            <tbody>
+              <tr><td>Open rate</td><td>Recipients who received the email</td><td>Trend only. Privacy features and scanners distort it.</td></tr>
+              <tr><td>Click rate</td><td>Recipients who received the email</td><td>Comparing emails sent to different lists.</td></tr>
+              <tr><td>Click-through rate</td><td>Recipients who opened the email</td><td>Testing content among people who opened.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>An open is counted when images load, or when someone clicks a link without loading images. That is why opens are the least reliable number. <strong>Bot filtering</strong> removes suspected bot activity, including security scanners, privacy filters such as Apple Mail Privacy Protection, and corporate screeners such as Mimecast. It is on by default, under <strong>Settings, Tracking &amp; Analytics, Tracking Code, Advanced Tracking</strong> (1):</p>
+        <figure class="shot"><a href="bot-filtering.webp"><img src="bot-filtering.webp" alt="HubSpot Advanced Tracking settings with Bot filtering turned on" width="800" height="94" loading="lazy"></a><figcaption>Bot filtering (1). It also covers forms, social posts, pages, CTAs and workflow enrollments.</figcaption></figure>
+        <p>Filtered numbers are usually lower than unfiltered ones. Each sent email's performance page shows whether bot filtering was on for that send and lets you see both versions.</p>
+
+        <h2>7. Deliverability checklist</h2>
+        <ul>
+          <li><strong>Authenticate your sending domain</strong> with SPF, DKIM and DMARC in HubSpot's domain settings. Without it, HubSpot sends using a variable domain in the From address, which can look suspicious to the receiving server. See <a href="../replace-brand-domain/">domains in HubSpot</a>.</li>
+          <li><strong>Never send to bought or scraped lists.</strong> They can contain spam traps, and a segment that hits one can be quarantined.</li>
+          <li><strong>Keep graymail suppression on</strong> and set bounced contacts to non-marketing.</li>
+          <li><strong>Use real opt-in.</strong> See <a href="../double-opt-in-marketing-email/">double opt-in</a> and <a href="../email-subscription-types/">subscription types</a>.</li>
+          <li><strong>Warm up new domains.</strong> After moving to a new domain or email provider, HubSpot recommends starting with low volume and increasing over 30 to 60 days.</li>
+          <li><strong>Watch the Health tab.</strong> <strong>Marketing, Email, Health</strong> (1) gives a score (2) and tracks hard bounces, unsubscribes and spam reports against a benchmark (3). It needs some send history before it shows a score.</li>
+        </ul>
+        <figure class="shot"><a href="health.webp"><img src="health.webp" alt="HubSpot email Health tab with the score and the hard bounce, unsubscribe and spam report metrics" width="800" height="270" loading="lazy"></a><figcaption>The Health tab (1), score (2), and bounce and spam metrics (3).</figcaption></figure>
+
+        <h2>8. What to have in place for 2027</h2>
+        <p>The mailbox providers' rules are not new, but they are enforced now and they are the reason a list that delivered fine a few years ago can land in spam today.</p>
+        <ul>
+          <li><strong>Gmail</strong> (since February 1, 2024): anyone sending more than 5,000 messages a day to Gmail accounts needs SPF, DKIM and DMARC, one-click unsubscribe on marketing messages, and a spam rate in Postmaster Tools below 0.3%. Google's target is below 0.1%.</li>
+          <li><strong>Outlook.com, Hotmail and Live</strong> (since May 5, 2025): the same three authentication checks for senders over 5,000 a day. Non-compliant mail goes to Junk first and can then be rejected with <code>550; 5.7.515</code>.</li>
+          <li><strong>Do not send from a free mailbox address.</strong> Google says Gmail will use a DMARC quarantine policy, so a marketing email with a gmail.com From address can go to spam. Send from your own authenticated domain.</li>
+          <li><strong>HubSpot changed the graymail rule.</strong> Older guides, including an earlier version of this page, say 11 emails for everyone. The current KB splits it into 11 for contacts who never engaged and 16 for contacts who engaged before.</li>
+          <li><strong>Report on clicks, replies and meetings.</strong> Opens keep getting less reliable as more inboxes prefetch images or scan links.</li>
+        </ul>
+        <p>Keep the unsubscribe link in your email footer, and check with your sending domain setup that SPF, DKIM and DMARC all pass. The rest is list hygiene.</p>
+
+        <h2>Common questions</h2>
+        <h3>My open rate dropped overnight and deliveries did not change. Is HubSpot's tracking broken?</h3>
+        <p>A HubSpot Community thread from September 2026 had exactly this: opens excluding bots fell from about 17% to 3 or 4% between two weekly sends, with the same 180 deliveries. The poster later found the whole drop came from Gmail recipients and was sending without an authenticated domain. Replies pointed to inbox placement, not tracking. Check whether clicks and replies dropped too, compare by mailbox provider, set up Google Postmaster Tools, and authenticate the domain.</p>
+        <h3>Should I turn off Don't send to unengaged contacts to reach my whole list?</h3>
+        <p>Usually no. Mailbox providers move low-engagement mail to spam, which lowers placement for the people who do read you. If you must reach the excluded group once, clone the email, turn the setting off on the clone only, and send it to a segment of those contacts.</p>
+        <h3>Can I remove a contact from quarantine?</h3>
+        <p>No. The contact has to reply to a one-to-one email where they are the only recipient, or submit a HubSpot form.</p>
+        <h3>A contact says they never got the email but they are not bounced. Why?</h3>
+        <p>Check whether they were unengaged at send time (the <strong>Sends since last engagement</strong> property), unsubscribed from that subscription type, quarantined, or on the email's Not sent list. If none apply, the email was delivered and the problem is on the receiving side, usually a spam folder or a corporate filter.</p>
+        <h3>Click rate or click-through rate?</h3>
+        <p>Click rate when comparing emails sent to different lists, because it does not depend on opens. Click-through rate when testing content among people who opened.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/resending-email-to-non-openers-of-original-email/3764">HubSpot Community question: Resending email to non openers of original email</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/what-is-graymail-and-how-can-i-avoid-sending-my-email-to-unengaged-contacts">HubSpot Knowledge Base: Understand graymail and avoid sending email to unengaged contacts</a></li>
           <li><a href="https://knowledge.hubspot.com/marketing-email/run-a-re-engagement-email-marketing-campaign">HubSpot Knowledge Base: Run a re-engagement email marketing campaign</a></li>
-          <li><a href="https://knowledge.hubspot.com/marketing-email/create-and-send-marketing-emails">HubSpot Knowledge Base: Create and send marketing emails</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/send-emails-to-contacts-who-previously-bounced">HubSpot Knowledge Base: Send emails to contacts who previously bounced</a></li>
+          <li><a href="https://knowledge.hubspot.com/records/set-contacts-as-non-marketing">HubSpot Knowledge Base: Set contacts as non-marketing</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-and-manage-quarantined-contacts">HubSpot Knowledge Base: Understand and manage quarantined contacts</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/marketing-email-send-was-stopped">HubSpot Knowledge Base: Marketing email send was stopped</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/analyze-your-marketing-email-campaign-performance">HubSpot Knowledge Base: Analyze marketing email performance</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-bot-filtering-in-marketing-email-analytics">HubSpot Knowledge Base: Understand bot filtering in marketing email analytics</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-email-sending-in-hubspot">HubSpot Knowledge Base: Understand email sending in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/email-deliverability-best-practices">HubSpot Knowledge Base: Improve email deliverability</a></li>
+          <li><a href="https://knowledge.hubspot.com/marketing-email/understand-spam-traps-and-email-blocklists">HubSpot Knowledge Base: Understand spam traps and email blocklists</a></li>
+          <li><a href="https://support.google.com/mail/answer/81126?hl=en">Gmail Help: Email sender guidelines</a></li>
+          <li><a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730">Microsoft: Outlook's new requirements for high-volume senders</a></li>
+          <li><a href="https://community.hubspot.com/t/did-marketing-email-open-tracking-suddenly-change-in-hubspot/158567">HubSpot Community: Did marketing email open tracking suddenly change in HubSpot?</a></li>
+          <li><a href="https://community.hubspot.com/t/resending-email-to-non-openers-of-original-email/3764">HubSpot Community: Resending email to non openers of original email</a></li>
+          <li><a href="https://community.hubspot.com/t/what-is-the-distinction-between-click-rate-and-click-through-rate-ctr-in-hubspot-email-reports/12919">HubSpot Community: Click rate vs click-through rate</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

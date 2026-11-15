@@ -1917,6 +1917,8 @@ var ARTICLES = [
   },
   {
     slug: "bounced-contacts-still-marketing",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Bounced contacts still counted as marketing contacts: find them and switch them off",
     excerpt: "Contacts with hard bounces can stay marketing contacts and count toward your tier. How to find them and set them as non-marketing.",
     type: "tip",
@@ -3748,6 +3750,8 @@ var ARTICLES = [
   },
   {
     slug: "email-deliverability-spam-checklist",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "HubSpot marketing emails going to spam: a deliverability checklist",
     excerpt: "The checks HubSpot's KB recommends when marketing emails land in spam: sending domain, list hygiene, engagement, spam traps, and the Health tab.",
     type: "guide",
@@ -4305,6 +4309,8 @@ var ARTICLES = [
   },
   {
     slug: "unengaged-contacts-graymail",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Why fewer people got your email: HubSpot's Don't send to unengaged contacts setting",
     excerpt: "How HubSpot's graymail suppression excludes contacts who have not opened recent marketing emails, and the cases where it surprises people.",
     type: "tip",
@@ -5646,6 +5652,8 @@ var ARTICLES = [
   },
   {
     slug: "bot-email-opens-clicks",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Bot opens and clicks in marketing email stats, and Apple Mail Privacy Protection",
     excerpt: "How HubSpot's bot filtering removes security scanners and privacy filters from marketing email metrics, and how to check whether it was on for a send.",
     type: "tip",
@@ -6036,6 +6044,8 @@ var ARTICLES = [
   },
   {
     slug: "click-rate-vs-click-through-rate",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Click rate vs click-through rate in HubSpot email reports",
     excerpt: "The difference between HubSpot's click rate and click-through rate, and how open rate is counted.",
     type: "tip",
@@ -7100,19 +7110,20 @@ var ARTICLES = [
   },
   {
     slug: "resend-email-to-unengaged",
-    title: "Resend a marketing email to people who didn't engage",
-    excerpt: "How to build a segment of contacts who were sent an email but didn't click or open, and why HubSpot skips unengaged contacts by default.",
-    type: "tip",
-    problem: "How to",
+    title: "HubSpot marketing email deliverability: unengaged contacts, bounces, quarantine and stopped sends",
+    excerpt: "Why HubSpot sends to fewer contacts than your segment, how graymail suppression, bounces and quarantine work, what to do when a send is stopped, and the Gmail and Outlook rules to meet.",
+    type: "guide",
+    problem: "Fix it",
     hubs: ["Marketing Hub"],
     features: ["Email", "Segments"],
-    tier: "All marketing email tiers",
-    permissions: "Marketing email and segment access",
-    verified: "2026-10-07",
+    tier: "All Marketing Hub tiers (some settings need Starter or above)",
+    permissions: "Marketing email access; Super Admin or email permissions to unbounce",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 4,
+    minutes: 13,
     difficulty: "Intermediate",
-    keywords: ["resend to non openers hubspot", "resend marketing email hubspot", "email to contacts who didn't open", "unengaged contacts send hubspot"]
+    keywords: ["resend to non openers hubspot", "resend marketing email hubspot", "email to contacts who didn't open", "unengaged contacts send hubspot"],
+    validated: "2026-11-15 11:30 ET",
   },
   {
     slug: "attach-pdf-to-marketing-email",
@@ -11276,6 +11287,8 @@ var ARTICLES = [
   },
   {
     slug: "marketing-email-send-stopped",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Your marketing email send was stopped",
     excerpt: "Why HubSpot stops sends and how to resend to engaged contacts.",
     type: "tip",
@@ -15716,6 +15729,8 @@ var ARTICLES = [
   },
   {
     slug: "quarantined-contacts",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Why contacts get quarantined",
     excerpt: "How HubSpot quarantines contacts and how they come back.",
     type: "tip",
@@ -16320,6 +16335,8 @@ var ARTICLES = [
   },
   {
     slug: "resend-bounced-contacts",
+    draft: true,
+    mergedInto: 'resend-email-to-unengaged',
     title: "Unbounce a contact and resend",
     excerpt: "How HubSpot handles previously bounced contacts.",
     type: "tip",
