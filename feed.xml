@@ -641,16 +641,6 @@
     <category>Website</category>
   </item>
   <item>
-    <title>Conditional logic in HubSpot forms: show questions, skip steps, redirect</title>
-    <link>https://hubspot.samcbarth.com/articles/form-conditional-logic/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-conditional-logic/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What conditional logic does in HubSpot&#39;s form editor, the subscription it needs, and how it replaced dependent fields from the legacy editor.</description>
-    <category>Marketing Hub</category>
-    <category>Content Hub</category>
-    <category>Forms</category>
-  </item>
-  <item>
     <title>Create multi-language versions of HubSpot pages</title>
     <link>https://hubspot.samcbarth.com/articles/multi-language-pages/</link>
     <guid>https://hubspot.samcbarth.com/articles/multi-language-pages/</guid>
@@ -891,20 +881,11 @@
     <category>Website</category>
   </item>
   <item>
-    <title>File upload fields in HubSpot forms: size limit and where files go</title>
+    <title>HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic</title>
     <link>https://hubspot.samcbarth.com/articles/form-file-upload-field/</link>
     <guid>https://hubspot.samcbarth.com/articles/form-file-upload-field/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-  </item>
-  <item>
-    <title>Turn CAPTCHA on or off for a HubSpot form</title>
-    <link>https://hubspot.samcbarth.com/articles/form-captcha-settings/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-captcha-settings/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot forms use invisible reCAPTCHA v3, where the CAPTCHA switch is, adjusting spam sensitivity, and the spam digest beta.</description>
+    <description>Why form submissions land in spam (Unregistered Site Domain and others) and how to release them, reCAPTCHA and blocked domains, 100 MB file uploads, conditional logic, follow-up emails, and unpublishing forms.</description>
     <category>Marketing Hub</category>
     <category>Forms</category>
   </item>
@@ -929,16 +910,6 @@
     <category>Marketing Hub</category>
     <category>Domains</category>
     <category>Website</category>
-  </item>
-  <item>
-    <title>&quot;Please enter a different email address&quot;: blocked domains in forms</title>
-    <link>https://hubspot.samcbarth.com/articles/blocked-email-domains-list/</link>
-    <guid>https://hubspot.samcbarth.com/articles/blocked-email-domains-list/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Why a HubSpot form rejects some email addresses, the free email provider list, disposable domains blocked by default, and account-wide blocking.</description>
-    <category>Marketing Hub</category>
-    <category>Content Hub</category>
-    <category>Forms</category>
   </item>
   <item>
     <title>Build and send HubSpot marketing emails: footer, testing, A/B tests, approvals, cancelling and transactional email</title>
@@ -1098,15 +1069,6 @@
     <category>Marketing Hub</category>
     <category>Properties</category>
     <category>Analytics</category>
-  </item>
-  <item>
-    <title>Redirect after a form submit, including conditional redirects</title>
-    <link>https://hubspot.samcbarth.com/articles/form-redirect-with-url-parameters/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-redirect-with-url-parameters/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot legacy forms redirect to a page, meeting link or external URL after submission, conditional redirects, and the page module override.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
   </item>
   <item>
     <title>Cancel a HubSpot subscription or delete the account</title>
@@ -1384,15 +1346,6 @@
     <category>Service Hub</category>
     <category>AI</category>
     <category>Chat</category>
-  </item>
-  <item>
-    <title>Stop a form taking submissions without deleting it</title>
-    <link>https://hubspot.samcbarth.com/articles/unpublish-form/</link>
-    <guid>https://hubspot.samcbarth.com/articles/unpublish-form/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How unpublishing a HubSpot form works, what visitors see, and republishing.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
   </item>
   <item>
     <title>Run a blog in more than one language</title>
@@ -1700,16 +1653,6 @@
     <category>Subscriptions</category>
   </item>
   <item>
-    <title>Send an email after a form submission</title>
-    <link>https://hubspot.samcbarth.com/articles/form-email-response/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-email-response/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s form automation sends follow-up emails, by tier.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-    <category>Email</category>
-  </item>
-  <item>
     <title>Customize the board view for pipelines</title>
     <link>https://hubspot.samcbarth.com/articles/board-view-redesigned/</link>
     <guid>https://hubspot.samcbarth.com/articles/board-view-redesigned/</guid>
@@ -1778,15 +1721,6 @@
     <category>Marketing Hub</category>
     <category>Ads</category>
     <category>LinkedIn</category>
-  </item>
-  <item>
-    <title>Manage forms from the forms index</title>
-    <link>https://hubspot.samcbarth.com/articles/manage-forms/</link>
-    <guid>https://hubspot.samcbarth.com/articles/manage-forms/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>What you can do with HubSpot forms from the index page.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
   </item>
   <item>
     <title>Find a form&#39;s GUID</title>
@@ -2093,17 +2027,6 @@
     <category>Sales Hub</category>
     <category>Attribution</category>
     <category>Campaigns</category>
-  </item>
-  <item>
-    <title>HubSpot form submissions marked as spam? Check for an unregistered site domain</title>
-    <link>https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-submissions-marked-spam/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Forms</category>
-    <category>Tracking code</category>
   </item>
   <item>
     <title>How to embed a HubSpot form on a site that is not hosted in HubSpot</title>

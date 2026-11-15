@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>File upload fields in HubSpot forms: size limit and where files go - HubSpot Field Notes</title>
-<meta name="description" content="The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.">
+<title>HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic - HubSpot Field Notes</title>
+<meta name="description" content="Why form submissions land in spam (Unregistered Site Domain and others) and how to release them, reCAPTCHA and blocked domains, 100 MB file uploads, conditional logic, follow-up emails, and unpublishing forms.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/form-file-upload-field/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/form-file-upload-field/">
-<meta property="og:title" content="File upload fields in HubSpot forms: size limit and where files go">
-<meta property="og:description" content="The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.">
+<meta property="og:title" content="HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic">
+<meta property="og:description" content="Why form submissions land in spam (Unregistered Site Domain and others) and how to release them, reCAPTCHA and blocked domains, 100 MB file uploads, conditional logic, follow-up emails, and unpublishing forms.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/form-file-upload-field/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "File upload fields in HubSpot forms: size limit and where files go",
-      "description": "The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.",
+      "headline": "HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic",
+      "description": "Why form submissions land in spam (Unregistered Site Domain and others) and how to release them, reCAPTCHA and blocked domains, 100 MB file uploads, conditional logic, follow-up emails, and unpublishing forms.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/form-file-upload-field/og.png",
@@ -43,19 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "File upload fields in HubSpot forms",
-      "totalTime": "PT3M",
+      "name": "HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic",
+      "totalTime": "PT11M",
       "step": [
-        {"@type": "HowToStep", "name": "Add the field", "text": "Add File from the field types."},
-        {"@type": "HowToStep", "name": "Choose single or multiple", "text": "Allow one or several files."},
-        {"@type": "HowToStep", "name": "Set required", "text": "Make it required if needed; required fields can't be hidden."}
+        {"@type": "HowToStep", "name": "Check the spam column", "text": "Forms list, Spam Submissions."},
+        {"@type": "HowToStep", "name": "Register the domain", "text": "Advanced Tracking, Additional site domains."},
+        {"@type": "HowToStep", "name": "Release real submissions", "text": "Select them and click Release to submissions."},
+        {"@type": "HowToStep", "name": "Turn on reCAPTCHA", "text": "Form editor, Other form elements, CAPTCHA."},
+        {"@type": "HowToStep", "name": "Unpublish old forms", "text": "Keeps submissions, stops new ones."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "File upload fields in HubSpot forms: size limit and where files go", "item": "https://hubspot.samcbarth.com/articles/form-file-upload-field/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic", "item": "https://hubspot.samcbarth.com/articles/form-file-upload-field/" }
       ]
     }
   ]
@@ -86,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Forms">Forms</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>File upload fields in HubSpot forms: size limit and where files go</h1>
-      <p class="dek">Collect files with a form, within a 100 MB limit.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Fix it</span><span class="badge">Marketing Hub</span></div>
+      <h1>HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic</h1>
+      <p class="dek">Missing form submissions are usually in the spam list, flagged because the form sits on a domain HubSpot does not know. Fix that first, then the rest of the form settings.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Edit forms permission</dd></div>
-        <div class="fact"><dt>Time</dt><dd>3 min &middot; Beginner</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (conditional logic and gibberish detection need Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit forms; Super Admin for tracking domain settings</dd></div>
+        <div class="fact"><dt>Time</dt><dd>11 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -101,26 +103,90 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's KB: the file size limit for a file upload field is <strong>100 MB</strong> for both single and multiple file upload fields, and multiple file fields have no limit on file count as long as the total stays within the limit. Uploaded files are stored with the submission and the contact's property. A required field can't be set as hidden.</p>
+          <p>Most "missing" form submissions are sitting in the form's <strong>spam</strong> list. The most common cause is a form embedded on a domain HubSpot does not recognize, flagged as <strong>Unregistered Site Domain</strong>: add the domain under <strong>Tracking &amp; Analytics, Advanced Tracking, Additional site domains</strong>, then <strong>Release to submissions</strong>. Spam submissions you do not release are deleted after 90 days. Spam control is reCAPTCHA v3 per form plus account-wide settings for blocked email domains and gibberish detection. File upload fields take up to 100 MB. Conditional logic needs Marketing Hub or Content Hub Professional. Unpublish a form instead of deleting it to stop new submissions and keep the old ones.</p>
         </div>
 
-        <h2>1. Field types</h2>
-        <p>The Add to form panel in my demo portal; File is further down the list.</p>
-        <figure class="shot"><a href="add.webp"><img src="add.webp" alt="Form editor Add to form panel listing field types" width="800" height="600" loading="lazy"></a><figcaption>Field types (1).</figcaption></figure>
-        <h2>2. Use it carefully</h2>
+        <h2>1. Submissions marked as spam</h2>
+        <p>When a form on an unrecognized site gets submissions, HubSpot shows a warning above the Forms list naming the problem:</p>
+        <figure class="shot"><a href="banner.webp"><img src="banner.webp" alt="Forms page with the Unknown Domains Sending Submissions to Your Forms warning highlighted" width="800" height="600" loading="lazy"></a><figcaption>The warning above the Forms list.</figcaption></figure>
+        <p>Click <strong>Review site domains</strong> to see which domain it is. The domain is blurred here:</p>
+        <figure class="shot"><a href="review-dialog.webp"><img src="review-dialog.webp" alt="Review site domains dialog listing one unrecognized domain and the spam warning" width="800" height="600" loading="lazy"></a><figcaption>The Review site domains dialog.</figcaption></figure>
+        <ol>
+          <li>Go to <strong>Settings, Tracking &amp; Analytics, Tracking Code, Advanced Tracking</strong> and add the domain under <strong>Additional site domains</strong>. Check each subdomain that hosts a form. Only add domains you recognize.</li>
+          <li>On the Forms page, click the number in the <strong>Spam Submissions</strong> column, check the spam type for each row, select the real ones, and click <strong>Release to submissions</strong>.</li>
+        </ol>
+        <figure class="shot"><a href="additional-domains.webp"><img src="additional-domains.webp" alt="Advanced Tracking tab with the Additional site domains list highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Additional site domains list.</figcaption></figure>
+        <p>A released submission keeps its original date and can create or update contacts and trigger workflows. Registering the domain only fixes new submissions, and unreleased spam is deleted automatically 90 days after it arrives, so check the list soon.</p>
+        <p>The other spam types HubSpot uses: a URL or HTML in a name field, a blocklisted email, a malicious script, gibberish text (Marketing Hub or Content Hub Professional and Enterprise), a failed reCAPTCHA, and <strong>Excluded source</strong>, which means the IP or referrer is on your excluded traffic list.</p>
+
+        <h2>2. Spam controls</h2>
         <ul>
-          <li>Ask only for files you need.</li>
-          <li>Tell visitors the size limit.</li>
+          <li><strong>reCAPTCHA v3</strong> runs invisibly. Turn it on per form in the editor's left panel under <strong>Other form elements, CAPTCHA (spam prevention)</strong>. You can raise spam sensitivity if spam still gets through.</li>
+          <li><strong>Account-wide settings</strong> in form submission settings: excluded IP spam (1), gibberish detection (2), and blocking email domains across all forms (3).</li>
         </ul>
-        <h2>3. Related</h2>
-        <p><a href="../form-submission-notifications/">Submission notifications</a>.</p>
+        <figure class="shot"><a href="submissions.webp"><img src="submissions.webp" alt="Forms Submissions Settings with spam switches and Block email domains across all forms" width="781" height="426" loading="lazy"></a><figcaption>Excluded IP spam (1), gibberish detection (2), and blocked domains (3).</figcaption></figure>
+        <ul>
+          <li><strong>Block free email providers</strong> rejects addresses from HubSpot's published list of free email domains. Some disposable domains are blocked whether or not you tick it. You can download the list as CSV, edit it, and paste it into the blocked domains field. If your customers use personal email, leave this off for their forms.</li>
+          <li><strong>Spam monitoring</strong>: my demo portal's submission settings also show a Spam monitoring beta with a daily spam digest (1).</li>
+        </ul>
+        <figure class="shot"><a href="spam-monitoring.webp"><img src="spam-monitoring.webp" alt="Form submission settings with real-time notifications and a Spam monitoring beta section" width="800" height="600" loading="lazy"></a><figcaption>Spam monitoring (1).</figcaption></figure>
+
+        <h2>3. Fields: file upload and required fields</h2>
+        <p>Field types are in the <strong>Add to form</strong> panel (1). File is further down the list.</p>
+        <figure class="shot"><a href="add.webp"><img src="add.webp" alt="Form editor Add to form panel listing field types" width="800" height="600" loading="lazy"></a><figcaption>Field types (1).</figcaption></figure>
+        <ul>
+          <li>A file upload field accepts up to <strong>100 MB</strong>, single or multiple file. Multiple file fields have no file count limit as long as the total stays under 100 MB.</li>
+          <li>Uploaded files are stored with the submission and the contact property.</li>
+          <li>A required field cannot be hidden.</li>
+        </ul>
+
+        <h2>4. Conditional logic and redirects</h2>
+        <p>The <strong>Logic</strong> panel (1) in the form editor shows only relevant questions, skips steps, sets a custom thank-you message, or redirects visitors, for example sending qualified answers to a <a href="../video-conferencing-meetings/">meetings link</a>. Click <strong>Add logic</strong> (2). It needs Marketing Hub or Content Hub Professional or Enterprise. The legacy editor's version was dependent fields, which could only use existing fields.</p>
+        <figure class="shot"><a href="logic.webp"><img src="logic.webp" alt="Form editor Logic panel describing conditional logic with an Add logic button" width="800" height="824" loading="lazy"></a><figcaption>Logic (1) and Add logic (2).</figcaption></figure>
+        <p>On HubSpot pages, the redirect set in the page editor's form module overrides the form's own redirect. Passing submitted values into the redirect URL is a developer job in the embed code, see <a href="../embed-form-in-react/">forms API and embedding</a>.</p>
+
+        <h2>5. Follow-up email after submission</h2>
+        <p>In the form's <strong>Automation</strong> panel, <strong>Send an email after form submission</strong> (1) creates a simple workflow with a follow-up email. You can also build your own simple workflow (2).</p>
+        <figure class="shot"><a href="automation.webp"><img src="automation.webp" alt="Form Automation panel with Send an email after form submission and Create your own simple workflow cards" width="800" height="640" loading="lazy"></a><figcaption>The follow-up email workflow (1) and a custom simple workflow (2).</figcaption></figure>
+        <p>Free tools allow one simple workflow per form with one action. Marketing Hub Starter allows up to 10 actions. Sending the submission to someone on your team is a separate notification setting.</p>
+
+        <h2>6. Manage, unpublish and delete</h2>
+        <p>The forms list has <strong>Actions</strong> (1) for export, clone, unpublish and delete (Edit forms permission), and an <strong>Analyze</strong> tab (2). Comparing forms needs Marketing Hub Professional or Enterprise.</p>
+        <figure class="shot"><a href="forms.webp"><img src="forms.webp" alt="Forms list with Actions menu and Analyze tab" width="800" height="600" loading="lazy"></a><figcaption>Actions (1) and Analyze (2).</figcaption></figure>
+        <p><strong>Unpublish</strong> stops submissions but keeps the form, its submissions and analytics. Share links and embeds show "This form is no longer accepting submissions", and you can republish any time. It is the right move for an event registration after the event. Delete only when you are sure you do not need the data.</p>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Legacy forms are reference only.</strong> HubSpot's KB marks the legacy editor articles as reference for existing forms and recommends the updated editor for new forms. Some features, such as dependent fields, have new-editor equivalents (conditional logic) with different tier rules.</li>
+          <li><strong>Domain registration matters more.</strong> Forms embedded on any site not listed in Additional site domains get flagged as spam, and the flagged submissions expire after 90 days. Add every new microsite or subdomain when you launch it.</li>
+          <li><strong>Spam monitoring</strong> is in beta in some portals, with a daily digest of flagged submissions.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>A form submission did not create a contact. Where is it?</h3>
+        <p>Check the form's Spam Submissions column. Unregistered Site Domain and Excluded source are the usual reasons. Release the real ones.</p>
+        <h3>My own test submissions are marked as spam.</h3>
+        <p>If the spam type is Excluded source, your IP is on the excluded traffic list. That is working as designed. The list is under <strong>Tracking &amp; Analytics, Advanced Tracking, Exclude traffic</strong>.</p>
+        <h3>How large can an uploaded file be?</h3>
+        <p>100 MB per file upload field, single or multiple.</p>
+        <h3>Should I delete an old form?</h3>
+        <p>Unpublish it instead. Submissions and analytics stay, and you can republish later.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/restrict-file-types-in-file-upload-form-field/15618">HubSpot Community question: Restrict file types in File Upload form field</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/manage-form-spam-submissions">HubSpot Knowledge Base: Manage spam form submissions</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Set up a HubSpot form on an external site</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/verify-form-submissions-with-recaptcha-v3">HubSpot Knowledge Base: Verify form submissions with reCAPTCHA v3</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/what-domains-are-blocked-when-using-the-forms-email-domains-to-block-feature">HubSpot Knowledge Base: Domains blocked from form submissions</a></li>
           <li><a href="https://knowledge.hubspot.com/forms/edit-form-fields">HubSpot Knowledge Base: Edit form fields</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/create-and-edit-forms">HubSpot Knowledge Base: Create and customize forms</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/create-forms">HubSpot Knowledge Base: Create forms (legacy)</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/redirect-a-form-to-a-meeting-scheduling-page">HubSpot Knowledge Base: Redirect a form (legacy)</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/send-an-email-response-after-a-form-submission">HubSpot Knowledge Base: Send an email response after a form submission</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/manage-your-forms">HubSpot Knowledge Base: Manage your forms</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/unpublish-forms">HubSpot Knowledge Base: Unpublish a HubSpot form</a></li>
         </ul>
 
         <div class="vote" data-vote></div>

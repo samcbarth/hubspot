@@ -589,6 +589,8 @@ var ARTICLES = [
   },
   {
     slug: "form-submissions-marked-spam",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "HubSpot form submissions marked as spam? Check for an unregistered site domain",
     excerpt: "Forms embedded on a website HubSpot does not recognize get their submissions flagged as spam. How to spot the warning, register the domain, and release the submissions.",
     type: "guide",
@@ -4454,6 +4456,8 @@ var ARTICLES = [
   },
   {
     slug: "form-conditional-logic",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Conditional logic in HubSpot forms: show questions, skip steps, redirect",
     excerpt: "What conditional logic does in HubSpot's form editor, the subscription it needs, and how it replaced dependent fields from the legacy editor.",
     type: "tip",
@@ -5737,19 +5741,20 @@ var ARTICLES = [
   },
   {
     slug: "form-file-upload-field",
-    title: "File upload fields in HubSpot forms: size limit and where files go",
-    excerpt: "The 100 MB limit on HubSpot form file uploads, single versus multiple files, and how to add the field.",
-    type: "tip",
-    problem: "How to",
+    title: "HubSpot form settings and spam: submissions marked as spam, reCAPTCHA, blocked domains, file uploads and logic",
+    excerpt: "Why form submissions land in spam (Unregistered Site Domain and others) and how to release them, reCAPTCHA and blocked domains, 100 MB file uploads, conditional logic, follow-up emails, and unpublishing forms.",
+    type: "guide",
+    problem: "Fix it",
     hubs: ["Marketing Hub"],
     features: ["Forms"],
-    tier: "All tiers",
-    permissions: "Edit forms permission",
-    verified: "2026-10-07",
+    tier: "All plans (conditional logic and gibberish detection need Professional)",
+    permissions: "Edit forms; Super Admin for tracking domain settings",
+    verified: "2026-11-15",
     published: "2026-10-07",
-    minutes: 3,
+    minutes: 11,
     difficulty: "Beginner",
-    keywords: ["hubspot form file upload", "file upload limit hubspot form", "upload documents form hubspot", "form attachment hubspot"]
+    keywords: ["hubspot form file upload", "file upload limit hubspot form", "upload documents form hubspot", "form attachment hubspot"],
+    validated: "2026-11-15 18:30 ET",
   },
   {
     slug: "utm-parameters-hidden-form-fields",
@@ -5789,6 +5794,8 @@ var ARTICLES = [
   },
   {
     slug: "form-captcha-settings",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Turn CAPTCHA on or off for a HubSpot form",
     excerpt: "How HubSpot forms use invisible reCAPTCHA v3, where the CAPTCHA switch is, adjusting spam sensitivity, and the spam digest beta.",
     type: "tip",
@@ -5910,6 +5917,8 @@ var ARTICLES = [
   },
   {
     slug: "blocked-email-domains-list",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "\"Please enter a different email address\": blocked domains in forms",
     excerpt: "Why a HubSpot form rejects some email addresses, the free email provider list, disposable domains blocked by default, and account-wide blocking.",
     type: "tip",
@@ -6689,6 +6698,8 @@ var ARTICLES = [
   },
   {
     slug: "form-redirect-with-url-parameters",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Redirect after a form submit, including conditional redirects",
     excerpt: "How HubSpot legacy forms redirect to a page, meeting link or external URL after submission, conditional redirects, and the page module override.",
     type: "tip",
@@ -8991,6 +9002,8 @@ var ARTICLES = [
   },
   {
     slug: "unpublish-form",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Stop a form taking submissions without deleting it",
     excerpt: "How unpublishing a HubSpot form works, what visitors see, and republishing.",
     type: "tip",
@@ -13916,6 +13929,8 @@ var ARTICLES = [
   },
   {
     slug: "form-email-response",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Send an email after a form submission",
     excerpt: "How HubSpot's form automation sends follow-up emails, by tier.",
     type: "tip",
@@ -15179,6 +15194,8 @@ var ARTICLES = [
   },
   {
     slug: "manage-forms",
+    draft: true,
+    mergedInto: 'form-file-upload-field',
     title: "Manage forms from the forms index",
     excerpt: "What you can do with HubSpot forms from the index page.",
     type: "tip",
