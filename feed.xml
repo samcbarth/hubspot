@@ -387,11 +387,11 @@
     <category>Products</category>
   </item>
   <item>
-    <title>Sync Facebook and Instagram lead ad forms into HubSpot</title>
+    <title>HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads</title>
     <link>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</link>
     <guid>https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot&#39;s lead ad syncing works for Meta instant forms, why the forms do not appear in the forms tool, and the usual reasons leads do not arrive.</description>
+    <description>Connect ad accounts, sync Facebook and LinkedIn lead ads (and fix leads that never arrive), build website, segment, company and lookalike audiences, use them in LinkedIn Campaign Manager, and connect Reddit Ads.</description>
     <category>Marketing Hub</category>
     <category>Integrations</category>
     <category>Forms</category>
@@ -427,16 +427,6 @@
     <category>Data Hub</category>
     <category>Properties</category>
     <category>Imports</category>
-  </item>
-  <item>
-    <title>Connect a Reddit Ads account to HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</link>
-    <guid>https://hubspot.samcbarth.com/articles/connect-reddit-ads/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to connect Reddit Ads in HubSpot&#39;s ads settings, what you get once it is connected, and how to manage the connected user.</description>
-    <category>Marketing Hub</category>
-    <category>Integrations</category>
-    <category>Attribution</category>
   </item>
   <item>
     <title>Calculation properties: build a custom equation in HubSpot</title>
@@ -618,16 +608,6 @@
     <category>Marketing Hub</category>
     <category>Integrations</category>
     <category>Tracking code</category>
-  </item>
-  <item>
-    <title>Build ad audiences and lookalikes from HubSpot segments</title>
-    <link>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</link>
-    <guid>https://hubspot.samcbarth.com/articles/ads-audiences-and-lookalikes/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot creates contact segment audiences for ad networks and Meta lookalike audiences, and the requirement that the source audience has synced first.</description>
-    <category>Marketing Hub</category>
-    <category>Integrations</category>
-    <category>Segments</category>
   </item>
   <item>
     <title>HubSpot Sales extension for Gmail and Outlook: install, log and track</title>
@@ -1534,16 +1514,6 @@
     <description>When to use HubSpot&#39;s hosted email for the conversations inbox.</description>
     <category>Service Hub</category>
     <category>Inbox</category>
-  </item>
-  <item>
-    <title>Target LinkedIn ads with HubSpot audiences</title>
-    <link>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</link>
-    <guid>https://hubspot.samcbarth.com/articles/linkedin-ads-audiences/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to pick a HubSpot audience in LinkedIn Campaign Manager.</description>
-    <category>Marketing Hub</category>
-    <category>Ads</category>
-    <category>LinkedIn</category>
   </item>
   <item>
     <title>Find a form&#39;s GUID</title>

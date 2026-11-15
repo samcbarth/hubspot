@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Sync Facebook and Instagram lead ad forms into HubSpot - HubSpot Field Notes</title>
-<meta name="description" content="How HubSpot's lead ad syncing works for Meta instant forms, why the forms do not appear in the forms tool, and the usual reasons leads do not arrive.">
+<title>HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads - HubSpot Field Notes</title>
+<meta name="description" content="Connect ad accounts, sync Facebook and LinkedIn lead ads (and fix leads that never arrive), build website, segment, company and lookalike audiences, use them in LinkedIn Campaign Manager, and connect Reddit Ads.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/">
-<meta property="og:title" content="Sync Facebook and Instagram lead ad forms into HubSpot">
-<meta property="og:description" content="How HubSpot's lead ad syncing works for Meta instant forms, why the forms do not appear in the forms tool, and the usual reasons leads do not arrive.">
+<meta property="og:title" content="HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads">
+<meta property="og:description" content="Connect ad accounts, sync Facebook and LinkedIn lead ads (and fix leads that never arrive), build website, segment, company and lookalike audiences, use them in LinkedIn Campaign Manager, and connect Reddit Ads.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Sync Facebook and Instagram lead ad forms into HubSpot",
-      "description": "How HubSpot's lead ad syncing works for Meta instant forms, why the forms do not appear in the forms tool, and the usual reasons leads do not arrive.",
+      "headline": "HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads",
+      "description": "Connect ad accounts, sync Facebook and LinkedIn lead ads (and fix leads that never arrive), build website, segment, company and lookalike audiences, use them in LinkedIn Campaign Manager, and connect Reddit Ads.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-15",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/og.png",
@@ -43,21 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Turn on lead syncing for a Facebook page",
-      "totalTime": "PT6M",
+      "name": "HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads",
+      "totalTime": "PT9M",
       "step": [
-        {"@type": "HowToStep", "name": "Connect the ad account", "text": "Settings, Marketing, Ads, then connect your Meta account."},
-        {"@type": "HowToStep", "name": "Open Lead syncing", "text": "Click the Lead syncing tab, then Connect."},
-        {"@type": "HowToStep", "name": "Pick the page", "text": "Select the Facebook page and confirm the sync settings."},
-        {"@type": "HowToStep", "name": "Map fields", "text": "Open the page, click a form, and edit custom field mappings if needed."},
-        {"@type": "HowToStep", "name": "Use the form", "text": "Build a segment or workflow trigger on submissions of the synced lead form."}
+        {"@type": "HowToStep", "name": "Connect the ad account", "text": "Settings, Marketing, Ads, Connect ad network."},
+        {"@type": "HowToStep", "name": "Turn on lead syncing", "text": "Connect the Facebook page or LinkedIn account."},
+        {"@type": "HowToStep", "name": "Check Leads Access", "text": "Missing access is the usual reason leads do not arrive."},
+        {"@type": "HowToStep", "name": "Create audiences", "text": "Marketing, Ads, Create audience."},
+        {"@type": "HowToStep", "name": "Use them in the network", "text": "Select the HubSpot audience in the campaign."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Sync Facebook and Instagram lead ad forms into HubSpot", "item": "https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/" }
+        { "@type": "ListItem", "position": 2, "name": "HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads", "item": "https://hubspot.samcbarth.com/articles/facebook-lead-ads-sync/" }
       ]
     }
   ]
@@ -89,13 +89,13 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Integrations">Integrations</a></nav>
     <header class="article-head">
       <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">How to</span><span class="badge">Marketing Hub</span></div>
-      <h1>Sync Facebook and Instagram lead ad forms into HubSpot</h1>
-      <p class="dek">Meta lead ads sync into HubSpot as form submissions on hidden forms. You can still use them in segments and workflows.</p>
+      <h1>HubSpot ads: lead ad syncing, audiences, lookalikes, LinkedIn targeting and Reddit Ads</h1>
+      <p class="dek">Lead ad syncing fails for a handful of known reasons, and audiences shrink for others. What HubSpot&#x27;s ads tool syncs, what it needs, and how to fix the usual problems.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>Ads tool, all tiers with an ad account connected</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Marketing access plus the right access in Meta</dd></div>
-        <div class="fact"><dt>Time</dt><dd>6 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>Marketing Hub (segment and lookalike audiences need Starter or above)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Ads access; Leads Access on the Facebook page for lead syncing</dd></div>
+        <div class="fact"><dt>Time</dt><dd>9 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-15">November 15, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -103,36 +103,99 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>In <span class="ui">Settings &gt; Marketing &gt; Ads &gt; Lead syncing</span>, connect the Facebook page. HubSpot then creates a version of each active lead form. These forms do not show in the forms tool, but their submissions log as form submissions you can use in segments and workflows. New leads can take up to two hours to arrive. If nothing arrives, check that you had Leads Access in Meta when connecting, that HubSpot is the CRM selected in the page's CRM setup, and that the sync timeframe is All leads.</p>
+          <p>Connect ad accounts under <strong>Settings, Marketing, Ads</strong>. <strong>Lead syncing</strong> brings Facebook and LinkedIn lead form submissions into HubSpot as form submissions you can use in segments and workflows; new leads can take up to two hours, and most "no leads" problems are missing Leads Access in Meta or the wrong sync timeframe. <strong>Audiences</strong> turn website visitors, contact segments (Marketing Hub Starter and above) or LinkedIn target accounts into ad audiences that sync with Facebook, Google, Microsoft and LinkedIn. A Meta lookalike needs a source audience that has already synced. Reddit Ads connects as a beta.</p>
         </div>
 
-        <h2>1. Start in ads settings</h2>
-        <p>My demo portal has no ad accounts connected, so the ads settings page shows the connect prompt. Lead syncing appears once an account is connected.</p>
+        <h2>1. Connect an ad account</h2>
+        <p>Open <strong>Settings, Marketing, Ads</strong> and click <strong>Connect ad network</strong> (1). Supported networks are shown as icons, including Meta (2), LinkedIn, Google, Microsoft and Reddit. My demo portal has no ad accounts, so it shows the connect prompt.</p>
         <figure class="shot"><a href="ads.webp"><img src="ads.webp" alt="Ads settings page with Connect ad network button and ad network icons including Meta" width="800" height="554" loading="lazy"></a><figcaption>Connect ad network (1) and the Meta icon (2).</figcaption></figure>
+        <p>For lead syncing, connect with a user who has Leads Access on the Facebook page. After connecting, the <strong>Lead syncing</strong> tab appears.</p>
 
-        <h2>2. How the data lands</h2>
+        <h2>2. Sync Facebook and LinkedIn lead ads</h2>
+        <p>In <strong>Lead syncing</strong>, connect the Facebook page or LinkedIn ad account. HubSpot then creates a version of each active lead form:</p>
         <ul>
-          <li>Each synced lead form becomes a hidden HubSpot form. Archive the form in Meta to remove it.</li>
-          <li>Default Facebook fields always map to the matching HubSpot property. Custom questions can be remapped. The field types must match, or the Lead syncing tab shows errors.</li>
+          <li>The forms do not show in the forms tool, but their submissions log as form submissions you can use in segments and workflows.</li>
+          <li>Default Facebook fields always map to the matching HubSpot property. Custom questions can be remapped, and the field types must match or the Lead syncing tab shows errors.</li>
           <li>One workflow can cover many ads if its trigger lists each synced lead form.</li>
+          <li>Archive the form in Meta to stop syncing it.</li>
+          <li>New leads can take up to two hours to arrive.</li>
         </ul>
 
         <h2>3. When leads do not arrive</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Cause</th><th>Fix</th></tr></thead>
+            <tbody>
+              <tr><td>No Leads Access in Meta business manager when you connected</td><td>New leads sync once you have it. Reconnect to pull older leads.</td></tr>
+              <tr><td>HubSpot is not the selected CRM in the page's CRM setup in Meta</td><td>Select HubSpot there.</td></tr>
+              <tr><td>The form was made in a different Meta account or runs under another page</td><td>The form must be created in the connected account and run under the connected page.</td></tr>
+              <tr><td>Sync timeframe set to New leads</td><td>Disconnect and reconnect with All leads to get history.</td></tr>
+              <tr><td>Field type mismatch on a custom question</td><td>Fix the mapping on the Lead syncing tab.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>If you use double opt-in, contacts from lead ad forms get the confirmation email too, see <a href="../remove-email-opt-out/">subscriptions and opt-outs</a>.</p>
+
+        <h2>4. Ad audiences</h2>
+        <p>Go to <strong>Marketing, Ads, Create audience</strong>. Audiences sync both ways with the ad network.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Audience</th><th>Based on</th><th>Needs</th></tr></thead>
+            <tbody>
+              <tr><td>Website visitors</td><td>People who visited your site or certain pages</td><td>Tracking code on the site</td></tr>
+              <tr><td>Contact segment</td><td>A HubSpot contact segment</td><td>Marketing Hub Starter or above; marketing contacts</td></tr>
+              <tr><td>LinkedIn company segment</td><td>Target accounts or a company profile tier</td><td>LinkedIn ad account</td></tr>
+              <tr><td>Lookalike (Facebook)</td><td>An existing audience that has already synced to Meta, plus target locations</td><td>Marketing Hub Starter or above</td></tr>
+            </tbody>
+          </table>
+        </div>
         <ul>
-          <li>No Leads Access in Meta business manager at connection time: new leads sync after you get it, but reconnect to pull older ones.</li>
-          <li>The form must be created in the connected Meta account and run under the connected page.</li>
-          <li>Sync timeframe set to New leads: disconnect and reconnect with All leads for history.</li>
+          <li>HubSpot recommends contact segments that include a legal basis for processing. Google and Facebook add their own conditions, such as Customer Match policy, EU consent and business manager requirements.</li>
+          <li>The <strong>Size</strong> column shows the matched size: people the network matched to its users. It is usually much lower than your contact or visitor count.</li>
+          <li>Only marketing contacts can be added to ad audiences. See <a href="../remove-email-opt-out/">marketing contacts</a>.</li>
+          <li>HubSpot's own <strong>lookalike segments</strong> in the CRM are a separate feature you can use in emails and ads.</li>
         </ul>
-        <p>For the account connection itself, see <a href="../connect-ad-accounts/">connecting ad accounts</a>.</p>
+        <p><strong>Using an audience on LinkedIn:</strong> after creating it in HubSpot, open LinkedIn Campaign Manager, and under <strong>Who is your target audience?</strong> select <strong>Audiences</strong> in a new or existing campaign. It is used once the campaign is published or updated.</p>
+
+        <h2>5. Reddit Ads</h2>
+        <p><strong>Settings, Marketing, Ads, Ad accounts, Connect account, Reddit Ads</strong>. Log in to Reddit, review the permissions, and click Continue; HubSpot needs all of them. HubSpot's KB lists the integration as a beta. Once connected:</p>
+        <ul>
+          <li>Reddit campaign reporting sits with your other ad networks.</li>
+          <li>Contacts and deals can be attributed to Reddit campaigns.</li>
+          <li>Contacts who interact with the ads can be enrolled in workflows.</li>
+        </ul>
+        <p>Hover the account and use <strong>Actions</strong> to see details such as auto-tracking and primary users. Reddit as a social publishing channel is a separate connection.</p>
+
+        <h2>6. What is changing for 2027</h2>
+        <ul>
+          <li><strong>More networks.</strong> Reddit joined Meta, LinkedIn, Google and Microsoft in the ads tool, as a beta.</li>
+          <li><strong>Account-based audiences.</strong> LinkedIn company segment audiences sync target accounts or company tiers directly, without building a contact list first.</li>
+          <li><strong>Consent conditions.</strong> HubSpot recommends segments that include a legal basis for processing, and Google and Facebook apply Customer Match and EU consent conditions. Record legal basis on contacts you plan to advertise to.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>Facebook leads are not showing up in HubSpot.</h3>
+        <p>Wait two hours, then check Leads Access in Meta, that HubSpot is the selected CRM for the page, and the sync timeframe. Reconnect with All leads to pull history.</p>
+        <h3>Where are my lead ad forms in the forms tool?</h3>
+        <p>They are not listed there. Their submissions still log on contacts and can trigger workflows.</p>
+        <h3>Why is my audience so much smaller than my segment?</h3>
+        <p>The Size column shows how many people the ad network matched. Many contacts do not match a user on that network.</p>
+        <h3>Can I build a lookalike from a segment I just created?</h3>
+        <p>Not until the source audience has synced to Meta.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://knowledge.hubspot.com/ads/sync-leads-from-your-facebook-page-or-linkedin-ads-account-to-hubspot">HubSpot Knowledge Base: Sync leads from your lead ad forms to HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/connect-and-set-up-your-ad-accounts-in-hubspot">HubSpot Knowledge Base: Connect and set up your ad accounts</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/sync-leads-from-your-facebook-page-or-linkedin-ads-account-to-hubspot">HubSpot Knowledge Base: Sync leads from your lead ad forms</a></li>
           <li><a href="https://knowledge.hubspot.com/ads/facebook-lead-ads-faq">HubSpot Knowledge Base: Facebook lead ads FAQ</a></li>
           <li><a href="https://knowledge.hubspot.com/ads/manage-facebook-pages-syncing-leads-to-hubspot">HubSpot Knowledge Base: Troubleshoot syncing leads from Facebook pages</a></li>
           <li><a href="https://knowledge.hubspot.com/ads/lead-ads-field-mappings-to-hubspot">HubSpot Knowledge Base: How lead ad fields map to HubSpot properties</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/create-ads-audiences-in-hubspot">HubSpot Knowledge Base: Create ads audiences in HubSpot</a></li>
+          <li><a href="https://knowledge.hubspot.com/segments/create-lookalike-lists">HubSpot Knowledge Base: Create lookalike segments</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/target-linkedin-ads-using-hubspot-audiences">HubSpot Knowledge Base: Target LinkedIn ads using HubSpot audiences</a></li>
+          <li><a href="https://knowledge.hubspot.com/ads/connect-your-reddit-ads-account-to-hubspot">HubSpot Knowledge Base: Connect your Reddit Ads account</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
