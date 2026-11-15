@@ -601,11 +601,11 @@
     <category>API</category>
   </item>
   <item>
-    <title>Read a property&#39;s change history through the API</title>
+    <title>HubSpot property history: see who changed a value, export history, and read it through the API (50-record limit)</title>
     <link>https://hubspot.samcbarth.com/articles/property-history-api/</link>
     <guid>https://hubspot.samcbarth.com/articles/property-history-api/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to use the propertiesWithHistory parameter to get past values, timestamps and sources for a record&#39;s properties.</description>
+    <description>Property history on a record, exporting history for many records, and the propertiesWithHistory API parameter, with the real response format and the 50-record cap on list and batch reads found in a live test.</description>
     <category>Smart CRM</category>
     <category>API</category>
     <category>Properties</category>
@@ -1316,16 +1316,6 @@
     <description>What HubSpot&#39;s offline mode shows, the 50-record cache, and its read-only limit.</description>
     <category>Smart CRM</category>
     <category>Mobile</category>
-  </item>
-  <item>
-    <title>Export a property&#39;s history</title>
-    <link>https://hubspot.samcbarth.com/articles/export-property-history/</link>
-    <guid>https://hubspot.samcbarth.com/articles/export-property-history/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to export the historical values of a HubSpot property, what the file includes, and time zone.</description>
-    <category>Smart CRM</category>
-    <category>Properties</category>
-    <category>Export</category>
   </item>
   <item>
     <title>Take inbound calls through a calling app in HubSpot</title>
