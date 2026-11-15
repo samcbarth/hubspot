@@ -162,16 +162,6 @@
     <category>Views</category>
   </item>
   <item>
-    <title>Capture submissions from non-HubSpot forms on your website</title>
-    <link>https://hubspot.samcbarth.com/articles/non-hubspot-forms-collected/</link>
-    <guid>https://hubspot.samcbarth.com/articles/non-hubspot-forms-collected/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How HubSpot collects submissions from forms it did not build, what it needs to work, why you may see partial duplicates, and how to convert a collected form into a HubSpot form.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-    <category>Tracking code</category>
-  </item>
-  <item>
     <title>The HubSpot sales workspace: one place for a rep&#39;s tasks, leads, deals and schedule</title>
     <link>https://hubspot.samcbarth.com/articles/sales-workspace/</link>
     <guid>https://hubspot.samcbarth.com/articles/sales-workspace/</guid>
@@ -433,16 +423,6 @@
     <category>Smart CRM</category>
     <category>API</category>
     <category>Account settings</category>
-  </item>
-  <item>
-    <title>Submit a custom form to HubSpot through the forms API, and keep tracking</title>
-    <link>https://hubspot.samcbarth.com/articles/forms-submission-api/</link>
-    <guid>https://hubspot.samcbarth.com/articles/forms-submission-api/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to send submissions to a HubSpot form from your own form handler, why to include the hutk cookie and page context, and how blocked emails are reported.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-    <category>API</category>
   </item>
   <item>
     <title>Identify logged-in visitors in HubSpot chat with the visitor identification API</title>
@@ -733,11 +713,11 @@
     <category>Products</category>
   </item>
   <item>
-    <title>Embed a HubSpot form in React or another single-page app</title>
+    <title>Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means</title>
     <link>https://hubspot.samcbarth.com/articles/embed-form-in-react/</link>
     <guid>https://hubspot.samcbarth.com/articles/embed-form-in-react/</guid>
     <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.</description>
+    <description>Embed a HubSpot form on any site or in React, find the form GUID, submit data with the forms API including hutk and pageUri, read submissions, and use non-HubSpot forms. Tested: the API returns 200 even when data is dropped.</description>
     <category>Marketing Hub</category>
     <category>Forms</category>
     <category>API</category>
@@ -881,16 +861,6 @@
     <category>Marketing Hub</category>
     <category>Inbox</category>
     <category>Chat</category>
-  </item>
-  <item>
-    <title>Get a form&#39;s submissions through the API</title>
-    <link>https://hubspot.samcbarth.com/articles/get-form-submissions-api/</link>
-    <guid>https://hubspot.samcbarth.com/articles/get-form-submissions-api/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>The HubSpot endpoint that returns submissions for one form, and when an export is the simpler option.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-    <category>API</category>
   </item>
   <item>
     <title>Keep a HubSpot OAuth integration from breaking: refresh tokens</title>
@@ -1251,16 +1221,6 @@
     <category>Inbox</category>
   </item>
   <item>
-    <title>Find a form&#39;s GUID</title>
-    <link>https://hubspot.samcbarth.com/articles/form-guid/</link>
-    <guid>https://hubspot.samcbarth.com/articles/form-guid/</guid>
-    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where to find the form ID HubSpot&#39;s Forms API needs.</description>
-    <category>Marketing Hub</category>
-    <category>Forms</category>
-    <category>API</category>
-  </item>
-  <item>
     <title>Embed HubSpot content on another site</title>
     <link>https://hubspot.samcbarth.com/articles/embed-code-content/</link>
     <guid>https://hubspot.samcbarth.com/articles/embed-code-content/</guid>
@@ -1472,16 +1432,6 @@
     <category>Sales Hub</category>
     <category>Attribution</category>
     <category>Campaigns</category>
-  </item>
-  <item>
-    <title>How to embed a HubSpot form on a site that is not hosted in HubSpot</title>
-    <link>https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/</link>
-    <guid>https://hubspot.samcbarth.com/articles/embed-hubspot-form-external-site/</guid>
-    <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
-    <description>Where to find a HubSpot form&#39;s embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.</description>
-    <category>Marketing Hub</category>
-    <category>Smart CRM</category>
-    <category>Forms</category>
   </item>
   <item>
     <title>Active vs static segments in HubSpot: which one to build</title>

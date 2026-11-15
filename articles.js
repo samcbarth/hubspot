@@ -616,6 +616,8 @@ var ARTICLES = [
   },
   {
     slug: "embed-hubspot-form-external-site",
+    draft: true,
+    mergedInto: 'embed-form-in-react',
     title: "How to embed a HubSpot form on a site that is not hosted in HubSpot",
     excerpt: "Where to find a HubSpot form's embed code and share link, what to paste into your page, and the two things that must be true for it to work: the tracking code and a registered domain.",
     type: "guide",
@@ -2859,6 +2861,8 @@ var ARTICLES = [
   },
   {
     slug: "non-hubspot-forms-collected",
+    draft: true,
+    mergedInto: 'embed-form-in-react',
     title: "Capture submissions from non-HubSpot forms on your website",
     excerpt: "How HubSpot collects submissions from forms it did not build, what it needs to work, why you may see partial duplicates, and how to convert a collected form into a HubSpot form.",
     type: "tip",
@@ -4286,6 +4290,8 @@ var ARTICLES = [
   },
   {
     slug: "forms-submission-api",
+    draft: true,
+    mergedInto: 'embed-form-in-react',
     title: "Submit a custom form to HubSpot through the forms API, and keep tracking",
     excerpt: "How to send submissions to a HubSpot form from your own form handler, why to include the hutk cookie and page context, and how blocked emails are reported.",
     type: "tip",
@@ -6684,19 +6690,20 @@ var ARTICLES = [
   },
   {
     slug: "embed-form-in-react",
-    title: "Embed a HubSpot form in React or another single-page app",
-    excerpt: "How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.",
-    type: "tip",
+    title: "Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means",
+    excerpt: "Embed a HubSpot form on any site or in React, find the form GUID, submit data with the forms API including hutk and pageUri, read submissions, and use non-HubSpot forms. Tested: the API returns 200 even when data is dropped.",
+    type: "guide",
     problem: "Developer",
     hubs: ["Marketing Hub"],
     features: ["Forms", "API"],
-    tier: "All tiers",
-    permissions: "Forms access",
-    verified: "2026-10-07",
+    tier: "All plans (CSS overrides need Professional)",
+    permissions: "Edit forms; API access for reading submissions",
+    verified: "2026-11-16",
     published: "2026-10-07",
-    minutes: 4,
+    minutes: 11,
     difficulty: "Intermediate",
-    keywords: ["embed hubspot form react", "hubspot form next.js", "hbspt forms create react", "hubspot form spa"]
+    keywords: ["embed hubspot form react", "hubspot form next.js", "hbspt forms create react", "hubspot form spa"],
+    validated: "2026-11-16 10:40 ET",
   },
   {
     slug: "search-companies-by-name-api",
@@ -7954,6 +7961,8 @@ var ARTICLES = [
   },
   {
     slug: "get-form-submissions-api",
+    draft: true,
+    mergedInto: 'embed-form-in-react',
     title: "Get a form's submissions through the API",
     excerpt: "The HubSpot endpoint that returns submissions for one form, and when an export is the simpler option.",
     type: "tip",
@@ -15625,6 +15634,8 @@ var ARTICLES = [
   },
   {
     slug: "form-guid",
+    draft: true,
+    mergedInto: 'embed-form-in-react',
     title: "Find a form's GUID",
     excerpt: "Where to find the form ID HubSpot's Forms API needs.",
     type: "tip",

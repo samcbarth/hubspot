@@ -13,16 +13,16 @@
 <script>try{var t=localStorage.getItem('hfn-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script id="hs-script-loader" async defer src="https://js.hs-scripts.com/20693956.js"></script>
 <!--/head-->
-<title>Embed a HubSpot form in React or another single-page app - HubSpot Field Notes</title>
-<meta name="description" content="How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.">
+<title>Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means - HubSpot Field Notes</title>
+<meta name="description" content="Embed a HubSpot form on any site or in React, find the form GUID, submit data with the forms API including hutk and pageUri, read submissions, and use non-HubSpot forms. Tested: the API returns 200 even when data is dropped.">
 <link rel="canonical" href="https://hubspot.samcbarth.com/articles/embed-form-in-react/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hubspot.samcbarth.com/articles/embed-form-in-react/">
-<meta property="og:title" content="Embed a HubSpot form in React or another single-page app">
-<meta property="og:description" content="How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.">
+<meta property="og:title" content="Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means">
+<meta property="og:description" content="Embed a HubSpot form on any site or in React, find the form GUID, submit data with the forms API including hutk and pageUri, read submissions, and use non-HubSpot forms. Tested: the API returns 200 even when data is dropped.">
 <meta property="og:image" content="https://hubspot.samcbarth.com/articles/embed-form-in-react/og.png">
 <meta property="article:published_time" content="2026-10-07">
-<meta property="article:modified_time" content="2026-10-07">
+<meta property="article:modified_time" content="2026-11-16">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -30,10 +30,10 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Embed a HubSpot form in React or another single-page app",
-      "description": "How to load a HubSpot form in a React component using the hosted embed script and a target element, and the rules HubSpot sets.",
+      "headline": "Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means",
+      "description": "Embed a HubSpot form on any site or in React, find the form GUID, submit data with the forms API including hutk and pageUri, read submissions, and use non-HubSpot forms. Tested: the API returns 200 even when data is dropped.",
       "datePublished": "2026-10-07",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-11-16",
       "author": { "@type": "Person", "name": "Sam Barth", "url": "https://samcbarth.com" },
       "publisher": { "@type": "Person", "name": "Sam Barth" },
       "image": "https://hubspot.samcbarth.com/articles/embed-form-in-react/og.png",
@@ -43,20 +43,21 @@
     },
     {
       "@type": "HowTo",
-      "name": "Embed a HubSpot form in React or another single-page app",
-      "totalTime": "PT4M",
+      "name": "Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means",
+      "totalTime": "PT11M",
       "step": [
-        {"@type": "HowToStep", "name": "Get the IDs", "text": "Copy region, portal ID and form ID from the embed code."},
-        {"@type": "HowToStep", "name": "Load the script", "text": "Add the hosted script once."},
-        {"@type": "HowToStep", "name": "Create into a target", "text": "Call hbspt.forms.create with target after the element exists."},
-        {"@type": "HowToStep", "name": "Don't self-host", "text": "Use HubSpot's hosted script."}
+        {"@type": "HowToStep", "name": "Copy the embed code", "text": "Form, Share, Embed code."},
+        {"@type": "HowToStep", "name": "Register the domain", "text": "Advanced Tracking, Additional site domains."},
+        {"@type": "HowToStep", "name": "Embed in React after mount", "text": "Call hbspt.forms.create with a target."},
+        {"@type": "HowToStep", "name": "Submit by API", "text": "POST fields and context with hutk and pageUri."},
+        {"@type": "HowToStep", "name": "Confirm the contact exists", "text": "A 200 does not guarantee it."}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "HubSpot Field Notes", "item": "https://hubspot.samcbarth.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Embed a HubSpot form in React or another single-page app", "item": "https://hubspot.samcbarth.com/articles/embed-form-in-react/" }
+        { "@type": "ListItem", "position": 2, "name": "Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means", "item": "https://hubspot.samcbarth.com/articles/embed-form-in-react/" }
       ]
     }
   ]
@@ -87,14 +88,14 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">All articles</a> / <a href="../../?feature=Forms">Forms</a></nav>
     <header class="article-head">
-      <div class="badges"><span class="badge badge-type">Quick tip</span><span class="badge badge-problem">Developer</span><span class="badge">Marketing Hub</span></div>
-      <h1>Embed a HubSpot form in React or another single-page app</h1>
-      <p class="dek">Load HubSpot's script, then create the form into an element you control.</p>
+      <div class="badges"><span class="badge badge-type">Guide</span><span class="badge badge-problem">Developer</span><span class="badge">Marketing Hub</span></div>
+      <h1>Embed HubSpot forms and use the forms API: embed code, React, form GUID, submissions, and what a 200 really means</h1>
+      <p class="dek">Tested on a live portal: the forms submission API said 200 to a submission that never became a contact. How to embed forms and send data so it actually lands.</p>
       <dl class="facts">
-        <div class="fact"><dt>Subscription</dt><dd>All tiers</dd></div>
-        <div class="fact"><dt>Permissions</dt><dd>Forms access</dd></div>
-        <div class="fact"><dt>Time</dt><dd>4 min &middot; Intermediate</dd></div>
-        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-10-07">October 7, 2026</time></dd></div>
+        <div class="fact"><dt>Subscription</dt><dd>All plans (CSS overrides need Professional)</dd></div>
+        <div class="fact"><dt>Permissions</dt><dd>Edit forms; API access for reading submissions</dd></div>
+        <div class="fact"><dt>Time</dt><dd>11 min &middot; Intermediate</dd></div>
+        <div class="fact"><dt>Last verified</dt><dd><time datetime="2026-11-16">November 16, 2026</time></dd></div>
       </dl>
       <div data-portal-box></div>
     </header>
@@ -102,27 +103,107 @@
     <div class="article-layout">
       <aside class="toc" data-toc aria-label="On this page"></aside>
       <article class="prose">
-        <div class="tldr">
+<div class="tldr">
           <h2>Short answer</h2>
-          <p>HubSpot's developer docs: specify a <code>target</code> CSS selector, otherwise the form is injected after the script; use a separate target per form. HubSpot says forms should only load from its <strong>hosted JavaScript</strong>; self-hosted copies miss its security, spam and accessibility updates. Embedding the same form twice on a page needs <code>formInstanceId</code>.</p>
+          <p>To put a HubSpot form on another site, copy the embed code from the form's <strong>Share</strong> dialog, register the site's domain, and install the tracking code. In React, call <code>hbspt.forms.create</code> after the component mounts, with a <code>target</code>. To send your own form's data to HubSpot, POST to the <strong>forms submission API</strong> with the form's GUID, a <code>fields</code> array and a <code>context</code> with <code>hutk</code> and <code>pageUri</code>. I tested it on November 15, 2026: the API answers <strong>200 even when it drops your data</strong>. Unknown fields are ignored, and a submission whose page URL was on an unregistered domain never became a contact.</p>
         </div>
 
-        <h2>1. Embed code</h2>
-        <p>The embed code tab in my demo portal.</p>
+        <h2>1. Embed a HubSpot form on another site</h2>
+        <p>Open the form and click <strong>Share</strong>:</p>
+        <figure class="shot"><a href="form-editor.webp"><img src="form-editor.webp" alt="HubSpot form editor showing an email field, a first name field, a consent checkbox, and the Share button highlighted" width="800" height="600" loading="lazy"></a><figcaption>The form editor with the Share button (top right) highlighted.</figcaption></figure>
+        <p>The <strong>Embed code</strong> tab has the snippet. In some editor versions the path is <strong>Review and update, Update, Get embed code</strong>.</p>
         <figure class="shot"><a href="embed-code.webp"><img src="embed-code.webp" alt="Share your form dialog on the Embed code tab with the code block highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Embed code tab.</figcaption></figure>
-        <h2>2. The pattern</h2>
-        <pre><code>&lt;div id=&quot;hs-form&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;//js.hsforms.net/forms/embed/v2.js&quot;&gt;&lt;/script&gt;
+<pre><code>&lt;div id="hs-form"&gt;&lt;/div&gt;
+&lt;script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-  hbspt.forms.create({ region: &quot;na1&quot;, portalId: &quot;YOUR_ID&quot;, formId: &quot;YOUR_FORM_ID&quot;, target: &quot;#hs-form&quot; });
-&lt;/script&gt;</code></pre><p>In React, run the create call after the component mounts, so the target element exists.</p>
-        <h2>3. Related</h2>
-        <p><a href="../embed-hubspot-form-external-site/">Embedding forms</a>.</p>
+  hbspt.forms.create({ region: "na1", portalId: "YOUR_PORTAL_ID", formId: "YOUR_FORM_ID", target: "#hs-form" });
+&lt;/script&gt;</code></pre>
+        <ul>
+          <li>Use the exact code from your own dialog; it carries your region.</li>
+          <li>Paste it into an HTML or custom code block, not a rich text area.</li>
+          <li>Without <code>target</code>, the form is injected right after the script. Use a separate target per form, and <code>formInstanceId</code> if the same form appears twice on a page.</li>
+          <li><strong>React:</strong> run the create call after the component mounts, so the target element exists.</li>
+          <li>Load forms only from HubSpot's hosted script. Self-hosted copies miss HubSpot's security, spam and accessibility updates.</li>
+        </ul>
+        <p>Two things make it work: <strong>register the domain</strong> under Additional site domains, or submissions are flagged as spam (see <a href="../form-file-upload-field/">forms and spam</a>), and <strong>install the tracking code</strong> on the page so form analytics work (see <a href="../install-tracking-code-wix/">the tracking code</a>).</p>
+        <p>No code at all? The <strong>Share link</strong> tab gives a standalone HubSpot-hosted form page (link blurred here):</p>
+        <figure class="shot"><a href="share-link.webp"><img src="share-link.webp" alt="Share your form dialog on the Share link tab with the tabs highlighted" width="800" height="600" loading="lazy"></a><figcaption>The Share link tab.</figcaption></figure>
+        <p>Style the form in the editor's styling panel. Developer CSS overrides need Marketing Hub or Content Hub Professional or Enterprise and can break when HubSpot updates the form.</p>
+
+        <h2>2. Find the form GUID</h2>
+        <p>The form GUID identifies the form in the API. In the updated editor it is the <code>data-form-id</code> (or <code>formId</code>) value in the embed code; it also appears in the editor's page URL. Store GUIDs with your integration settings so forms do not get mixed up.</p>
+
+        <h2>3. Submit data with the forms API</h2>
+<pre><code>POST https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}
+{
+  "fields": [
+    { "objectTypeId": "0-1", "name": "email", "value": "visitor@example.com" },
+    { "objectTypeId": "0-1", "name": "firstname", "value": "Pat" }
+  ],
+  "context": {
+    "hutk": "VALUE_OF_HUBSPOTUTK_COOKIE",
+    "pageUri": "https://www.example.com/contact",
+    "pageName": "Contact us"
+  }
+}</code></pre>
+        <p>Why a form submission instead of creating a contact through the CRM API: it triggers form-based workflows and segments, applies the form's blocked domains and consent settings, and the <code>hutk</code> (the visitor's <code>hubspotutk</code> cookie) links earlier anonymous page views to the new contact. There is also a secure endpoint (<code>/integration/secure/submit/</code>) that takes an app token.</p>
+
+        <h2>4. What the API really does with bad data (tested)</h2>
+        <p>I sent test submissions to an email-only form in my developer test portal:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Submission</th><th>Response</th><th>What happened</th></tr></thead>
+            <tbody>
+              <tr><td>Valid email, <code>pageUri</code> on example.com (not a registered domain)</td><td>200 "Thanks for submitting the form."</td><td>No contact created and no entry in the form's submissions</td></tr>
+              <tr><td>Valid email plus an unknown field name, no context</td><td>200</td><td>Contact created; unknown field silently ignored</td></tr>
+              <tr><td>Email value "not-an-email"</td><td>200</td><td>No contact created</td></tr>
+              <tr><td>Invalid <code>hutk</code></td><td>400 <code>INVALID_HUTK</code></td><td>Rejected</td></tr>
+              <tr><td>Form with required ticket fields, sent without them</td><td>400 <code>REQUIRED_FIELD</code>, naming <code>TICKET.subject</code> and <code>TICKET.content</code></td><td>Rejected</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>So a 200 only means HubSpot accepted the request. The first case matches HubSpot's rule that submissions from unregistered domains are treated as spam. Always send a real <code>pageUri</code> on a registered domain, check property names against the form, and confirm a test submission actually created the contact. The contact that was created had Original Traffic Source <strong>Direct traffic</strong>, since there was no <code>hutk</code> to tie it to a visit. I deleted the test contact afterwards.</p>
+
+        <h2>5. Read submissions</h2>
+<pre><code>GET https://api.hubapi.com/form-integrations/v1/submissions/forms/{formGuid}</code></pre>
+        <p>That returned my test submissions with their field values. For a one-off pull, exporting from the forms list is simpler:</p>
+        <figure class="shot"><a href="forms.webp"><img src="forms.webp" alt="Forms index with a Non-HubSpot Forms link and Form Type filter" width="800" height="553" loading="lazy"></a><figcaption>Non-HubSpot Forms (1) and the Form Type filter (2).</figcaption></figure>
+
+        <h2>6. Non-HubSpot forms</h2>
+        <p>If the tracking code is on the page and the non-HubSpot forms setting is on, HubSpot scans pages for supported forms and collects submissions, creating or updating contacts by email. A collected form appears in the forms list after its first submission (filter <strong>Form Type</strong> to non-HubSpot forms).</p>
+        <ul>
+          <li>HubSpot captures on the submit click, so a failed validation and a retry can give one partial and one complete submission.</li>
+          <li>Some form builders are not supported; use the submission API for those.</li>
+          <li>To replace one with a real HubSpot form: <strong>Actions, Copy to HubSpot</strong>, edit, publish and embed it.</li>
+        </ul>
+
+        <h2>7. What is changing for 2027</h2>
+        <ul>
+          <li><strong>Legacy forms docs.</strong> HubSpot's developer docs now label the old embed reference as legacy forms. New forms use the updated editor's embed code, so copy it fresh rather than reusing old snippets.</li>
+          <li><strong>Spam rules apply to the API too.</strong> Registered domains and blocked email domains affect API submissions, so add each new site to Additional site domains before going live.</li>
+          <li><strong>Dated API versions.</strong> The CRM APIs used around forms (contacts, search) move to date-based versions; the v4 and 2025-09 versions lose support in March 2027. See <a href="../hubspot-api-rate-limits/">API versioning</a>.</li>
+        </ul>
+
+        <h2>Common questions</h2>
+        <h3>The API returned 200 but no contact appeared.</h3>
+        <p>Check the <code>pageUri</code> domain is registered, the email is valid, and look in the form's spam list. A 200 does not guarantee a contact.</p>
+        <h3>Why does my embedded form not show in React?</h3>
+        <p>The create call ran before the target element existed. Call it after mount, with a <code>target</code>.</p>
+        <h3>Where do I find the form ID?</h3>
+        <p>In the embed code (<code>formId</code> or <code>data-form-id</code>) or the form editor's URL.</p>
+        <h3>Why does my form's source say Direct traffic?</h3>
+        <p>The submission had no <code>hutk</code>, so HubSpot could not tie it to the visitor's earlier page views.</p>
 
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://community.hubspot.com/t/help-embed-a-form-in-a-react-component/11768">HubSpot Community question: HELP: Embed a form in a React component</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/set-up-and-style-your-form-on-an-external-site">HubSpot Knowledge Base: Style and embed HubSpot forms on an external site</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/find-your-form-guid">HubSpot Knowledge Base: Find your form GUID</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/manage-form-spam-submissions">HubSpot Knowledge Base: Manage spam form submissions</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/use-non-hubspot-forms">HubSpot Knowledge Base: Use non-HubSpot forms</a></li>
+          <li><a href="https://knowledge.hubspot.com/forms/convert-non-hubspot-forms-into-hubspot-forms">HubSpot Knowledge Base: Convert non-HubSpot forms into HubSpot forms</a></li>
           <li><a href="https://developers.hubspot.com/docs/cms/start-building/features/forms/legacy-forms">HubSpot developer docs: Legacy forms</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/marketing/forms/v3-legacy/submit-data-authenticated">HubSpot developer docs: Submit data to a form</a></li>
+          <li><a href="https://developers.hubspot.com/docs/api-reference/legacy/marketing/forms/v1/get-form-integrations-v1-submissions-forms-form_guid">HubSpot developer docs: Get submissions for a form</a></li>
         </ul>
 
         <div class="vote" data-vote></div>
